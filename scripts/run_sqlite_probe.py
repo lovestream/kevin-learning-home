@@ -43,8 +43,10 @@ def validate_parent(parent):
     return parent
 
 
-def container_absent(docker, name):
+def container_absent(docker, name, audit=None, stage="container_inspect"):
     p = subprocess.run([docker, "inspect", "--format", "{{json .Config.Labels}}", name], capture_output=True, text=True, timeout=10)
+    if audit is not None:
+        audit.append(dict(stage=stage, exitCode=p.returncode))
     if p.returncode == 0:
         return False
     require("no such object" in p.stderr.lower() or "no such container" in p.stderr.lower(), "CONTAINER_INSPECT_BLOCKED")
@@ -105,17 +107,22 @@ def execute(environment, sha, parent, nas_approved=False):
     workspace, data = create_workspace(parent, name)
     report = dict(schemaVersion=1, runnerVersion="1.0.0", timestampUtc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
                   repositorySha=sha, executionEnvironment=environment, projectName=name, status="FAIL",
-                  commands=[], probes={}, cleanup={"status": "NOT_RUN", "reason": "NO_LIVE_CONTAINER_EXPECTED"})
+                  commands=[dict(stage="docker_context_show", exitCode=context.returncode),
+                            dict(stage="docker_context_inspect", exitCode=endpoint.returncode)],
+                  sourceValidation={"status": "PASS", "headSha": sha, "cleanCheckout": True},
+                  probes={}, cleanup={"status": "NOT_RUN", "reason": "NO_LIVE_CONTAINER_EXPECTED"})
     env = dict(os.environ, KLH_PROBE_DATA=str(data), KLH_PROBE_UID=str(os.getuid()), KLH_PROBE_GID=str(os.getgid()),
-               KLH_EXECUTION_ENVIRONMENT=environment)
+               KLH_EXECUTION_ENVIRONMENT=environment, KLH_PROBE_PROJECT=name, KLH_REPOSITORY_SHA=sha)
     prefix = compose + ["-f", str(ROOT / "infra/probes/node-sqlite/compose.yml"), "-p", name]
     active = None
     completed = 0
-    def call(stage, argv, timeout):
+    built = False
+    def call(stage, argv, timeout, check=True):
         try:
             p = subprocess.run(argv, capture_output=True, text=True, timeout=timeout, env=env)
             report["commands"].append(dict(stage=stage, exitCode=p.returncode))
-            require(p.returncode == 0, stage.upper() + "_FAILED_REDACTED")
+            if check:
+                require(p.returncode == 0, stage.upper() + "_FAILED_REDACTED")
             return p.stdout
         except subprocess.TimeoutExpired:
             report["commands"].append(dict(stage=stage, exitCode=None, reason="TIMEOUT"))
@@ -123,27 +130,35 @@ def execute(environment, sha, parent, nas_approved=False):
     try:
         call("compose_config", prefix + ["config", "--quiet"], 15)
         call("build", prefix + ["build", "probe"], 240)
+        built = True
+        image = json.loads(call("probe_image_inspect", [docker, "image", "inspect", "klh-pr1a-probe:" + name, "--format", "{{json .}}"], 10))
+        revision = image.get("Config", {}).get("Labels", {}).get("org.opencontainers.image.revision")
+        require(image.get("Os") == "linux" and image.get("Architecture") == "amd64" and revision == sha, "PROBE_IMAGE_METADATA_MISMATCH")
+        require(re.fullmatch(r"sha256:[a-f0-9]{64}", image.get("Id", "")), "PROBE_IMAGE_ID_INVALID")
+        report["probeImage"] = dict(id=image["Id"], os=image["Os"], architecture=image["Architecture"], revision=revision)
         for mode in ("exercise", "verify"):
             active = name + "-" + mode
             out = call(mode, prefix + ["run", "--rm", "--no-deps", "-T", "--name", active, "probe", mode,
-                                      "--data-dir", "/data", "--environment", environment, "--repository-sha", sha], 120)
+                                      "--data-dir", "/data", "--environment", environment, "--repository-sha", sha], 120, check=False)
             probe = parse_probe_output(out)
-            require(probe["status"] == "PASS" and probe["repositorySha"] == sha, "PROBE_FAILED")
-            require(probe["runtime"]["uid"] == os.getuid() and probe["runtime"]["uid"] != 0, "CONTAINER_UID_MISMATCH")
             report["probes"][mode] = probe
+            require(probe["status"] == "PASS" and probe["repositorySha"] == sha, "PROBE_FAILED")
+            require(report["commands"][-1]["exitCode"] == 0, "PROBE_EXIT_CODE_FAILED")
+            require(probe["runtime"]["uid"] == os.getuid() and probe["runtime"]["uid"] != 0, "CONTAINER_UID_MISMATCH")
             # A subsequent inspect must find no container; no stopped persistent container either.
-            require(container_absent(docker, active), "CONTAINER_NOT_REMOVED")
+            require(container_absent(docker, active, report["commands"], mode + "_container_absence"), "CONTAINER_NOT_REMOVED")
             completed += 1
             active = None
         report["containerRecreation"] = {"status": "PASS", "reason": "TWO_DISTINCT_RUN_RM_CONTAINERS_SAME_BIND_DIRECTORY"}
         report["status"] = "PASS"
-    except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
-        report["failure"] = str(e) if isinstance(e, RuntimeError) else "OS_ERROR_REDACTED"
+    except (RuntimeError, OSError, ValueError, subprocess.TimeoutExpired) as e:
+        report["failure"] = str(e) if isinstance(e, RuntimeError) else "UNEXPECTED_ERROR_REDACTED"
     finally:
         if active:
             # Only touch the exact generated name with matching ownership labels.
             try:
                 p = subprocess.run([docker, "inspect", "--format", "{{json .Config.Labels}}", active], capture_output=True, text=True, timeout=10)
+                report["commands"].append(dict(stage="cleanup_container_inspect", exitCode=p.returncode))
                 if p.returncode == 0:
                     labels = json.loads(p.stdout)
                     require(labels.get("com.docker.compose.project") == name and labels.get("com.docker.compose.service") == "probe", "CLEANUP_LABEL_MISMATCH")
@@ -159,7 +174,9 @@ def execute(environment, sha, parent, nas_approved=False):
                 report["status"] = "FAIL"
         else:
             report["cleanup"] = {"status": "PASS", "reason": "RUN_RM_REMOVED_BOTH_OWNED_CONTAINERS" if completed == 2 else "NO_LIVE_CONTAINER_LAUNCHED"}
-        report["retainedResources"] = ["dedicated synthetic directory", "project probe image", "pinned base image cache"]
+        report["retainedResources"] = ["dedicated synthetic directory"] + (["project probe image", "pinned base image cache"] if built else [])
+        if not built:
+            report["possibleResources"] = ["partial image/build cache; not removed"]
         # Private local path is deliberately absent. No recursive deletion or image deletion.
         (workspace / "evidence.json").write_text(json.dumps(report, indent=2) + "\n")
     return report

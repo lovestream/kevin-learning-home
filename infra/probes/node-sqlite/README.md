@@ -10,7 +10,7 @@
 sha256:152aceace5c03e2597988763165ee33e3fd3633636db0fc983cd2e126b02cfde
 ```
 
-`image-lock.json` 同时记录多架构 index digest 和解析日期。2026-10-08 从 Docker 官方 Registry V2 的 tag manifest 选出 linux/amd64 descriptor，再核对该 manifest 的 `Docker-Content-Digest`；CI 构建由 Docker 校验内容摘要。index 与 amd64 digest 不应混用。派生 probe 镜像只增加本仓库脚本，其 image ID 随脚本变化，不能用 base digest 冒充派生 image ID。
+`image-lock.json` 同时记录多架构 index digest 和解析日期。2026-10-08 从 Docker 官方 Registry V2 的 tag manifest 选出 linux/amd64 descriptor，再核对该 manifest 的 `Docker-Content-Digest`；CI 构建由 Docker 校验内容摘要。index 与 amd64 digest 不应混用。派生镜像标记为 `klh-pr1a-probe:<本次projectName>`；其 image ID、平台与源码 revision label 会由运行器 inspect 后记录并校验，不能用 base digest 冒充派生 image ID。
 
 Node 24.15.0 官方 [BUILDING.md 平台表](https://github.com/nodejs/node/blob/v24.15.0/BUILDING.md#platform-list) 要求 glibc linux-x64 kernel ≥4.18 / glibc ≥2.28；NAS 4.4.180+ 不满足内核基线。容器共享宿主内核，Debian 容器不能升级宿主内核。musl x64 属 Experimental。探针成功仅证明此次组合通过合成实验。
 
@@ -35,7 +35,7 @@ node --test tests/*.test.mjs
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
-容器操作唯一受支持入口为 `scripts/run_sqlite_probe.py`。不要直接用 Compose 指向已有数据目录。必须从已审查代码的干净 checkout 执行，`--repository-sha` 传入 `git rev-parse HEAD`，否则 SHA 只是操作者声明。CI 自动检出这个 SHA。
+容器操作唯一受支持入口为 `scripts/run_sqlite_probe.py`。不要直接用 Compose 指向已有数据目录。必须从已审查代码的干净 checkout 执行，`--repository-sha` 传入 `git rev-parse HEAD`；运行器在创建资源前检查实际HEAD和工作树（含未跟踪文件）一致。CI 自动检出这个 SHA。
 
 以下示例中的父目录是操作者指定的**已存在、可写、非共享学习数据目录**；先核实为本地 ext4/btrfs/xfs 等文件系统。Linux 网络文件系统及未知文件系统拒绝运行，不把在线 SQLite 放在 SMB/NFS。
 

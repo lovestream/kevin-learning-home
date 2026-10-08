@@ -3,6 +3,9 @@ services:
   probe:
     build:
       context: .
+      args:
+        KLH_REPOSITORY_SHA: "${KLH_REPOSITORY_SHA:?Use exact checked-out SHA}"
+    image: "klh-pr1a-probe:${KLH_PROBE_PROJECT:?Use exclusive project name}"
     platform: linux/amd64
     user: "${KLH_PROBE_UID:-1000}:${KLH_PROBE_GID:-1000}"
     network_mode: none

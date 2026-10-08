@@ -70,6 +70,8 @@ class RunnerTests(unittest.TestCase):
                 out = "unix:///var/run/docker.sock\n"
             elif argv[1] == "inspect":
                 return subprocess.CompletedProcess(argv, 1, "", "No such object")
+            elif argv[1:3] == ["image", "inspect"]:
+                out = json.dumps(dict(Id="sha256:" + "c" * 64, Os="linux", Architecture="amd64", Config={"Labels": {"org.opencontainers.image.revision": "a" * 40}}))
             elif "run" in argv:
                 out = json.dumps(dict(schemaVersion=1, status="PASS", repositorySha="a" * 40,
                                       runtime={"uid": os.getuid()}, checks={}))
@@ -86,6 +88,8 @@ class RunnerTests(unittest.TestCase):
             self.assertTrue(all("--rm" in c and "--no-deps" in c for c in runs))
             self.assertFalse(any("down" in c or "prune" in c for c in calls))
             self.assertNotIn(temp, json.dumps(report))
+            self.assertEqual(report["probeImage"]["revision"], "a" * 40)
+            self.assertEqual([c["exitCode"] for c in report["commands"] if c["stage"].endswith("_absence")], [1, 1])
 
     def test_wrong_checkout_sha_is_refused(self):
         wrong = subprocess.CompletedProcess([], 0, "b" * 40, "")
