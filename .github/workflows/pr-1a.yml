@@ -1,0 +1,68 @@
+name: PR-1A synthetic runtime validation
+on:
+  push:
+    branches: ['codex/pr-1a-nas-runtime-probe']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: klh-pr1a-${{ github.event.pull_request.head.ref || github.ref_name }}
+  cancel-in-progress: true
+jobs:
+  synthetic:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    env:
+      TESTED_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ env.TESTED_SHA }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24.15.0'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Synthetic unit and safety tests
+        run: |
+          mkdir .probe-evidence
+          node --test tests/*.test.mjs > .probe-evidence/node-tests.txt 2>&1
+          python3 -m unittest discover -s tests -p 'test_*.py' > .probe-evidence/python-tests.txt 2>&1
+      - name: Redacted CI host inventory (never NAS evidence)
+        run: |
+          set +e
+          sh scripts/nas-preflight.sh --json --environment ci --repository-sha "$TESTED_SHA" > .probe-evidence/ci-preflight.json
+          code=$?
+          set -e
+          python3 -c 'import json,sys; print(json.dumps({"preflightExitCode":int(sys.argv[1]),"environment":"ci"}))' "$code" > .probe-evidence/preflight-exit.json
+          test "$code" -le 2
+      - name: Install checksum-verified Compose V1 1.28.5 in runner only
+        env:
+          COMPOSE_DIR: ${{ runner.temp }}/klh-compose-v1
+        run: |
+          python3 - <<'PY'
+          import hashlib, os, pathlib, urllib.request
+          folder = pathlib.Path(os.environ['COMPOSE_DIR'])
+          folder.mkdir(mode=0o700)
+          target = folder / 'docker-compose'
+          url = 'https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64'
+          with urllib.request.urlopen(url, timeout=45) as response:
+              content = response.read(40 * 1024 * 1024)
+          assert hashlib.sha256(content).hexdigest() == '46406eb5d8443cc0163a483fcff001d557532a7fad5981e268903ad40b75534c'
+          target.write_bytes(content)
+          target.chmod(0o700)
+          PY
+          echo "$COMPOSE_DIR" >> "$GITHUB_PATH"
+      - name: Two non-root amd64 containers with one exclusive synthetic bind directory
+        run: |
+          docker-compose version --short > .probe-evidence/compose-version.txt
+          python3 scripts/run_sqlite_probe.py --run --environment ci --repository-sha "$TESTED_SHA" --parent "$RUNNER_TEMP" > .probe-evidence/ci-container.json
+      - name: Upload only synthetic, redacted evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: pr1a-ci-${{ env.TESTED_SHA }}
+          path: .probe-evidence/
+          retention-days: 14
