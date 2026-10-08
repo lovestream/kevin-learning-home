@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "scriptVersion": "1.0.0",
+  "timestampUtc": "2026-10-08T13:22:44.170184+00:00",
+  "executionEnvironment": "ci",
+  "repositorySha": "4e529c88ef848a1eae8eebc54595e455b9733e67",
+  "status": "PASS",
+  "checks": {
+    "host": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "system": "Linux",
+      "architecture": "x86_64",
+      "cpuCount": 4,
+      "cpuModel": "Intel(R) Xeon(R) 6973P-C",
+      "kernel": "6.8.0-1064-azure"
+    },
+    "node24GlibcKernelBaseline": {
+      "status": "PASS",
+      "reason": "KERNEL_AT_LEAST_4_18",
+      "exitCode": null
+    },
+    "dockerClient": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "28.0.4"
+    },
+    "dockerServer": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "28.0.4"
+    },
+    "dockerSocket": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "isSocket": true,
+      "mode": "0o660"
+    },
+    "composeV1": {
+      "status": "NOT_RUN",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "composeV2": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "2.38.2"
+    },
+    "tailscaleVersion": {
+      "status": "NOT_RUN",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "tailscaleState": {
+      "status": "NOT_RUN",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "filesystem": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "fsType": "ext4",
+      "networkFilesystem": false,
+      "availableGiB": 85.7,
+      "currentUserWritable": true,
+      "fsTypeVerified": true
+    },
+    "dsm": {
+      "status": "NOT_RUN",
+      "reason": "NOT_DSM",
+      "exitCode": null
+    },
+    "ports": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "observedPorts": {
+        "8080": false,
+        "4177": false
+      }
+    }
+  },
+  "disclaimer": "Inventory only; environment label is operator supplied; no SQLite/runtime acceptance implied."
+}

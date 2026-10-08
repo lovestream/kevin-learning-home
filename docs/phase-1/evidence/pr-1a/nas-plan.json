@@ -1,0 +1,19 @@
+{
+  "status": "NOT_RUN",
+  "mode": "plan",
+  "writes": false,
+  "environment": "nas",
+  "plan": [
+    "create exclusive klh-pr1a-<random>/data (0700), synthetic marker",
+    "Compose config; build pinned Node24 amd64 image",
+    "two bounded non-root run --rm containers, network none, no ports",
+    "retain synthetic evidence/data and image cache; no existing assets touched"
+  ],
+  "limits": {
+    "memoryMiB": 256,
+    "cpus": 0.5,
+    "pids": 64,
+    "probeTimeoutSeconds": 120
+  },
+  "nasConsentRequired": true
+}

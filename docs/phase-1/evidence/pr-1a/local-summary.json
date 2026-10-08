@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "environment": "local",
+  "timestampUtc": "2026-10-08T13:22:28.358328+00:00",
+  "testedSha": "4e529c88ef848a1eae8eebc54595e455b9733e67",
+  "commands": {
+    "node-tests": {
+      "exitCode": 0
+    },
+    "python-tests": {
+      "exitCode": 0
+    },
+    "local-preflight": {
+      "exitCode": 2
+    },
+    "nas-plan": {
+      "exitCode": 0
+    }
+  },
+  "nodeTests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "pythonTests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "nodeVersion": "v24.15.0",
+  "pythonVersion": "Python 3.14.7",
+  "nasExecuted": false
+}
