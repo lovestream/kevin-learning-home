@@ -65,4 +65,6 @@ jobs:
         with:
           name: pr1a-ci-${{ env.TESTED_SHA }}
           path: .probe-evidence/
+          include-hidden-files: true
+          if-no-files-found: error
           retention-days: 14
