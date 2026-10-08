@@ -1,0 +1,24 @@
+version: '2.4'
+services:
+  probe:
+    build:
+      context: .
+      args:
+        KLH_REPOSITORY_SHA: "${KLH_REPOSITORY_SHA:?Use exact checked-out SHA}"
+    image: "klh-pr1a-probe:${KLH_PROBE_PROJECT:?Use exclusive project name}"
+    platform: linux/amd64
+    user: "${KLH_PROBE_UID:-1000}:${KLH_PROBE_GID:-1000}"
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 256m
+    cpus: 0.5
+    pids_limit: 64
+    tmpfs: ["/tmp:size=16m,mode=1777"]
+    restart: 'no'
+    environment:
+      KLH_EXECUTION_ENVIRONMENT: "${KLH_EXECUTION_ENVIRONMENT:-local}"
+    volumes:
+      - "${KLH_PROBE_DATA:?Use approved dedicated probe directory}:/data"
+    command: ["--help"]
