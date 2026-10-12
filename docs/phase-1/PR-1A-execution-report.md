@@ -6,7 +6,7 @@
 
 - 已按来源分支 `chatgpt/klh-pr-1a-review-nas` SHA `647b6e34d4e218fb5aaaa7927e0ecf548cc281c9` 的[补充任务](../tasks/KLH-PR-1A-NAS.md)，复用已审查 HEAD `1666d86c50ad49b615d7a3c417eab9e496c28f3b` 做 NAS 真机只读检查。该 HEAD [CI run 37784493808](https://github.com/lovestream/kevin-learning-home/actions/runs/37784493808)成功。preflight 源码不变，通过已认证 SSH 标准输入执行，没有 NAS 文件复制。
 - [真机完整报告及当前15项矩阵](PR-1A-nas-validation-report.md)、[脱敏证据/摘要索引](evidence/pr-1a-nas/index.json)：实机时间为2026-10-08 UTC；Python3.8.12/Git2.39.1已核验，Docker Client20.10.3 exit0、Server exit1 PERMISSION_DENIED；socket0660当前用户无访问权。前后清单exit1，包含内核基线/V2 CLI错误，不能写成Node运行失败。
-- 用户已正式授权隔离合成容器/目录；但权限闸门不满足，运行器未调用，NAS资源创建0、配置更改0、真实数据读取/导入0。候选可写ext4目录仅检查元数据，现有mode0777，未批准为测试父目录、未写入。10项BLOCKED、4项流程/风险PASS、1项清理NOT_RUN。
+- 用户已正式授权隔离合成容器/目录；但权限闸门不满足，运行器未调用，NAS资源创建0、配置更改0、真实数据读取/导入0。候选可写ext4目录仅检查元数据，现有mode0777，未批准为测试父目录、未写入。10项BLOCKED、4项流程/风险PASS、1项清理NOT_RUN。归档复核未找到采集时的私有原始错误临时目录；公开类别/数字退出码仍在，原始错误附件当前不可提供。
 - 应用户最新问题完成[Cloudflare免费路线评估](Cloudflare-feasibility-assessment.md)：建议验证Workers静态页面/API + D1 + 七牛或可选R2；额度可能足够，但需D1事务/存储、权限、CPU和实际网络适配验证。未部署、未开通计费、未开始下一阶段。
 - 本补充只增加来源任务、NAS脱敏证据、真机报告、Cloudflare评估，并更新运行路线/当前交接；没有修改探针、测试、工作流或业务代码。最后文档提交仍由同一CI验证，最新HEAD/run见[PR检查](https://github.com/lovestream/kevin-learning-home/pull/1/checks)与交付回复。文档自身不嵌其提交SHA，固定实测SHA不冒充实时HEAD。
 

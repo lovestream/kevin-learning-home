@@ -19,7 +19,7 @@
 
 NAS实机时间为2026-10-08证据中的UTC时间，不是归档日重新执行。已独立核验DS918+、DSM7.1.1 build42962u6、Linux4.4.180+、x86_64、Python3.8.12、Git2.39.1、Docker Client20.10.3、V1.28.5、Tailscale1.102.3。前后preflight exit1；Server exit1 PERMISSION_DENIED，socket0660当前非root账户无访问权。V2短参数exit125为旧CLI不支持，裸docker exit127为非登录PATH问题，均没有安装/改配置。
 
-用户已明确授权隔离NAS合成实验，SSH已认证；由于daemon阻塞，运行器未调用、NAS写入0。候选ext4可写目录只读元数据mode0777，未验证内容/ACL/服务挂载，未批准为专属父目录；没有读取真实数据。验收10项BLOCKED、4项流程/风险PASS、1项清理NOT_RUN；没有NAS SQLite PASS。
+用户已明确授权隔离NAS合成实验，SSH已认证；由于daemon阻塞，运行器未调用、NAS写入0。候选ext4可写目录只读元数据mode0777，未验证内容/ACL/服务挂载，未批准为专属父目录；没有读取真实数据。验收10项BLOCKED、4项流程/风险PASS、1项清理NOT_RUN；没有NAS SQLite PASS。原始私有错误临时目录在归档时不可定位，当前只能复核公开分类/退出码/脱敏JSON；采集时保留不等于原始附件仍可用。
 
 Mac/现代LinuxCI的6项Node+17项Python与两容器WAL/事务/幂等/恢复/重建PASS仍有效，但不替代NAS4.4。NAS实际运行、长期负载、磁盘满/断电、真实课件、认证/HTTPS均未验证。
 
