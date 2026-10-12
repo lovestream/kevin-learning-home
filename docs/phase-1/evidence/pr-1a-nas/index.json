@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "task": "KLH-PR-1A-NAS",
+  "taskSourceBranch": "chatgpt/klh-pr-1a-review-nas",
+  "taskSourceBranchSha": "647b6e34d4e218fb5aaaa7927e0ecf548cc281c9",
+  "taskBlobSha": "9f5ea4b114e83d021f97a8c4d4f4f2fa0b1d7142",
+  "reviewedProbeSourceSha": "1666d86c50ad49b615d7a3c417eab9e496c28f3b",
+  "nasPreflightSourceSha": "1666d86c50ad49b615d7a3c417eab9e496c28f3b",
+  "preflightScriptSha256": "9bec2fd5c88424785a9ada37325decd991b30fad8b8819b2d9040028ca53e245",
+  "preflightExecutionMethod": "SSH_STDIN_NO_NAS_FILE_COPY",
+  "userExplicitExperimentAuthorization": true,
+  "sshAuthenticated": true,
+  "nasIdentityIndependentlyObserved": true,
+  "nasRuntimeResult": "BLOCKED",
+  "runtimeRunnerInvoked": false,
+  "nasTestResourcesCreated": [],
+  "systemConfigurationModified": false,
+  "rawErrorEvidence": "RETAINED_PRIVATELY_OUTSIDE_GIT_MODE_0700_FILES_0600",
+  "evidenceFiles": {
+    "checks-and-errors.json": "818659a5d36277f31ef40335071ec75a012ea7ca569bb0c03f6ddccd9f380d75",
+    "identity.json": "5cb0f2f5886af70145954ad681139e99ff70777f1fe7b98e739dda53a363f53f",
+    "preflight-after.json": "ab54b079a210698035d4eb8b58486581d4f7ea7c075b4d928710cf035eb58aa6",
+    "preflight-before.json": "2990ae0ad7f2a7c249d8562c0436fc4ed04165151d76948a67fbfb3ef7dde4e1",
+    "supplemental-before.json": "2ae675411e1250d4d5354073f097de4a740be412565c31161c35fef04173b1c2"
+  }
+}

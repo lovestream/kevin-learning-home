@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "scriptVersion": "1.0.0",
+  "timestampUtc": "2026-10-08T14:59:42.031186+00:00",
+  "executionEnvironment": "nas",
+  "repositorySha": "1666d86c50ad49b615d7a3c417eab9e496c28f3b",
+  "status": "FAIL",
+  "checks": {
+    "host": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "system": "Linux",
+      "architecture": "x86_64",
+      "cpuCount": 4,
+      "cpuModel": "Intel(R) Celeron(R) CPU J3455 @ 1.50GHz",
+      "kernel": "4.4.180+"
+    },
+    "node24GlibcKernelBaseline": {
+      "status": "FAIL",
+      "reason": "BELOW_4_18",
+      "exitCode": null
+    },
+    "dockerClient": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "20.10.3"
+    },
+    "dockerServer": {
+      "status": "BLOCKED",
+      "reason": "PERMISSION_DENIED",
+      "exitCode": 1
+    },
+    "dockerSocket": {
+      "status": "BLOCKED",
+      "reason": "PERMISSION_DENIED",
+      "exitCode": null,
+      "isSocket": true,
+      "mode": "0o660"
+    },
+    "composeV1": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "1.28.5"
+    },
+    "composeV2": {
+      "status": "FAIL",
+      "reason": "COMMAND_FAILED_REDACTED",
+      "exitCode": 125
+    },
+    "tailscaleVersion": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "1.102.3"
+    },
+    "tailscaleState": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "backendState": "Running",
+      "selfOnline": true,
+      "magicDNSConfigured": true
+    },
+    "filesystem": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "fsType": "ext4",
+      "networkFilesystem": false,
+      "availableGiB": 2267.1,
+      "currentUserWritable": false,
+      "fsTypeVerified": true
+    },
+    "dsm": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "components": {
+        "majorversion": "7",
+        "minorversion": "1",
+        "buildnumber": "42962",
+        "smallfixnumber": "6"
+      }
+    },
+    "ports": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "observedPorts": {
+        "8080": false,
+        "4177": false
+      }
+    }
+  },
+  "disclaimer": "Inventory only; environment label is operator supplied; no SQLite/runtime acceptance implied."
+}

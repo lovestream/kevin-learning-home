@@ -1,6 +1,18 @@
 # KLH-PR-1A 完整执行报告
 
-日期：2026-10-08。代码与合成验证交付；NAS 运行验收 **BLOCKED**，等待本任务的明确写入授权与现有非root daemon访问。创建审查PR后暂停，不合并、不进入PR-1B。
+首次报告日期：2026-10-08；补充归档：2026-10-13。代码与合成 CI 通过，NAS 运行验收仍 **BLOCKED**；隔离实验已获用户直接授权，现有非root账户 daemon 权限不足，停止 NAS 写入。PR #1 保持草稿，不合并、不进入 PR-1B。
+
+## 当前补充结果（优先于下面的历史快照）
+
+- 已按来源分支 `chatgpt/klh-pr-1a-review-nas` SHA `647b6e34d4e218fb5aaaa7927e0ecf548cc281c9` 的[补充任务](../tasks/KLH-PR-1A-NAS.md)，复用已审查 HEAD `1666d86c50ad49b615d7a3c417eab9e496c28f3b` 做 NAS 真机只读检查。该 HEAD [CI run 37784493808](https://github.com/lovestream/kevin-learning-home/actions/runs/37784493808)成功。preflight 源码不变，通过已认证 SSH 标准输入执行，没有 NAS 文件复制。
+- [真机完整报告及当前15项矩阵](PR-1A-nas-validation-report.md)、[脱敏证据/摘要索引](evidence/pr-1a-nas/index.json)：实机时间为2026-10-08 UTC；Python3.8.12/Git2.39.1已核验，Docker Client20.10.3 exit0、Server exit1 PERMISSION_DENIED；socket0660当前用户无访问权。前后清单exit1，包含内核基线/V2 CLI错误，不能写成Node运行失败。
+- 用户已正式授权隔离合成容器/目录；但权限闸门不满足，运行器未调用，NAS资源创建0、配置更改0、真实数据读取/导入0。候选可写ext4目录仅检查元数据，现有mode0777，未批准为测试父目录、未写入。10项BLOCKED、4项流程/风险PASS、1项清理NOT_RUN。
+- 应用户最新问题完成[Cloudflare免费路线评估](Cloudflare-feasibility-assessment.md)：建议验证Workers静态页面/API + D1 + 七牛或可选R2；额度可能足够，但需D1事务/存储、权限、CPU和实际网络适配验证。未部署、未开通计费、未开始下一阶段。
+- 本补充只增加来源任务、NAS脱敏证据、真机报告、Cloudflare评估，并更新运行路线/当前交接；没有修改探针、测试、工作流或业务代码。最后文档提交仍由同一CI验证，最新HEAD/run见[PR检查](https://github.com/lovestream/kevin-learning-home/pull/1/checks)与交付回复。文档自身不嵌其提交SHA，固定实测SHA不冒充实时HEAD。
+
+## 首次 PR-1A 提交历史快照
+
+**以下保留原始代码交付时的事实与未获许可说明，属于首次提交历史；“未登录/未收到许可/Python与Git未知”等文字不再描述当前状态。当前NAS结果以前述补充及真机报告为准。**
 
 ## 来源与范围
 
@@ -27,7 +39,7 @@ CI派生镜像ID：`sha256:1aad632d3f8d1264d213b62a336523b81d5640fe910118c896e08
 
 固定镜像：`node:24.15.0-bookworm-slim`，linux/amd64 manifest `sha256:152aceace5c03e2597988763165ee33e3fd3633636db0fc983cd2e126b02cfde`，index `sha256:4e6b70dd6cbfc88c8157ba19aa3d9f9cce6ba4703576d55459e45efcbc9c5f5d`。Docker官方Registry解析成功；认证token仅在进程内存中，不输出或保存。CI Compose V1.28.5 官方Linux二进制SHA256 `46406eb5d8443cc0163a483fcff001d557532a7fad5981e268903ad40b75534c`。
 
-NAS 当前未重新登录、未执行新脚本。Phase0历史只读事实：DS918+ / J3455 / x86_64 / DSM7.1.1build42962u6 / Linux4.4.180+，Docker CLI20.10.3，ComposeV1.28.5，Tailscale1.102.3，/volume2 ext4。该账户daemon访问因权限受阻；Server未返回。这是历史观察，不作为本PR的当前实测或退出码证据。[历史评估](../phase-0/05-nas-compatibility.md)。
+NAS 首次报告时未重新登录、未执行新脚本。Phase0历史只读事实：DS918+ / J3455 / x86_64 / DSM7.1.1build42962u6 / Linux4.4.180+，Docker CLI20.10.3，ComposeV1.28.5，Tailscale1.102.3，本地ext4卷。该账户daemon访问因权限受阻；Server未返回。这是历史观察，不作为本PR的当前实测或退出码证据。[历史评估](../phase-0/05-nas-compatibility.md)。
 
 ## 全部改动文件
 
