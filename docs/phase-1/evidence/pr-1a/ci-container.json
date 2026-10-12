@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "runnerVersion": "1.0.0",
+  "timestampUtc": "2026-10-08T13:22:45.082437+00:00",
+  "repositorySha": "4e529c88ef848a1eae8eebc54595e455b9733e67",
+  "executionEnvironment": "ci",
+  "projectName": "klh-pr1a-2757e3766989",
+  "status": "PASS",
+  "commands": [
+    {
+      "stage": "docker_context_show",
+      "exitCode": 0
+    },
+    {
+      "stage": "docker_context_inspect",
+      "exitCode": 0
+    },
+    {
+      "stage": "compose_config",
+      "exitCode": 0
+    },
+    {
+      "stage": "build",
+      "exitCode": 0
+    },
+    {
+      "stage": "probe_image_inspect",
+      "exitCode": 0
+    },
+    {
+      "stage": "exercise",
+      "exitCode": 0
+    },
+    {
+      "stage": "exercise_container_absence",
+      "exitCode": 1
+    },
+    {
+      "stage": "verify",
+      "exitCode": 0
+    },
+    {
+      "stage": "verify_container_absence",
+      "exitCode": 1
+    }
+  ],
+  "sourceValidation": {
+    "status": "PASS",
+    "headSha": "4e529c88ef848a1eae8eebc54595e455b9733e67",
+    "cleanCheckout": true
+  },
+  "probes": {
+    "exercise": {
+      "schemaVersion": 1,
+      "probeVersion": "1.0.0",
+      "timestampUtc": "2026-10-08T13:22:54.705Z",
+      "executionEnvironment": "ci",
+      "repositorySha": "4e529c88ef848a1eae8eebc54595e455b9733e67",
+      "mode": "exercise",
+      "status": "PASS",
+      "checks": {
+        "runtime": {
+          "status": "PASS"
+        },
+        "directorySafety": {
+          "status": "PASS"
+        },
+        "databaseSyncImport": {
+          "status": "PASS"
+        },
+        "sqliteVersion": {
+          "status": "PASS",
+          "version": "3.51.3"
+        },
+        "pragmas": {
+          "status": "PASS",
+          "values": {
+            "journal_mode": "wal",
+            "synchronous": 2,
+            "foreign_keys": 1,
+            "busy_timeout": 3000
+          }
+        },
+        "transactionCommit": {
+          "status": "PASS"
+        },
+        "transactionRollback": {
+          "status": "PASS"
+        },
+        "eventIdIdempotency": {
+          "status": "PASS"
+        },
+        "differentPayloadConflict": {
+          "status": "PASS"
+        },
+        "foreignKeyEnforced": {
+          "status": "PASS"
+        },
+        "consistentBackup": {
+          "status": "PASS",
+          "method": "VACUUM INTO"
+        },
+        "emptyDirectoryRestore": {
+          "status": "PASS",
+          "integrity": "ok"
+        },
+        "integrityCheck": {
+          "status": "PASS",
+          "value": "ok"
+        },
+        "disconnectReconnect": {
+          "status": "PASS",
+          "integrity": "ok"
+        }
+      },
+      "runtime": {
+        "node": "24.15.0",
+        "platform": "linux",
+        "arch": "x64",
+        "uid": 1001,
+        "kernel": "6.8.0-1064-azure",
+        "baseImageDigest": "sha256:152aceace5c03e2597988763165ee33e3fd3633636db0fc983cd2e126b02cfde"
+      }
+    },
+    "verify": {
+      "schemaVersion": 1,
+      "probeVersion": "1.0.0",
+      "timestampUtc": "2026-10-08T13:22:55.397Z",
+      "executionEnvironment": "ci",
+      "repositorySha": "4e529c88ef848a1eae8eebc54595e455b9733e67",
+      "mode": "verify",
+      "status": "PASS",
+      "checks": {
+        "runtime": {
+          "status": "PASS"
+        },
+        "directorySafety": {
+          "status": "PASS"
+        },
+        "databaseSyncImport": {
+          "status": "PASS"
+        },
+        "sqliteVersion": {
+          "status": "PASS",
+          "version": "3.51.3"
+        },
+        "pragmas": {
+          "status": "PASS",
+          "values": {
+            "journal_mode": "wal",
+            "synchronous": 2,
+            "foreign_keys": 1,
+            "busy_timeout": 3000
+          }
+        },
+        "separateProcessPersistence": {
+          "status": "PASS",
+          "integrity": "ok"
+        },
+        "integrityCheck": {
+          "status": "PASS",
+          "value": "ok"
+        },
+        "disconnectReconnect": {
+          "status": "PASS",
+          "integrity": "ok"
+        }
+      },
+      "runtime": {
+        "node": "24.15.0",
+        "platform": "linux",
+        "arch": "x64",
+        "uid": 1001,
+        "kernel": "6.8.0-1064-azure",
+        "baseImageDigest": "sha256:152aceace5c03e2597988763165ee33e3fd3633636db0fc983cd2e126b02cfde"
+      }
+    }
+  },
+  "cleanup": {
+    "status": "PASS",
+    "reason": "RUN_RM_REMOVED_BOTH_OWNED_CONTAINERS"
+  },
+  "probeImage": {
+    "id": "sha256:1aad632d3f8d1264d213b62a336523b81d5640fe910118c896e0892376a53d6d",
+    "os": "linux",
+    "architecture": "amd64",
+    "revision": "4e529c88ef848a1eae8eebc54595e455b9733e67"
+  },
+  "containerRecreation": {
+    "status": "PASS",
+    "reason": "TWO_DISTINCT_RUN_RM_CONTAINERS_SAME_BIND_DIRECTORY"
+  },
+  "retainedResources": [
+    "dedicated synthetic directory",
+    "project probe image",
+    "pinned base image cache"
+  ]
+}

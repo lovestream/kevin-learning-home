@@ -1,0 +1,22 @@
+{
+  "timestampUtc": "2026-10-08T14:55:47.976510+00:00",
+  "sshExitCode": 0,
+  "deviceFacts": {
+    "architecture": "x86_64",
+    "kernel": "4.4.180+",
+    "model": "DS918+",
+    "pythonVersion": "Python 3.8.12",
+    "gitVersion": "git version 2.39.1",
+    "majorversion": "7",
+    "minorversion": "1",
+    "buildnumber": "42962",
+    "smallfixnumber": "6"
+  },
+  "nasWrites": false,
+  "sourceSha": "1666d86c50ad49b615d7a3c417eab9e496c28f3b",
+  "currentUserNonRoot": true,
+  "accountIdentifiersRedacted": true,
+  "deviceIdentityMethod": "AUTHENTICATED_SSH_PLUS_SYNO_MODEL_KERNEL_ARCH_AND_DSM_FIELDS",
+  "userExplicitExperimentAuthorization": true,
+  "runtimeRunnerInvoked": false
+}

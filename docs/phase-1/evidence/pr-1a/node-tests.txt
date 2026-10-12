@@ -1,0 +1,14 @@
+✔ SQLite transactions, constraints, idempotency/conflict, WAL, backup and empty restore (71.91498ms)
+✔ a distinct Node process sees persisted synthetic state (38.262238ms)
+✔ refuses exercise rerun without altering the existing snapshot (14.301291ms)
+✔ unmarked, unknown, symlink and unsafe-permission directories are refused (1.826827ms)
+✔ verify rejects an unrelated synthetic database without creating tables (3.15179ms)
+✔ image lock and Dockerfile agree on the amd64 manifest, not a floating tag (0.256ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 173.364494

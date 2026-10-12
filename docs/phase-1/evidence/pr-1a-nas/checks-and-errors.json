@@ -1,0 +1,77 @@
+{
+  "timestampUtc": "2026-10-08T14:59:42.057058+00:00",
+  "preflightAfterExitCode": 1,
+  "errors": [
+    {
+      "check": "docker-server",
+      "exitCode": 127,
+      "errorCategory": "BARE_DOCKER_NOT_IN_NONLOGIN_PATH",
+      "rawErrorRetainedPrivately": true
+    },
+    {
+      "check": "compose-v2-short",
+      "exitCode": 127,
+      "errorCategory": "BARE_DOCKER_NOT_IN_NONLOGIN_PATH",
+      "rawErrorRetainedPrivately": true
+    }
+  ],
+  "beforeAfterEqualChecks": {
+    "host": true,
+    "dockerClient": true,
+    "dockerServer": true,
+    "dockerSocket": true,
+    "composeV1": true,
+    "composeV2": true,
+    "tailscaleVersion": true,
+    "tailscaleState": true,
+    "dsm": true,
+    "ports": true
+  },
+  "noNasWriteCommandsExecuted": true,
+  "containerInventoryAccess": "BLOCKED_PERMISSION_DENIED",
+  "filesystemCapacityMayChangeIndependently": true,
+  "resolvedErrors": [
+    {
+      "check": "docker-server-resolved",
+      "exitCode": 1,
+      "errorCategory": "PERMISSION_DENIED",
+      "rawErrorRetainedPrivately": true,
+      "resolvedByReviewedPreflight": true
+    },
+    {
+      "check": "compose-v2-short-resolved",
+      "exitCode": 125,
+      "errorCategory": "LEGACY_CLI_UNSUPPORTED_FLAG",
+      "rawErrorRetainedPrivately": true,
+      "resolvedByReviewedPreflight": true
+    }
+  ],
+  "nonLoginPathClarification": "BARE_DOCKER_COMMAND_NOT_IN_PATH_EXIT_127; REVIEWED_LOCATE_USED_EXISTING_EXECUTABLE_NO_INSTALL",
+  "supplementalAfter": {
+    "schemaVersion": 1,
+    "timestampUtc": "2026-10-08T15:01:28.395125+00:00",
+    "checks": {
+      "tailscaleServe": {
+        "exitCode": 0,
+        "status": "PASS",
+        "configEmpty": true
+      },
+      "tailscaleFunnel": {
+        "exitCode": 0,
+        "status": "PASS",
+        "configEmpty": true,
+        "allowFunnelEnabled": false
+      }
+    },
+    "processNameCounts": {
+      "dockerd": 1,
+      "containerd": 1,
+      "tailscaled": 1,
+      "node": 2
+    },
+    "dsmProductVersion": "7.1.1",
+    "nasWrites": false
+  },
+  "serveFunnelBaselineUnchanged": true,
+  "processNameCountsUnchanged": true
+}

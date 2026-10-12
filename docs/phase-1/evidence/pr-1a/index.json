@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "task": "KLH-PR-1A",
+  "testedSha": "4e529c88ef848a1eae8eebc54595e455b9733e67",
+  "prUrl": "https://github.com/lovestream/kevin-learning-home/pull/1",
+  "ciRunUrl": "https://github.com/lovestream/kevin-learning-home/actions/runs/37783788299",
+  "nasStatus": "BLOCKED",
+  "nasExecuted": false,
+  "sourceFiles": {
+    ".github/workflows/pr-1a.yml": "138929810a970773ee3d9a0cd9868d0f99b8c779e3ff9621c1ff3ba3812dfd16",
+    ".gitignore": "abdacc338ab3730313f65708a942d908f6d913ba89d63f362e9b5e47cc05ef90",
+    "infra/probes/node-sqlite/Dockerfile": "47307f37461e74925c0bd68ac8f49a112d108bbe26ab65b944faac083e69645a",
+    "infra/probes/node-sqlite/README.md": "aa5107e4827b2cdd467747ac7e710628090348029dfefcab94b784010d4fa6f4",
+    "infra/probes/node-sqlite/compose.yml": "08cac677c66859604fe13146665f4daa225a601b80807dacee9f0a233638136a",
+    "infra/probes/node-sqlite/image-lock.json": "99a0082fa67ec39557694e3643c5485699402593d5254444d1068d541c44d38f",
+    "infra/probes/node-sqlite/probe.mjs": "4b25e5c42a979361d579f74350b2d8e2877289a243c99ef58817b840b214f0e3",
+    "package.json": "c13eac2b20d76b391fe91a9e8b8d64ff61f2ea298b780b519fb26c9fa0515bbd",
+    "scripts/nas-preflight.sh": "9c487a34619513608688578ec9e638ccc96f16efe7cf49a88ef5e6f1440fdae7",
+    "scripts/nas_preflight.py": "9bec2fd5c88424785a9ada37325decd991b30fad8b8819b2d9040028ca53e245",
+    "scripts/run_sqlite_probe.py": "6762de2143f17e4c28f5b3b6db0f8ad008fc2e48d949373344b3a5affe4e5e25",
+    "tests/sqlite-probe.test.mjs": "a9941444e8e0f6d617af5031a54f98534c1ae57af376d26ec5e1aa52e75812f3",
+    "tests/test_preflight.py": "b9e9cdc8ba7c6f6842a51942f7fa0b308203d176636fb925550a19de18979c3d",
+    "tests/test_runner.py": "81ab413678b47b33102bb3fe4680cfcd8424fb5c4abb371332701efd546e9e75"
+  },
+  "evidenceFiles": {
+    "ci-container.json": "934184bc66f4684ac00e08f8e2d583417526a061a28be509e8d360f3d2b686c1",
+    "ci-preflight.json": "d35fc47c7df81ef97664ab6d875f7f73d06d73ae016cf712d4b62ddfb00a2700",
+    "compose-version.txt": "7626dadea5860f6998d4b8b55b91b1e9283ce1a7959b624aaa9ed1fcaaaca69f",
+    "local-preflight.json": "2ab442adda2df283adf05da6d3a0f69a361513943e473c17d196f0cda5fe687b",
+    "local-summary.json": "e9fa5f04e2eca89ab7a253ff69923c3c75ed7ef6a8a3344446256784ca4c06ab",
+    "nas-plan.json": "d4f339eebbb21bda6c720874f2cd9fca32a2c7e1a7927ae65e7936dbda69af28",
+    "node-tests.txt": "9c7a8142626dc000b72931b5e7cdac14d590aa92cce66201216df665b52ee811",
+    "preflight-exit.json": "c97f9b69b82ff0bbae15e44a0ea54f19df363520d29af58787030aed7d226595",
+    "python-tests.txt": "138698c126447036d61a488ff1c3040a4d0f4b9a4c8d01f1e654ec76963df600"
+  }
+}

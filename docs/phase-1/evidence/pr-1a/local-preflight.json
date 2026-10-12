@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "scriptVersion": "1.0.0",
+  "timestampUtc": "2026-10-08T13:22:28.290308+00:00",
+  "executionEnvironment": "local",
+  "repositorySha": "4e529c88ef848a1eae8eebc54595e455b9733e67",
+  "status": "BLOCKED",
+  "checks": {
+    "host": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "system": "Darwin",
+      "architecture": "arm64",
+      "cpuCount": 10,
+      "cpuModel": "unavailable",
+      "kernel": "27.0.0"
+    },
+    "node24GlibcKernelBaseline": {
+      "status": "NOT_RUN",
+      "reason": "NOT_LINUX",
+      "exitCode": null
+    },
+    "dockerClient": {
+      "status": "BLOCKED",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "dockerServer": {
+      "status": "BLOCKED",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "dockerSocket": {
+      "status": "NOT_RUN",
+      "reason": "LOCAL_SOCKET_ABSENT",
+      "exitCode": null
+    },
+    "composeV1": {
+      "status": "NOT_RUN",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "composeV2": {
+      "status": "NOT_RUN",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "tailscaleVersion": {
+      "status": "NOT_RUN",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "tailscaleState": {
+      "status": "NOT_RUN",
+      "reason": "COMMAND_NOT_FOUND",
+      "exitCode": null
+    },
+    "filesystem": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "fsType": "unknown",
+      "networkFilesystem": false,
+      "availableGiB": 219.2,
+      "currentUserWritable": true,
+      "fsTypeVerified": false
+    },
+    "dsm": {
+      "status": "NOT_RUN",
+      "reason": "NOT_DSM",
+      "exitCode": null
+    },
+    "ports": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "observedPorts": {
+        "8080": false,
+        "4177": false
+      }
+    }
+  },
+  "disclaimer": "Inventory only; environment label is operator supplied; no SQLite/runtime acceptance implied."
+}

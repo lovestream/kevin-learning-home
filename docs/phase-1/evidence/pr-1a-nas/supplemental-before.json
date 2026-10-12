@@ -1,0 +1,64 @@
+{
+  "sshExitCode": 0,
+  "report": {
+    "schemaVersion": 1,
+    "timestampUtc": "2026-10-08T14:57:49.750558+00:00",
+    "executionEnvironment": "nas",
+    "sourceSha": "1666d86c50ad49b615d7a3c417eab9e496c28f3b",
+    "checkType": "READ_ONLY_SUPPLEMENTAL",
+    "checks": {
+      "socketAccess": {
+        "status": "BLOCKED",
+        "currentUserNonRoot": true,
+        "socketMode": "0o660",
+        "socketOwnerUid": 0,
+        "socketOwnerGid": 0,
+        "currentUidMatchesSocketOwner": false,
+        "currentGroupsIncludeSocketGid": false,
+        "readWriteAllowed": false
+      },
+      "composeV2Clarification": {
+        "status": "NOT_RUN",
+        "reason": "COMPOSE_PLUGIN_UNAVAILABLE",
+        "exitCode": 1
+      },
+      "tailscaleServe": {
+        "status": "PASS",
+        "exitCode": 0,
+        "configEmpty": true
+      },
+      "tailscaleFunnel": {
+        "status": "PASS",
+        "exitCode": 0,
+        "configEmpty": true,
+        "allowFunnelEnabled": false
+      },
+      "candidateParentMetadata": {
+        "status": "PASS",
+        "fsType": "ext4",
+        "localFilesystemVerified": true,
+        "currentUserWritable": true,
+        "ownedByCurrentUser": true,
+        "mode": "0o777",
+        "availableGiB": 2267.1,
+        "directoryContentsInspected": false,
+        "approvedDedicatedParent": false,
+        "existingContainerMountUsageVerified": false,
+        "limitation": "METADATA_ONLY_NO_APPROVED_EMPTY_TEST_PARENT"
+      },
+      "processBaseline": {
+        "status": "PASS",
+        "processNameCounts": {
+          "dockerd": 1,
+          "containerd": 1,
+          "tailscaled": 1,
+          "node": 2
+        },
+        "unreadableEntries": 0,
+        "noCommandLinesOrIdentitiesCollected": true,
+        "limitation": "PROCESS_NAME_ONLY_NOT_CONTAINER_OR_SERVICE_HEALTH"
+      }
+    },
+    "nasWrites": false
+  }
+}
