@@ -187,4 +187,20 @@ $("newAttempt").onclick = async () => {
   $("sync").textContent = "新一轮已准备";
 };
 
-$('resolve').onclick=async()=>{const previous=JSON.parse(localStorage.getItem(key())??'null');if(!previous)return;await reload();const next={...previous,commandId:crypto.randomUUID(),expectedRevision:current.revision};localStorage.setItem(key()+':superseded',JSON.stringify(previous));localStorage.setItem(key(),JSON.stringify(next));try{await transmit(next);}catch(e){/* retain new command and original conflict evidence */}};
+$("resolve").onclick = async () => {
+  const previous = JSON.parse(localStorage.getItem(key()) ?? "null");
+  if (!previous) return;
+  await reload();
+  const next = {
+    ...previous,
+    commandId: crypto.randomUUID(),
+    expectedRevision: current.revision,
+  };
+  localStorage.setItem(key() + ":superseded", JSON.stringify(previous));
+  localStorage.setItem(key(), JSON.stringify(next));
+  try {
+    await transmit(next);
+  } catch (e) {
+    /* retain new command and original conflict evidence */
+  }
+};
