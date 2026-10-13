@@ -115,8 +115,9 @@ export async function startMediaMock({
       if (req.method === "OPTIONS") {
         res.writeHead(204, {
           "Access-Control-Allow-Origin": publicOrigin,
-          "Access-Control-Allow-Methods": "PUT",
+          "Access-Control-Allow-Methods": "GET,PUT",
           "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Credentials": "true",
           Vary: "Origin",
         });
         res.end();
@@ -243,7 +244,10 @@ export async function startMediaMock({
       }
       if (d.visibility === "private-learner") {
         const origin =
-          req.headers.origin ?? req.headers.referer?.replace(/\/$/, "");
+          req.headers.origin ??
+          (req.headers.referer
+            ? new URL(req.headers.referer).origin
+            : undefined);
         if (origin && origin !== publicOrigin)
           return reply(res, 403, { error: "hotlink forbidden" });
         const auth = await fetch(backendOrigin + "/api/session", {
@@ -264,6 +268,8 @@ export async function startMediaMock({
             : "no-store",
         Vary: "Cookie,Origin",
         "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": publicOrigin,
+        "Access-Control-Allow-Credentials": "true",
       });
       await pipeline(createReadStream(file), res);
     } catch (e) {
