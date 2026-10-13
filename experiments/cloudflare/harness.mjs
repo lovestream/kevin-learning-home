@@ -102,7 +102,7 @@ export async function createHarness({
     kind: "cloudflare",
     setDatabaseUnavailable:async enabled=>{env.BENCH_DB_FAULT=enabled?"on":"off";await mf.dispose();await launch();},
     environment: {
-      simulator: "Miniflare/workerd",sqliteVersion:(await db.first("SELECT sqlite_version() v")).v,miniflareVersion:JSON.parse(await readFile(new URL("../../node_modules/miniflare/package.json",import.meta.url))).version,workerdVersion:JSON.parse(await readFile(new URL("../../node_modules/workerd/package.json",import.meta.url))).version,
+      simulator: "Miniflare/workerd",sqliteVersion:"NOT_EXPOSED_D1_SQL_FUNCTION_DENIED",miniflareVersion:JSON.parse(await readFile(new URL("../../node_modules/miniflare/package.json",import.meta.url))).version,workerdVersion:JSON.parse(await readFile(new URL("../../node_modules/workerd/package.json",import.meta.url))).version,
       remote: false,
       sessionPolicy: "first-primary",
       staticAssets:
