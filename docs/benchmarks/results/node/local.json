@@ -1,6 +1,6 @@
 {
   "route": "node",
-  "timestamp": "2026-10-13T04:26:25.880Z",
+  "timestamp": "2026-10-13T04:33:53.715Z",
   "environment": {
     "node": "v24.15.0",
     "os": "darwin",
@@ -18,8 +18,11 @@
   },
   "scope": "LOCAL",
   "seed": 20261013,
+  "executedHeadSha": "0d54aa49f480a3aa733332e525f4c76eb8f42a5d",
+  "cpuModel": "Apple M5",
   "remote": "BLOCKED_APPROVAL",
   "nas": "NOT_RUN_USER_DEFERRED",
+  "phase": "performance",
   "business": {
     "cases": [
       {
@@ -98,8 +101,12 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 9909,
-      "warmResourceBodyBytes": 5733,
+      "coldResourceBodyBytes": 7349,
+      "warmResourceBodyBytes": 5729,
+      "initialEncodedTransferBytes": 15724,
+      "warmEncodedTransferBytes": 15046,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
     },
     {
@@ -112,8 +119,12 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 9909,
-      "warmResourceBodyBytes": 4176,
+      "coldResourceBodyBytes": 7349,
+      "warmResourceBodyBytes": 5729,
+      "initialEncodedTransferBytes": 15724,
+      "warmEncodedTransferBytes": 15047,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
     },
     {
@@ -126,8 +137,12 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 9909,
-      "warmResourceBodyBytes": 4176,
+      "coldResourceBodyBytes": 7349,
+      "warmResourceBodyBytes": 5729,
+      "initialEncodedTransferBytes": 15725,
+      "warmEncodedTransferBytes": 15047,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
     }
   ],
@@ -136,6 +151,8 @@
     "largeStateBytes": 2100101,
     "chunks": 33,
     "unknownFieldsPreserved": true,
+    "providerSwitchSameCourse": true,
+    "missingObjectDetected": true,
     "logicalRestore": true,
     "physicalRestore": true,
     "physicalMethod": "SQLite VACUUM INTO",
@@ -151,6 +168,10 @@
       "local-a/c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894": {
         "bytes": 1048576,
         "sha256": "c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894"
+      },
+      "local-a/c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894.metadata": {
+        "bytes": 63,
+        "sha256": "70de89b0b9bad38647af63150a97cd7dea34cd48e30bd79f60164f542b47f2d8"
       },
       "local-a/ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330": {
         "bytes": 5242880,
@@ -172,43 +193,52 @@
     "tableHashes": {
       "subject_states": {
         "count": 2,
-        "sha256": "a85dd5296d980516f0b0b4a811420e28e42717235b9619bf4bdc929ea1f154d5"
+        "serializedBytes": 277,
+        "sha256": "e867f90bebc60471a110fa9f0ed3329506844e37336c7808263bb301d269a8ce"
       },
       "state_chunks": {
         "count": 34,
-        "sha256": "2cc47ab8dba40d792a2292c840fb0cbef2f58b6aa7e52e572517459e6bc347c5"
+        "serializedBytes": 2110446,
+        "sha256": "e7d005164d444daebd4d393c5cbb6514e0d9f184a7744f6d79c8c6ee5dae1506"
       },
       "attempts": {
         "count": 16,
-        "sha256": "cfeb50066c557dc52a4b4956cb73b836a967440d71707a66a371db15a206ad95"
+        "serializedBytes": 2103,
+        "sha256": "dbbaa231fafe6d37921d4d52f6999a47e9df1712d6049161401466c899adfd61"
       },
       "receipts": {
-        "count": 39,
-        "sha256": "6175bb4d2ccbef3482dc418c693526d4c1f6d513972cd5f2c64fc658a8a0d9e1"
+        "count": 45,
+        "serializedBytes": 32200,
+        "sha256": "8874fd0d847412a376214a1ad502d08154f2142d9e25cd8e0f121cd7133eb9e0"
       },
       "learning_events": {
-        "count": 39,
-        "sha256": "b365c0b25ffc784281e22d69dff51c30146ce06c5dbae7dfc9da651245af6ef4"
+        "count": 45,
+        "serializedBytes": 40565,
+        "sha256": "2b8b4f835f3a8292c7d943e2308c69dad26dee0bd92e2feb9427ba1c8c5ad595"
       },
       "synthetic_rewards": {
         "count": 2,
-        "sha256": "386600770474c6b7153bf7be5615305db9e3f17c88796a64d991e3adb05a0b3d"
+        "serializedBytes": 313,
+        "sha256": "96cf96f57809525f841b48bccedd6910c72f63dcde961ec94211fd80cdd2c4d3"
       },
       "media_manifests": {
         "count": 4,
+        "serializedBytes": 1878,
         "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
       },
       "course_manifests": {
         "count": 3,
+        "serializedBytes": 860,
         "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
       },
       "media_refs": {
         "count": 0,
+        "serializedBytes": 0,
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       }
     },
     "corruptionDetected": true,
-    "interruptionRecoveryMs": 38.48004200000014,
+    "interruptionRecoveryMs": 38.67000000000007,
     "rpo": "last exported checkpoint; no production SLA",
     "remote": "NOT_RUN"
   },
@@ -220,57 +250,72 @@
         "subjects": 2,
         "events": 100,
         "media": 500,
-        "importMs": 2.857166000000234,
-        "directoryBytes": 20211106,
+        "storage": {
+          "allocatedBytes": 2281472,
+          "livePageBytes": 196608,
+          "freePages": 509,
+          "pageSize": 4096
+        },
+        "importMs": 1.5033750000002328,
+        "directoryBytes": 20178164,
         "tableHashes": {
           "subject_states": {
             "count": 2,
-            "sha256": "72e3e0ddd50b2b4cc124d071c6b26297dfad2e3e496347f745b58c9d1420ced6"
+            "serializedBytes": 277,
+            "sha256": "6a94282cb91677a83052cd39cfdeecc0e3a32f6fc382c1a56132d84080c49bae"
           },
           "state_chunks": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "attempts": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "receipts": {
             "count": 100,
-            "sha256": "400de0515dba06304f7b474e269c05932880798640b6570622962af8d16ce6e0"
+            "serializedBytes": 15022,
+            "sha256": "5d4d0086ba3aa132e4d361fff2bc42ebdd6e510b55efa8ff6e6bd1fdacb9de44"
           },
           "learning_events": {
             "count": 100,
-            "sha256": "314c27e9f69f4d327599c67c1cff9c9c39b0052a901b3c5a42fd7e604d9ae7bf"
+            "serializedBytes": 67522,
+            "sha256": "fdc976ee3611fe1c681e7cae95d4b0b028afa2607c0e41b94f4268309b55a2e2"
           },
           "synthetic_rewards": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "media_manifests": {
             "count": 4,
+            "serializedBytes": 1878,
             "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
           },
           "course_manifests": {
             "count": 3,
+            "serializedBytes": 860,
             "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
           },
           "media_refs": {
             "count": 500,
+            "serializedBytes": 35890,
             "sha256": "a231598e85e6ae8dcf657831f2a4c6e53d4aa2e7421136efee7a5fda7c072c5b"
           }
         },
-        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at zero."
+        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at the per-subject historical maximum."
       },
       "rounds": [
         {
           "concurrency": 2,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 0.32999999999992724,
-          "p95Ms": 0.6194580000001224,
-          "p99Ms": 0.89712499999996,
-          "durationMs": 38.55787499999997,
+          "p50Ms": 0.3297500000007858,
+          "p95Ms": 0.6002500000004147,
+          "p99Ms": 1.0385409999998956,
+          "durationMs": 37.59295800000018,
           "statuses": {
             "200": 161,
             "409": 39
@@ -280,8 +325,8 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 50.882,
-          "backendMaxRssKiB": 74784,
+          "backendCpuMs": 49.196,
+          "backendMaxRssKiB": 73648,
           "dbRowsReturned": 633,
           "dbRowsChanged": 5
         },
@@ -289,10 +334,10 @@
           "concurrency": 50,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 5.061416999999892,
-          "p95Ms": 10.23666699999967,
-          "p99Ms": 11.880125000000135,
-          "durationMs": 25.00808300000017,
+          "p50Ms": 5.0962499999996,
+          "p95Ms": 10.905791999999565,
+          "p99Ms": 13.11212499999965,
+          "durationMs": 25.596666999999798,
           "statuses": {
             "200": 161,
             "409": 39
@@ -302,19 +347,19 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 33.6,
-          "backendMaxRssKiB": 85632,
-          "dbRowsReturned": 562,
+          "backendCpuMs": 35.318,
+          "backendMaxRssKiB": 85008,
+          "dbRowsReturned": 566,
           "dbRowsChanged": 5
         },
         {
           "concurrency": 100,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 4.270415999999841,
-          "p95Ms": 16.68470900000011,
-          "p99Ms": 17.048083000000133,
-          "durationMs": 20.88083400000005,
+          "p50Ms": 4.400666999999885,
+          "p95Ms": 16.416916999999557,
+          "p99Ms": 16.613291000000572,
+          "durationMs": 20.476416999999856,
           "statuses": {
             "200": 161,
             "409": 39
@@ -324,13 +369,13 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 29.444,
-          "backendMaxRssKiB": 90464,
+          "backendCpuMs": 28.975,
+          "backendMaxRssKiB": 90288,
           "dbRowsReturned": 589,
           "dbRowsChanged": 5
         }
       ],
-      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=0; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
+      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=baseline revision; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
     },
     {
       "size": "M",
@@ -339,57 +384,72 @@
         "subjects": 10,
         "events": 100000,
         "media": 100000,
-        "importMs": 391.1917089999997,
-        "directoryBytes": 202898754,
+        "storage": {
+          "allocatedBytes": 92913664,
+          "livePageBytes": 92913664,
+          "freePages": 0,
+          "pageSize": 4096
+        },
+        "importMs": 397.82433299999957,
+        "directoryBytes": 202953196,
         "tableHashes": {
           "subject_states": {
             "count": 30,
-            "sha256": "71597bf7fb215913f4f46923a1d5721c05e51fc7d559e5969977012ca0dd91c5"
+            "serializedBytes": 4275,
+            "sha256": "e68912f89903f7306e565704d30044cbb881be1a465bde2661eaad068a2b78d6"
           },
           "state_chunks": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "attempts": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "receipts": {
             "count": 100000,
-            "sha256": "f9d4dfa223448d364550efb7d34d1b90c84e948522a097cb0e146de00d9241d9"
+            "serializedBytes": 15705680,
+            "sha256": "6590a0792e6281110aa71831a71350e0f0fa47885137d8c9d416886235e9ece9"
           },
           "learning_events": {
             "count": 100000,
-            "sha256": "8a9424c2407d62a3ebeb037f0ff5ebea7f4e4eec8f8b86687e57af264e916577"
+            "serializedBytes": 68205680,
+            "sha256": "20ed290fd729ea3076ace9cf88d65087cfaf71d46c999877417790343d148a2c"
           },
           "synthetic_rewards": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "media_manifests": {
             "count": 4,
+            "serializedBytes": 1878,
             "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
           },
           "course_manifests": {
             "count": 3,
+            "serializedBytes": 860,
             "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
           },
           "media_refs": {
             "count": 100000,
+            "serializedBytes": 7388890,
             "sha256": "cd18bfc529706a8e9cf4047875693271f60ccd1fbdc4676aba5b7a2e2b2aa3f2"
           }
         },
-        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at zero."
+        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at the per-subject historical maximum."
       },
       "rounds": [
         {
           "concurrency": 2,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 0.2273750000003929,
-          "p95Ms": 0.384250000000975,
-          "p99Ms": 0.4691670000011072,
-          "durationMs": 25.502082999999402,
+          "p50Ms": 0.21304199999940465,
+          "p95Ms": 0.3982080000005226,
+          "p99Ms": 0.49141599999984464,
+          "durationMs": 24.59020800000053,
           "statuses": {
             "200": 161,
             "409": 39
@@ -399,8 +459,8 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 32.27,
-          "backendMaxRssKiB": 91280,
+          "backendCpuMs": 30.491,
+          "backendMaxRssKiB": 91008,
           "dbRowsReturned": 634,
           "dbRowsChanged": 5
         },
@@ -408,10 +468,10 @@
           "concurrency": 50,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 3.1410830000004353,
-          "p95Ms": 17.85725000000093,
-          "p99Ms": 19.35266700000102,
-          "durationMs": 20.83220799999981,
+          "p50Ms": 4.244042000000263,
+          "p95Ms": 7.976915999999619,
+          "p99Ms": 8.520249999999578,
+          "durationMs": 19.864458000000013,
           "statuses": {
             "200": 161,
             "409": 39
@@ -421,19 +481,19 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 26.335,
-          "backendMaxRssKiB": 92112,
-          "dbRowsReturned": 577,
+          "backendCpuMs": 34.036,
+          "backendMaxRssKiB": 93440,
+          "dbRowsReturned": 557,
           "dbRowsChanged": 5
         },
         {
           "concurrency": 100,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 4.366165999999794,
-          "p95Ms": 16.353084000000308,
-          "p99Ms": 16.665541999998823,
-          "durationMs": 20.764749999998457,
+          "p50Ms": 4.3350420000006125,
+          "p95Ms": 15.799291999999696,
+          "p99Ms": 16.15716600000087,
+          "durationMs": 19.875500000000102,
           "statuses": {
             "200": 161,
             "409": 39
@@ -443,13 +503,13 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 24.774,
-          "backendMaxRssKiB": 93104,
-          "dbRowsReturned": 578,
+          "backendCpuMs": 23.511,
+          "backendMaxRssKiB": 99184,
+          "dbRowsReturned": 563,
           "dbRowsChanged": 5
         }
       ],
-      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=0; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
+      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=baseline revision; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
     }
   ],
   "status": "PASS_LOCAL"
