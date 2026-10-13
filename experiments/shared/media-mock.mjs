@@ -5,7 +5,7 @@ import {mkdir,writeFile,readFile,stat} from 'node:fs/promises';
 import {createReadStream,createWriteStream} from 'node:fs';
 import {pipeline} from 'node:stream/promises';
 import path from 'node:path';
-export async function startMediaMock({directory,port,key,backendOrigin,publicOrigin,provider='local-a'}){
+export async function startMediaMock({directory,port,key,backendOrigin,publicOrigin,provider='local-a',seedObjects=true}){
   await mkdir(directory,{recursive:true,mode:0o700});const base=`http://127.0.0.1:${port}`;
   const signatures=b=>createHmac('sha256',key).update(b).digest('hex');
   const signed=(data)=>{const payload=Buffer.from(JSON.stringify(data)).toString('base64url');return payload+'.'+signatures(payload);};
@@ -18,7 +18,7 @@ export async function startMediaMock({directory,port,key,backendOrigin,publicOri
     let data=Buffer.alloc(size,i+1),mime=i===0?'image/png':i===1?'audio/wav':'application/octet-stream';
     if(i===0){const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScLbtAAAAABJRU5ErkJggg==','base64');png.copy(data);}
     if(i===1){data.write('RIFF',0);data.writeUInt32LE(size-8,4);data.write('WAVEfmt ',8);data.writeUInt32LE(16,16);data.writeUInt16LE(1,20);data.writeUInt16LE(1,22);data.writeUInt32LE(8000,24);data.writeUInt32LE(16000,28);data.writeUInt16LE(2,32);data.writeUInt16LE(16,34);data.write('data',36);data.writeUInt32LE(size-44,40);}
-    const sha256=createHash('sha256').update(data).digest('hex');for(const alias of ['local-a','local-b']){await mkdir(path.join(directory,alias),{recursive:true});await writeFile(objectPath(alias,sha256),data,{mode:0o600});}
+    const sha256=createHash('sha256').update(data).digest('hex');if(seedObjects)for(const alias of ['local-a','local-b']){await mkdir(path.join(directory,alias),{recursive:true});await writeFile(objectPath(alias,sha256),data,{mode:0o600});}
     assets.push({assetId:i===0?'synthetic-public-image':i===1?'synthetic-private-audio':'synthetic-public-binary',version:'v1',sha256,sizeBytes:size,mimeType:mime,visibility:i===1?'private-learner':'public-licensed',...(i===1?{learner:'synthetic-a'}:{}),storageRef:{providerAlias:provider,objectKey:sha256},sourceLicense:'synthetic-generated'});
   }
   const server=http.createServer(async(req,res)=>{try{
