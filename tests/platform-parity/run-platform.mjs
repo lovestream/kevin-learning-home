@@ -1,6 +1,6 @@
 import { mkdtemp, mkdir, writeFile } from "node:fs/promises";
 import os from "node:os";
-import {execFileSync} from "node:child_process";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { runBusinessSuite } from "./business-suite.mjs";
 import { runBrowserSuite } from "./browser-suite.mjs";
@@ -22,16 +22,22 @@ const result = {
   },
   scope: process.env.CI ? "CI" : "LOCAL",
   seed: 20261013,
-  executedHeadSha:execFileSync("git",["rev-parse","HEAD"],{encoding:"utf8"}).trim(),
-  cpuModel:os.cpus()[0]?.model,
+  executedHeadSha: execFileSync("git", ["rev-parse", "HEAD"], {
+    encoding: "utf8",
+  }).trim(),
+  cpuModel: os.cpus()[0]?.model,
   remote: "BLOCKED_APPROVAL",
   nas: "NOT_RUN_USER_DEFERRED",
 };
 try {
-  result.phase="business";result.business = await runBusinessSuite(h);
-  result.phase="browser";result.browser = await runBrowserSuite(h);
-  result.phase="recovery";result.recovery = await runRecovery(h, createHarness, work);
-  result.phase="performance";result.performance = [];
+  result.phase = "business";
+  result.business = await runBusinessSuite(h);
+  result.phase = "browser";
+  result.browser = await runBrowserSuite(h);
+  result.phase = "recovery";
+  result.recovery = await runRecovery(h, createHarness, work);
+  result.phase = "performance";
+  result.performance = [];
   for (const size of ["S", "M"])
     result.performance.push(await runLoad(h, size));
   result.status = process.env.CI ? "PASS_CI" : "PASS_LOCAL";
