@@ -1,4 +1,4 @@
-import { mkdtemp, mkdir, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
 import os from "node:os";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
@@ -56,6 +56,7 @@ try {
     path.join(out, process.env.CI ? "ci.json" : "local.json"),
     JSON.stringify(result, null, 2) + "\n",
   );
+  await rm(work,{recursive:true,force:true});
   console.log(
     JSON.stringify({
       route: kind,
