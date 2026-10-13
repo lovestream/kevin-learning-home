@@ -176,6 +176,70 @@ export async function runBrowserSuite(h) {
         explicitResolutionCreatesNewCommand: true,
         note: "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
       });
+      const parentContext = await browser.newContext({ viewport });
+      const mediaPage = await parentContext.newPage();
+      await mediaPage.goto(h.origin);
+      await mediaPage.locator("#role").selectOption("parent");
+      await mediaPage.locator("#loginButton").click();
+      await mediaPage.locator("#classroom").waitFor({ state: "visible" });
+      const mediaResult = await mediaPage.evaluate(async () => {
+        const s = await (await fetch("/api/session")).json();
+        const bytes = new Uint8Array(1048576).fill(73);
+        const sha256 = [
+          ...new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)),
+        ]
+          .map((x) => x.toString(16).padStart(2, "0"))
+          .join("");
+        const meta = {
+          sizeBytes: bytes.length,
+          mimeType: "application/octet-stream",
+          sha256,
+        };
+        const intent = await (
+          await fetch("/api/parent/media/upload-intent", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRF-Token": s.csrf,
+            },
+            body: JSON.stringify(meta),
+          })
+        ).json();
+        const upload = await fetch(intent.url, {
+          method: "PUT",
+          headers: { "Content-Type": meta.mimeType },
+          body: bytes,
+        });
+        const commit = await fetch("/api/parent/media/commit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-Token": s.csrf,
+          },
+          body: JSON.stringify({
+            ...meta,
+            assetId: "synthetic-browser-upload-" + innerWidth,
+          }),
+        });
+        const privateAsset = await (
+          await fetch("/api/media/synthetic-private-audio")
+        ).json();
+        const audio = await fetch(privateAsset.url, { credentials: "include" });
+        return {
+          upload: upload.status,
+          commit: commit.status,
+          privateDownload: audio.status,
+          privateBytes: (await audio.arrayBuffer()).byteLength,
+        };
+      });
+      assert.deepEqual(mediaResult, {
+        upload: 200,
+        commit: 200,
+        privateDownload: 200,
+        privateBytes: 1048576,
+      });
+      results.at(-1).browserDirectObjectUpload = mediaResult;
+      await parentContext.close();
       await context.close();
     }
   } finally {
