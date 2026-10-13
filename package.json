@@ -1,0 +1,17 @@
+{
+  "name": "klh-platform-benchmarks",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.15.0"
+  },
+  "scripts": {
+    "test:shared": "TZ=Asia/Shanghai node --test tests/platform-parity/source-parity.test.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261013.1",
+    "@playwright/test": "1.64.0",
+    "miniflare": "5.20261006.1-alpha",
+    "wrangler": "4.149.0"
+  }
+}

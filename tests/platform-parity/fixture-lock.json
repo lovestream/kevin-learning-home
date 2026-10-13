@@ -1,0 +1,9 @@
+{
+  "version": "klh-parity-v1",
+  "files": {
+    "contract-v1.md": "d89c236b4992931040e4e78fcac29e6468eee9986b6418ab86da842794daa277",
+    "fixture-v1.json": "68fdc9daf4a856d545999753282bbc4c9b92a0c64ac09bb04cf73b4f4a15ed07",
+    "schema-v1.json": "7049df4b1b96efe4f43758550f955154c8e825b9dd0c7c5cded73b9ebd46d6e1",
+    "source-lock.json": "942ea8bea691f742e01054bb9f49e4506728b8e6fd8ff444e87069860accf228"
+  }
+}

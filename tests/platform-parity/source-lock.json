@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "mathCurrentHeadAtStart": "e3b6344eba35d336640d9d9556380aa771cb5fe1",
+  "mathFrozenSource": "8e9115442b3978eee0d4821750ce04f47954bd26",
+  "englishFrozenSource": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "englishConstantsSha256": "135a9f0117f3817ef3e3138282aa4849beccca58f5ec3678bd9be10e36435f31",
+  "englishModuleSha256": "c6dbb940b533a8fa6d6a55fcb4edc58f9ce61dcba7f4da41570000f23adf58a6",
+  "files": [
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "server/pilot-store.mjs",
+      "sha256": "6e308b8883cf4644c4c0d2cb07a22ec98de38a874285199f733c852fb57e83d6",
+      "vendoredPath": "experiments/shared/vendor/math/server/pilot-store.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "shared/widget-state.mjs",
+      "sha256": "51b59cbf8a7ae23e3973c7191d2b030a3aba8fea1a3339ffa940e09c3e0010ab",
+      "vendoredPath": "experiments/shared/vendor/math/shared/widget-state.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "shared/textbook-models.mjs",
+      "sha256": "e76b8d85e58dfe0fff18991af9953f10cf3af89198d8566e985b4e3afa23f6cf",
+      "vendoredPath": "experiments/shared/vendor/math/shared/textbook-models.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "shared/core-models.mjs",
+      "sha256": "e5ec016e741dc4bef74b85d71e4a5bfd905010ae96fea99ea5a7d79f16b9f636",
+      "vendoredPath": "experiments/shared/vendor/math/shared/core-models.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "shared/hands-on-models.mjs",
+      "sha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1",
+      "vendoredPath": "experiments/shared/vendor/math/shared/hands-on-models.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "shared/operation-models.mjs",
+      "sha256": "f51539a15a8be0deeadb2c357f1563c0278bf5f694148adb29fa6cfc277154f9",
+      "vendoredPath": "experiments/shared/vendor/math/shared/operation-models.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "shared/pilot-math.mjs",
+      "sha256": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
+      "vendoredPath": "experiments/shared/vendor/math/shared/pilot-math.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "server/review-schedule.mjs",
+      "sha256": "e6126fd5a57f07de74756a325a8c375e25deed34d67f4662a416d3326ba1902d",
+      "vendoredPath": "experiments/shared/vendor/math/server/review-schedule.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "server/pet-care.mjs",
+      "sha256": "726afb0ba8f3ac8814fc83f0868cea3f22fcec68d7b4649dba0d4476400ab324",
+      "vendoredPath": "experiments/shared/vendor/math/server/pet-care.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "content/pets/catalog.json",
+      "sha256": "89d5938d9c90b836dd7e4db3db2c3de878d279fb06b494d3a234c0fdfe42c989",
+      "vendoredPath": "experiments/shared/vendor/math/content/pets/catalog.json",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "server/thinking-store.mjs",
+      "sha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "vendoredPath": "experiments/shared/vendor/math/server/thinking-store.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "content/pilot/thinking-variants.mjs",
+      "sha256": "8bdc93f8ab0a9d6bf96735f48e5713e6a739759009cd76bd7a34c12ba8ec8f0f",
+      "vendoredPath": "experiments/shared/vendor/math/content/pilot/thinking-variants.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "content/pilot/thinking-hints.mjs",
+      "sha256": "f73500b4109896babcfd8a0bbe302737b3562fcf25c986c2839d20cf71f6fbde",
+      "vendoredPath": "experiments/shared/vendor/math/content/pilot/thinking-hints.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "content/pilot/thinking-deeper-variants.mjs",
+      "sha256": "0da0f513b7535138154b0ed8c29bc186509fe3f94e23589d6cc0244f31867d9b",
+      "vendoredPath": "experiments/shared/vendor/math/content/pilot/thinking-deeper-variants.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "content/pilot/thinking-source.mjs",
+      "sha256": "844655d8993e657663ec2d90c5e5f0d2bccce4e181cad6859ad45b1102579437",
+      "vendoredPath": "experiments/shared/vendor/math/content/pilot/thinking-source.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "content/pilot/thinking-publication.mjs",
+      "sha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+      "vendoredPath": "experiments/shared/vendor/math/content/pilot/thinking-publication.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "shared/thinking-tools.mjs",
+      "sha256": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+      "vendoredPath": "experiments/shared/vendor/math/shared/thinking-tools.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "commit": "8e9115442b3978eee0d4821750ce04f47954bd26",
+      "path": "shared/withdrawn-checks.mjs",
+      "sha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "vendoredPath": "experiments/shared/vendor/math/shared/withdrawn-checks.mjs",
+      "extraction": "whole-file-byte-identical"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "finiteNumber",
+      "startLine": 204,
+      "endLine": 208,
+      "sha256": "92c6ee987f3e9188e6db30834baf1e4d23eaeae0acd0bab270e9ab86f4ce34f0",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "safeInteger",
+      "startLine": 210,
+      "endLine": 212,
+      "sha256": "609ef380984a063fad13ceee8c86360f61c5110f549f48f3612c817defa10b5c",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "addLocalDays",
+      "startLine": 1673,
+      "endLine": 1677,
+      "sha256": "d29c0282e1a08af0b717e8fbdd7ccdb3c69eb9386b77517aa02addb4de37e183",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "nextReviewSchedule",
+      "startLine": 2857,
+      "endLine": 2896,
+      "sha256": "6b066446d97dc7b00fb7cee573a62071fecc29b728c5949f0ac6a402ace67d27",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "initialScheduleNeeded",
+      "startLine": 2898,
+      "endLine": 2900,
+      "sha256": "2efc76a3f0d24a4a78d4073b001e95313da1228ea7bb335e1495b3d21784a96e",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "normalizeAnswer",
+      "startLine": 3199,
+      "endLine": 3201,
+      "sha256": "d48124bef7c624e6ef526fb472af38c524ca7275276db5d158bfae35dff95002",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "spellingAnswersFor",
+      "startLine": 3234,
+      "endLine": 3238,
+      "sha256": "7b31642f6f5bc98d21a5fcac7414377b6dc109d3bfa50ddc3f8251405cccb805",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "damerauDistanceOne",
+      "startLine": 3289,
+      "endLine": 3310,
+      "sha256": "e7573cac13ad5b802f908690ef9c1fc26da19e3987dec8a6a3164528ab1cfa9f",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "normalizeExerciseAnswer",
+      "startLine": 3262,
+      "endLine": 3270,
+      "sha256": "a1f6aac939dd7c88ca49e9d1d2799f18c4fa6464c4f714f17053eed39f60a1af",
+      "extraction": "exact-function-text"
+    },
+    {
+      "repository": "lovestream/word-request",
+      "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "path": "assets/app.js",
+      "sourceFileSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+      "function": "coreExerciseAnswerMatches",
+      "startLine": 3272,
+      "endLine": 3287,
+      "sha256": "1f06a90555f17eb0fe27be923c96508910187474894cedb845a5593fef68a27c",
+      "extraction": "exact-function-text"
+    }
+  ],
+  "mathPureModuleSha256": "645f122258629b76177d285c16cdf3b8cd5527477daf3baf47f514b30c4405e2",
+  "mathPureSpans": [
+    {
+      "path": "server/pilot-store.mjs",
+      "startLine": 9,
+      "endLine": 28,
+      "sha256": "1eb442039b4919e3623e44cddbb44b4ec4e0d14ee17265f9b08b2b10642d54e7"
+    },
+    {
+      "path": "server/pilot-store.mjs",
+      "startLine": 55,
+      "endLine": 118,
+      "sha256": "7f1ef85d7835349d74b4df1254dd6a5552954dacb4792cc448b7a390442ce4b1"
+    }
+  ]
+}

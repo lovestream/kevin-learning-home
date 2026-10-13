@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://klh.example/contracts/command-v1",
+  "title":"Synthetic parity command; no client verdict or reward",
+  "type":"object","additionalProperties":false,
+  "required":["commandId","expectedRevision","contentVersion","action","attemptId","answer"],
+  "properties":{
+    "commandId":{"type":"string","format":"uuid"},
+    "expectedRevision":{"type":"integer","minimum":0},
+    "contentVersion":{"const":"klh-parity-v1"},
+    "action":{"enum":["math.first","math.help","math.evidence","math.submit","english.answer"]},
+    "attemptId":{"type":"string","pattern":"^[a-zA-Z0-9._:-]{1,100}$"},
+    "answer":{"type":"string","maxLength":200}
+  }
+}
