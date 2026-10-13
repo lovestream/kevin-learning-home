@@ -1,18 +1,188 @@
-const $=id=>document.getElementById(id);let session,subject='math',current={revision:0,state:{}},attemptId;
-const key=()=>`klh-bench-draft:${session.learner}:${subject}`;
-async function call(path,{method='GET',body,id}={}){const res=await fetch(path,{method,headers:{...(body?{'Content-Type':'application/json','X-CSRF-Token':session?.csrf??''}:{}),...(id?{'Idempotency-Key':id}:{})},...(body?{body:JSON.stringify(body)}:{})});const data=await res.json();if(!res.ok)throw Object.assign(new Error(data.error?.code??'REQUEST_FAILED'),{code:data.error?.code,status:res.status});return data;}
-const statePath=()=>`/api/v1/learners/${session.learner}/subjects/${subject}/state`;
-async function reload(){current=await call(statePath());$('saved').textContent=JSON.stringify(current,null,2);$('identity').textContent=`${session.learner} · ${subject} · revision ${current.revision}`;const p=JSON.parse(localStorage.getItem(key())??'null');const existing=subject==='math'?current.state.progress?.studio.sessions:current.state.attempts;attemptId=p?.attemptId??attemptId??Object.keys(existing??{}).at(-1);if(!attemptId)attemptId=(await call(statePath().replace(/state$/,'attempts'),{method:'POST',body:{}})).attemptId;if(p){$('answer').value=p.answer;$('sync').textContent='有尚未同步的草稿；请明确重试，服务器状态不会被覆盖。';}}
-async function switchSubject(next){subject=next;attemptId=undefined;const course=await call(`/api/courses/${subject}`);$('prompt').textContent=course.prompt;$('choices').replaceChildren();for(const c of course.options){const b=document.createElement('button');b.textContent=c.label;b.onclick=()=>{$('answer').value=c.id;};$('choices').append(b);}$('hint').hidden=subject!=='math';$('result').textContent='';await reload();}
-async function enter(){session=await call('/api/session');$('login').hidden=true;$('classroom').hidden=false;await switchSubject(subject);}
-$('loginButton').onclick=async()=>{try{const role=$('role').value;await call('/api/session',{method:'POST',body:{role,learner:$('learner').value,password:`${role}-fixture-only`}});await enter();}catch(e){$('loginButton').textContent=e.message;}};
-async function sendCommand(action,answer){const c={commandId:crypto.randomUUID(),expectedRevision:current.revision,contentVersion:'klh-parity-v1',action,attemptId,answer};localStorage.setItem(key(),JSON.stringify(c));return transmit(c);}
-async function transmit(c){try{const result=await call(statePath().replace(/state$/,'commands'),{method:'POST',body:c,id:c.commandId});localStorage.removeItem(key());$('sync').textContent='已同步';$('result').textContent=JSON.stringify(result.result,null,2);await reload();return result;}catch(e){$('sync').textContent=e.status===409?'冲突：草稿已保留，请刷新并明确决定如何继续。':'尚未同步：草稿和命令编号已保留。';throw e;}}
-async function firstIfNeeded(){if(!current.state.progress?.studio.sessions?.[attemptId]?.selfChecks?.['synthetic-math-q1'])await sendCommand('math.first',$('answer').value);}
-$('submit').onclick=async()=>{try{if(subject==='math'){await firstIfNeeded();await sendCommand('math.evidence','');await sendCommand('math.submit',$('answer').value);}else await sendCommand('english.answer',$('answer').value);}catch(e){/* status already visible; retain draft */}};
-$('hint').onclick=async()=>{try{await firstIfNeeded();await sendCommand('math.help','');}catch(e){/* retain draft */}};
-$('retry').onclick=async()=>{const c=JSON.parse(localStorage.getItem(key())??'null');if(c){attemptId=c.attemptId;try{await transmit(c);}catch(e){/* keep original command on conflict */}}};
-$('refresh').onclick=()=>reload();$('mathTab').onclick=()=>switchSubject('math');$('englishTab').onclick=()=>switchSubject('english');
-try{await enter();}catch(e){/* an unauthenticated local experiment starts at login */}
+const $ = (id) => document.getElementById(id);
+let session,
+  subject = "math",
+  current = { revision: 0, state: {} },
+  attemptId;
+const key = () => `klh-bench-draft:${session.learner}:${subject}`;
+async function call(path, { method = "GET", body, id } = {}) {
+  const res = await fetch(path, {
+    method,
+    headers: {
+      ...(body
+        ? {
+            "Content-Type": "application/json",
+            "X-CSRF-Token": session?.csrf ?? "",
+          }
+        : {}),
+      ...(id ? { "Idempotency-Key": id } : {}),
+    },
+    ...(body ? { body: JSON.stringify(body) } : {}),
+  });
+  const data = await res.json();
+  if (!res.ok)
+    throw Object.assign(new Error(data.error?.code ?? "REQUEST_FAILED"), {
+      code: data.error?.code,
+      status: res.status,
+    });
+  return data;
+}
+const statePath = () =>
+  `/api/v1/learners/${session.learner}/subjects/${subject}/state`;
+async function reload() {
+  current = await call(statePath());
+  $("saved").textContent = JSON.stringify(current, null, 2);
+  $("identity").textContent =
+    `${session.learner} · ${subject} · revision ${current.revision}`;
+  const p = JSON.parse(localStorage.getItem(key()) ?? "null");
+  const existing =
+    subject === "math"
+      ? current.state.progress?.studio.sessions
+      : current.state.attempts;
+  attemptId = p?.attemptId ?? attemptId ?? Object.keys(existing ?? {}).at(-1);
+  if (!attemptId)
+    attemptId = (
+      await call(statePath().replace(/state$/, "attempts"), {
+        method: "POST",
+        body: {},
+      })
+    ).attemptId;
+  if (p) {
+    $("answer").value = p.answer;
+    $("sync").textContent =
+      "有尚未同步的草稿；请明确重试，服务器状态不会被覆盖。";
+  }
+}
+async function switchSubject(next) {
+  subject = next;
+  attemptId = undefined;
+  const course = await call(`/api/courses/${subject}`);
+  $("prompt").textContent = course.prompt;
+  $("choices").replaceChildren();
+  for (const c of course.options) {
+    const b = document.createElement("button");
+    b.textContent = c.label;
+    b.onclick = () => {
+      $("answer").value = c.id;
+    };
+    $("choices").append(b);
+  }
+  $("hint").hidden = subject !== "math";
+  $("result").textContent = "";
+  await reload();
+}
+async function enter() {
+  session = await call("/api/session");
+  $("login").hidden = true;
+  $("classroom").hidden = false;
+  await switchSubject(subject);
+}
+$("loginButton").onclick = async () => {
+  try {
+    const role = $("role").value;
+    await call("/api/session", {
+      method: "POST",
+      body: {
+        role,
+        learner: $("learner").value,
+        password: `${role}-fixture-only`,
+      },
+    });
+    await enter();
+  } catch (e) {
+    $("loginButton").textContent = e.message;
+  }
+};
+async function sendCommand(action, answer) {
+  const c = {
+    commandId: crypto.randomUUID(),
+    expectedRevision: current.revision,
+    contentVersion: "klh-parity-v1",
+    action,
+    attemptId,
+    answer,
+  };
+  localStorage.setItem(key(), JSON.stringify(c));
+  return transmit(c);
+}
+async function transmit(c) {
+  try {
+    const result = await call(statePath().replace(/state$/, "commands"), {
+      method: "POST",
+      body: c,
+      id: c.commandId,
+    });
+    localStorage.removeItem(key());
+    $("sync").textContent = "已同步";
+    $("result").textContent = JSON.stringify(result.result, null, 2);
+    await reload();
+    return result;
+  } catch (e) {
+    $("sync").textContent =
+      e.status === 409
+        ? "冲突：草稿已保留，请刷新并明确决定如何继续。"
+        : "尚未同步：草稿和命令编号已保留。";
+    throw e;
+  }
+}
+async function firstIfNeeded() {
+  if (
+    !current.state.progress?.studio.sessions?.[attemptId]?.selfChecks?.[
+      "synthetic-math-q1"
+    ]
+  )
+    await sendCommand("math.first", $("answer").value);
+}
+$("submit").onclick = async () => {
+  try {
+    if (subject === "math") {
+      await firstIfNeeded();
+      await sendCommand("math.evidence", "");
+      await sendCommand("math.submit", $("answer").value);
+    } else await sendCommand("english.answer", $("answer").value);
+  } catch (e) {
+    /* status already visible; retain draft */
+  }
+};
+$("hint").onclick = async () => {
+  try {
+    await firstIfNeeded();
+    await sendCommand("math.help", "");
+  } catch (e) {
+    /* retain draft */
+  }
+};
+$("retry").onclick = async () => {
+  const c = JSON.parse(localStorage.getItem(key()) ?? "null");
+  if (c) {
+    attemptId = c.attemptId;
+    try {
+      await transmit(c);
+    } catch (e) {
+      /* keep original command on conflict */
+    }
+  }
+};
+$("refresh").onclick = () => reload();
+$("mathTab").onclick = () => switchSubject("math");
+$("englishTab").onclick = () => switchSubject("english");
+try {
+  await enter();
+} catch (e) {
+  /* an unauthenticated local experiment starts at login */
+}
 
-$('newAttempt').onclick=async()=>{if(localStorage.getItem(key())){$('sync').textContent='请先处理未同步草稿。';return;}attemptId=(await call(statePath().replace(/state$/,'attempts'),{method:'POST',body:{}})).attemptId;$('answer').value='';$('result').textContent='';$('sync').textContent='新一轮已准备';};
+$("newAttempt").onclick = async () => {
+  if (localStorage.getItem(key())) {
+    $("sync").textContent = "请先处理未同步草稿。";
+    return;
+  }
+  attemptId = (
+    await call(statePath().replace(/state$/, "attempts"), {
+      method: "POST",
+      body: {},
+    })
+  ).attemptId;
+  $("answer").value = "";
+  $("result").textContent = "";
+  $("sync").textContent = "新一轮已准备";
+};
