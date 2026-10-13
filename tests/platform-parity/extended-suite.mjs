@@ -10,7 +10,7 @@ import {
   rename,
 } from "node:fs/promises";
 import path from "node:path";
-import {setImmediate as yieldIO} from 'node:timers/promises';
+import { setImmediate as yieldIO } from "node:timers/promises";
 import {
   LearningRepository,
   canonical,
@@ -35,27 +35,48 @@ export const TABLES = [
   "media_refs",
 ];
 const digest = (x) => createHash("sha256").update(x).digest("hex");
+const primaryKeys = {
+  subject_states: ["learner", "subject"],
+  state_chunks: ["learner", "subject", "part"],
+  attempts: ["learner", "attempt_id"],
+  receipts: ["learner", "command_id"],
+  learning_events: ["learner", "event_id"],
+  synthetic_rewards: ["learner", "subject", "source"],
+  media_manifests: ["asset_id", "version"],
+  course_manifests: ["subject", "version"],
+  media_refs: ["ref_id"],
+};
+async function* pages(db, table) {
+  const keys = primaryKeys[table];
+  let last;
+  while (true) {
+    const where = last
+      ? `WHERE (${keys.join(",")}) > (${keys.map(() => "?").join(",")})`
+      : "";
+    const rows = await db.all(
+      `SELECT * FROM ${table} ${where} ORDER BY ${keys.join(",")} LIMIT 500`,
+      last ?? [],
+    );
+    if (!rows.length) break;
+    yield rows;
+    await yieldIO();
+    last = keys.map((k) => rows.at(-1)[k]);
+    if (rows.length < 500) break;
+  }
+}
 export async function tableHashes(db) {
   const result = {};
   for (const t of TABLES) {
-    let offset = 0,
-      total = 0,
+    let total = 0,
       serializedBytes = 0;
     const hasher = createHash("sha256");
-    while (true) {
-      const rows = await db.all(
-        `SELECT * FROM ${t} ORDER BY 1,2 LIMIT 500 OFFSET ?`,
-        [offset],
-      );
+    for await (const rows of pages(db, t)) {
       for (const row of rows) {
         const line = canonical(row) + "\n";
         hasher.update(line);
         serializedBytes += Buffer.byteLength(line);
       }
       total += rows.length;
-      await yieldIO();
-      if (rows.length < 500) break;
-      offset += 500;
     }
     result[t] = { count: total, serializedBytes, sha256: hasher.digest("hex") };
   }
@@ -66,19 +87,10 @@ export async function exportLogical(h, target) {
   for (const t of TABLES) {
     const file = path.join(target, t + ".jsonl");
     await writeFile(file, "");
-    let offset = 0;
-    while (true) {
-      const rows = await h.db.all(
-        `SELECT * FROM ${t} ORDER BY 1,2 LIMIT 500 OFFSET ?`,
-        [offset],
-      );
-      if (rows.length)
-        await writeFile(file, rows.map(canonical).join("\n") + "\n", {
-          flag: "a",
-        });
-      if (rows.length < 500) break;
-      offset += 500;
-    }
+    for await (const rows of pages(h.db, t))
+      await writeFile(file, rows.map(canonical).join("\n") + "\n", {
+        flag: "a",
+      });
   }
   await cp(path.join(h.directory, "objects"), path.join(target, "objects"), {
     recursive: true,
@@ -193,7 +205,7 @@ export async function seedCapacity(h, size) {
   await h.db.batch([
     [
       cte +
-        `INSERT INTO receipts SELECT ${learner},'capacity-'||x,${subject},'synthetic-seed-hash','{}',x+1,1 FROM n`,
+        `INSERT INTO receipts SELECT ${learner},'capacity-'||x,${subject},'synthetic-seed-hash','{}',(x/${counts.learners * counts.subjects})+1,1 FROM n`,
       [counts.events],
     ],
     [
@@ -212,12 +224,30 @@ export async function seedCapacity(h, size) {
       [counts.media],
     ],
   ]);
+  await h.db.run(
+    "UPDATE subject_states SET revision=(SELECT COALESCE(MAX(revision),0) FROM learning_events WHERE learning_events.learner=subject_states.learner AND learning_events.subject=subject_states.subject)",
+  );
+  let storage;
+  try {
+    const pageCount = Object.values(await h.db.first("PRAGMA page_count"))[0],
+      freePages = Object.values(await h.db.first("PRAGMA freelist_count"))[0],
+      pageSize = Object.values(await h.db.first("PRAGMA page_size"))[0];
+    storage = {
+      allocatedBytes: pageCount * pageSize,
+      livePageBytes: (pageCount - freePages) * pageSize,
+      freePages,
+      pageSize,
+    };
+  } catch {
+    storage = { status: "NOT_EXPOSED_BY_ADAPTER" };
+  }
   return {
     ...counts,
+    storage,
     importMs: performance.now() - start,
     directoryBytes: await diskBytes(h.directory),
     tableHashes: await tableHashes(h.db),
-    note: "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at zero.",
+    note: "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at the per-subject historical maximum.",
   };
 }
 const percentile = (xs, p) =>
@@ -229,8 +259,11 @@ export async function runLoad(h, size) {
     await seedCapacity(h, size);
     await yieldIO();
     const session = await apiSession(h.origin);
+    let baselineRevision;
     for (let i = 0; i < 20; i++)
       assert.equal((await request(h.origin, session, statePath())).status, 200);
+    baselineRevision = (await request(h.origin, session, statePath())).data
+      .revision;
     const attempts = [];
     for (let i = 0; i < 40; i++)
       attempts.push(
@@ -254,7 +287,9 @@ export async function runLoad(h, size) {
         while (cursor < 200) {
           const i = cursor++,
             t = performance.now();
-          const c = command(0, { attemptId: attempts[Math.floor(i / 5)] });
+          const c = command(baselineRevision, {
+            attemptId: attempts[Math.floor(i / 5)],
+          });
           const r =
             i % 5 === 4
               ? await request(h.origin, session, commandPath(), {
@@ -313,7 +348,7 @@ export async function runLoad(h, size) {
     baseline,
     rounds,
     method:
-      "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=0; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only",
+      "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=baseline revision; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only",
   };
 }
 export async function runRecovery(h, createHarness, work) {
