@@ -1,0 +1,35 @@
+name: BENCH node local and modern Linux CI
+on:
+  push:
+    branches: ['codex/bench-02-node-nas']
+  pull_request:
+    branches: ['codex/bench-shared-contract']
+permissions:
+  contents: read
+concurrency:
+  group: bench-node-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+jobs:
+  prototype:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    env:
+      TZ: Asia/Shanghai
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.15.0'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:shared
+      - run: node tests/platform-parity/run-platform.mjs node
+      - run: node experiments/node/container-suite.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: benchmark-node
+          path: docs/benchmarks/results/node/*.json
