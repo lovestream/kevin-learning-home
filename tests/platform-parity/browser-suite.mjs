@@ -11,7 +11,7 @@ export async function runBrowserSuite(h) {
     ]) {
       const context = await browser.newContext({ viewport });
       const page = await context.newPage();
-      let bytes = 0;
+      let bytes = 0,encoded=0;const cdp=await context.newCDPSession(page);await cdp.send("Network.enable");cdp.on("Network.loadingFinished",event=>{encoded+=event.encodedDataLength;});
       page.on("response", async (r) => {
         if (r.url().startsWith(h.origin) && !r.url().includes("/api/"))
           try {
@@ -21,7 +21,7 @@ export async function runBrowserSuite(h) {
       await page.goto(h.origin);
       await page.locator("#loginButton").click();
       await page.locator("#classroom").waitFor({ state: "visible" });
-      await page.locator("#answer").fill("four");
+      const initialBytes=bytes,initialEncoded=encoded;await page.locator("#answer").fill("four");
       await page.locator("#hint").click();
       await page.waitForFunction(
         () => document.querySelector("#sync").textContent === "已同步",
@@ -100,7 +100,10 @@ export async function runBrowserSuite(h) {
         true,
         "horizontal overflow",
       );
-      const cold = bytes;
+      const secondContext=await browser.newContext({viewport});const peer=await secondContext.newPage();await peer.goto(h.origin);await peer.locator('#loginButton').click();await peer.locator('#classroom').waitFor({state:'visible'});await peer.locator('#englishTab').click();await peer.waitForFunction(()=>document.querySelector('#identity').textContent.includes('english'));
+ await context.setOffline(true);await page.locator('#submit').click();await page.waitForFunction(()=>document.querySelector('#sync').textContent.includes('尚未同步'));const conflictDraft=await page.evaluate(()=>localStorage.getItem('klh-bench-draft:synthetic-a:english'));
+ await peer.locator('#answer').fill('apple');await peer.locator('#submit').click();await peer.waitForFunction(()=>document.querySelector('#result').textContent.includes('"status": "correct"'));await context.setOffline(false);await page.locator('#retry').click();await page.waitForFunction(()=>document.querySelector('#sync').textContent.includes('冲突'));assert.equal(await page.evaluate(()=>localStorage.getItem('klh-bench-draft:synthetic-a:english')),conflictDraft);await page.locator('#resolve').click();await page.waitForFunction(()=>document.querySelector('#sync').textContent==='已同步');assert.equal(await page.evaluate(()=>localStorage.getItem('klh-bench-draft:synthetic-a:english:superseded')),conflictDraft);await secondContext.close();
+ const cold = initialBytes,warmBefore=bytes,warmEncodedBefore=encoded;
       await page.reload();
       await page.locator("#classroom").waitFor({ state: "visible" });
       results.push({
@@ -111,7 +114,7 @@ export async function runBrowserSuite(h) {
         refresh: true,
         offlineRetryOriginalId: true,
         coldResourceBodyBytes: cold,
-        warmResourceBodyBytes: bytes - cold,
+        warmResourceBodyBytes: bytes - warmBefore,initialEncodedTransferBytes:initialEncoded,warmEncodedTransferBytes:encoded-warmEncodedBefore,crossBrowserConflictRetainsDraft:true,explicitResolutionCreatesNewCommand:true,
         note: "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
       });
       await context.close();
