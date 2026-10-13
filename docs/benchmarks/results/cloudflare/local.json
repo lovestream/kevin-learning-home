@@ -1,0 +1,447 @@
+{
+  "route": "cloudflare",
+  "timestamp": "2026-10-13T04:27:14.456Z",
+  "environment": {
+    "node": "v24.15.0",
+    "os": "darwin",
+    "arch": "arm64",
+    "kernel": "27.0.0",
+    "route": {
+      "simulator": "Miniflare/workerd",
+      "remote": false,
+      "sessionPolicy": "first-primary",
+      "staticAssets": "local binding mock; Wrangler native asset smoke separately"
+    }
+  },
+  "scope": "LOCAL",
+  "seed": 20261013,
+  "remote": "BLOCKED_APPROVAL",
+  "nas": "NOT_RUN_USER_DEFERRED",
+  "business": {
+    "cases": [
+      {
+        "id": "P01",
+        "name": "source math first answer/hint/correction, no independent upgrade",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P02",
+        "name": "original spelling/near spelling/scheduling",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P03",
+        "name": "event and revision advance only on accepted command",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P04",
+        "name": "100 independent HTTP duplicate requests yield one receipt/event",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P05",
+        "name": "same key changed payload rejected without write",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P06",
+        "name": "two independent sessions stale revision race and explicit refresh",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P07",
+        "name": "failure after state/event/reward statements rolls every table back",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P08",
+        "name": "logical reward source dedupe and subject isolation",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P09",
+        "name": "role/learner/origin/CSRF/schema/header spoof negative cases",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P10",
+        "name": "lost response retry keeps command, session recovery and does not overwrite",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P11",
+        "name": "versioned media, private auth/cache, direct streaming upload",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P12",
+        "name": "backend restart retains learning state and opaque session",
+        "status": "PASS_LOCAL"
+      }
+    ],
+    "assertionScope": "shared P01-P12 business plus source parity suite; full recovery/e2e/load separately",
+    "remote": "BLOCKED_APPROVAL",
+    "nas": "NOT_RUN"
+  },
+  "browser": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "status": "PASS_LOCAL",
+      "math": true,
+      "english": true,
+      "refresh": true,
+      "offlineRetryOriginalId": true,
+      "coldResourceBodyBytes": 11466,
+      "warmResourceBodyBytes": 7102,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "status": "PASS_LOCAL",
+      "math": true,
+      "english": true,
+      "refresh": true,
+      "offlineRetryOriginalId": true,
+      "coldResourceBodyBytes": 12835,
+      "warmResourceBodyBytes": 7102,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS_LOCAL",
+      "math": true,
+      "english": true,
+      "refresh": true,
+      "offlineRetryOriginalId": true,
+      "coldResourceBodyBytes": 14204,
+      "warmResourceBodyBytes": 5733,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
+    }
+  ],
+  "recovery": {
+    "status": "PASS_LOCAL",
+    "largeStateBytes": 2100101,
+    "chunks": 33,
+    "unknownFieldsPreserved": true,
+    "logicalRestore": true,
+    "physicalRestore": true,
+    "physicalMethod": "local Miniflare filesystem only; not a cloud D1 backup",
+    "mediaHashes": {
+      "local-a/586dea68dfa1577bd6bad996f5670e4ac23b8abb660c8183a3c338f59663a649": {
+        "bytes": 32768,
+        "sha256": "586dea68dfa1577bd6bad996f5670e4ac23b8abb660c8183a3c338f59663a649"
+      },
+      "local-a/be79bfeb8b2a64ab99badea0f409f0e07abc58ee31a95341f0fc562501f7308b": {
+        "bytes": 1048576,
+        "sha256": "be79bfeb8b2a64ab99badea0f409f0e07abc58ee31a95341f0fc562501f7308b"
+      },
+      "local-a/c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894": {
+        "bytes": 1048576,
+        "sha256": "c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894"
+      },
+      "local-a/ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330": {
+        "bytes": 5242880,
+        "sha256": "ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330"
+      },
+      "local-b/586dea68dfa1577bd6bad996f5670e4ac23b8abb660c8183a3c338f59663a649": {
+        "bytes": 32768,
+        "sha256": "586dea68dfa1577bd6bad996f5670e4ac23b8abb660c8183a3c338f59663a649"
+      },
+      "local-b/be79bfeb8b2a64ab99badea0f409f0e07abc58ee31a95341f0fc562501f7308b": {
+        "bytes": 1048576,
+        "sha256": "be79bfeb8b2a64ab99badea0f409f0e07abc58ee31a95341f0fc562501f7308b"
+      },
+      "local-b/ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330": {
+        "bytes": 5242880,
+        "sha256": "ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330"
+      }
+    },
+    "tableHashes": {
+      "subject_states": {
+        "count": 2,
+        "sha256": "55f1a82f53dc2711b0e78a1a8a3a59c5f7443bb13c6157ed92cc0bd3ae2da808"
+      },
+      "state_chunks": {
+        "count": 34,
+        "sha256": "562173020cbf53b34a1983bfb771c65fa41538d04b47d48c12430f81161445f4"
+      },
+      "attempts": {
+        "count": 16,
+        "sha256": "b5c26be92f800ea72b7259c65da53a53c13f071a190a21cd1847062cf8daa3af"
+      },
+      "receipts": {
+        "count": 39,
+        "sha256": "d59a13a97723d9128cc894374aeab89a0b6218359d4e7fc01d79344c9b297cf6"
+      },
+      "learning_events": {
+        "count": 39,
+        "sha256": "5cb88d784dd99ab10044e33a6bdb4d3e9c831af35fb0087e23d9c41c7909f418"
+      },
+      "synthetic_rewards": {
+        "count": 2,
+        "sha256": "647018c0662e8fd743c39420d0f5bb66012548002fd890a929d0b729db17d77d"
+      },
+      "media_manifests": {
+        "count": 4,
+        "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
+      },
+      "course_manifests": {
+        "count": 3,
+        "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
+      },
+      "media_refs": {
+        "count": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "corruptionDetected": true,
+    "interruptionRecoveryMs": 160.37087500000007,
+    "rpo": "last exported checkpoint; no production SLA",
+    "remote": "NOT_RUN"
+  },
+  "performance": [
+    {
+      "size": "S",
+      "baseline": {
+        "learners": 1,
+        "subjects": 2,
+        "events": 100,
+        "media": 500,
+        "importMs": 21.546875,
+        "directoryBytes": 20279296,
+        "tableHashes": {
+          "subject_states": {
+            "count": 2,
+            "sha256": "72e3e0ddd50b2b4cc124d071c6b26297dfad2e3e496347f745b58c9d1420ced6"
+          },
+          "state_chunks": {
+            "count": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "attempts": {
+            "count": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "receipts": {
+            "count": 100,
+            "sha256": "400de0515dba06304f7b474e269c05932880798640b6570622962af8d16ce6e0"
+          },
+          "learning_events": {
+            "count": 100,
+            "sha256": "314c27e9f69f4d327599c67c1cff9c9c39b0052a901b3c5a42fd7e604d9ae7bf"
+          },
+          "synthetic_rewards": {
+            "count": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "media_manifests": {
+            "count": 4,
+            "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
+          },
+          "course_manifests": {
+            "count": 3,
+            "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
+          },
+          "media_refs": {
+            "count": 500,
+            "sha256": "a231598e85e6ae8dcf657831f2a4c6e53d4aa2e7421136efee7a5fda7c072c5b"
+          }
+        },
+        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at zero."
+      },
+      "rounds": [
+        {
+          "concurrency": 2,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 0.997082999999293,
+          "p95Ms": 1.825459000000592,
+          "p99Ms": 2.4933340000006865,
+          "durationMs": 118.70208300000013,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 637,
+            "rowsWritten": 10,
+            "available": true
+          },
+          "backendCpuMs": null,
+          "simulatorHostRssBytes": 440303616,
+          "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
+        },
+        {
+          "concurrency": 50,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 23.296666999999616,
+          "p95Ms": 42.86066599999958,
+          "p99Ms": 46.000834000000395,
+          "durationMs": 110.3498750000008,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 601,
+            "rowsWritten": 10,
+            "available": true
+          },
+          "backendCpuMs": null,
+          "simulatorHostRssBytes": 449003520,
+          "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
+        },
+        {
+          "concurrency": 100,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 38.03150000000005,
+          "p95Ms": 77.46583399999963,
+          "p99Ms": 86.84670800000004,
+          "durationMs": 112.47099999999955,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 590,
+            "rowsWritten": 10,
+            "available": true
+          },
+          "backendCpuMs": null,
+          "simulatorHostRssBytes": 450068480,
+          "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
+        }
+      ],
+      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=0; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
+    },
+    {
+      "size": "M",
+      "baseline": {
+        "learners": 3,
+        "subjects": 10,
+        "events": 100000,
+        "media": 100000,
+        "importMs": 472.11962500000027,
+        "directoryBytes": 203844504,
+        "tableHashes": {
+          "subject_states": {
+            "count": 30,
+            "sha256": "71597bf7fb215913f4f46923a1d5721c05e51fc7d559e5969977012ca0dd91c5"
+          },
+          "state_chunks": {
+            "count": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "attempts": {
+            "count": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "receipts": {
+            "count": 100000,
+            "sha256": "f9d4dfa223448d364550efb7d34d1b90c84e948522a097cb0e146de00d9241d9"
+          },
+          "learning_events": {
+            "count": 100000,
+            "sha256": "8a9424c2407d62a3ebeb037f0ff5ebea7f4e4eec8f8b86687e57af264e916577"
+          },
+          "synthetic_rewards": {
+            "count": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "media_manifests": {
+            "count": 4,
+            "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
+          },
+          "course_manifests": {
+            "count": 3,
+            "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
+          },
+          "media_refs": {
+            "count": 100000,
+            "sha256": "cd18bfc529706a8e9cf4047875693271f60ccd1fbdc4676aba5b7a2e2b2aa3f2"
+          }
+        },
+        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at zero."
+      },
+      "rounds": [
+        {
+          "concurrency": 2,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 0.9090409999989788,
+          "p95Ms": 1.6374159999995754,
+          "p99Ms": 2.5478339999990567,
+          "durationMs": 110.23670800000036,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 637,
+            "rowsWritten": 10,
+            "available": true
+          },
+          "backendCpuMs": null,
+          "simulatorHostRssBytes": 554237952,
+          "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
+        },
+        {
+          "concurrency": 50,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 21.205042000001413,
+          "p95Ms": 36.535500000001775,
+          "p99Ms": 44.63808300000164,
+          "durationMs": 101.96033299999908,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 599,
+            "rowsWritten": 10,
+            "available": true
+          },
+          "backendCpuMs": null,
+          "simulatorHostRssBytes": 473989120,
+          "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
+        },
+        {
+          "concurrency": 100,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 49.59649999999965,
+          "p95Ms": 79.75487500000236,
+          "p99Ms": 88.64445899999919,
+          "durationMs": 110.91320799999812,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 544,
+            "rowsWritten": 10,
+            "available": true
+          },
+          "backendCpuMs": null,
+          "simulatorHostRssBytes": 475922432,
+          "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
+        }
+      ],
+      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=0; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
+    }
+  ],
+  "status": "PASS_LOCAL"
+}

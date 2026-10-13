@@ -1,0 +1,14 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "klh-bench-local-only",
+  "main": "worker.ts",
+  "compatibility_date": "2026-10-13",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "dev": {"ip":"127.0.0.1","port":37911},
+  "assets": {"directory":"../shared/web","binding":"ASSETS","run_worker_first":["/api/*","/health"]},
+  "vars": {"BENCH_ENV":"local","PUBLIC_ORIGIN":"http://127.0.0.1:37911","MEDIA_ORIGIN":"http://127.0.0.1:37912","MEDIA_PROVIDER":"local-a"},
+  "d1_databases": [{"binding":"DB","database_name":"klh-bench-local-only","database_id":"00000000-0000-0000-0000-000000000001","remote":false}],
+  "observability": {"enabled":true,"head_sampling_rate":1}
+}
