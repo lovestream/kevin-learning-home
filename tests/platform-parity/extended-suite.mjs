@@ -431,6 +431,7 @@ export async function runRecovery(h, createHarness, work) {
     await fileHashes(path.join(logical, "objects")),
     before.objects,
   );
+  const beforeOutage=await tableHashes(h.db);await h.setDatabaseUnavailable(true);const unavailableResponse=await request(h.origin,session,statePath());assert.equal(unavailableResponse.status,503);assert.equal(unavailableResponse.data.error.code,'SERVICE_UNAVAILABLE');await h.setDatabaseUnavailable(false);assert.deepEqual(await tableHashes(h.db),beforeOutage);assert.equal((await request(h.origin,session,statePath())).status,200);
   const start = performance.now();
   await h.terminate();
   let unavailable = false;
@@ -458,6 +459,8 @@ export async function runRecovery(h, createHarness, work) {
     mediaHashes: before.objects,
     tableHashes: before.tables,
     corruptionDetected: true,
+    databaseAdapterOutageHTTP503:true,
+    databaseOutageScope:"local adapter/binding fault injection; not real cloud service outage",
     interruptionRecoveryMs: performance.now() - start,
     rpo: "last exported checkpoint; no production SLA",
     remote: "NOT_RUN",
