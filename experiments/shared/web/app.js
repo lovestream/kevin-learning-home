@@ -14,3 +14,5 @@ $('hint').onclick=async()=>{try{await firstIfNeeded();await sendCommand('math.he
 $('retry').onclick=async()=>{const c=JSON.parse(localStorage.getItem(key())??'null');if(c){attemptId=c.attemptId;try{await transmit(c);}catch(e){/* keep original command on conflict */}}};
 $('refresh').onclick=()=>reload();$('mathTab').onclick=()=>switchSubject('math');$('englishTab').onclick=()=>switchSubject('english');
 try{await enter();}catch(e){/* an unauthenticated local experiment starts at login */}
+
+$('newAttempt').onclick=async()=>{if(localStorage.getItem(key())){$('sync').textContent='请先处理未同步草稿。';return;}attemptId=(await call(statePath().replace(/state$/,'attempts'),{method:'POST',body:{}})).attemptId;$('answer').value='';$('result').textContent='';$('sync').textContent='新一轮已准备';};
