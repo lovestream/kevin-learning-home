@@ -7,7 +7,8 @@ export default {
       return env.ASSETS.fetch(request);
     // Each HTTP request gets its own repository/session/metrics. Always start
     // at primary; no stale replica read is assumed correct for this prototype.
-    const db = new D1Adapter(env.DB.withSession("first-primary"));
+    const unavailable=String(env.BENCH_DB_FAULT)==="on"&&["local","ci"].includes(env.BENCH_ENV);
+    const db = new D1Adapter(unavailable?{prepare(){throw Error("injected D1 unavailable");},batch(){throw Error("injected D1 unavailable");}}:env.DB.withSession("first-primary"));
     const response = await handle(request, db, env);
     const headers = new Headers(response.headers);
     headers.set("X-Bench-D1-Queries", String(db.stats.queries));
