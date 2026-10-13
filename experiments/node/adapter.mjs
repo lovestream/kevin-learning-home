@@ -12,6 +12,7 @@ export class SQLiteAdapter {
     this.stats = { queries: 0, rowsReturned: 0, rowsChanged: 0, wallMs: 0 };
   }
   statement(sql, args = []) {
+    if(this.unavailable)throw Error("injected database unavailable");
     this.stats.queries++;
     const stmt = this.raw.prepare(sql);
     if (stmt.columns().length) {

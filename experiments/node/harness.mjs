@@ -96,6 +96,7 @@ export async function createHarness({
     directory,
     environment,
     kind: "node",
+    setDatabaseUnavailable:async enabled=>new Promise((resolve,reject)=>{const id=randomUUID(),timeout=setTimeout(()=>reject(Error("fault acknowledgement timeout")),5000);const handler=msg=>{if(msg.kind==="dbFault"&&msg.id===id){clearTimeout(timeout);child.off("message",handler);resolve();}};child.on("message",handler);child.send({kind:"dbFault",id,enabled});}),
     restart: async () => {
       await stop();
       await launch();

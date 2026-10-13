@@ -67,6 +67,7 @@ server.listen(
     }),
 );
 process.on("message", (msg) => {
+  if(msg.kind==="dbFault"){db.unavailable=msg.enabled;process.send?.({kind:"dbFault",id:msg.id});}
   if (msg.kind === "metrics")
     process.send?.({
       kind: "metrics",
