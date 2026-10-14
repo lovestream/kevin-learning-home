@@ -13,3 +13,5 @@ test-results/
 __pycache__/
 .bench-work*/
 .bench-evidence*/
+
+dist/
