@@ -24,6 +24,9 @@ export async function runBrowserSuite(h) {
             bytes += (await r.body()).length;
           } catch {}
       });
+      // A deliberately slow state read makes premature subject switching and
+      // premature synced UI deterministic rather than relying on CI speed.
+      await page.route('**/api/v1/learners/*/subjects/*/state',async route=>{await new Promise(resolve=>setTimeout(resolve,120));await route.continue();});
       await page.goto(h.origin);
       await page.locator("#loginButton").click();
       await page.locator("#classroom").waitFor({ state: "visible" });
