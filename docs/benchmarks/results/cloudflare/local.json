@@ -1,6 +1,6 @@
 {
   "route": "cloudflare",
-  "timestamp": "2026-10-13T04:27:14.456Z",
+  "timestamp": "2026-10-13T04:39:18.287Z",
   "environment": {
     "node": "v24.15.0",
     "os": "darwin",
@@ -8,6 +8,9 @@
     "kernel": "27.0.0",
     "route": {
       "simulator": "Miniflare/workerd",
+      "sqliteVersion": "NOT_EXPOSED_D1_SQL_FUNCTION_DENIED",
+      "miniflareVersion": "5.20261006.1-alpha",
+      "workerdVersion": "1.20261006.1",
       "remote": false,
       "sessionPolicy": "first-primary",
       "staticAssets": "local binding mock; Wrangler native asset smoke separately"
@@ -15,8 +18,11 @@
   },
   "scope": "LOCAL",
   "seed": 20261013,
+  "executedHeadSha": "02698bee3efbbcdbf431926f7983e09706782813",
+  "cpuModel": "Apple M5",
   "remote": "BLOCKED_APPROVAL",
   "nas": "NOT_RUN_USER_DEFERRED",
+  "phase": "performance",
   "business": {
     "cases": [
       {
@@ -95,9 +101,19 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 11466,
-      "warmResourceBodyBytes": 7102,
-      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
+      "coldResourceBodyBytes": 7349,
+      "warmResourceBodyBytes": 7349,
+      "initialEncodedTransferBytes": 6874,
+      "warmEncodedTransferBytes": 6125,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+      "browserDirectObjectUpload": {
+        "upload": 200,
+        "commit": 200,
+        "privateDownload": 200,
+        "privateBytes": 1048576
+      }
     },
     {
       "viewport": {
@@ -109,9 +125,19 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 12835,
-      "warmResourceBodyBytes": 7102,
-      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
+      "coldResourceBodyBytes": 8718,
+      "warmResourceBodyBytes": 8718,
+      "initialEncodedTransferBytes": 6873,
+      "warmEncodedTransferBytes": 6126,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+      "browserDirectObjectUpload": {
+        "upload": 200,
+        "commit": 200,
+        "privateDownload": 200,
+        "privateBytes": 1048576
+      }
     },
     {
       "viewport": {
@@ -123,9 +149,19 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 14204,
-      "warmResourceBodyBytes": 5733,
-      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad"
+      "coldResourceBodyBytes": 8718,
+      "warmResourceBodyBytes": 7349,
+      "initialEncodedTransferBytes": 6874,
+      "warmEncodedTransferBytes": 6126,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+      "browserDirectObjectUpload": {
+        "upload": 200,
+        "commit": 200,
+        "privateDownload": 200,
+        "privateBytes": 1048576
+      }
     }
   ],
   "recovery": {
@@ -133,6 +169,8 @@
     "largeStateBytes": 2100101,
     "chunks": 33,
     "unknownFieldsPreserved": true,
+    "providerSwitchSameCourse": true,
+    "missingObjectDetected": true,
     "logicalRestore": true,
     "physicalRestore": true,
     "physicalMethod": "local Miniflare filesystem only; not a cloud D1 backup",
@@ -148,6 +186,10 @@
       "local-a/c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894": {
         "bytes": 1048576,
         "sha256": "c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894"
+      },
+      "local-a/c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894.metadata": {
+        "bytes": 63,
+        "sha256": "70de89b0b9bad38647af63150a97cd7dea34cd48e30bd79f60164f542b47f2d8"
       },
       "local-a/ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330": {
         "bytes": 5242880,
@@ -169,43 +211,54 @@
     "tableHashes": {
       "subject_states": {
         "count": 2,
-        "sha256": "55f1a82f53dc2711b0e78a1a8a3a59c5f7443bb13c6157ed92cc0bd3ae2da808"
+        "serializedBytes": 277,
+        "sha256": "dcf461a5b112b3112bdb88bd682fc6b854fd3cdcf522ca8461dfa0ca4ff4517f"
       },
       "state_chunks": {
         "count": 34,
-        "sha256": "562173020cbf53b34a1983bfb771c65fa41538d04b47d48c12430f81161445f4"
+        "serializedBytes": 2110483,
+        "sha256": "0f714c8acd605a1074707872c6fa496b60a9d8344146b40f14bba5fe985c39cd"
       },
       "attempts": {
         "count": 16,
-        "sha256": "b5c26be92f800ea72b7259c65da53a53c13f071a190a21cd1847062cf8daa3af"
+        "serializedBytes": 2103,
+        "sha256": "aa01d092523839b01ea42bc2f2723d2d583ed1b6b2729b8350335411ffda89c1"
       },
       "receipts": {
-        "count": 39,
-        "sha256": "d59a13a97723d9128cc894374aeab89a0b6218359d4e7fc01d79344c9b297cf6"
+        "count": 45,
+        "serializedBytes": 32194,
+        "sha256": "364ff4953c2cc66bede02000fa8a4b6c9b5e289f48c624403621cf3645da1547"
       },
       "learning_events": {
-        "count": 39,
-        "sha256": "5cb88d784dd99ab10044e33a6bdb4d3e9c831af35fb0087e23d9c41c7909f418"
+        "count": 45,
+        "serializedBytes": 40559,
+        "sha256": "02b8c93358e5c3e2ec1cc2c5bf933b600bc9ceff58236f19f696e30ef112458d"
       },
       "synthetic_rewards": {
         "count": 2,
-        "sha256": "647018c0662e8fd743c39420d0f5bb66012548002fd890a929d0b729db17d77d"
+        "serializedBytes": 313,
+        "sha256": "ead15450190d589185a1d5dc5cabfa577e374fe48232e8fec697a685d2df4fdc"
       },
       "media_manifests": {
-        "count": 4,
-        "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
+        "count": 7,
+        "serializedBytes": 3302,
+        "sha256": "9625a3072d6664d8ac96651b53ad8d4a19f07a6a049206f17ff7b6748e52ff65"
       },
       "course_manifests": {
         "count": 3,
+        "serializedBytes": 860,
         "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
       },
       "media_refs": {
         "count": 0,
+        "serializedBytes": 0,
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       }
     },
     "corruptionDetected": true,
-    "interruptionRecoveryMs": 160.37087500000007,
+    "databaseAdapterOutageHTTP503": true,
+    "databaseOutageScope": "local adapter/binding fault injection; not real cloud service outage",
+    "interruptionRecoveryMs": 157.0815419999999,
     "rpo": "last exported checkpoint; no production SLA",
     "remote": "NOT_RUN"
   },
@@ -217,57 +270,69 @@
         "subjects": 2,
         "events": 100,
         "media": 500,
-        "importMs": 21.546875,
-        "directoryBytes": 20279296,
+        "storage": {
+          "status": "NOT_EXPOSED_BY_ADAPTER"
+        },
+        "importMs": 24.9935830000004,
+        "directoryBytes": 21350487,
         "tableHashes": {
           "subject_states": {
             "count": 2,
-            "sha256": "72e3e0ddd50b2b4cc124d071c6b26297dfad2e3e496347f745b58c9d1420ced6"
+            "serializedBytes": 277,
+            "sha256": "6a94282cb91677a83052cd39cfdeecc0e3a32f6fc382c1a56132d84080c49bae"
           },
           "state_chunks": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "attempts": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "receipts": {
             "count": 100,
-            "sha256": "400de0515dba06304f7b474e269c05932880798640b6570622962af8d16ce6e0"
+            "serializedBytes": 15022,
+            "sha256": "5d4d0086ba3aa132e4d361fff2bc42ebdd6e510b55efa8ff6e6bd1fdacb9de44"
           },
           "learning_events": {
             "count": 100,
-            "sha256": "314c27e9f69f4d327599c67c1cff9c9c39b0052a901b3c5a42fd7e604d9ae7bf"
+            "serializedBytes": 67522,
+            "sha256": "fdc976ee3611fe1c681e7cae95d4b0b028afa2607c0e41b94f4268309b55a2e2"
           },
           "synthetic_rewards": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "media_manifests": {
-            "count": 4,
-            "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
+            "count": 7,
+            "serializedBytes": 3302,
+            "sha256": "9625a3072d6664d8ac96651b53ad8d4a19f07a6a049206f17ff7b6748e52ff65"
           },
           "course_manifests": {
             "count": 3,
+            "serializedBytes": 860,
             "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
           },
           "media_refs": {
             "count": 500,
+            "serializedBytes": 35890,
             "sha256": "a231598e85e6ae8dcf657831f2a4c6e53d4aa2e7421136efee7a5fda7c072c5b"
           }
         },
-        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at zero."
+        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at the per-subject historical maximum."
       },
       "rounds": [
         {
           "concurrency": 2,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 0.997082999999293,
-          "p95Ms": 1.825459000000592,
-          "p99Ms": 2.4933340000006865,
-          "durationMs": 118.70208300000013,
+          "p50Ms": 0.9866249999995489,
+          "p95Ms": 1.951125000000502,
+          "p99Ms": 2.907499999999345,
+          "durationMs": 120.13195799999994,
           "statuses": {
             "200": 161,
             "409": 39
@@ -278,53 +343,53 @@
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 440303616,
+          "simulatorHostRssBytes": 513998848,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         },
         {
           "concurrency": 50,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 23.296666999999616,
-          "p95Ms": 42.86066599999958,
-          "p99Ms": 46.000834000000395,
-          "durationMs": 110.3498750000008,
+          "p50Ms": 22.46833300000071,
+          "p95Ms": 41.67274999999972,
+          "p99Ms": 44.825166999999965,
+          "durationMs": 106.61908399999993,
           "statuses": {
             "200": 161,
             "409": 39
           },
           "d1": {
-            "rowsRead": 601,
+            "rowsRead": 598,
             "rowsWritten": 10,
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 449003520,
+          "simulatorHostRssBytes": 517226496,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         },
         {
           "concurrency": 100,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 38.03150000000005,
-          "p95Ms": 77.46583399999963,
-          "p99Ms": 86.84670800000004,
-          "durationMs": 112.47099999999955,
+          "p50Ms": 37.285375000000386,
+          "p95Ms": 74.34870899999987,
+          "p99Ms": 74.79800000000068,
+          "durationMs": 103.7110419999999,
           "statuses": {
             "200": 161,
             "409": 39
           },
           "d1": {
-            "rowsRead": 590,
+            "rowsRead": 600,
             "rowsWritten": 10,
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 450068480,
+          "simulatorHostRssBytes": 522846208,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         }
       ],
-      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=0; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
+      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=baseline revision; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
     },
     {
       "size": "M",
@@ -333,57 +398,69 @@
         "subjects": 10,
         "events": 100000,
         "media": 100000,
-        "importMs": 472.11962500000027,
-        "directoryBytes": 203844504,
+        "storage": {
+          "status": "NOT_EXPOSED_BY_ADAPTER"
+        },
+        "importMs": 449.25237500000003,
+        "directoryBytes": 203915399,
         "tableHashes": {
           "subject_states": {
             "count": 30,
-            "sha256": "71597bf7fb215913f4f46923a1d5721c05e51fc7d559e5969977012ca0dd91c5"
+            "serializedBytes": 4275,
+            "sha256": "e68912f89903f7306e565704d30044cbb881be1a465bde2661eaad068a2b78d6"
           },
           "state_chunks": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "attempts": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "receipts": {
             "count": 100000,
-            "sha256": "f9d4dfa223448d364550efb7d34d1b90c84e948522a097cb0e146de00d9241d9"
+            "serializedBytes": 15705680,
+            "sha256": "6590a0792e6281110aa71831a71350e0f0fa47885137d8c9d416886235e9ece9"
           },
           "learning_events": {
             "count": 100000,
-            "sha256": "8a9424c2407d62a3ebeb037f0ff5ebea7f4e4eec8f8b86687e57af264e916577"
+            "serializedBytes": 68205680,
+            "sha256": "20ed290fd729ea3076ace9cf88d65087cfaf71d46c999877417790343d148a2c"
           },
           "synthetic_rewards": {
             "count": 0,
+            "serializedBytes": 0,
             "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
           },
           "media_manifests": {
-            "count": 4,
-            "sha256": "91d80d1b8894bb8d04d6ccb55b70dd621b9ed27e87ca5bd993cc20d1c1bfdf41"
+            "count": 7,
+            "serializedBytes": 3302,
+            "sha256": "9625a3072d6664d8ac96651b53ad8d4a19f07a6a049206f17ff7b6748e52ff65"
           },
           "course_manifests": {
             "count": 3,
+            "serializedBytes": 860,
             "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
           },
           "media_refs": {
             "count": 100000,
+            "serializedBytes": 7388890,
             "sha256": "cd18bfc529706a8e9cf4047875693271f60ccd1fbdc4676aba5b7a2e2b2aa3f2"
           }
         },
-        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at zero."
+        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at the per-subject historical maximum."
       },
       "rounds": [
         {
           "concurrency": 2,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 0.9090409999989788,
-          "p95Ms": 1.6374159999995754,
-          "p99Ms": 2.5478339999990567,
-          "durationMs": 110.23670800000036,
+          "p50Ms": 0.8852910000005068,
+          "p95Ms": 1.4163750000006985,
+          "p99Ms": 2.0967919999984588,
+          "durationMs": 104.95016600000054,
           "statuses": {
             "200": 161,
             "409": 39
@@ -394,17 +471,17 @@
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 554237952,
+          "simulatorHostRssBytes": 641449984,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         },
         {
           "concurrency": 50,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 21.205042000001413,
-          "p95Ms": 36.535500000001775,
-          "p99Ms": 44.63808300000164,
-          "durationMs": 101.96033299999908,
+          "p50Ms": 24.827666999999565,
+          "p95Ms": 34.60383300000103,
+          "p99Ms": 40.09645900000032,
+          "durationMs": 104.47645899999952,
           "statuses": {
             "200": 161,
             "409": 39
@@ -415,32 +492,32 @@
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 473989120,
+          "simulatorHostRssBytes": 688799744,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         },
         {
           "concurrency": 100,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 49.59649999999965,
-          "p95Ms": 79.75487500000236,
-          "p99Ms": 88.64445899999919,
-          "durationMs": 110.91320799999812,
+          "p50Ms": 37.742583000002924,
+          "p95Ms": 67.96704099999988,
+          "p99Ms": 74.37016600000061,
+          "durationMs": 102.57816699999967,
           "statuses": {
             "200": 161,
             "409": 39
           },
           "d1": {
-            "rowsRead": 544,
+            "rowsRead": 590,
             "rowsWritten": 10,
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 475922432,
+          "simulatorHostRssBytes": 705740800,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         }
       ],
-      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=0; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
+      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=baseline revision; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
     }
   ],
   "status": "PASS_LOCAL"
