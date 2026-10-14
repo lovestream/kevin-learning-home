@@ -11,3 +11,11 @@
 实验预算：本机仅少量合成对象总约6.1MiB；M档100000事件/100000媒体引用本地生成，L档只模型；每侧每负载档三轮，各并发2/50/100，200请求/轮+20预热； correctness的100次并发独立另计。GitHubCI仅测试同样合成数据，无部署步骤/云凭据。
 
 来源与断言变更必须版本化、说明原因并重跑双方。适配HTTP、会话、SQL和对象mock代码是实验新实现，不借其通过声称原课程/真实迁移已完成。云资源、NAS新服务和生产开发均不在当前写入范围。
+
+## 执行修订（冻结fixture与判分不变）
+
+为补足任务要求，新增server-issued attempt新轮、双浏览器离线冲突显式处理、真实浏览器媒体直传/credentials、provider切换/缺对象、adapter不可用HTTP503、两种空环境恢复。source/fixture/schema/contract锁均未改，双方重跑同一断言。容量seed的每subject revision与历史事件一致；导出按完整主键keyset而非OFFSET，避免增长扫描并让I/O正常处理。增加序列化bytes与Node live pages区分WAL/空闲页，CPU与wall分开，D1未开放指标留空。
+
+最新NAS安排由用户2026-10-14消息改为现在验证，授权本次Docker专用sudo和一个受限业务容器；历史“NAS延后”不再是当前安排。非root权限不更改。Docker Hub EOF不是Node运行失败；镜像归档仅作为已授权准备的替代传输。完整后续真机证据将写入Node报告。
+
+合成对象初始唯一大小约6.03MiB，直传额外1MiB；provider镜像/备份/空环境使本地副本占用增加。M数据库＋WAL也占磁盘，不能只按媒体6MiB估算整个实验目录。L不创建大对象，仅容量/成本模型。
