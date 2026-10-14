@@ -40,14 +40,14 @@ cleanup_docker(){
 }
 trap cleanup_docker EXIT HUP INT TERM
 sudo "$docker_bin" run -d --name "$container_name" --user "$uid:$gid" \
-  --memory 512m --cpus 1 --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges \
+  --memory 512m --cpuset-cpus 0 --pids-limit 128 --cap-drop ALL --security-opt no-new-privileges \
   --read-only --tmpfs /tmp:rw,noexec,nosuid,size=16m \
   -p 127.0.0.1:37931:37901 -p 127.0.0.1:37932:37902 \
   -v "$test_root/code:/app:ro" -v "$test_root/data:/data:rw" -w /app \
   -e TZ=Asia/Shanghai -e KLH_BENCH_LISTEN_HOST=0.0.0.0 \
   -e KLH_BENCH_MEDIA_LISTEN_HOST=0.0.0.0 \
   "$image_tag" node experiments/node/nas-suite.mjs > "$test_root/control/container-id.txt"
-sudo "$docker_bin" inspect "$container_name" --format 'memory={{.HostConfig.Memory}} nanoCpus={{.HostConfig.NanoCpus}} user={{.Config.User}} readonly={{.HostConfig.ReadonlyRootfs}} privileged={{.HostConfig.Privileged}}' > "$test_root/control/container-controls.txt"
+sudo "$docker_bin" inspect "$container_name" --format 'memory={{.HostConfig.Memory}} nanoCpus={{.HostConfig.NanoCpus}} cpuset={{.HostConfig.CpusetCpus}} user={{.Config.User}} readonly={{.HostConfig.ReadonlyRootfs}} privileged={{.HostConfig.Privileged}}' > "$test_root/control/container-controls.txt"
 sudo "$docker_bin" wait "$container_name" > "$test_root/control/container-exit.txt"
 sudo "$docker_bin" logs "$container_name" > "$test_root/control/container.log" 2>&1
 sudo "$docker_bin" inspect "$container_name" --format 'oomKilled={{.State.OOMKilled}} exitCode={{.State.ExitCode}}' > "$test_root/control/container-end.txt"

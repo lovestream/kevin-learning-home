@@ -12,6 +12,7 @@ const watchdog=setTimeout(()=>{process.exit(124);},28*60*1000);watchdog.unref();
 await mkdir(work+'/evidence',{recursive:true,mode:0o700});
 const save=async()=>writeFile(work+'/evidence/nas.json',JSON.stringify(result,null,2)+'\n');let h;
 try{
+ for(const line of (await readFile('/proc/self/status','utf8')).split('\n'))if(line.startsWith('Cpus_allowed_list:'))result.environment.effectiveCpuAllowed=line.split(':')[1].trim();try{result.environment.effectiveMemoryLimit=Number((await readFile('/sys/fs/cgroup/memory/memory.limit_in_bytes','utf8')).trim());}catch{result.environment.effectiveMemoryLimit='NOT_EXPOSED';}if(result.environment.effectiveCpuAllowed!=='0')throw Error('single CPU affinity not enforced');if(result.environment.effectiveMemoryLimit!==536870912)throw Error('512 MiB memory limit not verified');
  result.phase='source';execFileSync(process.execPath,['--test','tests/platform-parity/source-parity.test.mjs'],{env:{...process.env,TZ:'Asia/Shanghai'},stdio:'pipe',maxBuffer:1024*1024});result.sourceParityExit=0;
  h=await createHarness({directory:work+'/primary'});result.environment.sqlite=h.environment;
  result.phase='business';result.business=await runBusinessSuite(h);await save();
