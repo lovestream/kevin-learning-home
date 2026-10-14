@@ -16,3 +16,4 @@ __pycache__/
 
 experiments/cloudflare/dist/
 experiments/cloudflare/experiments/
+dist/
