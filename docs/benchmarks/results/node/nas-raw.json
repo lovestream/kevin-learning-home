@@ -1,0 +1,542 @@
+{
+  "route": "node-nas",
+  "timestamp": "2026-10-14T12:19:36.403Z",
+  "status": "PASS_NAS_PENDING_EXTERNAL_IDENTITY",
+  "identity": "REQUIRES_EXTERNAL_SSH_CORROBORATION",
+  "environment": {
+    "node": "v24.15.0",
+    "os": "linux",
+    "arch": "x64",
+    "kernel": "4.4.180+",
+    "nonRoot": true,
+    "effectiveCpuAllowed": "0",
+    "effectiveMemoryLimit": 536870912,
+    "sqlite": {
+      "sqliteVersion": "3.51.3",
+      "pragmas": {
+        "journal_mode": "wal",
+        "synchronous": 2,
+        "foreign_keys": 1,
+        "busy_timeout": 3000
+      }
+    }
+  },
+  "scope": "isolated synthetic experiment only",
+  "phase": "complete",
+  "sourceParityExit": 0,
+  "business": {
+    "cases": [
+      {
+        "id": "P01",
+        "name": "source math first answer/hint/correction, no independent upgrade",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P02",
+        "name": "original spelling/near spelling/scheduling",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P03",
+        "name": "event and revision advance only on accepted command",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P04",
+        "name": "100 independent HTTP duplicate requests yield one receipt/event",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P05",
+        "name": "same key changed payload rejected without write",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P06",
+        "name": "two independent sessions stale revision race and explicit refresh",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P07",
+        "name": "failure after state/event/reward statements rolls every table back",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P08",
+        "name": "logical reward source dedupe and subject isolation",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P09",
+        "name": "role/learner/origin/CSRF/schema/header spoof negative cases",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P10",
+        "name": "lost response retry keeps command, session recovery and does not overwrite",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P11",
+        "name": "versioned media, private auth/cache, direct streaming upload",
+        "status": "PASS_LOCAL"
+      },
+      {
+        "id": "P12",
+        "name": "backend restart retains learning state and opaque session",
+        "status": "PASS_LOCAL"
+      }
+    ],
+    "assertionScope": "shared P01-P12 business plus source parity suite; full recovery/e2e/load separately",
+    "remote": "BLOCKED_APPROVAL",
+    "nas": "NOT_RUN"
+  },
+  "browser": {
+    "status": "PASS",
+    "scope": "Mac Chromium through SSH tunnel to isolated NAS container; not physical Safari/iPad",
+    "cases": [
+      {
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "status": "PASS_LOCAL",
+        "math": true,
+        "english": true,
+        "refresh": true,
+        "offlineRetryOriginalId": true,
+        "coldResourceBodyBytes": 9762,
+        "warmResourceBodyBytes": 9762,
+        "initialEncodedTransferBytes": 11801,
+        "warmEncodedTransferBytes": 10679,
+        "crossBrowserConflictRetainsDraft": true,
+        "explicitResolutionCreatesNewCommand": true,
+        "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+        "browserDirectObjectUpload": {
+          "upload": 200,
+          "commit": 200,
+          "privateDownload": 200,
+          "privateBytes": 1048576
+        }
+      },
+      {
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "status": "PASS_LOCAL",
+        "math": true,
+        "english": true,
+        "refresh": true,
+        "offlineRetryOriginalId": true,
+        "coldResourceBodyBytes": 9762,
+        "warmResourceBodyBytes": 9762,
+        "initialEncodedTransferBytes": 11801,
+        "warmEncodedTransferBytes": 10679,
+        "crossBrowserConflictRetainsDraft": true,
+        "explicitResolutionCreatesNewCommand": true,
+        "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+        "browserDirectObjectUpload": {
+          "upload": 200,
+          "commit": 200,
+          "privateDownload": 200,
+          "privateBytes": 1048576
+        }
+      },
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "status": "PASS_LOCAL",
+        "math": true,
+        "english": true,
+        "refresh": true,
+        "offlineRetryOriginalId": true,
+        "coldResourceBodyBytes": 9762,
+        "warmResourceBodyBytes": 9762,
+        "initialEncodedTransferBytes": 11801,
+        "warmEncodedTransferBytes": 10679,
+        "crossBrowserConflictRetainsDraft": true,
+        "explicitResolutionCreatesNewCommand": true,
+        "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+        "browserDirectObjectUpload": {
+          "upload": 200,
+          "commit": 200,
+          "privateDownload": 200,
+          "privateBytes": 1048576
+        }
+      }
+    ]
+  },
+  "recovery": {
+    "status": "PASS_LOCAL",
+    "largeStateBytes": 2100101,
+    "chunks": 33,
+    "unknownFieldsPreserved": true,
+    "providerSwitchSameCourse": true,
+    "missingObjectDetected": true,
+    "logicalRestore": true,
+    "physicalRestore": true,
+    "physicalMethod": "SQLite VACUUM INTO",
+    "mediaHashes": {
+      "local-a/586dea68dfa1577bd6bad996f5670e4ac23b8abb660c8183a3c338f59663a649": {
+        "bytes": 32768,
+        "sha256": "586dea68dfa1577bd6bad996f5670e4ac23b8abb660c8183a3c338f59663a649"
+      },
+      "local-a/be79bfeb8b2a64ab99badea0f409f0e07abc58ee31a95341f0fc562501f7308b": {
+        "bytes": 1048576,
+        "sha256": "be79bfeb8b2a64ab99badea0f409f0e07abc58ee31a95341f0fc562501f7308b"
+      },
+      "local-a/c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894": {
+        "bytes": 1048576,
+        "sha256": "c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894"
+      },
+      "local-a/c0978704744126c3999901381b5bbd1bb2a0ab5b20be30ed82816118643de894.metadata": {
+        "bytes": 63,
+        "sha256": "70de89b0b9bad38647af63150a97cd7dea34cd48e30bd79f60164f542b47f2d8"
+      },
+      "local-a/ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330": {
+        "bytes": 5242880,
+        "sha256": "ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330"
+      },
+      "local-b/586dea68dfa1577bd6bad996f5670e4ac23b8abb660c8183a3c338f59663a649": {
+        "bytes": 32768,
+        "sha256": "586dea68dfa1577bd6bad996f5670e4ac23b8abb660c8183a3c338f59663a649"
+      },
+      "local-b/be79bfeb8b2a64ab99badea0f409f0e07abc58ee31a95341f0fc562501f7308b": {
+        "bytes": 1048576,
+        "sha256": "be79bfeb8b2a64ab99badea0f409f0e07abc58ee31a95341f0fc562501f7308b"
+      },
+      "local-b/ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330": {
+        "bytes": 5242880,
+        "sha256": "ca924a57a348c94b10eef63ba1d2282b9648504b5ab64f869291f1506edb1330"
+      }
+    },
+    "tableHashes": {
+      "subject_states": {
+        "count": 2,
+        "serializedBytes": 277,
+        "sha256": "e5efa3ab86ff1a4387cd9b7de36457f387e427f8cd59eb47b1bbfb0cadc6a7a9"
+      },
+      "state_chunks": {
+        "count": 34,
+        "serializedBytes": 2110483,
+        "sha256": "5b2fbe14a64d1e3c9f5431e2345a421a35d81ea5dcef2de506532319fc25faa6"
+      },
+      "attempts": {
+        "count": 16,
+        "serializedBytes": 2103,
+        "sha256": "eab5cbb5f53a14d09032fc35ef55d24e35b4239b9a24cb8d3d8ae628dcd40dd5"
+      },
+      "receipts": {
+        "count": 45,
+        "serializedBytes": 32203,
+        "sha256": "8c93dc8d7842d83c1a62feda7bbc7c7396c826505e032d715fbe14338960e180"
+      },
+      "learning_events": {
+        "count": 45,
+        "serializedBytes": 40568,
+        "sha256": "fb167a21c7df659ef11dac622e29b87015e7fe02a0789e82192429c7eb200125"
+      },
+      "synthetic_rewards": {
+        "count": 2,
+        "serializedBytes": 313,
+        "sha256": "6d84acd6f434538d025e5b640e93369244aa4e30b56fe717de14a7313123e6e4"
+      },
+      "media_manifests": {
+        "count": 7,
+        "serializedBytes": 3302,
+        "sha256": "9625a3072d6664d8ac96651b53ad8d4a19f07a6a049206f17ff7b6748e52ff65"
+      },
+      "course_manifests": {
+        "count": 3,
+        "serializedBytes": 860,
+        "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
+      },
+      "media_refs": {
+        "count": 0,
+        "serializedBytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "corruptionDetected": true,
+    "databaseAdapterOutageHTTP503": true,
+    "databaseOutageScope": "local adapter/binding fault injection; not real cloud service outage",
+    "interruptionRecoveryMs": 338.2650680000079,
+    "rpo": "last exported checkpoint; no production SLA",
+    "remote": "NOT_RUN"
+  },
+  "performance": [
+    {
+      "size": "S",
+      "baseline": {
+        "learners": 1,
+        "subjects": 2,
+        "events": 100,
+        "media": 500,
+        "storage": {
+          "allocatedBytes": 2281472,
+          "livePageBytes": 196608,
+          "freePages": 509,
+          "pageSize": 4096
+        },
+        "importMs": 700.3666950000334,
+        "directoryBytes": 20227539,
+        "tableHashes": {
+          "subject_states": {
+            "count": 2,
+            "serializedBytes": 277,
+            "sha256": "6a94282cb91677a83052cd39cfdeecc0e3a32f6fc382c1a56132d84080c49bae"
+          },
+          "state_chunks": {
+            "count": 0,
+            "serializedBytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "attempts": {
+            "count": 0,
+            "serializedBytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "receipts": {
+            "count": 100,
+            "serializedBytes": 15022,
+            "sha256": "5d4d0086ba3aa132e4d361fff2bc42ebdd6e510b55efa8ff6e6bd1fdacb9de44"
+          },
+          "learning_events": {
+            "count": 100,
+            "serializedBytes": 67522,
+            "sha256": "fdc976ee3611fe1c681e7cae95d4b0b028afa2607c0e41b94f4268309b55a2e2"
+          },
+          "synthetic_rewards": {
+            "count": 0,
+            "serializedBytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "media_manifests": {
+            "count": 7,
+            "serializedBytes": 3302,
+            "sha256": "9625a3072d6664d8ac96651b53ad8d4a19f07a6a049206f17ff7b6748e52ff65"
+          },
+          "course_manifests": {
+            "count": 3,
+            "serializedBytes": 860,
+            "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
+          },
+          "media_refs": {
+            "count": 500,
+            "serializedBytes": 35890,
+            "sha256": "a231598e85e6ae8dcf657831f2a4c6e53d4aa2e7421136efee7a5fda7c072c5b"
+          }
+        },
+        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at the per-subject historical maximum."
+      },
+      "rounds": [
+        {
+          "concurrency": 2,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 15.438850000035018,
+          "p95Ms": 22.274630999949295,
+          "p99Ms": 29.24686799995834,
+          "durationMs": 1659.6295640000026,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 0,
+            "rowsWritten": 0,
+            "available": false
+          },
+          "backendCpuMs": 962,
+          "backendMaxRssKiB": 73040,
+          "dbRowsReturned": 633,
+          "dbRowsChanged": 5
+        },
+        {
+          "concurrency": 50,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 303.61011399998097,
+          "p95Ms": 654.2768369999831,
+          "p99Ms": 707.5782309999922,
+          "durationMs": 1515.7592669999576,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 0,
+            "rowsWritten": 0,
+            "available": false
+          },
+          "backendCpuMs": 800,
+          "backendMaxRssKiB": 79996,
+          "dbRowsReturned": 562,
+          "dbRowsChanged": 5
+        },
+        {
+          "concurrency": 100,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 455.2634550000075,
+          "p95Ms": 1113.2266060000402,
+          "p99Ms": 1114.766614000022,
+          "durationMs": 1373.088477000012,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 0,
+            "rowsWritten": 0,
+            "available": false
+          },
+          "backendCpuMs": 689,
+          "backendMaxRssKiB": 80980,
+          "dbRowsReturned": 497,
+          "dbRowsChanged": 5
+        }
+      ],
+      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=baseline revision; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
+    },
+    {
+      "size": "M",
+      "baseline": {
+        "learners": 3,
+        "subjects": 10,
+        "events": 100000,
+        "media": 100000,
+        "storage": {
+          "allocatedBytes": 92913664,
+          "livePageBytes": 92913664,
+          "freePages": 0,
+          "pageSize": 4096
+        },
+        "importMs": 5936.233672000002,
+        "directoryBytes": 202953131,
+        "tableHashes": {
+          "subject_states": {
+            "count": 30,
+            "serializedBytes": 4275,
+            "sha256": "e68912f89903f7306e565704d30044cbb881be1a465bde2661eaad068a2b78d6"
+          },
+          "state_chunks": {
+            "count": 0,
+            "serializedBytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "attempts": {
+            "count": 0,
+            "serializedBytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "receipts": {
+            "count": 100000,
+            "serializedBytes": 15705680,
+            "sha256": "6590a0792e6281110aa71831a71350e0f0fa47885137d8c9d416886235e9ece9"
+          },
+          "learning_events": {
+            "count": 100000,
+            "serializedBytes": 68205680,
+            "sha256": "20ed290fd729ea3076ace9cf88d65087cfaf71d46c999877417790343d148a2c"
+          },
+          "synthetic_rewards": {
+            "count": 0,
+            "serializedBytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "media_manifests": {
+            "count": 7,
+            "serializedBytes": 3302,
+            "sha256": "9625a3072d6664d8ac96651b53ad8d4a19f07a6a049206f17ff7b6748e52ff65"
+          },
+          "course_manifests": {
+            "count": 3,
+            "serializedBytes": 860,
+            "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
+          },
+          "media_refs": {
+            "count": 100000,
+            "serializedBytes": 7388890,
+            "sha256": "cd18bfc529706a8e9cf4047875693271f60ccd1fbdc4676aba5b7a2e2b2aa3f2"
+          }
+        },
+        "note": "Eight future subjects are capacity placeholders; only math/english execute original algorithms. Seed events are historical synthetic rows; live revisions start at the per-subject historical maximum."
+      },
+      "rounds": [
+        {
+          "concurrency": 2,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 11.388074000016786,
+          "p95Ms": 16.710342000005767,
+          "p99Ms": 25.920343999983743,
+          "durationMs": 1257.82310899999,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 0,
+            "rowsWritten": 0,
+            "available": false
+          },
+          "backendCpuMs": 708,
+          "backendMaxRssKiB": 82500,
+          "dbRowsReturned": 633,
+          "dbRowsChanged": 5
+        },
+        {
+          "concurrency": 50,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 279.6130809999886,
+          "p95Ms": 595.3489330000011,
+          "p99Ms": 649.588350999984,
+          "durationMs": 1297.03309599997,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 0,
+            "rowsWritten": 0,
+            "available": false
+          },
+          "backendCpuMs": 674,
+          "backendMaxRssKiB": 84244,
+          "dbRowsReturned": 570,
+          "dbRowsChanged": 5
+        },
+        {
+          "concurrency": 100,
+          "requests": 200,
+          "warmup": 20,
+          "p50Ms": 417.8924760000082,
+          "p95Ms": 1031.4986880000215,
+          "p99Ms": 1033.8683470000396,
+          "durationMs": 1270.9510090000113,
+          "statuses": {
+            "200": 161,
+            "409": 39
+          },
+          "d1": {
+            "rowsRead": 0,
+            "rowsWritten": 0,
+            "available": false
+          },
+          "backendCpuMs": 614,
+          "backendMaxRssKiB": 84244,
+          "dbRowsReturned": 498,
+          "dbRowsChanged": 5
+        }
+      ],
+      "method": "200 HTTP samples, 80% state reads/20% distinct commands at expectedRevision=baseline revision; stale races are expected 409, not transport errors; fixture reset per round; seed 20261013; local loopback only"
+    }
+  ],
+  "syntheticDirectoryBytes": 266754271,
+  "runtimeSupport": "RUNTIME_PASSED_WITH_UNSUPPORTED_KERNEL"
+}

@@ -1,0 +1,124 @@
+{
+  "status": "PASS_NAS",
+  "observedAtUtc": "2026-10-14T12:19:36.403Z",
+  "rawEvidence": "nas-raw.json",
+  "rawSha256": "13bfe4f7d05780f3915c3ae9e101002db535a1fad0d1a84871f3989133a60de8",
+  "identityCorroboration": {
+    "method": "independent SSH host inventory plus authorized Docker inspect and effective container controls",
+    "model": "DS918+",
+    "cpu": "Intel Celeron J3455",
+    "arch": "x86_64",
+    "kernel": "4.4.180+",
+    "dsm": "7.1-42962 Update 6",
+    "dockerClient": "20.10.3",
+    "dockerServer": "20.10.3",
+    "filesystem": "local ext4; not SMB/NFS",
+    "imageId": "sha256:3880cf501a3b54bacc5e53dc327478ba723084863fa252cceb43f75aadcab12b",
+    "node": "v24.15.0",
+    "containerExitCode": 0
+  },
+  "limits": {
+    "effectiveCpuAllowed": "0",
+    "effectiveMemoryBytes": 536870912,
+    "nonRoot": true,
+    "readOnlyRootfs": true,
+    "privileged": false,
+    "ports": "NAS loopback only; browser via temporary SSH forwarding",
+    "pidsLimit": "NOT_ENFORCED: kernel warning; requested 128 discarded",
+    "cpuQuota": "NOT_SUPPORTED; cpuset binds one logical CPU instead"
+  },
+  "runtimeSupport": "RUNTIME_PASSED_WITH_UNSUPPORTED_KERNEL",
+  "source": {
+    "backendCodeSha": "c96e38ec0c30f282a16d91bb09c598d74314e6a7",
+    "uiFixCommit": "a253310c6b0442850c1ded6e15f70d14863005b7",
+    "servedAppSha256": "66610e9b68df0b43407306815d557450d99df8c70ac33e7ee7552e4cb3946749",
+    "phase": "before any NAS browser test",
+    "backendAlgorithmsChanged": false
+  },
+  "cases": [
+    {
+      "id": "P01",
+      "name": "source math first answer/hint/correction, no independent upgrade",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P02",
+      "name": "original spelling/near spelling/scheduling",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P03",
+      "name": "event and revision advance only on accepted command",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P04",
+      "name": "100 independent HTTP duplicate requests yield one receipt/event",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P05",
+      "name": "same key changed payload rejected without write",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P06",
+      "name": "two independent sessions stale revision race and explicit refresh",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P07",
+      "name": "failure after state/event/reward statements rolls every table back",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P08",
+      "name": "logical reward source dedupe and subject isolation",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P09",
+      "name": "role/learner/origin/CSRF/schema/header spoof negative cases",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P10",
+      "name": "lost response retry keeps command, session recovery and does not overwrite",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P11",
+      "name": "versioned media, private auth/cache, direct streaming upload",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P12",
+      "name": "backend restart retains learning state and opaque session",
+      "status": "PASS_NAS"
+    },
+    {
+      "id": "P13",
+      "status": "PASS_NAS",
+      "scope": "Mac Chromium via SSH bridge, three viewports; not physical Safari"
+    },
+    {
+      "id": "P14",
+      "status": "PASS_NAS",
+      "scope": "S/M each three rounds, NAS container loopback HTTP; 1200 samples"
+    },
+    {
+      "id": "P15",
+      "status": "PASS_LOCAL",
+      "scope": "shared design model only; 15 subjects/10 TB NOT_RUN"
+    },
+    {
+      "id": "P16",
+      "status": "PASS_NAS",
+      "scope": "adapter outage HTTP503, interruption/recovery and browser draft safety; no real power/disk failure"
+    }
+  ],
+  "recoveryScope": "business checkpoint plus 2100101-byte state, nine tables and object hashes; M full disaster recovery NOT_RUN",
+  "nasContainerDeleteRecreate": "NOT_RUN; separate modern Linux CI passed this scenario",
+  "cleanup": "AWAITING_USER_SUDO_AUTHENTICATION_AFTER_TIMESTAMP_EXPIRED",
+  "cloudflareRemote": "BLOCKED_APPROVAL"
+}

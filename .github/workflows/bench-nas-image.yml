@@ -1,0 +1,26 @@
+name: BENCH NAS official Node image transport
+on:
+  push:
+    branches: ['codex/bench-02-node-nas']
+    paths: ['.github/workflows/bench-nas-image.yml', 'experiments/node/nas-launch.sh']
+permissions:
+  contents: read
+jobs:
+  image:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - run: |
+          mkdir image
+          docker pull --platform linux/amd64 node:24.15.0-bookworm-slim
+          docker tag node:24.15.0-bookworm-slim klh-bench-node-nas:20261014-7ef8fd3a
+          docker image inspect node:24.15.0-bookworm-slim --format '{"imageId":"{{.Id}}","architecture":"{{.Architecture}}","os":"{{.Os}}","repoDigests":{{json .RepoDigests}}}' > image/image-metadata.json
+          docker save klh-bench-node-nas:20261014-7ef8fd3a | gzip -1 > image/node-amd64.tar.gz
+          cd image
+          sha256sum node-amd64.tar.gz > node-amd64.tar.gz.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nas-official-node-amd64
+          path: image/*
+          retention-days: 1
+          compression-level: 0

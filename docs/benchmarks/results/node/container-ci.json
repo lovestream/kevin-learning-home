@@ -1,0 +1,13 @@
+{
+  "status": "PASS_CI",
+  "scope": "modern Linux container; NOT NAS",
+  "nonRoot": true,
+  "readOnlyImage": true,
+  "persistedAfterDeleteRecreate": true,
+  "sessionRetained": true,
+  "receiptRetained": true,
+  "dockerVersion": "28.0.4",
+  "kernel": "6.8.0-1064-azure",
+  "imageTag": "node:24.15.0-bookworm-slim",
+  "actualImageId": "sha256:48e72536d83656c5d7191272d7107641e0a1267d14f862d14ee760c23db82437"
+}

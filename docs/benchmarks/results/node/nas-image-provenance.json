@@ -1,0 +1,15 @@
+{
+  "imageId": "sha256:3880cf501a3b54bacc5e53dc327478ba723084863fa252cceb43f75aadcab12b",
+  "architecture": "amd64",
+  "os": "linux",
+  "repoDigests": [
+    "node@sha256:4e6b70dd6cbfc88c8157ba19aa3d9f9cce6ba4703576d55459e45efcbc9c5f5d"
+  ],
+  "archiveSha256": "2461b979681359d567c5d89d9d3daa6b6a8c427d8793248fa5b2b5893635bccd",
+  "archiveBytes": 87500741,
+  "nodeVersion": "24.15.0",
+  "tag": "klh-bench-node-nas:20261014-7ef8fd3a",
+  "ciRun": 38559771794,
+  "ciHead": "276526a212d10e5c9693c4dbc2378e025104640d",
+  "validatedArchiveSingleExpectedTag": true
+}

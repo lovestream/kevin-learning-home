@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "scriptVersion": "1.0.0",
+  "timestampUtc": "2026-10-14T11:19:13.946320+00:00",
+  "executionEnvironment": "nas",
+  "repositorySha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+  "status": "FAIL",
+  "checks": {
+    "host": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "system": "Linux",
+      "architecture": "x86_64",
+      "cpuCount": 4,
+      "cpuModel": "Intel(R) Celeron(R) CPU J3455 @ 1.50GHz",
+      "kernel": "4.4.180+"
+    },
+    "node24GlibcKernelBaseline": {
+      "status": "FAIL",
+      "reason": "BELOW_4_18",
+      "exitCode": null
+    },
+    "dockerClient": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "20.10.3"
+    },
+    "dockerServer": {
+      "status": "BLOCKED",
+      "reason": "PERMISSION_DENIED",
+      "exitCode": 1
+    },
+    "dockerSocket": {
+      "status": "BLOCKED",
+      "reason": "PERMISSION_DENIED",
+      "exitCode": null,
+      "isSocket": true,
+      "mode": "0o660"
+    },
+    "composeV1": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "1.28.5"
+    },
+    "composeV2": {
+      "status": "FAIL",
+      "reason": "COMMAND_FAILED_REDACTED",
+      "exitCode": 125
+    },
+    "tailscaleVersion": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "version": "1.104.1"
+    },
+    "tailscaleState": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "backendState": "Running",
+      "selfOnline": true,
+      "magicDNSConfigured": true
+    },
+    "filesystem": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "fsType": "ext4",
+      "networkFilesystem": false,
+      "availableGiB": 2256.2,
+      "currentUserWritable": true,
+      "fsTypeVerified": true
+    },
+    "dsm": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": null,
+      "components": {
+        "majorversion": "7",
+        "minorversion": "1",
+        "buildnumber": "42962",
+        "smallfixnumber": "6"
+      }
+    },
+    "ports": {
+      "status": "PASS",
+      "reason": "OBSERVED",
+      "exitCode": 0,
+      "observedPorts": {
+        "8080": false,
+        "4177": false
+      }
+    }
+  },
+  "disclaimer": "Inventory only; environment label is operator supplied; no SQLite/runtime acceptance implied.",
+  "model": "DS918+",
+  "dedicatedTargetAbsent": true,
+  "currentUserNonRoot": true,
+  "testPort37931Available": true,
+  "businessRuntime": "NOT_RUN_IMAGE_PULL_FAILED",
+  "ramTotalGiB": 7.43,
+  "ramAvailableGiB": 4.77,
+  "testPort37932Available": true,
+  "scopeApproval": "Approved by user 2026-10-14: one scoped non-root container, local-only ports, 1 CPU/512 MiB, Docker-only sudo",
+  "sudoDockerServer": {
+    "status": "PASS",
+    "version": "20.10.3",
+    "authentication": "human interactive terminal",
+    "evidence": "owned launcher control/docker-version.txt"
+  },
+  "imagePreparation": {
+    "status": "FAIL",
+    "stage": "Docker Hub pull",
+    "error": "Error response from daemon: Get https://registry-1.docker.io/v2/: EOF",
+    "exitCode": null,
+    "source": "user terminal report; numeric exit not captured",
+    "nodeExecuted": false,
+    "fallback": "verified CI official amd64 image archive, no NAS network/config changes"
+  },
+  "subsequentAuthorizedExperiment": {
+    "status": "PASS_NAS",
+    "evidence": "nas-verification.json",
+    "runtimeSupport": "RUNTIME_PASSED_WITH_UNSUPPORTED_KERNEL",
+    "originalReadOnlyChecksUnchanged": true,
+    "dockerPermissionChanged": false
+  }
+}
