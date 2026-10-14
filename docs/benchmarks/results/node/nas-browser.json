@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "scope": "Mac Chromium through SSH tunnel to isolated NAS container; not physical Safari/iPad",
+  "cases": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "status": "PASS_LOCAL",
+      "math": true,
+      "english": true,
+      "refresh": true,
+      "offlineRetryOriginalId": true,
+      "coldResourceBodyBytes": 9762,
+      "warmResourceBodyBytes": 9762,
+      "initialEncodedTransferBytes": 11801,
+      "warmEncodedTransferBytes": 10679,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+      "browserDirectObjectUpload": {
+        "upload": 200,
+        "commit": 200,
+        "privateDownload": 200,
+        "privateBytes": 1048576
+      }
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "status": "PASS_LOCAL",
+      "math": true,
+      "english": true,
+      "refresh": true,
+      "offlineRetryOriginalId": true,
+      "coldResourceBodyBytes": 9762,
+      "warmResourceBodyBytes": 9762,
+      "initialEncodedTransferBytes": 11801,
+      "warmEncodedTransferBytes": 10679,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+      "browserDirectObjectUpload": {
+        "upload": 200,
+        "commit": 200,
+        "privateDownload": 200,
+        "privateBytes": 1048576
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS_LOCAL",
+      "math": true,
+      "english": true,
+      "refresh": true,
+      "offlineRetryOriginalId": true,
+      "coldResourceBodyBytes": 9762,
+      "warmResourceBodyBytes": 9762,
+      "initialEncodedTransferBytes": 11801,
+      "warmEncodedTransferBytes": 10679,
+      "crossBrowserConflictRetainsDraft": true,
+      "explicitResolutionCreatesNewCommand": true,
+      "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
+      "browserDirectObjectUpload": {
+        "upload": 200,
+        "commit": 200,
+        "privateDownload": 200,
+        "privateBytes": 1048576
+      }
+    }
+  ]
+}

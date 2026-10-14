@@ -6,13 +6,13 @@
 
 Mac：WAL/FULL/FK/3000ms busy_timeout，BEGIN IMMEDIATE事务、100重复HTTP幂等、两会话CAS、SQL失败回滚、进程重启、SIGKILL恢复、VACUUM INTO、逻辑导出、新空环境恢复、浏览器离线冲突与对象权限。现代Linux CI另测受限非root容器删除/重建，保留同数据挂载后的session/state/receipt。完整JSON与container-ci.json是证据，不把CI标成NAS。
 
-2026-10-14 DS918+：SSH密钥只读检查成功；Linux4.4.180+、Docker Client20.10.3，当前用户Server权限拒绝。备选测试目录不存在且父目录为可写本地ext4。新业务容器和Docker专用sudo范围待用户确认；尚未执行NAS写入。最新权限状态见nas-preflight-20261014.json；没有改docker.sock、组、DSM、Tailscale或现有容器。即使将来Node24跑通，也保留低于官方支持基线的风险，不擅自更换镜像/放开seccomp/privileged绕过。
+2026-10-14 DS918+：只读检查后，用户正式批准本次隔离容器和Docker专用sudo。Node24.15.0/SQLite3.51.3/WAL/事务/业务/网页/备份恢复/S-M负载真机通过。512MiB及CPU0绑定实际核实，PIDs限制未生效。仅使用新合成目录和NAS本地ext4，不在SMB/NFS运行WAL；无Docker权限、DSM、Tailscale或现有服务更改。普通用户daemon权限仍拒绝，sudo由用户终端认证。老内核4.4运行通过仍低于官方支持基线，保留生产风险。独立核验见nas-verification.json；NAS容器删除重建未执行，只有现代Linux CI执行。
 
 ## 本地复现
 
 在Node路线分支根目录执行 `npm ci`、`npm run test:shared`、`npx playwright install chromium`、`node tests/platform-parity/run-platform.mjs node`。脚本只生成owned临时目录、合成数据及脱敏JSON，不连NAS或云。Linux Docker专用验证使用 `node experiments/node/container-suite.mjs`，仅创建UUID命名的测试镜像/容器；不运行全局prune。
 
-NAS专用Dockerfile.nas/nas-suite.mjs只是待许可的执行材料。它限制一个合成容器，先source parity再业务，等待Mac浏览器通过SSH转发验证，然后恢复/S/M负载；未配置公开端口。独立SSH型号/内核及Docker证据必须与容器结果对应，脚本标签本身不能证明真机。
+NAS专用Dockerfile.nas/nas-suite.mjs已在本次独立授权范围内使用。它限制一个合成容器，先source parity再业务，等待Mac浏览器通过SSH转发验证，然后恢复/S/M负载；未配置公开端口。独立SSH型号/内核及Docker证据必须与容器结果对应，脚本标签本身不能证明真机。
 
 ## 一致性备份
 
@@ -36,3 +36,7 @@ NAS专用Dockerfile.nas/nas-suite.mjs只是待许可的执行材料。它限制�
 每月检查补丁/备份/磁盘/证书，季度测试恢复，记录镜像版本和hash、Node LTS升级、权限及资源限额；日志结构化脱敏并设置保留/轮换。原型不需要多个常驻job，备份和内容发布可由受控单次任务完成。Node24不能冻结十年：[官方发布计划](https://github.com/nodejs/Release/blob/main/schedule.json)当前列其支持结束为2028-04-30，十年运维须持续升级运行时和系统。
 
 优先保持“现代Linux计算＋NAS对象/备份”这一独立候选：计算端更新不依赖DSM老内核，NAS仅存归档和离线副本；代价是多一台设备、电源/网络、两端补丁与备份验证。它没有在本PR实际部署。
+
+## 本次NAS收尾边界
+
+真机恢复验证与新空目录hash比较已通过；不是断电、硬盘损坏或M十万事件完整恢复。NAS测试运行内的数据目录约267MB，镜像归档约88MB，没有超过约1GB实验预算。Docker wait退出0，结束后sudo认证过期导致自动读取日志/检查/清理受阻；先导出脱敏证据，再由用户终端只检查并删除本次容器与标签；最终目录删除须核验owned marker，不运行全局prune。不得把自动清理静默失败视为资源已删除。

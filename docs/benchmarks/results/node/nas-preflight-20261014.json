@@ -119,5 +119,12 @@
     "source": "user terminal report; numeric exit not captured",
     "nodeExecuted": false,
     "fallback": "verified CI official amd64 image archive, no NAS network/config changes"
+  },
+  "subsequentAuthorizedExperiment": {
+    "status": "PASS_NAS",
+    "evidence": "nas-verification.json",
+    "runtimeSupport": "RUNTIME_PASSED_WITH_UNSUPPORTED_KERNEL",
+    "originalReadOnlyChecksUnchanged": true,
+    "dockerPermissionChanged": false
   }
 }
