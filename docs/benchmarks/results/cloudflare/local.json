@@ -1,6 +1,6 @@
 {
   "route": "cloudflare",
-  "timestamp": "2026-10-13T04:39:18.287Z",
+  "timestamp": "2026-10-14T12:18:33.221Z",
   "environment": {
     "node": "v24.15.0",
     "os": "darwin",
@@ -18,7 +18,7 @@
   },
   "scope": "LOCAL",
   "seed": 20261013,
-  "executedHeadSha": "02698bee3efbbcdbf431926f7983e09706782813",
+  "executedHeadSha": "fca88a03d03cbd6773917dc5810b73a26087a58a",
   "cpuModel": "Apple M5",
   "remote": "BLOCKED_APPROVAL",
   "nas": "NOT_RUN_USER_DEFERRED",
@@ -101,10 +101,10 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 7349,
-      "warmResourceBodyBytes": 7349,
-      "initialEncodedTransferBytes": 6874,
-      "warmEncodedTransferBytes": 6125,
+      "coldResourceBodyBytes": 6773,
+      "warmResourceBodyBytes": 8393,
+      "initialEncodedTransferBytes": 6010,
+      "warmEncodedTransferBytes": 4864,
       "crossBrowserConflictRetainsDraft": true,
       "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
@@ -125,10 +125,10 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 8718,
-      "warmResourceBodyBytes": 8718,
-      "initialEncodedTransferBytes": 6873,
-      "warmEncodedTransferBytes": 6126,
+      "coldResourceBodyBytes": 8393,
+      "warmResourceBodyBytes": 8393,
+      "initialEncodedTransferBytes": 6010,
+      "warmEncodedTransferBytes": 5262,
       "crossBrowserConflictRetainsDraft": true,
       "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
@@ -149,10 +149,10 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 8718,
-      "warmResourceBodyBytes": 7349,
-      "initialEncodedTransferBytes": 6874,
-      "warmEncodedTransferBytes": 6126,
+      "coldResourceBodyBytes": 8393,
+      "warmResourceBodyBytes": 8393,
+      "initialEncodedTransferBytes": 6010,
+      "warmEncodedTransferBytes": 4864,
       "crossBrowserConflictRetainsDraft": true,
       "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
@@ -212,32 +212,32 @@
       "subject_states": {
         "count": 2,
         "serializedBytes": 277,
-        "sha256": "dcf461a5b112b3112bdb88bd682fc6b854fd3cdcf522ca8461dfa0ca4ff4517f"
+        "sha256": "b927640273b91a968cf9f3e52aef2aaab94bde15037430b344167cd0c7273a83"
       },
       "state_chunks": {
         "count": 34,
-        "serializedBytes": 2110483,
-        "sha256": "0f714c8acd605a1074707872c6fa496b60a9d8344146b40f14bba5fe985c39cd"
+        "serializedBytes": 2110446,
+        "sha256": "ca9017a2ae1ebf4ca1fd9f3c880f537051ebaa2cd848e1f3dfac91b74d70ea09"
       },
       "attempts": {
         "count": 16,
         "serializedBytes": 2103,
-        "sha256": "aa01d092523839b01ea42bc2f2723d2d583ed1b6b2729b8350335411ffda89c1"
+        "sha256": "7894670ad16cf52c2d6d93b329531e12b18025613d87983b22507a70f295dcb1"
       },
       "receipts": {
         "count": 45,
-        "serializedBytes": 32194,
-        "sha256": "364ff4953c2cc66bede02000fa8a4b6c9b5e289f48c624403621cf3645da1547"
+        "serializedBytes": 32200,
+        "sha256": "b566c6e9fcb154a5b6737f1b0840921d75ed39eca58f91bd36ecc55cd71ec8ea"
       },
       "learning_events": {
         "count": 45,
-        "serializedBytes": 40559,
-        "sha256": "02b8c93358e5c3e2ec1cc2c5bf933b600bc9ceff58236f19f696e30ef112458d"
+        "serializedBytes": 40565,
+        "sha256": "cd42142c5f4ca717f4be8aa99b49166bf421bbdc6a21e1e65307e3d036eecab6"
       },
       "synthetic_rewards": {
         "count": 2,
         "serializedBytes": 313,
-        "sha256": "ead15450190d589185a1d5dc5cabfa577e374fe48232e8fec697a685d2df4fdc"
+        "sha256": "8837c510d50e1be08f9422c8f17ef0a648f2e825a1bd9b1b99594aa81cdae23f"
       },
       "media_manifests": {
         "count": 7,
@@ -258,7 +258,7 @@
     "corruptionDetected": true,
     "databaseAdapterOutageHTTP503": true,
     "databaseOutageScope": "local adapter/binding fault injection; not real cloud service outage",
-    "interruptionRecoveryMs": 157.0815419999999,
+    "interruptionRecoveryMs": 314.2520829999994,
     "rpo": "last exported checkpoint; no production SLA",
     "remote": "NOT_RUN"
   },
@@ -273,7 +273,7 @@
         "storage": {
           "status": "NOT_EXPOSED_BY_ADAPTER"
         },
-        "importMs": 24.9935830000004,
+        "importMs": 47.762541999998575,
         "directoryBytes": 21350487,
         "tableHashes": {
           "subject_states": {
@@ -329,10 +329,10 @@
           "concurrency": 2,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 0.9866249999995489,
-          "p95Ms": 1.951125000000502,
-          "p99Ms": 2.907499999999345,
-          "durationMs": 120.13195799999994,
+          "p50Ms": 1.9099590000005264,
+          "p95Ms": 3.9092080000009446,
+          "p99Ms": 5.125917000001209,
+          "durationMs": 233.36724999999933,
           "statuses": {
             "200": 161,
             "409": 39
@@ -343,17 +343,17 @@
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 513998848,
+          "simulatorHostRssBytes": 444334080,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         },
         {
           "concurrency": 50,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 22.46833300000071,
-          "p95Ms": 41.67274999999972,
-          "p99Ms": 44.825166999999965,
-          "durationMs": 106.61908399999993,
+          "p50Ms": 43.806415999999444,
+          "p95Ms": 76.71441700000105,
+          "p99Ms": 85.11816700000054,
+          "durationMs": 218.15500000000065,
           "statuses": {
             "200": 161,
             "409": 39
@@ -364,28 +364,28 @@
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 517226496,
+          "simulatorHostRssBytes": 447971328,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         },
         {
           "concurrency": 100,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 37.285375000000386,
-          "p95Ms": 74.34870899999987,
-          "p99Ms": 74.79800000000068,
-          "durationMs": 103.7110419999999,
+          "p50Ms": 78.24837499999921,
+          "p95Ms": 160.3637089999993,
+          "p99Ms": 176.18991599999936,
+          "durationMs": 217.1984999999986,
           "statuses": {
             "200": 161,
             "409": 39
           },
           "d1": {
-            "rowsRead": 600,
+            "rowsRead": 599,
             "rowsWritten": 10,
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 522846208,
+          "simulatorHostRssBytes": 464732160,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         }
       ],
@@ -401,7 +401,7 @@
         "storage": {
           "status": "NOT_EXPOSED_BY_ADAPTER"
         },
-        "importMs": 449.25237500000003,
+        "importMs": 961.8518329999988,
         "directoryBytes": 203915399,
         "tableHashes": {
           "subject_states": {
@@ -457,10 +457,10 @@
           "concurrency": 2,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 0.8852910000005068,
-          "p95Ms": 1.4163750000006985,
-          "p99Ms": 2.0967919999984588,
-          "durationMs": 104.95016600000054,
+          "p50Ms": 1.7650420000027225,
+          "p95Ms": 3.1730419999985315,
+          "p99Ms": 4.992999999998574,
+          "durationMs": 211.24012500000026,
           "statuses": {
             "200": 161,
             "409": 39
@@ -471,49 +471,49 @@
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 641449984,
+          "simulatorHostRssBytes": 585826304,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         },
         {
           "concurrency": 50,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 24.827666999999565,
-          "p95Ms": 34.60383300000103,
-          "p99Ms": 40.09645900000032,
-          "durationMs": 104.47645899999952,
+          "p50Ms": 41.156458000001294,
+          "p95Ms": 71.96375000000262,
+          "p99Ms": 75.7255830000031,
+          "durationMs": 199.50333300000057,
           "statuses": {
             "200": 161,
             "409": 39
           },
           "d1": {
-            "rowsRead": 599,
+            "rowsRead": 598,
             "rowsWritten": 10,
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 688799744,
+          "simulatorHostRssBytes": 599932928,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         },
         {
           "concurrency": 100,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 37.742583000002924,
-          "p95Ms": 67.96704099999988,
-          "p99Ms": 74.37016600000061,
-          "durationMs": 102.57816699999967,
+          "p50Ms": 93.3784169999999,
+          "p95Ms": 129.3791659999988,
+          "p99Ms": 131.72704199999862,
+          "durationMs": 212.60687499999767,
           "statuses": {
             "200": 161,
             "409": 39
           },
           "d1": {
-            "rowsRead": 590,
+            "rowsRead": 559,
             "rowsWritten": 10,
             "available": true
           },
           "backendCpuMs": null,
-          "simulatorHostRssBytes": 705740800,
+          "simulatorHostRssBytes": 505905152,
           "free10ms": "NOT_RUN_REMOTE_APPROVAL_REQUIRED"
         }
       ],
