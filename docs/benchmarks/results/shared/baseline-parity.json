@@ -1,12 +1,16 @@
 {
-  "status": "PASS_LOCAL",
-  "seed": 20261013,
-  "sameContractAndFrozenSources": true,
-  "scope": "Pre-load S/M baselines, not random session/attempt IDs after writes",
-  "baselines": [
+  "status": "PASS",
+  "scope": "canonical pre-round synthetic nine-table baseline; random sessions and run-created IDs excluded",
+  "sources": {
+    "node": "50c5100c2d4680106557d6e9c8482e1aaeeccf25",
+    "cloudflare": "fca88a03d03cbd6773917dc5810b73a26087a58a",
+    "nasBackend": "c96e38ec0c30f282a16d91bb09c598d74314e6a7"
+  },
+  "sizes": [
     {
       "size": "S",
-      "tables": {
+      "status": "PASS",
+      "tableHashes": {
         "subject_states": {
           "count": 2,
           "serializedBytes": 277,
@@ -56,7 +60,8 @@
     },
     {
       "size": "M",
-      "tables": {
+      "status": "PASS",
+      "tableHashes": {
         "subject_states": {
           "count": 30,
           "serializedBytes": 4275,
