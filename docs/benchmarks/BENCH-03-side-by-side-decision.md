@@ -1,6 +1,6 @@
 # BENCH-03 横向决策报告（待ChatGPT独立审查）
 
-整理日2026-10-14；本地实验实际发生在2026-10-13，NAS新只读检查与授权发生在14日。两条路线都已通过选定学科核心逻辑的本地业务、浏览器、恢复和三轮S/M负载。**当前不能宣布Cloudflare Free生产通过，也不能把Linux CI当DS918+兼容结果。** 远端Cloudflare尚未获授权；NAS已获本次业务容器和Docker专用sudo授权，交互Docker Server20.10.3读取成功，但启动脚本在镜像/容器准备阶段报错，原因等待核实。
+整理日2026-10-14；双方修复共用UI竞态后完整本地验证再次通过。DS918+本次隔离真机业务、网页、事务、恢复和S/M负载已完成并独立核验 PASS_NAS；Node24运行成功仍标 RUNTIME_PASSED_WITH_UNSUPPORTED_KERNEL。**Cloudflare仅本地/CI通过，Free真云CPU、计费及网络尚未验证。** 所有远端Cloudflare资源/订阅未经授权未创建。
 
 ## 审查入口
 
@@ -14,11 +14,11 @@
 
 | 维度 | Cloudflare Workers/D1 | Node/SQLite现代Linux | DS918+现状 |
 | --- | --- | --- | --- |
-| 算法复用 | 同18份Math依赖/原core spans＋10个English纯函数；4组黄金测试 | 同源码和期望，非另一套演示算法 | source parity尚未在NAS运行 |
-| 写一致性 | 条件SQL CHECK＋atomic batch；100重复、CAS409、末尾SQL失败回滚通过LOCAL/已有CI | BEGIN IMMEDIATE/WAL/FULL/FK；相同用例LOCAL/CI通过 | 尚无业务结果 |
-| 网页 | 数学/英语可操作、刷新、离线原ID、双浏览器冲突、desktop/iPad尺寸、直传/私有下载 | 同一份UI；相同浏览器用例 | 尚未通过SSH桥运行 |
-| 存储与恢复 | 本地D1逻辑空库恢复＋模拟器物理快照；2.1MB/33片保真 | VACUUM INTO＋逻辑空库与媒体hash；删除重建Linux容器持久化 | 仅确认可写本地ext4，不是runtime通过 |
-| 资源与性能 | D1本地meta和HTTP延迟已测；云CPU/128MB/账单未测 | 服务进程CPU/maxRSS、SQLite容量已测 | 尚未测；J3455/7.43GiB/4.4.180+只读已核实 |
+| 算法复用 | 同18份Math依赖/原core spans＋10个English纯函数；4组黄金测试 | 同源码和期望，非另一套演示算法 | 4组source parity实机退出0 |
+| 写一致性 | 条件SQL CHECK＋atomic batch；100重复、CAS409、末尾SQL失败回滚通过LOCAL/已有CI | BEGIN IMMEDIATE/WAL/FULL/FK；相同用例LOCAL/CI通过 | 相同P01–P12实际通过 |
+| 网页 | 数学/英语可操作、刷新、离线原ID、双浏览器冲突、desktop/iPad尺寸、直传/私有下载 | 同一份UI；相同浏览器用例 | Mac Chromium经SSH桥三尺寸通过，非Safari |
+| 存储与恢复 | 本地D1逻辑空库恢复＋模拟器物理快照；2.1MB/33片保真 | VACUUM INTO＋逻辑空库与媒体hash；删除重建Linux容器持久化 | ext4上的WAL/事务、逻辑/物理新空环境恢复通过；容器删除重建仅CI |
+| 资源与性能 | D1本地meta和HTTP延迟已测；云CPU/128MB/账单未测 | 服务进程CPU/maxRSS、SQLite容量已测 | J3455/CPU0/512MiB实测；PIDs未生效；4.4.180+不受官方支持 |
 | 维护 | 平台维护机器，仍需账号/依赖/权限/备份与收费控制 | 用户维护OS、容器、磁盘/网络/备份 | 旧内核支持与长期设备故障风险另计 |
 | 可移植性 | SQL仍有SQLite语法；D1 binding与云读取策略需要适配 | 本地文件/VACUUM较直接；搬到其他现代主机方便 | 不以换镜像/放开权限绕过官方基线 |
 
@@ -30,14 +30,14 @@
 
 | 档位/并发 | Node p95 / p99 ms | CF模拟器 p95 / p99 ms |
 | --- | ---: | ---: |
-| S/2 | 0.56 / 0.74 | 1.95 / 2.91 |
-| S/50 | 14.12 / 19.12 | 41.67 / 44.83 |
-| S/100 | 15.82 / 16.18 | 74.35 / 74.80 |
-| M/2 | 0.40 / 0.52 | 1.42 / 2.10 |
-| M/50 | 8.11 / 8.22 | 34.60 / 40.10 |
-| M/100 | 15.31 / 15.88 | 67.97 / 74.37 |
+| S/2 | 1.09 / 1.71 | 3.91 / 5.13 |
+| S/50 | 37.06 / 43.19 | 76.71 / 85.12 |
+| S/100 | 34.58 / 35.14 | 160.36 / 176.19 |
+| M/2 | 0.75 / 1.01 | 3.17 / 4.99 |
+| M/50 | 16.86 / 20.17 | 71.96 / 75.73 |
+| M/100 | 27.57 / 28.42 | 129.38 / 131.73 |
 
-这些是Mac回环**HTTP壁钟**，不是真实用户网络、CPU时间或免费配额判定。CF模拟器多进程/IPC结构与Node子进程不同，所以不能直接把上述倍率外推到Cloudflare云端/NAS。Node真实服务CPU每轮约23–49ms/200请求；CF Worker CPU未测，不能以localhost请求wall>10ms判需Paid。两个分支的Linux CI独立runner硬件可能不同，必须各列环境，不能平均成一个排名。
+这些是Mac回环**HTTP壁钟**，不是真实用户网络、CPU时间或免费配额判定。CF模拟器多进程/IPC结构与Node子进程不同，所以不能直接把上述倍率外推到Cloudflare云端/NAS。Node真实服务CPU及各轮maxRSS见该路线JSON；CF Worker CPU未测，不能以localhost请求wall>10ms判需Paid。两个分支的Linux CI独立runner硬件可能不同，必须各列环境，不能平均成一个排名。
 
 动态写样本仅English且主要故意冲突；Math正确性有独立场景但尚无同强度Math性能负载。真实大state/free CPU、M全量灾难恢复、长时间锁/GC/磁盘I/O采样、家庭公网/iPad点击体验均留待下一轮。cold/warm decoded资源与CDP encoded（含API）都存JSON，不能把body bytes说成压缩线速。
 
@@ -76,8 +76,23 @@ Node24支持计划目前止于2028-04-30，NAS旧kernel是否偶然可运行与�
 
 若优先少维护、自用少流量且素材少：Cloudflare值得先做受许可的真云小量验证，但生产身份、10ms CPU、D1usage/复制、真实对象权限与家庭网络尚未通过，所以现在不能承诺Free或稳定性。若优先Node代码/事务/完整fs服务复用：现代Linux主机＋NAS备份更自然，增加设备和维护成本。[Node预算模型](https://github.com/lovestream/kevin-learning-home/blob/codex/bench-02-node-nas/docs/benchmarks/BENCH-02-hardware-cost-model.md)把沉没成本、更新、盘/UPS、电费和人工分开。
 
-DS918+直接做Node24主在线计算仍需本次真机结果，并保留unsupported kernel风险；已有权限问题不能被说成Node已经运行失败。费用也不能只凭访问量少比较：10TB R2两份副本按现价约USD3598/年，与小家庭几GB相差很大；NAS大盘/冗余/异地备份和故障同样有成本。
+DS918+真机已运行通过，但直接做Node24主在线计算仍有unsupported kernel与PIDs无隔离上限风险；一次短测不足以证明长期稳定。当前权限仍依赖用户仅限实验的sudo授权，不等于授予常驻生产服务。费用也不能只凭访问量少比较：10TB R2两份副本按现价约USD3598/年，与小家庭几GB相差很大；NAS大盘/冗余/异地备份和故障同样有成本。
 
 ## 停止线
 
-待NAS当前镜像/启动错误核实并记录、最新CI证据归档后，停在三个草稿PR，交ChatGPT独立审查。不合并、不进入正式开发/PR-1B、不接真实记录或历史钱包、不创建Cloudflare远端Worker/D1/R2/Access、不开订阅。
+完成本次NAS证据与资源收尾、最新CI核验后，停在三个草稿PR，交ChatGPT独立审查。不合并、不进入正式开发/PR-1B、不接真实记录或历史钱包、不创建Cloudflare远端Worker/D1/R2/Access、不开订阅。
+
+## NAS真机补充：不同硬件独立列
+
+[原始结果及独立核验](https://github.com/lovestream/kevin-learning-home/blob/codex/bench-02-node-nas/docs/benchmarks/results/node/nas-verification.json)。Node24.15.0/SQLite3.51.3/DSM7.1/Docker20.10.3。CPU0与512MiB有效，PIDs128被丢弃。Docker Hub EOF由校验官方镜像归档解决，CFS配额失败改单逻辑CPU绑定，没有修改NAS配置或权限。NAS负载在容器回环；网页经SSH转发，不把Mac或CI性能冒充NAS。
+
+| 档位/并发 | NAS p95 / p99 ms |
+| --- | ---: |
+| S/2 | 22.27 / 29.25 |
+| S/50 | 654.28 / 707.58 |
+| S/100 | 1113.23 / 1114.77 |
+| M/2 | 16.71 / 25.92 |
+| M/50 | 595.35 / 649.59 |
+| M/100 | 1031.50 / 1033.87 |
+
+S/M两档各3轮，每轮200样本全部161个200/39个预期409。规范基准表hash与两条Mac路线全部相同，parity JSON包含NAS。恢复验证为业务检查点加2.1MB状态，非M全量灾难恢复；NAS容器删除重建未测，CI独立通过。P15为共享设计模型。内核4.4低于Node24 x64 glibc官方4.18基线；成功仅证明本次选定运行路径，不改变受支持状态。
