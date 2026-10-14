@@ -1,6 +1,6 @@
 # BENCH-02 执行报告：Node/SQLite 本地与现代 Linux；NAS 单列
 
-报告整理：2026-10-14；本地实测时间 `2026-10-14T12:34:11.226Z`，不改写成今天重新运行。独立草稿 [PR #4](https://github.com/lovestream/kevin-learning-home/pull/4)，共享基线 [PR #2](https://github.com/lovestream/kevin-learning-home/pull/2)。未合并、未生产部署、未读/导入真实记录；旧仓库没有改动。
+报告整理：2026-10-14；本地实测时间 `2026-10-14T12:34:11.226Z`，为UI修复后的完整重测。独立草稿 [PR #4](https://github.com/lovestream/kevin-learning-home/pull/4)，共享基线 [PR #2](https://github.com/lovestream/kevin-learning-home/pull/2)。未合并、未生产部署、未读/导入真实记录；旧仓库没有改动。
 
 ## 结论与执行边界
 
@@ -112,4 +112,4 @@ NAS后端源码SHA `c96e38ec0c30f282a16d91bb09c598d74314e6a7`；首次浏览器�
 
 失败保留：NAS Docker Hub registry EOF；离线官方amd64归档校验后加载成功。`--cpus 1`因NanoCPUs/CFS不支持失败，在不改内核/权限的条件下改为单逻辑CPU `--cpuset-cpus 0`，容器内核验实际0。内核警告PIDs 128被丢弃，明确未生效。测试结束sudo过期，日志读取与自动清理无法完成，等待用户终端重新认证完成检查/清理；不将缺失的OOM状态猜为false。没有特权容器、放开seccomp、修改Docker组/socket、DSM或Tailscale。
 
-现代Linux历史完整CI：[38559771381](https://github.com/lovestream/kevin-learning-home/actions/runs/38559771381)，SHA `276526a212d10e5c9693c4dbc2378e025104640d`，[业务JSON](results/node/ci.json)、[容器JSON](results/node/container-ci.json)；kernel6.8.0-1064-azure、Docker28.0.4。最新UI修复后HEAD另由PR检查验证，不把历史CI说成新HEAD实测。
+修复后完整现代LinuxCI：[38565357976](https://github.com/lovestream/kevin-learning-home/actions/runs/38565357976)，SHA `f5e7e97fdff4a340eeee60219d1e49396d554b5e`，[业务JSON](results/node/ci.json)、[容器JSON](results/node/container-ci.json)；包括source、业务、延迟状态读浏览器、恢复、S/M负载及容器删除重建。归档文档后的最新HEAD仍由PR检查验证，不改写实际执行SHA。历史通过38559771381及失败记录保留。

@@ -1,6 +1,6 @@
 {
   "route": "node",
-  "timestamp": "2026-10-14T11:54:01.601Z",
+  "timestamp": "2026-10-14T12:39:15.049Z",
   "environment": {
     "node": "v24.15.0",
     "os": "linux",
@@ -18,8 +18,8 @@
   },
   "scope": "CI",
   "seed": 20261013,
-  "executedHeadSha": "276526a212d10e5c9693c4dbc2378e025104640d",
-  "cpuModel": "AMD EPYC 7763 64-Core Processor",
+  "executedHeadSha": "f5e7e97fdff4a340eeee60219d1e49396d554b5e",
+  "cpuModel": "AMD EPYC 9V45 96-Core Processor",
   "remote": "BLOCKED_APPROVAL",
   "nas": "NOT_RUN_USER_DEFERRED",
   "phase": "performance",
@@ -101,10 +101,10 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 7098,
-      "warmResourceBodyBytes": 5729,
-      "initialEncodedTransferBytes": 15724,
-      "warmEncodedTransferBytes": 15075,
+      "coldResourceBodyBytes": 9762,
+      "warmResourceBodyBytes": 8393,
+      "initialEncodedTransferBytes": 11801,
+      "warmEncodedTransferBytes": 11123,
       "crossBrowserConflictRetainsDraft": true,
       "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
@@ -125,10 +125,10 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 8718,
-      "warmResourceBodyBytes": 7349,
-      "initialEncodedTransferBytes": 15753,
-      "warmEncodedTransferBytes": 15076,
+      "coldResourceBodyBytes": 8393,
+      "warmResourceBodyBytes": 8393,
+      "initialEncodedTransferBytes": 11801,
+      "warmEncodedTransferBytes": 11123,
       "crossBrowserConflictRetainsDraft": true,
       "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
@@ -149,10 +149,10 @@
       "english": true,
       "refresh": true,
       "offlineRetryOriginalId": true,
-      "coldResourceBodyBytes": 7349,
-      "warmResourceBodyBytes": 5729,
-      "initialEncodedTransferBytes": 15754,
-      "warmEncodedTransferBytes": 15076,
+      "coldResourceBodyBytes": 8393,
+      "warmResourceBodyBytes": 8393,
+      "initialEncodedTransferBytes": 11801,
+      "warmEncodedTransferBytes": 11123,
       "crossBrowserConflictRetainsDraft": true,
       "explicitResolutionCreatesNewCommand": true,
       "note": "decoded response-body bytes, not compressed network transfer; Chromium viewport emulation, not physical Safari/iPad",
@@ -212,32 +212,32 @@
       "subject_states": {
         "count": 2,
         "serializedBytes": 277,
-        "sha256": "54abc09ff818e2f3ce522724db0e96143319a7b07633a74e23324a945fb1f1af"
+        "sha256": "4dbb3bdba9e7b1922c330b39df7fd7c135759e514365334879fa1f53bf7f64da"
       },
       "state_chunks": {
         "count": 34,
         "serializedBytes": 2110483,
-        "sha256": "f9c1b3c8d22b23b3b3140f9edc01667031d4547552dbd89b776d9244eaff4347"
+        "sha256": "143ea857bc602e6f0e7c150e50b369d230d60b3558d2931b12e858859740e2ce"
       },
       "attempts": {
         "count": 16,
         "serializedBytes": 2103,
-        "sha256": "db09ef033adc46997b6e25fb859d6f71786b1c974587e202f30b03511fa44c8a"
+        "sha256": "64f46bd1d8c227d4ca8b8b82e2813dfe0e4e8ca7c9254b83544f175223b19b69"
       },
       "receipts": {
         "count": 45,
-        "serializedBytes": 32200,
-        "sha256": "d60f6a61cec017f56f0b14ec15ef3fe86ac5353519acbb314d10bd3ec1bfdf62"
+        "serializedBytes": 32199,
+        "sha256": "8287b9673dd4bcd5513d59e6ea6ceabcea3ddeec8407b41342cf70ca2787f74b"
       },
       "learning_events": {
         "count": 45,
-        "serializedBytes": 40565,
-        "sha256": "cc3923266239d6358172b58cedc74f490507caedbcb9bc5e8fd6b923d6ee6dcc"
+        "serializedBytes": 40564,
+        "sha256": "1080ad992d40fa12b907cb0c3a7f33f4eef31b7db5a5991b8390904c40a05d15"
       },
       "synthetic_rewards": {
         "count": 2,
         "serializedBytes": 313,
-        "sha256": "c2cd345ba4e1fb25749bfd1d7d1ef4c2fafbc184fd866e40a4a23d5b554229e4"
+        "sha256": "1ff9e08cf9d6cb43e96f681dbb60374fae4c608c64886dc48fe179ca17808b51"
       },
       "media_manifests": {
         "count": 7,
@@ -258,7 +258,7 @@
     "corruptionDetected": true,
     "databaseAdapterOutageHTTP503": true,
     "databaseOutageScope": "local adapter/binding fault injection; not real cloud service outage",
-    "interruptionRecoveryMs": 93.47988799999985,
+    "interruptionRecoveryMs": 63.27101500000026,
     "rpo": "last exported checkpoint; no production SLA",
     "remote": "NOT_RUN"
   },
@@ -276,7 +276,7 @@
           "freePages": 509,
           "pageSize": 4096
         },
-        "importMs": 5.955793999999514,
+        "importMs": 3.538468999999168,
         "directoryBytes": 20227557,
         "tableHashes": {
           "subject_states": {
@@ -332,10 +332,10 @@
           "concurrency": 2,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 1.5686170000008133,
-          "p95Ms": 2.912225000000035,
-          "p99Ms": 3.8499620000002324,
-          "durationMs": 179.08570399999917,
+          "p50Ms": 1.052825999999186,
+          "p95Ms": 1.8799909999997908,
+          "p99Ms": 2.996182000000772,
+          "durationMs": 118.73983000000044,
           "statuses": {
             "200": 161,
             "409": 39
@@ -345,8 +345,8 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 219.929,
-          "backendMaxRssKiB": 76368,
+          "backendCpuMs": 141.643,
+          "backendMaxRssKiB": 93164,
           "dbRowsReturned": 633,
           "dbRowsChanged": 5
         },
@@ -354,10 +354,10 @@
           "concurrency": 50,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 31.8963300000014,
-          "p95Ms": 64.79856199999995,
-          "p99Ms": 69.35055699999975,
-          "durationMs": 156.42618800000128,
+          "p50Ms": 15.86751700000059,
+          "p95Ms": 27.530854000000545,
+          "p99Ms": 30.185782000000472,
+          "durationMs": 73.003748000001,
           "statuses": {
             "200": 161,
             "409": 39
@@ -367,19 +367,19 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 189.973,
-          "backendMaxRssKiB": 90004,
-          "dbRowsReturned": 559,
+          "backendCpuMs": 96.477,
+          "backendMaxRssKiB": 93164,
+          "dbRowsReturned": 562,
           "dbRowsChanged": 5
         },
         {
           "concurrency": 100,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 26.68522699999994,
-          "p95Ms": 100.67955299999994,
-          "p99Ms": 101.72042399999918,
-          "durationMs": 128.33951700000034,
+          "p50Ms": 11.862526000000798,
+          "p95Ms": 48.82890899999984,
+          "p99Ms": 50.39252300000044,
+          "durationMs": 61.49657699999989,
           "statuses": {
             "200": 161,
             "409": 39
@@ -389,9 +389,9 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 150.914,
-          "backendMaxRssKiB": 90004,
-          "dbRowsReturned": 588,
+          "backendCpuMs": 76.943,
+          "backendMaxRssKiB": 93164,
+          "dbRowsReturned": 589,
           "dbRowsChanged": 5
         }
       ],
@@ -410,7 +410,7 @@
           "freePages": 0,
           "pageSize": 4096
         },
-        "importMs": 966.0657469999987,
+        "importMs": 1329.9987710000005,
         "directoryBytes": 202953149,
         "tableHashes": {
           "subject_states": {
@@ -466,10 +466,10 @@
           "concurrency": 2,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 1.132127999999284,
-          "p95Ms": 2.087007000000085,
-          "p99Ms": 3.204728000000614,
-          "durationMs": 131.64161699999931,
+          "p50Ms": 0.5430770000002667,
+          "p95Ms": 1.1350669999992533,
+          "p99Ms": 1.531963999999789,
+          "durationMs": 66.14735500000097,
           "statuses": {
             "200": 161,
             "409": 39
@@ -479,19 +479,19 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 151.919,
-          "backendMaxRssKiB": 90004,
-          "dbRowsReturned": 634,
+          "backendCpuMs": 80.031,
+          "backendMaxRssKiB": 93164,
+          "dbRowsReturned": 633,
           "dbRowsChanged": 5
         },
         {
           "concurrency": 50,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 22.051096999999572,
-          "p95Ms": 46.23869399999967,
-          "p99Ms": 50.34406999999919,
-          "durationMs": 105.89488699999856,
+          "p50Ms": 9.388038999997661,
+          "p95Ms": 20.22123599999759,
+          "p99Ms": 33.99596399999791,
+          "durationMs": 49.520094999999856,
           "statuses": {
             "200": 161,
             "409": 39
@@ -501,19 +501,19 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 123.494,
-          "backendMaxRssKiB": 90004,
-          "dbRowsReturned": 558,
+          "backendCpuMs": 59.256,
+          "backendMaxRssKiB": 93164,
+          "dbRowsReturned": 576,
           "dbRowsChanged": 5
         },
         {
           "concurrency": 100,
           "requests": 200,
           "warmup": 20,
-          "p50Ms": 22.146103999999468,
-          "p95Ms": 83.0705289999969,
-          "p99Ms": 84.13870800000223,
-          "durationMs": 103.14622799999779,
+          "p50Ms": 16.109298999999737,
+          "p95Ms": 51.543784999998024,
+          "p99Ms": 52.09574700000303,
+          "durationMs": 64.37886999999682,
           "statuses": {
             "200": 161,
             "409": 39
@@ -523,9 +523,9 @@
             "rowsWritten": 0,
             "available": false
           },
-          "backendCpuMs": 117.52,
-          "backendMaxRssKiB": 90996,
-          "dbRowsReturned": 574,
+          "backendCpuMs": 84.854,
+          "backendMaxRssKiB": 93164,
+          "dbRowsReturned": 554,
           "dbRowsChanged": 5
         }
       ],

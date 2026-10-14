@@ -11,3 +11,5 @@ NAS用户正式授权：一个非root合成容器、专用新目录、单逻辑C
 保留错误：Docker Hub EOF、CFS/NanoCPUs不支持、PIDs丢弃、结束后sudo过期。收尾需用户终端重新认证检查/删除本次资源；不能自行提权。NAS容器删除重建、真实断电/盘故障、物理Safari、M全量灾难恢复均NOT_RUN。现有Docker权限、DSM、Tailscale及服务不修改。
 
 Cloudflare没有创建远端资源或订阅；现代Linux计算＋NAS备份仅候选模型。交ChatGPT选择后续验证，不自行进入下一阶段。
+
+修复后完整CI PASS_CI：[38565357976](https://github.com/lovestream/kevin-learning-home/actions/runs/38565357976)，执行SHA `f5e7e97fdff4a340eeee60219d1e49396d554b5e`，ci/container-ci JSON已归档。

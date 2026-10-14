@@ -9,5 +9,5 @@
   "dockerVersion": "28.0.4",
   "kernel": "6.8.0-1064-azure",
   "imageTag": "node:24.15.0-bookworm-slim",
-  "actualImageId": "sha256:6fd5020ac5f4ae3c54081013cbd8fc6a1c6e623544e6c3d0b700f67742d3f66d"
+  "actualImageId": "sha256:48e72536d83656c5d7191272d7107641e0a1267d14f862d14ee760c23db82437"
 }
