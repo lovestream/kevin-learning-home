@@ -14,4 +14,6 @@ __pycache__/
 .bench-work*/
 .bench-evidence*/
 
+experiments/cloudflare/dist/
+experiments/cloudflare/experiments/
 dist/
