@@ -1,0 +1,28 @@
+{
+  "version": "klh-parity-v1",
+  "seed": 20261013,
+  "now": 1791849600000,
+  "learners": ["synthetic-a", "synthetic-b", "synthetic-c"],
+  "mathTask": {"id":"synthetic-math-q1","kind":"choice","level":"core","prompt":"2 + 3 = ?","options":[{"id":"five","label":"5"},{"id":"four","label":"4"}],"expected":"five","hint":"Count two, then three.","solution":"2 + 3 = 5","diagnostic":"Count again."},
+  "englishWord": {"id":"synthetic-word-apple","word":"apple","spellingVariants":["Apple"]},
+  "mathCases": [
+    {"first":"five","final":"five","help":null,"status":"correct","selfCorrection":false,"assisted":false},
+    {"first":"four","final":"four","help":null,"status":"incorrect","selfCorrection":false,"assisted":false},
+    {"first":"four","final":"five","help":"hint","status":"correct","selfCorrection":true,"assisted":true},
+    {"first":"four","final":"five","help":null,"status":"correct","selfCorrection":true,"assisted":false}
+  ],
+  "englishCases": [
+    {"input":"  ＡＰＰＬＥ  ","expectedNormalized":"apple","distance":0,"correct":true},
+    {"input":"applf","expectedNormalized":"applf","distance":1,"correct":false},
+    {"input":"aplep","expectedNormalized":"aplep","distance":2,"correct":false},
+    {"input":"appel","expectedNormalized":"appel","distance":1,"correct":false}
+  ],
+  "scheduleCases": [
+    {"existing":null,"outcome":"good","initial":true,"expectedStep":0,"dueDeltaMs":600000,"expectedStatus":"reviewing","expectedLapses":0},
+    {"existing":{"step":0,"correct":1,"scheduleToken":1},"outcome":"good","initial":false,"expectedStep":1,"dueDeltaMs":86400000,"expectedStatus":"reviewing","expectedLapses":0},
+    {"existing":{"step":3,"lapses":0},"outcome":"again","initial":false,"expectedStep":0,"dueDeltaMs":600000,"expectedStatus":"relearning","expectedLapses":1}
+  ],
+  "loads": {"S":{"learners":1,"subjects":2,"events":100,"mediaRefs":500},"M":{"learners":3,"subjects":10,"events":100000,"mediaRefs":100000},"L":{"years":10,"subjects":15,"events":[1000000,10000000],"mediaBytes":10000000000000,"modelOnly":true}},
+  "benchmark": {"rounds":3,"warmup":20,"requestsPerRound":200,"concurrency":[2,50,100]},
+  "mediaSizes": [32768,1048576,5242880]
+}

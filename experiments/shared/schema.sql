@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE IF NOT EXISTS subject_states(learner TEXT NOT NULL,subject TEXT NOT NULL,revision INTEGER NOT NULL DEFAULT 0 CHECK(revision>=0),state_hash TEXT NOT NULL,PRIMARY KEY(learner,subject));
+CREATE TABLE IF NOT EXISTS state_chunks(learner TEXT NOT NULL,subject TEXT NOT NULL,part INTEGER NOT NULL,payload TEXT NOT NULL,sha256 TEXT NOT NULL,PRIMARY KEY(learner,subject,part),FOREIGN KEY(learner,subject) REFERENCES subject_states(learner,subject));
+CREATE TABLE IF NOT EXISTS receipts(learner TEXT NOT NULL,command_id TEXT NOT NULL,subject TEXT NOT NULL,request_hash TEXT NOT NULL,result TEXT NOT NULL,revision INTEGER NOT NULL,cas_guard INTEGER NOT NULL CHECK(cas_guard=1),PRIMARY KEY(learner,command_id),FOREIGN KEY(learner,subject) REFERENCES subject_states(learner,subject));
+CREATE TABLE IF NOT EXISTS learning_events(learner TEXT NOT NULL,subject TEXT NOT NULL,event_id TEXT NOT NULL,revision INTEGER NOT NULL,payload TEXT NOT NULL,PRIMARY KEY(learner,event_id),FOREIGN KEY(learner,event_id) REFERENCES receipts(learner,command_id));
+CREATE INDEX IF NOT EXISTS events_subject_revision ON learning_events(learner,subject,revision);
+CREATE TABLE IF NOT EXISTS synthetic_rewards(learner TEXT NOT NULL,subject TEXT NOT NULL,source TEXT NOT NULL,amount INTEGER NOT NULL CHECK(amount>=0),event_id TEXT NOT NULL,PRIMARY KEY(learner,subject,source),FOREIGN KEY(learner,event_id) REFERENCES receipts(learner,command_id));
+CREATE TABLE IF NOT EXISTS auth_sessions(token_hash TEXT PRIMARY KEY,learner TEXT NOT NULL,role TEXT NOT NULL CHECK(role IN ('learner','parent')),csrf TEXT NOT NULL,expires INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS attempts(learner TEXT NOT NULL,subject TEXT NOT NULL,attempt_id TEXT NOT NULL,content_version TEXT NOT NULL,PRIMARY KEY(learner,attempt_id));
+CREATE TABLE IF NOT EXISTS media_manifests(asset_id TEXT NOT NULL,version TEXT NOT NULL,payload TEXT NOT NULL,PRIMARY KEY(asset_id,version));
+CREATE TABLE IF NOT EXISTS course_manifests(subject TEXT NOT NULL,version TEXT NOT NULL,payload TEXT NOT NULL,PRIMARY KEY(subject,version));
+CREATE TABLE IF NOT EXISTS media_refs(ref_id TEXT PRIMARY KEY,asset_id TEXT NOT NULL,version TEXT NOT NULL);

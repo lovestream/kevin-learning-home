@@ -1,0 +1,17 @@
+node_modules/
+.wrangler/
+.bench-work/
+.bench-evidence/
+playwright-report/
+test-results/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.dev.vars
+.env*
+.probe-evidence/
+__pycache__/
+.bench-work*/
+.bench-evidence*/
+
+dist/
