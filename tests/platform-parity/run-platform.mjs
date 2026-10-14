@@ -9,7 +9,8 @@ const kind = process.argv[2];
 if (!["node", "cloudflare"].includes(kind)) throw Error("route required");
 const { createHarness } = await import(`../../experiments/${kind}/harness.mjs`);
 const work = await mkdtemp(path.join(os.tmpdir(), "klh-bench-" + kind + "-"));
-const h = await createHarness({ directory: path.join(work, "primary") });
+const port=process.env.KLH_BENCH_PORT?Number(process.env.KLH_BENCH_PORT):undefined;if(port!==undefined&&(!Number.isInteger(port)||port<1024||port>65534))throw Error("invalid isolated test port");
+const h = await createHarness({ directory: path.join(work, "primary"),...(port?{port,mediaPort:port+1}:{}) });
 const result = {
   route: kind,
   timestamp: new Date().toISOString(),
