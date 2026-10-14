@@ -1,0 +1,108 @@
+{
+  "status": "PASS_LOCAL",
+  "seed": 20261013,
+  "sameContractAndFrozenSources": true,
+  "scope": "Pre-load S/M baselines, not random session/attempt IDs after writes",
+  "baselines": [
+    {
+      "size": "S",
+      "tables": {
+        "subject_states": {
+          "count": 2,
+          "serializedBytes": 277,
+          "sha256": "6a94282cb91677a83052cd39cfdeecc0e3a32f6fc382c1a56132d84080c49bae"
+        },
+        "state_chunks": {
+          "count": 0,
+          "serializedBytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "attempts": {
+          "count": 0,
+          "serializedBytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "receipts": {
+          "count": 100,
+          "serializedBytes": 15022,
+          "sha256": "5d4d0086ba3aa132e4d361fff2bc42ebdd6e510b55efa8ff6e6bd1fdacb9de44"
+        },
+        "learning_events": {
+          "count": 100,
+          "serializedBytes": 67522,
+          "sha256": "fdc976ee3611fe1c681e7cae95d4b0b028afa2607c0e41b94f4268309b55a2e2"
+        },
+        "synthetic_rewards": {
+          "count": 0,
+          "serializedBytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "media_manifests": {
+          "count": 7,
+          "serializedBytes": 3302,
+          "sha256": "9625a3072d6664d8ac96651b53ad8d4a19f07a6a049206f17ff7b6748e52ff65"
+        },
+        "course_manifests": {
+          "count": 3,
+          "serializedBytes": 860,
+          "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
+        },
+        "media_refs": {
+          "count": 500,
+          "serializedBytes": 35890,
+          "sha256": "a231598e85e6ae8dcf657831f2a4c6e53d4aa2e7421136efee7a5fda7c072c5b"
+        }
+      }
+    },
+    {
+      "size": "M",
+      "tables": {
+        "subject_states": {
+          "count": 30,
+          "serializedBytes": 4275,
+          "sha256": "e68912f89903f7306e565704d30044cbb881be1a465bde2661eaad068a2b78d6"
+        },
+        "state_chunks": {
+          "count": 0,
+          "serializedBytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "attempts": {
+          "count": 0,
+          "serializedBytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "receipts": {
+          "count": 100000,
+          "serializedBytes": 15705680,
+          "sha256": "6590a0792e6281110aa71831a71350e0f0fa47885137d8c9d416886235e9ece9"
+        },
+        "learning_events": {
+          "count": 100000,
+          "serializedBytes": 68205680,
+          "sha256": "20ed290fd729ea3076ace9cf88d65087cfaf71d46c999877417790343d148a2c"
+        },
+        "synthetic_rewards": {
+          "count": 0,
+          "serializedBytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "media_manifests": {
+          "count": 7,
+          "serializedBytes": 3302,
+          "sha256": "9625a3072d6664d8ac96651b53ad8d4a19f07a6a049206f17ff7b6748e52ff65"
+        },
+        "course_manifests": {
+          "count": 3,
+          "serializedBytes": 860,
+          "sha256": "919881b4cdd25f9d374fb6dcc11578a345a383314bd9c02a973972d3920f4a8e"
+        },
+        "media_refs": {
+          "count": 100000,
+          "serializedBytes": 7388890,
+          "sha256": "cd18bfc529706a8e9cf4047875693271f60ccd1fbdc4676aba5b7a2e2b2aa3f2"
+        }
+      }
+    }
+  ]
+}
