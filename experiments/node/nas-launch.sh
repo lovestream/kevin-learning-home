@@ -16,11 +16,15 @@ gid=$(id -g)
 test "$uid" -ne 0
 umask 077
 mkdir -p "$test_root/control"
+mkdir "$test_root/control/launch-lock"
 sudo "$docker_bin" version --format 'client={{.Client.Version}} server={{.Server.Version}}' > "$test_root/control/docker-version.txt"
-if sudo "$docker_bin" image inspect "$image_tag" >/dev/null 2>&1; then echo 'dedicated image already exists; stop'; exit 2; fi
-if sudo "$docker_bin" container inspect "$container_name" >/dev/null 2>&1; then echo 'dedicated container already exists; stop'; exit 2; fi
+existing_image=$(sudo "$docker_bin" image ls --filter "reference=$image_tag" --format '{{.ID}}')
+if [ -n "$existing_image" ]; then echo 'dedicated image already exists; stop'; exit 2; fi
+existing_container=$(sudo "$docker_bin" ps -a --filter "name=^${container_name}$" --format '{{.ID}}')
+if [ -n "$existing_container" ]; then echo 'dedicated container already exists; stop'; exit 2; fi
 had_base=no
-if sudo "$docker_bin" image inspect "$base_image" >/dev/null 2>&1; then had_base=yes; else sudo "$docker_bin" pull "$base_image"; fi
+base_id=$(sudo "$docker_bin" image ls --filter "reference=$base_image" --format '{{.ID}}')
+if [ -n "$base_id" ]; then had_base=yes; else sudo "$docker_bin" pull "$base_image"; fi
 sudo "$docker_bin" tag "$base_image" "$image_tag"
 # Remove only the common tag newly introduced by this run. Keep any preexisting
 # base tag and all other images untouched. The dedicated tag retains its image.
