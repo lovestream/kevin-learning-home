@@ -1,6 +1,6 @@
 # BENCH-01 执行报告：Wrangler/Miniflare 本地；远端云单列
 
-报告整理：2026-10-14；本地实测时间 `2026-10-14T12:18:33.221Z`，不改写成今天重新运行。独立草稿 [PR #3](https://github.com/lovestream/kevin-learning-home/pull/3)，共享基线 [PR #2](https://github.com/lovestream/kevin-learning-home/pull/2)。未合并、未生产部署、未读/导入真实记录；旧仓库没有改动。
+报告整理：2026-10-14；本地实测时间 `2026-10-14T12:18:33.221Z`，为UI修复后的完整重测。独立草稿 [PR #3](https://github.com/lovestream/kevin-learning-home/pull/3)，共享基线 [PR #2](https://github.com/lovestream/kevin-learning-home/pull/2)。未合并、未生产部署、未读/导入真实记录；旧仓库没有改动。
 
 ## 结论与执行边界
 
@@ -95,4 +95,6 @@ Miniflare5不能直接接受旧v4 options；改用其导出的转换器。旧d1P
 
 ## UI回归与CI证据索引
 
-历史完整通过 [38561552190](https://github.com/lovestream/kevin-learning-home/actions/runs/38561552190)，SHA `8469b56e798a85b27a4c5def8b54141dd0887b74`，[CI原始JSON](results/cloudflare/ci.json)。同SHA另一次运行 [38561546007](https://github.com/lovestream/kevin-learning-home/actions/runs/38561546007) 在离线重试网页断言失败，不能用一次通过掩盖不稳定。已修复subject动作并发与旧状态回读竞态：UI等待当前状态完成后才显示同步，保留未确认草稿；共用浏览器回归延迟状态读取120ms，两条路线最新完整本地测试通过。fixture与原算法未改变。修复后最新提交完整CI另见PR checks和交接，不把历史CI视为新HEAD。
+历史完整通过 [38561552190](https://github.com/lovestream/kevin-learning-home/actions/runs/38561552190)，SHA `8469b56e798a85b27a4c5def8b54141dd0887b74`，历史artifact（当前CI JSON见下方修复后索引）。同SHA另一次运行 [38561546007](https://github.com/lovestream/kevin-learning-home/actions/runs/38561546007) 在离线重试网页断言失败，不能用一次通过掩盖不稳定。已修复subject动作并发与旧状态回读竞态：UI等待当前状态完成后才显示同步，保留未确认草稿；共用浏览器回归延迟状态读取120ms，两条路线最新完整本地测试通过。fixture与原算法未改变。修复后最新提交完整CI另见PR checks和交接，不把历史CI视为新HEAD。
+
+修复后完整CI PASS_CI：[38565360572](https://github.com/lovestream/kevin-learning-home/actions/runs/38565360572)，实际执行SHA `f7a9eab0bf751e706fe7898d4cde7b775e3d1793`，[CI JSON](results/cloudflare/ci.json)已替换为本次修复后结果；包括类型、Wrangler本地迁移/静态/dry-run、source parity、业务、延迟状态读浏览器、恢复及S/M负载。历史成功与失败run链接保留。归档提交后的最终HEAD由PR最新checks验证，不以旧执行SHA代替。

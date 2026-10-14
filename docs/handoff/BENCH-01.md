@@ -11,3 +11,5 @@
 现代Linux CI已存在通过记录；本分支完成报告提交后复核最新HEAD，并归档精确code SHA/CI URL至报告。等待ChatGPT独立复审。
 
 2026-10-14修复共用UI状态回读竞态，并以120ms状态读取延迟回归。最新完整本地PASS_LOCAL；历史完整CI SHA与失败记录见执行报告。最新HEAD的类型、Wrangler本地迁移/静态、source parity、业务/浏览器/恢复/负载由本PR最新checks验证。所有云端项目仍BLOCKED_APPROVAL。
+
+修复后完整CI PASS_CI：[38565360572](https://github.com/lovestream/kevin-learning-home/actions/runs/38565360572)，实际执行SHA `f7a9eab0bf751e706fe7898d4cde7b775e3d1793`，CI JSON归档。
