@@ -22,13 +22,17 @@ existing_image=$(sudo "$docker_bin" image ls --filter "reference=$image_tag" --f
 if [ -n "$existing_image" ]; then echo 'dedicated image already exists; stop'; exit 2; fi
 existing_container=$(sudo "$docker_bin" ps -a --filter "name=^${container_name}$" --format '{{.ID}}')
 if [ -n "$existing_container" ]; then echo 'dedicated container already exists; stop'; exit 2; fi
-had_base=no
-base_id=$(sudo "$docker_bin" image ls --filter "reference=$base_image" --format '{{.ID}}')
-if [ -n "$base_id" ]; then had_base=yes; else sudo "$docker_bin" pull "$base_image"; fi
-sudo "$docker_bin" tag "$base_image" "$image_tag"
-# Remove only the common tag newly introduced by this run. Keep any preexisting
-# base tag and all other images untouched. The dedicated tag retains its image.
-if [ "$had_base" = no ]; then sudo "$docker_bin" image rm "$base_image"; fi
+if [ -f "$test_root/image/node-amd64.tar.gz" ]; then
+  (cd "$test_root/image" && sha256sum -c node-amd64.tar.gz.sha256)
+  gzip -t "$test_root/image/node-amd64.tar.gz"
+  gzip -dc "$test_root/image/node-amd64.tar.gz" | sudo "$docker_bin" load > "$test_root/control/image-load.log"
+else
+  had_base=no
+  base_id=$(sudo "$docker_bin" image ls --filter "reference=$base_image" --format '{{.ID}}')
+  if [ -n "$base_id" ]; then had_base=yes; else sudo "$docker_bin" pull "$base_image"; fi
+  sudo "$docker_bin" tag "$base_image" "$image_tag"
+  if [ "$had_base" = no ]; then sudo "$docker_bin" image rm "$base_image"; fi
+fi
 sudo "$docker_bin" image inspect "$image_tag" --format 'id={{.Id}} architecture={{.Architecture}} os={{.Os}}' > "$test_root/control/image.txt"
 cleanup_docker(){
   sudo "$docker_bin" rm -f "$container_name" >/dev/null 2>&1 || true
