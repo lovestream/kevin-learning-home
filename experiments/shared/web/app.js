@@ -3,6 +3,24 @@ let session,
   subject = "math",
   current = { revision: 0, state: {} },
   attemptId;
+let busy = false;
+async function withBusy(operation) {
+  if (busy) return;
+  busy = true;
+  const controls = () =>
+    document.querySelectorAll(
+      "#classroom button,#classroom input,#loginButton",
+    );
+  for (const element of controls()) element.disabled = true;
+  $("classroom").dataset.ready = "false";
+  try {
+    return await operation();
+  } finally {
+    busy = false;
+    for (const element of controls()) element.disabled = false;
+    $("classroom").dataset.ready = "true";
+  }
+}
 const key = () => `klh-bench-draft:${session.learner}:${subject}`;
 async function call(path, { method = "GET", body, id } = {}) {
   const res = await fetch(path, {
@@ -28,12 +46,14 @@ async function call(path, { method = "GET", body, id } = {}) {
 }
 const statePath = () =>
   `/api/v1/learners/${session.learner}/subjects/${subject}/state`;
-async function reload() {
+async function reload({ restoreDraft = true } = {}) {
   current = await call(statePath());
   $("saved").textContent = JSON.stringify(current, null, 2);
   $("identity").textContent =
     `${session.learner} · ${subject} · revision ${current.revision}`;
-  const p = JSON.parse(localStorage.getItem(key()) ?? "null");
+  const p = restoreDraft
+    ? JSON.parse(localStorage.getItem(key()) ?? "null")
+    : null;
   const existing =
     subject === "math"
       ? current.state.progress?.studio.sessions
@@ -61,6 +81,7 @@ async function switchSubject(next) {
   for (const c of course.options) {
     const b = document.createElement("button");
     b.textContent = c.label;
+    b.disabled = busy;
     b.onclick = () => {
       $("answer").value = c.id;
     };
@@ -111,10 +132,13 @@ async function transmit(c) {
       body: c,
       id: c.commandId,
     });
-    localStorage.removeItem(key());
-    $("sync").textContent = "已同步";
+    await reload({ restoreDraft: false });
+    const pending = JSON.parse(localStorage.getItem(key()) ?? "null");
+    if (pending?.commandId === c.commandId) localStorage.removeItem(key());
+    $("sync").textContent = localStorage.getItem(key())
+      ? "已同步，另有草稿待处理。"
+      : "已同步";
     $("result").textContent = JSON.stringify(result.result, null, 2);
-    await reload();
     return result;
   } catch (e) {
     $("sync").textContent =
@@ -166,7 +190,7 @@ $("refresh").onclick = () => reload();
 $("mathTab").onclick = () => switchSubject("math");
 $("englishTab").onclick = () => switchSubject("english");
 try {
-  await enter();
+  await withBusy(enter);
 } catch (e) {
   /* an unauthenticated local experiment starts at login */
 }
@@ -204,3 +228,18 @@ $("resolve").onclick = async () => {
     /* retain new command and original conflict evidence */
   }
 };
+
+for (const id of [
+  "loginButton",
+  "submit",
+  "hint",
+  "retry",
+  "refresh",
+  "mathTab",
+  "englishTab",
+  "newAttempt",
+  "resolve",
+]) {
+  const handler = $(id).onclick;
+  $(id).onclick = (event) => withBusy(() => handler(event));
+}
