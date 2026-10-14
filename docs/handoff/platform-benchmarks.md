@@ -27,3 +27,5 @@ Math `8e9115442b3978eee0d4821750ce04f47954bd26`；WordQuest `d0b42a8872a7e87433b
 各路线交接文档保存code/test SHA和CI证据。分支HEAD会因文档归档变化；测试实际SHA不可改写成后来HEAD。最新提交CI检查以GitHub PR checks为准，最终证据索引补齐后暂停。
 
 共同UI状态更新竞态修复后两路线完整本地再次通过，120ms延迟状态读取回归保留。S/M规范基准JSON已三方（Mac Node、CF本地、真NAS）逐表对齐；NAS性能独立列，不做不同硬件排名。各PR最新checks验证最终HEAD，历史实际测试SHA保留。最终复审由ChatGPT独立进行，无自动下一阶段。
+
+修复后证据：共享SHA `fab91a6e0288b28a69409e7624bf245383030bfb` 的 [38565352841](https://github.com/lovestream/kevin-learning-home/actions/runs/38565352841) 成功；Node SHA `f5e7e97fdff4a340eeee60219d1e49396d554b5e` 的 [38565357976](https://github.com/lovestream/kevin-learning-home/actions/runs/38565357976) 成功；CF SHA `f7a9eab0bf751e706fe7898d4cde7b775e3d1793` 的 [38565360572](https://github.com/lovestream/kevin-learning-home/actions/runs/38565360572) 成功。实际执行SHA固定，后续归档提交HEAD由各PR最新checks另行验证。
