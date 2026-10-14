@@ -278,7 +278,7 @@ export async function startMediaMock({
       else res.destroy();
     }
   });
-  await new Promise((resolve) => server.listen(port, "127.0.0.1", resolve));
+  await new Promise((resolve) => server.listen(port, process.env.KLH_BENCH_MEDIA_LISTEN_HOST??"127.0.0.1", resolve));
   return {
     assets,
     origin: base,
