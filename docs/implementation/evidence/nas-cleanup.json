@@ -1,0 +1,12 @@
+{
+  "scope": "owned historical BENCH-02 only",
+  "verifiedContainerAbsent": true,
+  "verifiedTagAbsent": true,
+  "containerState": "running=false exitCode=0 oomKilled=false",
+  "timestampUtc": "2026-10-20T14:03:43.189634+00:00",
+  "ownedDirectoryRemoved": true,
+  "directoryMarkerIdentifier": "20261014-7ef8fd3a",
+  "containerId": "b669f0f3fe6b9265bc371b2bb635b5f6e3f0bad8cbfa3f53f081389992c4825b",
+  "imageTag": "klh-bench-node-nas:20261014-7ef8fd3a",
+  "authorization": "explicit user approval in current implementation turn; interactive Docker-only sudo, no new services"
+}

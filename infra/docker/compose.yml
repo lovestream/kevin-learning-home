@@ -1,0 +1,26 @@
+version: "2.4"
+services:
+  app:
+    image: "${KLH_APP_IMAGE:?Set an immutable foundation image reference}"
+    platform: linux/amd64
+    user: "${KLH_UID:?Set approved non-root UID}:${KLH_GID:?Set approved GID}"
+    read_only: true
+    init: true
+    restart: unless-stopped
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 512m
+    # cpuset works on the observed old kernel; do not claim CPU quota or PID caps.
+    cpuset: "${KLH_CPUSET:-0}"
+    ports: ["127.0.0.1:${KLH_PORT:-4177}:4177"]
+    environment:
+      NODE_ENV: production
+      KLH_INTERNAL_ORIGIN: "http://127.0.0.1:${KLH_PORT:-4177}"
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=16m"]
+    volumes:
+      - "${KLH_DATA_HOST:?Approved local filesystem required}:/data:rw"
+      - "${KLH_MEDIA_HOST:?Approved media directory required}:/media:ro"
+      - "${KLH_CONTENT_HOST:?Approved content directory required}:/content:ro"
+    logging:
+      driver: json-file
+      options: { max-size: "5m", max-file: "3" }

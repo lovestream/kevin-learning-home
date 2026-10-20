@@ -1,0 +1,8 @@
+.git
+node_modules
+**/node_modules
+apps/web/dist
+.foundation-work
+.evidence
+*.sqlite*
+.env*

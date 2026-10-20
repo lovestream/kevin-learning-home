@@ -1,0 +1,1001 @@
+[
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": ".github/workflows/pr-1a.yml",
+    "sha256": "138929810a970773ee3d9a0cd9868d0f99b8c779e3ff9621c1ff3ba3812dfd16",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": ".gitignore",
+    "sha256": "abdacc338ab3730313f65708a942d908f6d913ba89d63f362e9b5e47cc05ef90",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/handoff/README.md",
+    "sha256": "1ff2a819a3fda568ba292c08574a8133e00bafb6a1ef35ea4c3dabbb65287ebf",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/handoff/current.md",
+    "sha256": "edfb689dfead874d1f52b2ce4b73a644d406e8809302e6576fae89de4b9eb380",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/Cloudflare-feasibility-assessment.md",
+    "sha256": "59836ef6a49b5b9f5a1d8814d24450c262a66f8cf289078be2a184f6e8692e9b",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/PR-1A-execution-report.md",
+    "sha256": "63556d5581e9b9b0117c559a6015d841c75e401cfd2c0bd5c9d7e04928e67ddc",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/PR-1A-nas-validation-report.md",
+    "sha256": "35a7fcd104bbc231ed649992039e691cd76e296695d4e8cecd67a85b2ce89e23",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/PR-1A-runtime-decision.md",
+    "sha256": "eed71f7a2cbe95a799e85a2e7aea7719e2aff3453933a40aca8f881f91f2dc79",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a-nas/checks-and-errors.json",
+    "sha256": "818659a5d36277f31ef40335071ec75a012ea7ca569bb0c03f6ddccd9f380d75",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a-nas/identity.json",
+    "sha256": "5cb0f2f5886af70145954ad681139e99ff70777f1fe7b98e739dda53a363f53f",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a-nas/index.json",
+    "sha256": "93b752ac801556c1d2471807f0bd649d36c66426bf0638b8f3dc2a8e69dee4a4",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a-nas/preflight-after.json",
+    "sha256": "ab54b079a210698035d4eb8b58486581d4f7ea7c075b4d928710cf035eb58aa6",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a-nas/preflight-before.json",
+    "sha256": "2990ae0ad7f2a7c249d8562c0436fc4ed04165151d76948a67fbfb3ef7dde4e1",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a-nas/supplemental-before.json",
+    "sha256": "2ae675411e1250d4d5354073f097de4a740be412565c31161c35fef04173b1c2",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/ci-container.json",
+    "sha256": "934184bc66f4684ac00e08f8e2d583417526a061a28be509e8d360f3d2b686c1",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/ci-preflight.json",
+    "sha256": "d35fc47c7df81ef97664ab6d875f7f73d06d73ae016cf712d4b62ddfb00a2700",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/compose-version.txt",
+    "sha256": "7626dadea5860f6998d4b8b55b91b1e9283ce1a7959b624aaa9ed1fcaaaca69f",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/index.json",
+    "sha256": "dcc1942e114a5da10fd30645bfaf94a723d88b45fcfb2be9aa207a7782641f59",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/local-preflight.json",
+    "sha256": "2ab442adda2df283adf05da6d3a0f69a361513943e473c17d196f0cda5fe687b",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/local-summary.json",
+    "sha256": "e9fa5f04e2eca89ab7a253ff69923c3c75ed7ef6a8a3344446256784ca4c06ab",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/nas-plan.json",
+    "sha256": "d4f339eebbb21bda6c720874f2cd9fca32a2c7e1a7927ae65e7936dbda69af28",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/node-tests.txt",
+    "sha256": "9c7a8142626dc000b72931b5e7cdac14d590aa92cce66201216df665b52ee811",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/preflight-exit.json",
+    "sha256": "c97f9b69b82ff0bbae15e44a0ea54f19df363520d29af58787030aed7d226595",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/phase-1/evidence/pr-1a/python-tests.txt",
+    "sha256": "138698c126447036d61a488ff1c3040a4d0f4b9a4c8d01f1e654ec76963df600",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/tasks/KLH-PR-1A-NAS.md",
+    "sha256": "ca0906cf1264773751698a59e843ab7ed6c92d7582007e1cef8f9722c121f935",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/tasks/KLH-PR-1A.md",
+    "sha256": "a9e5705b6e9f5dc503da836586a6cca172deea2fdb3fdb8b5fbdff58f272d4c7",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "infra/probes/node-sqlite/Dockerfile",
+    "sha256": "47307f37461e74925c0bd68ac8f49a112d108bbe26ab65b944faac083e69645a",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "infra/probes/node-sqlite/README.md",
+    "sha256": "aa5107e4827b2cdd467747ac7e710628090348029dfefcab94b784010d4fa6f4",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "infra/probes/node-sqlite/compose.yml",
+    "sha256": "08cac677c66859604fe13146665f4daa225a601b80807dacee9f0a233638136a",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "infra/probes/node-sqlite/image-lock.json",
+    "sha256": "99a0082fa67ec39557694e3643c5485699402593d5254444d1068d541c44d38f",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "infra/probes/node-sqlite/probe.mjs",
+    "sha256": "4b25e5c42a979361d579f74350b2d8e2877289a243c99ef58817b840b214f0e3",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "package.json",
+    "sha256": "c13eac2b20d76b391fe91a9e8b8d64ff61f2ea298b780b519fb26c9fa0515bbd",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "scripts/nas-preflight.sh",
+    "sha256": "9c487a34619513608688578ec9e638ccc96f16efe7cf49a88ef5e6f1440fdae7",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "scripts/nas_preflight.py",
+    "sha256": "9bec2fd5c88424785a9ada37325decd991b30fad8b8819b2d9040028ca53e245",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "scripts/run_sqlite_probe.py",
+    "sha256": "6762de2143f17e4c28f5b3b6db0f8ad008fc2e48d949373344b3a5affe4e5e25",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/sqlite-probe.test.mjs",
+    "sha256": "a9941444e8e0f6d617af5031a54f98534c1ae57af376d26ec5e1aa52e75812f3",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/test_preflight.py",
+    "sha256": "b9e9cdc8ba7c6f6842a51942f7fa0b308203d176636fb925550a19de18979c3d",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 1,
+    "sourceSha": "98d22980c2b0d984fde7f7d507ca98173001beb4",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/test_runner.py",
+    "sha256": "81ab413678b47b33102bb3fe4680cfcd8424fb5c4abb371332701efd546e9e75",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": ".github/workflows/bench-common.yml",
+    "sha256": "24669e357ba91963a5099e3463a5e279a86b40c3922d539d032f701829121fc7",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": ".gitignore",
+    "sha256": "b017926b0ee0025a774114f4cfb1ceac73fbdabececec8e26ea36a98d41dbce1",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/benchmarks/BENCH-00-common-protocol.md",
+    "sha256": "8a23289492ea9adaf77ee3b133e1aa3985e7cc7951597a787b8040fd816af301",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/benchmarks/BENCH-03-side-by-side-decision.md",
+    "sha256": "d4c7727aae5b5526a8855a8e9779bdf3cee0d1a5ff8b3399343bc355d0870e72",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/benchmarks/results/shared/baseline-parity.json",
+    "sha256": "aaa76fe47259d6ee6aea7470494e352d4667339d621c1b6173769f8da2590ca6",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/handoff/platform-benchmarks.md",
+    "sha256": "c716cc91be9dcabb78ad2a1e1fddd75a2c0ac7950bb582bfd88609462a83ef72",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/tasks/KLH-BENCH-00-COMPARISON.md",
+    "sha256": "0b1be948aca19c3659bb80885e2e76640d5a4f7dc1b049230dcf559440383cab",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/tasks/KLH-BENCH-01-CLOUDFLARE.md",
+    "sha256": "066bee31895cf445653ab0fa9eb2c3fab22872f6b813bb103433bc8d0ce3e0a9",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "docs/tasks/KLH-BENCH-02-NODE-NAS.md",
+    "sha256": "604d3fe14577fd857b79ef35a84f47ac52a9d72c75c073f4e95346ca90a798db",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/api.mjs",
+    "sha256": "92ab70ef9fce55b4339ddcfcf47f612c8a21bc37a2e9bc4e1d864baa9cb02b88",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "实验身份、mock对象、合成课程、假奖励和原型UI不进入正式app；正式入口关闭学习写入"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/domain.mjs",
+    "sha256": "9aed60f491c37eaea1f63e3c42cbb0dc7d205c3c6c44d6af0e3679a0cead15c8",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "实验身份、mock对象、合成课程、假奖励和原型UI不进入正式app；正式入口关闭学习写入"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/media-mock.mjs",
+    "sha256": "bfa0d790cc7c74cafe772a9750e114fb4010b0d6598af5090e38faca959c7958",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "实验身份、mock对象、合成课程、假奖励和原型UI不进入正式app；正式入口关闭学习写入"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/repository.mjs",
+    "sha256": "ad1f29a597f2afe94170be446377c5bfdd1895afa684268ed7c70ce7b7ac4fa5",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "canonical排序与receipt/hash/CAS语义→contracts、platform/store.ts；改用同步BEGIN IMMEDIATE，不复制无限状态分片/奖励"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/schema.sql",
+    "sha256": "32235b127a91c870b23618d3b704e4244ad34e960be31b51fd310a282b1d8f05",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "重建001-foundation.sql：独立迁移校验、有界projection、不可变event/receipt、关系引用；不复制实验auth/reward"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/english.mjs",
+    "sha256": "c6dbb940b533a8fa6d6a55fcb4edc58f9ce61dcba7f4da41570000f23adf58a6",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/content/pets/catalog.json",
+    "sha256": "89d5938d9c90b836dd7e4db3db2c3de878d279fb06b494d3a234c0fdfe42c989",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/content/pilot/thinking-deeper-variants.mjs",
+    "sha256": "0da0f513b7535138154b0ed8c29bc186509fe3f94e23589d6cc0244f31867d9b",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/content/pilot/thinking-hints.mjs",
+    "sha256": "f73500b4109896babcfd8a0bbe302737b3562fcf25c986c2839d20cf71f6fbde",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/content/pilot/thinking-publication.mjs",
+    "sha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/content/pilot/thinking-source.mjs",
+    "sha256": "844655d8993e657663ec2d90c5e5f0d2bccce4e181cad6859ad45b1102579437",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/content/pilot/thinking-variants.mjs",
+    "sha256": "8bdc93f8ab0a9d6bf96735f48e5713e6a739759009cd76bd7a34c12ba8ec8f0f",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/server/pet-care.mjs",
+    "sha256": "726afb0ba8f3ac8814fc83f0868cea3f22fcec68d7b4649dba0d4476400ab324",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/server/pilot-core.mjs",
+    "sha256": "645f122258629b76177d285c16cdf3b8cd5527477daf3baf47f514b30c4405e2",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/server/pilot-store.mjs",
+    "sha256": "6e308b8883cf4644c4c0d2cb07a22ec98de38a874285199f733c852fb57e83d6",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/server/review-schedule.mjs",
+    "sha256": "e6126fd5a57f07de74756a325a8c375e25deed34d67f4662a416d3326ba1902d",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/server/thinking-store.mjs",
+    "sha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/shared/core-models.mjs",
+    "sha256": "e5ec016e741dc4bef74b85d71e4a5bfd905010ae96fea99ea5a7d79f16b9f636",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/shared/hands-on-models.mjs",
+    "sha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/shared/operation-models.mjs",
+    "sha256": "f51539a15a8be0deeadb2c357f1563c0278bf5f694148adb29fa6cfc277154f9",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/shared/pilot-math.mjs",
+    "sha256": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/shared/textbook-models.mjs",
+    "sha256": "e76b8d85e58dfe0fff18991af9953f10cf3af89198d8566e985b4e3afa23f6cf",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/shared/thinking-tools.mjs",
+    "sha256": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/shared/widget-state.mjs",
+    "sha256": "51b59cbf8a7ae23e3973c7191d2b030a3aba8fea1a3339ffa940e09c3e0010ab",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/vendor/math/shared/withdrawn-checks.mjs",
+    "sha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/web/app.js",
+    "sha256": "66610e9b68df0b43407306815d557450d99df8c70ac33e7ee7552e4cb3946749",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "实验身份、mock对象、合成课程、假奖励和原型UI不进入正式app；正式入口关闭学习写入"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/web/index.html",
+    "sha256": "c8ae8c2f2a322630c84c8df33571dc49fe382d4fbe93879fc0f758ed08879d9b",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "实验身份、mock对象、合成课程、假奖励和原型UI不进入正式app；正式入口关闭学习写入"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "experiments/shared/web/style.css",
+    "sha256": "dd7a9883ce6b9f4de88124a3df2ace7fa461789ec3c991f333eb466136887382",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "实验身份、mock对象、合成课程、假奖励和原型UI不进入正式app；正式入口关闭学习写入"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "package-lock.json",
+    "sha256": "4a8cfaf64956e83f08e9303de477b0b758a6684fa3d22583cc3fb9e28524171d",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "package.json",
+    "sha256": "6ada5b3034299e14fe820386ed833da181fa55470bad3c3cf5c35c4842f84af5",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/browser-suite.mjs",
+    "sha256": "37d1111a6fa0d6d23b81cf680010e14ff903ae00069a9ad86598d664d4afb6a5",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/business-suite.mjs",
+    "sha256": "51b301efcdca878e7e3bf93b364bbc443474f6fe0ad048189609acbe22014cad",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "仅采用幂等/CAS/事务/恢复验收要求；正式最小schema与HTTP测试另写，不复制旧学科测试冒充整合"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/contract-v1.md",
+    "sha256": "d89c236b4992931040e4e78fcac29e6468eee9986b6418ab86da842794daa277",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "仅采用幂等/CAS/事务/恢复验收要求；正式最小schema与HTTP测试另写，不复制旧学科测试冒充整合"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/extended-suite.mjs",
+    "sha256": "a8530d547162a34c88c35df9e72e6d2ccdb47aff5270aaa5f3f937f4a074944d",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "仅采用幂等/CAS/事务/恢复验收要求；正式最小schema与HTTP测试另写，不复制旧学科测试冒充整合"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/fixture-lock.json",
+    "sha256": "6a042d107057e091ecca68438a70414acd8b22d14f0a10869f7d3df5f7ec0117",
+    "decision": "REUSE",
+    "targetOrReason": "精确复制到 `tests/provenance/fixture-lock.json`；本轮不运行旧学科算法，不以这些历史fixture证明正式课程兼容"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/fixture-v1.json",
+    "sha256": "68fdc9daf4a856d545999753282bbc4c9b92a0c64ac09bb04cf73b4f4a15ed07",
+    "decision": "REUSE",
+    "targetOrReason": "精确复制到 `tests/provenance/fixture-v1.json`；本轮不运行旧学科算法，不以这些历史fixture证明正式课程兼容"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/run-platform.mjs",
+    "sha256": "ee8aabdc8f9f22e9cb658b221102a0e6718c65c6c0832f495c9bb6dd64c3d61e",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/schema-v1.json",
+    "sha256": "7049df4b1b96efe4f43758550f955154c8e825b9dd0c7c5cded73b9ebd46d6e1",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "仅采用幂等/CAS/事务/恢复验收要求；正式最小schema与HTTP测试另写，不复制旧学科测试冒充整合"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/source-lock.json",
+    "sha256": "942ea8bea691f742e01054bb9f49e4506728b8e6fd8ff444e87069860accf228",
+    "decision": "REUSE",
+    "targetOrReason": "精确复制到 `tests/provenance/source-lock.json`；本轮不运行旧学科算法，不以这些历史fixture证明正式课程兼容"
+  },
+  {
+    "pr": 2,
+    "sourceSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "baseSha": "46687ba370ca7e47764e500641bc371e2c0d4727",
+    "file": "tests/platform-parity/source-parity.test.mjs",
+    "sha256": "ff51f8e5f78a321afcbfaa54033ee3ba7d64356e19e8f9a5aae2dda9c62d7a63",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": ".github/workflows/bench-nas-image.yml",
+    "sha256": "293a68690a58132b37f1ad4e42aafef28e643cc44b37681a3834391df373966e",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": ".github/workflows/bench-node.yml",
+    "sha256": "bcdc910cecbb8fa037f17341bd140d8185628a41215bcfaeb26aea12e66ba8ce",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/BENCH-02-hardware-cost-model.md",
+    "sha256": "6f5837cf82d1502e6d256825b75173b4b496ccb40c727f09170fa0df49c827c7",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/BENCH-02-node-nas-report.md",
+    "sha256": "41dd87a29a5affdb3855b9f821e41ffeae9abd529af844c1dd3dfbadfa6662fa",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/BENCH-02-operations-and-recovery.md",
+    "sha256": "fcea8190c2a50da4a838ecd72ff923d2bdc1ff00680d9541bfa6f0eec123ed93",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/ci.json",
+    "sha256": "d6fa6737866ba027156265f5197f7ce1d011b70425cfb9eb9c7ca4a0576a861e",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/container-ci.json",
+    "sha256": "51a7d48a7aa4bfa322e22722ea40b94d93fa4befa1a166ba8d1de0df35f57e58",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/local.json",
+    "sha256": "3d089cc53b8074c0ea169ed4c6f88b7c26a217a44a8c27d84dec663acc4108e6",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/nas-browser.json",
+    "sha256": "b357a48fb9d107350d08ceef995119f0e2e3ddb0b9b504ae477a40618fa3384f",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/nas-frontend-provenance.json",
+    "sha256": "be63783dc6851446b9b76bf3d2c060a2ec91e4b4aec46fcef4bf421764fc35ab",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/nas-image-provenance.json",
+    "sha256": "3e61e15387de13492519fb1e76e685a07bb8d50a4867f610e0b51c8e2aafd739",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/nas-preflight-20261014.json",
+    "sha256": "e8ef31ddcdbd121f3af064c417a3667e45c4a08b0dbd53cfa08e97e659266ee1",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/nas-raw.json",
+    "sha256": "13bfe4f7d05780f3915c3ae9e101002db535a1fad0d1a84871f3989133a60de8",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/benchmarks/results/node/nas-verification.json",
+    "sha256": "72e6b2af061c98bfec8b0c34aa9ccb4d75b5ba60f6e6d8f2f422b2a0dd72600f",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "docs/handoff/BENCH-02.md",
+    "sha256": "3af58ec92c64ee77afa024fd1f7ea9e58900dad0dc92fbe682ba3e8722746e84",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/Dockerfile",
+    "sha256": "e5644b87b1ea1961fecf60d2b2fe3b7ae67e441125d32a6a5ce7411b4b4adbb9",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "重新实现现代Linux容器持久化验收/正式多阶段镜像；不继承实验运行方式"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/Dockerfile.nas",
+    "sha256": "55a2c2812a166eb299b6eefa76cc60831a94890803e33d6f720f00e306e6ed4b",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "重新实现现代Linux容器持久化验收/正式多阶段镜像；不继承实验运行方式"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/adapter.mjs",
+    "sha256": "da2b1522efebb5af5022f7655dbd91128565070a1f183d6a885abe44bb7952c8",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "SQLite PRAGMA回读、BEGIN IMMEDIATE与VACUUM INTO经验→platform；加writer锁、迁移校验与一致媒体checkpoint"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/container-suite.mjs",
+    "sha256": "c173f8c4887559d6e761648401693d5ef6d3020c205b2956757e5e6a12722f1c",
+    "decision": "REWRITE/ADAPT",
+    "targetOrReason": "重新实现现代Linux容器持久化验收/正式多阶段镜像；不继承实验运行方式"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/harness.mjs",
+    "sha256": "b117bb759fb36a14ff91ce65fdbf282fc850069c87755e607c0a418d123df5eb",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "不带入假身份、测试故障开关、sudo启动器或旧端口；只提取已有实测风险写入部署设计"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/nas-browser.mjs",
+    "sha256": "f7c638949885c69dd89f674d7722f300c470d10a9a1a4118fdd5509dcbbcd58a",
+    "decision": "RESEARCH_ONLY",
+    "targetOrReason": "保留在原草稿PR作为历史证据；不随本PR迁入runtime"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/nas-launch.sh",
+    "sha256": "e9f390a3e4aa015938f301abd39cdc19d85bcfd540181f09155c2ec11ce781e9",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "不带入假身份、测试故障开关、sudo启动器或旧端口；只提取已有实测风险写入部署设计"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/nas-suite.mjs",
+    "sha256": "ddfa9f535b339591f95411f8effade83beaa63f831a00a133b3f7580f4e8fb1e",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "不带入假身份、测试故障开关、sudo启动器或旧端口；只提取已有实测风险写入部署设计"
+  },
+  {
+    "pr": 4,
+    "sourceSha": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+    "baseSha": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+    "file": "experiments/node/server.mjs",
+    "sha256": "188c58a68f0330e6a67d2614857a6c5fb376b1cddbbc426f1d408caadfe71609",
+    "decision": "DROP_FROM_RUNTIME",
+    "targetOrReason": "不带入假身份、测试故障开关、sudo启动器或旧端口；只提取已有实测风险写入部署设计"
+  }
+]
