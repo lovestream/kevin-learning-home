@@ -1,0 +1,40 @@
+{
+  "primaryPassingRun": 39517183962,
+  "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/39517183962",
+  "otherPassingRun": 39517178297,
+  "executedHeadSha": "57fa26e7c163499a2cdf97bda789c9ea264e185d",
+  "tests": 21,
+  "browserViewports": 3,
+  "composeParser": {
+    "version": "1.28.5",
+    "status": "PASS_CI",
+    "binarySha256": "46406eb5d8443cc0163a483fcff001d557532a7fad5981e268903ad40b75534c"
+  },
+  "archivedFiles": {
+    "ci-browser.json": "4fa2320632d679f95ad2399dd69776ad92865051c8e4063200b8e84b5cc3042d",
+    "ci-compose-v1.yml": "82725dcca104636764da008798bc56884922cfed2fc84f2b3420c1480c2dd9d7",
+    "ci-container.json": "8e0780757ff2f49f049fc803777db98ac864f57cf80c6509924e8ce8eaf8a605",
+    "ci-recovery.json": "061c2d7248876c0a7e7f2d6e4aa0e90202824cd16219c860653becc711c38a31",
+    "ci-verification.json": "6aaf3390ef555896375a5874a90c7c641fd1ef3cfa1f60a5796faa85c8d6252c"
+  },
+  "historicalFailures": [
+    {
+      "runs": [
+        39437630282,
+        39437668057
+      ],
+      "headSha": "ba4388903e3c6e6dd6e4804bb6d885a8ec366aa2",
+      "detail": "container build failed; log initially not uploaded because hidden evidence folder excluded"
+    },
+    {
+      "runs": [
+        39516909851,
+        39516914441
+      ],
+      "headSha": "c74e5aa0998db5687121235c77b1c59b74926c75",
+      "detail": "captured Dockerfile mkdir /media: File exists; fixed with mkdir -p"
+    }
+  ],
+  "temporaryImageTag": "klh-foundation-ci:708a1d04-2af6-46e6-9e4e-280ae3be7259",
+  "temporaryImageRemovedAfterRun": true
+}

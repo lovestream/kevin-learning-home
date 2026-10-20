@@ -1,0 +1,32 @@
+{
+  "status": "PASS_CI",
+  "timestamp": "2026-10-20T23:47:14.917Z",
+  "executedHeadSha": "57fa26e7c163499a2cdf97bda789c9ea264e185d",
+  "worktreeDirty": false,
+  "environment": {
+    "node": "v24.15.0",
+    "os": "linux",
+    "arch": "x64",
+    "kernel": "7.0.0-1017-azure"
+  },
+  "tests": 21,
+  "browserViewports": 3,
+  "steps": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "/opt/hostedtoolcache/node/24.15.0/x64/bin/node --test --test-concurrency=1 --test-reporter=junit --test-reporter-destination=.evidence/foundation-junit.xml tests/foundation/platform.test.ts tests/foundation/recovery.test.ts tests/foundation/restart.test.ts",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:browser",
+      "exitCode": 0
+    }
+  ]
+}

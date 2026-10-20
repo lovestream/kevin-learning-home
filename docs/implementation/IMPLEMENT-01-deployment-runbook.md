@@ -12,7 +12,7 @@ node scripts/maintenance.ts migrate --root .foundation-work
 npm start
 ```
 
-migrate为显式目录初始化，创建data/media/content；app默认只监听127.0.0.1:4177、只展示学科占位。`GET /health/live`为进程存活，`/health/ready`检查SQLite/PRAGMA与volume可读；不代表全部媒体已校验或身份认证完成。`GET /api/v1/config`返回全禁用。退出按Ctrl+C/SIGTERM，让writer锁正常释放。`node scripts/verify.ts`运行类型、构建、19项Node测试与3尺寸浏览器；先 `npx playwright install chromium`。
+migrate为显式目录初始化，创建data/media/content；app默认只监听127.0.0.1:4177、只展示学科占位。`GET /health/live`为进程存活，`/health/ready`检查SQLite/PRAGMA与volume可读；不代表全部媒体已校验或身份认证完成。`GET /api/v1/config`返回全禁用。退出按Ctrl+C/SIGTERM，让writer锁正常释放。`node scripts/verify.ts`运行类型、构建、21项Node测试与3尺寸浏览器；先 `npx playwright install chromium`。
 
 要单独演练合成seed，使用另一个全新root：
 

@@ -5,13 +5,20 @@
       "repository": "math-learning",
       "headBefore": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
       "trackedFilesCleanBefore": true,
-      "scope": "Git HEAD/index/worktree metadata only; no application/data/credential reads; no old-site requests or deployment changes"
+      "scope": "Git HEAD/index/worktree metadata only; no application/data/credential reads; no old-site requests or deployment changes",
+      "headAfter": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "trackedFilesCleanAfter": true,
+      "sameHeadBeforeAfter": true
     },
     {
       "repository": "word-request",
       "headBefore": "d0b42a8872a7e87433b96770519203630223b6f2",
       "trackedFilesCleanBefore": true,
-      "scope": "Git HEAD/index/worktree metadata only; no application/data/credential reads; no old-site requests or deployment changes"
+      "scope": "Git HEAD/index/worktree metadata only; no application/data/credential reads; no old-site requests or deployment changes",
+      "headAfter": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "trackedFilesCleanAfter": true,
+      "sameHeadBeforeAfter": true
     }
-  ]
+  ],
+  "completedCheckUtc": "2026-10-20T23:47:37.021275+00:00"
 }
