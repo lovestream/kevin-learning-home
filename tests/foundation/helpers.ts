@@ -3,11 +3,32 @@ import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { createServer } from "node:net";
 import { randomUUID } from "node:crypto";
+import { request } from "node:http";
 import { Store } from "../../packages/platform/store.ts";
 import { layout, prepareLayout } from "../../packages/platform/checkpoint.ts";
 import { seed } from "../../scripts/synthetic.ts";
 import { createHttp } from "../../apps/server/http.ts";
 import type { LearningCommand } from "../../packages/contracts/index.ts";
+
+// Native HTTP is required when intentionally testing Host. Node fetch ignores
+// caller-supplied Host, so using fetch would test a different request.
+export async function rawRead(
+  url: string,
+  headers: Record<string, string> = {},
+) {
+  return new Promise<{ status: number; body: string }>((resolve, reject) => {
+    const req = request(url, { headers }, (res) => {
+      let body = "";
+      res.on("data", (b) => {
+        body += b;
+      });
+      res.on("end", () => resolve({ status: res.statusCode ?? 0, body }));
+    });
+    req.on("error", reject);
+    req.setTimeout(4000, () => req.destroy(Error("HTTP_TIMEOUT")));
+    req.end();
+  });
+}
 
 export function fixture() {
   const root = realpathSync(mkdtempSync(join(tmpdir(), "klh-foundation-")));

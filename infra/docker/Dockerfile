@@ -13,7 +13,7 @@ COPY apps/server ./apps/server
 COPY packages ./packages
 COPY scripts/maintenance.ts scripts/healthcheck.ts ./scripts/
 COPY --from=build /app/apps/web/dist ./apps/web/dist
-RUN mkdir /data /media /content && chown node:node /data /media /content
+RUN mkdir -p /data /media /content && chown node:node /data /media /content
 USER node
 EXPOSE 4177
 HEALTHCHECK --interval=20s --timeout=5s --start-period=15s --retries=3 CMD ["node","scripts/healthcheck.ts"]

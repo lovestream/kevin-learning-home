@@ -9,7 +9,44 @@ import {
   parseCommand,
 } from "../../packages/contracts/index.ts";
 import { syntheticCommand } from "../../scripts/synthetic.ts";
-import { fixture, httpFixture, send } from "./helpers.ts";
+import { fixture, httpFixture, send, rawRead } from "./helpers.ts";
+
+test("F11 native HTTP rejects forged Host, cross-origin commands and cross-learner access", async () => {
+  const f = await httpFixture();
+  try {
+    assert.equal(
+      (await rawRead(f.origin + "/health/live", { Host: "forged.example" }))
+        .status,
+      403,
+    );
+    const command = syntheticCommand();
+    const r = await fetch(
+      f.origin +
+        "/api/v1/learners/synthetic-learner/subjects/foundation-demo/commands",
+      {
+        method: "POST",
+        headers: {
+          Origin: "http://forged.example",
+          "Content-Type": "application/json",
+          "Idempotency-Key": command.commandId,
+          "X-Foundation-Test-Session": f.tokens[0],
+        },
+        body: JSON.stringify(command),
+      },
+    );
+    assert.equal(r.status, 403);
+    assert.equal((await r.json()).error.code, "ORIGIN_REJECTED");
+    const other = await fetch(
+      f.origin +
+        "/api/v1/learners/another-learner/subjects/foundation-demo/state",
+      { headers: { "X-Foundation-Test-Session": f.tokens[0] } },
+    );
+    assert.equal(other.status, 403);
+    assert.equal(f.store.summary().learning_events.count, 0);
+  } finally {
+    await f.stop();
+  }
+});
 
 test("F03 empty schema migration, WAL/FULL/FK/busy_timeout, repeat opening is idempotent", () => {
   const f = fixture();

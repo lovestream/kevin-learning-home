@@ -4,8 +4,9 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { randomUUID } from "node:crypto";
 import { resolve } from "node:path";
 import assert from "node:assert/strict";
-import { fixture } from "./helpers.ts";
+import { fixture, rawRead } from "./helpers.ts";
 import { syntheticCommand } from "../../scripts/synthetic.ts";
+import { Store } from "../../packages/platform/store.ts";
 import {
   backup,
   restore,
@@ -40,6 +41,23 @@ try {
     run(["image", "inspect", image, "--format", "{{json .Config}}"]),
   );
   assert.equal(meta.User, "node");
+  const actualImageId = run([
+    "image",
+    "inspect",
+    image,
+    "--format",
+    "{{.Id}}",
+  ]).trim();
+  assert.equal(
+    run([
+      "image",
+      "inspect",
+      image,
+      "--format",
+      "{{.Architecture}} {{.Os}}",
+    ]).trim(),
+    "amd64 linux",
+  );
   const mountArgs = (paths: Layout) => [
     "-v",
     paths.data + ":/data:rw",
@@ -74,11 +92,11 @@ try {
     let healthy = false;
     for (let i = 0; i < 100; i++) {
       try {
-        const r = await fetch(
+        const r = await rawRead(
           "http://127.0.0.1:" + hostPort + "/health/ready",
-          { headers: { Host: "127.0.0.1:4177" } },
+          { Host: "127.0.0.1:4177" },
         );
-        if (r.ok) {
+        if (r.status === 200) {
           healthy = true;
           break;
         }
@@ -86,6 +104,7 @@ try {
       await new Promise((r) => setTimeout(r, 200));
     }
     assert(healthy, "container ready");
+    run(["exec", name, "node", "scripts/healthcheck.ts"]);
     const controls = JSON.parse(
       run(["inspect", name, "--format", "{{json .HostConfig}}"]),
     );
@@ -129,10 +148,22 @@ try {
   run(["stop", name]);
   run(["rm", name]);
   id = "";
+  const persisted = new Store(f.paths.data);
+  try {
+    assert.deepEqual(persisted.summary(), expected);
+  } finally {
+    persisted.close();
+  }
   const recreated = await launch();
   run(["stop", name]);
   run(["rm", name]);
   id = "";
+  const recreatedStore = new Store(f.paths.data);
+  try {
+    assert.deepEqual(recreatedStore.summary(), expected);
+  } finally {
+    recreatedStore.close();
+  }
   const checkpoint = join(f.root, "checkpoint"),
     restored = join(f.root, "restored-host");
   backup(f.paths, checkpoint);
@@ -141,6 +172,12 @@ try {
   run(["stop", name]);
   run(["rm", name]);
   id = "";
+  const restoredStore = new Store(layout(restored).data);
+  try {
+    assert.deepEqual(restoredStore.summary(), expected);
+  } finally {
+    restoredStore.close();
+  }
   // Wrong UID cannot write the dedicated data mount: no chmod/chown workaround.
   const denied = spawnSync(
     "docker",
@@ -170,6 +207,10 @@ try {
     readOnlyRootfs: true,
     deletedRecreatedVolumePersistent: true,
     restoredHostReady: true,
+    exactTableHashesPreserved: true,
+    actualImageId,
+    architecture: "linux/amd64",
+    healthcheckCommandPassed: true,
     wrongUidRejected: true,
     testHarnessExcludedFromImage: true,
     tables: expected,
