@@ -25,6 +25,32 @@ import { canonical } from "../../packages/contracts/index.ts";
 import { syntheticCommand } from "../../scripts/synthetic.ts";
 import { fixture } from "./helpers.ts";
 
+test("F09 checkpoints reject manifest identity drift and missing relational content references", () => {
+  const f = fixture();
+  try {
+    const original = String(
+      f.store.db.prepare("SELECT manifest FROM media_assets").get()!.manifest,
+    );
+    const altered = JSON.parse(original);
+    altered.version = "wrong-version";
+    f.store.db
+      .prepare("UPDATE media_assets SET manifest=?")
+      .run(canonical(altered));
+    assert.throws(
+      () => verifyContent(f.store, f.paths),
+      /MEDIA_IDENTITY_MISMATCH/,
+    );
+    f.store.db.prepare("UPDATE media_assets SET manifest=?").run(original);
+    f.store.db.exec("DELETE FROM content_media_refs");
+    assert.throws(
+      () => verifyContent(f.store, f.paths),
+      /CONTENT_REFERENCES_MISMATCH/,
+    );
+  } finally {
+    f.close();
+  }
+});
+
 test("F08 offline checkpoint restores DB, media, content, revisions, event and receipt hashes into empty host layout", () => {
   const f = fixture();
   try {

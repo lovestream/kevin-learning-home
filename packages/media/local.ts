@@ -48,6 +48,7 @@ function openWithin(root: string, key: string): number {
   }
   if (!realpathSync(path).startsWith(base + "/"))
     throw new AppError("MEDIA_PATH_UNSAFE", 422);
+  if (!lstatSync(path).isFile()) throw new AppError("MEDIA_PATH_UNSAFE", 422);
   return openSync(path, constants.O_RDONLY | constants.O_NOFOLLOW);
 }
 export function readWithin(root: string, key: string, limit?: number): Buffer {
@@ -151,6 +152,11 @@ export class LocalMediaStorage implements MediaStorage {
   }
   verify(asset: MediaAsset) {
     mediaAssetSchema.parse(asset);
+    if (
+      asset.visibility === "public" &&
+      asset.authorization === "private-owner"
+    )
+      throw new AppError("MEDIA_LICENSE_INVALID", 403);
     const actual = fingerprintWithin(this.root, asset.storageKey);
     if (actual.sha256 !== asset.sha256 || actual.sizeBytes !== asset.sizeBytes)
       throw new AppError("MEDIA_HASH_MISMATCH", 422);

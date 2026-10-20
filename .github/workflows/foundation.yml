@@ -26,8 +26,17 @@ jobs:
           echo '46406eb5d8443cc0163a483fcff001d557532a7fad5981e268903ad40b75534c  /tmp/klh-compose-v1' | sha256sum -c -
           chmod u+x /tmp/klh-compose-v1
           env KLH_APP_IMAGE=klh-ci:synthetic KLH_UID=1001 KLH_GID=1001 KLH_DATA_HOST=/tmp/klh-ci/data KLH_MEDIA_HOST=/tmp/klh-ci/media KLH_CONTENT_HOST=/tmp/klh-ci/content /tmp/klh-compose-v1 -f infra/docker/compose.yml config > .evidence/compose-v1.yml
-      - run: npm run test:container > .evidence/container-build.log 2>&1
+      - name: Container isolation and restored-host verification
+        run: |
+          set +e
+          npm run test:container > .evidence/container-build.log 2>&1
+          task_exit=$?
+          tail -c 4000 .evidence/container-build.log
+          exit "$task_exit"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          { name: implement-01-evidence, path: .evidence, retention-days: 14 }
+          name: implement-01-evidence
+          path: .evidence
+          retention-days: 14
+          include-hidden-files: true

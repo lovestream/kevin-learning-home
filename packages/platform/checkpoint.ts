@@ -4,11 +4,7 @@ import {
   mkdirSync,
   renameSync,
   rmSync,
-  readFileSync,
-  writeFileSync,
-  copyFileSync,
   readdirSync,
-  lstatSync,
   openSync,
   fsyncSync,
   closeSync,
@@ -57,9 +53,15 @@ export function prepareLayout(paths: Layout) {
 export function verifyContent(store: Store, paths: Layout) {
   const media = new LocalMediaStorage(paths.media);
   for (const row of store.db
-    .prepare("SELECT manifest FROM media_assets ORDER BY asset_id,version")
-    .iterate())
-    media.verify(mediaAssetSchema.parse(JSON.parse(String(row.manifest))));
+    .prepare(
+      "SELECT asset_id,version,manifest FROM media_assets ORDER BY asset_id,version",
+    )
+    .iterate()) {
+    const asset = mediaAssetSchema.parse(JSON.parse(String(row.manifest)));
+    if (asset.assetId !== row.asset_id || asset.version !== row.version)
+      throw new AppError("MEDIA_IDENTITY_MISMATCH", 422);
+    media.verify(asset);
+  }
   for (const row of store.db
     .prepare(
       "SELECT subject_id,content_version,manifest FROM content_manifests ORDER BY subject_id,content_version",
@@ -68,6 +70,24 @@ export function verifyContent(store: Store, paths: Layout) {
     const manifest = contentManifestSchema.parse(
       JSON.parse(String(row.manifest)),
     );
+    if (
+      manifest.subjectId !== row.subject_id ||
+      manifest.contentVersion !== row.content_version
+    )
+      throw new AppError("CONTENT_IDENTITY_MISMATCH", 422);
+    const refs = store.db
+      .prepare(
+        "SELECT asset_id,asset_version FROM content_media_refs WHERE subject_id=? AND content_version=? ORDER BY asset_id,asset_version",
+      )
+      .all(row.subject_id!, row.content_version!);
+    const actual = refs.map((r) => ({
+      assetId: String(r.asset_id),
+      version: String(r.asset_version),
+    }));
+    const sortRefs = (refs: { assetId: string; version: string }[]) =>
+      refs.map(canonical).sort();
+    if (canonical(sortRefs(actual)) !== canonical(sortRefs(manifest.assets)))
+      throw new AppError("CONTENT_REFERENCES_MISMATCH", 422);
     const key =
       String(row.subject_id) + "/" + String(row.content_version) + ".json";
     if (
