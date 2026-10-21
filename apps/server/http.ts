@@ -47,7 +47,7 @@ export function createHttp(
       if (req.method === "GET" && path === "/health/live")
         return json(200, { status: "ok" });
       if (req.method === "GET" && path === "/health/ready") {
-        store.verify();
+        if (!store.isReady()) throw new AppError("STORAGE_UNAVAILABLE", 503);
         options.readiness?.();
         return json(200, { status: "ready", schemaVersion: 1 });
       }

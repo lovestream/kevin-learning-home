@@ -142,7 +142,7 @@ export function backup(
   try {
     store = new Store(paths.data);
     verifyContent(store, paths);
-    store.verify();
+    store.verifyIntegrity();
     store.db.prepare("VACUUM INTO ?").run(join(stage, "learning.sqlite"));
     const files: Record<string, { sha256: string; sizeBytes: number }> = {};
     for (const row of store.db
@@ -252,7 +252,7 @@ export function restore(checkpoint: string, emptyDestination: string) {
     }
     const store = new Store(paths.data);
     try {
-      store.verify();
+      store.verifyIntegrity();
       verifyContent(store, paths);
       if (canonical(store.summary()) !== canonical(manifest.tables))
         throw new AppError("RESTORE_TABLE_MISMATCH", 422);

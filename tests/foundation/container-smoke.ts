@@ -1,6 +1,6 @@
 // Modern Linux CI only. No SSH, NAS deployment, credentials or registry publishing.
 import { execFileSync, spawnSync } from "node:child_process";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync, chmodSync, lstatSync } from "node:fs";
 import { randomUUID } from "node:crypto";
 import { resolve } from "node:path";
 import assert from "node:assert/strict";
@@ -66,7 +66,7 @@ try {
     "-v",
     paths.content + ":/content:ro",
   ];
-  const launch = async (paths = f.paths) => {
+  const launch = async (paths = f.paths, restart = "no") => {
     id = run([
       "run",
       "-d",
@@ -75,6 +75,15 @@ try {
       "--user",
       String(process.getuid!()) + ":" + String(process.getgid!()),
       "--read-only",
+      "--init",
+      "--restart",
+      restart,
+      "--health-interval",
+      "1s",
+      "--health-start-period",
+      "1s",
+      "--health-retries",
+      "1",
       "--cap-drop",
       "ALL",
       "--security-opt",
@@ -88,6 +97,9 @@ try {
       ...mountArgs(paths),
       image,
     ]).trim();
+    return checkRunning();
+  };
+  const checkRunning = async () => {
     const hostPort = run(["port", name, "4177/tcp"]).trim().split(":").at(-1);
     let healthy = false;
     for (let i = 0; i < 100; i++) {
@@ -144,7 +156,74 @@ try {
     );
     return counts;
   };
-  await launch();
+  await launch(f.paths, "unless-stopped");
+  const contender = spawnSync(
+    "docker",
+    [
+      "run",
+      "--rm",
+      "--name",
+      name + "-contender",
+      "--user",
+      String(process.getuid!()) + ":" + String(process.getgid!()),
+      "--read-only",
+      ...mountArgs(f.paths),
+      image,
+    ],
+    { encoding: "utf8", timeout: 10000 },
+  );
+  assert.equal(contender.error, undefined);
+  assert.equal(contender.status, 1);
+  assert.match(contender.stderr, /WRITER_LOCKED_OR_UNWRITABLE/);
+  await checkRunning();
+  assert.throws(
+    () => backup(f.paths, join(f.root, "blocked-live-backup")),
+    /WRITER_LOCKED_OR_UNWRITABLE/,
+  );
+  // Eligibility window for Docker's restart policy; no application retry loop.
+  await new Promise((r) => setTimeout(r, 11000));
+  const mediaMode = lstatSync(f.paths.media).mode & 0o777;
+  const healthStatus = () =>
+    run(["inspect", name, "--format", "{{.State.Health.Status}}"]).trim();
+  const waitHealth = async (expected: string) => {
+    for (let i = 0; i < 100; i++) {
+      if (healthStatus() === expected) return;
+      await new Promise((r) => setTimeout(r, 100));
+    }
+    throw Error("HEALTH_STATUS_TIMEOUT:" + expected);
+  };
+  try {
+    chmodSync(f.paths.media, 0o000);
+    await waitHealth("unhealthy");
+    assert.equal(
+      run([
+        "inspect",
+        name,
+        "--format",
+        "{{.State.Running}} {{.RestartCount}}",
+      ]).trim(),
+      "true 0",
+    );
+  } finally {
+    chmodSync(f.paths.media, mediaMode);
+  }
+  await waitHealth("healthy");
+  run(["kill", "--signal", "KILL", name]);
+  let autoRestartCount = 0;
+  for (let i = 0; i < 100; i++) {
+    autoRestartCount = Number(
+      run(["inspect", name, "--format", "{{.RestartCount}}"]).trim(),
+    );
+    if (
+      autoRestartCount >= 1 &&
+      run(["inspect", name, "--format", "{{.State.Running}}"]).trim() === "true"
+    )
+      break;
+    await new Promise((r) => setTimeout(r, 100));
+  }
+  assert(autoRestartCount >= 1);
+  await checkRunning();
+  await waitHealth("healthy");
   run(["stop", name]);
   run(["rm", name]);
   id = "";
@@ -154,6 +233,12 @@ try {
   } finally {
     persisted.close();
   }
+  await launch();
+  run(["kill", "--signal", "KILL", name]);
+  const killedExitCode = Number(run(["wait", name]).trim());
+  assert.equal(killedExitCode, 137);
+  run(["rm", name]);
+  id = "";
   const recreated = await launch();
   run(["stop", name]);
   run(["rm", name]);
@@ -203,6 +288,18 @@ try {
     executedHeadSha: execFileSync("git", ["rev-parse", "HEAD"], {
       encoding: "utf8",
     }).trim(),
+    writerProtocol: "kernel-flock-v2",
+    nativeAddonRuntime: "fs-ext@2.1.1, built for Node24/linux-amd64",
+    contenderExitCode: contender.status,
+    activeOwnerNotEvicted: true,
+    liveBackupExcluded: true,
+    killedContainerExitCode: killedExitCode,
+    killRecreatePreserved: true,
+    restartPolicy: "unless-stopped",
+    autoRestartCount,
+    autoRestartAfterKill: true,
+    unhealthyAloneDidNotRestart: true,
+    productionHealthCommandRecovered: true,
     nonRoot: true,
     readOnlyRootfs: true,
     deletedRecreatedVolumePersistent: true,
@@ -229,6 +326,9 @@ try {
       run(["rm", "-f", name]);
     } catch {}
   }
+  try {
+    run(["rm", "-f", name + "-contender"]);
+  } catch {}
   try {
     run(["rm", "-f", name + "-denied"]);
   } catch {}

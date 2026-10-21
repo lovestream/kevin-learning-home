@@ -2,15 +2,12 @@ import { DatabaseSync } from "node:sqlite";
 import {
   readFileSync,
   mkdirSync,
-  openSync,
-  writeFileSync,
-  closeSync,
-  unlinkSync,
   existsSync,
   lstatSync,
   realpathSync,
   statfsSync,
   constants,
+  accessSync,
 } from "node:fs";
 import { resolve, join } from "node:path";
 import { randomUUID, createHash } from "node:crypto";
@@ -21,6 +18,7 @@ import {
   type LearningCommand,
   type CommandResult,
 } from "../contracts/index.ts";
+import { WriterLease } from "./writer-lock.ts";
 
 export const SCHEMA_VERSION = 1;
 const migration = readFileSync(
@@ -58,27 +56,13 @@ export class Store {
   readonly db: DatabaseSync;
   readonly directory: string;
   readonly file: string;
-  private lock: string;
+  private lease: WriterLease;
+  private identity: { dev: number; ino: number };
   private closed = false;
   constructor(directory: string) {
     this.directory = ownedDirectory(directory);
     this.file = join(this.directory, "learning.sqlite");
-    this.lock = join(this.directory, ".writer.lock");
-    let fd: number;
-    try {
-      fd = openSync(
-        this.lock,
-        constants.O_CREAT | constants.O_EXCL | constants.O_WRONLY,
-        0o600,
-      );
-    } catch {
-      throw new AppError("WRITER_LOCKED_OR_UNWRITABLE", 503);
-    }
-    writeFileSync(
-      fd,
-      JSON.stringify({ pid: process.pid, owner: "klh-foundation" }),
-    );
-    closeSync(fd);
+    this.lease = new WriterLease(this.directory);
     let db: DatabaseSync | undefined;
     try {
       if (existsSync(this.file) && lstatSync(this.file).isSymbolicLink())
@@ -90,10 +74,12 @@ export class Store {
       db.exec(
         "PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=3000;",
       );
-      this.verify();
+      this.verifyIntegrity();
+      const file = lstatSync(this.file);
+      this.identity = { dev: file.dev, ino: file.ino };
     } catch (e) {
       db?.close();
-      unlinkSync(this.lock);
+      this.lease.close();
       throw e;
     }
   }
@@ -157,6 +143,7 @@ export class Store {
     }
   }
   transaction<T>(operation: () => T): T {
+    this.lease.assertOwned();
     this.db.exec("BEGIN IMMEDIATE");
     try {
       const result = operation();
@@ -177,7 +164,7 @@ export class Store {
       ),
     };
   }
-  verify() {
+  verifyIntegrity() {
     const p = this.environment().pragmas;
     if (
       p.journal_mode !== "wal" ||
@@ -191,6 +178,41 @@ export class Store {
       this.db.prepare("PRAGMA foreign_key_check").all().length
     )
       throw new AppError("DATABASE_INTEGRITY", 503);
+  }
+  /** At most six SQL operations, no table scan. A short empty write transaction
+   * detects inability to acquire the SQLite writer, not just a live JS process.
+   */
+  isReady(): boolean {
+    if (this.closed) return false;
+    try {
+      this.lease.assertOwned();
+      const file = lstatSync(this.file);
+      if (
+        file.isSymbolicLink() ||
+        file.dev !== this.identity.dev ||
+        file.ino !== this.identity.ino
+      )
+        return false;
+      accessSync(this.file, constants.R_OK | constants.W_OK);
+      accessSync(this.directory, constants.W_OK | constants.X_OK);
+      this.db.exec("PRAGMA busy_timeout=50");
+      try {
+        this.db.exec("BEGIN IMMEDIATE");
+        try {
+          return (
+            this.db.prepare("SELECT 1 ok").get()!.ok === 1 &&
+            Object.values(this.db.prepare("PRAGMA user_version").get()!)[0] ===
+              SCHEMA_VERSION
+          );
+        } finally {
+          this.db.exec("ROLLBACK");
+        }
+      } finally {
+        this.db.exec("PRAGMA busy_timeout=3000");
+      }
+    } catch {
+      return false;
+    }
   }
   state(learner: string, subject: string) {
     const row = this.db
@@ -334,8 +356,11 @@ export class Store {
   close() {
     if (!this.closed) {
       this.closed = true;
-      this.db.close();
-      unlinkSync(this.lock);
+      try {
+        if (this.db.isOpen) this.db.close();
+      } finally {
+        this.lease.close();
+      }
     }
   }
 }

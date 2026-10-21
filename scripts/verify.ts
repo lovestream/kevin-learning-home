@@ -15,6 +15,8 @@ const steps = [
       "tests/foundation/platform.test.ts",
       "tests/foundation/recovery.test.ts",
       "tests/foundation/restart.test.ts",
+      "tests/foundation/writer-lock.test.ts",
+      "tests/foundation/readiness.test.ts",
     ],
   ],
   ["npm", ["run", "test:browser"]],

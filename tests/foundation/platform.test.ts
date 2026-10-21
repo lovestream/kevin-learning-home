@@ -104,7 +104,7 @@ test("single writer process lock rejects a second app or maintenance operation",
   const f = fixture();
   try {
     assert.throws(() => new Store(f.paths.data), /WRITER_LOCKED_OR_UNWRITABLE/);
-    f.store.verify();
+    f.store.verifyIntegrity();
   } finally {
     f.close();
   }

@@ -7,6 +7,7 @@ import {
 } from "../packages/platform/checkpoint.ts";
 import { Store } from "../packages/platform/store.ts";
 import { AppError } from "../packages/contracts/index.ts";
+import { migrateLegacyWriterLock } from "../packages/platform/writer-lock.ts";
 
 const [action, ...args] = process.argv.slice(2);
 const argument = (name: string) => {
@@ -21,7 +22,12 @@ try {
     result = restore(argument("--from"), argument("--to"));
   else {
     const paths = layout(argument("--root"));
-    if (action === "backup") result = backup(paths, argument("--out"));
+    if (action === "migrate-writer-lock")
+      result = migrateLegacyWriterLock(
+        paths.data,
+        args.includes("--confirm-all-v1-writers-stopped"),
+      );
+    else if (action === "backup") result = backup(paths, argument("--out"));
     else if (action === "migrate" || action === "seed") {
       if (action === "seed" && !args.includes("--synthetic"))
         throw new AppError("SYNTHETIC_FLAG_REQUIRED", 403);
