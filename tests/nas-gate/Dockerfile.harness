@@ -1,0 +1,9 @@
+# Test-only derivative. The formal image is built from the frozen official Dockerfile.
+ARG FORMAL_IMAGE
+FROM ${FORMAL_IMAGE}
+USER root
+COPY package-lock.json ./package-lock.json
+COPY scripts/synthetic.ts ./scripts/synthetic.ts
+COPY tests/foundation ./tests/foundation
+RUN mkdir -p /app/.evidence /work
+USER node

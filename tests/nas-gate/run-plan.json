@@ -1,0 +1,13 @@
+{
+  "runId": "20261021-2889e070",
+  "resourcePrefix": "klh-r1-nas-gate-20261021-2889e070",
+  "sourceSha": "8b80dce3be7d836f6abe6fdb569f6553ecd2a6cc",
+  "taskBranchSha": "dd3480843525717a91c687e387d20180eeb6e3b0",
+  "purpose": "One-off DS918+ synthetic isolated gate; no production deployment",
+  "maxConcurrentContainers": 2,
+  "memoryMiBPerContainer": 512,
+  "cpuSet": "0",
+  "hostPorts": [],
+  "network": "none",
+  "cleanup": "Exact names + run label + image IDs + matching owner-marker; no global prune"
+}
