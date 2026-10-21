@@ -208,7 +208,12 @@ try {
     chmodSync(f.paths.media, mediaMode);
   }
   await waitHealth("healthy");
-  run(["kill", "--signal", "KILL", name]);
+  // Kill only the actual Node child of Docker's init. docker kill is an
+  // operator stop and suppresses unless-stopped recovery on this daemon.
+  run([
+    "exec", name, "node", "--input-type=module", "-e",
+    "import fs from 'node:fs';import assert from 'node:assert/strict';const children=fs.readFileSync('/proc/1/task/1/children','utf8').trim().split(/\\s+/);assert.equal(children.length,1);const pid=Number(children[0]);assert(pid>1);assert(fs.readFileSync('/proc/'+pid+'/cmdline','utf8').includes('apps/server/main.ts'));process.kill(pid,'SIGKILL');",
+  ]);
   let autoRestartCount = 0;
   for (let i = 0; i < 100; i++) {
     autoRestartCount = Number(
@@ -297,7 +302,8 @@ try {
     killRecreatePreserved: true,
     restartPolicy: "unless-stopped",
     autoRestartCount,
-    autoRestartAfterKill: true,
+    autoRestartAfterProcessKill: true,
+    autoRestartTrigger: "SIGKILL to verified Node child of init; not docker kill",
     unhealthyAloneDidNotRestart: true,
     productionHealthCommandRecovered: true,
     nonRoot: true,
