@@ -77,9 +77,18 @@ r.on('error',reject);r.setTimeout(4000,()=>r.destroy(Error('HTTP_TIMEOUT')));r.e
 """
 KILL = r"""
 import fs from 'node:fs';import assert from 'node:assert/strict';
-const children=fs.readFileSync('/proc/1/task/1/children','utf8').trim().split(/\s+/);
-assert.equal(children.length,1);const pid=Number(children[0]);assert(pid>1);
-assert(fs.readFileSync('/proc/'+pid+'/cmdline','utf8').includes('apps/server/main.ts'));
+// DSM 4.4 may not expose /proc/PID/task/TID/children. Only inspect this
+// isolated container's processes; identify the sole init child by exact argv.
+const match=pid=>{try{
+ const stat=fs.readFileSync('/proc/'+pid+'/stat','utf8');
+ const ppid=stat.slice(stat.lastIndexOf(')')+2).split(' ')[1];
+ const argv=fs.readFileSync('/proc/'+pid+'/cmdline','utf8').split('\0');
+ const status=fs.readFileSync('/proc/'+pid+'/status','utf8');
+ const uid=Number(status.match(/^Uid:\s+(\d+)/m)[1]);
+ return ppid==='1'&&argv[1]==='apps/server/main.ts'&&uid===process.getuid();
+}catch{return false;}};
+const candidates=fs.readdirSync('/proc').filter(x=>/^\d+$/.test(x)&&Number(x)>1&&match(x));
+assert.equal(candidates.length,1);const pid=Number(candidates[0]);assert(match(String(pid)));
 fs.writeSync(1,'KILLING_VERIFIED_NODE\n');process.kill(pid,'SIGKILL');
 """
 
@@ -112,7 +121,7 @@ class Gate:
         r = subprocess.run(["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=10", "nas-codex", command],
                            input=input, capture_output=True, timeout=timeout)
         if check and r.returncode:
-            (PRIVATE / "last-error.txt").write_bytes(r.stderr + r.stdout)
+            (PRIVATE / "last-error.txt").write_bytes(r.stderr)
             raise RuntimeError("SSH_COMMAND_FAILED:" + str(r.returncode))
         return r
 
@@ -129,7 +138,7 @@ class Gate:
             f.write(json.dumps({**event, "stdout": r.stdout.decode(errors="replace"),
                                "stderr": r.stderr.decode(errors="replace")}) + "\n")
         if check and r.returncode:
-            (PRIVATE / "last-error.txt").write_bytes(r.stderr + r.stdout)
+            (PRIVATE / "last-error.txt").write_bytes(r.stderr)
             raise RuntimeError("DOCKER_COMMAND_FAILED:" + str(r.returncode))
         return r
 
@@ -140,7 +149,7 @@ class Gate:
         ids = self.docker(["ps", "-aq"]).stdout.decode().split()
         if not ids:
             raise RuntimeError("EXISTING_SERVICES_MISSING")
-        fmt = '[{{json .Id}},{{json .Name}},{{json .State.Status}},{{json .State.StartedAt}},{{json .RestartCount}},{{if .State.Health}}{{json .State.Health.Status}}{{else}}null{{end}}]'
+        fmt = '[{{json .Id}},{{json .Name}},{{json .State.Status}},{{json .State.StartedAt}},{{json .RestartCount}},{{with index .State "Health"}}{{json .Status}}{{else}}null{{end}}]'
         rows = [json.loads(x) for x in self.docker(["inspect", "--format", fmt] + ids).stdout.decode().splitlines()]
         return sorted([r for r in rows if not r[1].lstrip('/').startswith(PREFIX)], key=lambda r: r[0])
 
@@ -322,6 +331,7 @@ for p in ['artifacts','evidence','work','work/tmp','work/scenario','work/scenari
         info=self.app_info();config=info['HostConfig']
         assert config['ReadonlyRootfs'] and not config['Privileged'] and not config['PortBindings']
         assert config['NetworkMode']=='none' and config['Memory']==512*1024**2 and config['CpusetCpus']=='0'
+        assert config['PidMode'] in ['', 'private'],'TEST_REQUIRES_PRIVATE_PID_NAMESPACE'
         assert config['CapDrop']==['ALL'] and 'no-new-privileges' in config['SecurityOpt']
         self.wait_health('healthy');self.stop_app()
         self.evidence['gates']['G01']={'status':'PASS_NAS_WITH_UNSUPPORTED_KERNEL_RISK','formalRuntime':formal,
@@ -360,7 +370,9 @@ for p in ['artifacts','evidence','work','work/tmp','work/scenario','work/scenari
         finally:self.python('import os;os.chmod(%r,%r)'%(media,mode))
         self.wait_health('healthy');time.sleep(11)
         killed=self.docker(['exec',PREFIX+'-app','node','--input-type=module','-e',KILL],False)
-        assert killed.returncode in [0,137] and b'KILLING_VERIFIED_NODE' in killed.stdout
+        if killed.returncode not in [0,137] or b'KILLING_VERIFIED_NODE' not in killed.stdout:
+            (PRIVATE/'last-error.txt').write_bytes(killed.stderr)
+            raise RuntimeError('VERIFIED_PROCESS_KILL_PROBE_FAILED:'+str(killed.returncode))
         for _ in range(35):
             count=self.app_info()['RestartCount']
             assert count<=2,'RESTART_STORM'
@@ -445,11 +457,13 @@ assert not os.path.lexists(root)
             result={'executedApplicationSha':SOURCE,'machine':'DS918+','junitSha256':hashlib.sha256(raw).hexdigest(),'tests':len(cases),'cases':[
                 {'name':x.attrib['name'],'seconds':x.attrib.get('time'),'status':'FAIL' if x.find('failure') is not None or x.find('error') is not None else 'SKIP' if x.find('skipped') is not None else 'PASS'} for x in cases]}
             (PUBLIC/'test-cases.json').write_text(json.dumps(result,indent=2)+'\n')
+        self.evidence['controllerSha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
         self.evidence['commands']=self.events
         (PUBLIC/'summary.json').write_text(json.dumps(self.evidence,indent=2)+'\n')
 
     def run(self):
         try:
+            (PRIVATE/"last-error.txt").unlink(missing_ok=True)
             self.preflight()
             self.prepare();self.load();self.test()
             self.evidence['status']='PASS_NAS_WITH_UNSUPPORTED_KERNEL_RISK'
