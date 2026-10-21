@@ -100,10 +100,12 @@ try {
     return checkRunning();
   };
   const checkRunning = async () => {
-    const hostPort = run(["port", name, "4177/tcp"]).trim().split(":").at(-1);
     let healthy = false;
     for (let i = 0; i < 100; i++) {
       try {
+        // RestartCount/Running may update before Docker republishes a dynamic
+        // port. Resolve it inside the same bounded readiness wait.
+        const hostPort = run(["port", name, "4177/tcp"]).trim().split(":").at(-1);
         const r = await rawRead(
           "http://127.0.0.1:" + hostPort + "/health/ready",
           { Host: "127.0.0.1:4177" },
