@@ -1,0 +1,158 @@
+{
+  "executedApplicationSha": "8b80dce3be7d836f6abe6fdb569f6553ecd2a6cc",
+  "machine": "DS918+",
+  "junitSha256": "8babb8f74c1ed10d2bbd965b7485f91207bde6e0455f995f8635ceb34c577ac1",
+  "tests": 30,
+  "cases": [
+    {
+      "name": "F11 native HTTP rejects forged Host, cross-origin commands and cross-learner access",
+      "seconds": "0.732016",
+      "status": "PASS"
+    },
+    {
+      "name": "F03 empty schema migration, WAL/FULL/FK/busy_timeout, repeat opening is idempotent",
+      "seconds": "0.520853",
+      "status": "PASS"
+    },
+    {
+      "name": "F03 rejects future and legacy nonempty schemas without clearing records",
+      "seconds": "0.694734",
+      "status": "PASS"
+    },
+    {
+      "name": "F03 rejects incompatible extra columns and changed migration checksum",
+      "seconds": "0.704116",
+      "status": "PASS"
+    },
+    {
+      "name": "single writer process lock rejects a second app or maintenance operation",
+      "seconds": "0.543894",
+      "status": "PASS"
+    },
+    {
+      "name": "F04 100 simultaneous real HTTP duplicates create one event and receipt",
+      "seconds": "1.550783",
+      "status": "PASS"
+    },
+    {
+      "name": "F04 same command key changed payload returns 409 without any table changes",
+      "seconds": "0.732242",
+      "status": "PASS"
+    },
+    {
+      "name": "F04 replay returns original result and committed revision with current revision after later writes",
+      "seconds": "0.591914",
+      "status": "PASS"
+    },
+    {
+      "name": "F05 two independent test sessions compete on revision; exactly one commits",
+      "seconds": "0.602629",
+      "status": "PASS"
+    },
+    {
+      "name": "F05 a real SQL constraint failure at transaction tail rolls all tables back",
+      "seconds": "0.667989",
+      "status": "PASS"
+    },
+    {
+      "name": "F11 runtime schemas reject client scores, unknown fields, versions, and wrong keys",
+      "seconds": "0.568233",
+      "status": "PASS"
+    },
+    {
+      "name": "F11 production rejects all learning/auth/parent/media write paths and spoofed identity",
+      "seconds": "0.535969",
+      "status": "PASS"
+    },
+    {
+      "name": "F11 test context cannot be enabled in production library configuration",
+      "seconds": "0.468863",
+      "status": "PASS"
+    },
+    {
+      "name": "immutable events and receipts, bounded projection, no wallet table",
+      "seconds": "0.589633",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 readiness performs bounded SQL at 100000 events; liveness does zero SQL; deep check remains offline",
+      "seconds": "3.789579",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 real external SQLite writer makes readiness 503 within bounded busy wait; release restores 200",
+      "seconds": "1.227715",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 readiness rejects inaccessible/replaced DB, incompatible runtime version and closed connection",
+      "seconds": "0.600958",
+      "status": "PASS"
+    },
+    {
+      "name": "F09 checkpoints reject manifest identity drift and missing relational content references",
+      "seconds": "0.677602",
+      "status": "PASS"
+    },
+    {
+      "name": "F08 offline checkpoint restores DB, media, content, revisions, event and receipt hashes into empty host layout",
+      "seconds": "1.373497",
+      "status": "PASS"
+    },
+    {
+      "name": "F08 corrupted media/database checkpoints fail without publishing or overwriting targets",
+      "seconds": "0.883163",
+      "status": "PASS"
+    },
+    {
+      "name": "F08 checkpoint failure never replaces previous good backup; symlink/path injections rejected",
+      "seconds": "1.144356",
+      "status": "PASS"
+    },
+    {
+      "name": "F09 manifest identity/version/hash, private denied, immutable local provider root switch",
+      "seconds": "0.481634",
+      "status": "PASS"
+    },
+    {
+      "name": "F09 traversal, absolute paths, symlink file/parent/root, missing objects are rejected",
+      "seconds": "0.468548",
+      "status": "PASS"
+    },
+    {
+      "name": "F06 real Node process stop/restart preserves state and original receipt",
+      "seconds": "2.500834",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 writer SIGTERM releases kernel ownership and replays exact committed evidence in new process",
+      "seconds": "1.948971",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 writer SIGKILL releases kernel ownership and replays exact committed evidence in new process",
+      "seconds": "2.378018",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 simultaneous independent process starts have exactly one owner; contenders cannot evict it",
+      "seconds": "3.918625",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 independent backup CLI is excluded by live owner and succeeds after SIGKILL",
+      "seconds": "3.918796",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 v1 marker requires explicit offline migration and cannot override live v2 flock",
+      "seconds": "2.246209",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 malformed legacy markers and symlink lock paths fail closed without deleting them",
+      "seconds": "0.547450",
+      "status": "PASS"
+    }
+  ]
+}

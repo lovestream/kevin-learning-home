@@ -65,3 +65,7 @@ docker-compose --env-file /approved/private/foundation.env -f infra/docker/compo
 Docker unhealthy只改变健康状态，不触发unless-stopped；不要把每次SQLite busy当作杀进程理由。应用致命异常退出或遭SIGKILL才进入Docker的进程退出恢复路径。人工stop/kill可能抑制自动重启，恢复由管理员明确start/recreate。CI等待启动超过10秒后杀实际Node子进程，使用1秒health周期加快验证；没有改生产20秒周期，没有加入无限重试或自杀HTTP端点。持续配置错误/旧标记须人工停容器并修正，不能反复解锁掩盖错误。
 
 DS918+只读确认Python fcntl API存在不等于Node原生模块实测；Node24/glibc/内核4.4支持风险仍为上线阻塞。Mac原生模块和现代Linux CI验证不能替代NAS新容器验收。
+
+## 后续NAS GATE授权与实测
+
+本手册上文“未授权/NOT_RUN”是R1原时点状态。2026-10-21用户另行授权本次隔离真机验收，具体结果、当前风险及资源清理以 [NAS GATE报告](IMPLEMENT-01-NAS-GATE-report.md) 为准；没有授权生产常驻部署、权限变更或第二阶段。测试使用现成Docker-only非交互认证，不重新配置sudo。正式上线仍须另行审查与授权。

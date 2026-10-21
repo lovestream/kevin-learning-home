@@ -1,0 +1,29 @@
+{
+  "executedApplicationSha": "8b80dce3be7d836f6abe6fdb569f6553ecd2a6cc",
+  "machine": "DS918+",
+  "executionStatus": "PASS_NAS",
+  "runtime": "NAS Linux 4.4.180+ container",
+  "legacyFixtureLabelNote": "Raw fixture labels retained verbatim, including original PASS_LOCAL/never NAS wording; execution context is the outer NAS wrapper and matching image/source proof.",
+  "result": {
+    "status": "PASS",
+    "scope": "synthetic 100k capacity rows, not 100k teaching assessments",
+    "events": 100000,
+    "probesPerSize": 30,
+    "sqlOperationsSmall": 180,
+    "sqlOperationsLarge": 180,
+    "sqlPerProbe": 6,
+    "deepChecksDuringReady": 0,
+    "livenessSQL": 0,
+    "observedSQL": [
+      "PRAGMA busy_timeout=50",
+      "BEGIN IMMEDIATE",
+      "SELECT 1 ok",
+      "PRAGMA user_version",
+      "ROLLBACK",
+      "PRAGMA busy_timeout=3000"
+    ],
+    "smallMaxWallMs": 65.49475800000005,
+    "largeMaxWallMs": 8.403035999999702,
+    "deepChecksStillExecutable": true
+  }
+}

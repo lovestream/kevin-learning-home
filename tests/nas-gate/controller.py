@@ -94,8 +94,9 @@ fs.writeSync(1,'KILLING_VERIFIED_NODE\n');process.kill(pid,'SIGKILL');
 
 
 class Gate:
-    def __init__(self, parent):
+    def __init__(self, parent, image_build_ci):
         self.parent = parent
+        self.image_build_ci = image_build_ci
         self.root = parent + "/" + PREFIX
         self.events = []
         self.containers = {}
@@ -231,7 +232,7 @@ for p in ['artifacts','evidence','work','work/tmp','work/scenario','work/scenari
             assert info['Architecture']=='amd64' and info['Os']=='linux'
             self.images[tag]=info['Id'];self.save()
         self.evidence['images']={'archiveSha256':digest,'archiveBytes':archive.stat().st_size,'ids':dict(self.images),
-                                'imageBuildCI':39606028943,'source':'Exact frozen official Dockerfile; harness derives FROM same formal image'}
+                                'imageBuildCI':self.image_build_ci,'source':'Exact frozen official Dockerfile; harness derives FROM same formal image'}
         self.progress('image-load','PASS_TRANSFER_HASH_AND_IDS')
 
     def common(self, role):
@@ -488,10 +489,13 @@ assert not os.path.lexists(root)
             if self.evidence['gates']['G05']['status']=='FAIL_NAS':self.evidence['status']='FAIL_NAS'
             self.publish()
         self.progress('complete',self.evidence['status'])
+        return self.evidence['status']
 
 
 if __name__ == '__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--parent',required=True)
+    parser=argparse.ArgumentParser();parser.add_argument('--parent',required=True);parser.add_argument('--image-build-ci',required=True,type=int)
     args=parser.parse_args()
     assert args.parent.startswith('/') and not args.parent.endswith('/')
-    Gate(args.parent).run()
+    assert args.image_build_ci>0
+    result=Gate(args.parent,args.image_build_ci).run()
+    raise SystemExit(0 if result=='PASS_NAS_WITH_UNSUPPORTED_KERNEL_RISK' else 1)

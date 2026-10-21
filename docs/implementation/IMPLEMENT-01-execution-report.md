@@ -94,3 +94,9 @@ CI完整成功 [39517183962](https://github.com/lovestream/kevin-learning-home/a
 R1本地完整执行670f9591：30项Node、Chromium3视口、typecheck/build通过；[CI 39580937914](https://github.com/lovestream/kevin-learning-home/actions/runs/39580937914) 与 [39580930913](https://github.com/lovestream/kevin-learning-home/actions/runs/39580930913) 在 `68c3e26e42bde1684ddb59fcd6064b16e6ffeedc` 全部成功：Node30项、Chromium3视口、Compose1.28.5及完整非root容器强杀/重启/恢复通过。新的结果单独存于 [evidence/r1](evidence/r1/ci-index.json)，没有覆盖以上历史证据或将旧21项改成30项。最终文档HEAD另有完整CI，由[PR检查](https://github.com/lovestream/kevin-learning-home/pull/5/checks)及PR说明交叉核实。
 
 上文旧限制3“SIGKILL残留锁需人工处理”由R1的v2 flock自动生命周期取代；只有旧v1/未知格式过渡仍需停机人工处置。Docker unhealthy本身不重启；应用死亡自动重启与人工kill后重建分别实测。NAS新底座、Node24/旧内核兼容性、真实断电/OOM和真实长期灾备仍NOT_RUN。原站只核Git元数据不等于站点可用性验收。未重做历史NAS清理，未部署NAS生产服务，未进入02A/02B。
+
+## DS918+ NAS GATE后续验收（2026-10-21）
+
+用户另行明确授权一次性专用镜像、容器和新合成目录。原R1时点的NAS NOT_RUN与CI记录保留；新任务、真实机证据及失败记录见 [NAS GATE报告](IMPLEMENT-01-NAS-GATE-report.md)。最终真机总体 **PASS_NAS_WITH_UNSUPPORTED_KERNEL_RISK**：G01正式Node24/SQLite/fs-ext已运行；G02～G05全部PASS_NAS。原30项回归在NAS全通过，实际SIGKILL后RestartCount=1，人工kill后同卷重建及正式镜像backup/restore通过，11表摘要/原收据/媒体content SHA保持。两个run的容器、镜像和目录均0残留，原8容器ID/启动时间/重启计数/状态不变。首次procfs探针失败已保留并仅适配测试定位，未修改系统/正式底座。Linux4.4仍低于Node24官方glibc支持基线；成功不是官方支持或生产部署批准。精确应用SHA8b80dce、控制器hash、版本、真实退出码和报告归档后的CI规则均见NAS报告。
+
+这次未修改原应用、迁移001或原回归逻辑，未读取真实学习记录、反向修改旧项目、部署生产服务、修改NAS权限/daemon/DSM、合并PR或进入第二阶段。成功的短时测试不能替代官方支持基线、7天持续运行、真实灾备与身份安全验收。

@@ -19,6 +19,8 @@ jobs:
       - run: npm install --global npm@11.12.1
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - name: NAS gate controller syntax only (no NAS connection)
+        run: python3 tests/nas-gate/check-probes.py
       - run: node scripts/verify.ts
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |

@@ -9,3 +9,5 @@ KLH-IMPLEMENT-01 建设正式工程底座：React/Vite空壳、Node24/SQLite、�
 本地（只操作本repo新合成目录）：Node24.15.0、npm11.12.1，执行 `npm ci`、`npm run build`、`node scripts/maintenance.ts migrate --root .foundation-work`、`npm start`，仅回环4177。测试先 `npx playwright install chromium`，再 `node scripts/verify.ts`。正式服务拒绝学习/家长写入，测试身份仅在独立test runner中存在。
 
 历史 [Phase0文档](docs/phase-0/README.md) 保留原时点状态。NAS新部署、权限变更、真实数据迁移、对外入口与下一阶段开发均需另行批准。当前PR完成后暂停供ChatGPT独立审查。
+
+[NAS GATE真机验收报告](docs/implementation/IMPLEMENT-01-NAS-GATE-report.md)：当前固定镜像实跑通过并清理，保留Linux4.4超出官方支持基线的风险；PR #5仍Draft，等待独立复审。

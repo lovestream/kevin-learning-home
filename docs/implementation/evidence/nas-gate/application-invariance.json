@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reviewedAndTestedSourceSha": "8b80dce3be7d836f6abe6fdb569f6553ecd2a6cc",
+  "unchangedPaths": [
+    "apps",
+    "packages",
+    "infra/docker/Dockerfile",
+    "infra/docker/compose.yml",
+    "package.json",
+    "package-lock.json",
+    "scripts/maintenance.ts",
+    "scripts/healthcheck.ts",
+    "scripts/synthetic.ts",
+    "tests/foundation"
+  ],
+  "schemaVersion": 1,
+  "tables": 11,
+  "controllerSha256": "5a228c201d29fe21eef2642cdeb067cc37f451dafd1fc26ffe5147c61fac91be",
+  "note": "NAS report changes only probes, CI packaging and docs; formal/harness runtime core hashes match"
+}

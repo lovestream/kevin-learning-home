@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "math-learning",
+    "head": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+    "trackedFilesClean": true,
+    "scope": "Git metadata only; no learning database or web availability claim"
+  },
+  {
+    "repository": "word-request",
+    "head": "d0b42a8872a7e87433b96770519203630223b6f2",
+    "trackedFilesClean": true,
+    "scope": "Git metadata only; no learning database or web availability claim"
+  }
+]
