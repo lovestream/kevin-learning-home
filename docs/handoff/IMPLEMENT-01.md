@@ -1,19 +1,15 @@
-# IMPLEMENT-01 交接（STOP，等待ChatGPT复审）
+# IMPLEMENT-01 R1 当前交接
 
-整理日2026-10-21。任务源 `chatgpt/klh-implement-01-foundation@0a803e3418190aa1e875c91b2620c845275d9f14`；任务文件原样保留，blob `6dae2898853fd11af1f6db21ab0ba5bd3376743c`。
+2026-10-21。原草稿 [PR #5](https://github.com/lovestream/kevin-learning-home/pull/5)，`codex/implement-01-foundation`，base/main `46687ba370ca7e47764e500641bc371e2c0d4727`。本轮只做R1，等待ChatGPT重新复审，未批准合并。
 
-独立分支 `codex/implement-01-foundation`，草稿 [PR #5](https://github.com/lovestream/kevin-learning-home/pull/5)，base/main `46687ba370ca7e47764e500641bc371e2c0d4727`。实际完整本地与CI执行HEAD `57fa26e7c163499a2cdf97bda789c9ea264e185d`，21个Node tests（0失败/跳过）+3个Chromium viewport；后续文档归档HEAD以[PR最新checks](https://github.com/lovestream/kevin-learning-home/pull/5/checks)为准，不伪造旧测试SHA。
+已按顺序阅读并原样归档 `chatgpt/klh-implement-01-review-phase2@4521fe5c5753a7c97799cde84910fdf7629786a1` 的R1任务与IMPLEMENT-02规划。第二阶段仅阅读，未实现02A/02B、身份认证、schema2、课程或数据迁移。原001不变，schema1/11表不变，生产敏感接口仍403。
 
-[完整报告](../implementation/IMPLEMENT-01-execution-report.md)、[采用矩阵](../implementation/IMPLEMENT-01-adoption-matrix.md)、[架构](../implementation/IMPLEMENT-01-architecture.md)、[部署](../implementation/IMPLEMENT-01-deployment-runbook.md)、[备份恢复](../implementation/IMPLEMENT-01-backup-restore.md)。[CI成功39517183962](https://github.com/lovestream/kevin-learning-home/actions/runs/39517183962)、[CI证据索引](../implementation/evidence/ci-index.json)、[本地结果](../implementation/evidence/local-verification.json)、[容器/新host恢复](../implementation/evidence/ci-container.json)。Actions artifact有JUnit、浏览器截图和原始构建日志，Git只归档脱敏JSON/配置。
+[完整R1报告](../implementation/IMPLEMENT-01-review-R1.md)、[原执行报告及增补](../implementation/IMPLEMENT-01-execution-report.md)、[R1证据索引](../implementation/evidence/r1/ci-index.json)、[部署](../implementation/IMPLEMENT-01-deployment-runbook.md)、[备份恢复/旧锁迁移](../implementation/IMPLEMENT-01-backup-restore.md)。旧038074ba/21项与更早57fa26e证据均原样保留，未冒充新执行结果。
 
-正式app只有工程空壳、禁用数学英语入口、SQLite迁移/最小合成命令与安全媒体/一致备份接口；没有完整课程、真实记录、账户、钱包、宠物、云provider或生产部署。生产敏感API全关闭。三份历史provenance只作将来来源，不宣称旧学科已整合。
+本轮writer改为稳定inode的内核flock，SIGKILL释放FD所有权；永不删除已发布锁文件。旧v1要全部停机保全后显式CLI迁移；PID/超时不是回收依据。readiness最多6条固定SQL与50ms SQLite busy等待，不运行quick_check/FK；深查保留于启动和离线维护。Docker unhealthy不自动重启，应用死亡与人工kill的恢复路径分别测试。
 
-旧math/word前后HEAD与跟踪文件一致，独立网站/部署/账户/origin/数据继续原样；本repo不读取旧库或同步写回。原PR #1–#4保持open/draft且未合并/关闭；#3/#4仍基于#2，本PR直接基于main。没有覆盖历史 `docs/handoff/current.md` 或Phase0 ADR。
+本地 `670f9591bffc26abf53a1692086615275446701e` 完整30项Node测试（原21+新增9）、Chromium3视口、typecheck/build通过。[CI 39580937914](https://github.com/lovestream/kevin-learning-home/actions/runs/39580937914) 与 [39580930913](https://github.com/lovestream/kevin-learning-home/actions/runs/39580930913) 在 `68c3e26e42bde1684ddb59fcd6064b16e6ffeedc` 全部成功：Node30项、Chromium3视口、Compose1.28.5及完整非root容器强杀/重启/恢复通过。最新归档HEAD的完整CI另见[PR checks](https://github.com/lovestream/kevin-learning-home/pull/5/checks)和PR说明，不能把前一SHA结果当成包含自身hash的归档提交结果。
 
-NAS最初只读daemon权限不足；用户本轮**单独批准旧实验清理**，由用户终端输入Docker专用sudo完成ID/marker核对，容器exit0/no OOM、容器及专用tag不存在，最后仅删owned合成目录。回执见[历史清理](../implementation/evidence/nas-cleanup.json)。授权不延伸到新应用NAS部署，未改Docker权限/现有服务/DSM/Tailscale。
+NAS只读清单：4.4.180+ / x86_64 / Python fcntl API存在；未执行flock syscall或Node模块/新容器测试。NAS新平台和Node24旧内核仍NOT_RUN/部署阻塞。原数学和英语只核Git HEAD/跟踪状态，未修改或读真实记录，不声称已验证旧网站在线可用。没有新NAS部署/权限修改、真实数据或云资源；历史实验清理不重复。
 
-仍NOT_RUN：本底座NAS容器/真实NAS迁移、生产身份与HTTPS、真数据、物理Safari、断电/坏盘、大规模/十TB恢复、ARM/Android、七牛/R2/S3。DS918+旧内核不在Node24官方glibc支持基线；writer异常退出后锁需人工确认处理，媒体大文件交付/Range与分片备份清单尚待后续阶段。
-
-未来需要用户批准的动作：新NAS/主机资源/目录/非root UID/GID/端口/运行与清理范围、权限操作、真实数据、对外入口或远端云资源。当前没有任何新部署许可请求需要补答；本阶段已完成的实验清理不再重复求许可。
-
-交给ChatGPT审查文件采用是否合理、关闭写接口与身份关卡是否完整、备份冻结/锁残留策略是否接受。**不合并PR、不自动开始认证实现、学科复制或下一阶段。**
+仍NOT_RUN：NAS新平台、真实OOM/断电/坏盘、长期大数据/TB媒体、生产密钥保管/HTTPS认证、ARM/Android。旧v1人工停机证明、真实部署、认证与灾备均需后续独立审查。**STOP：PR #5保持Draft；不合并，不进入IMPLEMENT-02A/02B，等ChatGPT重新审查。**

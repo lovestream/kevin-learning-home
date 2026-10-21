@@ -1,5 +1,7 @@
 # IMPLEMENT-01 执行报告
 
+> 2026-10-21 R1复审整改更新：以下原阶段记录及旧CI保持历史原貌；异常退出锁策略、当前健康检查与新增回归以 [R1整改报告](IMPLEMENT-01-review-R1.md) 为准。PR #5仍Draft，未获合并批准，IMPLEMENT-02未开始。
+
 整理日2026-10-21（Asia/Shanghai）；实际测试时间以JSON中的UTC为准。**工程底座验收完成，等待ChatGPT独立审查；不是生产或学科整合验收。** 独立草稿 [PR #5](https://github.com/lovestream/kevin-learning-home/pull/5)，分支 `codex/implement-01-foundation`，base为main。
 
 ## 基线、采用范围与旧项目保护
@@ -84,3 +86,11 @@ CI完整成功 [39517183962](https://github.com/lovestream/kevin-learning-home/a
 5. 现代Linux/下一台amd64主机迁移runbook已提供；ARM/Android不能直接复用该amd64镜像，尚未测试。
 
 下一PR建议先独立完成生产身份/授权和正式shell，再按固定SHA一次性复制数学、英语到新仓库适配；原网站持续独立，禁止反向修改。是否部署DS918+或现代Linux需单独审查。**停在本draft PR，等待ChatGPT审查；不合并任何PR、不自动进入下一阶段。**
+
+## R1复审整改增补（2026-10-21）
+
+已按R1任务在原PR #5替换writer所有权机制为稳定inode+内核flock，进程死亡后无需删除标记，旧v1须显式离线迁移；readiness改为最多6条固定SQL，保留启动/backup/restore深查与原001/schema1。原21项测试保留，新增9项真实进程竞争、SIGKILL、CLI互斥/迁移及10万合成事件readiness测试。完整矩阵、设计比较、失败CI、准确SHA与原生依赖边界见 [IMPLEMENT-01-review-R1.md](IMPLEMENT-01-review-R1.md)。
+
+R1本地完整执行670f9591：30项Node、Chromium3视口、typecheck/build通过；[CI 39580937914](https://github.com/lovestream/kevin-learning-home/actions/runs/39580937914) 与 [39580930913](https://github.com/lovestream/kevin-learning-home/actions/runs/39580930913) 在 `68c3e26e42bde1684ddb59fcd6064b16e6ffeedc` 全部成功：Node30项、Chromium3视口、Compose1.28.5及完整非root容器强杀/重启/恢复通过。新的结果单独存于 [evidence/r1](evidence/r1/ci-index.json)，没有覆盖以上历史证据或将旧21项改成30项。最终文档HEAD另有完整CI，由[PR检查](https://github.com/lovestream/kevin-learning-home/pull/5/checks)及PR说明交叉核实。
+
+上文旧限制3“SIGKILL残留锁需人工处理”由R1的v2 flock自动生命周期取代；只有旧v1/未知格式过渡仍需停机人工处置。Docker unhealthy本身不重启；应用死亡自动重启与人工kill后重建分别实测。NAS新底座、Node24/旧内核兼容性、真实断电/OOM和真实长期灾备仍NOT_RUN。原站只核Git元数据不等于站点可用性验收。未重做历史NAS清理，未部署NAS生产服务，未进入02A/02B。

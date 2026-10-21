@@ -1,0 +1,74 @@
+{
+  "status": "PASS_LOCAL",
+  "scope": "synthetic DB+media+content; offline snapshot into new empty host layout",
+  "manifest": {
+    "format": "klh-checkpoint",
+    "schemaVersion": 1,
+    "appVersion": "0.1.0",
+    "nodeVersion": "v24.15.0",
+    "createdAt": "2026-10-21T09:52:09.018Z",
+    "boundary": "offline-exclusive-writer; immutable published media/content; no concurrent external writer",
+    "tables": {
+      "schema_migrations": {
+        "count": 1,
+        "sha256": "735babebb7a92a29d2d08ded643906fb15f2785d86c1e4b82f9bdeac5a28dda2"
+      },
+      "learners": {
+        "count": 1,
+        "sha256": "f7b991c7323373745d2031432a656a597fd50c37eb08272971c48811d87bb171"
+      },
+      "subjects": {
+        "count": 1,
+        "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+      },
+      "subject_states": {
+        "count": 1,
+        "sha256": "1073233beb2dfed948c99e9dc52da580dfe7a74bcf3f208edb2c549aa6e8c4f5"
+      },
+      "server_attempts": {
+        "count": 1,
+        "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+      },
+      "command_receipts": {
+        "count": 1,
+        "sha256": "65379b29135c9bb16c296094e6481ad4f2d5e742f12e135216a64faa89072cb2"
+      },
+      "learning_events": {
+        "count": 1,
+        "sha256": "330118a6112eb856a83996ba6c9a5eb9ee0619508c51520fc208f1ffe16c5b95"
+      },
+      "media_assets": {
+        "count": 1,
+        "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+      },
+      "content_manifests": {
+        "count": 1,
+        "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+      },
+      "content_media_refs": {
+        "count": 1,
+        "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+      },
+      "audit_log": {
+        "count": 1,
+        "sha256": "e9a59809af6a41e1b6aa905ba6ffc863dbf99b501e2bc9eda500a50d8ce1b401"
+      }
+    },
+    "files": {
+      "media/objects/7405ac131fd2a3393e37670ed0d472f0e845fde6dc20d921711bb4ac6c0e82e6.txt": {
+        "sha256": "7405ac131fd2a3393e37670ed0d472f0e845fde6dc20d921711bb4ac6c0e82e6",
+        "sizeBytes": 38
+      },
+      "content/foundation-demo/synthetic-v1.json": {
+        "sha256": "c7f9b1175396846b8dca3e3b2ada18eeba4b234bb12dfca3d6b8fc6be36c1126",
+        "sizeBytes": 173
+      },
+      "learning.sqlite": {
+        "sha256": "874150d44e5b65f5c802b845022aa0a4c5441c9d35b6a6f59f8102a97eb2ec34",
+        "sizeBytes": 102400
+      }
+    }
+  },
+  "tableHashesMatch": true,
+  "receiptReplay": true
+}

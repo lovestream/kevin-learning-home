@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "baselineHead": "038074ba33e736833ac5243521d642c5b8d64620",
+  "migration": "packages/platform/001-foundation.sql",
+  "byteIdentical": true,
+  "sha256": "1f1a26333a455f420fb6e7d4394f082a5f075c9800d16c39341ac6bf7d351bee",
+  "gitBlob": "b23f666a35a752ed78f6a181de449c24cc1d7cd6",
+  "schemaVersion": 1,
+  "tables": 11,
+  "writerProtocol": 2,
+  "scope": "No database schema2 or authentication implementation"
+}

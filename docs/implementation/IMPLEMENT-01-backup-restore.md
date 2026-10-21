@@ -34,6 +34,8 @@ node scripts/maintenance.ts restore --from .foundation-work/checkpoints/sample-0
 
 ## 异常退出与未来备份计划
 
-正常SIGTERM停止会释放writer锁；SIGKILL/掉电可能留下锁，启动明确失败。管理员须确认原进程、容器、挂载均已停止，才可在新备份后单独处理陈旧锁；工具不会根据PID猜测并删除。Linux CI本轮仅验证正常容器停止/删除重建，不冒充突然断电自动恢复。
+R1：v2稳定锁文件保留，所有权由内核flock和FD生命周期决定；SIGTERM/SIGKILL后后继进程可重新取得所有权，不执行删除锁文件。应用活跃时独立backup CLI明确失败；应用死亡后backup/新目录restore继续使用同一所有权协议，完整性深查仍保留。现代Linux容器强杀、同卷重建和进程死亡自动重启证据见 [R1报告](IMPLEMENT-01-review-R1.md)，真实断电/坏盘仍未测试。
+
+旧v1文件不能自动回收：执行R1报告的停机保全、显式迁移和回滚流程。旧版二进制无法理解新的常驻标记；不能为回退而删除锁文件或混用新旧writer。
 
 未来上线前提出NAS之外的一份独立加密备份、介质/频率/保留期限、定期空机恢复与责任人；跨服务商存储与费用先审查。本轮未开启实际计划任务、七牛/R2/S3备份或MinIO。

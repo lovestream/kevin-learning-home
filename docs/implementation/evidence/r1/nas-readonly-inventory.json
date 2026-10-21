@@ -1,0 +1,8 @@
+{
+  "kernel": "4.4.180+",
+  "architecture": "x86_64",
+  "pythonFlockApiPresent": true,
+  "scope": "SSH read-only module inventory only; no lock syscall probe or new container/file/service",
+  "nodeAddonOnNAS": "NOT_RUN",
+  "productionCompatibility": "NOT_RUN; kernel below official Node24 glibc support baseline"
+}

@@ -36,7 +36,7 @@ UI只提供数学/英语待迁入导航，零学习记录、零写请求，未�
 
 新空库执行一次migration；已有版本必须与SQL SHA及sqlite_schema列/索引/trigger完全一致。未来版本、旧的无版本非空库、增列漂移、迁移checksum漂移拒绝启动，不自动清库或降级。未来schema升级必须新增独立迁移和预览/备份关卡。
 
-每个Store持有专属 `.writer.lock`，拒绝第二个app/维护工具；事务同步BEGIN IMMEDIATE，不跨await等网络。回读WAL、FULL、FK、busy_timeout3000；已知NFS/CIFS/SMB/FUSE文件系统拒绝，目录要求canonical本地路径、数据库拒绝软链接。真实NAS目录和挂载性质仍须部署前只读preflight批准；当前代码识别已知不适配类型，不声称能证明所有未知远端文件系统都本地。
+每个Store通过 `fs-ext` 持有稳定 `.writer.lock` inode 的内核排他 flock，拒绝第二个app/维护工具；发布后的锁文件永不自动删除，FD关闭或进程死亡释放所有权；事务同步BEGIN IMMEDIATE，不跨await等网络。回读WAL、FULL、FK、busy_timeout3000；已知NFS/CIFS/SMB/FUSE文件系统拒绝，目录要求canonical本地路径、数据库拒绝软链接。真实NAS目录和挂载性质仍须部署前只读preflight批准；当前代码识别已知不适配类型，不声称能证明所有未知远端文件系统都本地。
 
 只用有界cursor投影，不将十年完整状态塞单行；每事件一行，媒体只在独立volume。旧完整快照/未知字段保真、归档和原课程证据尚属未来迁移PR，不能用本schema保存成功宣称历史逐字段迁移完成。
 
@@ -64,4 +64,4 @@ MediaAsset有assetId/version/hash/MIME/size、public/private、授权/来源、l
 
 DS918+ Linux4.4.180+低于Node24 glibc官方x64 >=4.18基线。10月14日实验PASS_NAS只证明当时可执行，不是官方支持或生产稳定验收。CPU cpuset可限制单逻辑CPU，但CFS quota/PIDs上限在旧内核未生效，本Compose不声称提供这些控制。Node24/node:sqlite当前版本仍需升级与回归计划。[官方Node24支持表](https://github.com/nodejs/node/blob/v24.15.0/BUILDING.md#platform-list)、[SQLite RC状态](https://nodejs.org/download/release/v24.15.0/docs/api/sqlite.html)。
 
-writer锁故意不自动猜测过期：正常SIGTERM重启通过；SIGKILL/掉电后残留锁需要管理员在确认旧进程完全停止后清理。自动故障恢复、锁所有权/boot-id安全回收、HTTPS/认证/CSRF、长时间运行、真实备份保密/异地保存、架构arm64/Android都尚未验收。下一PR优先生产认证/授权，再正式shell，之后才按冻结源逐科复制适配。
+R1将writer所有权改为内核flock生命周期；SIGTERM/SIGKILL及现代Linux容器恢复证据见 [R1报告](IMPLEMENT-01-review-R1.md)。旧v1标记必须在全部旧写入者及重启策略停止后显式离线迁移，不能用PID或超时判死并删除文件。真正断电/坏盘、NAS底座、HTTPS/认证/CSRF、长时间运行、真实备份保密/异地保存、架构arm64/Android仍未验收。下一PR优先生产认证/授权，再正式shell，之后才按冻结源逐科复制适配。
