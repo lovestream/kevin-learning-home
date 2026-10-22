@@ -254,22 +254,25 @@ export class AuthService {
   }
   view(session: Session) {
     const a = session.actor;
+    const parentUnlocked =
+      a.kind === "parent" && session.parent_unlock_until > this.clock();
     const grants =
       a.kind === "learner"
         ? [a.learner_id!]
-        : this.store.db
-            .prepare(
-              "SELECT learner_id FROM learner_grants WHERE parent_id=? AND revoked_at IS NULL ORDER BY learner_id LIMIT 33",
-            )
-            .all(a.id)
-            .map((r) => String(r.learner_id));
+        : !parentUnlocked
+          ? []
+          : this.store.db
+              .prepare(
+                "SELECT learner_id FROM learner_grants WHERE parent_id=? AND revoked_at IS NULL ORDER BY learner_id LIMIT 33",
+              )
+              .all(a.id)
+              .map((r) => String(r.learner_id));
     if (grants.length > 32) throw new AppError("GRANT_SCOPE_CAPACITY", 503);
     return {
       schemaVersion: 1,
       actor: { id: a.id, role: a.kind },
       learnerIds: grants,
-      parentUnlocked:
-        a.kind === "parent" && session.parent_unlock_until > this.clock(),
+      parentUnlocked,
       parentUnlockExpiresAt: session.parent_unlock_until || null,
       expiresAt: session.expires_at,
       csrfToken: session.csrfToken,

@@ -8,6 +8,8 @@
 
 网络、浏览器、请求体、URL、X-Role、X-Tailscale-User、X-Forwarded-For 均不能授予角色。每次请求从 cookie 找 SQLite session，再核对 actor、凭据版本和全局 epoch；learner scope 查库，撤销 grant 立即生效。parent 登录默认锁定，读取 learner 元数据也需短时解锁；学习者只能读自己的元数据。此阶段即使 parent 解锁，也不开放批阅、导入、HTTP 备份恢复、媒体发布、学科命令或钱包。
 
+02A R1收紧最小暴露：锁定parent的SessionDTO不包含学习档案ID、标签或grant元数据，learnerIds固定为空，不查询授权表；解锁后才查询当前有效grants。parent-lock、普通rotate、解锁超时均隐藏列表，旧cookie重放不能恢复权限。child的SessionDTO仍只含自身唯一learner ID。这一变更统一了身份响应与learner GET接口的权限语义，不把原问题描述为已经证实的跨learner越权。
+
 受信任的边界是运行进程与其独占本地文件系统所有者；拥有该目录或宿主管理员权限的人可以读写数据库，应用身份认证无法抵御这一权限。数据目录必须无 group/other 权限，否则以 `DATA_DIRECTORY_PRIVATE_REQUIRED` 拒绝启动，不自动 chmod/chown。继续禁止网络/FUSE 数据卷与符号链接，保留 kernel flock 单 writer、WAL/FULL/FK。
 
 ## 凭据与离线恢复

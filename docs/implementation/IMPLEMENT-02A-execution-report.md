@@ -1,5 +1,7 @@
 # IMPLEMENT-02A 执行与验收报告
 
+> 2026-10-22 R1更新：原53项与下列首次交付CI证据保持原样；当前整改、55项完整回归和新CI见[02A R1报告](IMPLEMENT-02A-review-R1.md)。已修正锁定parent的learnerIds暴露并为main push配置完整CI；main实际合并后运行尚未执行，本轮不合并。
+
 2026-10-22。本轮已获用户明确授权，从最新 main `87ec45e95809d00b7104242702fb28ffbb6f7881` 建立 `codex/implement-02a-auth`；PR #5 已在 00:11:11Z 合并。没有修改原 foundation 开发分支或 main。只提交独立 Draft PR，等待 ChatGPT 审查，不合并、不进入02B。
 
 ## 任务来源与实际交付

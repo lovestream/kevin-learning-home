@@ -21,6 +21,7 @@ const steps = [
       "tests/auth/http.test.ts",
       "tests/auth/migration.test.ts",
       "tests/auth/process.test.ts",
+      "tests/auth/workflow.test.ts",
     ],
   ],
   ["npm", ["run", "test:browser"]],

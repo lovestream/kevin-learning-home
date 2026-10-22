@@ -1,0 +1,12 @@
+{
+  "baseHead": "1a31550670b5eb7f4e169e9a0f969ade9a62ffdc",
+  "reviewBranch": "chatgpt/klh-implement-02a-review-r1",
+  "reviewHead": "5633acc15783d8032a1bad3594b06b978061c27f",
+  "reviewBlob": "cf5f4a6c21b12068c3a5d5c059f7f666c60302ba",
+  "main": "87ec45e95809d00b7104242702fb28ffbb6f7881",
+  "mainPushConfigured": true,
+  "mainPostMergeRun": "NOT_RUN",
+  "reason": "PR6 not merged; user requires independent review first",
+  "mainAndDevelopmentShareFullJob": true,
+  "nasContacted": false
+}

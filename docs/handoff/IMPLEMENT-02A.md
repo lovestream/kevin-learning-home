@@ -1,5 +1,13 @@
 # IMPLEMENT-02A 交接
 
+## 当前 R1 整改交接（2026-10-22）
+
+ChatGPT要求先完成[两项R1整改](../reviews/KLH-IMPLEMENT-02A-R1-REVIEW.md)：锁定parent的SessionDTO返回learnerIds=[]，仅二次解锁返回有效授权ID；main push复用完整CI。已增加真实HTTP全状态链和workflow契约测试，保留原53项用例，完整回归为55项，备份/容器的旧grant保真校验移至再次解锁后执行。当前准确结果/HEAD/CI见[整改报告](../implementation/IMPLEMENT-02A-review-R1.md)、[R1证据](../implementation/evidence/02a-r1/README.md)和PR6正文，以下原53项及原CI仅代表首次交付。
+
+合并手册要求获批后单独核对main实际merge/squash SHA的push CI；本轮main合并与其运行仍NOT_RUN。保留Draft，等待ChatGPT复审，不合并、不进入02B、不操作NAS或真实资料。
+
+## 初次02A交付（历史记录保留）
+
 2026-10-22。用户已批准02A，PR5已合并至main `87ec45e95809d00b7104242702fb28ffbb6f7881`。新开发分支 `codex/implement-02a-auth`，从该main建立，独立[Draft PR #6](https://github.com/lovestream/kevin-learning-home/pull/6)面向main。仅02A后端和合成测试，完成后等待ChatGPT审查。
 
 已实现：SQLite v2显式checkpoint增量迁移、冻结旧runtime对账/回退、家庭actor/grant、交互离线合成bootstrap、版本化scrypt、SQLite持久session/限频/撤销、parent二次解锁、CSRF/Origin/Host/安全cookie、身份敏感表备份及恢复后会话撤销。课程、积分、批阅、导入、真实备份HTTP、媒体发布继续禁用；不包含02B首页/登录UI。

@@ -497,3 +497,118 @@ test("A04 aged sessions rotate and revoke atomically without nesting the idle-to
     await f.stop();
   }
 });
+
+test("R1-01 real HTTP hides locked parent scope through login, lock, rotation, expiry and restart while child scope remains intact", async () => {
+  const f = await authFixture();
+  try {
+    // Keep an explicitly revoked grant as well as an active one in the database.
+    f.auth.grant(f.parent, "synthetic-learner");
+    f.auth.revokeGrant(f.parent, "synthetic-learner");
+    const parent = f.client(),
+      child = f.client();
+    const locked = (response: Awaited<ReturnType<typeof parent.call>>) => {
+      assert.equal(response.status, 200);
+      assert(authSessionSchema.safeParse(response.body).success);
+      assert.equal(response.body.actor.role, "parent");
+      assert.equal(response.body.parentUnlocked, false);
+      assert.deepEqual(response.body.learnerIds, []);
+      const payload = JSON.stringify(response.body);
+      assert(!payload.includes(f.child.learnerId));
+      assert(!payload.includes("synthetic-learner"));
+      assert(!payload.includes("Synthetic learner"));
+    };
+    const spoof = { "X-Role": "parent", "X-Tailscale-User": f.parentLogin };
+    const hidden = async () => {
+      locked(await parent.call("GET", "/api/v1/auth/session", {}, spoof));
+      for (const path of [
+        "/api/v1/learners",
+        "/api/v1/learners/" + f.child.learnerId,
+      ])
+        assert.equal((await parent.call("GET", path, {}, spoof)).status, 403);
+    };
+    const replay = async (cookie: string) => {
+      assert.equal(
+        (
+          await f
+            .client()
+            .call(
+              "GET",
+              "/api/v1/auth/session",
+              {},
+              { Cookie: cookie, ...spoof },
+            )
+        ).status,
+        401,
+      );
+    };
+    const unlock = async () => {
+      const response = await parent.call("POST", "/api/v1/auth/parent-unlock", {
+        password: f.password,
+      });
+      assert.equal(response.status, 200);
+      assert.equal(response.body.parentUnlocked, true);
+      assert.deepEqual(response.body.learnerIds, [f.child.learnerId]);
+    };
+    locked(await parent.login());
+    await hidden();
+    const childLogin = await child.login(true);
+    assert.equal(childLogin.status, 200);
+    assert.deepEqual(childLogin.body.learnerIds, [f.child.learnerId]);
+    assert.equal(childLogin.body.parentUnlocked, false);
+    const preUnlock = parent.cookie;
+    await unlock();
+    await replay(preUnlock);
+    assert.deepEqual(
+      (await parent.call("GET", "/api/v1/auth/session")).body.learnerIds,
+      [f.child.learnerId],
+    );
+    f.auth.revokeGrant(f.parent, f.child.learnerId);
+    const revoked = await parent.call("GET", "/api/v1/auth/session");
+    assert.equal(revoked.body.parentUnlocked, true);
+    assert.deepEqual(revoked.body.learnerIds, []);
+    assert.equal(
+      (await parent.call("GET", "/api/v1/learners/" + f.child.learnerId))
+        .status,
+      403,
+    );
+    f.auth.grant(f.parent, f.child.learnerId);
+    assert.deepEqual(
+      (await parent.call("GET", "/api/v1/auth/session")).body.learnerIds,
+      [f.child.learnerId],
+    );
+    const beforeLock = parent.cookie;
+    locked(await parent.call("POST", "/api/v1/auth/parent-lock"));
+    await hidden();
+    await f.restart();
+    await hidden();
+    await replay(beforeLock);
+    await unlock();
+    const beforeRotate = parent.cookie;
+    locked(await parent.call("POST", "/api/v1/auth/rotate"));
+    await hidden();
+    await replay(beforeRotate);
+    await unlock();
+    f.advance(UNLOCK_MS + 1);
+    await hidden();
+    await f.restart();
+    await hidden();
+    await replay(beforeLock);
+    const childSession = await child.call(
+      "GET",
+      "/api/v1/auth/session",
+      {},
+      spoof,
+    );
+    assert.equal(childSession.status, 200);
+    assert.equal(childSession.body.actor.role, "learner");
+    assert.equal(childSession.body.parentUnlocked, false);
+    assert.deepEqual(childSession.body.learnerIds, [f.child.learnerId]);
+    assert.equal(
+      (await child.call("GET", "/api/v1/learners/synthetic-learner", {}, spoof))
+        .status,
+      403,
+    );
+  } finally {
+    await f.stop();
+  }
+});

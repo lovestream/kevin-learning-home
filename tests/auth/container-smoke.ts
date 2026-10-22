@@ -231,7 +231,21 @@ export async function verifyContainerAuth(image: string, name: string) {
     const fresh = await login();
     assert.equal(fresh.code, 200);
     assert.equal(fresh.body.parentUnlocked, false);
-    assert.deepEqual(fresh.body.learnerIds, ["synthetic-learner"]);
+    assert.deepEqual(fresh.body.learnerIds, []);
+    assert.equal(
+      (await call("GET", "/api/v1/learners", fresh.cookie)).code,
+      403,
+    );
+    const freshUnlock = await call(
+      "POST",
+      "/api/v1/auth/parent-unlock",
+      fresh.cookie,
+      fresh.body.csrfToken,
+      { password },
+    );
+    assert.equal(freshUnlock.code, 200);
+    assert.equal(freshUnlock.body.parentUnlocked, true);
+    assert.deepEqual(freshUnlock.body.learnerIds, ["synthetic-learner"]);
     remove();
     const verified = new Store(layout(restored).data);
     try {
@@ -261,6 +275,8 @@ export async function verifyContainerAuth(image: string, name: string) {
           logoutSurvivesRestart: true,
           backupRestoreRevokesSessions: true,
           restoredCredentialsAndGrantWork: true,
+          lockedParentScopeHidden: true,
+          restoredGrantVisibleOnlyAfterUnlock: true,
           allLegacyTablesPreserved: true,
           authAdminPresent: true,
           authHarnessExcluded: true,

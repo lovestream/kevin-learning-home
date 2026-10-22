@@ -19,7 +19,7 @@
 
 SessionDTO 字段：schemaVersion=1、actor（id/role）、learnerIds、parentUnlocked、parentUnlockExpiresAt（毫秒或null）、expiresAt（绝对毫秒）、csrfToken。没有 login、password_hash、salt、数据库 session 摘要或学习记录。CSRF token 是敏感的当前会话同步值，客户端仅持于内存，不放 URL/日志。新 session 的 Set-Cookie 只有 HttpOnly bearer 对；parent-unlock/lock/rotate 后客户端必须替换 CSRF token。
 
-登录名规范为 trim+lowercase 的 3～64 个 ASCII 字符（字母/数字开头，允许 ._-）；非法格式422，不声称它是合法身份不存在的401。合法格式下错凭据统一401/AUTH_INVALID，限频429/AUTH_RATE_LIMITED、KDF并发满429/AUTH_BUSY，均含 Retry-After；生产详细异常只暴露固定错误码。家长 grant 元数据在 SessionDTO 可见，learner 标签读取仍需解锁。未实现的学科/parent业务/媒体/钱包请求即使解锁也403。
+登录名规范为 trim+lowercase 的 3～64 个 ASCII 字符（字母/数字开头，允许 ._-）；非法格式422，不声称它是合法身份不存在的401。合法格式下错凭据统一401/AUTH_INVALID，限频429/AUTH_RATE_LIMITED、KDF并发满429/AUTH_BUSY，均含 Retry-After；生产详细异常只暴露固定错误码。R1修正：家长锁定态 SessionDTO 的 learnerIds=[]，不查询或返回 grant 列表；只有二次解锁后才返回当前有效授权ID，撤销立即生效。主动锁定、普通rotate、解锁到期后再次清空，孩子始终只返回自身唯一ID。learner标签读取仍需家长解锁；相关GET接口在锁定时继续403。未实现的学科/parent业务/媒体/钱包请求即使解锁也403。
 
 ## 本地合成使用
 
@@ -62,3 +62,14 @@ auth 默认关闭。仅合成本机调试可显式设置 NODE_ENV=development、
 旧30项保留全部核心断言：readiness“未知版本”从2改为99，恢复值改为当前2；锁符号链接负例目录显式700，使测试仍到达原锁拒绝断言，而不提前被新增目录隐私检查拦截。没有放宽锁、并发、receipt、CAS、不可变事件或健康检查断言。
 
 当前 DS918+ Node24/Linux4.4 的官方支持风险不变，本轮 NOT_RUN_NAS；现代Linux Docker合成测试不替代NAS验收。正式上线前仍需用户批准部署、真实账户/数据处理、TLS入口与恢复密钥政策。
+
+## 合并与 main CI 验收（R1新增，尚未执行合并）
+
+foundation workflow 的 push 分支包含 main 及原两个开发分支，pull_request 目标仍为 main；相同无条件job执行 npm ci、typecheck/build、完整Node测试、Chromium、Compose V1.28.5和现代Linux容器验证。历史NAS只校验语法，不做SSH、真实凭据或真实站点操作。
+
+1. 先核对PR6最终head SHA的所有checks绿灯，再等待ChatGPT复审与用户明确批准合并。本次整改不执行merge。
+2. 获准合并后，读取GitHub返回的实际merge/squash SHA，并重新读取main HEAD；不得假定与PR head相同。
+3. 找到event=push、headBranch=main、headSha=该实际合并SHA的新Actions运行。核对完整job及全部步骤success、artifact的executedHeadSha匹配且worktreeDirty=false，完整用例/浏览器/Compose/容器证据存在。随后记录run URL和SHA；不能把PR上的绿灯写成main合并后的绿灯。
+4. 如果main没有新push运行、运行失败或被跳过，保持main合并后验收未通过，保留失败证据并修复；不得删用例、跳过TLS/权限负例或开始02B/生产部署求绿。
+
+main push触发配置由R1静态回归检查，开发分支push/PR执行证明完整流程能通过；**真正的main合并提交运行仍为NOT_RUN，须在另获合并批准后验收**。

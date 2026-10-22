@@ -1,7 +1,7 @@
 name: IMPLEMENT-02A auth and foundation
 on:
   push:
-    branches: [codex/implement-01-foundation, codex/implement-02a-auth]
+    branches: [main, codex/implement-01-foundation, codex/implement-02a-auth]
   pull_request:
     branches: [main]
 permissions:

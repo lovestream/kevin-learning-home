@@ -300,6 +300,16 @@ test("A09 v2 backup preserves actors/grants/credential versions, events and medi
       );
       assert.deepEqual(
         restoredAuth.view(restoredAuth.session(fresh.cookie)).learnerIds,
+        [],
+      );
+      const freshUnlock = await restoredAuth.unlock(
+        fresh.cookie,
+        password,
+        "restored",
+      );
+      assert(freshUnlock);
+      assert.deepEqual(
+        restoredAuth.view(restoredAuth.session(freshUnlock.cookie)).learnerIds,
         [child.learnerId],
       );
     } finally {
