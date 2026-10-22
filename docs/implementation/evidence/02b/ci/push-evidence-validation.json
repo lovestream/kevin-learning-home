@@ -1,0 +1,13 @@
+{
+  "sha": "b08defe2b37604b77609ebad3bafa99b88c7cb3b",
+  "status": "PASS_CI",
+  "nodeTests": 60,
+  "original55Preserved": true,
+  "legacyViewports": 3,
+  "realShellScenarios": 13,
+  "screenshots": 14,
+  "autoRestartCount": 1,
+  "shellHarnessExcluded": true,
+  "runUrl": "https://github.com/lovestream/kevin-learning-home/actions/runs/39801457690",
+  "verificationSource": "Downloaded push artifact independently; all 60 JUnit cases, original55 names, 13 UI cases and safety audits, 3 legacy viewports, Compose, container recovery, and 14 screenshot files asserted"
+}

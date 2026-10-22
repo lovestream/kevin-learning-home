@@ -2,7 +2,7 @@
 
 当前开发 **IMPLEMENT-02B 学习家园外壳**：统一登录、孩子学习首页、家长二次解锁导航、科目入口和响应式页面，接入已通过验收的真实Node/SQLite会话。数学/英语仍为待迁入；原网站完全独立，无课程或真实记录迁移、统一钱包、蛋仔逻辑或NAS生产部署。
 
-PR #6已合并至main `f2c42c2475d0ae85c1688b13e437bc4332d12315`，合并后[main CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39765830063)成功。02B使用独立`codex/implement-02b-shell`分支及Draft PR，完成后等待ChatGPT审查，不自动合并或进入下一阶段。
+PR #6已合并至main `f2c42c2475d0ae85c1688b13e437bc4332d12315`，合并后[main CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39765830063)成功。02B使用独立`codex/implement-02b-shell`分支及[Draft PR #7](https://github.com/lovestream/kevin-learning-home/pull/7)，完成后等待ChatGPT审查，不自动合并或进入下一阶段。
 
 阅读[页面与状态设计](docs/implementation/IMPLEMENT-02B-ui-architecture.md)、[安全评估](docs/implementation/IMPLEMENT-02B-security-review.md)、[执行与截图](docs/implementation/IMPLEMENT-02B-execution-report.md)、[当前交接](docs/handoff/current.md)。`npm run verify`执行完整Node、旧浏览器回归和真实React端到端验证；Linux CI另跑Compose和正式容器。认证仍默认关闭，合成本机启用方式见页面设计文档；没有有效默认账号/口令。
 

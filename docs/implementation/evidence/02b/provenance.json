@@ -21,5 +21,10 @@
     "NAS",
     "production HTTPS/Tailscale",
     "real accounts/data"
-  ]
+  ],
+  "implementationCommit": "f2cd0a98f9e18dfaf255403bfd3e620aea826fde",
+  "ciSetupCommit": "b08defe2b37604b77609ebad3bafa99b88c7cb3b",
+  "localCleanHeadVerification": "local-final/verification.json",
+  "archivedPRCI": "https://github.com/lovestream/kevin-learning-home/actions/runs/39801465973",
+  "pullRequest": "https://github.com/lovestream/kevin-learning-home/pull/7"
 }
