@@ -16,6 +16,8 @@
 
 ## 截图
 
+提交后另以干净工作区完整重跑：[local-final/verification.json](local-final/verification.json)对应实现SHA `f2cd0a98f9e18dfaf255403bfd3e620aea826fde`，worktreeDirty=false，60/3/13全部通过；[测试清单](local-final/test-cases.json)及[真实界面场景](local-final/shell-browser.json)一并保留。此前local/目录的工作区记录不覆盖。
+
 390/768/1280/1440为Chromium CSS视口，不是实体手机/iPad/Safari验收。Mac本地14幅为首次完整成功记录；CI截图为提交源码在Linux中文字体环境中的记录。没有修改旧站。
 
 | 页面 | 本地截图 |
@@ -30,3 +32,5 @@
 ## CI归档协议
 
 实现提交先完成完整push/PR CI，再将安全结果和14幅CI截图归档至`ci/`。归档提交本身仍须完整push/PR CI，最终exact HEAD/Actions链接由Draft PR正文提供。人工不得把PR绿灯等同于未来main合并后CI；本轮不合并。CI artifact保留14天，仓库内安全证据长期保留。NAS/实体设备/生产HTTPS均NOT_RUN。
+
+首轮CI在Ubuntu Azure镜像下载fonts-noto-cjk时耗尽15分钟，尚未执行业务测试；[环境超时记录](history/ci-environment-timeout.json)。改为从官方notofonts/noto-cjk固定commit下载OTF并校验SHA256，只安装在CI用户字体目录，不打包到网页/镜像，也不增加浏览器外部请求。完整job预算调整为25分钟，所有测试保持。

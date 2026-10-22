@@ -1,0 +1,15 @@
+{
+  "implementationSha": "f2cd0a98f9e18dfaf255403bfd3e620aea826fde",
+  "pullRequestRun": "https://github.com/lovestream/kevin-learning-home/actions/runs/39798684656",
+  "pushRun": "https://github.com/lovestream/kevin-learning-home/actions/runs/39798639773",
+  "observedFailure": "15 minute job budget exhausted during apt-get fonts-noto-cjk; business verification not reached",
+  "observedLog": {
+    "fontStepStart": "2026-10-22T14:55:41Z",
+    "mirror": "http://azure.archive.ubuntu.com/ubuntu",
+    "downloadSizeBytes": 61200000,
+    "retryAt": "2026-10-22T14:58:39Z",
+    "canceledAt": "2026-10-22T15:02:08Z"
+  },
+  "notAnApplicationTestFailure": true,
+  "resolution": "Use official Noto CJK OTF at immutable Git commit and SHA256, install only into CI user font directory; allow 25 minutes for complete cold runner validation; rerun every test."
+}

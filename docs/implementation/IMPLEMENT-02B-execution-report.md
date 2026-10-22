@@ -46,6 +46,8 @@ PASS_LOCAL表示Mac实际运行，PASS_CI只用于实际Actions现代Linux结果
 
 不归档凭据/原始网络trace/数据库/私钥，只保存安全摘要与清空输入后的界面。没有通过删除原55项、跳过TLS、关闭CSP或mock所有认证来获得绿灯。
 
+实现提交`f2cd0a98f9e18dfaf255403bfd3e620aea826fde`在干净工作区重新完整本地验证60/3/13通过，见local-final/，包含最终焦点与后退检查。首轮CI在Azure Ubuntu镜像下载中文字体时反复重试，15分钟到限，业务验证尚未执行，不能记为通过。环境记录见history/ci-environment-timeout.json；改用固定官方Noto CJK提交及SHA256校验，只安装到CI用户字体目录，完整job允许25分钟，不删除测试或降低要求。
+
 ## CI与交接
 
 本段在首轮CI后更新。CI扩展既有完整job，不执行NAS SSH或站点探测；CI安装中文系统字体仅用于同源页面截图。实现提交CI与证据归档提交必须分别核对，文档不能包含自己的提交SHA，最终归档HEAD/最后CI URL由Draft PR正文提供，artifact executedHeadSha应一致且worktreeDirty=false。保持原02A/历史报告与CI证据不变。

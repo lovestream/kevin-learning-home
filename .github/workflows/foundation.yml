@@ -15,7 +15,7 @@ permissions:
 jobs:
   foundation:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -27,7 +27,12 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - name: Chinese system font for reproducible UI evidence (CI only)
-        run: sudo apt-get install --no-install-recommends -y fonts-noto-cjk
+        run: |
+          curl --fail --location --silent --show-error --connect-timeout 15 --max-time 120 --retry 2 https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf -o /tmp/klh-ci-noto.otf
+          echo '2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b  /tmp/klh-ci-noto.otf' | sha256sum -c -
+          mkdir -p ~/.local/share/fonts/klh-ci
+          cp /tmp/klh-ci-noto.otf ~/.local/share/fonts/klh-ci/NotoSansCJKsc-Regular.otf
+          fc-cache -f ~/.local/share/fonts/klh-ci
       - name: NAS gate controller syntax only (no NAS connection)
         run: python3 tests/nas-gate/check-probes.py
       - run: node scripts/verify.ts

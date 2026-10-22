@@ -1,0 +1,505 @@
+{
+  "status": "PASS_LOCAL",
+  "timestamp": "2026-10-22T14:53:13.976Z",
+  "executedHeadSha": "f2cd0a98f9e18dfaf255403bfd3e620aea826fde",
+  "worktreeDirty": false,
+  "scope": "real compiled React + loopback Node auth + SQLite; synthetic only; never NAS/physical iPad",
+  "filtered": false,
+  "total": 13,
+  "failures": 0,
+  "screenshots": [
+    "login-390.png",
+    "home-390.png",
+    "home-768.png",
+    "welcome-1280.png",
+    "home-1280.png",
+    "home-1440.png",
+    "parent-locked-390.png",
+    "parent-unlocked-390.png",
+    "parent-locked-768.png",
+    "parent-unlocked-768.png",
+    "parent-locked-1280.png",
+    "parent-unlocked-1280.png",
+    "offline-1280.png",
+    "missing-subject-1280.png"
+  ],
+  "cases": [
+    {
+      "name": "child-responsive-390",
+      "status": "PASS",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "durationMs": 1710,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "child-responsive-768",
+      "status": "PASS",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "durationMs": 1550,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "child-responsive-1280",
+      "status": "PASS",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "durationMs": 1681,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "child-responsive-1440",
+      "status": "PASS",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "durationMs": 1597,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "parent-responsive-390",
+      "status": "PASS",
+      "viewport": {
+        "width": 390,
+        "height": 1024
+      },
+      "durationMs": 1715,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "parent-responsive-768",
+      "status": "PASS",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "durationMs": 1669,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "parent-authority-lifecycle",
+      "status": "PASS",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "durationMs": 2856,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/rotate",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "real-login-errors-401-422-429",
+      "status": "PASS",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "durationMs": 2352,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "offline-503-csrf-and-logout-recovery",
+      "status": "PASS",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "durationMs": 1748,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [
+        "/api/v1/auth/parent-lock"
+      ],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "cancel-timeout-and-late-response",
+      "status": "PASS",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "durationMs": 10227,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "password-reset-and-idle-expiry",
+      "status": "PASS",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "durationMs": 1856,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "catalog-failure-isolation",
+      "status": "PASS",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "durationMs": 1179,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    },
+    {
+      "name": "late-parent-expiry-response",
+      "status": "PASS",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "durationMs": 1410,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    }
+  ]
+}
