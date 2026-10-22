@@ -170,6 +170,118 @@ function Credentials({
   );
 }
 
+function Link({
+  navigate,
+  currentPath,
+  to,
+  children,
+  className = "",
+  label,
+}: {
+  navigate: (to: string) => void;
+  currentPath: string;
+  to: string;
+  children: React.ReactNode;
+  className?: string;
+  label?: string;
+}) {
+  return (
+    <a
+      href={to}
+      className={className}
+      aria-label={label}
+      aria-current={currentPath === to ? "page" : undefined}
+      onClick={(e) => {
+        if (
+          e.button === 0 &&
+          !e.metaKey &&
+          !e.ctrlKey &&
+          !e.shiftKey &&
+          !e.altKey
+        ) {
+          e.preventDefault();
+          navigate(to);
+        }
+      }}
+    >
+      {children}
+    </a>
+  );
+}
+function SubjectLinks({
+  catalog,
+  catalogError,
+  loadCatalog,
+  ...navigation
+}: {
+  catalog: SubjectRegistration[] | null;
+  catalogError: string;
+  loadCatalog: () => Promise<void>;
+  currentPath: string;
+  navigate: (to: string) => void;
+}) {
+  if (catalogError)
+    return (
+      <section className="notice" role="status">
+        <p>{catalogError}</p>
+        <button className="text-button" onClick={() => void loadCatalog()}>
+          重新读取科目
+        </button>
+      </section>
+    );
+  if (!catalog) return <p role="status">正在确认科目列表…</p>;
+  if (!catalog.length)
+    return (
+      <p className="empty-inline">
+        暂时没有可用的科目入口。你仍可使用家园的其他页面。
+      </p>
+    );
+  return (
+    <div className="subject-links">
+      {catalog.map((s) => (
+        <Link
+          {...navigation}
+          key={s.id}
+          to={"/subjects/" + s.id}
+          className={"subject-tab " + s.accent}
+        >
+          <span className="subject-mark" aria-hidden="true">
+            {s.mark}
+          </span>
+          <span>
+            <span className="subject-name">{s.title}</span>
+            <span className="subject-status">
+              {s.status === "awaiting-migration" ? "待迁入" : "暂不可用"}
+            </span>
+          </span>
+          <span className="tab-corner" aria-hidden="true" />
+        </Link>
+      ))}
+    </div>
+  );
+}
+function Empty({
+  title,
+  children,
+  kind = "book",
+}: {
+  title: string;
+  children: React.ReactNode;
+  kind?: string;
+}) {
+  return (
+    <section className="empty-state">
+      <span className="empty-icon">
+        <Icon name={kind} />
+      </span>
+      <div>
+        <h2>{title}</h2>
+        <p>{children}</p>
+      </div>
+    </section>
+  );
+}
+
 function App() {
   const identity = useIdentity(),
     { state } = identity;
@@ -248,102 +360,8 @@ function App() {
     void identity.sync();
     requestAnimationFrame(() => main.current?.focus());
   }
-  function Link({
-    to,
-    children,
-    className = "",
-    label,
-  }: {
-    to: string;
-    children: React.ReactNode;
-    className?: string;
-    label?: string;
-  }) {
-    return (
-      <a
-        href={to}
-        className={className}
-        aria-label={label}
-        aria-current={path === to ? "page" : undefined}
-        onClick={(e) => {
-          if (
-            e.button === 0 &&
-            !e.metaKey &&
-            !e.ctrlKey &&
-            !e.shiftKey &&
-            !e.altKey
-          ) {
-            e.preventDefault();
-            navigate(to);
-          }
-        }}
-      >
-        {children}
-      </a>
-    );
-  }
-  function SubjectLinks() {
-    if (catalogError)
-      return (
-        <section className="notice" role="status">
-          <p>{catalogError}</p>
-          <button className="text-button" onClick={() => void loadCatalog()}>
-            重新读取科目
-          </button>
-        </section>
-      );
-    if (!catalog) return <p role="status">正在确认科目列表…</p>;
-    if (!catalog.length)
-      return (
-        <p className="empty-inline">
-          暂时没有可用的科目入口。你仍可使用家园的其他页面。
-        </p>
-      );
-    return (
-      <div className="subject-links">
-        {catalog.map((s) => (
-          <Link
-            key={s.id}
-            to={"/subjects/" + s.id}
-            className={"subject-tab " + s.accent}
-          >
-            <span className="subject-mark" aria-hidden="true">
-              {s.mark}
-            </span>
-            <span>
-              <span className="subject-name">{s.title}</span>
-              <span className="subject-status">
-                {s.status === "awaiting-migration" ? "待迁入" : "暂不可用"}
-              </span>
-            </span>
-            <span className="tab-corner" aria-hidden="true" />
-          </Link>
-        ))}
-      </div>
-    );
-  }
-  function Empty({
-    title,
-    children,
-    kind = "book",
-  }: {
-    title: string;
-    children: React.ReactNode;
-    kind?: string;
-  }) {
-    return (
-      <section className="empty-state">
-        <span className="empty-icon">
-          <Icon name={kind} />
-        </span>
-        <div>
-          <h2>{title}</h2>
-          <p>{children}</p>
-        </div>
-      </section>
-    );
-  }
-  function Welcome() {
+  const navigation = { currentPath: path, navigate };
+  function renderWelcome() {
     return (
       <>
         <section className="welcome">
@@ -353,6 +371,7 @@ function App() {
             <p className="lead">把今天的好奇，留给数学、英语和更大的世界。</p>
             <p>数学和英语的新入口正在准备。原来的两个学习网站继续独立运行。</p>
             <Link
+              {...navigation}
               to={authenticated ? (parent ? "/parent" : "/home") : "/login"}
               className="button primary"
             >
@@ -366,12 +385,17 @@ function App() {
           aria-labelledby="public-subject-title"
         >
           <h2 id="public-subject-title">为新的学习留好位置</h2>
-          <SubjectLinks />
+          <SubjectLinks
+            {...navigation}
+            catalog={catalog}
+            catalogError={catalogError}
+            loadCatalog={loadCatalog}
+          />
         </section>
       </>
     );
   }
-  function Login() {
+  function renderLogin() {
     if (authenticated)
       return (
         <section className="login-panel">
@@ -379,7 +403,11 @@ function App() {
           <p>
             当前身份：{parent ? "家长" : "孩子"}。身份和权限由学习家园确认。
           </p>
-          <Link className="button primary" to={parent ? "/parent" : "/home"}>
+          <Link
+            {...navigation}
+            className="button primary"
+            to={parent ? "/parent" : "/home"}
+          >
             继续进入家园
           </Link>
         </section>
@@ -390,7 +418,9 @@ function App() {
           <House small />
           <h1>欢迎回到学习家园</h1>
           <p>从自己的账户开始，慢慢探索。</p>
-          <Link to="/">返回家园</Link>
+          <Link {...navigation} to="/">
+            返回家园
+          </Link>
         </div>
         <div className="login-panel">
           <h2>登录</h2>
@@ -408,13 +438,13 @@ function App() {
       </section>
     );
   }
-  function ParentPage() {
+  function renderParentPage() {
     if (!parent)
       return (
         <>
           <h1>这个入口只对家长开放</h1>
           <p>当前孩子账户不能查看家长内容。</p>
-          <Link to="/home" className="button secondary">
+          <Link {...navigation} to="/home" className="button secondary">
             返回今日学习
           </Link>
         </>
@@ -488,7 +518,7 @@ function App() {
               </p>
             </section>
             {path !== "/parent/report" && (
-              <Link to="/parent/report" className="text-link">
+              <Link {...navigation} to="/parent/report" className="text-link">
                 查看报告入口
               </Link>
             )}
@@ -501,7 +531,7 @@ function App() {
       </div>
     );
   }
-  function SubjectPage() {
+  function renderSubjectPage() {
     const id = path.slice("/subjects/".length),
       subject = catalog?.find((s) => s.id === id);
     return (
@@ -533,6 +563,7 @@ function App() {
           </Empty>
         )}
         <Link
+          {...navigation}
           to={authenticated ? "/subjects" : "/"}
           className="button secondary"
         >
@@ -541,8 +572,8 @@ function App() {
       </>
     );
   }
-  function Workspace() {
-    if (path.startsWith("/parent")) return ParentPage();
+  function renderWorkspace() {
+    if (path.startsWith("/parent")) return renderParentPage();
     if (path === "/subjects")
       return (
         <>
@@ -553,7 +584,12 @@ function App() {
             </div>
             <Icon name="book" />
           </div>
-          <SubjectLinks />
+          <SubjectLinks
+            {...navigation}
+            catalog={catalog}
+            catalogError={catalogError}
+            loadCatalog={loadCatalog}
+          />
           <aside className="future-note">
             <h2>给未来的科目留一页</h2>
             <p>以后可以加入语文、科学等新科目。它们现在还不是已安装的课程。</p>
@@ -570,7 +606,7 @@ function App() {
           <p className="quiet-note">
             这里不会自动生成计划，也不会写入奖励或学习记录。
           </p>
-          <Link to="/subjects" className="button secondary">
+          <Link {...navigation} to="/subjects" className="button secondary">
             看看科目入口
           </Link>
         </>
@@ -582,7 +618,7 @@ function App() {
           <Empty title="暂时没有需要复习的内容" kind="review">
             课程尚未接入，复习安排也还没有开始。以后会由各个科目提供自己的复习内容。
           </Empty>
-          <Link to="/subjects" className="button secondary">
+          <Link {...navigation} to="/subjects" className="button secondary">
             看看科目入口
           </Link>
         </>
@@ -622,7 +658,7 @@ function App() {
         <section className="today-sheet">
           <div className="section-heading">
             <h2>今日学习</h2>
-            <Link to="/today" className="text-link">
+            <Link {...navigation} to="/today" className="text-link">
               查看今日计划
             </Link>
           </div>
@@ -632,7 +668,12 @@ function App() {
         </section>
         <section className="home-subjects">
           <h2>从喜欢的科目开始</h2>
-          <SubjectLinks />
+          <SubjectLinks
+            {...navigation}
+            catalog={catalog}
+            catalogError={catalogError}
+            loadCatalog={loadCatalog}
+          />
         </section>
         <section className="gentle-note">
           <Icon name="leaf" />
@@ -645,14 +686,16 @@ function App() {
   const content = !isShellRoute(path) ? (
     <>
       <h1>没有找到这个页面</h1>
-      <Link to="/">返回家园</Link>
+      <Link {...navigation} to="/">
+        返回家园
+      </Link>
     </>
   ) : path === "/" ? (
-    Welcome()
+    renderWelcome()
   ) : path === "/login" ? (
-    Login()
+    renderLogin()
   ) : path.startsWith("/subjects/") ? (
-    SubjectPage()
+    renderSubjectPage()
   ) : !authenticated ? (
     <section className="access-gate">
       <Icon name="parent" />
@@ -665,7 +708,7 @@ function App() {
       </h1>
       <p>确认当前账户后，才能打开这个页面。</p>
       {state.phase === "anonymous" ? (
-        <Link to="/login" className="button primary">
+        <Link {...navigation} to="/login" className="button primary">
           前往登录
         </Link>
       ) : (
@@ -681,7 +724,7 @@ function App() {
       )}
     </section>
   ) : (
-    Workspace()
+    renderWorkspace()
   );
   return (
     <>
@@ -690,7 +733,7 @@ function App() {
       </a>
       <div className="site-shell">
         <header className="topbar">
-          <Link to="/" className="brand">
+          <Link {...navigation} to="/" className="brand">
             <span className="brand-house" aria-hidden="true">
               <Icon name="home" />
             </span>
@@ -719,7 +762,7 @@ function App() {
                 </button>
               </>
             ) : (
-              <Link to="/login" className="login-link">
+              <Link {...navigation} to="/login" className="login-link">
                 登录
               </Link>
             )}
@@ -733,19 +776,21 @@ function App() {
           {authenticated && !publicPath && (
             <nav className="sidebar" aria-label="家园导航">
               {nav.map(([to, title, icon]) => (
-                <Link key={to} to={to}>
+                <Link {...navigation} key={to} to={to}>
                   <Icon name={icon} />
                   <span>{title}</span>
                 </Link>
               ))}
               {parent && (
                 <div className="parent-nav">
-                  <Link to="/parent">
+                  <Link {...navigation} to="/parent">
                     <Icon name="parent" />
                     <span>家长中心</span>
                   </Link>
                   {state.session!.parentUnlocked && (
-                    <Link to="/parent/report">学习报告</Link>
+                    <Link {...navigation} to="/parent/report">
+                      学习报告
+                    </Link>
                   )}
                 </div>
               )}

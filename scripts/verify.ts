@@ -55,7 +55,7 @@ const shell = JSON.parse(readFileSync(".evidence/shell-browser.json", "utf8"));
 if (
   shell.filtered ||
   shell.failures ||
-  shell.total !== 13 ||
+  shell.total !== 18 ||
   !["PASS_LOCAL", "PASS_CI"].includes(shell.status)
 )
   throw Error("SHELL_REPORT_INCOMPLETE");

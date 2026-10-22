@@ -1,5 +1,7 @@
 # IMPLEMENT-02B 页面与状态设计
 
+2026-10-23 R1补充：正常5秒后台复核现在保留已确认页面与焦点；只有主动操作/切页、发现权限变化或异常时清空/遮蔽。定时器不因DTO对象更新重置。组件Link/SubjectLinks/Empty在模块级定义，通过props传状态，页面render函数不作为内部JSX组件。实际边界与有界快照取舍见[整改报告](IMPLEMENT-02B-review-R1.md)。以下为首轮设计记录，R1处理优先适用。
+
 2026-10-22；基线 main `f2c42c2475d0ae85c1688b13e437bc4332d12315`，已核对PR6合并及main CI 39765830063成功。任务分支 `chatgpt/klh-implement-02b-start@aaf8fe6936f780b94f6aa55b7bbf3c1768bc52a9`，原任务blob `f2fd44b8c5b8cde0fd7caa0d575119acfb2e2728`。本轮只实现外壳，原站独立、不复制课程、不导入真实资料。
 
 ## 设计计划与取舍

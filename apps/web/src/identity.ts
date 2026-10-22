@@ -64,16 +64,26 @@ export function useIdentity() {
   async function run(
     operation: string,
     work: (signal: AbortSignal) => Promise<Identity>,
+    background = false,
   ) {
-    const oldFocus = document.activeElement?.id;
-    if (oldFocus) focus.current = oldFocus;
+    if (!background) {
+      const oldFocus = document.activeElement?.id;
+      if (oldFocus) focus.current = oldFocus;
+    }
     const ticket = ++generation.current;
     pending.current?.abort();
     const controller = new AbortController();
     pending.current = controller;
-    mask();
-    publish({ ...empty("checking"), busy: true, operation });
-    const timeout = setTimeout(() => controller.abort(), REQUEST_MS);
+    if (!background) {
+      mask();
+      publish({ ...empty("checking"), busy: true, operation });
+    }
+    const timeout = setTimeout(() => {
+      if (ticket === generation.current)
+        suspend(
+          errorMessage(new RequestError("REQUEST_INTERRUPTED"), operation),
+        );
+    }, REQUEST_MS);
     try {
       const next = await work(controller.signal);
       if (ticket !== generation.current) return;
@@ -90,9 +100,11 @@ export function useIdentity() {
         intent.current = "parent-lock";
         throw new RequestError("PARENT_UNLOCK_EXPIRED", 403);
       }
+      if (next.phase !== "authenticated") mask();
       if (ticket === generation.current) publish(next);
     } catch (e) {
       if (ticket !== generation.current) return;
+      mask();
       if (e instanceof RequestError && e.status === 401) {
         if (e.code === "AUTH_INVALID" && operation === "解锁") {
           publish(empty("unconfirmed", "密码不正确，请重新确认身份后再解锁。"));
@@ -185,23 +197,60 @@ export function useIdentity() {
         (session.actor.role === "learner" ? (learners[0]?.id ?? null) : null),
     };
   }
-  async function sync(selected = live.current.selected) {
-    await run("确认权限", async (signal) => {
-      try {
-        return await confirmed(
-          await request("/api/v1/auth/session", signal),
-          signal,
-          selected,
-        );
-      } catch (e) {
-        if (e instanceof RequestError && e.status === 401) {
+  async function sync(selected = live.current.selected, background = false) {
+    const previous = live.current;
+    if (
+      background &&
+      (pending.current ||
+        previous.phase !== "authenticated" ||
+        !previous.session?.parentUnlocked ||
+        intent.current ||
+        document.visibilityState === "hidden" ||
+        !navigator.onLine)
+    )
+      return;
+    await run(
+      "确认权限",
+      async (signal) => {
+        try {
+          const value = await request("/api/v1/auth/session", signal);
           active(signal);
-          intent.current = null;
-          return empty("anonymous");
+          const fresh = sessionDTO(value);
+          if (
+            background &&
+            previous.session &&
+            (fresh.actor.id !== previous.session.actor.id ||
+              fresh.actor.role !== previous.session.actor.role ||
+              fresh.parentUnlocked !== previous.session.parentUnlocked ||
+              fresh.parentUnlockExpiresAt !==
+                previous.session.parentUnlockExpiresAt ||
+              JSON.stringify([...fresh.learnerIds].sort()) !==
+                JSON.stringify([...previous.session.learnerIds].sort()))
+          ) {
+            // Authority changed: hide immediately, before any metadata request.
+            // Only an unchanged, successful background check keeps the page in place.
+            mask();
+            publish({
+              ...empty("checking"),
+              busy: true,
+              operation: "确认权限",
+            });
+          }
+          return await confirmed(value, signal, selected);
+        } catch (e) {
+          if (e instanceof RequestError && e.status === 401) {
+            active(signal);
+            intent.current = null;
+            return empty("anonymous");
+          }
+          throw e;
         }
-        throw e;
-      }
-    });
+      },
+      background,
+    );
+  }
+  async function revalidateInBackground() {
+    await sync(live.current.selected, true);
   }
   async function act(
     action: Action,
@@ -239,8 +288,8 @@ export function useIdentity() {
       return confirmed(result, signal, null);
     });
   }
-  const callbacks = useRef({ sync, suspend });
-  callbacks.current = { sync, suspend };
+  const callbacks = useRef({ sync, suspend, revalidateInBackground });
+  callbacks.current = { sync, suspend, revalidateInBackground };
   useLayoutEffect(() => {
     document.documentElement.dataset.privacy =
       state.phase === "authenticated" &&
@@ -335,14 +384,24 @@ export function useIdentity() {
           ),
         ),
       );
-      poll = setInterval(() => void callbacks.current.sync(), PARENT_POLL_MS);
+      poll = setInterval(
+        () => void callbacks.current.revalidateInBackground(),
+        PARENT_POLL_MS,
+      );
     }
     return () => {
       clearTimeout(absolute);
       clearTimeout(expiry);
       clearInterval(poll);
     };
-  }, [state.phase, state.session]);
+  }, [
+    state.phase,
+    state.session?.actor.id,
+    state.session?.actor.role,
+    state.session?.expiresAt,
+    state.session?.parentUnlocked,
+    state.session?.parentUnlockExpiresAt,
+  ]);
   return {
     state,
     sync,

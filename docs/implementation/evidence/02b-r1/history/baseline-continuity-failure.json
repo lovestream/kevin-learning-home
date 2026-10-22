@@ -1,0 +1,25 @@
+{
+  "status": "FAIL",
+  "timestamp": "2026-10-22T23:45:35.690Z",
+  "executedHeadSha": "147a3143dd5dca09fcb8aa70fd4d6b083597a4ab",
+  "worktreeDirty": true,
+  "scope": "real compiled React + loopback Node auth + SQLite; synthetic only; never NAS/physical iPad",
+  "filtered": true,
+  "total": 1,
+  "failures": 1,
+  "screenshots": [],
+  "r1Evidence": {},
+  "cases": [
+    {
+      "name": "r1-parent-continuous-two-polls",
+      "status": "FAIL",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "stage": "fixture",
+      "error": "UI_ASSERTION_FAILED",
+      "diagnostic": "[redacted]"
+    }
+  ]
+}

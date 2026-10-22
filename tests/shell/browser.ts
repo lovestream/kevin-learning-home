@@ -13,6 +13,7 @@ const cases: unknown[] = [];
 let failed = 0,
   stage = "";
 const screenshots: string[] = [];
+const r1Evidence: Record<string, unknown> = {};
 type Fixture = Awaited<ReturnType<typeof uiFixture>>;
 async function step(name: string, action: () => Promise<unknown>) {
   stage = name;
@@ -29,6 +30,20 @@ async function waitHeading(page: Page, name: string) {
 }
 async function retry(page: Page) {
   await page.getByRole("button", { name: "重新确认", exact: true }).click();
+}
+async function tabTo(page: Page, selector: string) {
+  // Stay inside the document: wrapping through browser chrome intentionally
+  // triggers the real parent blur fail-closed handler and is a separate test.
+  for (let i = 0; i < 40; i++) {
+    await page.keyboard.press("Shift+Tab");
+    if (!(await page.locator(selector).count()))
+      throw Error("KEYBOARD_TARGET_LOST");
+    if (
+      await page.locator(selector).evaluate((n) => n === document.activeElement)
+    )
+      return;
+  }
+  throw Error("KEYBOARD_TARGET_UNREACHABLE");
 }
 async function noPrivate(f: Fixture) {
   const text = await f.page.locator("body").innerText();
@@ -49,10 +64,19 @@ async function run(
   let f: Fixture | undefined;
   stage = "fixture";
   const started = Date.now();
+  let deadline: ReturnType<typeof setTimeout> | undefined;
   try {
     f = await uiFixture(browser, viewport, siblings);
     const before = f.store.summary();
-    await action(f);
+    const actionResult = action(f);
+    if (name.startsWith("r1-"))
+      await Promise.race([
+        actionResult,
+        new Promise<never>((_, reject) => {
+          deadline = setTimeout(() => reject(Error("R1_CASE_TIMEOUT")), 45000);
+        }),
+      ]);
+    else await actionResult;
     const safety = await f.verify(),
       after = f.store.summary();
     for (const table of LEGACY_TABLES)
@@ -107,6 +131,7 @@ async function run(
         });
       } catch {}
   } finally {
+    clearTimeout(deadline);
     await f?.close();
   }
 }
@@ -689,6 +714,266 @@ try {
       );
     },
   );
+  await run(
+    "r1-parent-continuous-two-polls",
+    { width: 1280, height: 900 },
+    async (f) => {
+      stage = "real wall-clock continuity";
+      await f.login(true);
+      await f.unlock();
+      await f.page.getByRole("button", { name: /Synthetic learner/ }).click();
+      await waitHeading(f.page, "Synthetic learner的学习报告");
+      const polls: number[] = [],
+        deadlines: number[] = [];
+      f.page.on("response", async (r) => {
+        if (r.url().endsWith("/api/v1/auth/session") && r.status() === 200) {
+          try {
+            deadlines.push((await r.json()).parentUnlockExpiresAt);
+          } catch {}
+        }
+        if (r.url().endsWith("/api/v1/learners") && r.status() === 200)
+          polls.push(Date.now());
+      });
+      await tabTo(f.page, '.sidebar a[href="/parent/report"]');
+      await f.page.evaluate(() => {
+        const state = window as any;
+        state.r1Link = document.querySelector(
+          '.sidebar a[href="/parent/report"]',
+        );
+        state.r1Picker = document.querySelector(".learner-option");
+        state.r1Focus = state.r1Link;
+        state.r1Unstable = false;
+        new MutationObserver(() => {
+          if (
+            !state.r1Link.isConnected ||
+            !state.r1Picker.isConnected ||
+            document.querySelector(".access-gate,.pending") ||
+            document.documentElement.dataset.privacy !== "visible" ||
+            document.activeElement !== state.r1Focus
+          )
+            state.r1Unstable = true;
+        }).observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+          attributes: true,
+        });
+      });
+      const started = Date.now();
+      // Real wall clock: no fake time, route fulfillment or mock authentication.
+      await f.page.waitForTimeout(6000);
+      await f.page.evaluate(() => {
+        const state = window as any;
+        state.r1Focus = state.r1Picker;
+        state.r1Picker.focus();
+      });
+      await f.page.waitForTimeout(6000);
+      assert(Date.now() - started >= 12000);
+      const successfulBackgroundPolls = polls.length;
+      assert(successfulBackgroundPolls >= 2, "TWO_REAL_POLLS_REQUIRED");
+      assert(
+        deadlines.length >= 2 && new Set(deadlines).size === 1,
+        "UNLOCK_DEADLINE_CHANGED",
+      );
+      assert.equal(
+        await f.page.evaluate(() => (window as any).r1Unstable),
+        false,
+        "POLL_UI_UNSTABLE",
+      );
+      await expect(
+        f.page.getByRole("heading", { name: "Synthetic learner的学习报告" }),
+      ).toBeVisible();
+      await shot(f, "r1-parent-continuity-1280");
+      await f.page.keyboard.press("Tab");
+      await f.page.getByRole("link", { name: "学习报告", exact: true }).focus();
+      await f.page.keyboard.press("Enter");
+      await waitHeading(f.page, "家长报告");
+      await expect(f.page.locator("#main-content")).toBeFocused();
+      r1Evidence.continuity = {
+        wallClockMs: Date.now() - started,
+        successfulPolls: successfulBackgroundPolls,
+        unchangedUnlockDeadline: true,
+        stableDOMAndFocus: true,
+      };
+    },
+  );
+  await run(
+    "r1-config-refresh-stable-link",
+    { width: 768, height: 1024 },
+    async (f) => {
+      stage = "real config response preserves keyboard-focused navigation";
+      let release = () => {};
+      const hold = new Promise<void>((r) => (release = r));
+      await f.page.route("**/api/v1/config", async (route) => {
+        const response = await route.fetch();
+        await hold;
+        await route.fulfill({ response });
+      });
+      await f.login(true);
+      await tabTo(f.page, '.sidebar a[href="/today"]');
+      const node = await f.page
+        .locator('.sidebar a[href="/today"]')
+        .elementHandle();
+      const completed = f.page.waitForResponse((r) =>
+        r.url().endsWith("/api/v1/config"),
+      );
+      release();
+      await completed;
+      await f.page.waitForTimeout(100);
+      assert(
+        await node!.evaluate(
+          (n) => n.isConnected && document.activeElement === n,
+        ),
+        "CONFIG_REPLACED_FOCUS_NODE",
+      );
+      await f.page.keyboard.press("Enter");
+      await waitHeading(f.page, "今日计划");
+      await expect(f.page.locator("#main-content")).toBeFocused();
+      r1Evidence.config = {
+        realBackendResponse: true,
+        sameDOMNodeAndKeyboardFocus: true,
+      };
+    },
+  );
+  await run(
+    "r1-background-revoke-503-offline",
+    { width: 1280, height: 900 },
+    async (f) => {
+      await f.page.clock.install({ time: new Date() });
+      await f.login(true);
+      await f.unlock();
+      await f.page.getByRole("button", { name: /合成学习者乙/ }).click();
+      await waitHeading(f.page, "合成学习者乙的学习报告");
+      stage = "poll hides changed authority before pending learner metadata";
+      let release = () => {},
+        ready = () => {};
+      const hold = new Promise<void>((r) => (release = r)),
+        forwarded = new Promise<void>((r) => (ready = r));
+      await f.page.route("**/api/v1/learners", async (route) => {
+        const response = await route.fetch();
+        ready();
+        await hold;
+        await route.fulfill({ response });
+      });
+      f.auth.revokeGrant(f.parent, f.sibling!.learnerId);
+      await f.page.clock.fastForward(5100);
+      await forwarded;
+      await noPrivate(f);
+      release();
+      await waitHeading(f.page, "家长中心");
+      await expect(
+        f.page.getByRole("button", { name: /合成学习者乙/ }),
+      ).toHaveCount(0);
+      await f.page.unroute("**/api/v1/learners");
+      stage = "actual authority fault on background poll fails closed";
+      const epoch = Number(
+        f.store.db.prepare("SELECT epoch FROM auth_controls WHERE id=1").get()!
+          .epoch,
+      );
+      f.store.db.exec("DELETE FROM auth_controls");
+      await f.page.clock.fastForward(5100);
+      await f.page
+        .getByRole("alert")
+        .filter({ hasText: "服务暂时不可用" })
+        .waitFor();
+      await noPrivate(f);
+      f.store.db.prepare("INSERT INTO auth_controls VALUES(1,?)").run(epoch);
+      await retry(f.page);
+      await waitHeading(f.page, "家长中心");
+      await f.context.setOffline(true);
+      await f.page
+        .getByRole("alert")
+        .filter({ hasText: "网络已断开" })
+        .waitFor();
+      await noPrivate(f);
+      await f.context.setOffline(false);
+      await waitHeading(f.page, "家长中心");
+      r1Evidence.revocation = {
+        hiddenBeforeMetadata: true,
+        actual503FailsClosed: true,
+        offlineRecovery: true,
+      };
+    },
+    true,
+  );
+  await run(
+    "r1-background-timeout-and-action-race",
+    { width: 1280, height: 900 },
+    async (f) => {
+      await f.page.clock.install({ time: new Date() });
+      await f.login(true);
+      await f.unlock();
+      let release = () => {},
+        ready = () => {},
+        count = 0;
+      let hold = new Promise<void>((r) => (release = r)),
+        forwarded = new Promise<void>((r) => (ready = r));
+      const holdSession = async (route: import("@playwright/test").Route) => {
+        count++;
+        const response = await route.fetch();
+        ready();
+        await hold;
+        try {
+          await route.fulfill({ response });
+        } catch {}
+      };
+      await f.page.route("**/api/v1/auth/session", holdSession);
+      stage = "slow poll reaches bounded timeout without interval cancellation";
+      await f.page.clock.fastForward(5100);
+      await forwarded;
+      await f.page.clock.fastForward(8001);
+      await f.page.getByRole("alert").filter({ hasText: "停止等待" }).waitFor();
+      assert.equal(count, 1, "POLL_RESTARTED_PENDING_REQUEST");
+      await noPrivate(f);
+      release();
+      await f.page.waitForTimeout(50);
+      await noPrivate(f);
+      await f.page.unroute("**/api/v1/auth/session");
+      await retry(f.page);
+      await waitHeading(f.page, "家长中心");
+      stage = "foreground lock wins over late background reply";
+      hold = new Promise<void>((r) => (release = r));
+      forwarded = new Promise<void>((r) => (ready = r));
+      await f.page.route("**/api/v1/auth/session", holdSession);
+      await f.page.clock.fastForward(5100);
+      await forwarded;
+      await f.page.getByRole("button", { name: "锁定家长权限" }).click();
+      await waitHeading(f.page, "家长权限已锁定");
+      release();
+      await f.page.waitForTimeout(50);
+      await waitHeading(f.page, "家长权限已锁定");
+      await noPrivate(f);
+      await f.page.unroute("**/api/v1/auth/session");
+      r1Evidence.race = {
+        boundedTimeoutMs: 8000,
+        intervalsDoNotRestartPendingCheck: true,
+        foregroundLockWins: true,
+      };
+    },
+  );
+  await run(
+    "r1-background-expiry-and-reset",
+    { width: 390, height: 900 },
+    async (f) => {
+      await f.page.clock.install({ time: new Date() });
+      await f.login(true);
+      await f.unlock();
+      stage = "server elevation expiry discovered by background poll";
+      f.advance(UNLOCK_MS + 1);
+      await f.page.clock.fastForward(5100);
+      await waitHeading(f.page, "家长权限已锁定");
+      await noPrivate(f);
+      await f.unlock();
+      stage = "credential reset invalidates session at next real poll";
+      await f.auth.resetCredential(f.parentLogin, secret());
+      await f.page.clock.fastForward(5100);
+      await waitHeading(f.page, "请先登录学习家园");
+      await noPrivate(f);
+      r1Evidence.expiry = {
+        serverExpiryDiscoveredByPoll: true,
+        realCredentialReset401: true,
+      };
+    },
+  );
 } finally {
   await browser.close();
 }
@@ -707,6 +992,7 @@ const result = {
   total: cases.length,
   failures: failed,
   screenshots,
+  r1Evidence,
   cases,
 };
 writeFileSync(

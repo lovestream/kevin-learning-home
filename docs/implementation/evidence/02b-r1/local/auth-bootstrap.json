@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "realPTY": true,
+  "syntheticOnly": true,
+  "inputNotEchoed": true,
+  "plaintextCredentialArchived": false
+}

@@ -1,5 +1,7 @@
 # Kevin Learning Home · Kevin 学习家园
 
+2026-10-23：同一[Draft PR #7](https://github.com/lovestream/kevin-learning-home/pull/7)正在进行[02B R1稳定性整改](docs/implementation/IMPLEMENT-02B-review-R1.md)，原60项Node/13项UI保留，UI增至18项；最新结果与停止线见报告和PR正文。
+
 当前开发 **IMPLEMENT-02B 学习家园外壳**：统一登录、孩子学习首页、家长二次解锁导航、科目入口和响应式页面，接入已通过验收的真实Node/SQLite会话。数学/英语仍为待迁入；原网站完全独立，无课程或真实记录迁移、统一钱包、蛋仔逻辑或NAS生产部署。
 
 PR #6已合并至main `f2c42c2475d0ae85c1688b13e437bc4332d12315`，合并后[main CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39765830063)成功。02B使用独立`codex/implement-02b-shell`分支及[Draft PR #7](https://github.com/lovestream/kevin-learning-home/pull/7)，完成后等待ChatGPT审查，不自动合并或进入下一阶段。

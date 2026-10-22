@@ -1,5 +1,7 @@
 # IMPLEMENT-02B 执行与验收报告
 
+2026-10-23 R1：合并前稳定性整改已在同一PR7执行。新增独立背景复核与稳定模块级组件，原60项Node/13项UI保留，UI总计18；完整本地60/18/3通过。当前整改、威胁边界及最新CI以[02B R1报告](IMPLEMENT-02B-review-R1.md)、[R1证据](evidence/02b-r1/README.md)和PR7正文为准。下面保留02B首轮历史结果，不将13项冒充R1完整验证。
+
 2026-10-22。已核对PR6 merged，最新main `f2c42c2475d0ae85c1688b13e437bc4332d12315`，[真正main push CI 39765830063](https://github.com/lovestream/kevin-learning-home/actions/runs/39765830063) completed/success。从该SHA新建`codex/implement-02b-shell`，不复用已合并的02A分支。任务原文来自`chatgpt/klh-implement-02b-start@aaf8fe6936f780b94f6aa55b7bbf3c1768bc52a9`、blob `f2fd44b8c5b8cde0fd7caa0d575119acfb2e2728`，原字节归档[任务书](../tasks/KLH-IMPLEMENT-02B-UI-SHELL.md)。
 
 交付统一中文登录、真实会话恢复/退出、孩子首页/今日计划/科目/复习/成长空态、家长二次解锁/授权选择/报告占位、390/768/1280/1440px响应式布局、版本化SubjectModule类型与静态路由安全边界。数学/英语仍disabled待迁入，未来科目仅结构契约，不含课程、记录、积分或宠物逻辑。
