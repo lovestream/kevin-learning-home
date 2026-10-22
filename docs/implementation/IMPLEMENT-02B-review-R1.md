@@ -30,7 +30,7 @@
 
 只有故障/延迟与后端合成时钟受控，正向登录、session、grant、cookie、CSRF均使用编译React→Node AuthService→SQLite。12秒持续场景不用快进时钟、不mock认证；其他期限负例使用Playwright时钟。只补一幅R1焦点截图；既有14幅与失败历史不覆盖。证据见[索引](evidence/02b-r1/README.md)。
 
-首次新增连续测试在修复前失败（基线147a314、dirty工作区），历史JSON保留。初次修复后的5场景4条通过；连续场景使用正向Tab绕出文档，真实blur保护隐藏页面，随后找不到导航；改为在文档内Shift+Tab到目标，不删除blur保护，连续场景定向通过。完整本地验证已通过：Node24.15.0/macOS arm64，60项Node、18项UI、原3视口；连续场景真实墙钟12秒且至少两次复核。工作区dirty证据如实记录原HEAD，精确提交由CI验证。CI结果在归档后补充，最终HEAD及push/PR永久链接以PR7正文核对，不能拿父提交绿灯代替。
+首次新增连续测试在修复前失败（基线147a314、dirty工作区），历史JSON保留。初次修复后的5场景4条通过；连续场景使用正向Tab绕出文档，真实blur保护隐藏页面，随后找不到导航；改为在文档内Shift+Tab到目标，不删除blur保护，连续场景定向通过。完整本地验证已通过：Node24.15.0/macOS arm64，60项Node、18项UI、原3视口；连续场景真实墙钟12秒且至少两次复核。工作区dirty证据如实记录原HEAD，精确提交由CI验证。实现提交`f940fc1943180e7b518640a16d1ed600b335bd42`的[完整PR CI39874571245](https://github.com/lovestream/kevin-learning-home/actions/runs/39874571245)已成功；artifact为同SHA、clean工作区，完整60/18/3、Docker与Compose通过。CI持续场景真实12068ms、两轮自动复核、稳定DOM/焦点及期限不变。见[CI归档](evidence/02b-r1/ci/README.md)，最终HEAD及push/PR永久链接以PR7正文核对，不能拿父提交绿灯代替。
 
 ## 保留范围与停止线
 
@@ -39,3 +39,15 @@
 最终同一PR的精确HEAD双事件完整CI通过后暂停，等待ChatGPT重新审查；保持Draft、不合并、不进入下一阶段。
 
 本地完整初版计数字段在随后主动导航后才保存，因此总数含一次主动确认；至少两次自动复核的断言本来就在导航前执行。现将归档计数也固定在导航前，[定向复测](evidence/02b-r1/local/continuity-followup.json)记录两次自动复核、真实12秒通过；最终完整CI采用该计数修正。
+
+## R1验收归档状态
+
+| 项目 | 结果与证据 |
+| --- | --- |
+| R1-01 正常背景连续操作 | PASS_LOCAL + PASS_CI；真实12秒/两轮、无loading gate/遮蔽/DOM卸载，期限不变 |
+| R1-01 失效与竞态 | PASS_LOCAL + PASS_CI；实际撤销/503/离线/重置，过期、8秒截止、前台锁定/迟到回应 |
+| R1-02 组件/键盘 | PASS_LOCAL + PASS_CI；模块级组件，真实config/复核更新前后同一导航节点与焦点，Enter/main焦点 |
+| 原回归 | PASS_LOCAL + PASS_CI；原60 Node和13 UI保留，合计60/18/3，原四种视口与全部安全断言 |
+| Docker/Compose | PASS_CI；正式非root/readonly、flock/SIGKILL、自动重启计数1、auth恢复、媒体/哈希及1.28.5解析 |
+| 最终归档HEAD | 准确SHA及push/PR完整CI以PR7正文核对；实现绿灯不替代最终HEAD |
+| NAS/真实数据/生产 | NOT_RUN；不在本轮范围，未创建服务或真实身份 |

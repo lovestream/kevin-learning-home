@@ -30,3 +30,5 @@
 已创建[Draft PR #7](https://github.com/lovestream/kevin-learning-home/pull/7)。实现/CI修正提交`b08defe2b37604b77609ebad3bafa99b88c7cb3b`的[完整PR CI39801465973](https://github.com/lovestream/kevin-learning-home/actions/runs/39801465973)成功，60/3/13、Linux Docker恢复与Compose1.28.5安全证据已归档；最后归档提交本身及push/PR最终checks以PR7正文为准。保持Draft，不合并、不进入下一阶段。
 
 同实现SHA的[push run39801457690](https://github.com/lovestream/kevin-learning-home/actions/runs/39801457690)已completed/success，独立下载artifact再次核对60/3/13、原55保留、14截图与Docker/Compose；见[push元数据](../implementation/evidence/02b/ci/push-run.json)。最终归档提交的双事件完整CI以PR7正文的准确HEAD及永久链接为准，不将实现提交的绿灯代替最终HEAD。
+
+R1实现`f940fc1943180e7b518640a16d1ed600b335bd42`的[PR CI39874571245](https://github.com/lovestream/kevin-learning-home/actions/runs/39874571245)完整成功：60/18/3、实际12秒/两轮复核及Docker/Compose。安全结果见[R1 CI归档](../implementation/evidence/02b-r1/ci/README.md)；最终归档SHA的push/PR完整CI由PR7正文明确记录。

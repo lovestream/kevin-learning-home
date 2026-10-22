@@ -16,3 +16,7 @@
 ## 本地完整验证
 
 [命令与环境](local/verification.json)、[原60项清单](local/test-cases.json)、[18项真实界面场景与r1Evidence](local/shell-browser.json)、[原3视口](local/browser.json)均PASS_LOCAL。原13项名称全部保留，新增5项；12秒连续场景为实际墙钟且至少两次真实200，normal轮询不改变解锁期限/节点/焦点。[持续焦点截图](local/r1-parent-continuity-1280.png)只展示合成资料。执行时dirty=true、基线HEAD147a314，不冒充精确实现提交CI。
+
+## CI
+
+[现代Linux归档](ci/README.md)已核对实现`f940fc1`的完整PR CI：原60项、全部18场景/原13保留、3视口、Docker/Compose，实际12秒与两轮自动复核。只补一幅焦点截图，原14幅仍在CI中完整执行；安全JSON与step证据持久化在仓库。最终归档HEAD双事件完整CI另以PR7正文核对。

@@ -1,0 +1,98 @@
+{
+  "status": "PASS_CI",
+  "scope": "synthetic DB+media+content; offline snapshot into new empty host layout",
+  "manifest": {
+    "format": "klh-checkpoint",
+    "schemaVersion": 2,
+    "appVersion": "0.1.0",
+    "nodeVersion": "v24.15.0",
+    "createdAt": "2026-10-22T23:53:13.382Z",
+    "boundary": "offline-exclusive-writer; immutable published media/content; no concurrent external writer",
+    "tables": {
+      "schema_migrations": {
+        "count": 2,
+        "sha256": "cb72f4d81776e24eb3d28a5b489f3baa1f0fbae63acb5a6364b9892ed9241dab"
+      },
+      "learners": {
+        "count": 1,
+        "sha256": "f7b991c7323373745d2031432a656a597fd50c37eb08272971c48811d87bb171"
+      },
+      "subjects": {
+        "count": 1,
+        "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+      },
+      "subject_states": {
+        "count": 1,
+        "sha256": "1073233beb2dfed948c99e9dc52da580dfe7a74bcf3f208edb2c549aa6e8c4f5"
+      },
+      "server_attempts": {
+        "count": 1,
+        "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+      },
+      "command_receipts": {
+        "count": 1,
+        "sha256": "5743c993ba369354ec8a0cc9ff042a70794d265a0141048ea4b96ff1a8796797"
+      },
+      "learning_events": {
+        "count": 1,
+        "sha256": "a7f97736e2142d48b2be7bc2985b1c36de8b24d435cd6741c7925554ff9dca52"
+      },
+      "media_assets": {
+        "count": 1,
+        "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+      },
+      "content_manifests": {
+        "count": 1,
+        "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+      },
+      "content_media_refs": {
+        "count": 1,
+        "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+      },
+      "audit_log": {
+        "count": 1,
+        "sha256": "7787bb940d8616206d596aa9ce89208247ab53f4fa7efc30230f87d78cfec923"
+      },
+      "actors": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "learner_grants": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "auth_controls": {
+        "count": 1,
+        "sha256": "6f2ddf806965cf1326d63bb677b084c76cfaa080e6928a79b886575b6abca2f4"
+      },
+      "auth_sessions": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "auth_limits": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "auth_audit": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    },
+    "files": {
+      "media/objects/7405ac131fd2a3393e37670ed0d472f0e845fde6dc20d921711bb4ac6c0e82e6.txt": {
+        "sha256": "7405ac131fd2a3393e37670ed0d472f0e845fde6dc20d921711bb4ac6c0e82e6",
+        "sizeBytes": 38
+      },
+      "content/foundation-demo/synthetic-v1.json": {
+        "sha256": "c7f9b1175396846b8dca3e3b2ada18eeba4b234bb12dfca3d6b8fc6be36c1126",
+        "sizeBytes": 173
+      },
+      "learning.sqlite": {
+        "sha256": "6b4ad7323aeed1e1d27e90e031c534f75a70706383cc0cd6a9b2421d0d2bc6a7",
+        "sizeBytes": 167936
+      }
+    }
+  },
+  "tableHashesMatch": true,
+  "receiptReplay": true
+}

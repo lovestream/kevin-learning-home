@@ -59,3 +59,5 @@ CI扩展既有完整job，不执行NAS SSH或站点探测；CI安装中文系统
 完成后停止：不合并02B、不进入学科迁移/下一阶段、不创建真实家庭身份、不配置生产HTTPS/Tailscale、不部署NAS。下一动作由ChatGPT独立复审；真实设备、加密备份与生产入口均需后续独立授权与验收。
 
 同实现SHA的[push run39801457690](https://github.com/lovestream/kevin-learning-home/actions/runs/39801457690)已completed/success，独立下载artifact再次核对60/3/13、原55保留、14截图与Docker/Compose；见[push元数据](evidence/02b/ci/push-run.json)。最终归档提交的双事件完整CI以PR7正文的准确HEAD及永久链接为准，不将实现提交的绿灯代替最终HEAD。
+
+R1实现`f940fc1943180e7b518640a16d1ed600b335bd42`的[PR CI39874571245](https://github.com/lovestream/kevin-learning-home/actions/runs/39874571245)完整成功：60/18/3、实际12秒/两轮复核及Docker/Compose。安全结果见[R1 CI归档](evidence/02b-r1/ci/README.md)；最终归档SHA的push/PR完整CI由PR7正文明确记录。
