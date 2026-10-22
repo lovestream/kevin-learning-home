@@ -1,0 +1,148 @@
+{
+  "status": "FAIL",
+  "timestamp": "2026-10-22T12:13:49.966Z",
+  "executedHeadSha": "f2c42c2475d0ae85c1688b13e437bc4332d12315",
+  "worktreeDirty": true,
+  "scope": "real compiled React + loopback Node auth + SQLite; synthetic only; never NAS/physical iPad",
+  "filtered": false,
+  "total": 12,
+  "failures": 12,
+  "screenshots": [
+    "login-390.png",
+    "home-390.png",
+    "home-768.png",
+    "welcome-1280.png",
+    "home-1280.png",
+    "home-1440.png",
+    "parent-locked-390.png",
+    "parent-unlocked-390.png",
+    "parent-locked-768.png",
+    "parent-unlocked-768.png",
+    "parent-locked-1280.png",
+    "parent-unlocked-1280.png",
+    "offline-1280.png",
+    "missing-subject-1280.png"
+  ],
+  "cases": [
+    {
+      "name": "child-responsive-390",
+      "status": "FAIL",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "stage": "refresh and logout/back cannot restore session",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "child-responsive-768",
+      "status": "FAIL",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "stage": "refresh and logout/back cannot restore session",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "child-responsive-1280",
+      "status": "FAIL",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "stage": "refresh and logout/back cannot restore session",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "child-responsive-1440",
+      "status": "FAIL",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "stage": "refresh and logout/back cannot restore session",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "parent-responsive-390",
+      "status": "FAIL",
+      "viewport": {
+        "width": 390,
+        "height": 1024
+      },
+      "stage": "parent real unlock and learner selection",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "parent-responsive-768",
+      "status": "FAIL",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "stage": "parent real unlock and learner selection",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "parent-authority-lifecycle",
+      "status": "FAIL",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "stage": "expiry and backend restart never restore stale permissions",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "real-login-errors-401-422-429",
+      "status": "FAIL",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "stage": "actual persistent rate limiter 429",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "offline-503-csrf-and-logout-recovery",
+      "status": "FAIL",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "stage": "failed logout is never claimed successful; recovery completes intent",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "cancel-timeout-and-late-response",
+      "status": "FAIL",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "stage": "network deadline does not become optimistic success",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "password-reset-and-idle-expiry",
+      "status": "FAIL",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "stage": "actual idle expiry does not recover from a stale UI",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    },
+    {
+      "name": "catalog-failure-isolation",
+      "status": "FAIL",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "stage": "missing/malformed subject cannot break other modules or identity",
+      "error": "POST_ORIGIN_CSRF_MISSING"
+    }
+  ]
+}

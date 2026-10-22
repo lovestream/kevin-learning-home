@@ -4,14 +4,17 @@ import { readFileSync } from "node:fs";
 
 test("R1-02 main push and development push/PR share the unconditional complete verification job", () => {
   const workflow = readFileSync(".github/workflows/foundation.yml", "utf8");
-  // Guard the checked-in inline branch lists; GitHub parses the actual YAML in CI.
+  // Guard the checked-in explicit branch lists; GitHub parses the actual YAML in CI.
   const branches = (event: string) => {
     const match = new RegExp(
-      `^  ${event}:\\s*\\n    branches: \\[([^\\]]+)\\]`,
+      `^  ${event}:\\s*\\n    branches:\\s*\\[([^\\]]+)\\]`,
       "m",
     ).exec(workflow);
     assert(match, "EXPECTED_EXPLICIT_EVENT_BRANCH_LIST");
-    return match[1].split(",").map((value) => value.trim());
+    return match[1]
+      .split(",")
+      .map((value) => value.trim())
+      .filter(Boolean);
   };
   assert.deepEqual(
     branches("push").sort(),
@@ -19,6 +22,7 @@ test("R1-02 main push and development push/PR share the unconditional complete v
       "main",
       "codex/implement-01-foundation",
       "codex/implement-02a-auth",
+      "codex/implement-02b-shell",
     ].sort(),
   );
   assert.deepEqual(branches("pull_request"), ["main"]);

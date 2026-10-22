@@ -8,6 +8,7 @@ import { authHTTP } from "./auth-http.ts";
 import { authConfig, type AuthConfig } from "../../packages/auth/config.ts";
 import type { AuthService } from "../../packages/auth/service.ts";
 import type { Store } from "../../packages/platform/store.ts";
+import { isShellRoute } from "../../packages/contracts/routes.ts";
 
 export interface TestContext {
   learnerId: string;
@@ -156,8 +157,7 @@ export function createHttp(
         key.startsWith("/.")
       )
         throw new AppError("PATH_INVALID", 400);
-      const allowed = ["/", "/subjects/math", "/subjects/english"];
-      const file = allowed.includes(key)
+      const file = isShellRoute(key)
         ? join(webRoot, "index.html")
         : key.startsWith("/assets/")
           ? join(webRoot, key)

@@ -1,7 +1,13 @@
-name: IMPLEMENT-02A auth and foundation
+name: IMPLEMENT-02B shell and auth
 on:
   push:
-    branches: [main, codex/implement-01-foundation, codex/implement-02a-auth]
+    branches:
+      [
+        main,
+        codex/implement-01-foundation,
+        codex/implement-02a-auth,
+        codex/implement-02b-shell,
+      ]
   pull_request:
     branches: [main]
 permissions:
@@ -20,6 +26,8 @@ jobs:
       - run: npm install --global npm@11.12.1
       - run: npm ci
       - run: npx playwright install --with-deps chromium
+      - name: Chinese system font for reproducible UI evidence (CI only)
+        run: sudo apt-get install --no-install-recommends -y fonts-noto-cjk
       - name: NAS gate controller syntax only (no NAS connection)
         run: python3 tests/nas-gate/check-probes.py
       - run: node scripts/verify.ts
@@ -39,7 +47,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: implement-02a-evidence
+          name: implement-02b-evidence
           path: .evidence
           retention-days: 14
           include-hidden-files: true

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-22",
+  "baselineMain": "f2c42c2475d0ae85c1688b13e437bc4332d12315",
+  "sourceTaskBranch": "chatgpt/klh-implement-02b-start",
+  "sourceTaskCommit": "aaf8fe6936f780b94f6aa55b7bbf3c1768bc52a9",
+  "sourceTaskPath": "docs/tasks/KLH-IMPLEMENT-02B-UI-SHELL.md",
+  "sourceTaskBlob": "f2fd44b8c5b8cde0fd7caa0d575119acfb2e2728",
+  "baselineMergedPR": 6,
+  "baselinePushMainCI": "https://github.com/lovestream/kevin-learning-home/actions/runs/39765830063",
+  "implementationBranch": "codex/implement-02b-shell",
+  "localFullVerification": {
+    "tests": 60,
+    "originalNodeTestsPreserved": 55,
+    "legacyBrowserViewports": 3,
+    "shellScenarios": 13,
+    "worktreeDirty": true
+  },
+  "localFollowup": "After full verification: child390 passed with added back-navigation assertion and post-login main focus; runtime image exclusion strengthened for tests/shell. Exact final source verified by full Linux CI.",
+  "notRun": [
+    "physical iPad/Safari",
+    "NAS",
+    "production HTTPS/Tailscale",
+    "real accounts/data"
+  ]
+}
