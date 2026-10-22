@@ -12,21 +12,21 @@
 
 ## 验收矩阵
 
-PASS_LOCAL 表示本机实际执行，PASS_CI 表示现代 Linux Actions 实际执行，NOT_RUN 不是通过。当前归档前本地 53 项 Node 测试（旧30+新23）、typecheck/build、3个 Chromium 视口通过。最终 CI/精确 HEAD 在下方证据段及 Draft PR 的 immutable run 链接核对，不能用基线 SHA 冒充02A测试提交。
+PASS_LOCAL 表示本机实际执行，PASS_CI 表示现代 Linux Actions 实际执行，NOT_RUN 不是通过。本地及首轮GitHub CI均通过53项Node测试（旧30+新23）、typecheck/build、3个Chromium视口；Linux正式镜像与Compose也通过。最终 CI/精确 HEAD 在下方证据段及 Draft PR 的 immutable run 链接核对，不能用基线 SHA 冒充02A测试提交。
 
 | ID | 当前结果 | 实际证据 |
 | --- | --- | --- |
-| A01 | PASS_LOCAL；CI待归档 | 冻结main旧runtime创建真实磁盘v1，旧10数据表count/hash一致，metadata旧row1相同，仅row2增量；001字节不变，重复迁移/未知版本负例 |
-| A02 | PASS_LOCAL；CI待归档 | 事务中抛错、子进程SIGKILL，旧runtime恢复v1；升级前checkpoint到新空目录回退；旧runtime拒绝v2 |
-| A03 | PASS_LOCAL；CI待归档 | 真实PTY bootstrap与取消不回显，非TTY拒绝；HTTP首访register/bootstrap/learner创建均不授权parent |
-| A04 | PASS_LOCAL；CI待归档 | 真实HTTP登录、哈希持久、轮换、闲置/绝对到期、跨设备注销；真实子进程SIGKILL后有效会话保持、注销不复活 |
-| A05 | PASS_LOCAL；CI待归档 | child自身scope、跨learner403、parent解锁和grant撤销、伪造role/Tailscale头、敏感未实现API403 |
-| A06 | PASS_LOCAL；CI待归档 | parent再次验证、5分钟到期/主动锁定、child403、凭据重置/epoch轮换、旧cookie失效 |
-| A07 | PASS_LOCAL；CI待归档 | 真实TLS信任临时证书验证Secure/HttpOnly/Strict/host-only；Origin/Host/CSRF/重复cookie/固定cookie/正式main拒HTTP容器降级 |
-| A08 | PASS_LOCAL；CI待归档 | 同错误已知/未知/损坏凭据、持久限频跨重启、KDF最多2、私有目录、无明文身份秘密归档 |
-| A09 | PASS_LOCAL；CI待归档 | v2身份/凭据版本/grants保真；学习事件/receipt/media保真；恢复旧session及elevation全部撤销 |
-| A10 | PASS_LOCAL；Linux容器CI待归档 | 旧30断言保留，新23项；100k事件ready仍6条SQL、live0SQL；Docker kill/restart与auth启用恢复由Linux CI验证 |
-| A11 | 本地PASS；CI待归档 | workflow包含4个新auth测试文件和auth镜像验证，checkout精确head及完整历史，JUnit应53项；最新HEAD完成后归档 |
+| A01 | PASS_LOCAL / PASS_CI | 冻结main旧runtime创建真实磁盘v1，旧10数据表count/hash一致，metadata旧row1相同，仅row2增量；001字节不变，重复迁移/未知版本负例 |
+| A02 | PASS_LOCAL / PASS_CI | 事务中抛错、子进程SIGKILL，旧runtime恢复v1；升级前checkpoint到新空目录回退；旧runtime拒绝v2 |
+| A03 | PASS_LOCAL / PASS_CI | 真实PTY bootstrap与取消不回显，非TTY拒绝；HTTP首访register/bootstrap/learner创建均不授权parent |
+| A04 | PASS_LOCAL / PASS_CI | 真实HTTP登录、哈希持久、轮换、闲置/绝对到期、跨设备注销；真实子进程SIGKILL后有效会话保持、注销不复活 |
+| A05 | PASS_LOCAL / PASS_CI | child自身scope、跨learner403、parent解锁和grant撤销、伪造role/Tailscale头、敏感未实现API403 |
+| A06 | PASS_LOCAL / PASS_CI | parent再次验证、5分钟到期/主动锁定、child403、凭据重置/epoch轮换、旧cookie失效 |
+| A07 | PASS_LOCAL / PASS_CI | 真实TLS信任临时证书验证Secure/HttpOnly/Strict/host-only；Origin/Host/CSRF/重复cookie/固定cookie/正式main拒HTTP容器降级 |
+| A08 | PASS_LOCAL / PASS_CI | 同错误已知/未知/损坏凭据、持久限频跨重启、KDF最多2、私有目录、无明文身份秘密归档 |
+| A09 | PASS_LOCAL / PASS_CI | v2身份/凭据版本/grants保真；学习事件/receipt/media保真；恢复旧session及elevation全部撤销 |
+| A10 | PASS_LOCAL / PASS_CI | 旧30断言保留，新23项；100k事件ready仍6条SQL、live0SQL；Docker kill/restart与auth启用恢复已在Linux CI通过 |
+| A11 | PASS_LOCAL / PASS_CI | workflow包含4个新auth测试文件和auth镜像验证，checkout精确head及完整历史，JUnit应53项；精确实现HEAD及首轮结果已归档，最终归档HEAD由PR6正文/checks定位 |
 | A12 | PASS_LOCAL（代码/动作范围） | 旧仓库只读Git元数据前后核对，不读真实数据；未连接NAS、未运行其Docker/SSH、未创建真实账号 |
 
 NAS02A、正式HTTPS入口、实体iPad/Mac身份UI、真实账户与生产部署均 NOT_RUN，且本轮未授权。现代Linux通过不能消除 DS918+ Linux4.4 的 Node24 官方支持风险。
@@ -41,7 +41,7 @@ NAS02A、正式HTTPS入口、实体iPad/Mac身份UI、真实账户与生产部�
 
 ## CI 与归档状态
 
-此段在首次 CI 完成后更新。提交过程分为实现提交及证据归档提交；文档无法包含自己的提交SHA，**最终归档提交本身的精确HEAD与最后一轮checks链接以Draft PR正文为准**，Actions内生成的 verification.json.executedHeadSha 必须与其一致且 worktreeDirty=false。归档的首轮结果必须明确其实际执行SHA；最后一轮运行验证整个归档提交，不能只检查父提交绿灯。
+已创建 [Draft PR #6](https://github.com/lovestream/kevin-learning-home/pull/6)。首轮精确实现提交 `8e7a9bdfb64bb40a31dd08b62366fe5c01eb17a5` 的 [PR CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39702101580) 与 [push CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39702076108) 均为 success；53项Node/3视口、Compose1.28.5、non-root readonly正式镜像、flock竞争、Node进程SIGKILL后Docker自动重启（RestartCount=1）、volume重建/恢复，以及启用auth的会话持久/注销/恢复撤销均通过。100k事件ready仍6条SQL、live0条SQL，实测环境Node24.15.0/linux-x64/kernel6.17.0-1022-azure。原始artifact已下载并核对 `executedHeadSha` 与 `worktreeDirty=false`；长期安全摘要在[ci/run.json](evidence/02a/ci/run.json)、[全部用例](evidence/02a/ci/test-cases.json)、[auth镜像证据](evidence/02a/ci/auth-container.json)、[原容器证据](evidence/02a/ci/container.json)。本轮CI没有失败；Actions给出旧action metadata声明Node20但强制Node24执行的非阻塞提示，应用实际运行版本为24.15.0，未借此变更底座依赖。提交过程分为实现提交及证据归档提交；文档无法包含自己的提交SHA，**最终归档提交本身的精确HEAD与最后一轮checks链接以[Draft PR #6正文](https://github.com/lovestream/kevin-learning-home/pull/6)为准**，Actions内生成的 verification.json.executedHeadSha 必须与其一致且 worktreeDirty=false。归档的首轮结果必须明确其实际执行SHA；最后一轮运行验证整个归档提交，不能只检查父提交绿灯。
 
 基线PR5 CI为历史背景，不计02A通过。workflow 名为 IMPLEMENT-02A auth and foundation；继续跑静态NAS探针语法检查（无NAS连接）、Compose1.28.5校验和验证、生产镜像构建/隔离/杀进程自动重启/备份恢复，新增auth启用的生产镜像重启/注销/恢复撤销验证。PR保持Draft供独立审查。
 
