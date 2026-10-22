@@ -251,7 +251,7 @@ test("R1 malformed legacy markers and symlink lock paths fail closed without del
     );
     assert.equal(readFileSync(path, "utf8"), "incomplete");
     const directory = join(f.root, "symlink-data");
-    mkdirSync(directory);
+    mkdirSync(directory, { mode: 0o700 });
     symlinkSync(path, join(directory, ".writer.lock"));
     assert.throws(() => new Store(directory), /WRITER_LOCKED_OR_UNWRITABLE/);
     evidence.push({

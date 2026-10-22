@@ -7,6 +7,7 @@ import assert from "node:assert/strict";
 import { fixture, rawRead } from "./helpers.ts";
 import { syntheticCommand } from "../../scripts/synthetic.ts";
 import { Store } from "../../packages/platform/store.ts";
+import { verifyContainerAuth } from "../auth/container-smoke.ts";
 import {
   backup,
   restore,
@@ -94,6 +95,8 @@ try {
       "/tmp:rw,noexec,nosuid,size=16m",
       "-p",
       "127.0.0.1::4177",
+      "-e",
+      "KLH_AUTH_ORIGIN=",
       ...mountArgs(paths),
       image,
     ]).trim();
@@ -105,7 +108,10 @@ try {
       try {
         // RestartCount/Running may update before Docker republishes a dynamic
         // port. Resolve it inside the same bounded readiness wait.
-        const hostPort = run(["port", name, "4177/tcp"]).trim().split(":").at(-1);
+        const hostPort = run(["port", name, "4177/tcp"])
+          .trim()
+          .split(":")
+          .at(-1);
         const r = await rawRead(
           "http://127.0.0.1:" + hostPort + "/health/ready",
           { Host: "127.0.0.1:4177" },
@@ -213,7 +219,11 @@ try {
   // Kill only the actual Node child of Docker's init. docker kill is an
   // operator stop and suppresses unless-stopped recovery on this daemon.
   run([
-    "exec", name, "node", "--input-type=module", "-e",
+    "exec",
+    name,
+    "node",
+    "--input-type=module",
+    "-e",
     "import fs from 'node:fs';import assert from 'node:assert/strict';const children=fs.readFileSync('/proc/1/task/1/children','utf8').trim().split(/\\s+/);assert.equal(children.length,1);const pid=Number(children[0]);assert(pid>1);assert(fs.readFileSync('/proc/'+pid+'/cmdline','utf8').includes('apps/server/main.ts'));process.kill(pid,'SIGKILL');",
   ]);
   let autoRestartCount = 0;
@@ -289,6 +299,7 @@ try {
   assert.notEqual(denied.status, 0);
   assert.match(denied.stderr, /WRITER_LOCKED_OR_UNWRITABLE|STARTUP_FAILED/);
   assert.equal(denied.error, undefined);
+  await verifyContainerAuth(image, name + "-auth");
   const evidence = {
     status: "PASS_CI",
     scope: "modern Linux amd64, never NAS",
@@ -305,7 +316,8 @@ try {
     restartPolicy: "unless-stopped",
     autoRestartCount,
     autoRestartAfterProcessKill: true,
-    autoRestartTrigger: "SIGKILL to verified Node child of init; not docker kill",
+    autoRestartTrigger:
+      "SIGKILL to verified Node child of init; not docker kill",
     unhealthyAloneDidNotRestart: true,
     productionHealthCommandRecovered: true,
     nonRoot: true,

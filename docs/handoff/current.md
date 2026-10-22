@@ -1,9 +1,7 @@
 # 当前交接
 
-当前仅执行IMPLEMENT-01 R1整改，沿用草稿 [PR #5](https://github.com/lovestream/kevin-learning-home/pull/5)。详细版本、CI与停止线见 [IMPLEMENT-01交接](IMPLEMENT-01.md) 和 [R1整改报告](../implementation/IMPLEMENT-01-review-R1.md)。
+2026-10-22：PR #5已正式合并，main=`87ec45e95809d00b7104242702fb28ffbb6f7881`。用户已明确批准IMPLEMENT-02A；本轮在新分支`codex/implement-02a-auth`完成后端身份/授权和SQLite v2，建立独立Draft PR等待ChatGPT审查。详见[02A交接](IMPLEMENT-02A.md)、[执行报告及CI](../implementation/IMPLEMENT-02A-execution-report.md)与[证据](../implementation/evidence/02a/README.md)。
 
-等待ChatGPT重新审查；不合并，不开始IMPLEMENT-02A/02B，不部署NAS生产服务。原数学/英语继续独立，未修改旧项目或真实数据。
+旧数学/英语继续独立，未修改其源码、运行环境或真实数据。本轮没有连接/部署NAS；历史[PR5 NAS验收](../implementation/IMPLEMENT-01-NAS-GATE-report.md)不等于02A实测，Node24/Linux4.4风险保留。
 
-NAS GATE已另获用户一次性隔离测试授权，最新进展及完成结论见 [NAS报告](../implementation/IMPLEMENT-01-NAS-GATE-report.md)；任务范围是合成数据真机验收与本次资源清理，仍不含生产部署、合并或第二阶段。历史R1只读NAS记录不作为这次实测结果。
-
-最新NAS结论：**PASS_NAS_WITH_UNSUPPORTED_KERNEL_RISK**，G01～G05完成；两次测试资源全部清理，原8个容器状态与启动/重启摘要不变。Node24/Linux4.4长期风险保留，未获生产部署批准。最终提交的CI及具体证据见PR #5说明与checks，继续等待ChatGPT复审。
+停止在02A Draft PR和最新HEAD的完整CI：不合并，不启动02B，不创建真实账户/导入真实记录，不配置生产HTTPS或NAS服务。下一步由ChatGPT独立复审。

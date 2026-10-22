@@ -1,7 +1,7 @@
-name: IMPLEMENT-01 foundation
+name: IMPLEMENT-02A auth and foundation
 on:
   push:
-    branches: [codex/implement-01-foundation]
+    branches: [codex/implement-01-foundation, codex/implement-02a-auth]
   pull_request:
     branches: [main]
 permissions:
@@ -14,6 +14,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with: { node-version: "24.15.0", cache: npm }
       - run: npm install --global npm@11.12.1
@@ -38,7 +39,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: implement-01-evidence
+          name: implement-02a-evidence
           path: .evidence
           retention-days: 14
           include-hidden-files: true
