@@ -15,14 +15,16 @@
     "build": "vite build --config apps/web/vite.config.ts",
     "typecheck": "tsc --noEmit",
     "start": "node apps/server/main.ts",
-    "test": "node --test --test-concurrency=1 tests/foundation/*.test.ts",
+    "test": "node --test --test-concurrency=1 tests/foundation/*.test.ts tests/auth/*.test.ts",
     "test:browser": "node tests/foundation/browser-smoke.ts",
     "test:container": "node tests/foundation/container-smoke.ts",
     "migrate": "node scripts/maintenance.ts migrate",
     "seed:synthetic": "node scripts/maintenance.ts seed --synthetic",
     "backup": "node scripts/maintenance.ts backup",
     "restore": "node scripts/maintenance.ts restore",
-    "verify": "npm run typecheck && npm run build && npm test && npm run test:browser"
+    "verify": "npm run typecheck && npm run build && npm test && npm run test:browser",
+    "test:auth": "node --test --test-concurrency=1 tests/auth/*.test.ts",
+    "auth:admin": "node scripts/auth-admin.ts"
   },
   "dependencies": {
     "fs-ext": "2.1.1",

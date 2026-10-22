@@ -1,0 +1,29 @@
+{
+  "expectedRedBaseline": "1a31550670b5eb7f4e169e9a0f969ade9a62ffdc",
+  "newRegressionsBeforeFix": [
+    {
+      "name": "R1-01 real HTTP hides locked parent scope through login, lock, rotation, expiry and restart while child scope remains intact",
+      "status": "EXPECTED_FAIL"
+    },
+    {
+      "name": "R1-02 main push and development push/PR share the unconditional complete verification job",
+      "status": "EXPECTED_FAIL"
+    }
+  ],
+  "afterFixTargeted": [
+    {
+      "name": "R1-01 real HTTP hides locked parent scope through login, lock, rotation, expiry and restart while child scope remains intact",
+      "status": "PASS_LOCAL"
+    },
+    {
+      "name": "A09 v2 backup preserves actors/grants/credential versions, events and media; restored sessions always revoked",
+      "status": "PASS_LOCAL"
+    },
+    {
+      "name": "R1-02 main push and development push/PR share the unconditional complete verification job",
+      "status": "PASS_LOCAL"
+    }
+  ],
+  "unexpectedLocalFailures": 0,
+  "rawCredentialLogsArchived": false
+}

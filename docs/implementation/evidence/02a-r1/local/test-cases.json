@@ -1,0 +1,288 @@
+{
+  "total": 55,
+  "original53Retained": true,
+  "originalNamesUnchanged": true,
+  "originalCount": 53,
+  "newCount": 2,
+  "newCases": [
+    "R1-01 real HTTP hides locked parent scope through login, lock, rotation, expiry and restart while child scope remains intact",
+    "R1-02 main push and development push/PR share the unconditional complete verification job"
+  ],
+  "cases": [
+    {
+      "name": "A03 bootstrap rejects pipes, HTTP-first-admin shortcuts, credential arguments and implicit synthetic mode",
+      "durationSeconds": "0.190688",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 real PTY bootstrap is synthetic, non-echoing and stores only salted versioned slow hashes",
+      "durationSeconds": "0.237734",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 interrupted interactive bootstrap leaves zero accounts and releases writer ownership",
+      "durationSeconds": "0.112272",
+      "status": "PASS"
+    },
+    {
+      "name": "A08 credential salts differ, valid/invalid checks use same scheme and unsupported schemes fail closed",
+      "durationSeconds": "0.434725",
+      "status": "PASS"
+    },
+    {
+      "name": "A04/A07 real TLS login sets host-only Secure HttpOnly Strict cookie; no credential or bearer is stored in plaintext",
+      "durationSeconds": "0.403237",
+      "status": "PASS"
+    },
+    {
+      "name": "A05/A06 actual HTTP child scope, parent second unlock, grant checks and forged proxy/role headers",
+      "durationSeconds": "0.669722",
+      "status": "PASS"
+    },
+    {
+      "name": "A04/A06 restart, idle and absolute expiry, rotation, lock timeout and cross-device logout remain server authoritative",
+      "durationSeconds": "0.782733",
+      "status": "PASS"
+    },
+    {
+      "name": "A07 login CSRF, synchronized token, Host/Origin, fixation, duplicate cookies and unsupported APIs fail closed",
+      "durationSeconds": "0.448646",
+      "status": "PASS"
+    },
+    {
+      "name": "A08 persistent uniform login limits survive restart and ignore forged client-address headers",
+      "durationSeconds": "1.412826",
+      "status": "PASS"
+    },
+    {
+      "name": "A04/A06 credential reset and authority rotation invalidate all old sessions and elevation",
+      "durationSeconds": "0.871675",
+      "status": "PASS"
+    },
+    {
+      "name": "A07 production cannot select insecure loopback, arbitrary origin or weakened cookie mode",
+      "durationSeconds": "0.000237",
+      "status": "PASS"
+    },
+    {
+      "name": "A03 unauthenticated first visitor cannot bootstrap or register a parent over HTTP",
+      "durationSeconds": "0.124055",
+      "status": "PASS"
+    },
+    {
+      "name": "A10 readiness includes bounded auth-control primary-key probe and detects missing runtime authority",
+      "durationSeconds": "0.230065",
+      "status": "PASS"
+    },
+    {
+      "name": "A08 unsupported stored credential format fails with the same public login error as an unknown actor",
+      "durationSeconds": "0.443719",
+      "status": "PASS"
+    },
+    {
+      "name": "A04 aged sessions rotate and revoke atomically without nesting the idle-touch transaction",
+      "durationSeconds": "0.337669",
+      "status": "PASS"
+    },
+    {
+      "name": "R1-01 real HTTP hides locked parent scope through login, lock, rotation, expiry and restart while child scope remains intact",
+      "durationSeconds": "0.779057",
+      "status": "PASS"
+    },
+    {
+      "name": "A01 actual frozen-main v1 database upgrades losslessly through checkpoint; repeat is idempotent and old image rejects v2",
+      "durationSeconds": "0.112952",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 injected failure after v2 SQL rolls back schema/data atomically and leaves verified v1 checkpoint",
+      "durationSeconds": "0.068963",
+      "status": "PASS"
+    },
+    {
+      "name": "A02 SIGKILL mid-migration leaves v1 usable by actual frozen runtime, then clean retry succeeds",
+      "durationSeconds": "0.202951",
+      "status": "PASS"
+    },
+    {
+      "name": "A09 v2 backup preserves actors/grants/credential versions, events and media; restored sessions always revoked",
+      "durationSeconds": "0.880426",
+      "status": "PASS"
+    },
+    {
+      "name": "A04/A10 actual authenticated HTTP survives child SIGKILL; logged-out session remains revoked after second restart",
+      "durationSeconds": "0.488659",
+      "status": "PASS"
+    },
+    {
+      "name": "A08 KDF work admission is bounded and never replaces persistent auth state",
+      "durationSeconds": "0.112550",
+      "status": "PASS"
+    },
+    {
+      "name": "A07 real production entry rejects HTTP development mode on a container network bind",
+      "durationSeconds": "0.093049",
+      "status": "PASS"
+    },
+    {
+      "name": "A08 credential database directory must be private without automatic permission changes",
+      "durationSeconds": "0.012824",
+      "status": "PASS"
+    },
+    {
+      "name": "R1-02 main push and development push/PR share the unconditional complete verification job",
+      "durationSeconds": "0.000762",
+      "status": "PASS"
+    },
+    {
+      "name": "F11 native HTTP rejects forged Host, cross-origin commands and cross-learner access",
+      "durationSeconds": "0.034268",
+      "status": "PASS"
+    },
+    {
+      "name": "F03 empty schema migration, WAL/FULL/FK/busy_timeout, repeat opening is idempotent",
+      "durationSeconds": "0.015339",
+      "status": "PASS"
+    },
+    {
+      "name": "F03 rejects future and legacy nonempty schemas without clearing records",
+      "durationSeconds": "0.016073",
+      "status": "PASS"
+    },
+    {
+      "name": "F03 rejects incompatible extra columns and changed migration checksum",
+      "durationSeconds": "0.014249",
+      "status": "PASS"
+    },
+    {
+      "name": "single writer process lock rejects a second app or maintenance operation",
+      "durationSeconds": "0.014131",
+      "status": "PASS"
+    },
+    {
+      "name": "F04 100 simultaneous real HTTP duplicates create one event and receipt",
+      "durationSeconds": "0.048931",
+      "status": "PASS"
+    },
+    {
+      "name": "F04 same command key changed payload returns 409 without any table changes",
+      "durationSeconds": "0.018553",
+      "status": "PASS"
+    },
+    {
+      "name": "F04 replay returns original result and committed revision with current revision after later writes",
+      "durationSeconds": "0.015278",
+      "status": "PASS"
+    },
+    {
+      "name": "F05 two independent test sessions compete on revision; exactly one commits",
+      "durationSeconds": "0.015734",
+      "status": "PASS"
+    },
+    {
+      "name": "F05 a real SQL constraint failure at transaction tail rolls all tables back",
+      "durationSeconds": "0.015773",
+      "status": "PASS"
+    },
+    {
+      "name": "F11 runtime schemas reject client scores, unknown fields, versions, and wrong keys",
+      "durationSeconds": "0.017044",
+      "status": "PASS"
+    },
+    {
+      "name": "F11 production rejects all learning/auth/parent/media write paths and spoofed identity",
+      "durationSeconds": "0.015725",
+      "status": "PASS"
+    },
+    {
+      "name": "F11 test context cannot be enabled in production library configuration",
+      "durationSeconds": "0.013828",
+      "status": "PASS"
+    },
+    {
+      "name": "immutable events and receipts, bounded projection, no wallet table",
+      "durationSeconds": "0.014047",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 readiness performs bounded SQL at 100000 events; liveness does zero SQL; deep check remains offline",
+      "durationSeconds": "0.378297",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 real external SQLite writer makes readiness 503 within bounded busy wait; release restores 200",
+      "durationSeconds": "0.134087",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 readiness rejects inaccessible/replaced DB, incompatible runtime version and closed connection",
+      "durationSeconds": "0.020196",
+      "status": "PASS"
+    },
+    {
+      "name": "F09 checkpoints reject manifest identity drift and missing relational content references",
+      "durationSeconds": "0.021875",
+      "status": "PASS"
+    },
+    {
+      "name": "F08 offline checkpoint restores DB, media, content, revisions, event and receipt hashes into empty host layout",
+      "durationSeconds": "0.051863",
+      "status": "PASS"
+    },
+    {
+      "name": "F08 corrupted media/database checkpoints fail without publishing or overwriting targets",
+      "durationSeconds": "0.031644",
+      "status": "PASS"
+    },
+    {
+      "name": "F08 checkpoint failure never replaces previous good backup; symlink/path injections rejected",
+      "durationSeconds": "0.034887",
+      "status": "PASS"
+    },
+    {
+      "name": "F09 manifest identity/version/hash, private denied, immutable local provider root switch",
+      "durationSeconds": "0.015041",
+      "status": "PASS"
+    },
+    {
+      "name": "F09 traversal, absolute paths, symlink file/parent/root, missing objects are rejected",
+      "durationSeconds": "0.013709",
+      "status": "PASS"
+    },
+    {
+      "name": "F06 real Node process stop/restart preserves state and original receipt",
+      "durationSeconds": "0.187695",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 writer SIGTERM releases kernel ownership and replays exact committed evidence in new process",
+      "durationSeconds": "0.145042",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 writer SIGKILL releases kernel ownership and replays exact committed evidence in new process",
+      "durationSeconds": "0.139762",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 simultaneous independent process starts have exactly one owner; contenders cannot evict it",
+      "durationSeconds": "0.278573",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 independent backup CLI is excluded by live owner and succeeds after SIGKILL",
+      "durationSeconds": "0.314870",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 v1 marker requires explicit offline migration and cannot override live v2 flock",
+      "durationSeconds": "0.147215",
+      "status": "PASS"
+    },
+    {
+      "name": "R1 malformed legacy markers and symlink lock paths fail closed without deleting them",
+      "durationSeconds": "0.014146",
+      "status": "PASS"
+    }
+  ]
+}

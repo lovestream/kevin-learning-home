@@ -4,6 +4,7 @@ import {
   prepareLayout,
   backup,
   restore,
+  upgrade,
 } from "../packages/platform/checkpoint.ts";
 import { Store } from "../packages/platform/store.ts";
 import { AppError } from "../packages/contracts/index.ts";
@@ -27,6 +28,8 @@ try {
         paths.data,
         args.includes("--confirm-all-v1-writers-stopped"),
       );
+    else if (action === "upgrade")
+      result = upgrade(paths, argument("--checkpoint"));
     else if (action === "backup") result = backup(paths, argument("--out"));
     else if (action === "migrate" || action === "seed") {
       if (action === "seed" && !args.includes("--synthetic"))
@@ -39,7 +42,7 @@ try {
           seed(store, paths);
         }
         result = {
-          schemaVersion: 1,
+          schemaVersion: store.schemaVersion,
           environment: store.environment(),
           tables: store.summary(),
         };

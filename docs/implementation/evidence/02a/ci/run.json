@@ -1,0 +1,139 @@
+{
+  "databaseId": 39702101580,
+  "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/39702101580",
+  "headSha": "8e7a9bdfb64bb40a31dd08b62366fe5c01eb17a5",
+  "conclusion": "success",
+  "status": "completed",
+  "name": "IMPLEMENT-02A auth and foundation",
+  "event": "pull_request",
+  "createdAt": "2026-10-22T00:50:26Z",
+  "updatedAt": "2026-10-22T00:52:34Z",
+  "jobs": [
+    {
+      "name": "foundation",
+      "databaseId": 119573516010,
+      "conclusion": "success",
+      "startedAt": "2026-10-22T00:50:30Z",
+      "completedAt": "2026-10-22T00:52:34Z",
+      "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/39702101580/job/119573516010",
+      "steps": [
+        {
+          "name": "Set up job",
+          "number": 1,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:50:30Z",
+          "completedAt": "2026-10-22T00:50:31Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:50:31Z",
+          "completedAt": "2026-10-22T00:50:32Z"
+        },
+        {
+          "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+          "number": 3,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:50:32Z",
+          "completedAt": "2026-10-22T00:50:37Z"
+        },
+        {
+          "name": "Run npm install --global npm@11.12.1",
+          "number": 4,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:50:37Z",
+          "completedAt": "2026-10-22T00:50:41Z"
+        },
+        {
+          "name": "Run npm ci",
+          "number": 5,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:50:41Z",
+          "completedAt": "2026-10-22T00:50:46Z"
+        },
+        {
+          "name": "Run npx playwright install --with-deps chromium",
+          "number": 6,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:50:46Z",
+          "completedAt": "2026-10-22T00:51:08Z"
+        },
+        {
+          "name": "NAS gate controller syntax only (no NAS connection)",
+          "number": 7,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:51:08Z",
+          "completedAt": "2026-10-22T00:51:08Z"
+        },
+        {
+          "name": "Run node scripts/verify.ts",
+          "number": 8,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:51:08Z",
+          "completedAt": "2026-10-22T00:51:31Z"
+        },
+        {
+          "name": "Compose 1.28.5 parser compatibility (no daemon or service start)",
+          "number": 9,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:51:31Z",
+          "completedAt": "2026-10-22T00:51:32Z"
+        },
+        {
+          "name": "Container isolation and restored-host verification",
+          "number": 10,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:51:32Z",
+          "completedAt": "2026-10-22T00:52:28Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "number": 11,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:52:28Z",
+          "completedAt": "2026-10-22T00:52:29Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+          "number": 21,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:52:29Z",
+          "completedAt": "2026-10-22T00:52:31Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 22,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:52:31Z",
+          "completedAt": "2026-10-22T00:52:31Z"
+        },
+        {
+          "name": "Complete job",
+          "number": 23,
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-22T00:52:31Z",
+          "completedAt": "2026-10-22T00:52:31Z"
+        }
+      ]
+    }
+  ],
+  "otherPassedRunUrl": "https://github.com/lovestream/kevin-learning-home/actions/runs/39702076108",
+  "pullRequest": "https://github.com/lovestream/kevin-learning-home/pull/6",
+  "nasExecuted": false,
+  "actionMetadataWarning": "Pinned checkout/setup-node/upload-artifact target Node20 in their metadata; GitHub forced actions onto Node24. Application and tests explicitly used Node24.15.0; checks successful."
+}

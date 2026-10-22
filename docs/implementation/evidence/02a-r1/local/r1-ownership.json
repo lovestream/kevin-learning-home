@@ -1,0 +1,57 @@
+{
+  "scope": "synthetic real Node processes; never NAS",
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "SIGTERM",
+      "status": "PASS",
+      "death": {
+        "exitCode": 0,
+        "signal": null
+      },
+      "tableHashesPreserved": true,
+      "receiptReplayed": true,
+      "stableInodePreserved": true
+    },
+    {
+      "case": "SIGKILL",
+      "status": "PASS",
+      "death": {
+        "exitCode": null,
+        "signal": "SIGKILL"
+      },
+      "tableHashesPreserved": true,
+      "receiptReplayed": true,
+      "stableInodePreserved": true
+    },
+    {
+      "case": "two-process-initialization-and-live-contention",
+      "status": "PASS",
+      "owners": 1,
+      "blocked": 1,
+      "repeatedContenders": 3,
+      "activeOwnerPreserved": true
+    },
+    {
+      "case": "live-app-backup-CLI-exclusion",
+      "status": "PASS",
+      "blockedExitCode": 1,
+      "postKillBackupExitCode": 0,
+      "restoreExitCode": 0
+    },
+    {
+      "case": "v1-offline-transition",
+      "status": "PASS",
+      "noPIDLivenessInference": true,
+      "sameInode": true,
+      "liveV2OwnerCannotBeOverridden": true,
+      "unconfirmedCLIExitCode": 1,
+      "confirmedCLIExitCode": 0
+    },
+    {
+      "case": "unknown-and-symlink-lock-rejected",
+      "status": "PASS",
+      "originalPreserved": true
+    }
+  ]
+}

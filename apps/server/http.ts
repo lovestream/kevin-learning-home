@@ -4,6 +4,9 @@ import { join, resolve } from "node:path";
 import { randomUUID } from "node:crypto";
 import { AppError, parseCommand } from "../../packages/contracts/index.ts";
 import { subjects, wallet } from "../../packages/subjects/index.ts";
+import { authHTTP } from "./auth-http.ts";
+import { authConfig, type AuthConfig } from "../../packages/auth/config.ts";
+import type { AuthService } from "../../packages/auth/service.ts";
 import type { Store } from "../../packages/platform/store.ts";
 
 export interface TestContext {
@@ -15,6 +18,7 @@ export function createHttp(
   options: {
     webRoot: string;
     origin: string;
+    auth?: { service: AuthService; config: AuthConfig };
     readiness?: () => void;
     testContext?: (req: IncomingMessage) => TestContext | null;
     afterWrites?: () => void;
@@ -22,6 +26,19 @@ export function createHttp(
 ) {
   if (options.testContext && process.env.NODE_ENV !== "test")
     throw new AppError("TEST_CONTEXT_DISABLED", 503);
+  if (options.auth) {
+    if (options.testContext) throw new AppError("TEST_CONTEXT_DISABLED", 503);
+    const validated = authConfig(
+      options.auth.config.origin,
+      options.auth.config.mode,
+    );
+    if (
+      validated.origin !== options.origin ||
+      validated.secure !== options.auth.config.secure ||
+      validated.cookieName !== options.auth.config.cookieName
+    )
+      throw new AppError("AUTH_ORIGIN_CONFIG", 503);
+  }
   const webRoot = resolve(options.webRoot),
     origin = new URL(options.origin);
   return createServer(async (req, res) => {
@@ -49,19 +66,35 @@ export function createHttp(
       if (req.method === "GET" && path === "/health/ready") {
         if (!store.isReady()) throw new AppError("STORAGE_UNAVAILABLE", 503);
         options.readiness?.();
-        return json(200, { status: "ready", schemaVersion: 1 });
+        return json(200, {
+          status: "ready",
+          schemaVersion: store.schemaVersion,
+        });
       }
       if (req.method === "GET" && path === "/api/v1/config")
         return json(200, {
           schemaVersion: 1,
           subjects,
           features: {
+            auth: !!options.auth,
             learning: false,
             parent: false,
             mediaDelivery: false,
             wallet: wallet.enabled,
           },
         });
+      if (
+        options.auth &&
+        (await authHTTP(
+          req,
+          path,
+          options.auth.service,
+          options.auth.config,
+          json,
+          (value) => res.setHeader("Set-Cookie", value),
+        ))
+      )
+        return;
       if (path.startsWith("/api/")) {
         const route =
           /^\/api\/v1\/learners\/([^/]+)\/subjects\/(foundation-demo)\/(state|commands)$/.exec(
@@ -150,6 +183,8 @@ export function createHttp(
     } catch (e) {
       const err =
         e instanceof AppError ? e : new AppError("STORAGE_UNAVAILABLE", 503);
+      if (!res.headersSent && err.status === 429)
+        res.setHeader("Retry-After", err.code === "AUTH_BUSY" ? "1" : "900");
       if (!res.headersSent)
         json(err.status, {
           schemaVersion: 1,
@@ -157,7 +192,7 @@ export function createHttp(
           error: {
             code: err.code,
             message: err.code,
-            retryable: err.status === 503,
+            retryable: err.status === 503 || err.status === 429,
             ...(err.currentRevision === undefined
               ? {}
               : { currentRevision: err.currentRevision }),

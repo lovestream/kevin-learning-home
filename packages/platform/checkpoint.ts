@@ -125,6 +125,7 @@ export function backup(
   paths: Layout,
   destination: string,
   beforePublish?: () => void,
+  heldStore?: Store,
 ) {
   const target = resolve(destination);
   if (existsSync(target)) throw new AppError("BACKUP_DESTINATION_EXISTS", 409);
@@ -140,7 +141,9 @@ export function backup(
   mkdirSync(stage, { mode: 0o700 });
   let store: Store | undefined;
   try {
-    store = new Store(paths.data);
+    store = heldStore ?? new Store(paths.data, { legacyMaintenance: true });
+    if (store.directory !== resolve(paths.data))
+      throw new AppError("CHECKPOINT_STORE_SCOPE", 503);
     verifyContent(store, paths);
     store.verifyIntegrity();
     store.db.prepare("VACUUM INTO ?").run(join(stage, "learning.sqlite"));
@@ -174,7 +177,7 @@ export function backup(
     files["learning.sqlite"] = fingerprintWithin(stage, "learning.sqlite");
     const manifest = {
       format: "klh-checkpoint",
-      schemaVersion: SCHEMA_VERSION,
+      schemaVersion: store.schemaVersion,
       appVersion: "0.1.0",
       nodeVersion: process.version,
       createdAt: new Date().toISOString(),
@@ -199,7 +202,7 @@ export function backup(
     rmSync(stage, { recursive: true, force: true });
     throw e;
   } finally {
-    store?.close();
+    if (!heldStore) store?.close();
   }
 }
 export function restore(checkpoint: string, emptyDestination: string) {
@@ -212,7 +215,7 @@ export function restore(checkpoint: string, emptyDestination: string) {
   );
   if (
     manifest.format !== "klh-checkpoint" ||
-    manifest.schemaVersion !== SCHEMA_VERSION ||
+    ![1, SCHEMA_VERSION].includes(manifest.schemaVersion) ||
     !manifest.files ||
     typeof manifest.files !== "object"
   )
@@ -250,12 +253,38 @@ export function restore(checkpoint: string, emptyDestination: string) {
       if (info.sizeBytes !== entry.sizeBytes || info.sha256 !== entry.sha256)
         throw new AppError("CHECKPOINT_HASH_MISMATCH", 422);
     }
-    const store = new Store(paths.data);
+    const store = new Store(paths.data, { legacyMaintenance: true });
     try {
+      if (store.schemaVersion !== manifest.schemaVersion)
+        throw new AppError("CHECKPOINT_SCHEMA_MISMATCH", 422);
       store.verifyIntegrity();
       verifyContent(store, paths);
       if (canonical(store.summary()) !== canonical(manifest.tables))
         throw new AppError("RESTORE_TABLE_MISMATCH", 422);
+      // Validate exact archive first, then deliberately invalidate restored sessions.
+      // No bearer secret is ever persisted in a checkpoint. Empty auth tables stay identical.
+      if (
+        store.schemaVersion === 2 &&
+        Number(
+          store.db.prepare("SELECT count(*) n FROM auth_sessions").get()!.n,
+        ) > 0
+      ) {
+        store.transaction(() => {
+          const now = Date.now();
+          store.db
+            .prepare(
+              "UPDATE auth_sessions SET revoked_at=COALESCE(revoked_at,?),parent_unlock_until=0",
+            )
+            .run(now);
+          store.db.exec("UPDATE auth_controls SET epoch=epoch+1 WHERE id=1");
+          store.db
+            .prepare(
+              "INSERT INTO auth_audit(event,actor_id,at) VALUES('restore_invalidate',NULL,?)",
+            )
+            .run(now);
+        });
+        store.verifyIntegrity();
+      }
     } finally {
       store.close();
     }
@@ -271,5 +300,29 @@ export function restore(checkpoint: string, emptyDestination: string) {
   } catch (e) {
     rmSync(stage, { recursive: true, force: true });
     throw e;
+  }
+}
+
+/** A verified v1 checkpoint and migration share one uninterrupted kernel lease. */
+export function upgrade(
+  paths: Layout,
+  checkpoint: string,
+  beforeCommit?: () => void,
+) {
+  const store = new Store(paths.data, { legacyMaintenance: true });
+  try {
+    if (store.schemaVersion === 2)
+      return { status: "already-current", schemaVersion: 2 };
+    const manifest = backup(paths, checkpoint, undefined, store);
+    store.upgradeFromV1(beforeCommit);
+    verifyContent(store, paths);
+    return {
+      status: "upgraded",
+      schemaVersion: 2,
+      checkpointSchemaVersion: manifest.schemaVersion,
+      tables: store.summary(),
+    };
+  } finally {
+    store.close();
   }
 }

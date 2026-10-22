@@ -1,4 +1,4 @@
-name: NAS gate isolated image bundle
+name: Archived PR5 NAS gate image recipe
 on:
   push:
     branches: [codex/implement-01-foundation]
@@ -10,6 +10,8 @@ permissions:
   contents: read
 jobs:
   bundle:
+    # Historical one-off evidence recipe, disabled after the PR5 NAS gate.
+    if: ${{ false }}
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:

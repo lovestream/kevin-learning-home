@@ -1,0 +1,32 @@
+{
+  "status": "PASS_LOCAL",
+  "timestamp": "2026-10-22T00:49:09.634Z",
+  "executedHeadSha": "87ec45e95809d00b7104242702fb28ffbb6f7881",
+  "worktreeDirty": true,
+  "environment": {
+    "node": "v24.15.0",
+    "os": "darwin",
+    "arch": "arm64",
+    "kernel": "27.0.0"
+  },
+  "tests": 53,
+  "browserViewports": 3,
+  "steps": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "/usr/local/bin/node --test --test-concurrency=1 --test-reporter=junit --test-reporter-destination=.evidence/foundation-junit.xml tests/foundation/platform.test.ts tests/foundation/recovery.test.ts tests/foundation/restart.test.ts tests/foundation/writer-lock.test.ts tests/foundation/readiness.test.ts tests/auth/bootstrap.test.ts tests/auth/http.test.ts tests/auth/migration.test.ts tests/auth/process.test.ts",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:browser",
+      "exitCode": 0
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS_CI",
+  "scope": "modern Linux amd64; internal loopback HTTP models TLS termination, TLS separately tested by auth HTTPS fixture; never NAS",
+  "productionEntry": true,
+  "secureCookie": true,
+  "nonRoot": true,
+  "readOnlyRootfs": true,
+  "authEnabledRestartPersistent": true,
+  "killRecreatePersistent": true,
+  "logoutSurvivesRestart": true,
+  "backupRestoreRevokesSessions": true,
+  "restoredCredentialsAndGrantWork": true,
+  "allLegacyTablesPreserved": true,
+  "authAdminPresent": true,
+  "authHarnessExcluded": true
+}

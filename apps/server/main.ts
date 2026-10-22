@@ -1,3 +1,5 @@
+import { AuthService } from "../../packages/auth/service.ts";
+import { authConfig } from "../../packages/auth/config.ts";
 import { resolve } from "node:path";
 import { constants, accessSync, lstatSync } from "node:fs";
 import { Store } from "../../packages/platform/store.ts";
@@ -29,13 +31,30 @@ function directoriesReady() {
     accessSync(path, constants.R_OK | constants.X_OK);
   }
 }
+process.umask(0o077);
 let store: Store | undefined;
 try {
   directoriesReady();
   store = new Store(data);
+  const config = process.env.KLH_AUTH_ORIGIN
+    ? authConfig(
+        process.env.KLH_AUTH_ORIGIN,
+        (process.env.KLH_AUTH_MODE ?? "production") as
+          "production" | "loopback-development",
+      )
+    : undefined;
+  if (
+    config?.mode === "loopback-development" &&
+    (host !== "127.0.0.1" || process.env.KLH_CONTAINER === "1")
+  )
+    throw new AppError("AUTH_TRANSPORT_CONFIG", 503);
   const server = createHttp(store, {
     webRoot: resolve(process.env.KLH_WEB_DIR ?? "apps/web/dist"),
-    origin: process.env.KLH_INTERNAL_ORIGIN ?? "http://127.0.0.1:" + port,
+    origin:
+      config?.origin ??
+      process.env.KLH_INTERNAL_ORIGIN ??
+      "http://127.0.0.1:" + port,
+    ...(config ? { auth: { service: new AuthService(store), config } } : {}),
     readiness: directoriesReady,
   });
   server.on("error", () => {
@@ -47,7 +66,7 @@ try {
     console.log(
       JSON.stringify({
         event: "ready",
-        schemaVersion: 1,
+        schemaVersion: store!.schemaVersion,
         learningEnabled: false,
       }),
     ),

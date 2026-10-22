@@ -121,9 +121,9 @@ test("R1 readiness rejects inaccessible/replaced DB, incompatible runtime versio
     } finally {
       renameSync(f.store.file + ".moved", f.store.file);
     }
-    f.store.db.exec("PRAGMA user_version=2");
+    f.store.db.exec("PRAGMA user_version=99");
     assert.equal((await fetch(f.origin + "/health/ready")).status, 503);
-    f.store.db.exec("PRAGMA user_version=1");
+    f.store.db.exec("PRAGMA user_version=2");
     assert.equal((await fetch(f.origin + "/health/ready")).status, 200);
     f.store.db.close();
     assert.equal((await fetch(f.origin + "/health/ready")).status, 503);

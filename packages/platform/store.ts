@@ -1,6 +1,5 @@
 import { DatabaseSync } from "node:sqlite";
 import {
-  readFileSync,
   mkdirSync,
   existsSync,
   lstatSync,
@@ -20,13 +19,9 @@ import {
 } from "../contracts/index.ts";
 import { WriterLease } from "./writer-lock.ts";
 
-export const SCHEMA_VERSION = 1;
-const migration = readFileSync(
-  new URL("./001-foundation.sql", import.meta.url),
-  "utf8",
-);
-const migrationHash = sha256(migration);
-export const TABLES = [
+import { CURRENT_SCHEMA, initialize, applyV2 } from "./migrations.ts";
+export const SCHEMA_VERSION = CURRENT_SCHEMA;
+export const LEGACY_TABLES = [
   "schema_migrations",
   "learners",
   "subjects",
@@ -39,6 +34,15 @@ export const TABLES = [
   "content_media_refs",
   "audit_log",
 ] as const;
+export const AUTH_TABLES = [
+  "actors",
+  "learner_grants",
+  "auth_controls",
+  "auth_sessions",
+  "auth_limits",
+  "auth_audit",
+] as const;
+export const TABLES = [...LEGACY_TABLES, ...AUTH_TABLES];
 export function ownedDirectory(path: string): string {
   const absolute = resolve(path);
   mkdirSync(absolute, { recursive: true, mode: 0o700 });
@@ -59,8 +63,17 @@ export class Store {
   private lease: WriterLease;
   private identity: { dev: number; ino: number };
   private closed = false;
-  constructor(directory: string) {
+  private version = SCHEMA_VERSION;
+  get schemaVersion() {
+    return this.version;
+  }
+  constructor(
+    directory: string,
+    options: { legacyMaintenance?: boolean } = {},
+  ) {
     this.directory = ownedDirectory(directory);
+    if (lstatSync(this.directory).mode & 0o077)
+      throw new AppError("DATA_DIRECTORY_PRIVATE_REQUIRED", 503);
     this.file = join(this.directory, "learning.sqlite");
     this.lease = new WriterLease(this.directory);
     let db: DatabaseSync | undefined;
@@ -70,7 +83,7 @@ export class Store {
       db = new DatabaseSync(this.file);
       this.db = db;
       // Reject unknown schema before changing journal mode or running migrations.
-      this.migrate();
+      this.version = initialize(db, options.legacyMaintenance ?? false);
       db.exec(
         "PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=3000;",
       );
@@ -83,64 +96,15 @@ export class Store {
       throw e;
     }
   }
-  private migrate() {
-    const db = this.db;
-    const tables = db
-      .prepare(
-        "SELECT name FROM sqlite_schema WHERE type='table' AND name NOT LIKE 'sqlite_%'",
-      )
-      .all()
-      .map((x) => x.name);
-    const userVersion = Number(
-      Object.values(db.prepare("PRAGMA user_version").get()!)[0],
-    );
-    if (!tables.length && userVersion === 0) {
-      this.transaction(() => {
-        db.exec(
-          "CREATE TABLE schema_migrations(version INTEGER PRIMARY KEY, sha256 TEXT NOT NULL, applied_at TEXT NOT NULL) STRICT;",
-        );
-        db.exec(migration);
-        db.prepare("INSERT INTO schema_migrations VALUES(1,?,?)").run(
-          migrationHash,
-          new Date().toISOString(),
-        );
-        db.exec("PRAGMA user_version=1");
-      });
-    } else {
-      if (
-        !tables.includes("schema_migrations") ||
-        userVersion !== SCHEMA_VERSION
-      )
-        throw new AppError("SCHEMA_VERSION_UNSUPPORTED", 503);
-      const versions = db
-        .prepare(
-          "SELECT version,sha256 FROM schema_migrations ORDER BY version",
-        )
-        .all();
-      if (
-        versions.length !== 1 ||
-        versions[0].version !== 1 ||
-        versions[0].sha256 !== migrationHash
-      )
-        throw new AppError("SCHEMA_MIGRATION_MISMATCH", 503);
-      // Exact column definitions, indexes and triggers must match the approved migration.
-      const expected = new DatabaseSync(":memory:");
-      try {
-        expected.exec(
-          "CREATE TABLE schema_migrations(version INTEGER PRIMARY KEY, sha256 TEXT NOT NULL, applied_at TEXT NOT NULL) STRICT;" +
-            migration,
-        );
-        const sql =
-          "SELECT type,name,tbl_name,sql FROM sqlite_schema WHERE name NOT LIKE 'sqlite_%' ORDER BY type,name";
-        if (
-          canonical(db.prepare(sql).all()) !==
-          canonical(expected.prepare(sql).all())
-        )
-          throw new AppError("SCHEMA_SHAPE_MISMATCH", 503);
-      } finally {
-        expected.close();
-      }
-    }
+  /** Only the offline checkpoint orchestration calls this while retaining the lease. */
+  upgradeFromV1(beforeCommit?: () => void) {
+    this.lease.assertOwned();
+    if (this.version === 2) return;
+    if (beforeCommit && process.env.NODE_ENV !== "test")
+      throw new AppError("TEST_HOOK_DISABLED", 503);
+    applyV2(this.db, beforeCommit);
+    this.version = 2;
+    this.verifyIntegrity();
   }
   transaction<T>(operation: () => T): T {
     this.lease.assertOwned();
@@ -165,6 +129,13 @@ export class Store {
     };
   }
   verifyIntegrity() {
+    if (
+      this.version === 2 &&
+      !this.db
+        .prepare("SELECT epoch FROM auth_controls WHERE id=1 AND epoch>0")
+        .get()
+    )
+      throw new AppError("AUTH_CONTROL_INVALID", 503);
     const p = this.environment().pragmas;
     if (
       p.journal_mode !== "wal" ||
@@ -199,10 +170,18 @@ export class Store {
       try {
         this.db.exec("BEGIN IMMEDIATE");
         try {
+          const runtime = this.db
+            .prepare(
+              this.version === 2
+                ? "SELECT 1 ok,(SELECT epoch FROM auth_controls WHERE id=1) epoch"
+                : "SELECT 1 ok",
+            )
+            .get()!;
           return (
-            this.db.prepare("SELECT 1 ok").get()!.ok === 1 &&
+            runtime.ok === 1 &&
+            (this.version === 1 || Number(runtime.epoch) > 0) &&
             Object.values(this.db.prepare("PRAGMA user_version").get()!)[0] ===
-              SCHEMA_VERSION
+              this.version
           );
         } finally {
           this.db.exec("ROLLBACK");
@@ -332,7 +311,7 @@ export class Store {
   }
   summary() {
     return Object.fromEntries(
-      TABLES.map((table) => {
+      (this.version === 1 ? LEGACY_TABLES : TABLES).map((table) => {
         let count = 0;
         const digest = createHash("sha256");
         digest.update("[");

@@ -12,7 +12,7 @@ COPY --from=build /app/node_modules ./node_modules
 COPY package.json ./
 COPY apps/server ./apps/server
 COPY packages ./packages
-COPY scripts/maintenance.ts scripts/healthcheck.ts ./scripts/
+COPY scripts/maintenance.ts scripts/healthcheck.ts scripts/auth-admin.ts ./scripts/
 COPY --from=build /app/apps/web/dist ./apps/web/dist
 RUN mkdir -p /data /media /content && chown node:node /data /media /content
 USER node

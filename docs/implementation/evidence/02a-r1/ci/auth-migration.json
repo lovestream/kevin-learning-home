@@ -1,0 +1,273 @@
+{
+  "status": "PASS",
+  "frozenV1SourceSha": "87ec45e95809d00b7104242702fb28ffbb6f7881",
+  "migration001ByteIdentical": true,
+  "oldTenDataTablesEqual": true,
+  "legacyMetadataRow1Preserved": true,
+  "metadataDelta": "exactly one v2 migration row",
+  "before": {
+    "schema_migrations": {
+      "count": 1,
+      "sha256": "87a38ecd671c093e8294a64aa4aa224a65b657d58b853c1a8dff5fdf84f7a1fb"
+    },
+    "learners": {
+      "count": 1,
+      "sha256": "f7b991c7323373745d2031432a656a597fd50c37eb08272971c48811d87bb171"
+    },
+    "subjects": {
+      "count": 1,
+      "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+    },
+    "subject_states": {
+      "count": 1,
+      "sha256": "1073233beb2dfed948c99e9dc52da580dfe7a74bcf3f208edb2c549aa6e8c4f5"
+    },
+    "server_attempts": {
+      "count": 1,
+      "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+    },
+    "command_receipts": {
+      "count": 1,
+      "sha256": "a152253130dd6a99a825fca629025e1bc1c88f459b57b9bbb151ab435e68e469"
+    },
+    "learning_events": {
+      "count": 1,
+      "sha256": "db228d42e4dd70f3a0c147901bd2e11e9ae2e668b42d9c21c2d48f6fe5dce4b7"
+    },
+    "media_assets": {
+      "count": 1,
+      "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+    },
+    "content_manifests": {
+      "count": 1,
+      "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+    },
+    "content_media_refs": {
+      "count": 1,
+      "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+    },
+    "audit_log": {
+      "count": 1,
+      "sha256": "1ac7d840c26a485dc151bc6b930b00b0a1e8e16a903f72121dfeaf1f16790851"
+    }
+  },
+  "after": {
+    "schema_migrations": {
+      "count": 2,
+      "sha256": "a5dbc54e8bb47fccef987d558559664ab1ff886623cd2a5934006ae351a4cdac"
+    },
+    "learners": {
+      "count": 1,
+      "sha256": "f7b991c7323373745d2031432a656a597fd50c37eb08272971c48811d87bb171"
+    },
+    "subjects": {
+      "count": 1,
+      "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+    },
+    "subject_states": {
+      "count": 1,
+      "sha256": "1073233beb2dfed948c99e9dc52da580dfe7a74bcf3f208edb2c549aa6e8c4f5"
+    },
+    "server_attempts": {
+      "count": 1,
+      "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+    },
+    "command_receipts": {
+      "count": 1,
+      "sha256": "a152253130dd6a99a825fca629025e1bc1c88f459b57b9bbb151ab435e68e469"
+    },
+    "learning_events": {
+      "count": 1,
+      "sha256": "db228d42e4dd70f3a0c147901bd2e11e9ae2e668b42d9c21c2d48f6fe5dce4b7"
+    },
+    "media_assets": {
+      "count": 1,
+      "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+    },
+    "content_manifests": {
+      "count": 1,
+      "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+    },
+    "content_media_refs": {
+      "count": 1,
+      "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+    },
+    "audit_log": {
+      "count": 1,
+      "sha256": "1ac7d840c26a485dc151bc6b930b00b0a1e8e16a903f72121dfeaf1f16790851"
+    },
+    "actors": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "learner_grants": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_controls": {
+      "count": 1,
+      "sha256": "6f2ddf806965cf1326d63bb677b084c76cfaa080e6928a79b886575b6abca2f4"
+    },
+    "auth_sessions": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_limits": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_audit": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "reconciliation": [
+    {
+      "table": "schema_migrations",
+      "before": {
+        "count": 1,
+        "sha256": "87a38ecd671c093e8294a64aa4aa224a65b657d58b853c1a8dff5fdf84f7a1fb"
+      },
+      "after": {
+        "count": 2,
+        "sha256": "a5dbc54e8bb47fccef987d558559664ab1ff886623cd2a5934006ae351a4cdac"
+      },
+      "exactlyEqual": false,
+      "allowedDelta": "preserve complete row 1; append version 2 only"
+    },
+    {
+      "table": "learners",
+      "before": {
+        "count": 1,
+        "sha256": "f7b991c7323373745d2031432a656a597fd50c37eb08272971c48811d87bb171"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "f7b991c7323373745d2031432a656a597fd50c37eb08272971c48811d87bb171"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "subjects",
+      "before": {
+        "count": 1,
+        "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "subject_states",
+      "before": {
+        "count": 1,
+        "sha256": "1073233beb2dfed948c99e9dc52da580dfe7a74bcf3f208edb2c549aa6e8c4f5"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "1073233beb2dfed948c99e9dc52da580dfe7a74bcf3f208edb2c549aa6e8c4f5"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "server_attempts",
+      "before": {
+        "count": 1,
+        "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "command_receipts",
+      "before": {
+        "count": 1,
+        "sha256": "a152253130dd6a99a825fca629025e1bc1c88f459b57b9bbb151ab435e68e469"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "a152253130dd6a99a825fca629025e1bc1c88f459b57b9bbb151ab435e68e469"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "learning_events",
+      "before": {
+        "count": 1,
+        "sha256": "db228d42e4dd70f3a0c147901bd2e11e9ae2e668b42d9c21c2d48f6fe5dce4b7"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "db228d42e4dd70f3a0c147901bd2e11e9ae2e668b42d9c21c2d48f6fe5dce4b7"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "media_assets",
+      "before": {
+        "count": 1,
+        "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "content_manifests",
+      "before": {
+        "count": 1,
+        "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "content_media_refs",
+      "before": {
+        "count": 1,
+        "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    },
+    {
+      "table": "audit_log",
+      "before": {
+        "count": 1,
+        "sha256": "1ac7d840c26a485dc151bc6b930b00b0a1e8e16a903f72121dfeaf1f16790851"
+      },
+      "after": {
+        "count": 1,
+        "sha256": "1ac7d840c26a485dc151bc6b930b00b0a1e8e16a903f72121dfeaf1f16790851"
+      },
+      "exactlyEqual": true,
+      "allowedDelta": null
+    }
+  ],
+  "checkpointVersion": 1,
+  "currentVersion": 2,
+  "oldImageRejectsV2": true,
+  "oldImageRollbackFromCheckpoint": true
+}

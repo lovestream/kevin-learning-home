@@ -15,6 +15,8 @@ services:
     ports: ["127.0.0.1:${KLH_PORT:-4177}:4177"]
     environment:
       NODE_ENV: production
+      KLH_AUTH_ORIGIN: "${KLH_AUTH_ORIGIN:-}"
+      KLH_AUTH_MODE: "${KLH_AUTH_MODE:-production}"
       KLH_INTERNAL_ORIGIN: "http://127.0.0.1:${KLH_PORT:-4177}"
     tmpfs: ["/tmp:rw,noexec,nosuid,size=16m"]
     volumes:

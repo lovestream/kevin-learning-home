@@ -1,0 +1,43 @@
+{
+  "baseMain": "87ec45e95809d00b7104242702fb28ffbb6f7881",
+  "activationBranch": "chatgpt/klh-implement-02a-start",
+  "activationSourceHead": "ea92a968a79a1ba3197fc21e542f86702e0d3dd1",
+  "files": {
+    "activation": {
+      "path": "docs/tasks/KLH-IMPLEMENT-02A-ACTIVATION.md",
+      "gitBlob": "7794eb8ee76f75dac941b0e14c3901dcaf5842fa",
+      "sha256": "48ccbe265522fa994973cceb42729ae98df236365ee7de71caee8814bfe1ed66"
+    },
+    "parentTask": {
+      "path": "docs/tasks/KLH-IMPLEMENT-02-AUTH-SHELL.md",
+      "gitBlob": "99bc416a011bc53e43bf346fd328a5faf8c6ce5a",
+      "sha256": "1a41685edc320319ffd4e17d430d66c028729fe655099f5ba1ecc26051bf89ae"
+    },
+    "r1Review": {
+      "path": "docs/reviews/KLH-IMPLEMENT-01-R1-ACCEPTANCE.md",
+      "gitBlob": "b7e3d384484e5cf15f1d6543ae4b042241d1200d",
+      "sha256": "d1287deb75009f609aa05e3d2cd9f16805c3b92617f777b750a1d77ca27c3bc7"
+    },
+    "nasReview": {
+      "path": "docs/reviews/KLH-IMPLEMENT-01-NAS-GATE-ACCEPTANCE.md",
+      "gitBlob": "ec2ddde691fe6a04ebf9954feed0911c6078f2de",
+      "sha256": "a8a6c169deb8795c2e3c0fcf86eb4dd33f04c50f31d3721a61918cdfd66519f7"
+    },
+    "immutableMigration001": {
+      "path": "packages/platform/001-foundation.sql",
+      "gitBlob": "b23f666a35a752ed78f6a181de449c24cc1d7cd6",
+      "sha256": "1f1a26333a455f420fb6e7d4394f082a5f075c9800d16c39341ac6bf7d351bee"
+    },
+    "migration002": {
+      "path": "packages/platform/002-family-auth.sql",
+      "gitBlob": "acef01670abbdd77e56a016370919443b333932f",
+      "sha256": "66a89fbb5fd6b4ad3ab103adc0883632c4ee3894ff258003742723628874ab7c"
+    }
+  },
+  "protectedRepositories": [
+    "math-learning",
+    "word-request"
+  ],
+  "nasContacted": false,
+  "productionDeployment": false
+}
