@@ -1,0 +1,70 @@
+{
+  "status": "PASS_NAS",
+  "scope": "Container state only, not external website/real record validation",
+  "services": [
+    {
+      "alias": "service-01",
+      "beforeState": "running",
+      "afterState": "running",
+      "beforeFingerprint": "0dba240fa95fa61bd8205aa8c9d8418c14e18ad582361d491da405760dd43efc",
+      "afterFingerprint": "0dba240fa95fa61bd8205aa8c9d8418c14e18ad582361d491da405760dd43efc",
+      "sameIdStartRestartAndStatus": true
+    },
+    {
+      "alias": "service-02",
+      "beforeState": "running",
+      "afterState": "running",
+      "beforeFingerprint": "40b23e6aa3081b6773e2dd8bc5e228075ae7d6f87eea188f35367dd5e4e14a75",
+      "afterFingerprint": "40b23e6aa3081b6773e2dd8bc5e228075ae7d6f87eea188f35367dd5e4e14a75",
+      "sameIdStartRestartAndStatus": true
+    },
+    {
+      "alias": "service-03",
+      "beforeState": "running",
+      "afterState": "running",
+      "beforeFingerprint": "12fb7251f5ec61ab4dfea362f8eeea503b3e5a5e0a2e42fc40dd8594c4a5a963",
+      "afterFingerprint": "12fb7251f5ec61ab4dfea362f8eeea503b3e5a5e0a2e42fc40dd8594c4a5a963",
+      "sameIdStartRestartAndStatus": true
+    },
+    {
+      "alias": "service-04",
+      "beforeState": "running",
+      "afterState": "running",
+      "beforeFingerprint": "defd08602e55e682966a43b67ec84ac390c9e41189f8fbe7b6577a97ebb6549e",
+      "afterFingerprint": "defd08602e55e682966a43b67ec84ac390c9e41189f8fbe7b6577a97ebb6549e",
+      "sameIdStartRestartAndStatus": true
+    },
+    {
+      "alias": "service-05",
+      "beforeState": "running",
+      "afterState": "running",
+      "beforeFingerprint": "3075c055280215061f7716feb155d8d5c86f798f3d18b3c1cc216ff7e963c12d",
+      "afterFingerprint": "3075c055280215061f7716feb155d8d5c86f798f3d18b3c1cc216ff7e963c12d",
+      "sameIdStartRestartAndStatus": true
+    },
+    {
+      "alias": "service-06",
+      "beforeState": "running",
+      "afterState": "running",
+      "beforeFingerprint": "1dbab5bfaf41e791f7bbb6885b0d72c218f0ca2e92b0828dbc3b92a01023689d",
+      "afterFingerprint": "1dbab5bfaf41e791f7bbb6885b0d72c218f0ca2e92b0828dbc3b92a01023689d",
+      "sameIdStartRestartAndStatus": true
+    },
+    {
+      "alias": "service-07",
+      "beforeState": "running",
+      "afterState": "running",
+      "beforeFingerprint": "5efccdadf3e41cd16bcf68c62802e0434420b20aca510b88047e84a5dfc21d8e",
+      "afterFingerprint": "5efccdadf3e41cd16bcf68c62802e0434420b20aca510b88047e84a5dfc21d8e",
+      "sameIdStartRestartAndStatus": true
+    },
+    {
+      "alias": "service-08",
+      "beforeState": "running",
+      "afterState": "running",
+      "beforeFingerprint": "e5584216fcc015496693d44a582603bc95cc65934ecf2fb6d5372ee8d7b18ad4",
+      "afterFingerprint": "e5584216fcc015496693d44a582603bc95cc65934ecf2fb6d5372ee8d7b18ad4",
+      "sameIdStartRestartAndStatus": true
+    }
+  ]
+}

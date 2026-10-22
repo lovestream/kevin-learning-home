@@ -1,0 +1,7 @@
+node_modules/
+apps/web/dist/
+.foundation-work/
+.evidence/
+*.sqlite*
+.env
+test-results/

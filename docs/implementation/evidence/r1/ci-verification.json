@@ -1,0 +1,32 @@
+{
+  "status": "PASS_CI",
+  "timestamp": "2026-10-21T09:58:14.640Z",
+  "executedHeadSha": "68c3e26e42bde1684ddb59fcd6064b16e6ffeedc",
+  "worktreeDirty": false,
+  "environment": {
+    "node": "v24.15.0",
+    "os": "linux",
+    "arch": "x64",
+    "kernel": "7.0.0-1017-azure"
+  },
+  "tests": 30,
+  "browserViewports": 3,
+  "steps": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "/opt/hostedtoolcache/node/24.15.0/x64/bin/node --test --test-concurrency=1 --test-reporter=junit --test-reporter-destination=.evidence/foundation-junit.xml tests/foundation/platform.test.ts tests/foundation/recovery.test.ts tests/foundation/restart.test.ts tests/foundation/writer-lock.test.ts tests/foundation/readiness.test.ts",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:browser",
+      "exitCode": 0
+    }
+  ]
+}

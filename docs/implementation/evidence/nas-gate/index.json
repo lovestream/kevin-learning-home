@@ -1,0 +1,32 @@
+{
+  "status": "PASS_NAS_WITH_UNSUPPORTED_KERNEL_RISK",
+  "testedApplicationSha": "8b80dce3be7d836f6abe6fdb569f6553ecd2a6cc",
+  "taskBranchSha": "dd3480843525717a91c687e387d20180eeb6e3b0",
+  "taskBlob": "0efa9a419644cedd94b39d18f36d09e7e50351dc",
+  "runId": "20261021-7341fdd4",
+  "priorAttemptRunId": "20261021-2889e070",
+  "imageBuildCI": 39607483176,
+  "imageBuildAndPreparationHead": "edcbd4027b22f1fcc646bd87766c416938d7d978",
+  "preArchivePassingCI": [
+    39607490846,
+    39607483175
+  ],
+  "finalDocumentationHeadProof": "PR #5 body and latest checks; full CI required again on exact final HEAD",
+  "files": {
+    "application-invariance.json": "5fb645f57772be8c0021ce1eee372b10129522dbf405ea414bb6221c2db35f5c",
+    "attempt-1-ownership.json": "da0cc8be6d5ae552114b5facaa16b11b6b5dee034c53a5ef591685e55c669e42",
+    "attempt-1-readiness.json": "1ef28859271cab09dada8345a1aaf8b90a26e17d6c0403a7a92b541654f7c126",
+    "attempt-1-recovery.json": "9a0eb7e19fa2b2e5abf7ec950ef8a680001109e07199edda74e538b9ac5669a8",
+    "attempt-1-summary.json": "dda9a96e623e3906a2e8a5c0d57889a8594b5ba878194c997a63202ad73493e0",
+    "attempt-1-test-cases.json": "8ec1977bd3894c737a2cc9f42047e350d9d0def076a6df6b2df7e1ca47f3dd97",
+    "cleanup-confirmation.json": "3f8d3696f3380816dd7d4f77f108b821489999a0ff539aa248b6450a86964bf1",
+    "ownership.json": "da0cc8be6d5ae552114b5facaa16b11b6b5dee034c53a5ef591685e55c669e42",
+    "preflight-attempts.json": "ed7897ad82eb92eb56461bcb1bcddf0a61990ec60776257de3e7f593b1c39ecc",
+    "readiness.json": "c6d34289573ef9592db18053db6a543f3bfd4ebc073457e60d66a6a5852a0fc0",
+    "recovery.json": "58c19aacaf91a12ccfea5beeda0087e1683ffe6d5835d174800346e3b01629bf",
+    "service-survival.json": "3e701f98cdb7cd8a2e2c79b8c98ab2e8a51669c7f6d3e4f696b575c54482100b",
+    "source-independence.json": "fc28525fd959bac56119e0487ab30f4cbfeb326c78f860c5f8375551decad3dd",
+    "summary.json": "642c72de50b0c67d1d226e48d1aa331772da8c3f9f1360d6c7e15987d7aa918f",
+    "test-cases.json": "6df6724a8f30e0d5d89d82161077917cf6744a3a2066981769fac5dcf8398043"
+  }
+}

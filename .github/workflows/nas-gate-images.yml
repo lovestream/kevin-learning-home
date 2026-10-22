@@ -1,0 +1,46 @@
+name: NAS gate isolated image bundle
+on:
+  push:
+    branches: [codex/implement-01-foundation]
+    paths:
+      - tests/nas-gate/run-plan.json
+      - tests/nas-gate/Dockerfile.harness
+      - .github/workflows/nas-gate-images.yml
+permissions:
+  contents: read
+jobs:
+  bundle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Validate explicit one-off plan
+        run: |
+          python3 - <<'PY'
+          import json,re,os
+          p=json.load(open('tests/nas-gate/run-plan.json'))
+          assert re.fullmatch(r'[0-9]{8}-[a-f0-9]{8}',p['runId'])
+          assert re.fullmatch(r'[a-f0-9]{40}',p['sourceSha'])
+          assert p['resourcePrefix']=='klh-r1-nas-gate-'+p['runId']
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+            f.write('GATE_PREFIX='+p['resourcePrefix']+'\nSOURCE_SHA='+p['sourceSha']+'\nRUN_ID='+p['runId']+'\n')
+          PY
+      - name: Build exact reviewed formal image and test-only derivative
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/gate-source" "$RUNNER_TEMP/gate-bundle"
+          git archive "$SOURCE_SHA" | tar -x -C "$RUNNER_TEMP/gate-source"
+          docker build --platform linux/amd64 --label org.kevin-learning-home.nas-gate="$RUN_ID" --label org.opencontainers.image.revision="$SOURCE_SHA" -f "$RUNNER_TEMP/gate-source/infra/docker/Dockerfile" -t "$GATE_PREFIX:formal" "$RUNNER_TEMP/gate-source"
+          docker build --platform linux/amd64 --build-arg FORMAL_IMAGE="$GATE_PREFIX:formal" --label org.kevin-learning-home.nas-gate="$RUN_ID" --label org.opencontainers.image.revision="$SOURCE_SHA" -f tests/nas-gate/Dockerfile.harness -t "$GATE_PREFIX:harness" "$RUNNER_TEMP/gate-source"
+          docker image inspect "$GATE_PREFIX:formal" "$GATE_PREFIX:harness" --format '{{json .}}' > "$RUNNER_TEMP/gate-bundle/image-inspect.jsonl"
+          docker save "$GATE_PREFIX:formal" "$GATE_PREFIX:harness" | gzip -1 > "$RUNNER_TEMP/gate-bundle/images.tar.gz"
+          cp tests/nas-gate/run-plan.json "$RUNNER_TEMP/gate-bundle/run-plan.json"
+          cd "$RUNNER_TEMP/gate-bundle"
+          sha256sum images.tar.gz > images.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nas-gate-image-bundle
+          path: ${{ runner.temp }}/gate-bundle
+          retention-days: 1

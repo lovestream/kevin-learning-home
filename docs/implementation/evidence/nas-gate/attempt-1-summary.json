@@ -1,0 +1,1561 @@
+{
+  "runId": "20261021-2889e070",
+  "testedApplicationSha": "8b80dce3be7d836f6abe6fdb569f6553ecd2a6cc",
+  "taskBranchSha": "dd3480843525717a91c687e387d20180eeb6e3b0",
+  "gates": {
+    "G01": {
+      "status": "PASS_NAS_WITH_UNSUPPORTED_KERNEL_RISK",
+      "formalRuntime": {
+        "node": "v24.15.0",
+        "abi": "137",
+        "sqlite": "3.51.3",
+        "fsExt": "2.1.1",
+        "uid": 1024,
+        "arch": "x64",
+        "kernel": "4.4.180+",
+        "hashes": {
+          "/usr/local/bin/node": "d1de76d8edf2fededf6f8b30d244e2c0529ac607923a018283b77e9c74bd932c",
+          "/app/node_modules/fs-ext/build/Release/fs_ext.node": "1c6a140a94182873c1b1ecaaae083f3978986d43b71c53a9e1c4f99d50b06f5c",
+          "/app/apps/server/main.ts": "216058df98fdefe7c6c24e630a4af5691bffca1a5fd2ec485008d387bb3e3faa",
+          "/app/packages/platform/store.ts": "e293dc13259ecf3889d88bf75f6e85b14e9a5aa03b8ecbd35be174c4af00ffe0",
+          "/app/packages/platform/writer-lock.ts": "3a8260167e42baba788661a3861172a102122d676cf6ad525d86a16ff34a49df",
+          "/app/packages/platform/checkpoint.ts": "806a0c9d11105390a231a1d39d3871eefeb56bf583ebb55b00ad37a56a4a6a01",
+          "/app/packages/platform/001-foundation.sql": "1f1a26333a455f420fb6e7d4394f082a5f075c9800d16c39341ac6bf7d351bee",
+          "/app/package.json": "2f28ff539daa2bf378be6164cddda1558ef110900ca0907251bfaf13da3e5b0f"
+        },
+        "lockfileSha": null,
+        "productionHarnessExcluded": true
+      },
+      "harnessRuntime": {
+        "node": "v24.15.0",
+        "abi": "137",
+        "sqlite": "3.51.3",
+        "fsExt": "2.1.1",
+        "uid": 1024,
+        "arch": "x64",
+        "kernel": "4.4.180+",
+        "hashes": {
+          "/usr/local/bin/node": "d1de76d8edf2fededf6f8b30d244e2c0529ac607923a018283b77e9c74bd932c",
+          "/app/node_modules/fs-ext/build/Release/fs_ext.node": "1c6a140a94182873c1b1ecaaae083f3978986d43b71c53a9e1c4f99d50b06f5c",
+          "/app/apps/server/main.ts": "216058df98fdefe7c6c24e630a4af5691bffca1a5fd2ec485008d387bb3e3faa",
+          "/app/packages/platform/store.ts": "e293dc13259ecf3889d88bf75f6e85b14e9a5aa03b8ecbd35be174c4af00ffe0",
+          "/app/packages/platform/writer-lock.ts": "3a8260167e42baba788661a3861172a102122d676cf6ad525d86a16ff34a49df",
+          "/app/packages/platform/checkpoint.ts": "806a0c9d11105390a231a1d39d3871eefeb56bf583ebb55b00ad37a56a4a6a01",
+          "/app/packages/platform/001-foundation.sql": "1f1a26333a455f420fb6e7d4394f082a5f075c9800d16c39341ac6bf7d351bee",
+          "/app/package.json": "2f28ff539daa2bf378be6164cddda1558ef110900ca0907251bfaf13da3e5b0f"
+        },
+        "lockfileSha": "fd33c70f911526d3ff64e2029ece62eee2e4fe6ba9afdffb357ab02f997d2d50",
+        "productionHarnessExcluded": false
+      },
+      "nativeExt4Operations": {
+        "flock": true,
+        "hardlink": true,
+        "fsync": true,
+        "filesystemType": 61267
+      },
+      "formalEmptyStartupReady": true,
+      "isolation": {
+        "nonRoot": true,
+        "readOnlyRootfs": true,
+        "network": "none",
+        "hostPorts": [],
+        "memoryMiB": 512,
+        "cpuset": "0",
+        "capDrop": [
+          "ALL"
+        ],
+        "noNewPrivileges": true,
+        "testHealthIntervalSeconds": 2,
+        "productionHealthIntervalSeconds": 20
+      }
+    },
+    "G02": {
+      "status": "FAIL_NAS"
+    },
+    "G05": {
+      "status": "PASS_NAS",
+      "containersRemaining": 0,
+      "imagesRemaining": 0,
+      "ownedDirectoryRemaining": false,
+      "cleanupErrors": [],
+      "originalServicesUnchanged": true,
+      "noGlobalPrune": true
+    },
+    "G03": {
+      "status": "NOT_RUN"
+    },
+    "G04": {
+      "status": "NOT_RUN"
+    }
+  },
+  "scope": "DS918+ isolated synthetic gate, no production deployment",
+  "startedAtUTC": "2026-10-21T13:19:02Z",
+  "environment": {
+    "kernel": "4.4.180+",
+    "arch": "x86_64",
+    "model": "DS918+",
+    "dsm": {
+      "productversion": "7.1.1",
+      "buildnumber": "42962",
+      "smallfixnumber": "6"
+    },
+    "filesystem": "ext4",
+    "parentCanonicalOwnedWritable": true,
+    "newRootAbsent": true,
+    "freeBytes": 2421013233664,
+    "logicalCpus": 4,
+    "memory": {
+      "MemTotal": "7789432 kB",
+      "MemAvailable": "4922192 kB"
+    },
+    "docker": {
+      "Platform": {
+        "Name": ""
+      },
+      "Components": [
+        {
+          "Name": "Engine",
+          "Version": "20.10.3",
+          "Details": {
+            "ApiVersion": "1.41",
+            "Arch": "amd64",
+            "BuildTime": "Thu Jul 21 10:21:56 2022",
+            "Experimental": "false",
+            "GitCommit": "b487c8f",
+            "GoVersion": "go1.17.1",
+            "KernelVersion": "4.4.180+",
+            "MinAPIVersion": "1.12",
+            "Os": "linux"
+          }
+        },
+        {
+          "Name": "containerd",
+          "Version": "v1.4.3",
+          "Details": {
+            "GitCommit": "3fa00912415f3e9c6f82dd72119179d599efd13b"
+          }
+        },
+        {
+          "Name": "runc",
+          "Version": "v1.0.0-rc93",
+          "Details": {
+            "GitCommit": "31cc25f16f5eba4d0f53e35374532873744f4b31"
+          }
+        },
+        {
+          "Name": "docker-init",
+          "Version": "0.19.0",
+          "Details": {
+            "GitCommit": "ed96d00"
+          }
+        }
+      ],
+      "Version": "20.10.3",
+      "ApiVersion": "1.41",
+      "MinAPIVersion": "1.12",
+      "GitCommit": "b487c8f",
+      "GoVersion": "go1.17.1",
+      "Os": "linux",
+      "Arch": "amd64",
+      "KernelVersion": "4.4.180+",
+      "BuildTime": "2022-07-21T10:21:56.000000000+00:00"
+    },
+    "compose": "docker-compose version 1.28.5, build 24fb474e"
+  },
+  "existingServices": {
+    "beforeCount": 8,
+    "allRunningBefore": true,
+    "mathNameMatches": 0,
+    "wordNameMatches": 0,
+    "scope": "Container ID/start/restart/status only, no learning data or application config read",
+    "afterCount": 8,
+    "allRunningAfter": true,
+    "sameIdsStartTimesRestartCountsAndStatus": true
+  },
+  "images": {
+    "archiveSha256": "ffac4cb3438b9cb43739e90886a0acc7bef826efbeab9e74bc44286140d4c77b",
+    "archiveBytes": 91050028,
+    "ids": {
+      "klh-r1-nas-gate-20261021-2889e070:formal": "sha256:9f1613aed4aa72e042d3caaa825b214f14d746433ebcdbc08b3c3f16798b0d42",
+      "klh-r1-nas-gate-20261021-2889e070:harness": "sha256:4b99b0588f3c69ec66700c36ef73be239b6791fb3b6332291b0883b2ac6b4e4e"
+    },
+    "imageBuildCI": 39606028943,
+    "source": "Exact frozen official Dockerfile; harness derives FROM same formal image"
+  },
+  "unitRegression": {
+    "exitCode": 0,
+    "wallSecondsIncludingContainerSSH": 47.122,
+    "sourceSha": "8b80dce3be7d836f6abe6fdb569f6553ecd2a6cc"
+  },
+  "performanceSample": {
+    "CPUPerc": "0.00%",
+    "MemUsage": "36.23MiB / 512MiB",
+    "MemPerc": "7.08%",
+    "BlockIO": "0B / 0B",
+    "PIDs": "0"
+  },
+  "status": "FAIL_NAS",
+  "error": {
+    "type": "AssertionError",
+    "classification": "",
+    "diagnostic": "",
+    "note": "Stopped on first unexpected failure; no daemon/system/old-service remediation"
+  },
+  "ownedDirectoryBytesBeforeCleanup": 91197884,
+  "finishedAtUTC": "2026-10-21T13:21:23Z",
+  "commands": [
+    {
+      "command": [
+        "ps",
+        "-aq"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.239
+    },
+    {
+      "command": [
+        "inspect",
+        "--format",
+        "[{{json .Id}},{{json .Name}},{{json .State.Status}},{{json .State.StartedAt}},{{json .RestartCount}},{{with index .State \"Health\"}}{{json .Status}}{{else}}null{{end}}]",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.312
+    },
+    {
+      "command": [
+        "version",
+        "--format",
+        "{{json .Server}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.253
+    },
+    {
+      "command": [
+        "ps",
+        "-aq",
+        "--filter",
+        "label=org.kevin-learning-home.nas-gate=20261021-2889e070"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.307
+    },
+    {
+      "command": [
+        "image",
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070:formal"
+      ],
+      "exitCode": 1,
+      "wallSeconds": 0.24
+    },
+    {
+      "command": [
+        "image",
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070:harness"
+      ],
+      "exitCode": 1,
+      "wallSeconds": 0.306
+    },
+    {
+      "command": [
+        "load",
+        "--input",
+        "$RUNROOT/artifacts/images.tar.gz"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 16.107
+    },
+    {
+      "command": [
+        "image",
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070:formal"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.404
+    },
+    {
+      "command": [
+        "image",
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070:harness"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.262
+    },
+    {
+      "command": [
+        "ps",
+        "-aq"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.247
+    },
+    {
+      "command": [
+        "inspect",
+        "--format",
+        "[{{json .Id}},{{json .Name}},{{json .State.Status}},{{json .State.StartedAt}},{{json .RestartCount}},{{with index .State \"Health\"}}{{json .Status}}{{else}}null{{end}}]",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.275
+    },
+    {
+      "command": [
+        "create",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-runtime",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "klh-r1-nas-gate-20261021-2889e070:formal",
+        "node",
+        "--input-type=module",
+        "-e",
+        "\nimport fs from 'node:fs';import {createHash} from 'node:crypto';\nimport {createRequire} from 'node:module';import {DatabaseSync} from 'node:sqlite';\nconst require=createRequire(import.meta.url),ext=require('fs-ext');\nconst hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');\nconst files=['/usr/local/bin/node','/app/node_modules/fs-ext/build/Release/fs_ext.node',\n'/app/apps/server/main.ts','/app/packages/platform/store.ts','/app/packages/platform/writer-lock.ts',\n'/app/packages/platform/checkpoint.ts','/app/packages/platform/001-foundation.sql','/app/package.json'];\nconst d=new DatabaseSync(':memory:');const sqlite=d.prepare('select sqlite_version() v').get().v;d.close();\nlet productionHarnessExcluded=true;try{fs.accessSync('/app/tests/foundation/test-server.ts');productionHarnessExcluded=false;}catch{}\nconsole.log(JSON.stringify({node:process.version,abi:process.versions.modules,sqlite,\nfsExt:require('fs-ext/package.json').version,uid:process.getuid(),arch:process.arch,\nkernel:(await import('node:os')).release(),hashes:Object.fromEntries(files.map(p=>[p,hash(p)])),\nlockfileSha:fs.existsSync('/app/package-lock.json')?hash('/app/package-lock.json'):null,\nproductionHarnessExcluded}));\n"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.659
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-runtime",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.239
+    },
+    {
+      "command": [
+        "start",
+        "-a",
+        "klh-r1-nas-gate-20261021-2889e070-runtime"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 2.622
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-runtime",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.311
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-runtime"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.241
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-runtime"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.291
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-runtime",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.246
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-runtime"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.429
+    },
+    {
+      "command": [
+        "create",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-runtime",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "klh-r1-nas-gate-20261021-2889e070:harness",
+        "node",
+        "--input-type=module",
+        "-e",
+        "\nimport fs from 'node:fs';import {createHash} from 'node:crypto';\nimport {createRequire} from 'node:module';import {DatabaseSync} from 'node:sqlite';\nconst require=createRequire(import.meta.url),ext=require('fs-ext');\nconst hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');\nconst files=['/usr/local/bin/node','/app/node_modules/fs-ext/build/Release/fs_ext.node',\n'/app/apps/server/main.ts','/app/packages/platform/store.ts','/app/packages/platform/writer-lock.ts',\n'/app/packages/platform/checkpoint.ts','/app/packages/platform/001-foundation.sql','/app/package.json'];\nconst d=new DatabaseSync(':memory:');const sqlite=d.prepare('select sqlite_version() v').get().v;d.close();\nlet productionHarnessExcluded=true;try{fs.accessSync('/app/tests/foundation/test-server.ts');productionHarnessExcluded=false;}catch{}\nconsole.log(JSON.stringify({node:process.version,abi:process.versions.modules,sqlite,\nfsExt:require('fs-ext/package.json').version,uid:process.getuid(),arch:process.arch,\nkernel:(await import('node:os')).release(),hashes:Object.fromEntries(files.map(p=>[p,hash(p)])),\nlockfileSha:fs.existsSync('/app/package-lock.json')?hash('/app/package-lock.json'):null,\nproductionHarnessExcluded}));\n"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.718
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-runtime",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.245
+    },
+    {
+      "command": [
+        "start",
+        "-a",
+        "klh-r1-nas-gate-20261021-2889e070-runtime"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 2.374
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-runtime",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.243
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-runtime"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.281
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-runtime"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.244
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-runtime",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.277
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-runtime"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.438
+    },
+    {
+      "command": [
+        "create",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-native",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "-v",
+        "$RUNROOT/work/scenario/data:/data:rw",
+        "-v",
+        "$RUNROOT/work/scenario/media:/media:ro",
+        "-v",
+        "$RUNROOT/work/scenario/content:/content:ro",
+        "klh-r1-nas-gate-20261021-2889e070:formal",
+        "node",
+        "--input-type=module",
+        "-e",
+        "\nimport fs from 'node:fs';import ext from 'fs-ext';\nconst a='/data/.gate-native-probe',b=a+'-link';let fd;\ntry{fd=fs.openSync(a,'wx',0o600);ext.flockSync(fd,'exnb');fs.writeFileSync(fd,'synthetic');\nfs.fsyncSync(fd);fs.linkSync(a,b);const dir=fs.openSync('/data','r');fs.fsyncSync(dir);fs.closeSync(dir);\nconsole.log(JSON.stringify({flock:true,hardlink:true,fsync:true,filesystemType:Number(fs.statfsSync('/data').type)>>>0}));\n}finally{if(fd!==undefined)fs.closeSync(fd);for(const p of [b,a])if(fs.existsSync(p))fs.unlinkSync(p);}\n"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.689
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-native",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.241
+    },
+    {
+      "command": [
+        "start",
+        "-a",
+        "klh-r1-nas-gate-20261021-2889e070-native"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 2.096
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-native",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.292
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-native"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.238
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-native"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.285
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-native",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.242
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-native"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.463
+    },
+    {
+      "command": [
+        "run",
+        "-d",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "--init",
+        "--restart",
+        "no",
+        "--health-interval",
+        "2s",
+        "--health-start-period",
+        "1s",
+        "--health-retries",
+        "1",
+        "-v",
+        "$RUNROOT/work/scenario/data:/data:rw",
+        "-v",
+        "$RUNROOT/work/scenario/media:/media:ro",
+        "-v",
+        "$RUNROOT/work/scenario/content:/content:ro",
+        "klh-r1-nas-gate-20261021-2889e070:formal"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 1.816
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.245
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.257
+    },
+    {
+      "command": [
+        "exec",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "node",
+        "scripts/healthcheck.ts"
+      ],
+      "exitCode": 1,
+      "wallSeconds": 0.673
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.282
+    },
+    {
+      "command": [
+        "exec",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "node",
+        "scripts/healthcheck.ts"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.691
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.25
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.314
+    },
+    {
+      "command": [
+        "stop",
+        "-t",
+        "10",
+        "klh-r1-nas-gate-20261021-2889e070-app"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 2.774
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.269
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-app"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.423
+    },
+    {
+      "command": [
+        "ps",
+        "-aq"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.241
+    },
+    {
+      "command": [
+        "inspect",
+        "--format",
+        "[{{json .Id}},{{json .Name}},{{json .State.Status}},{{json .State.StartedAt}},{{json .RestartCount}},{{with index .State \"Health\"}}{{json .Status}}{{else}}null{{end}}]",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.252
+    },
+    {
+      "command": [
+        "create",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-unit",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "-v",
+        "$RUNROOT/work:/work:rw",
+        "-v",
+        "$RUNROOT/evidence:/app/.evidence:rw",
+        "-e",
+        "TMPDIR=/work/tmp",
+        "-e",
+        "NODE_ENV=test",
+        "klh-r1-nas-gate-20261021-2889e070:harness",
+        "node",
+        "--test",
+        "--test-concurrency=1",
+        "--test-reporter=junit",
+        "--test-reporter-destination=.evidence/nas-junit.xml",
+        "tests/foundation/platform.test.ts",
+        "tests/foundation/recovery.test.ts",
+        "tests/foundation/restart.test.ts",
+        "tests/foundation/writer-lock.test.ts",
+        "tests/foundation/readiness.test.ts"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.708
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-unit",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.24
+    },
+    {
+      "command": [
+        "start",
+        "-a",
+        "klh-r1-nas-gate-20261021-2889e070-unit"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 44.646
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-unit",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.305
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-unit"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.24
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-unit"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.296
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-unit",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.235
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-unit"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.445
+    },
+    {
+      "command": [
+        "create",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-seed",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "-v",
+        "$RUNROOT/work:/work:rw",
+        "-v",
+        "$RUNROOT/evidence:/app/.evidence:rw",
+        "-e",
+        "TMPDIR=/work/tmp",
+        "klh-r1-nas-gate-20261021-2889e070:harness",
+        "node",
+        "--input-type=module",
+        "-e",
+        "\nimport fs from 'node:fs';import {Store} from './packages/platform/store.ts';\nimport {layout,prepareLayout} from './packages/platform/checkpoint.ts';\nimport {seed,syntheticCommand} from './scripts/synthetic.ts';\nconst p=layout('/work/scenario');prepareLayout(p);const s=new Store(p.data);\ntry{seed(s,p);const command=syntheticCommand(),result=s.command(command),tables=s.summary();\nfs.writeFileSync('/work/expected.json',JSON.stringify({command,result,tables}));\nconsole.log(JSON.stringify({tables,environment:s.environment(),events:result.events.length,revision:result.committedRevision}));\n}finally{s.close();}\n"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.802
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-seed",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.294
+    },
+    {
+      "command": [
+        "start",
+        "-a",
+        "klh-r1-nas-gate-20261021-2889e070-seed"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 2.846
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-seed",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.301
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-seed"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.244
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-seed"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.273
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-seed",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.248
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-seed"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.458
+    },
+    {
+      "command": [
+        "run",
+        "-d",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "--init",
+        "--restart",
+        "unless-stopped",
+        "--health-interval",
+        "2s",
+        "--health-start-period",
+        "1s",
+        "--health-retries",
+        "1",
+        "-v",
+        "$RUNROOT/work/scenario/data:/data:rw",
+        "-v",
+        "$RUNROOT/work/scenario/media:/media:ro",
+        "-v",
+        "$RUNROOT/work/scenario/content:/content:ro",
+        "klh-r1-nas-gate-20261021-2889e070:formal"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 1.779
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.246
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.309
+    },
+    {
+      "command": [
+        "exec",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "node",
+        "scripts/healthcheck.ts"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.64
+    },
+    {
+      "command": [
+        "create",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-contender",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "-v",
+        "$RUNROOT/work/scenario/data:/data:rw",
+        "-v",
+        "$RUNROOT/work/scenario/media:/media:ro",
+        "-v",
+        "$RUNROOT/work/scenario/content:/content:ro",
+        "klh-r1-nas-gate-20261021-2889e070:formal"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.667
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-contender",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.309
+    },
+    {
+      "command": [
+        "start",
+        "-a",
+        "klh-r1-nas-gate-20261021-2889e070-contender"
+      ],
+      "exitCode": 1,
+      "wallSeconds": 2.631
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-contender",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.26
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-contender"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.306
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-contender"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.247
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-contender",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.279
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-contender"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.417
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.209
+    },
+    {
+      "command": [
+        "exec",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "node",
+        "scripts/healthcheck.ts"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.976
+    },
+    {
+      "command": [
+        "create",
+        "--name",
+        "klh-r1-nas-gate-20261021-2889e070-backup",
+        "--label",
+        "org.kevin-learning-home.nas-gate=20261021-2889e070",
+        "--user",
+        "1024:100",
+        "--read-only",
+        "--network",
+        "none",
+        "--cpuset-cpus",
+        "0",
+        "--memory",
+        "512m",
+        "--cap-drop",
+        "ALL",
+        "--security-opt",
+        "no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "--log-driver",
+        "json-file",
+        "--log-opt",
+        "max-size=5m",
+        "--log-opt",
+        "max-file=2",
+        "-v",
+        "$RUNROOT/work:/work:rw",
+        "-v",
+        "$RUNROOT/evidence:/app/.evidence:rw",
+        "-e",
+        "TMPDIR=/work/tmp",
+        "klh-r1-nas-gate-20261021-2889e070:harness",
+        "node",
+        "scripts/maintenance.ts",
+        "backup",
+        "--root",
+        "/work/scenario",
+        "--out",
+        "/work/blocked-live-backup"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.68
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-backup",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.315
+    },
+    {
+      "command": [
+        "start",
+        "-a",
+        "klh-r1-nas-gate-20261021-2889e070-backup"
+      ],
+      "exitCode": 1,
+      "wallSeconds": 2.819
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-backup",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.27
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-backup"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.236
+    },
+    {
+      "command": [
+        "logs",
+        "klh-r1-nas-gate-20261021-2889e070-backup"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.324
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-backup",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.237
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-backup"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.776
+    },
+    {
+      "command": [
+        "stats",
+        "--no-stream",
+        "--format",
+        "{{json .}}",
+        "klh-r1-nas-gate-20261021-2889e070-app"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 2.183
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.243
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.256
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.255
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.262
+    },
+    {
+      "command": [
+        "exec",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "node",
+        "--input-type=module",
+        "-e",
+        "\nimport {request} from 'node:http';const result={};\nfor(const path of ['/health/live','/health/ready'])result[path]=await new Promise((resolve,reject)=>{\nconst r=request('http://127.0.0.1:4177'+path,{headers:{Host:'127.0.0.1:4177'}},s=>{s.resume();s.on('end',()=>resolve(s.statusCode));});\nr.on('error',reject);r.setTimeout(4000,()=>r.destroy(Error('HTTP_TIMEOUT')));r.end();});console.log(JSON.stringify(result));\n"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.591
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.243
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.244
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.259
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.251
+    },
+    {
+      "command": [
+        "exec",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "node",
+        "--input-type=module",
+        "-e",
+        "\nimport fs from 'node:fs';import assert from 'node:assert/strict';\nconst children=fs.readFileSync('/proc/1/task/1/children','utf8').trim().split(/\\s+/);\nassert.equal(children.length,1);const pid=Number(children[0]);assert(pid>1);\nassert(fs.readFileSync('/proc/'+pid+'/cmdline','utf8').includes('apps/server/main.ts'));\nfs.writeSync(1,'KILLING_VERIFIED_NODE\\n');process.kill(pid,'SIGKILL');\n"
+      ],
+      "exitCode": 1,
+      "wallSeconds": 0.385
+    },
+    {
+      "command": [
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070-app",
+        "--format",
+        "{{json .}}"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.232
+    },
+    {
+      "command": [
+        "rm",
+        "-f",
+        "klh-r1-nas-gate-20261021-2889e070-app"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 1.309
+    },
+    {
+      "command": [
+        "image",
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070:harness"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.248
+    },
+    {
+      "command": [
+        "image",
+        "rm",
+        "klh-r1-nas-gate-20261021-2889e070:harness"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.348
+    },
+    {
+      "command": [
+        "image",
+        "inspect",
+        "klh-r1-nas-gate-20261021-2889e070:formal"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.24
+    },
+    {
+      "command": [
+        "image",
+        "rm",
+        "klh-r1-nas-gate-20261021-2889e070:formal"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.897
+    },
+    {
+      "command": [
+        "ps",
+        "-aq",
+        "--filter",
+        "label=org.kevin-learning-home.nas-gate=20261021-2889e070"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.241
+    },
+    {
+      "command": [
+        "images",
+        "-q",
+        "--filter",
+        "label=org.kevin-learning-home.nas-gate=20261021-2889e070"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.27
+    },
+    {
+      "command": [
+        "ps",
+        "-aq"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.244
+    },
+    {
+      "command": [
+        "inspect",
+        "--format",
+        "[{{json .Id}},{{json .Name}},{{json .State.Status}},{{json .State.StartedAt}},{{json .RestartCount}},{{with index .State \"Health\"}}{{json .Status}}{{else}}null{{end}}]",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID",
+        "$OBJECT_ID"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.25
+    }
+  ],
+  "diagnosticFollowup": {
+    "classification": "TEST_PROBE_PROC_CHILDREN_UNAVAILABLE",
+    "killExecExitCode": 1,
+    "stderr": "node:fs:441\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\n                   ^\n\nError: ENOENT: no such file or directory, open '/proc/1/task/1/children'\n    at Object.readFileSync (node:fs:441:20)\n    at file:///app/[eval1]:3:19\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\n    at async node:internal/modules/esm/loader:246:26\n    at async ModuleLoader.executeModuleJob (node:internal/modules/esm/loader:243:20)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/proc/1/task/1/children'\n}\n\nNode.js v24.15.0\n",
+    "applicationWasNotSignalled": true,
+    "onlyTestProbeAdapted": true,
+    "controllerSha256": "5c60cad309a3c8d2cd9b22bb7cabe075e77341c742ada64ef84ad79ebdab8a59"
+  }
+}

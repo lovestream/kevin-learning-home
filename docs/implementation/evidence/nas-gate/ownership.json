@@ -1,0 +1,64 @@
+{
+  "executedApplicationSha": "8b80dce3be7d836f6abe6fdb569f6553ecd2a6cc",
+  "machine": "DS918+",
+  "executionStatus": "PASS_NAS",
+  "runtime": "NAS Linux 4.4.180+ container",
+  "legacyFixtureLabelNote": "Raw fixture labels retained verbatim, including original PASS_LOCAL/never NAS wording; execution context is the outer NAS wrapper and matching image/source proof.",
+  "result": {
+    "scope": "synthetic real Node processes; never NAS",
+    "status": "PASS",
+    "cases": [
+      {
+        "case": "SIGTERM",
+        "status": "PASS",
+        "death": {
+          "exitCode": 0,
+          "signal": null
+        },
+        "tableHashesPreserved": true,
+        "receiptReplayed": true,
+        "stableInodePreserved": true
+      },
+      {
+        "case": "SIGKILL",
+        "status": "PASS",
+        "death": {
+          "exitCode": null,
+          "signal": "SIGKILL"
+        },
+        "tableHashesPreserved": true,
+        "receiptReplayed": true,
+        "stableInodePreserved": true
+      },
+      {
+        "case": "two-process-initialization-and-live-contention",
+        "status": "PASS",
+        "owners": 1,
+        "blocked": 1,
+        "repeatedContenders": 3,
+        "activeOwnerPreserved": true
+      },
+      {
+        "case": "live-app-backup-CLI-exclusion",
+        "status": "PASS",
+        "blockedExitCode": 1,
+        "postKillBackupExitCode": 0,
+        "restoreExitCode": 0
+      },
+      {
+        "case": "v1-offline-transition",
+        "status": "PASS",
+        "noPIDLivenessInference": true,
+        "sameInode": true,
+        "liveV2OwnerCannotBeOverridden": true,
+        "unconfirmedCLIExitCode": 1,
+        "confirmedCLIExitCode": 0
+      },
+      {
+        "case": "unknown-and-symlink-lock-rejected",
+        "status": "PASS",
+        "originalPreserved": true
+      }
+    ]
+  }
+}

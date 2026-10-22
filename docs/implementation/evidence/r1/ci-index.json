@@ -1,0 +1,51 @@
+{
+  "primaryPassingRun": 39580937914,
+  "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/39580937914",
+  "otherPassingRun": 39580930913,
+  "executedHeadSha": "68c3e26e42bde1684ddb59fcd6064b16e6ffeedc",
+  "tests": 30,
+  "browserViewports": 3,
+  "composeParser": {
+    "version": "1.28.5",
+    "status": "PASS_CI",
+    "binarySha256": "46406eb5d8443cc0163a483fcff001d557532a7fad5981e268903ad40b75534c"
+  },
+  "archivedFiles": {
+    "ci-verification.json": "03ff7443ba461d9bbfb4888b79d47143886b4154e8b364e279bda7208f5d7553",
+    "ci-browser.json": "18da8b235ddc5448675c95d30dee3657627cc590478668f846205b19fb961c13",
+    "ci-container.json": "16ad8c7798ce585a5b952b70b0fc41e58c9c149e7235d2ac0d4bb19a9ef0a844",
+    "ci-recovery.json": "a9e13520004a0b031ae9440a816475144c813a765f9f244a04857487a7082249",
+    "ci-ownership.json": "15a707ddbebb53cfa61ba29d5bc4e083a726c15eff03bd55fab5a014d37fb81d",
+    "ci-readiness.json": "e621015a9a2922b133b5c1b83e482a8119ae66298c8753fd6a9e2b6b619ab989",
+    "ci-compose-v1.yml": "82725dcca104636764da008798bc56884922cfed2fc84f2b3420c1480c2dd9d7",
+    "ci-test-cases.json": "fded6c76206b50460b67904ea67f4f1b79fbc14fd75d5efcc565294daf2f2957"
+  },
+  "historicalR1Runs": [
+    {
+      "runs": [
+        39580286344,
+        39580277316
+      ],
+      "headSha": "670f9591bffc26abf53a1692086615275446701e",
+      "conclusion": "failure",
+      "failedStep": "Container isolation and restored-host verification",
+      "commandExitCode": 1,
+      "error": "assert(autoRestartCount >= 1) after operator docker kill; split crash and manual kill tests"
+    },
+    {
+      "run": 39580644147,
+      "headSha": "5901548de931beb548ebb0f286bf1286e91954ac",
+      "conclusion": "success"
+    },
+    {
+      "run": 39580638508,
+      "headSha": "5901548de931beb548ebb0f286bf1286e91954ac",
+      "conclusion": "failure",
+      "failedStep": "Container isolation and restored-host verification",
+      "commandExitCode": 1,
+      "error": "docker port transient not yet published after RestartCount changed; moved into bounded readiness wait"
+    }
+  ],
+  "finalDocumentationHead": "See PR #5 latest checks and PR body; final documentation commit reruns full CI",
+  "retention": "Raw build log, JUnit and screenshots in Actions implement-01-evidence artifact; 14-day retention. Sanitized JSON archived here."
+}

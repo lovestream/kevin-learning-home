@@ -1,0 +1,18 @@
+{
+  "status": "PASS_NAS",
+  "method": "Separate read-only post-cleanup check for exact run labels and paths",
+  "runs": [
+    {
+      "runId": "20261021-2889e070",
+      "directoryAbsent": true,
+      "containersRemaining": 0,
+      "imagesRemaining": 0
+    },
+    {
+      "runId": "20261021-7341fdd4",
+      "directoryAbsent": true,
+      "containersRemaining": 0,
+      "imagesRemaining": 0
+    }
+  ]
+}

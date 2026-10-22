@@ -1,0 +1,44 @@
+name: IMPLEMENT-01 foundation
+on:
+  push:
+    branches: [codex/implement-01-foundation]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  foundation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: { node-version: "24.15.0", cache: npm }
+      - run: npm install --global npm@11.12.1
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: NAS gate controller syntax only (no NAS connection)
+        run: python3 tests/nas-gate/check-probes.py
+      - run: node scripts/verify.ts
+      - name: Compose 1.28.5 parser compatibility (no daemon or service start)
+        run: |
+          curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1
+          echo '46406eb5d8443cc0163a483fcff001d557532a7fad5981e268903ad40b75534c  /tmp/klh-compose-v1' | sha256sum -c -
+          chmod u+x /tmp/klh-compose-v1
+          env KLH_APP_IMAGE=klh-ci:synthetic KLH_UID=1001 KLH_GID=1001 KLH_DATA_HOST=/tmp/klh-ci/data KLH_MEDIA_HOST=/tmp/klh-ci/media KLH_CONTENT_HOST=/tmp/klh-ci/content /tmp/klh-compose-v1 -f infra/docker/compose.yml config > .evidence/compose-v1.yml
+      - name: Container isolation and restored-host verification
+        run: |
+          set +e
+          npm run test:container > .evidence/container-build.log 2>&1
+          task_exit=$?
+          tail -c 4000 .evidence/container-build.log
+          exit "$task_exit"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: implement-01-evidence
+          path: .evidence
+          retention-days: 14
+          include-hidden-files: true

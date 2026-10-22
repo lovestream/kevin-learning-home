@@ -1,0 +1,11 @@
+{
+  "attempts": [
+    {
+      "phase": "read-only inventory",
+      "exitCode": 1,
+      "diagnostic": "Go template .State.Health raised map has no entry for key Health on containers without healthcheck",
+      "nasWritesPerformed": false,
+      "resolution": "Use Go template index .State Health with guarded optional Status; no NAS system/config changes"
+    }
+  ]
+}
