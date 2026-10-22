@@ -1,0 +1,27 @@
+{
+  "sourceRunUrl": "https://github.com/lovestream/kevin-learning-home/actions/runs/39706006427",
+  "executedHeadSha": "4bb58d4868480d7cc18b76486e8eb9f01b3a4be8",
+  "sha256": {
+    "auth-bootstrap.json": "a1b488e293a3d1011f18c47b47bee8b38df89402b7027a2fc0fa094fc0716f83",
+    "auth-container.json": "022e57fea63c521f3e43e88971541bb28fd5373be725211a8921626096d302cb",
+    "auth-migration.json": "07e5305a838a6b7b93965a210ffcbad355a51301aa8b58c58758597072c767b5",
+    "browser.json": "78a8ec7af63a7fd8b29893b65809b7749d5559a9d0f739c1ca770059cdc0095a",
+    "compose-v1.yml": "610669ee92688570fa2682e7e5bd9c2b4e087b1023bc5d7500204fabe948c80a",
+    "container.json": "9ff5f7f2b1e0f9f64a320ec92cb08a949e954f1e68febca15fa47378dc39f3f2",
+    "r1-ownership.json": "15a707ddbebb53cfa61ba29d5bc4e083a726c15eff03bd55fab5a014d37fb81d",
+    "r1-readiness.json": "e5948759f4212790451a6c62ec5de6591553b25316b3f16819daa50301e0c4ad",
+    "recovery.json": "52c077e5651a4957c48581ec5e8b0efc9faed84806ace827df72ee6c9e219acd",
+    "regression-preservation.json": "be7047e2815626d6cf8b348b443277c86b31f47f34849876758acede65280fda",
+    "run.json": "ae162111945bb7d1f126d347f0362ab7677d94c5dc6b2dc5adedd8f12c5f10f5",
+    "test-cases.json": "03d0f0f0cc9a1e95795678cd8fdf9b640ab10594d4f811d82623de30ee4e98e2",
+    "verification.json": "6631c8ef3518370ee39cce822216e64c1f69506093afc9a7d85e46a4c3816abe"
+  },
+  "notArchived": [
+    "SQLite files",
+    "credential rows",
+    "bearer or CSRF values",
+    "passwords",
+    "private keys",
+    "raw PTY capture"
+  ]
+}

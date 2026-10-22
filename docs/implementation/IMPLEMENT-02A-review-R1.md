@@ -24,7 +24,16 @@ foundation workflow的push分支增加main，保留两个原开发分支及目�
 
 先写回归再修复：R1-01在原实现因锁定login返回真实合成ID失败；R1-02因push分支缺main失败，定向2项均为预期失败。修复后定向HTTP、workflow及原v2备份恢复3项通过。完整回归实际55项=原53项+新增HTTP/CI契约各1项，JUnit逐项比对确认原53个用例名称完整保留且全部PASS。
 
-本地PASS_LOCAL：55项Node、typecheck/build、3个Chromium视口通过，实际Node24.15.0/darwin-arm64；该实现运行时尚未提交，verification明确worktreeDirty=true，不冒充已提交HEAD。CI待当前实现提交后执行并归档；安全证据保存于[02a-r1](evidence/02a-r1/README.md)，与[原02A证据](evidence/02a/README.md)分开。文档归档会形成后续提交，准确最终HEAD和该HEAD最后CI在[PR6正文](https://github.com/lovestream/kevin-learning-home/pull/6)定位，不能用实现父提交通过代替最终归档提交验证。
+本地PASS_LOCAL：55项Node、typecheck/build、3个Chromium视口通过，实际Node24.15.0/darwin-arm64；该实现运行时尚未提交，verification明确worktreeDirty=true，不冒充已提交HEAD。安全证据保存于[02a-r1](evidence/02a-r1/README.md)，与[原02A证据](evidence/02a/README.md)分开。
+
+R1实现提交 `4bb58d4868480d7cc18b76486e8eb9f01b3a4be8` 的[PR CI 39706006427](https://github.com/lovestream/kevin-learning-home/actions/runs/39706006427)和[push CI 39706002116](https://github.com/lovestream/kevin-learning-home/actions/runs/39706002116)均SUCCESS。下载artifact核对executedHeadSha匹配、worktreeDirty=false，55项全部PASS，原53个用例名称完整保留。环境为Node24.15.0/linux-x64/kernel6.17.0-1022-azure；3视口、Compose1.28.5、非root readonly正式镜像、flock竞争、SIGKILL自动重启、迁移/备份恢复及启用auth的权限回归均通过。R1 CI未出现失败；此前两项定向预期失败记录保留在local/regression-history.json。
+
+| 整改 | 结果 | 证据和边界 |
+| --- | --- | --- |
+| R1-01 | PASS_LOCAL / PASS_CI | [全部55项](evidence/02a-r1/ci/test-cases.json)、[原53项保留核对](evidence/02a-r1/ci/regression-preservation.json)、[正式镜像权限/恢复](evidence/02a-r1/ci/auth-container.json) |
+| R1-02 | 配置/完整开发分支CI PASS_LOCAL / PASS_CI；main合并后实跑NOT_RUN | main和开发分支共用完整job，workflow契约通过；尚未合并，不能证明main已运行 |
+
+长期归档[run元数据](evidence/02a-r1/ci/run.json)及文件校验和，不依赖短期artifact保存期限。文档归档会形成后续提交，准确最终HEAD和该HEAD最后CI在[PR6正文](https://github.com/lovestream/kevin-learning-home/pull/6)定位，不能用实现父提交通过代替最终归档提交验证。最后归档提交仍须完整CI绿灯后交接，不以此次实现提交的绿灯替代。
 
 ## 未运行范围与停止线
 

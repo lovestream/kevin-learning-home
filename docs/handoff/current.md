@@ -6,4 +6,4 @@
 
 停止在02A Draft PR和最新HEAD的完整CI：不合并，不启动02B，不创建真实账户/导入真实记录，不配置生产HTTPS或NAS服务。下一步由ChatGPT独立复审。
 
-main仍为`87ec45e95809d00b7104242702fb28ffbb6f7881`；合并后main新SHA的push CI必须另行核对，目前NOT_RUN，PR绿灯不能代替。
+R1实现提交`4bb58d4868480d7cc18b76486e8eb9f01b3a4be8`的PR/push CI均通过，55项（原53保留+新增2）、3视口及正式镜像权限/恢复结果已归档；最终归档提交本身的完整CI与准确HEAD由PR6正文定位。main仍为`87ec45e95809d00b7104242702fb28ffbb6f7881`；合并后main新SHA的push CI必须另行核对，目前NOT_RUN，PR绿灯不能代替。

@@ -7,6 +7,8 @@
 - local/：本地55项Node测试、3视口、类型/构建、旧53用例保留比对及定向先失败再修复的安全摘要。
 - ci/：实际R1 CI执行SHA、run链接、全部55用例、原53保留核对、Compose和正式镜像/auth恢复证据；最后文档归档提交CI与准确HEAD以PR6正文为准。
 
+已归档实现提交 `4bb58d4868480d7cc18b76486e8eb9f01b3a4be8` 的[PR CI 39706006427](https://github.com/lovestream/kevin-learning-home/actions/runs/39706006427)与[push CI 39706002116](https://github.com/lovestream/kevin-learning-home/actions/runs/39706002116)，均SUCCESS。ci/verification.json确认准确SHA、worktreeDirty=false及55项PASS；ci/regression-preservation.json确认原53项全部保留通过。ci/archived-files.json记录归档文件SHA-256；不归档数据库/口令hash单行/会话原值。
+
 复现：`node scripts/verify.ts`；Linux CI另执行Compose1.28.5及`npm run test:container`。新增workflow测试为静态触发/步骤契约检查，实际YAML由Actions解析。**main实际合并后的push运行尚未执行；只能在另获合并批准后核对，不得将开发分支/PR CI算作main CI。**
 
 详见[整改报告](../../IMPLEMENT-02A-review-R1.md)。本轮无NAS连接、真实凭据或真实学习记录操作，保持Draft等待复审。

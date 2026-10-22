@@ -6,6 +6,8 @@ ChatGPT要求先完成[两项R1整改](../reviews/KLH-IMPLEMENT-02A-R1-REVIEW.md
 
 合并手册要求获批后单独核对main实际merge/squash SHA的push CI；本轮main合并与其运行仍NOT_RUN。保留Draft，等待ChatGPT复审，不合并、不进入02B、不操作NAS或真实资料。
 
+R1实现HEAD `4bb58d4868480d7cc18b76486e8eb9f01b3a4be8` 的[PR CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39706006427)/[push CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39706002116)已通过，55项/3视口/Compose/正式auth镜像与恢复证据已归档R1目录。最后证据归档提交的准确HEAD与完整CI见PR6正文；不将实现父提交结果冒充最终提交结果。
+
 ## 初次02A交付（历史记录保留）
 
 2026-10-22。用户已批准02A，PR5已合并至main `87ec45e95809d00b7104242702fb28ffbb6f7881`。新开发分支 `codex/implement-02a-auth`，从该main建立，独立[Draft PR #6](https://github.com/lovestream/kevin-learning-home/pull/6)面向main。仅02A后端和合成测试，完成后等待ChatGPT审查。
