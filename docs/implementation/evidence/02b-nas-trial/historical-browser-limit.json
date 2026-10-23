@@ -1,0 +1,17 @@
+{
+  "historicalOnly": true,
+  "original": {
+    "status": "FAIL_NAS",
+    "stage": "child-1280",
+    "completed": [
+      "child-390",
+      "child-768"
+    ]
+  },
+  "credentialLimitObserved": {
+    "attempts": 5,
+    "limit": 5,
+    "windowMinutes": 15
+  },
+  "resolution": "Natural expiry; final browser-child.json has all 3 PASS_NAS; no auth limits reset or weakened"
+}

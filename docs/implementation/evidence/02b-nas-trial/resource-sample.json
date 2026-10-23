@@ -1,0 +1,23 @@
+{
+  "sampleOnlyNotLongTermBenchmark": true,
+  "limits": {
+    "appMiB": 512,
+    "tlsMiB": 128
+  },
+  "samples": [
+    {
+      "memory": "37.68MiB / 512MiB",
+      "cpu": "0.00%",
+      "dockerReportedPids": "0"
+    },
+    {
+      "memory": "19.96MiB / 128MiB",
+      "cpu": "0.00%",
+      "dockerReportedPids": "0"
+    }
+  ],
+  "ownedDirectoryBytes": 91764251,
+  "rootMode": "0o700",
+  "dataMode": "0o700",
+  "dockerPidAccountingReliable": false
+}

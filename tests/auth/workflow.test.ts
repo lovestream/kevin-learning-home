@@ -20,6 +20,7 @@ test("R1-02 main push and development push/PR share the unconditional complete v
     branches("push").sort(),
     [
       "main",
+      "codex/02b-nas-trial",
       "codex/implement-01-foundation",
       "codex/implement-02a-auth",
       "codex/implement-02b-shell",

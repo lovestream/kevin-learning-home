@@ -1,0 +1,66 @@
+{
+  "sourceSha": "7790da6c07e118da93d8e3221b20a4fcf78c727f",
+  "runId": "20261023-33fccf71",
+  "status": "TRIAL_RUNNING_SYNTHETIC_ONLY",
+  "containers": {
+    "app": {
+      "status": "running",
+      "memoryBytes": 536870912,
+      "readonly": true,
+      "nonRoot": true,
+      "capDropAll": true,
+      "restartPolicy": "no",
+      "health": "healthy"
+    },
+    "tls": {
+      "status": "running",
+      "memoryBytes": 134217728,
+      "readonly": true,
+      "nonRoot": true,
+      "capDropAll": true,
+      "restartPolicy": "no",
+      "health": "not-configured"
+    }
+  },
+  "existingServices": {
+    "count": 8,
+    "unchanged": true,
+    "sha256": "f4eaf2006c324b83d9f96402f31dfe7eb62e60bf2f82a0d934165f435982ab36"
+  },
+  "preflight": {
+    "filesystem": "ext4",
+    "uid": 1024,
+    "gid": 100,
+    "portFree": true,
+    "newRootAbsent": true
+  },
+  "imageId": "sha256:c73bb23119b339b99d2a46926223b8f9e6c26155fb06ce19d6971a61fd70c6a7",
+  "archiveSha256": "c0997a34f54de2c02f64781e129beda62a4e09df5de96a29275e034379f2c32d",
+  "physicalDevices": "NOT_RUN",
+  "certificateTrust": "TEST_CA_NOT_INSTALLED_BY_CONTROLLER",
+  "nasConfigChanged": false,
+  "network": {
+    "app": "dedicated internal bridge only; no published HTTP",
+    "tls": "owned edge+internal bridges; only explicit LAN IP HTTPS port; no host networking",
+    "actualRuntimePortMappingVerified": true
+  },
+  "runtime": {
+    "model": "DS918+",
+    "kernel": "4.4.180+",
+    "arch": "x86_64",
+    "docker": "20.10.3",
+    "compose": "1.28.5",
+    "node": "24.15.0",
+    "sqlite": "3.51.3",
+    "schema": 2,
+    "journal": "wal"
+  },
+  "scope": {
+    "syntheticAccounts": 2,
+    "nasProduction": false,
+    "oldSitesChanged": false,
+    "realLearningData": false,
+    "tailscaleChanged": false,
+    "publicInternetConfigured": false
+  }
+}
