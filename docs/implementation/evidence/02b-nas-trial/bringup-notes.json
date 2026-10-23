@@ -1,0 +1,34 @@
+{
+  "sourceSha": "7790da6c07e118da93d8e3221b20a4fcf78c727f",
+  "issues": [
+    {
+      "stage": "bootstrap",
+      "observed": "DATA_DIRECTORY_PRIVATE_REQUIRED",
+      "cause": "New Synology directories inherited mode 0777 despite umask",
+      "resolution": "Only marker-owned new directories tightened 0700 and files 0600; no existing paths or DB guard changed",
+      "status": "RESOLVED"
+    },
+    {
+      "stage": "LAN connectivity",
+      "observed": "Container healthy; configured PortBindings present, runtime NetworkSettings.Ports empty; connection refused",
+      "cause": "Docker20.10/DSM internal bridge did not publish port",
+      "resolution": "App stays internal; only owned TLS proxy joins additional owned bridge; actual runtime port mapping checked",
+      "status": "RESOLVED"
+    },
+    {
+      "stage": "browser harness development",
+      "observed": "Selectors/heading and login CSRF expectation corrected to existing UI/API contract",
+      "resolution": "Only manual acceptance harness changed; no app/auth changes",
+      "status": "HARNESS_CORRECTED"
+    },
+    {
+      "stage": "repeated synthetic child login",
+      "observed": "Five credential attempts reached 15-minute formal limit before third viewport",
+      "resolution": "Wait for natural expiry; do not reset limits, weaken auth or change password",
+      "status": "RESOLVED_AFTER_NATURAL_EXPIRY"
+    }
+  ],
+  "existingServicesUnchanged": true,
+  "noRealData": true,
+  "noNasConfigChange": true
+}

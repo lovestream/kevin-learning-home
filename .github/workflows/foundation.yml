@@ -7,6 +7,7 @@ on:
         codex/implement-01-foundation,
         codex/implement-02a-auth,
         codex/implement-02b-shell,
+        codex/02b-nas-trial,
       ]
   pull_request:
     branches: [main]
@@ -35,6 +36,11 @@ jobs:
           fc-cache -f ~/.local/share/fonts/klh-ci
       - name: NAS gate controller syntax only (no NAS connection)
         run: python3 tests/nas-gate/check-probes.py
+      - name: Trial tooling offline checks (no NAS access)
+        run: |
+          python3 -m py_compile infra/trial/controller.py
+          node --check tests/trial/browser.mjs
+          node --test tests/trial/proxy.test.mjs
       - run: node scripts/verify.ts
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |

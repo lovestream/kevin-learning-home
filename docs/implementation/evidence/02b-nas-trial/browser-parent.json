@@ -1,0 +1,105 @@
+{
+  "sourceSha": "7790da6c07e118da93d8e3221b20a4fcf78c727f",
+  "runId": "20261023-33fccf71",
+  "status": "PASS_NAS",
+  "requestedCase": "parent",
+  "client": "macOS real headless Chromium to LAN HTTPS NAS",
+  "physicalPhone": "NEEDS_USER_ACTION",
+  "physicalIPad": "NEEDS_USER_ACTION",
+  "certificateTrust": "test CA accepted explicitly by browser; custom CA verified separately by curl; no device trust installed",
+  "browserVersion": "156.0.8078.4",
+  "results": [
+    {
+      "name": "parent-continuous-two-polls",
+      "status": "PASS_NAS",
+      "width": 1280,
+      "externalRequests": 0,
+      "pageErrors": 0,
+      "secretConsoleLeak": false,
+      "cspViolations": 0,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "storage": {
+        "local": 0,
+        "session": 0,
+        "jsCookie": 0
+      },
+      "durationMs": 12007,
+      "successfulBackgroundPolls": 2,
+      "stableDomAndFocus": true,
+      "unlockDeadlineStable": true,
+      "lockedLearnerIdsEmpty": true,
+      "manualLock": true,
+      "refreshRelock": true
+    }
+  ],
+  "screenshots": [
+    "nas-parent-locked.png",
+    "nas-parent-continuity.png"
+  ],
+  "learningBefore": {
+    "sha256": "f22c9f589ed9481bfdd66df92b4f136fb9980a6994a16ba3816f2449f4558d60",
+    "counts": {
+      "schema_migrations": 2,
+      "learners": 1,
+      "subjects": 0,
+      "subject_states": 0,
+      "server_attempts": 0,
+      "command_receipts": 0,
+      "learning_events": 0,
+      "media_assets": 0,
+      "content_manifests": 0,
+      "content_media_refs": 0,
+      "audit_log": 0
+    }
+  },
+  "learningAfter": {
+    "sha256": "f22c9f589ed9481bfdd66df92b4f136fb9980a6994a16ba3816f2449f4558d60",
+    "counts": {
+      "schema_migrations": 2,
+      "learners": 1,
+      "subjects": 0,
+      "subject_states": 0,
+      "server_attempts": 0,
+      "command_receipts": 0,
+      "learning_events": 0,
+      "media_assets": 0,
+      "content_manifests": 0,
+      "content_media_refs": 0,
+      "audit_log": 0
+    }
+  },
+  "learningTablesUnchanged": true,
+  "mocks": false,
+  "realData": false
+}
