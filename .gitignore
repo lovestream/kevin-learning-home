@@ -6,3 +6,4 @@ apps/web/dist/
 .env
 test-results/
 .trial-private/
+__pycache__/
