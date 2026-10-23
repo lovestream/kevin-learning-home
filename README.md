@@ -1,12 +1,12 @@
 # Kevin Learning Home · Kevin 学习家园
 
-2026-10-23：同一[Draft PR #7](https://github.com/lovestream/kevin-learning-home/pull/7)正在进行[02B R1稳定性整改](docs/implementation/IMPLEMENT-02B-review-R1.md)，原60项Node/13项UI保留，UI增至18项；最新结果与停止线见报告和PR正文。
+2026-10-23：[PR #7](https://github.com/lovestream/kevin-learning-home/pull/7)已按用户明确授权合并，实际合并提交`7790da6c07e118da93d8e3221b20a4fcf78c727f`。[合并后的main完整CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39950875578)成功：Node60、真实界面18、原3视口、Docker/Compose。React登录、孩子学习首页、家长解锁导航与学科空入口现已在main。
 
-当前开发 **IMPLEMENT-02B 学习家园外壳**：统一登录、孩子学习首页、家长二次解锁导航、科目入口和响应式页面，接入已通过验收的真实Node/SQLite会话。数学/英语仍为待迁入；原网站完全独立，无课程或真实记录迁移、统一钱包、蛋仔逻辑或NAS生产部署。
+当前进行**NAS局域网隔离合成试运行和数学复制适配规划**，独立[Draft PR #8](https://github.com/lovestream/kevin-learning-home/pull/8)等待ChatGPT审查，未合并。NAS使用精确7790da6正式镜像、独立数据卷和临时测试TLS；原8个容器未改变。手机/iPad实体操作仍需实际验收，试用不代表生产上线。只需LAN访问，外部沿用用户现有Tailscale，不配置公网或更改Tailscale。
 
-PR #6已合并至main `f2c42c2475d0ae85c1688b13e437bc4332d12315`，合并后[main CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39765830063)成功。02B使用独立`codex/implement-02b-shell`分支及[Draft PR #7](https://github.com/lovestream/kevin-learning-home/pull/7)，完成后等待ChatGPT审查，不自动合并或进入下一阶段。
+数学/英语尚未接入，原站继续独立；无真实账户/记录迁移、积分或蛋仔合并。先审查[数学复制适配方案](https://github.com/lovestream/kevin-learning-home/blob/codex/02b-nas-trial/docs/implementation/MATH-COPY-ADAPTATION-PLAN.md)，再安排实际接入，英语随后；正式使用前另行验收真实身份、持续HTTPS、加密备份恢复与上线条件。
 
-阅读[页面与状态设计](docs/implementation/IMPLEMENT-02B-ui-architecture.md)、[安全评估](docs/implementation/IMPLEMENT-02B-security-review.md)、[执行与截图](docs/implementation/IMPLEMENT-02B-execution-report.md)、[当前交接](docs/handoff/current.md)。`npm run verify`执行完整Node、旧浏览器回归和真实React端到端验证；Linux CI另跑Compose和正式容器。认证仍默认关闭，合成本机启用方式见页面设计文档；没有有效默认账号/口令。
+从[项目当前状态](PROJECT_STATUS.md)、[当前交接](docs/handoff/current.md)、[本轮NAS执行报告](https://github.com/lovestream/kevin-learning-home/blob/codex/02b-nas-trial/docs/implementation/IMPLEMENT-02B-NAS-TRIAL.md)阅读。`npm run verify`保留60项Node、18项真实React端到端及旧浏览器回归，Linux CI另验Compose和正式容器；没有可用于生产的默认账号/密码。
 
 ## 02A开发时点的历史说明
 

@@ -1,43 +1,30 @@
 # Kevin Learning Home · 项目当前状态
 
-> 更新日期：2026-10-23。**此文件位于 GitHub 默认分支 `main`，用于快速定位项目真实进度。**  
-> 任何审查结果/任务书都应从本页或默认分支README能直达，不应只藏在`chatgpt/...`孤立分支里。所有历史报告保留原有时间口径。
+更新日期：2026-10-23。默认分支状态已随PR7合并修正；历史报告保留原有时点。
 
-## 现在究竟在哪里
-
-| 工作 | 状态 | 直接入口 |
+| 工作 | 状态 | 证据/入口 |
 | --- | --- | --- |
-| IMPLEMENT-01 工程底座：React/Node/SQLite/Docker | **已合并 main** | [PR #5](https://github.com/lovestream/kevin-learning-home/pull/5) |
-| IMPLEMENT-02A 身份安全、家长授权、SQLite v2 | **已合并 main；主分支合并后CI成功** | [PR #6](https://github.com/lovestream/kevin-learning-home/pull/6) · [main CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39765830063) |
-| IMPLEMENT-02B 真实登录网页、孩子首页、家长中心、学科空入口 | **Draft PR #7：代码已完成/R1复审通过，但未合并 main** | [PR #7](https://github.com/lovestream/kevin-learning-home/pull/7) · [网页代码](https://github.com/lovestream/kevin-learning-home/tree/codex/implement-02b-shell/apps/web/src) |
-| 02B 审查 | **验收通过，等用户决定是否合并 PR #7** | [独立复审验收报告](docs/reviews/KLH-IMPLEMENT-02B-R1-ACCEPTANCE.md) |
-| 数学70课、英语Word Quest真实课程 | **尚未复制或整合** | [math-learning](https://github.com/lovestream/math-learning) · [word-request](https://github.com/lovestream/word-request) |
-| NAS生产部署与真实学习记录 | **没有进行** | 不应将现代Linux CI或旧NAS原型当成正式上线 |
+| IMPLEMENT-01底座 | 已合并 | [PR5](https://github.com/lovestream/kevin-learning-home/pull/5) |
+| IMPLEMENT-02A身份安全 | 已合并，main CI成功 | [PR6](https://github.com/lovestream/kevin-learning-home/pull/6) |
+| IMPLEMENT-02B登录网页/孩子首页/家长导航 | **PR7已合并main**，merge SHA `7790da6c07e118da93d8e3221b20a4fcf78c727f` | [PR7](https://github.com/lovestream/kevin-learning-home/pull/7) · [网页源码](apps/web/src/main.tsx) · [独立R1验收](docs/reviews/KLH-IMPLEMENT-02B-R1-ACCEPTANCE.md) |
+| 实际merge提交完整CI | **PASS_CI**，push→main，Node60/UI18/旧3视口/Docker/Compose | [run39950875578](https://github.com/lovestream/kevin-learning-home/actions/runs/39950875578) |
+| NAS局域网隔离合成试运行 | 已授权、已启动；正式Node24/SQLite v2健康，测试TLS入口可达；完整证据持续归档，实体手机/iPad待用户验收 | [Draft PR8](https://github.com/lovestream/kevin-learning-home/pull/8) · [试运行报告](https://github.com/lovestream/kevin-learning-home/blob/codex/02b-nas-trial/docs/implementation/IMPLEMENT-02B-NAS-TRIAL.md) |
+| 数学复制适配 | 已形成待审方案；未复制完整课程或开放学科 | [冻结/差异/分批PR方案](https://github.com/lovestream/kevin-learning-home/blob/codex/02b-nas-trial/docs/implementation/MATH-COPY-ADAPTATION-PLAN.md) |
+| 英语接入、真实身份/记录、统一钱包/蛋仔 | 未实施 | [math-learning](https://github.com/lovestream/math-learning) · [word-request](https://github.com/lovestream/word-request)继续独立 |
+| NAS生产服务与正式上线 | **NOT_RUN** | 不能以CI或合成试用代替正式验收 |
 
-### 为什么打开 main 看不到02B的网页？
+## 当前访问与边界
 
-GitHub默认显示`main`；当前`main`已经有工程底座与02A，但**还没有合并PR #7的React新界面**。PR #7 的代码、截图和交接在`codex/implement-02b-shell`分支，具体入口：
+用户只要求LAN；外部沿用其已有Tailscale。本轮不配置公网、DSM/反向代理/防火墙/权限或Tailscale。NAS试用使用专用容器、专用空合成目录和7天测试CA，真实凭据/私钥不入GitHub，用户的地址与试用指南通过本地交接提供。既有8个容器的ID/状态/启动时间/重启计数核验不变。Linux4.4低于Node24官方支持内核基线，实际通过也不消除此长期维护风险。
 
-- [02B网页源代码](https://github.com/lovestream/kevin-learning-home/tree/codex/implement-02b-shell/apps/web/src)
-- [02B执行报告](https://github.com/lovestream/kevin-learning-home/blob/codex/implement-02b-shell/docs/implementation/IMPLEMENT-02B-execution-report.md)
-- [R1整改报告](https://github.com/lovestream/kevin-learning-home/blob/codex/implement-02b-shell/docs/implementation/IMPLEMENT-02B-review-R1.md)
-- [最终CI #39875247271](https://github.com/lovestream/kevin-learning-home/actions/runs/39875247271)：`f179b895`，Node60/60、真实界面18/18、原3视口、Docker/Compose，现代Linux成功
-- [GitHub PR #7 Files](https://github.com/lovestream/kevin-learning-home/pull/7/files)：查看哪些内容待合并
+实体手机/iPad/Safari须真实打开和登录后才能PASS；390/768视口截图不能代替。NAS试用保留供用户操作，restart=no；收尾只清理带本次marker/label且ID匹配的资源，不全局prune。PR8与数学方案等待ChatGPT独立审查，未合并。
 
-**注意：GitHub里的代码和截图并不等于已在NAS启动可访问网站。** 当前仍没有正式部署；数学英语旧站保持独立。
+## 接下来的顺序
 
-## 下一步应该怎么做
+1. 完成NAS合成登录/家长权限/刷新/退出的真实前后端证据，记录实体设备反馈；先不迁真实记录。
+2. 审查数学源码冻结、复制白名单、身份/存储适配、判题保留和小范围课例方案，再开后续开发PR；英语独立随后。
+3. 正式使用前再验收真实家长身份/恢复流程、持续HTTPS（LAN/Tailscale即可）、长期加密异地备份和新卷恢复、运行维护与回滚。
 
-1. **等待用户明确批准合并 PR #7**。批准后重新验证PR HEAD `f179b895dfdb0d7c2c1961832d813be8d91724d2`及当前main、两次CI和mergeability，Draft→Ready，正常GitHub合并；不得顺带合并其他实验PR。
-2. **核对实际合并后的main完整CI**（事件`push`、分支`main`、SHA必须是新合并提交）成功，再确认02B结项；这一步可能需要解决README历史说明合并冲突，但不能丢失任何运行代码或审查记录。
-3. **接下来分开处理两条任务线**：
-   - 平台可运行验证：在经用户单独批准的DS918+隔离Docker和合成家庭身份上，验证真实网页、认证/HTTPS/权限、Mac/iPad体验、备份恢复。不触碰旧站和真实学习数据。
-   - 学科迁移规划：分别冻结`math-learning`和`word-request`的源码版本，制定**复制后独立适配**方案，优先单科试点，旧站始终独立运行；无用户批准前不迁入完整课程或真实数据。
-4. 真正让Kevin使用之前，另做密钥管理、HTTPS、长期加密异地备份与恢复验收、正式家长身份初始化与权限确认；不要用演示身份替代真实账号。
+## 维护约定
 
-## 文档维护约定
-
-- 每次代码PR完成后，先独立复审；获得用户明确的合并授权才合并，并验证合并后的`main` CI。
-- 每次阶段结项后，同步更新**默认分支的README和本文件**，链接到PR、执行报告、源代码与验收结论；不能让默认README长期停在旧阶段。
-- 开发分支的历史报告保留在原PR，独立审查报告同时归档`docs/reviews/`（默认分支），不重复在GitHub创建大量孤立的“已完成”分支。
-- 所有测试、NAS行为与旧项目边界要准确描述`PASS_CI / PASS_NAS / NOT_RUN`，不能只因PR绿灯就宣称系统已经上线。
+新代码PR完成后独立审查，获得明确授权才合并并核对实际merge SHA的main CI。每阶段同步默认README/本页/交接；不要只把新状态留在孤立分支。合成试用与生产上线严格按事实记录PASS_CI/PASS_NAS/NEEDS_USER_ACTION/NOT_RUN。后续main若只是文档更新，应用冻结仍为上述7790da6，文档提交也须通过main CI。
