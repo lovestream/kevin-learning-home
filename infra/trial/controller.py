@@ -62,6 +62,7 @@ class Trial:
         with open(path, 'rb') as f:
             r = subprocess.run(['ssh', '-o', 'BatchMode=yes', 'nas-codex', 'umask 077; cat > ' + shlex.quote(remote)], stdin=f, capture_output=True, timeout=240)
         assert r.returncode == 0, 'OWNED_FILE_TRANSFER_FAILED'
+        self.python("import os;os.chmod(%r,0o600)" % remote)
 
     def seed(self, action, values):
         # Real offline TTY CLI; no fixture/auth bypass in the formal app image.
@@ -86,6 +87,9 @@ class Trial:
                         _, status = os.waitpid(pid, 0)
                         exit_code = os.waitstatus_to_exitcode(status)
                         break
+            self.state['lastAdmin'] = {'action': action, 'exitCode': exit_code, 'promptsAnswered': index, 'errors': re.findall(rb'"code"\s*:\s*"([A-Z_0-9]+)"', buffer)}
+            self.state['lastAdmin']['errors'] = [x.decode() for x in self.state['lastAdmin']['errors']]
+            self.save()
             assert exit_code == 0 and index == len(values), 'SYNTHETIC_TTY_ADMIN_FAILED'
         finally:
             os.close(fd)
@@ -136,9 +140,11 @@ print(json.dumps({'filesystem':m[2],'uid':os.getuid(),'gid':os.getgid(),'portFre
         self.state = {'plan': PLAN, 'origin': self.origin, 'root': self.root, 'servicesBefore': before, 'imageId': image['Id'], 'archiveSha256': digest, 'preflight': preflight, 'containers': {}, 'networkId': None, 'createdRoot': False}
         self.save()
         self.python('''import os,json
-os.umask(0o077);root=%r;os.mkdir(root)
-for name in ['data','media','content','tls','code','artifacts']:os.mkdir(root+'/'+name)
+os.umask(0o077);root=%r;os.mkdir(root);os.chmod(root,0o700)
+for name in ['data','media','content','tls','code','artifacts']:
+ os.mkdir(root+'/'+name);os.chmod(root+'/'+name,0o700)
 with open(root+'/owner-marker.json','x') as f:json.dump(%r,f)
+os.chmod(root+'/owner-marker.json',0o600)
 ''' % (self.root, PLAN))
         self.state['createdRoot'] = True; self.save()
         self.upload(archive, self.root+'/artifacts/image.tar.gz')
@@ -148,6 +154,12 @@ with open(root+'/owner-marker.json','x') as f:json.dump(%r,f)
         actual = self.inspect(PREFIX+':app'); assert actual['Id'] == image['Id']
         self.certs()
         self.upload(REPO/'infra/trial/tls-proxy.mjs', self.root+'/code/tls-proxy.mjs')
+        self.start()
+
+    def start(self):
+        assert self.state and not self.state['containers'] and not self.state['networkId']
+        self.python("import os,json,stat;root=%r;assert json.load(open(root+'/owner-marker.json'))==%r;assert all(stat.S_IMODE(os.stat(root+'/'+x).st_mode)==0o700 for x in ['.','data','media','content','tls','code','artifacts']);assert not os.path.exists(root+'/data/learning.sqlite')" % (self.root, PLAN))
+        image = {'Id': self.state['imageId']}
         credentials = {'origin': self.origin, 'runId': PLAN['runId'], 'parent': {'login': 'trial-parent', 'password': secrets.token_urlsafe(20)}, 'learner': {'login': 'trial-child', 'password': secrets.token_urlsafe(20)}}
         (PRIVATE/'credentials.json').write_text(json.dumps(credentials, indent=2)+'\n')
         self.seed('bootstrap-parent', ['trial-parent', '合成试用家长', credentials['parent']['password'], credentials['parent']['password']])
@@ -210,7 +222,7 @@ shutil.rmtree(root)
 if __name__ == '__main__':
     os.umask(0o077); PRIVATE.mkdir(exist_ok=True, mode=0o700)
     parser = argparse.ArgumentParser()
-    parser.add_argument('action', choices=['deploy', 'status', 'cleanup'])
+    parser.add_argument('action', choices=['deploy', 'start', 'status', 'cleanup'])
     parser.add_argument('--bundle')
     parser.add_argument('--lan-ip', required=True)
     parser.add_argument('--port', type=int, default=38443)

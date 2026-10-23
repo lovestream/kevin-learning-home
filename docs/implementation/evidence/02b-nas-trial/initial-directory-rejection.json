@@ -1,0 +1,18 @@
+{
+  "status": "EXPECTED_SAFETY_REJECTION_DEPLOYMENT_NOT_READY",
+  "cause": "New directories inherited Synology ACL mode0777 despite mkdir/umask; formal Store rejected DATA_DIRECTORY_PRIVATE_REQUIRED before DB creation",
+  "admin": {
+    "action": "bootstrap-parent",
+    "exitCode": 1,
+    "promptsAnswered": 0,
+    "errors": [
+      "DATA_DIRECTORY_PRIVATE_REQUIRED"
+    ]
+  },
+  "existingServices": {
+    "count": 8,
+    "unchanged": true,
+    "sha256": "f4eaf2006c324b83d9f96402f31dfe7eb62e60bf2f82a0d934165f435982ab36"
+  },
+  "scope": "only newly created trial root; no original services or data modified"
+}
