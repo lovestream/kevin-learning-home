@@ -11,3 +11,15 @@ PR #5已合并到main `87ec45e9`。当前02A独立Draft PR待ChatGPT审查；从
 历史 [Phase0文档](docs/phase-0/README.md) 保留原时点状态。NAS新部署、权限变更、真实数据迁移、对外入口与下一阶段开发均需另行批准。当前PR完成后暂停供ChatGPT独立审查。
 
 [NAS GATE真机验收报告](docs/implementation/IMPLEMENT-01-NAS-GATE-report.md)是PR5历史证据，已通过并清理；不代表02A已在NAS部署或验证，Linux4.4超出官方支持基线的风险保留。
+
+---
+
+## 当前状态（2026-10-23，优先于上面的历史描述）
+
+**[查看项目最新状态与下一步](PROJECT_STATUS.md)**。此前README中“02A仍为Draft、02B未开始”是旧阶段遗留文字，**已不再准确**：PR #5、#6均已合并；**[PR #7](https://github.com/lovestream/kevin-learning-home/pull/7) 的02B登录网页/孩子首页/家长界面已完成R1复审，但仍在Draft开发分支，尚未合并到main，也未部署NAS。**
+
+- [PR #7 的实际02B网页源代码](https://github.com/lovestream/kevin-learning-home/tree/codex/implement-02b-shell/apps/web/src)
+- [02B代码复审最终验收报告（main内）](docs/reviews/KLH-IMPLEMENT-02B-R1-ACCEPTANCE.md)
+- [02B R1整改与18项真实浏览器测试](https://github.com/lovestream/kevin-learning-home/blob/codex/implement-02b-shell/docs/implementation/IMPLEMENT-02B-review-R1.md)
+
+下一步需要**用户批准合并PR #7→核验main新CI→另行确定NAS合成环境验收/学科复制适配**。本项目仍未迁入原数学/英语课程和真实学习记录，两个旧网站保持独立运行。
