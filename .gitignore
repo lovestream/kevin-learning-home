@@ -5,3 +5,4 @@ apps/web/dist/
 *.sqlite*
 .env
 test-results/
+.trial-private/
