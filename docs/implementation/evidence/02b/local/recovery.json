@@ -1,0 +1,98 @@
+{
+  "status": "PASS_LOCAL",
+  "scope": "synthetic DB+media+content; offline snapshot into new empty host layout",
+  "manifest": {
+    "format": "klh-checkpoint",
+    "schemaVersion": 2,
+    "appVersion": "0.1.0",
+    "nodeVersion": "v24.15.0",
+    "createdAt": "2026-10-22T12:23:07.936Z",
+    "boundary": "offline-exclusive-writer; immutable published media/content; no concurrent external writer",
+    "tables": {
+      "schema_migrations": {
+        "count": 2,
+        "sha256": "4066a2c9c03e454b52b09261fcb903b4e06ca1a304b980c11cbf02fbb0423557"
+      },
+      "learners": {
+        "count": 1,
+        "sha256": "f7b991c7323373745d2031432a656a597fd50c37eb08272971c48811d87bb171"
+      },
+      "subjects": {
+        "count": 1,
+        "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+      },
+      "subject_states": {
+        "count": 1,
+        "sha256": "1073233beb2dfed948c99e9dc52da580dfe7a74bcf3f208edb2c549aa6e8c4f5"
+      },
+      "server_attempts": {
+        "count": 1,
+        "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+      },
+      "command_receipts": {
+        "count": 1,
+        "sha256": "b909eeaf85ab3a076304bf8223ea6071c46b11afbb2cfcfc3a01cad45660a580"
+      },
+      "learning_events": {
+        "count": 1,
+        "sha256": "0dc12d06ab9bc523e40d1b3a674e681e4f7fbebb3b530df96665b92b7ba87a47"
+      },
+      "media_assets": {
+        "count": 1,
+        "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+      },
+      "content_manifests": {
+        "count": 1,
+        "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+      },
+      "content_media_refs": {
+        "count": 1,
+        "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+      },
+      "audit_log": {
+        "count": 1,
+        "sha256": "950062f9ec613a0f7751af14e54e7712abcf3500f9795823fd060d6520ec68fd"
+      },
+      "actors": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "learner_grants": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "auth_controls": {
+        "count": 1,
+        "sha256": "6f2ddf806965cf1326d63bb677b084c76cfaa080e6928a79b886575b6abca2f4"
+      },
+      "auth_sessions": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "auth_limits": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "auth_audit": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    },
+    "files": {
+      "media/objects/7405ac131fd2a3393e37670ed0d472f0e845fde6dc20d921711bb4ac6c0e82e6.txt": {
+        "sha256": "7405ac131fd2a3393e37670ed0d472f0e845fde6dc20d921711bb4ac6c0e82e6",
+        "sizeBytes": 38
+      },
+      "content/foundation-demo/synthetic-v1.json": {
+        "sha256": "c7f9b1175396846b8dca3e3b2ada18eeba4b234bb12dfca3d6b8fc6be36c1126",
+        "sizeBytes": 173
+      },
+      "learning.sqlite": {
+        "sha256": "81dfd5a9a2d83bd2fb9726f44e0e44be4ecf4c802b688a93d718905d164f58d7",
+        "sizeBytes": 167936
+      }
+    }
+  },
+  "tableHashesMatch": true,
+  "receiptReplay": true
+}

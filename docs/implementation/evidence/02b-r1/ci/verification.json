@@ -1,0 +1,43 @@
+{
+  "status": "PASS_CI",
+  "timestamp": "2026-10-22T23:54:01.801Z",
+  "executedHeadSha": "f940fc1943180e7b518640a16d1ed600b335bd42",
+  "worktreeDirty": false,
+  "environment": {
+    "node": "v24.15.0",
+    "os": "linux",
+    "arch": "x64",
+    "kernel": "6.17.0-1022-azure"
+  },
+  "tests": 60,
+  "browserViewports": 3,
+  "shellBrowserScenarios": 18,
+  "shellViewports": [
+    390,
+    768,
+    1280,
+    1440
+  ],
+  "steps": [
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "/opt/hostedtoolcache/node/24.15.0/x64/bin/node --test --test-concurrency=1 --test-reporter=junit --test-reporter-destination=.evidence/foundation-junit.xml tests/foundation/platform.test.ts tests/foundation/recovery.test.ts tests/foundation/restart.test.ts tests/foundation/writer-lock.test.ts tests/foundation/readiness.test.ts tests/auth/bootstrap.test.ts tests/auth/http.test.ts tests/auth/migration.test.ts tests/auth/process.test.ts tests/auth/workflow.test.ts tests/shell/contracts.test.ts",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:browser",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:ui",
+      "exitCode": 0
+    }
+  ]
+}

@@ -208,7 +208,7 @@ export async function verifyContainerAuth(image: string, name: string) {
       "node",
       "--input-type=module",
       "-e",
-      "import{accessSync}from'node:fs';accessSync('/app/scripts/auth-admin.ts');try{accessSync('/app/tests/auth');process.exit(2);}catch{}",
+      "import{accessSync}from'node:fs';accessSync('/app/scripts/auth-admin.ts');for(const path of ['/app/tests/auth','/app/tests/shell']){try{accessSync(path);process.exit(2);}catch{}}",
     ]);
     run(["stop", name]);
     remove();
@@ -280,6 +280,7 @@ export async function verifyContainerAuth(image: string, name: string) {
           allLegacyTablesPreserved: true,
           authAdminPresent: true,
           authHarnessExcluded: true,
+          shellHarnessExcluded: true,
         },
         null,
         2,

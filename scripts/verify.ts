@@ -22,9 +22,11 @@ const steps = [
       "tests/auth/migration.test.ts",
       "tests/auth/process.test.ts",
       "tests/auth/workflow.test.ts",
+      "tests/shell/contracts.test.ts",
     ],
   ],
   ["npm", ["run", "test:browser"]],
+  ["npm", ["run", "test:ui"]],
 ] as [string, string[]][];
 const results = [];
 for (const [command, args] of steps) {
@@ -49,6 +51,14 @@ const xml = readFileSync(".evidence/foundation-junit.xml", "utf8");
 const tests = [...xml.matchAll(/<testcase\b/g)].length;
 if (!tests || /<failure\b|<error\b/.test(xml))
   throw Error("TEST_REPORT_INVALID");
+const shell = JSON.parse(readFileSync(".evidence/shell-browser.json", "utf8"));
+if (
+  shell.filtered ||
+  shell.failures ||
+  shell.total !== 18 ||
+  !["PASS_LOCAL", "PASS_CI"].includes(shell.status)
+)
+  throw Error("SHELL_REPORT_INCOMPLETE");
 const result = {
   status: process.env.CI ? "PASS_CI" : "PASS_LOCAL",
   timestamp: new Date().toISOString(),
@@ -68,6 +78,10 @@ const result = {
   },
   tests,
   browserViewports: 3,
+  shellBrowserScenarios: JSON.parse(
+    readFileSync(".evidence/shell-browser.json", "utf8"),
+  ).total,
+  shellViewports: [390, 768, 1280, 1440],
   steps: results,
 };
 writeFileSync(

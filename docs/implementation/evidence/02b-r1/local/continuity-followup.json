@@ -1,0 +1,53 @@
+{
+  "status": "PASS_LOCAL",
+  "timestamp": "2026-10-22T23:51:37.575Z",
+  "executedHeadSha": "147a3143dd5dca09fcb8aa70fd4d6b083597a4ab",
+  "worktreeDirty": true,
+  "scope": "real compiled React + loopback Node auth + SQLite; synthetic only; never NAS/physical iPad",
+  "filtered": true,
+  "total": 1,
+  "failures": 0,
+  "screenshots": [
+    "r1-parent-continuity-1280.png"
+  ],
+  "r1Evidence": {
+    "continuity": {
+      "wallClockMs": 12086,
+      "successfulPolls": 2,
+      "unchangedUnlockDeadline": true,
+      "stableDOMAndFocus": true
+    }
+  },
+  "cases": [
+    {
+      "name": "r1-parent-continuous-two-polls",
+      "status": "PASS",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "durationMs": 12940,
+      "learningTablesUnchanged": true,
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0
+    }
+  ]
+}

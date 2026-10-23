@@ -1,0 +1,38 @@
+{
+  "status": "PASS_CI",
+  "executedHeadSha": "b08defe2b37604b77609ebad3bafa99b88c7cb3b",
+  "timestamp": "2026-10-22T15:06:22.660Z",
+  "scope": "production entry; Chromium viewport only, not physical iPad/Safari",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "status": "PASS",
+      "writeRequests": 0,
+      "learningRecordsCreated": 0,
+      "localStorageEntries": 0
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "status": "PASS",
+      "writeRequests": 0,
+      "learningRecordsCreated": 0,
+      "localStorageEntries": 0
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS",
+      "writeRequests": 0,
+      "learningRecordsCreated": 0,
+      "localStorageEntries": 0
+    }
+  ]
+}

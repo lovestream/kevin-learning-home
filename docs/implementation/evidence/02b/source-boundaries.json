@@ -1,0 +1,25 @@
+{
+  "baseline": "f2c42c2475d0ae85c1688b13e437bc4332d12315",
+  "implementation": "f2cd0a98f9e18dfaf255403bfd3e620aea826fde",
+  "ciSetupRevision": "b08defe2b37604b77609ebad3bafa99b88c7cb3b",
+  "unchangedPathsComparedToBaseline": [
+    "packages/auth",
+    "packages/platform",
+    "packages/contracts/auth.ts",
+    "package-lock.json",
+    "infra/docker",
+    "tests/foundation",
+    "tests/auth/bootstrap.test.ts",
+    "tests/auth/http.test.ts",
+    "tests/auth/migration.test.ts",
+    "tests/auth/process.test.ts"
+  ],
+  "unexpectedChanges": [],
+  "databaseSchemaVersion": 2,
+  "newDependencies": false,
+  "learningWritesEnabled": false,
+  "subjectRuntimeModulesInstalled": false,
+  "oldSitesCalled": false,
+  "nasContacted": false,
+  "notes": "Static shell routes added in apps/server/http.ts; auth workflow and container test only extended. Git metadata snapshots of old repositories unchanged. This is source inspection, not NAS or real-data validation."
+}

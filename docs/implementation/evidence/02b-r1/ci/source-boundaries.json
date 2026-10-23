@@ -1,0 +1,17 @@
+{
+  "comparisonBase": "147a3143dd5dca09fcb8aa70fd4d6b083597a4ab",
+  "implementationSha": "f940fc1943180e7b518640a16d1ed600b335bd42",
+  "unchangedPaths": [
+    "packages/auth",
+    "packages/platform",
+    "packages/contracts/auth.ts",
+    "infra/docker",
+    "package-lock.json",
+    "tests/auth",
+    "tests/foundation"
+  ],
+  "unexpectedChanges": [],
+  "oldRepositoriesOnlyGitMetadataInspected": true,
+  "nasContacted": false,
+  "realDataAccessed": false
+}
