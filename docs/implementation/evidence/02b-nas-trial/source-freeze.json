@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-23",
+  "mathHead": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "mathTrackedFilesOnly": true,
+  "mathStatusUnchanged": true,
+  "wordHead": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "wordPreexistingUntrackedPreserved": 1,
+  "mathFiles": {
+    "server/index.mjs": {
+      "sha256": "d92c4d20d219925f7a615f75b0123ed6f197e95fd5c1859044d42dba3036934d",
+      "bytes": 15006
+    },
+    "server/store.mjs": {
+      "sha256": "e5d6ee1952a5b87c69e822569f119cfe62dbe967b53d794fc6f0c78e887d3be7",
+      "bytes": 13778
+    },
+    "server/pilot-store.mjs": {
+      "sha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "bytes": 20751
+    },
+    "server/parent-access.mjs": {
+      "sha256": "fa92047e7cc20f654a0353dee237eec9ea39f3cebff1c581d2d41a8bd9c41df9",
+      "bytes": 5117
+    },
+    "server/review-schedule.mjs": {
+      "sha256": "e6126fd5a57f07de74756a325a8c375e25deed34d67f4662a416d3326ba1902d",
+      "bytes": 2129
+    },
+    "shared/pilot-math.mjs": {
+      "sha256": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
+      "bytes": 11678
+    },
+    "shared/widget-state.mjs": {
+      "sha256": "51b59cbf8a7ae23e3973c7191d2b030a3aba8fea1a3339ffa940e09c3e0010ab",
+      "bytes": 8170
+    },
+    "shared/withdrawn-checks.mjs": {
+      "sha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "bytes": 833
+    },
+    "src/studio/ChildClassroom.tsx": {
+      "sha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "bytes": 8811
+    },
+    "src/studio/Practice.tsx": {
+      "sha256": "9848554a7a70152f99625d55fd0afee5d95e425620716e8677fb50d5c31d9ea2",
+      "bytes": 18851
+    },
+    "src/studio/api.ts": {
+      "sha256": "ce395c72bd6b847479ed426982aff16e892f1dabb60a13eac3a6d95fb7117b48",
+      "bytes": 2625
+    },
+    "content/pilot/source.mjs": {
+      "sha256": "50d29596ddbcea7c6a90a51ac0c7d9732a2d90069aa0f9ea88ed51da39ab0775",
+      "bytes": 20063
+    },
+    "content/pilot/lessons.json": {
+      "sha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
+      "bytes": 1904117
+    },
+    "content/pilot/design-index.json": {
+      "sha256": "c20bc534dd62c868bb7f071199aa9d7af3a6d1f9a672c46a2818017f479c8da8",
+      "bytes": 9076
+    },
+    "scripts/build-pilot.mjs": {
+      "sha256": "0a04711dd7e36b3427ca7c4b4cd79a0e9a0902e2e4868a72e941d905b333a38b",
+      "bytes": 4811
+    },
+    "tests/pilot-store.test.mjs": {
+      "sha256": "937c2bc39455e0da2b45f48aeade04bf2e3f04d75b30ad2c32a5ba81ba721fbe",
+      "bytes": 7703
+    },
+    "tests/pilot-math.test.mjs": {
+      "sha256": "383eae3735df17103d250f3dfec5111c09ca183705c963ba5c3e3c23f2850508",
+      "bytes": 2649
+    }
+  },
+  "lessonInventory": {
+    "count": 70,
+    "uniqueLessonIds": 70,
+    "firstLessonIds": [
+      "G3-U01-B01",
+      "G3-U01-B02",
+      "G3-U01-B03"
+    ],
+    "contentVersions": [
+      "2026-10-02.1",
+      "2026-10-07.2",
+      "2026-10-09.4",
+      "2026-10-18.1"
+    ],
+    "statusCounts": {
+      "draft": 70
+    }
+  },
+  "noSourceRepoExecution": true,
+  "noRealDataOpened": true,
+  "filesCopied": 0
+}

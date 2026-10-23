@@ -170,8 +170,28 @@ os.chmod(root+'/owner-marker.json',0o600)
         common = ['--detach', '--init', '--read-only', '--user', '1024:100', '--label', LABEL+'='+PLAN['runId'], '--label', 'com.centurylinklabs.watchtower.enable=false', '--cpuset-cpus', '0', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges:true', '--restart', 'no', '--log-opt', 'max-size=5m', '--log-opt', 'max-file=2', '--tmpfs', '/tmp:rw,noexec,nosuid,size=16m', '--network', network]
         app = self.docker(['run', *common, '--name', PREFIX+'-app', '--network-alias', 'app', '--memory', '512m', '-e', 'KLH_AUTH_ORIGIN='+self.origin, '-e', 'KLH_AUTH_MODE=production', '-v', self.root+'/data:/data:rw', '-v', self.root+'/media:/media:ro', '-v', self.root+'/content:/content:ro', image['Id']]).stdout.decode().strip()
         self.state['containers']['app'] = app; self.save()
-        tls = self.docker(['run', *common, '--name', PREFIX+'-tls', '--memory', '128m', '--no-healthcheck', '-e', 'TRIAL_ORIGIN='+self.origin, '-p', self.args.lan_ip+':'+str(self.args.port)+':8443', '-v', self.root+'/tls:/tls:ro', '-v', self.root+'/code/tls-proxy.mjs:/trial-proxy.mjs:ro', image['Id'], 'node', '/trial-proxy.mjs']).stdout.decode().strip()
+        self.launch_tls(common)
+        self.status()
+
+    def launch_tls(self, common):
+        # Docker 20.10 on this DSM does not publish ports on an internal bridge.
+        # Keep app internal; only the TLS terminator joins a new owned edge bridge.
+        edge = self.docker(['network', 'create', '--label', LABEL+'='+PLAN['runId'], PREFIX+'-edge']).stdout.decode().strip()
+        self.state['edgeNetworkId'] = edge; self.save()
+        common = list(common)
+        common[common.index('--network')+1] = edge
+        tls = self.docker(['run', *common, '--name', PREFIX+'-tls', '--memory', '128m', '--no-healthcheck', '-e', 'TRIAL_ORIGIN='+self.origin, '-p', self.args.lan_ip+':'+str(self.args.port)+':8443', '-v', self.root+'/tls:/tls:ro', '-v', self.root+'/code/tls-proxy.mjs:/trial-proxy.mjs:ro', self.state['imageId'], 'node', '/trial-proxy.mjs']).stdout.decode().strip()
         self.state['containers']['tls'] = tls; self.save()
+        self.docker(['network', 'connect', self.state['networkId'], tls])
+
+    def repair_edge(self):
+        assert not self.state.get('edgeNetworkId')
+        info = self.inspect(self.state['containers']['tls'])
+        assert info['Config']['Labels'][LABEL] == PLAN['runId'] and info['Image'] == self.state['imageId']
+        common = ['--detach', '--init', '--read-only', '--user', '1024:100', '--label', LABEL+'='+PLAN['runId'], '--label', 'com.centurylinklabs.watchtower.enable=false', '--cpuset-cpus', '0', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges:true', '--restart', 'no', '--log-opt', 'max-size=5m', '--log-opt', 'max-file=2', '--tmpfs', '/tmp:rw,noexec,nosuid,size=16m', '--network', self.state['networkId']]
+        self.docker(['rm', '-f', info['Id']])
+        del self.state['containers']['tls']; self.save()
+        self.launch_tls(common)
         self.status()
 
     def status(self):
@@ -185,9 +205,13 @@ os.chmod(root+'/owner-marker.json',0o600)
             assert 'no-new-privileges:true' in host['SecurityOpt']
             assert host['ReadonlyRootfs'] and not host['Privileged'] and host['CpusetCpus'] == '0'
             assert info['Config']['User'] == '1024:100' and 'ALL' in host['CapDrop']
-            assert host['NetworkMode'] == self.state['networkId'] and host['PidMode'] == ''
+            assert host['NetworkMode'] == (self.state.get('edgeNetworkId', self.state['networkId']) if role == 'tls' else self.state['networkId']) and host['PidMode'] == ''
             if role == 'app': assert not host['PortBindings']
-            else: assert host['PortBindings']['8443/tcp'] == [{'HostIp': self.args.lan_ip, 'HostPort': str(self.args.port)}]
+            else:
+                expected = [{'HostIp': self.args.lan_ip, 'HostPort': str(self.args.port)}]
+                assert host['PortBindings']['8443/tcp'] == expected
+                assert info['NetworkSettings']['Ports']['8443/tcp'] == expected
+                assert len(info['NetworkSettings']['Networks']) == 2
             containers[role] = {'status': info['State']['Status'], 'memoryBytes': host['Memory'], 'readonly': True, 'nonRoot': True, 'capDropAll': True, 'restartPolicy': host['RestartPolicy']['Name'], 'health': info['State'].get('Health', {}).get('Status', 'not-configured')}
         out = {'sourceSha': PLAN['sourceSha'], 'runId': PLAN['runId'], 'status': 'TRIAL_RUNNING_SYNTHETIC_ONLY', 'containers': containers, 'existingServices': self.invariance(), 'preflight': self.state['preflight'], 'imageId': self.state['imageId'], 'archiveSha256': self.state['archiveSha256'], 'physicalDevices': 'NOT_RUN', 'certificateTrust': 'TEST_CA_NOT_INSTALLED_BY_CONTROLLER', 'nasConfigChanged': False}
         (PRIVATE/'nas-status.json').write_text(json.dumps(out, indent=2)+'\n')
@@ -202,10 +226,11 @@ os.chmod(root+'/owner-marker.json',0o600)
                 assert info['Config']['Labels'][LABEL] == PLAN['runId'] and info['Image'] == self.state['imageId']
                 if role in self.state['containers']: assert info['Id'] == self.state['containers'][role]
                 self.docker(['rm', '-f', info['Id']])
-        if self.state['networkId']:
-            network = json.loads(self.docker(['network', 'inspect', self.state['networkId']]).stdout)[0]
-            assert network['Labels'][LABEL] == PLAN['runId'] and not network['Containers']
-            self.docker(['network', 'rm', network['Id']])
+        for nid in [self.state.get('edgeNetworkId'), self.state.get('networkId')]:
+            if nid:
+                network = json.loads(self.docker(['network', 'inspect', nid]).stdout)[0]
+                assert network['Labels'][LABEL] == PLAN['runId'] and not network['Containers']
+                self.docker(['network', 'rm', network['Id']])
         if self.docker(['image', 'inspect', PREFIX+':app'], check=False).returncode == 0:
             assert self.inspect(PREFIX+':app')['Id'] == self.state['imageId']
             self.docker(['image', 'rm', PREFIX+':app'])
@@ -222,7 +247,7 @@ shutil.rmtree(root)
 if __name__ == '__main__':
     os.umask(0o077); PRIVATE.mkdir(exist_ok=True, mode=0o700)
     parser = argparse.ArgumentParser()
-    parser.add_argument('action', choices=['deploy', 'start', 'status', 'cleanup'])
+    parser.add_argument('action', choices=['deploy', 'start', 'status', 'cleanup', 'repair_edge'])
     parser.add_argument('--bundle')
     parser.add_argument('--lan-ip', required=True)
     parser.add_argument('--port', type=int, default=38443)
