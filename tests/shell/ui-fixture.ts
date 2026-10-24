@@ -7,8 +7,9 @@ export async function uiFixture(
   browser: Browser,
   viewport = { width: 1280, height: 900 },
   siblings = false,
+  math = false,
 ) {
-  const f = await authFixture();
+  const f = await authFixture(false, false, math);
   const sibling = siblings
     ? await f.auth.provisionLearner(
         f.parent,

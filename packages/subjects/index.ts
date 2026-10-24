@@ -3,7 +3,7 @@ export const subjectRegistrationSchema = z.strictObject({
   id: z.string().regex(/^[a-z][a-z0-9-]{0,47}$/),
   title: z.string().min(1).max(32),
   enabled: z.boolean(),
-  status: z.enum(["awaiting-migration", "unavailable"]),
+  status: z.enum(["awaiting-migration", "unavailable", "readonly-preview"]),
   contractVersion: z.literal(1),
   contentVersion: z.string().min(1).max(120).nullable(),
   mark: z.string().min(1).max(4),
@@ -71,3 +71,20 @@ export const wallet = Object.freeze({
   enabled: false,
   status: "awaiting-separate-approval",
 });
+
+/** Pure per-server catalog: default registry remains unchanged for all existing callers. */
+export function subjectCatalog(
+  mathReadonly = false,
+): readonly SubjectRegistration[] {
+  if (!mathReadonly) return subjects;
+  return subjects.map((s) =>
+    s.id === "math"
+      ? {
+          ...s,
+          enabled: true,
+          status: "readonly-preview" as const,
+          contentVersion: "2026-10-07.2",
+        }
+      : s,
+  );
+}

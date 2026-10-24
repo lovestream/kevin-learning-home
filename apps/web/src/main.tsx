@@ -7,6 +7,8 @@ import {
 import { catalogDTO, request, type SubjectRegistration } from "./api.ts";
 import { useIdentity } from "./identity.ts";
 import "./style.css";
+import { MATH_PAGE } from "../../../packages/contracts/math-readonly.ts";
+const MathLesson = React.lazy(() => import("./math/Lesson.tsx"));
 
 function House({ small = false }: { small?: boolean }) {
   return (
@@ -251,7 +253,11 @@ function SubjectLinks({
           <span>
             <span className="subject-name">{s.title}</span>
             <span className="subject-status">
-              {s.status === "awaiting-migration" ? "待迁入" : "暂不可用"}
+              {s.status === "readonly-preview"
+                ? "只读课堂"
+                : s.status === "awaiting-migration"
+                  ? "待迁入"
+                  : "暂不可用"}
             </span>
           </span>
           <span className="tab-corner" aria-hidden="true" />
@@ -294,6 +300,9 @@ function App() {
   const authenticated = state.phase === "authenticated" && !!state.session;
   const parent = authenticated && state.session!.actor.role === "parent";
   const selected = state.learners.find((l) => l.id === state.selected);
+  const mathReady = !!catalog?.some(
+    (s) => s.id === "math" && s.enabled && s.status === "readonly-preview",
+  );
   async function loadCatalog() {
     catalogRequest.current?.abort();
     const control = new AbortController();
@@ -510,6 +519,11 @@ function App() {
         )}
         {selected ? (
           <>
+            {mathReady && (
+              <Link {...navigation} to={MATH_PAGE} className="button secondary">
+                打开首课只读课堂
+              </Link>
+            )}
             <section className="report-placeholder">
               <h2>{selected.label}的学习报告</h2>
               <p>家长报告尚未接入</p>
@@ -531,9 +545,42 @@ function App() {
       </div>
     );
   }
+  function renderMathPage() {
+    if (!mathReady)
+      return <Empty title="数学课堂尚未开放">请先返回科目入口。</Empty>;
+    if (parent && (!state.session!.parentUnlocked || !selected))
+      return renderParentPage();
+    if (!selected) return <p>请重新确认学习者身份。</p>;
+    return (
+      <React.Suspense fallback={<p role="status">正在打开课堂…</p>}>
+        <MathLesson
+          key={
+            state.session!.actor.id +
+            "|" +
+            selected.id +
+            "|" +
+            (parent ? state.session!.parentUnlockExpiresAt : "child")
+          }
+          learnerId={selected.id}
+          onDenied={() => void identity.sync()}
+        />
+      </React.Suspense>
+    );
+  }
   function renderSubjectPage() {
     const id = path.slice("/subjects/".length),
       subject = catalog?.find((s) => s.id === id);
+    if (subject?.id === "math" && mathReady)
+      return (
+        <>
+          <h1>数学</h1>
+          <p>先从一节只读课堂开始观察。</p>
+          <Link {...navigation} to={MATH_PAGE} className="button primary">
+            打开首课只读课堂
+          </Link>
+          <p className="quiet-note">练习和学习记录尚未接入。</p>
+        </>
+      );
     return (
       <>
         <div className="page-heading">
@@ -663,7 +710,9 @@ function App() {
             </Link>
           </div>
           <Empty title="今天还没有学习任务" kind="plan">
-            数学和英语还在准备迁入。你可以先看看它们的新位置。
+            {mathReady
+              ? "数学已有一节只读课堂，练习和英语仍在准备。"
+              : "数学和英语还在准备迁入。你可以先看看它们的新位置。"}
           </Empty>
         </section>
         <section className="home-subjects">
@@ -694,7 +743,7 @@ function App() {
     renderWelcome()
   ) : path === "/login" ? (
     renderLogin()
-  ) : path.startsWith("/subjects/") ? (
+  ) : path.startsWith("/subjects/") && path !== MATH_PAGE ? (
     renderSubjectPage()
   ) : !authenticated ? (
     <section className="access-gate">
@@ -723,6 +772,8 @@ function App() {
         )
       )}
     </section>
+  ) : path === MATH_PAGE ? (
+    renderMathPage()
   ) : (
     renderWorkspace()
   );

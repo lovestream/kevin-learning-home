@@ -1,4 +1,4 @@
-name: IMPLEMENT-02B shell and auth
+name: Foundation, auth, shell and MATH-01
 on:
   push:
     branches:
@@ -9,6 +9,7 @@ on:
         codex/implement-02b-shell,
         codex/02b-nas-trial,
         codex/math-00-source-audit,
+        codex/math-01-readonly-lesson,
       ]
   pull_request:
     branches: [main]

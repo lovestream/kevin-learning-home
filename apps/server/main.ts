@@ -1,3 +1,7 @@
+import {
+  MathLessonService,
+  mathReadonlyFlag,
+} from "../../packages/subjects/math/service.ts";
 import { AuthService } from "../../packages/auth/service.ts";
 import { authConfig } from "../../packages/auth/config.ts";
 import { resolve } from "node:path";
@@ -48,6 +52,8 @@ try {
     (host !== "127.0.0.1" || process.env.KLH_CONTAINER === "1")
   )
     throw new AppError("AUTH_TRANSPORT_CONFIG", 503);
+  const mathEnabled = mathReadonlyFlag(process.env.KLH_MATH_READONLY);
+  if (mathEnabled && !config) throw new AppError("AUTH_CONFIG_REQUIRED", 503);
   const server = createHttp(store, {
     webRoot: resolve(process.env.KLH_WEB_DIR ?? "apps/web/dist"),
     origin:
@@ -55,6 +61,13 @@ try {
       process.env.KLH_INTERNAL_ORIGIN ??
       "http://127.0.0.1:" + port,
     ...(config ? { auth: { service: new AuthService(store), config } } : {}),
+    ...(mathEnabled
+      ? {
+          math: new MathLessonService(
+            resolve(process.env.KLH_WEB_DIR ?? "apps/web/dist"),
+          ),
+        }
+      : {}),
     readiness: directoriesReady,
   });
   server.on("error", () => {

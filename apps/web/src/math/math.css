@@ -1,0 +1,360 @@
+/* ADAPT observe/box-camera visual rules from frozen intro-visual.css and hands-on.css.
+   Every selector is bounded by .math-lesson; original palette/geometry retained. */
+.math-lesson {
+  color: #294b53;
+  max-width: 1100px;
+  min-width: 0;
+}
+.math-lesson .math-heading h1 {
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.4;
+  max-width: 24em;
+  margin: 10px 0;
+}
+.math-lesson .math-heading > p {
+  line-height: 1.8;
+}
+.math-lesson .math-readonly,
+.math-lesson .math-memory-note {
+  font-size: 0.9rem;
+  color: #53717d;
+}
+.math-lesson .classroom-route {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 7px;
+  margin: 26px 0 20px;
+}
+.math-lesson button {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #a8bfcd;
+  border-radius: 9px;
+  background: #fff;
+  color: #294b53;
+  padding: 11px 13px;
+  line-height: 1.5;
+}
+.math-lesson button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.math-lesson button[aria-pressed="true"],
+.math-lesson button[aria-current="step"] {
+  background: #deedf4;
+  border-color: #527eab;
+  color: #234e70;
+}
+.math-lesson .classroom-route button {
+  padding: 10px 6px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.math-lesson .classroom-route button span {
+  font-size: 0.8rem;
+}
+.math-lesson button:focus-visible,
+.math-lesson svg:focus-visible,
+.math-lesson .classroom-stage:focus-visible {
+  outline: 3px solid #527eab;
+  outline-offset: 3px;
+}
+.math-lesson .classroom-stage {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #d7e3e9;
+  border-radius: 16px;
+  padding: clamp(16px, 3vw, 30px);
+}
+.math-lesson .classroom-stage h2 {
+  font-size: 1.45rem;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+.math-lesson .classroom-stage p {
+  line-height: 1.9;
+  max-width: 70ch;
+}
+.math-lesson .math-step-count {
+  font-size: 0.9rem;
+  color: #537668;
+}
+.math-lesson .story-sentence {
+  font-size: 1.1rem;
+}
+.math-lesson .classroom-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 22px 0;
+}
+.math-lesson .classroom-navigation span {
+  font-size: 0.85rem;
+  color: #53717d;
+}
+.math-lesson .prediction-cards {
+  display: grid;
+  gap: 10px;
+}
+.math-lesson details {
+  padding: 18px 0;
+  border-top: 1px solid #d7e3e9;
+}
+.math-lesson summary {
+  cursor: pointer;
+  line-height: 1.8;
+}
+.math-lesson .symbol-lines {
+  border-left: 4px solid #e9b44d;
+  padding-left: 20px;
+}
+.math-lesson .math-exercise-unavailable {
+  padding: 24px 0;
+}
+.math-lesson .intro-visual {
+  margin: 22px 0;
+  background: #f4f7f2;
+  border: 1px solid #d7e3d9;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #294b53;
+  min-width: 0;
+}
+.math-lesson .intro-visual > header {
+  padding: 18px 23px 8px;
+}
+.math-lesson .intro-visual h3 {
+  font-size: 19px;
+  line-height: 1.45;
+  margin: 6px 0 3px;
+}
+.math-lesson .intro-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  overflow: visible;
+  font-family: inherit;
+}
+.math-lesson .intro-canvas text {
+  font-weight: 600;
+}
+.math-lesson .intro-visual > figcaption {
+  padding: 12px 22px 18px;
+  line-height: 1.75;
+  font-size: 15px;
+  color: #456468;
+  border-top: 1px solid #d7e3d9;
+  background: #ffffff80;
+}
+.math-lesson .intro-object-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 8px 18px 18px;
+  align-items: center;
+}
+.math-lesson .intro-object-card {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #dce5dc;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.math-lesson .intro-object-card .solid-viewport {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: default;
+  touch-action: auto;
+}
+.math-lesson .intro-object-card p {
+  margin: 0;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.math-lesson .intro-marker-key {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 0 18px 18px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.math-lesson .mark-front {
+  color: #df6c4f;
+}
+.math-lesson .mark-right {
+  color: #527eab;
+}
+.math-lesson .mark-top {
+  color: #a37314;
+}
+.math-lesson .intro-photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  align-items: center;
+  gap: 15px;
+  padding: 0 24px 22px;
+  text-align: center;
+}
+.math-lesson .intro-photo-pair > div {
+  background: #fff;
+  border: 1px solid #d7e3d9;
+  border-radius: 12px;
+  min-width: 0;
+}
+.math-lesson .intro-photo-pair span {
+  display: block;
+  padding: 12px 5px 0;
+  font-size: 15px;
+  font-weight: 650;
+}
+.math-lesson .intro-photo-pair svg {
+  width: 100%;
+  max-height: 145px;
+}
+.math-lesson .intro-unknown {
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.math-lesson .intro-unknown strong {
+  font-size: 3rem;
+}
+.math-lesson .intro-unknown small {
+  padding: 10px;
+  line-height: 1.7;
+}
+.math-lesson .hands-on-workbench {
+  min-width: 0;
+  background: #f4f7f2;
+  border: 1px solid #d7e3d9;
+  border-radius: 16px;
+  padding: 20px;
+}
+.math-lesson .hands-heading h3 {
+  margin-top: 0;
+  line-height: 1.6;
+}
+.math-lesson .spatial-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(160px, 0.9fr);
+  gap: 18px;
+}
+.math-lesson .hands-stage {
+  min-width: 0;
+}
+.math-lesson .spatial-workbench .solid-viewport {
+  width: 100%;
+  height: auto;
+  display: block;
+  touch-action: none;
+  border-radius: 12px;
+}
+.math-lesson .observer-strip {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  line-height: 1.7;
+  margin: 12px 0;
+}
+.math-lesson .observer-strip small {
+  width: 100%;
+}
+.math-lesson .view-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.math-lesson .hands-tools {
+  min-width: 0;
+}
+.math-lesson .hands-tools h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+.math-lesson .photo-shelf {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin: 12px 0;
+}
+.math-lesson .projection-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.math-lesson .projection-card {
+  min-width: 0;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #dce5dc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.math-lesson .projection-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.math-lesson .projection-card figcaption {
+  padding: 10px 6px 0;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.6;
+}
+.math-lesson .hands-notice {
+  font-size: 0.9rem;
+}
+.math-lesson .math-reset {
+  margin-top: 12px;
+}
+@media (max-width: 1000px) {
+  .math-lesson .spatial-layout {
+    grid-template-columns: 1fr;
+  }
+  .math-lesson .hands-stage .solid-viewport {
+    max-height: 400px;
+  }
+  .math-lesson .classroom-route {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .math-lesson .intro-object-layout {
+    grid-template-columns: 1fr;
+  }
+  .math-lesson .intro-photo-pair {
+    padding: 0 12px 16px;
+    gap: 7px;
+    grid-template-columns: 1fr 16px 1fr;
+  }
+  .math-lesson .intro-unknown {
+    min-height: 160px;
+  }
+  .math-lesson .intro-marker-key {
+    gap: 8px;
+    font-size: 14px;
+  }
+  .math-lesson .hands-on-workbench {
+    padding: 12px;
+  }
+  .math-lesson .classroom-navigation span {
+    display: none;
+  }
+  .math-lesson .classroom-stage {
+    padding: 16px;
+  }
+  .math-lesson .projection-row {
+    gap: 5px;
+  }
+}

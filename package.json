@@ -12,7 +12,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "vite build --config apps/web/vite.config.ts",
+    "build": "node scripts/math01/seal.ts && vite build --config apps/web/vite.config.ts && node scripts/math01/build.ts",
     "typecheck": "tsc --noEmit",
     "start": "node apps/server/main.ts",
     "test": "node --test --test-concurrency=1 tests/foundation/*.test.ts tests/auth/*.test.ts tests/shell/*.test.ts",
@@ -25,7 +25,9 @@
     "verify": "node scripts/verify.ts",
     "test:ui": "node tests/shell/browser.ts",
     "test:auth": "node --test --test-concurrency=1 tests/auth/*.test.ts",
-    "auth:admin": "node scripts/auth-admin.ts"
+    "auth:admin": "node scripts/auth-admin.ts",
+    "test:math01": "node --test --test-concurrency=1 tests/math01/*.test.ts",
+    "test:math01:browser": "node tests/math01/browser.ts"
   },
   "dependencies": {
     "fs-ext": "2.1.1",

@@ -2,6 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { execFileSync, spawnSync } from "node:child_process";
 import os from "node:os";
 mkdirSync(".evidence", { recursive: true });
+mkdirSync(".evidence/math-01", { recursive: true });
 const steps = [
   ["npm", ["run", "typecheck"]],
   ["npm", ["run", "build"]],
@@ -27,6 +28,19 @@ const steps = [
   ],
   ["npm", ["run", "test:browser"]],
   ["npm", ["run", "test:ui"]],
+  [
+    process.execPath,
+    [
+      "--test",
+      "--test-concurrency=1",
+      "--test-reporter=junit",
+      "--test-reporter-destination=.evidence/math-01/unit.xml",
+      "tests/math01/contract.test.ts",
+      "tests/math01/http.test.ts",
+      "tests/math01/svg.test.ts",
+    ],
+  ],
+  ["npm", ["run", "test:math01:browser"]],
 ] as [string, string[]][];
 const results = [];
 for (const [command, args] of steps) {
@@ -49,8 +63,21 @@ for (const [command, args] of steps) {
 }
 const xml = readFileSync(".evidence/foundation-junit.xml", "utf8");
 const tests = [...xml.matchAll(/<testcase\b/g)].length;
-if (!tests || /<failure\b|<error\b/.test(xml))
+if (tests !== 60 || /<failure\b|<error\b|<skipped\b/.test(xml))
   throw Error("TEST_REPORT_INVALID");
+const mathUnit = readFileSync(".evidence/math-01/unit.xml", "utf8");
+const mathBrowser = JSON.parse(
+  readFileSync(".evidence/math-01/browser.json", "utf8"),
+);
+if (
+  [...mathUnit.matchAll(/<testcase\b/g)].length !== 12 ||
+  /<failure\b|<error\b/.test(mathUnit) ||
+  mathBrowser.total !== 9 ||
+  mathBrowser.failures ||
+  mathBrowser.filtered ||
+  !["PASS_LOCAL", "PASS_CI"].includes(mathBrowser.status)
+)
+  throw Error("MATH_REPORT_INCOMPLETE");
 const shell = JSON.parse(readFileSync(".evidence/shell-browser.json", "utf8"));
 if (
   shell.filtered ||
@@ -78,6 +105,8 @@ const result = {
   },
   tests,
   browserViewports: 3,
+  mathNodeTests: 12,
+  mathBrowserScenarios: mathBrowser.total,
   shellBrowserScenarios: JSON.parse(
     readFileSync(".evidence/shell-browser.json", "utf8"),
   ).total,

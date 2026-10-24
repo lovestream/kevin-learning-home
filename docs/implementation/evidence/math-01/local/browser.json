@@ -1,0 +1,1311 @@
+{
+  "status": "PASS_LOCAL",
+  "total": 9,
+  "failures": 0,
+  "filtered": false,
+  "executedHeadSha": "a40d97495d0065cd4f9ce2e8706372de122f2179",
+  "node": "v24.15.0",
+  "worktreeDirty": true,
+  "timestamp": "2026-10-24T07:34:41.138Z",
+  "viewports": [
+    390,
+    768,
+    1280
+  ],
+  "screenshots": [
+    "story-390.png",
+    "experiment-390.png",
+    "exercise-closed-390.png",
+    "story-768.png",
+    "experiment-768.png",
+    "exercise-closed-768.png",
+    "story-1280.png",
+    "experiment-1280.png",
+    "exercise-closed-1280.png",
+    "parent-stable-after-two-polls.png"
+  ],
+  "cases": [
+    {
+      "name": "child-six-steps-390",
+      "status": "PASS",
+      "width": 390,
+      "durationMs": 2848,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "baa043806232ace5c774d8adf2b4874139e9cfca056fa2608202beb0219229a8"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "baa043806232ace5c774d8adf2b4874139e9cfca056fa2608202beb0219229a8"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 2,
+            "sha256": "d1d91140b25e8369d8a353c2a89d27fb89cedfc421e6bd5d2829044d521174be"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "d1d91140b25e8369d8a353c2a89d27fb89cedfc421e6bd5d2829044d521174be"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    },
+    {
+      "name": "child-six-steps-768",
+      "status": "PASS",
+      "width": 768,
+      "durationMs": 2838,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "355011988af27ccf2cca7b19a331f088bc5ed81c58a674aeb9980f530a8986cf"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "355011988af27ccf2cca7b19a331f088bc5ed81c58a674aeb9980f530a8986cf"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 2,
+            "sha256": "774c9fb76da8336b1871e77514ea7e4d037269c21b683ca59de99b4ce15a289e"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "774c9fb76da8336b1871e77514ea7e4d037269c21b683ca59de99b4ce15a289e"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    },
+    {
+      "name": "child-six-steps-1280",
+      "status": "PASS",
+      "width": 1280,
+      "durationMs": 2896,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "7af8d055c60fe38f4dca011515dd410580c11a69380cacf848478acb856c29ce"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "7af8d055c60fe38f4dca011515dd410580c11a69380cacf848478acb856c29ce"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 2,
+            "sha256": "2d0a8e6f34c0ea8c6105acf47c79c58264bdee82f3c2a38a6b77183e469e289c"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "2d0a8e6f34c0ea8c6105acf47c79c58264bdee82f3c2a38a6b77183e469e289c"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    },
+    {
+      "name": "parent-two-background-rechecks-focus-stable",
+      "status": "PASS",
+      "width": 1280,
+      "durationMs": 13962,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "4d97c3ad19fa90905f0f3d53098c465e243bc5a96da98376bb2722d773fad337"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "4d97c3ad19fa90905f0f3d53098c465e243bc5a96da98376bb2722d773fad337"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 2,
+            "sha256": "f60432b8668d060e5be4060b9638aaaee64686e3731018cb2631624d6728e5cb"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "f60432b8668d060e5be4060b9638aaaee64686e3731018cb2631624d6728e5cb"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    },
+    {
+      "name": "parent-locked-grant-revoke-and-learner-switch-reset",
+      "status": "PASS",
+      "width": 768,
+      "durationMs": 7346,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "bd3788a200c3790a325a16b1969987df0fec174371408749498b58c1cbc67ff3"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "bd3788a200c3790a325a16b1969987df0fec174371408749498b58c1cbc67ff3"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 3,
+            "sha256": "92044ea211031f055edd7b654abf0294618f43cb24b7199a4cc1056266ce13af"
+          },
+          "after": {
+            "count": 3,
+            "sha256": "92044ea211031f055edd7b654abf0294618f43cb24b7199a4cc1056266ce13af"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    },
+    {
+      "name": "parent-blur-unconfirmed-masks-course-and-lock-clears",
+      "status": "PASS",
+      "width": 1280,
+      "durationMs": 1856,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "184b64363b9cfe155ea55566faf70405e4ed8d19b9560cfbd2ff520ea8c4a6e1"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "184b64363b9cfe155ea55566faf70405e4ed8d19b9560cfbd2ff520ea8c4a6e1"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 2,
+            "sha256": "253daf3ad0cce4ee119c18bcd57964df39062f96081e95ffffc785531b18b45c"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "253daf3ad0cce4ee119c18bcd57964df39062f96081e95ffffc785531b18b45c"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/rotate",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    },
+    {
+      "name": "unknown-field-and-public-hash-corruption-never-paint",
+      "status": "PASS",
+      "width": 1280,
+      "durationMs": 2211,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "d5158fb769ce4bbd60bea3d2a79bd048aa4cb5f5230b1a286065de122e1b410d"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "d5158fb769ce4bbd60bea3d2a79bd048aa4cb5f5230b1a286065de122e1b410d"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 2,
+            "sha256": "aa202f9fabeb043ba5eba4d6cc3a7faf7a2e00ab78f8ac5640b541b9325a7bf1"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "aa202f9fabeb043ba5eba4d6cc3a7faf7a2e00ab78f8ac5640b541b9325a7bf1"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    },
+    {
+      "name": "lesson-network-failure-removes-previous-content",
+      "status": "PASS",
+      "width": 390,
+      "durationMs": 6480,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "dd2e3071fe9979138d6e89c398c6d2b36de653fdf0f4904760c58c3441f3aff6"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "dd2e3071fe9979138d6e89c398c6d2b36de653fdf0f4904760c58c3441f3aff6"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 2,
+            "sha256": "8c17b630c95ecd86eb0ad436d29996f32ddbd7e79acd991f22999e2b6c91e1f5"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "8c17b630c95ecd86eb0ad436d29996f32ddbd7e79acd991f22999e2b6c91e1f5"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    },
+    {
+      "name": "normal-motion-cancel-on-leaving-and-reduced-motion",
+      "status": "PASS",
+      "width": 1280,
+      "durationMs": 1754,
+      "learningTablesUnchanged": true,
+      "learningTables": {
+        "schema_migrations": {
+          "before": {
+            "count": 2,
+            "sha256": "b5e9131f31b2d2ca393e0d6f1c55ead4367e8c4f039d67329a6f27cf7ce5b6ee"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "b5e9131f31b2d2ca393e0d6f1c55ead4367e8c4f039d67329a6f27cf7ce5b6ee"
+          }
+        },
+        "learners": {
+          "before": {
+            "count": 2,
+            "sha256": "226273a8ed2cbb5d14d2540a8c167b8b506def5c251a998945693d0a05681351"
+          },
+          "after": {
+            "count": 2,
+            "sha256": "226273a8ed2cbb5d14d2540a8c167b8b506def5c251a998945693d0a05681351"
+          }
+        },
+        "subjects": {
+          "before": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+          }
+        },
+        "subject_states": {
+          "before": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "eecc6b51e24827b3330e8030e1c935f096285d2a00711ae45b1025c985788b43"
+          }
+        },
+        "server_attempts": {
+          "before": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+          }
+        },
+        "command_receipts": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "learning_events": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        },
+        "media_assets": {
+          "before": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+          }
+        },
+        "content_manifests": {
+          "before": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+          }
+        },
+        "content_media_refs": {
+          "before": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          },
+          "after": {
+            "count": 1,
+            "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+          }
+        },
+        "audit_log": {
+          "before": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "after": {
+            "count": 0,
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          }
+        }
+      },
+      "realAuthBackend": true,
+      "roleHeadersTrusted": false,
+      "posts": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        }
+      ],
+      "intentionalHeaderFaults": [],
+      "consoleSecretLeak": false,
+      "scriptErrors": 0,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "persistentBrowserEntries": 0,
+      "databases": 0,
+      "workers": 0,
+      "caches": 0
+    }
+  ],
+  "observations": {
+    "parentContinuity": {
+      "successfulAuthPolls": 2,
+      "successfulLessonPolls": 2,
+      "wallClockMs": 12107,
+      "stableDOMAndFocus": true
+    },
+    "motion": {
+      "requested": 17,
+      "cancelled": 2,
+      "cancelledOnUnmount": true,
+      "reducedMotionRequestsAdded": 0
+    }
+  }
+}

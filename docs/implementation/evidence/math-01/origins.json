@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "issue": 11,
+  "origins": [
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "content/pilot/lessons.json",
+      "sourceGitBlob": "5fa95a64b2f8c7d7ebbf907ef640106c09661c66",
+      "sourceSha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
+      "selectedSymbols": [
+        "G3-U01-B01 public DTO fields only"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "One lesson explicit public projection; no task/article/concept banks",
+      "targets": [
+        {
+          "path": "packages/subjects/math/public-lesson.json",
+          "sha256": "62097bf73d504661b5c97a6694859e49c74f50e6b5f0f579bd5c1a754316c0b6"
+        },
+        {
+          "path": "packages/subjects/math/project.ts",
+          "sha256": "31de6a74325c570a027e31a3e9854da7999e6531297adc32974d258796ce7c12"
+        }
+      ]
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "shared/hands-on-models.mjs",
+      "sourceGitBlob": "3bd12df8718c0dcc9ef9e4f4ad517f1ae2bd2e37",
+      "sourceSha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1",
+      "selectedSymbols": [
+        "faces",
+        "rad",
+        "projectPoint",
+        "boxFaces"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "Exact selected declarations; no model banks or fold/hidden functions",
+      "targets": [
+        {
+          "path": "apps/web/src/math/geometry.mjs",
+          "sha256": "514e420d5e1eb655ab675bab83f9f09703672ed97ec6dd45e87d5f956d058c2d"
+        }
+      ]
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "shared/solid-rendering.mjs",
+      "sourceGitBlob": "f13902f568c3b813ba75c26504eb76436683c78c",
+      "sourceSha256": "0e25d58f5e448373fa4fe4b936646798380da2cd0f72b542d78cba57fe9e50f8",
+      "selectedSymbols": [
+        "subtract",
+        "cross",
+        "composeSolid",
+        "tint"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "Exact geometry declarations joined with reviewed box projection",
+      "targets": [
+        {
+          "path": "apps/web/src/math/geometry.mjs",
+          "sha256": "514e420d5e1eb655ab675bab83f9f09703672ed97ec6dd45e87d5f956d058c2d"
+        }
+      ]
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "src/studio/IntroVisual.tsx",
+      "sourceGitBlob": "24c621d8222cffd99033020910533e3abfcd2153",
+      "sourceSha256": "dac2d08e72210b1a25ccc2b888cb716bcdbcfc7caf620db6f6af1fe67e116d16",
+      "selectedSymbols": [
+        "text palette helper",
+        "Canvas",
+        "Camera",
+        "BoxCamera"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "Box only; dimensions from strict DTO, 3 inline color attributes become scoped CSS classes",
+      "targets": [
+        {
+          "path": "apps/web/src/math/BoxCamera.tsx",
+          "sha256": "f990a8a499b54449e153c26edf859f5b2bd9d348218ccb7ce4cda43678488a05"
+        }
+      ]
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "src/studio/concept/SolidView.tsx",
+      "sourceGitBlob": "c282177f598c3d658f5ac3109e82292bf81fb9c5",
+      "sourceSha256": "2a155e9eadaceb59f9ff3035a614575876783684c4810f0a0bcd0db25a3e6b46",
+      "selectedSymbols": [
+        "SolidView renderer and pointer/keyboard projection"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "Observe only; remove fold/face selection props; add pointer ownership/lost capture cleanup and raw control orientation to preserve rapid arrow input during animated renders; preserve geometry/colors",
+      "targets": [
+        {
+          "path": "apps/web/src/math/SolidView.tsx",
+          "sha256": "9f7500279de80f1044465fead7a4c098ab387a52562c0d2d69c0491bfecae039"
+        }
+      ]
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "src/studio/concept/SpatialWorkbench.tsx",
+      "sourceGitBlob": "6483002ca38c5d1e9f3c011bc664a47d51bb2295",
+      "sourceSha256": "a17218ebfc8975b802b82fac96ad2f3efbeb7f40650aea9889c8e2269d4fa731",
+      "selectedSymbols": [
+        "views",
+        "Projection observe",
+        "SpatialWorkbench observe controls/photo display"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "Remove rear/fold/persistence/grading and old hooks; component memory only",
+      "targets": [
+        {
+          "path": "apps/web/src/math/Workbench.tsx",
+          "sha256": "7c97de9cb95bc4df329bc965bf83865659cd0292892124c36d348fe9b4beb2f8"
+        }
+      ]
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "src/studio/concept/hands-on.css",
+      "sourceGitBlob": "a4d7114d5be395f7f9d12d994ecdeacc6b77c406",
+      "sourceSha256": "94ead72727ab8cf234349871575ae717dc0d19c1e172bb5deb615895f30d1a7f",
+      "selectedSymbols": [
+        "observe stage/controls/projection/photo layout"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "Scoped observe layout; remove fold/hidden/material rules; no global CSS",
+      "targets": [
+        {
+          "path": "apps/web/src/math/math.css",
+          "sha256": "ab9af31eb9febe7c682f5ad5bbb96f1f265d49484ee0f471e7d7a671cc7d7042"
+        }
+      ]
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "src/studio/intro-visual.css",
+      "sourceGitBlob": "557919afc16fe1f7d9b0dfbf65e09fac6114f205",
+      "sourceSha256": "1104560fd3149f8aec1f0ad0b56dd41cfa127a241e88c9ab445bf4cd9ff54f49",
+      "selectedSymbols": [
+        "intro-visual",
+        "intro-object-layout",
+        "intro-marker-key",
+        "intro-photo-pair",
+        "intro-unknown"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "Scoped .math-lesson box-camera rules and responsive fit; no other lesson branches",
+      "targets": [
+        {
+          "path": "apps/web/src/math/math.css",
+          "sha256": "ab9af31eb9febe7c682f5ad5bbb96f1f265d49484ee0f471e7d7a671cc7d7042"
+        }
+      ]
+    },
+    {
+      "repository": "lovestream/math-learning",
+      "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "sourcePath": "src/studio/useMotionValue.ts",
+      "sourceGitBlob": "39a03559fd9f11b193eef462d395d18fc8872fc3",
+      "sourceSha256": "373eaa239b6758064a61a088d5ac1076e95f555832f65422cab94400db4b551b",
+      "selectedSymbols": [
+        "useMotionValue",
+        "useMotionAngle"
+      ],
+      "copiedWholeFile": false,
+      "license": "Owner-directed private reuse for Issue11; no root redistribution license inferred; React MIT dependencies reused from KLH",
+      "adaptation": "Only both required hooks; keep reduced motion and RAF cleanup",
+      "targets": [
+        {
+          "path": "apps/web/src/math/motion.ts",
+          "sha256": "c3d8c18b959b0259af143e23ce7c140b1ec4e87f84d1da65c4856a8e8f2a4663"
+        }
+      ]
+    }
+  ],
+  "thirdPartyAssets": [],
+  "notes": "No new third party dependencies/assets. New glue/schema/server code is original KLH integration, not old source."
+}

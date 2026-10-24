@@ -41,6 +41,14 @@ function cookieValue(req: IncomingMessage, config: AuthConfig) {
   if (values.length !== 1) throw new AppError("SESSION_REQUIRED", 401);
   return values[0].slice(config.cookieName.length + 1);
 }
+/** Reuse the exact cookie/session verifier; never a test context or client identity. */
+export function readAuthSession(
+  req: IncomingMessage,
+  auth: AuthService,
+  config: AuthConfig,
+) {
+  return auth.session(cookieValue(req, config));
+}
 export async function authHTTP(
   req: IncomingMessage,
   path: string,

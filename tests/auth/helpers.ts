@@ -1,3 +1,4 @@
+import { MathLessonService } from "../../packages/subjects/math/service.ts";
 import {
   createServer as httpsServer,
   request as httpsRequest,
@@ -14,7 +15,11 @@ import { AuthService } from "../../packages/auth/service.ts";
 import { authConfig } from "../../packages/auth/config.ts";
 import { createHttp } from "../../apps/server/http.ts";
 export const secret = () => randomBytes(24).toString("base64url");
-export async function authFixture(tls = false, empty = false) {
+export async function authFixture(
+  tls = false,
+  empty = false,
+  math: boolean | MathLessonService = false,
+) {
   process.env.NODE_ENV = "test";
   const f = fixture(),
     n = await port(),
@@ -73,6 +78,14 @@ export async function authFixture(tls = false, empty = false) {
       webRoot: resolve("apps/web/dist"),
       origin,
       auth: { service: auth, config },
+      ...(math
+        ? {
+            math:
+              math === true
+                ? new MathLessonService(resolve("apps/web/dist"))
+                : math,
+          }
+        : {}),
     });
     server = tls
       ? httpsServer(
@@ -144,7 +157,7 @@ export async function authFixture(tls = false, empty = false) {
                 try {
                   resolve({
                     status: res.statusCode!,
-                    body: JSON.parse(out),
+                    body: out ? JSON.parse(out) : null,
                     headers: res.headers,
                   });
                 } catch {
@@ -159,7 +172,7 @@ export async function authFixture(tls = false, empty = false) {
         });
         if (result.headers["set-cookie"])
           cookie = result.headers["set-cookie"][0].split(";")[0];
-        if (typeof result.body.csrfToken === "string")
+        if (typeof result.body?.csrfToken === "string")
           csrf = result.body.csrfToken;
         return result;
       },
