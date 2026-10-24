@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-24",
+  "status": "PASS_LOCAL_TARGETED",
+  "environment": {
+    "node": "v24.15.0",
+    "python": "Python 3.14.7"
+  },
+  "commands": [
+    {
+      "command": "python3 scripts/math-audit/check.py",
+      "exitCode": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s tests/math-audit -p test_*.py",
+      "exitCode": 0
+    },
+    {
+      "command": "node --test tests/auth/workflow.test.ts",
+      "exitCode": 0
+    }
+  ],
+  "auditTests": 12,
+  "workflowGuardTests": 1,
+  "fullNodeUiDockerLocalRun": false,
+  "completeRegression": "Exact final HEAD push and pull_request runs linked in Draft PR body; CI artifacts independently checked before handoff",
+  "oldSourceExecution": false,
+  "nasConnected": false
+}

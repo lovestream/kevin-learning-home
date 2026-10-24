@@ -1,0 +1,3574 @@
+{
+  "schemaVersion": 1,
+  "issue": 9,
+  "source": {
+    "repository": "lovestream/math-learning",
+    "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+    "headMustMatchFreeze": true,
+    "rootLicenseFiles": [],
+    "thirdPartyPackages": [
+      {
+        "package": "react",
+        "version": "19.2.8",
+        "licenseInFrozenLock": "MIT"
+      },
+      {
+        "package": "react-dom",
+        "version": "19.2.8",
+        "licenseInFrozenLock": "MIT"
+      },
+      {
+        "package": "lucide-react",
+        "version": "0.468.0",
+        "licenseInFrozenLock": "ISC"
+      }
+    ]
+  },
+  "englishExcluded": {
+    "repository": "lovestream/word-request",
+    "commit": "d0b42a8872a7e87433b96770519203630223b6f2",
+    "blobsRead": 0
+  },
+  "baseline17Verified": true,
+  "sourceBoundaryBefore": {
+    "head": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+    "statusSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "statusEntryCount": 0
+  },
+  "sourceBoundaryAfter": {
+    "head": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+    "statusSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "statusEntryCount": 0
+  },
+  "method": "git show pinned tracked blobs; static literal import closure + explicitly reviewed filesystem links; never import/build/evaluate source",
+  "roots": {
+    "prior17": [
+      "server/index.mjs",
+      "server/store.mjs",
+      "server/pilot-store.mjs",
+      "server/parent-access.mjs",
+      "server/review-schedule.mjs",
+      "shared/pilot-math.mjs",
+      "shared/widget-state.mjs",
+      "shared/withdrawn-checks.mjs",
+      "src/studio/ChildClassroom.tsx",
+      "src/studio/Practice.tsx",
+      "src/studio/api.ts",
+      "content/pilot/source.mjs",
+      "content/pilot/lessons.json",
+      "content/pilot/design-index.json",
+      "scripts/build-pilot.mjs",
+      "tests/pilot-store.test.mjs",
+      "tests/pilot-math.test.mjs"
+    ],
+    "build70": [
+      "content/pilot/source.mjs",
+      "scripts/build-pilot.mjs",
+      "scripts/build-grade3-catalog.mjs",
+      "scripts/build-upper-primary-catalog.mjs"
+    ],
+    "firstLessonVisual": [
+      "src/studio/ChildClassroom.tsx",
+      "src/studio/IntroVisual.tsx",
+      "src/studio/TeachingDiagrams.tsx",
+      "src/studio/concept/SpatialWorkbench.tsx",
+      "src/studio/concept/SolidView.tsx"
+    ],
+    "storageSecurity": [
+      "server/store.mjs",
+      "server/pilot-store.mjs",
+      "server/parent-access.mjs",
+      "server/index.mjs",
+      "server/review-schedule.mjs",
+      "server/pet-care.mjs"
+    ],
+    "provenance": [
+      "package-lock.json",
+      "package.json",
+      "README.md",
+      "content/Kevin_数学课程结构清单.json",
+      "assets/source/solid-shapes/README.md"
+    ]
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sourceGitBlob": "17c193226293928bf31ebb1531d0a7ba83974e40",
+      "gitMode": "100644",
+      "sha256": "acf1c0c3b113cdcaf9eab09be477f85eddac37cc53b8720d63cd29b3a5e0a9b2",
+      "bytes": 9312,
+      "decision": "exclude",
+      "purpose": "Configuration/docs/lock metadata are audit evidence, not runtime course files",
+      "targetModule": "provenance only",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "assets/source/solid-shapes/README.md",
+      "sourceGitBlob": "1d6aa3a4e65c37cbed089faf3a5618e123e6381a",
+      "gitMode": "100644",
+      "sha256": "685e19e1f644266b2d8ed0a62be2e811a91abf363096b48f2ef653f7b8de8523",
+      "bytes": 3729,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "assets/source/solid-shapes/print-templates.html",
+      "sourceGitBlob": "6b74ab7d3e153de13d59c5421a67d1ad50cd30b3",
+      "gitMode": "100644",
+      "sha256": "02ec74e846995e90c08d74f2cd4f7df58fb71205629616f6d746702f4b1e6922",
+      "bytes": 1444,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "assets/source/solid-shapes/template-cube-1.svg",
+      "sourceGitBlob": "9053ff97c8ad76f8e9387cfb2a63a384a143d25f",
+      "gitMode": "100644",
+      "sha256": "e66f2602fa4ce4b19c66cfe696b516a787be3a345d86f128a30bbb153fbb598d",
+      "bytes": 4095,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "assets/source/solid-shapes/template-cube-2.svg",
+      "sourceGitBlob": "9a3d4860fc56e551d4f20438b1abdc207b404105",
+      "gitMode": "100644",
+      "sha256": "a044ac55cef35eb8c879178cbaa501632db18f226ad174efc9cf08518c58f364",
+      "bytes": 4095,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "assets/source/solid-shapes/template-cube-3.svg",
+      "sourceGitBlob": "c204fbb4646abcfbf598a4daae3202b219b15f09",
+      "gitMode": "100644",
+      "sha256": "8c19c8ee451fca20c7c762367f93b79ff216ad1cccfc7991e9918967a97e09a7",
+      "bytes": 4095,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "assets/source/solid-shapes/template-rectangular-box.svg",
+      "sourceGitBlob": "3abc1fbc05f109852ccce2d51fc251a69c72577a",
+      "gitMode": "100644",
+      "sha256": "f470fcc5f42c5cee6af80b7ba4a2dcc5cfc6936bda61f81073acb2ea04c98585",
+      "bytes": 4036,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/Kevin_数学课程结构清单.json",
+      "sourceGitBlob": "6c8d02e97eb09ed4d546b3ba52198082007944c4",
+      "gitMode": "100644",
+      "sha256": "3da1bda062fc7b813c5cc3ddd12f67a4947568620521be4690853e8961f0be37",
+      "bytes": 565093,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/course-plan-v2/grade-3-thinking.json",
+      "sourceGitBlob": "2c0b0b01e43adc79345620ce3e193987f7d85c92",
+      "gitMode": "100644",
+      "sha256": "457b794d9b418d20550be510b598a469af972dcd559c6c797b9f7851c398b7ad",
+      "bytes": 234715,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/course-plan-v2/grade-3.json",
+      "sourceGitBlob": "542fc70d3c37514ac722361c2ced35068363f2f6",
+      "gitMode": "100644",
+      "sha256": "dc7108db68922e96e8b5a53e63cb5611c5c87064bcefa042a168d8cf2a2baec0",
+      "bytes": 2129165,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/detective/seed-cases.mjs",
+      "sourceGitBlob": "430f532d361e8734be797a74ebc4675357a4e375",
+      "gitMode": "100644",
+      "sha256": "e3dd33b4507e491c1ee5c1ad5a1365823777c7c73990cebcaf05beaa06ef4990",
+      "bytes": 11156,
+      "decision": "exclude",
+      "purpose": "Detective/inbox/pet content outside first readonly math lesson; no automatic sync or reward import",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/grade-3/legacy-seed.json",
+      "sourceGitBlob": "0f27dc05a7053511edf18c265d3244f66f9cf593",
+      "gitMode": "100644",
+      "sha256": "9397cdcb9733f520922008406b87ce82cd3838f02e4617389bc28473455e956c",
+      "bytes": 177139,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/method-guides.mjs",
+      "sourceGitBlob": "12229ef5c841b471528755c1471959ca51e80f4a",
+      "gitMode": "100644",
+      "sha256": "0222d8bd19107d245adfa07fc8b65dd731d3b76ff406ff3c8f8a6ba3a5a6ddfe",
+      "bytes": 3881,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pets/catalog.json",
+      "sourceGitBlob": "3ea6e7bb67c66d0fc79e72e44f93c902f878ac5f",
+      "gitMode": "100644",
+      "sha256": "89d5938d9c90b836dd7e4db3db2c3de878d279fb06b494d3a234c0fdfe42c989",
+      "bytes": 4630,
+      "decision": "exclude",
+      "purpose": "Detective/inbox/pet content outside first readonly math lesson; no automatic sync or reward import",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/clarity-errata.mjs",
+      "sourceGitBlob": "78b2e06af753daa17bbf950331dec321b6e28c60",
+      "gitMode": "100644",
+      "sha256": "00ee4d10bef32906ed5db3325fd21584546b51b12cbebbf585768ad8dcdf2beb",
+      "bytes": 2593,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/classroom-reasoning.mjs",
+      "sourceGitBlob": "5601742d3251dfca214c655f4ea82c5c263aba5a",
+      "gitMode": "100644",
+      "sha256": "19528e2bd9404c2eb3d8342bd737ebb04ffb9fc1319e8dc0e1c241772cb0e2af",
+      "bytes": 18936,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/classrooms.mjs",
+      "sourceGitBlob": "5f926e3c84e0a88fddbed7cff143d0356ac8f7dc",
+      "gitMode": "100644",
+      "sha256": "fdf08f6b3cc5f3c85a1eb8caa035de700e2d51f8533d8e9e6d053794e70b0c3f",
+      "bytes": 19303,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/design-index.json",
+      "sourceGitBlob": "95dfaf1dc046f2ad7aeb1385a88f8e4e7d1a7341",
+      "gitMode": "100644",
+      "sha256": "c20bc534dd62c868bb7f071199aa9d7af3a6d1f9a672c46a2818017f479c8da8",
+      "bytes": 9076,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/formal-task-errata.mjs",
+      "sourceGitBlob": "02b0c8a1f2271897e1e8c089b568e1cc7b408739",
+      "gitMode": "100644",
+      "sha256": "8de7930b009f5080cd5fec380060fa03351ed29dbc9871c30801f81baba7c64f",
+      "bytes": 4382,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/foundations.mjs",
+      "sourceGitBlob": "da57ecae3748ae0e7683e5837ac655d972ab732e",
+      "gitMode": "100644",
+      "sha256": "789096f4de13a4daa52bac37d4f128617e6f79247ff2ac39b6c6780b23cb0153",
+      "bytes": 23157,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/grade3-complete.mjs",
+      "sourceGitBlob": "ac66803ee88d7cb216a3bca770d1c2393b6067cf",
+      "gitMode": "100644",
+      "sha256": "bca557bcbea340575c1d032fe99d299dbae2a9084dd40b11627cdbd4c918e721",
+      "bytes": 11820,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "node:fs"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/hands-on-teaching.mjs",
+      "sourceGitBlob": "662623c0df2b7b6203caa52be61ad58788fd9800",
+      "gitMode": "100644",
+      "sha256": "c2ff6eb4ed4246cd4c343413bca02b465bc4e7f46b5bcd0a6d052e74fa02fd80",
+      "bytes": 18641,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/interaction-release.mjs",
+      "sourceGitBlob": "429bc18f2e94988bce8d2ace4331fd18596e60fc",
+      "gitMode": "100644",
+      "sha256": "f724ff0007036f59914b412de00b5f10593d0df20a9617b1ea250628938a12b3",
+      "bytes": 1340,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/intro-visuals.mjs",
+      "sourceGitBlob": "df93137fd906205b9b5bc93da3dd5814f9bfbbb8",
+      "gitMode": "100644",
+      "sha256": "07cd8f400af271aa77a082531ef33d814f833656b270d89832606078e86e6060",
+      "bytes": 14489,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/inverse-revisions.mjs",
+      "sourceGitBlob": "1bb5e356531d191844c0688f93094bccde9d84b9",
+      "gitMode": "100644",
+      "sha256": "e05a0bc4d48a03253f5b894b1c0629224ba820a74de68165795ddcb7a21f90d4",
+      "bytes": 7019,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/length-measurement.mjs",
+      "sourceGitBlob": "7d69acb2c8a2d926e01a636b2a1b12294c817bf5",
+      "gitMode": "100644",
+      "sha256": "4097215f946d3b9e9ae0554e02cf52506512e96afef073371b0c0c903528406c",
+      "bytes": 35549,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/lessons.json",
+      "sourceGitBlob": "5fa95a64b2f8c7d7ebbf907ef640106c09661c66",
+      "gitMode": "100644",
+      "sha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
+      "bytes": 1904117,
+      "decision": "adapt",
+      "purpose": "Full source contains 70 draft lessons and answers; project one allowlisted public lesson only after approval",
+      "targetModule": "future single-lesson public projector/provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "project G3-U01-B01 public fields only; never copy 70-lesson output"
+    },
+    {
+      "path": "content/pilot/methods.json",
+      "sourceGitBlob": "6195041aea454215121ba7069a2e5de5b80a4842",
+      "gitMode": "100644",
+      "sha256": "f91720f95a0de52583579f0300ccc952adc37eb137464912a93bd0986151025c",
+      "bytes": 17406,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/mixed-operations.mjs",
+      "sourceGitBlob": "c2ceec24a9ba9399996b1e6ad31a06bb77e44d16",
+      "gitMode": "100644",
+      "sha256": "01a3424962a591578515d5f5d56101d4d2b67299a0a4ba5384831c6f2405a9d7",
+      "bytes": 20853,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/objective-tasks.mjs",
+      "sourceGitBlob": "f729b215292e03c31f19e04f61b36ce135c8a3c2",
+      "gitMode": "100644",
+      "sha256": "4b289535823c9c00b0478216ac9c77293a4dbbec2fad4ee6540df50308edf0d9",
+      "bytes": 1482,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/operation-responses.mjs",
+      "sourceGitBlob": "88170eb5c801750f02e17a1a1b25c7c4059f0090",
+      "gitMode": "100644",
+      "sha256": "9c40eb6a8d42c83b9ca1f367a0e8e6a312e0e2c58977fbf831b274bd270e7b98",
+      "bytes": 7496,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/source.mjs",
+      "sourceGitBlob": "9196b9d559730bb9314982135271b321666052a4",
+      "gitMode": "100644",
+      "sha256": "50d29596ddbcea7c6a90a51ac0c7d9732a2d90069aa0f9ea88ed51da39ab0775",
+      "bytes": 20063,
+      "decision": "adapt",
+      "purpose": "Full source contains 70 draft lessons and answers; project one allowlisted public lesson only after approval",
+      "targetModule": "future single-lesson public projector/provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/teaching.mjs",
+      "sourceGitBlob": "9b4d19c29f8bc1d3f61d64c01828a92b7bdfb49f",
+      "gitMode": "100644",
+      "sha256": "f30098ff4d4dd42326acacc36c0e4c42f23a4085c9d45a2e7b80dbaa6a2b5436",
+      "bytes": 17747,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/thinking-hints.mjs",
+      "sourceGitBlob": "3af5f1373cce1afd1bcd87d3c3885d728edbd0da",
+      "gitMode": "100644",
+      "sha256": "f73500b4109896babcfd8a0bbe302737b3562fcf25c986c2839d20cf71f6fbde",
+      "bytes": 4312,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/thinking-publication.mjs",
+      "sourceGitBlob": "9ed5e01359f414eeee4aea54d6f8d35da0da3d68",
+      "gitMode": "100644",
+      "sha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+      "bytes": 3453,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "node:crypto"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/pilot/thinking-source.mjs",
+      "sourceGitBlob": "5c4595fd6c303b3f57f214938c90bf8bb5cfde68",
+      "gitMode": "100644",
+      "sha256": "844655d8993e657663ec2d90c5e5f0d2bccce4e181cad6859ad45b1102579437",
+      "bytes": 4951,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "node:fs"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "content/rollout.json",
+      "sourceGitBlob": "958f91caa16dd932e384696292ff7fc98a783a6c",
+      "gitMode": "100644",
+      "sha256": "898117d09a63bf6f288df78c03762497b8c02de6c150e2e96cf59c5ef443395c",
+      "bytes": 5165,
+      "decision": "adapt",
+      "purpose": "Dependency candidate only; do not ship full authoring banks, answers or unrelated lessons",
+      "targetModule": "future selected math content provenance",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "package-lock.json",
+      "sourceGitBlob": "d3f60e94f1edac6ff501b3aac7d7dc0404153f3a",
+      "gitMode": "100644",
+      "sha256": "1b038da27eb3959dc0fb958f71a98340e03d1623f3187726a1d10f6c3291e00e",
+      "bytes": 39846,
+      "decision": "exclude",
+      "purpose": "Configuration/docs/lock metadata are audit evidence, not runtime course files",
+      "targetModule": "provenance only",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "package.json",
+      "sourceGitBlob": "89ec9e35b3d2a1d9f0a89a816de09d80edcc1693",
+      "gitMode": "100644",
+      "sha256": "186f03e3388f25ae34816cef2141424231074ce10fe9e4de47df622c99dd31e6",
+      "bytes": 1311,
+      "decision": "exclude",
+      "purpose": "Configuration/docs/lock metadata are audit evidence, not runtime course files",
+      "targetModule": "provenance only",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "public/math-paper-folding/print-templates.html",
+      "sourceGitBlob": "6b74ab7d3e153de13d59c5421a67d1ad50cd30b3",
+      "gitMode": "100644",
+      "sha256": "02ec74e846995e90c08d74f2cd4f7df58fb71205629616f6d746702f4b1e6922",
+      "bytes": 1444,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "public/math-paper-folding/template-cube-1.svg",
+      "sourceGitBlob": "9053ff97c8ad76f8e9387cfb2a63a384a143d25f",
+      "gitMode": "100644",
+      "sha256": "e66f2602fa4ce4b19c66cfe696b516a787be3a345d86f128a30bbb153fbb598d",
+      "bytes": 4095,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "public/math-paper-folding/template-cube-2.svg",
+      "sourceGitBlob": "9a3d4860fc56e551d4f20438b1abdc207b404105",
+      "gitMode": "100644",
+      "sha256": "a044ac55cef35eb8c879178cbaa501632db18f226ad174efc9cf08518c58f364",
+      "bytes": 4095,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "public/math-paper-folding/template-cube-3.svg",
+      "sourceGitBlob": "c204fbb4646abcfbf598a4daae3202b219b15f09",
+      "gitMode": "100644",
+      "sha256": "8c19c8ee451fca20c7c762367f93b79ff216ad1cccfc7991e9918967a97e09a7",
+      "bytes": 4095,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "public/math-paper-folding/template-rectangular-box.svg",
+      "sourceGitBlob": "3abc1fbc05f109852ccce2d51fc251a69c72577a",
+      "gitMode": "100644",
+      "sha256": "f470fcc5f42c5cee6af80b7ba4a2dcc5cfc6936bda61f81073acb2ea04c98585",
+      "bytes": 4036,
+      "decision": "exclude",
+      "purpose": "Fold-mode printing/static assets not needed by observe lesson; authorship/license unconfirmed",
+      "targetModule": "none for first lesson",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "scripts/build-grade3-catalog.mjs",
+      "sourceGitBlob": "430f150fddd94e2accdb7e3819632d0cfb69cd36",
+      "gitMode": "100644",
+      "sha256": "5751472674d66c8ce9dea81cede0d4ad4c28a3cd33c3ce5aaee690f4917cb4a8",
+      "bytes": 56733,
+      "decision": "exclude",
+      "purpose": "Build writes generated content/public trees; do not run/copy legacy build pipeline",
+      "targetModule": "audit provenance only",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "node:fs",
+        "node:path"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "scripts/build-pilot.mjs",
+      "sourceGitBlob": "2126c60c2a28e13080fd69699a2de610c8c765ee",
+      "gitMode": "100644",
+      "sha256": "0a04711dd7e36b3427ca7c4b4cd79a0e9a0902e2e4868a72e941d905b333a38b",
+      "bytes": 4811,
+      "decision": "exclude",
+      "purpose": "Build writes generated content/public trees; do not run/copy legacy build pipeline",
+      "targetModule": "audit provenance only",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [
+        "node:fs"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "scripts/build-upper-primary-catalog.mjs",
+      "sourceGitBlob": "08b386c1c0805dd5d1923ae53b779f747f462166",
+      "gitMode": "100644",
+      "sha256": "cfebd44896d669e0ec7267e62e103f0fa85276e7fa43afe4fbcc638837c70e02",
+      "bytes": 81959,
+      "decision": "exclude",
+      "purpose": "Build writes generated content/public trees; do not run/copy legacy build pipeline",
+      "targetModule": "audit provenance only",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "node:fs",
+        "node:path"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "scripts/course-framework.mjs",
+      "sourceGitBlob": "5a88d5536e948df89c3ffe9415599e6622f6e197",
+      "gitMode": "100644",
+      "sha256": "a2636123db19fc46d6d72948d391b62c18dd64aa0cc84fcee550b0787b5ea67e",
+      "bytes": 13046,
+      "decision": "exclude",
+      "purpose": "Build writes generated content/public trees; do not run/copy legacy build pipeline",
+      "targetModule": "audit provenance only",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/detective-inbox-store.mjs",
+      "sourceGitBlob": "2caea09a729d7099b38c5d6c78017112ee8ddbe4",
+      "gitMode": "100644",
+      "sha256": "22931173c82b70ed3610c3d92c816891cfbb9f0b8e679b003e5864a0fab13672",
+      "bytes": 5855,
+      "decision": "exclude",
+      "purpose": "Old singleton DB, HTTP/PIN/inbox service must not enter KLH",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/detective-inbox-sync.mjs",
+      "sourceGitBlob": "9d0c1d711aa35ca6b498e7e0ac226978dfd7b140",
+      "gitMode": "100644",
+      "sha256": "00fd8b385354f1275b12eb8baa199ae68fea9da98336aa1f14351e433b0b1c3b",
+      "bytes": 5690,
+      "decision": "exclude",
+      "purpose": "Old singleton DB, HTTP/PIN/inbox service must not enter KLH",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "node:crypto"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/detective-store.mjs",
+      "sourceGitBlob": "4cfe3cad8bf3a8bd853019338311765d4d95e8de",
+      "gitMode": "100644",
+      "sha256": "8772d839003acd00909c273747847683b4b932e9327bb47e4c1f6de77ac0ac16",
+      "bytes": 15718,
+      "decision": "exclude",
+      "purpose": "Old singleton DB, HTTP/PIN/inbox service must not enter KLH",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/index.mjs",
+      "sourceGitBlob": "6481d9d16356cb47d2783b83ea89eae3959a6899",
+      "gitMode": "100644",
+      "sha256": "d92c4d20d219925f7a615f75b0123ed6f197e95fd5c1859044d42dba3036934d",
+      "bytes": 15006,
+      "decision": "exclude",
+      "purpose": "Old singleton DB, HTTP/PIN/inbox service must not enter KLH",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [
+        "node:child_process",
+        "node:fs",
+        "node:http",
+        "node:path",
+        "node:url",
+        "vite"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/parent-access.mjs",
+      "sourceGitBlob": "0793c4f91ed830f6b03fb80b423f32d3679b1423",
+      "gitMode": "100644",
+      "sha256": "fa92047e7cc20f654a0353dee237eec9ea39f3cebff1c581d2d41a8bd9c41df9",
+      "bytes": 5117,
+      "decision": "exclude",
+      "purpose": "Old singleton DB, HTTP/PIN/inbox service must not enter KLH",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [
+        "node:crypto",
+        "node:fs",
+        "node:path"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/pet-care.mjs",
+      "sourceGitBlob": "83f5369a00908d30e743dc0c4a4926f92be11e52",
+      "gitMode": "100644",
+      "sha256": "726afb0ba8f3ac8814fc83f0868cea3f22fcec68d7b4649dba0d4476400ab324",
+      "bytes": 10620,
+      "decision": "adapt",
+      "purpose": "State mutators/review/rewards need learner partition and KLH transaction; never MATH-01 runtime",
+      "targetModule": "future server-only math adapter",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/pilot-store.mjs",
+      "sourceGitBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "gitMode": "100644",
+      "sha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "bytes": 20751,
+      "decision": "adapt",
+      "purpose": "State mutators/review/rewards need learner partition and KLH transaction; never MATH-01 runtime",
+      "targetModule": "future server-only math adapter",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [
+        "node:crypto"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/review-schedule.mjs",
+      "sourceGitBlob": "288434f8de97c55d7fc5b8098625e26c0f452ff6",
+      "gitMode": "100644",
+      "sha256": "e6126fd5a57f07de74756a325a8c375e25deed34d67f4662a416d3326ba1902d",
+      "bytes": 2129,
+      "decision": "adapt",
+      "purpose": "State mutators/review/rewards need learner partition and KLH transaction; never MATH-01 runtime",
+      "targetModule": "future server-only math adapter",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/store.mjs",
+      "sourceGitBlob": "41aabfa8b9bb9eb3f27bff72b52ed3692e03d56e",
+      "gitMode": "100644",
+      "sha256": "e5d6ee1952a5b87c69e822569f119cfe62dbe967b53d794fc6f0c78e887d3be7",
+      "bytes": 13778,
+      "decision": "exclude",
+      "purpose": "Old singleton DB, HTTP/PIN/inbox service must not enter KLH",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [
+        "node:crypto",
+        "node:fs",
+        "node:path",
+        "node:sqlite"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "server/thinking-store.mjs",
+      "sourceGitBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "gitMode": "100644",
+      "sha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "bytes": 22240,
+      "decision": "adapt",
+      "purpose": "State mutators/review/rewards need learner partition and KLH transaction; never MATH-01 runtime",
+      "targetModule": "future server-only math adapter",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/classroom-expression.mjs",
+      "sourceGitBlob": "e94a1c7894a040cd48661b17d579aec52e39c3b6",
+      "gitMode": "100644",
+      "sha256": "e291d2e3d4cc9ba509606719d35419c5016b9375db091176b82487564641e571",
+      "bytes": 4351,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/core-models.mjs",
+      "sourceGitBlob": "35333a65f6bd5f7f08862e71646e09049de9902e",
+      "gitMode": "100644",
+      "sha256": "e5ec016e741dc4bef74b85d71e4a5bfd905010ae96fea99ea5a7d79f16b9f636",
+      "bytes": 13476,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/detective-inbox.mjs",
+      "sourceGitBlob": "51ac8e9189c71ed3b1d5d9680a19b9393aa5e73f",
+      "gitMode": "100644",
+      "sha256": "d7269a64848bf943336927fad664e684395b91875de5d30cd1b9cb89e12be3ad",
+      "bytes": 16646,
+      "decision": "exclude",
+      "purpose": "Detective/inbox/pet content outside first readonly math lesson; no automatic sync or reward import",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "node:util"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/detective-model.mjs",
+      "sourceGitBlob": "38b59cef4a2c4f799fbe3aaf077de20362c0ab69",
+      "gitMode": "100644",
+      "sha256": "45f47afc66deadb294a46aa9b78e121c1eabb0d3c43fd508d2d187996643bf67",
+      "bytes": 8862,
+      "decision": "exclude",
+      "purpose": "Detective/inbox/pet content outside first readonly math lesson; no automatic sync or reward import",
+      "targetModule": "none",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "node:crypto"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/hands-on-models.mjs",
+      "sourceGitBlob": "3bd12df8718c0dcc9ef9e4f4ad517f1ae2bd2e37",
+      "gitMode": "100644",
+      "sha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1",
+      "bytes": 5414,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "select faces/boxFaces and local dependencies only; not full handsOnModels bank"
+    },
+    {
+      "path": "shared/intro-visuals.mjs",
+      "sourceGitBlob": "be96774c189f1625e2b5db15f26ebbe38eb5e339",
+      "gitMode": "100644",
+      "sha256": "9b0b52853a6439e63644d79e9240958f59805727e83901105dee51042e4af2d6",
+      "bytes": 707,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/inverse-index.mjs",
+      "sourceGitBlob": "3e050ba3ec23451720576ead3636ee9b0d81bf0d",
+      "gitMode": "100644",
+      "sha256": "a33e81a9c440b1efaef4f151f0699dd6a2a5dc50c8987df27e3dde511e4d7306",
+      "bytes": 2360,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/length-model.mjs",
+      "sourceGitBlob": "1c01ece619f0dc8801aca5ed2d6147bfbb9db680",
+      "gitMode": "100644",
+      "sha256": "c4a737d13c68f8ec4a420823a556301c5b4abc0d62e077f515ba70c399feb492",
+      "bytes": 5483,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/operation-models.mjs",
+      "sourceGitBlob": "a711e5ed609b581a6fdecd5ce9b7192ec59a1029",
+      "gitMode": "100644",
+      "sha256": "f51539a15a8be0deeadb2c357f1563c0278bf5f694148adb29fa6cfc277154f9",
+      "bytes": 2482,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/pilot-math.mjs",
+      "sourceGitBlob": "e33aca3ce40eed3a05f3e2505cddcf9d74cac933",
+      "gitMode": "100644",
+      "sha256": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
+      "bytes": 11678,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/scene-context.mjs",
+      "sourceGitBlob": "0f69965eaea74fb31ab14c0fe4cfa0f261b8376f",
+      "gitMode": "100644",
+      "sha256": "1afa28e73e496f378a7631460705b0171f981830d2eaffac08336abefa047a92",
+      "bytes": 2441,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/solid-rendering.mjs",
+      "sourceGitBlob": "f13902f568c3b813ba75c26504eb76436683c78c",
+      "gitMode": "100644",
+      "sha256": "0e25d58f5e448373fa4fe4b936646798380da2cd0f72b542d78cba57fe9e50f8",
+      "bytes": 1503,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "preserve composeSolid/tint pure geometry and dependencies"
+    },
+    {
+      "path": "shared/textbook-models.mjs",
+      "sourceGitBlob": "252842f51207dec7442e0db88bdc89a0fc4f1a06",
+      "gitMode": "100644",
+      "sha256": "e76b8d85e58dfe0fff18991af9953f10cf3af89198d8566e985b4e3afa23f6cf",
+      "bytes": 12178,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/two-ring-view.mjs",
+      "sourceGitBlob": "840ecae22bbb2901b47f0dc53dcda519d4f4d57c",
+      "gitMode": "100644",
+      "sha256": "e66ea4eb2d40f4a5656c193218b96c041719fe128f836dead3178bbe0b2afb0a",
+      "bytes": 1206,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/visual-relations.mjs",
+      "sourceGitBlob": "80e1e581fbc7a50598c9e0c07e0f81dcb4b944bd",
+      "gitMode": "100644",
+      "sha256": "e675690a1d71e42b99e20fcfd591e3081a10c5b81ea49c99cac2f6df84d7a887",
+      "bytes": 1599,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/widget-state.mjs",
+      "sourceGitBlob": "d8073d21b1c7ef6be3b001bebd431b5344bbc9ab",
+      "gitMode": "100644",
+      "sha256": "51b59cbf8a7ae23e3973c7191d2b030a3aba8fea1a3339ffa940e09c3e0010ab",
+      "bytes": 8170,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "shared/withdrawn-checks.mjs",
+      "sourceGitBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4",
+      "gitMode": "100644",
+      "sha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "bytes": 833,
+      "decision": "allow",
+      "purpose": "Tracked geometry/arithmetic source candidate; preserve algorithms; server grading excluded from readonly bundle",
+      "targetModule": "future math domain/visual model",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/ChildClassroom.tsx",
+      "sourceGitBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "gitMode": "100644",
+      "sha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "bytes": 8811,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/FoundationWidgets.tsx",
+      "sourceGitBlob": "ecc5f1c39d89268698eadb45a1612fca96d78786",
+      "gitMode": "100644",
+      "sha256": "303d2e8704b2196c16d1dcd2475dd2dc52f78eadcfd69abefa49eed27cbe4426",
+      "bytes": 9122,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/IntroVisual.tsx",
+      "sourceGitBlob": "24c621d8222cffd99033020910533e3abfcd2153",
+      "gitMode": "100644",
+      "sha256": "dac2d08e72210b1a25ccc2b888cb716bcdbcfc7caf620db6f6af1fe67e116d16",
+      "bytes": 26466,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "select BoxCamera/Canvas/Camera helpers only; no other lesson branches"
+    },
+    {
+      "path": "src/studio/LengthWorkbench.tsx",
+      "sourceGitBlob": "4db5de508361a74dc718ccd100a3336dda8565e3",
+      "gitMode": "100644",
+      "sha256": "b9707b2112f43735167be9ff7bf02d7e6fd122a86f690e45ea522737f7988b47",
+      "bytes": 1711,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/MathSceneVisual.tsx",
+      "sourceGitBlob": "3b7fab26df680f8c4274b75466490020a498a9de",
+      "gitMode": "100644",
+      "sha256": "960331691e7f102181191f430eee9cc38c43e99f7a985ce66313f837d4618d17",
+      "bytes": 7307,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/Practice.tsx",
+      "sourceGitBlob": "e1244c725af34964e7ccc8367c3b9302fde153ca",
+      "gitMode": "100644",
+      "sha256": "9848554a7a70152f99625d55fd0afee5d95e425620716e8677fb50d5c31d9ea2",
+      "bytes": 18851,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/StoryPicture.tsx",
+      "sourceGitBlob": "9f52ab6dd9863a3f88e675f1bd1909bc0c4c6eb6",
+      "gitMode": "100644",
+      "sha256": "278fa3fc37ae96ea33261acb0c087755e221fb45acd137cfd8a559af7122b023",
+      "bytes": 1574,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/TeachingDiagrams.tsx",
+      "sourceGitBlob": "e6987f8a32f9e19086bbba6ac518a0cd856a816c",
+      "gitMode": "100644",
+      "sha256": "8fc91b61a090c2e5f57d7f3c19cf74c510eaef872768834ede1b86b4ba4afbd4",
+      "bytes": 21638,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/api.ts",
+      "sourceGitBlob": "1440819674f1f7ff38490b0b58604d5bd09023fe",
+      "gitMode": "100644",
+      "sha256": "ce395c72bd6b847479ed426982aff16e892f1dabb60a13eac3a6d95fb7117b48",
+      "bytes": 2625,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/classroom.css",
+      "sourceGitBlob": "86894fec23a2513e1e68dc04e0bd6e89d3661eb3",
+      "gitMode": "100644",
+      "sha256": "7e56ce548a4e4ba77ca9bde3568064178a73dbb73e32cedf352fa5a6ad3112ce",
+      "bytes": 6846,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/ConceptVisual.tsx",
+      "sourceGitBlob": "7c81f5a73804fb60046071fc4c994f58dcd1c070",
+      "gitMode": "100644",
+      "sha256": "44283c3700999732cba10d30b3f2a603a5b2d0d490e869c7017434da0482c207",
+      "bytes": 1667,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/ConceptWorkbench.tsx",
+      "sourceGitBlob": "4cc5256891ac750d9ac38b885aeaf6f0aa2324ef",
+      "gitMode": "100644",
+      "sha256": "67c62241f68b572b0cc539f3981f4102696dd5bbac14c6f415fcbba25e457f7b",
+      "bytes": 2033,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/MassWorkbench.tsx",
+      "sourceGitBlob": "ccc10af3f2b6e3b86d23f4b77e74cfde8d77465e",
+      "gitMode": "100644",
+      "sha256": "ae41f996a3aff297bc171456b632519e03f32e52308341192f5873aef0539ba0",
+      "bytes": 17918,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/OperationExtensionLab.tsx",
+      "sourceGitBlob": "bb3a2481293d6ebaf3619a0a7623a8bd33ffd2a3",
+      "gitMode": "100644",
+      "sha256": "bb92375cf90ffb79e5d7d512ddf1f894ae1cb4c951338d9f24573be8de6fba47",
+      "bytes": 9648,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/OperationVisual.tsx",
+      "sourceGitBlob": "3afa5261dc9f982818c64c81f99e2e5c6108ab82",
+      "gitMode": "100644",
+      "sha256": "65756862bd2bafa9b6b7da3cb8da851a571d1efbb5b748559e15f330e9f9e17a",
+      "bytes": 8843,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/RelationshipFigures.tsx",
+      "sourceGitBlob": "5d196ff8882bee7e8b9e5335bb1b761e9ed0be7b",
+      "gitMode": "100644",
+      "sha256": "5f4b390301e7ddb7695585b7ef01f79df1b2e436a6323a186d8e679765ad65da",
+      "bytes": 4823,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/SolidView.tsx",
+      "sourceGitBlob": "c282177f598c3d658f5ac3109e82292bf81fb9c5",
+      "gitMode": "100644",
+      "sha256": "2a155e9eadaceb59f9ff3035a614575876783684c4810f0a0bcd0db25a3e6b46",
+      "bytes": 4528,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "preserve renderer/keyboard; namespace IDs and CSS"
+    },
+    {
+      "path": "src/studio/concept/SpatialWorkbench.tsx",
+      "sourceGitBlob": "6483002ca38c5d1e9f3c011bc664a47d51bb2295",
+      "gitMode": "100644",
+      "sha256": "a17218ebfc8975b802b82fac96ad2f3efbeb7f40650aea9889c8e2269d4fa731",
+      "bytes": 10744,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "select observe/Projection/controls only; no fold/hidden/assessment"
+    },
+    {
+      "path": "src/studio/concept/StaticConceptFigure.tsx",
+      "sourceGitBlob": "9026179e133bbffdecd910211d08f7765c7aa0d9",
+      "gitMode": "100644",
+      "sha256": "d8a98dd76fdf16307e5b01b15e221356d39430140b13bde8ef514ebe9f4f09af",
+      "bytes": 5714,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/concept.css",
+      "sourceGitBlob": "de0b5af78a362e31043254c7982aa643f54dbc95",
+      "gitMode": "100644",
+      "sha256": "c9ec04283d046d009aa2f58f0e70c78bbeecb3172f4f1c2b852daa31a2163641",
+      "bytes": 18356,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/hands-on.css",
+      "sourceGitBlob": "a4d7114d5be395f7f9d12d994ecdeacc6b77c406",
+      "gitMode": "100644",
+      "sha256": "94ead72727ab8cf234349871575ae717dc0d19c1e172bb5deb615895f30d1a7f",
+      "bytes": 9217,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "scope observe-only styles under math root"
+    },
+    {
+      "path": "src/studio/concept/relationships.css",
+      "sourceGitBlob": "f13fb5642ad28a1f593454a651231b3022bf7d99",
+      "gitMode": "100644",
+      "sha256": "69a310cdea6aca38eac43e537c955dfbf13005df89693366e2ade1cb733d9543",
+      "bytes": 1736,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/concept/useHandsOn.tsx",
+      "sourceGitBlob": "7ebcd935cacf755069597d0c4abe6b05d42ca93c",
+      "gitMode": "100644",
+      "sha256": "285628c16a3ee7db5080a6cbc108dfa7c256c37029ce509fbcd8fc332d46bc42",
+      "bytes": 1449,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/intro-visual.css",
+      "sourceGitBlob": "557919afc16fe1f7d9b0dfbf65e09fac6114f205",
+      "gitMode": "100644",
+      "sha256": "1104560fd3149f8aec1f0ad0b56dd41cfa127a241e88c9ab445bf4cd9ff54f49",
+      "bytes": 4854,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "scope only box-camera selectors under math root"
+    },
+    {
+      "path": "src/studio/measurement/ChainExperiment.tsx",
+      "sourceGitBlob": "8f17c306d03d71074239e5ec67a276cacd9ef90a",
+      "gitMode": "100644",
+      "sha256": "b898d5679bab0d5f702cba100ec58ac88a29e651599c818bf8b67d525db59a57",
+      "bytes": 4706,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/ChainJointFigure.tsx",
+      "sourceGitBlob": "a2021d8e795e529542e789fefc18f19421f90f03",
+      "gitMode": "100644",
+      "sha256": "196d204fffe94adc80e3e7c3f5dd46f08508407e3dc8d8979cf3ddec0943485b",
+      "bytes": 2078,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/ChainOverview.tsx",
+      "sourceGitBlob": "cffd07d22255f651d40e93bc262b4f6d7d9f8c96",
+      "gitMode": "100644",
+      "sha256": "dc729af247e90071175f82af63a187cba28c817c76e62f7d92a749ddf090a9f5",
+      "bytes": 6328,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "lucide-react",
+        "react",
+        "react-dom"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/InverseTaskFigure.tsx",
+      "sourceGitBlob": "2160f345028911ff5bfe8c07b5996007f6d7e602",
+      "gitMode": "100644",
+      "sha256": "33e956abf3dc32bba8bd4026b354b8f18e7b6d5e1d0271a1560023c4e1da7c26",
+      "bytes": 2267,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/MeasuringExperiments.tsx",
+      "sourceGitBlob": "2825ffaf6719579ff4d755adef3262cc8ced940f",
+      "gitMode": "100644",
+      "sha256": "618024f70b4ae523feab8fa6a643d4d698d8f78146312e71be59cfed8cd1a6df",
+      "bytes": 8858,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/Primitives.tsx",
+      "sourceGitBlob": "a8dc00b270f4bbc2684393bb255d8f33db804595",
+      "gitMode": "100644",
+      "sha256": "9a577092948684a94d039747d83a497ebd845a0e2bbf22c1822f02a36a6096b6",
+      "bytes": 4670,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/TaskDiagram.tsx",
+      "sourceGitBlob": "63b6edb2f40d034b59658d0a3c24a19196ad6248",
+      "gitMode": "100644",
+      "sha256": "d6f243d99de2a931bbd91e5c31f5cf7f8ba30271b633769b3625d30f5859dd0e",
+      "bytes": 8984,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/TwoRingWorkbench.tsx",
+      "sourceGitBlob": "32f3046d167518cc0c8650e14597c6f48a03a522",
+      "gitMode": "100644",
+      "sha256": "1148a0cbe52860c060729f084f3e41eb92a43b97aef36072a95928e2ade1de4b",
+      "bytes": 17382,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/WalkingExperiments.tsx",
+      "sourceGitBlob": "5644872385cbd26742f24e9e98d16305b1be4a5d",
+      "gitMode": "100644",
+      "sha256": "951d040d086a93575f57f8c63422d0cf75c1640325b516ea5e9ce94c6cc0d490",
+      "bytes": 8920,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "lucide-react",
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/chain-classroom.css",
+      "sourceGitBlob": "c4eb0758bf9c78be1d0172b3beaeb96208d02ef2",
+      "gitMode": "100644",
+      "sha256": "96a93e6b925d849032c94d0f395c11ac297aa0184b1f3421416e5f3589e6ade2",
+      "bytes": 6673,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/measurement.css",
+      "sourceGitBlob": "ecb6479390ff2faa19ba349ab066d0a973b65a91",
+      "gitMode": "100644",
+      "sha256": "479e22830ad0aa46b6267022f0cbb7fb59a83ff4c2e15375138238838777a108",
+      "bytes": 22600,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/measurement/two-ring.css",
+      "sourceGitBlob": "b15ec284969640f20a376cf8eaa1adc8bc15c8a1",
+      "gitMode": "100644",
+      "sha256": "4442f92eb763d119d3868b88f31ab278d164016a14798f90e6cbd6d4f6122a52",
+      "bytes": 5315,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/navigationGuard.ts",
+      "sourceGitBlob": "fa605fc663d61ce88d6e4d86d9a3958e1db651a7",
+      "gitMode": "100644",
+      "sha256": "03033da4762e470cfad1748b5fb939b3abf0ae53122aafa620f6a31158a943f7",
+      "bytes": 358,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/AngleWorkbench.tsx",
+      "sourceGitBlob": "bca26b9d305164e95b2867e73505f3885631c23d",
+      "gitMode": "100644",
+      "sha256": "c80a2bdf8804a4a32f58f79b998e8d52578f63edee4bd6718857c7e96bb30fbd",
+      "bytes": 3083,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/BankWorkbench.tsx",
+      "sourceGitBlob": "192165fc3c3fed8c23cc2ff9918d4939ed50ed40",
+      "gitMode": "100644",
+      "sha256": "cd5c8505f3332504a003341bbf11bf10cff29f4f25be1081881930665bf407d5",
+      "bytes": 4352,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/CoreWorkbench.tsx",
+      "sourceGitBlob": "d6d731d383cea08cf3ae2885cc1a934456568190",
+      "gitMode": "100644",
+      "sha256": "07363103792ed0f18f9cc77ea619e4f5c931f48e7953dc0131cbbd50a30f15cd",
+      "bytes": 27970,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/DataWorkbench.tsx",
+      "sourceGitBlob": "a958b07593f50d5ae939a9e5c35e3c99e1a80ff0",
+      "gitMode": "100644",
+      "sha256": "0136f1135e6e5799acc5e7a75e000430ae098d1637bd11090a807ac21165ab84",
+      "bytes": 3983,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/FractionWorkbench.tsx",
+      "sourceGitBlob": "e63f7afbbed861097e34ac684caac31681ea675a",
+      "gitMode": "100644",
+      "sha256": "9e27fa210945308c32665448981564b939e4c46999d2d0b6d29a4c2a9019e8af",
+      "bytes": 4330,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/GeometryWorkbench.tsx",
+      "sourceGitBlob": "fcb3dff99e63be7ba948d8656cc4267df8820248",
+      "gitMode": "100644",
+      "sha256": "45fc3ff77f4aa747ea17a45dc0d088d75d75c46eb75713910406e289cbd51b18",
+      "bytes": 6943,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/MotionWorkbench.tsx",
+      "sourceGitBlob": "d794fa5188661eb3add902e72ecb5c48b4b496ee",
+      "gitMode": "100644",
+      "sha256": "39044c3ec9d2d462b31d643c0861941817568f6529c5470597ff68f935b695aa",
+      "bytes": 5181,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/Primitives.tsx",
+      "sourceGitBlob": "acbb2dc598f31739f0411342964ff15189a729a6",
+      "gitMode": "100644",
+      "sha256": "a91272cf2ea25d0380d11018ad6d69a1909a10b659e37217a753097f6cfe55b6",
+      "bytes": 2740,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/RegroupFigure.tsx",
+      "sourceGitBlob": "e31c763e10c31e64e8862ce6f913ec156b160bc0",
+      "gitMode": "100644",
+      "sha256": "f789c240c4c1441a49b67af4cbc7c2f77134a28545eb2e3d86dfe2683ff66078",
+      "bytes": 1914,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/SymbolWorkbench.tsx",
+      "sourceGitBlob": "5b11610cab9d0ce0c54878a085da864c64bc749c",
+      "gitMode": "100644",
+      "sha256": "a8b6b4982468260e568a0c25abb8f258f6a529d0b40245b35c901c5dfa042d3c",
+      "bytes": 7819,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/TextbookWorkbench.tsx",
+      "sourceGitBlob": "b3693a162826d6f67ce699604445c87aeec1b4a8",
+      "gitMode": "100644",
+      "sha256": "3c78ece3bb5e49a09b345be4a4388f90ea31f4bb802298d7c54820fbb7a2115e",
+      "bytes": 1502,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/TimeWorkbench.tsx",
+      "sourceGitBlob": "333630e2bd919f7111158107cdb3c0e5a5e141f5",
+      "gitMode": "100644",
+      "sha256": "dc5119f3852f1dbc8c51ef08373d507380dbba5bb7768ee3d0d6a2179e431d81",
+      "bytes": 5120,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/core.css",
+      "sourceGitBlob": "2c84010d4ccafca6a76aca3c4ae3619ec87be4c2",
+      "gitMode": "100644",
+      "sha256": "e1bb7bd9ad829ffa40812a51cf8bdfbb876f66f7ea4adf509300e81a181eb3fa",
+      "bytes": 3705,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/textbook.css",
+      "sourceGitBlob": "26e8cc9cbc06efbd6f03e200dfe11cf528fbb75e",
+      "gitMode": "100644",
+      "sha256": "bc1e3ac30b1e18ad77b5a2e9b6cd98cec7fe6c2f83b5f5f49d9768ef63bc272b",
+      "bytes": 7665,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/textbook/useTextbook.tsx",
+      "sourceGitBlob": "c6383be569ca204419bbd191bdad9823b40d7378",
+      "gitMode": "100644",
+      "sha256": "13d7752080fe347e7a1027a33833b9068222654d9e985f728bd7b93f201507f9",
+      "bytes": 2174,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/types.ts",
+      "sourceGitBlob": "99059e2cb463d3e96df5fc3eed5ce841cf1d6c0a",
+      "gitMode": "100644",
+      "sha256": "d53a859d0b92cc68a459f8681420a0b8aa4aac1ee8bb65e72f94d035c2023c2d",
+      "bytes": 9613,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "src/studio/useMotionValue.ts",
+      "sourceGitBlob": "39a03559fd9f11b193eef462d395d18fc8872fc3",
+      "gitMode": "100644",
+      "sha256": "373eaa239b6758064a61a088d5ac1076e95f555832f65422cab94400db4b551b",
+      "bytes": 1094,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [
+        "react"
+      ],
+      "math01Scope": "retain motion hooks/reduced-motion and cleanup"
+    },
+    {
+      "path": "src/types.ts",
+      "sourceGitBlob": "db6410aeb8324dbbb344090445975b3f01b6c476",
+      "gitMode": "100644",
+      "sha256": "f990cbdbef1530347f40f7befc3589db5c2bca4af99d1f9abdc94c3c38ca0d87",
+      "bytes": 5275,
+      "decision": "adapt",
+      "purpose": "Scope CSS, remove old API/persistence/assessment; select observe-only branch; no full classroom mount",
+      "targetModule": "future math readonly view",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "tests/fixtures/self-check.mjs",
+      "sourceGitBlob": "aedc9865fb2fd0f665fe369d16b2a49940c8f3bb",
+      "gitMode": "100644",
+      "sha256": "90ad782c6d74548c13985aa5dec474b2805f5c46ebf4b8f06d27c4a8a5f3314d",
+      "bytes": 712,
+      "decision": "adapt",
+      "purpose": "Select synthetic mathematical fixtures only; do not execute old pretest or import real backups",
+      "targetModule": "future characterization fixtures",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": true,
+      "externalImports": [],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "tests/pilot-math.test.mjs",
+      "sourceGitBlob": "24a1f3426598349a3ce9d4cc980373d1ef2d835e",
+      "gitMode": "100644",
+      "sha256": "383eae3735df17103d250f3dfec5111c09ca183705c963ba5c3e3c23f2850508",
+      "bytes": 2649,
+      "decision": "adapt",
+      "purpose": "Select synthetic mathematical fixtures only; do not execute old pretest or import real backups",
+      "targetModule": "future characterization fixtures",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [
+        "node:assert/strict",
+        "node:test"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    },
+    {
+      "path": "tests/pilot-store.test.mjs",
+      "sourceGitBlob": "d3dfd55b54a9517d7b9971b6dc7ddbd23228af7f",
+      "gitMode": "100644",
+      "sha256": "937c2bc39455e0da2b45f48aeade04bf2e3f04d75b30ad2c32a5ba81ba721fbe",
+      "bytes": 7703,
+      "decision": "adapt",
+      "purpose": "Select synthetic mathematical fixtures only; do not execute old pretest or import real backups",
+      "targetModule": "future characterization fixtures",
+      "license": "NO_ROOT_LICENSE; private-owner review required; no redistribution grant inferred",
+      "addedBeyond17": false,
+      "externalImports": [
+        "node:assert/strict",
+        "node:test"
+      ],
+      "math01Scope": "AUDIT_ONLY_NOT_MATH01_COPY"
+    }
+  ],
+  "edges": [
+    {
+      "from": "content/pilot/classrooms.mjs",
+      "to": "content/pilot/classroom-reasoning.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/grade3-complete.mjs",
+      "to": "content/course-plan-v2/grade-3.json",
+      "kind": "readFileSync new URL import.meta.url; authority teaching plan"
+    },
+    {
+      "from": "content/pilot/grade3-complete.mjs",
+      "to": "content/pilot/hands-on-teaching.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/grade3-complete.mjs",
+      "to": "content/pilot/operation-responses.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/grade3-complete.mjs",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/grade3-complete.mjs",
+      "to": "shared/operation-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/grade3-complete.mjs",
+      "to": "shared/pilot-math.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/grade3-complete.mjs",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/intro-visuals.mjs",
+      "to": "shared/core-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/intro-visuals.mjs",
+      "to": "shared/intro-visuals.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/intro-visuals.mjs",
+      "to": "shared/operation-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/intro-visuals.mjs",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/inverse-revisions.mjs",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/clarity-errata.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/classrooms.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/formal-task-errata.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/foundations.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/grade3-complete.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/interaction-release.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/intro-visuals.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/inverse-revisions.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/length-measurement.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/mixed-operations.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/objective-tasks.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/source.mjs",
+      "to": "content/pilot/teaching.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/thinking-source.mjs",
+      "to": "content/course-plan-v2/grade-3-thinking.json",
+      "kind": "readFileSync new URL import.meta.url; non-first-lesson bank"
+    },
+    {
+      "from": "content/pilot/thinking-source.mjs",
+      "to": "content/pilot/thinking-hints.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "content/pilot/thinking-source.mjs",
+      "to": "content/pilot/thinking-publication.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "scripts/build-grade3-catalog.mjs",
+      "to": "content/grade-3/legacy-seed.json",
+      "kind": "readFileSync source variable; legacy catalog only"
+    },
+    {
+      "from": "scripts/build-grade3-catalog.mjs",
+      "to": "scripts/course-framework.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "assets/source/solid-shapes/print-templates.html",
+      "kind": "fold-only copy input; not first observe lesson"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "assets/source/solid-shapes/template-cube-1.svg",
+      "kind": "fold-only copy input; not first observe lesson"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "assets/source/solid-shapes/template-cube-2.svg",
+      "kind": "fold-only copy input; not first observe lesson"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "assets/source/solid-shapes/template-cube-3.svg",
+      "kind": "fold-only copy input; not first observe lesson"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "assets/source/solid-shapes/template-rectangular-box.svg",
+      "kind": "fold-only copy input; not first observe lesson"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/Kevin_数学课程结构清单.json",
+      "kind": "reads blueprint"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/method-guides.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/pilot/design-index.json",
+      "kind": "generated tracked output"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/pilot/grade3-complete.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/pilot/intro-visuals.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/pilot/lessons.json",
+      "kind": "generated tracked output; source authority remains source.mjs"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/pilot/methods.json",
+      "kind": "generated tracked output"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/pilot/source.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/pilot/thinking-source.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "scripts/build-pilot.mjs",
+      "to": "content/rollout.json",
+      "kind": "generated tracked output"
+    },
+    {
+      "from": "scripts/build-upper-primary-catalog.mjs",
+      "to": "scripts/course-framework.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-inbox-store.mjs",
+      "to": "server/detective-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-inbox-store.mjs",
+      "to": "shared/detective-inbox.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-inbox-store.mjs",
+      "to": "shared/detective-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-inbox-sync.mjs",
+      "to": "server/detective-inbox-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-inbox-sync.mjs",
+      "to": "server/detective-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-inbox-sync.mjs",
+      "to": "shared/detective-inbox.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-inbox-sync.mjs",
+      "to": "shared/detective-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-store.mjs",
+      "to": "content/detective/seed-cases.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/detective-store.mjs",
+      "to": "shared/detective-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "content/pilot/design-index.json",
+      "kind": "runtime readFileSync"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "content/pilot/lessons.json",
+      "kind": "runtime readFileSync"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "content/pilot/thinking-source.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "server/detective-inbox-sync.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "server/detective-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "server/parent-access.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "server/pet-care.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "server/pilot-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "server/store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/index.mjs",
+      "to": "server/thinking-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pet-care.mjs",
+      "to": "content/pets/catalog.json",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pilot-store.mjs",
+      "to": "content/pilot/clarity-errata.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pilot-store.mjs",
+      "to": "content/pilot/inverse-revisions.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pilot-store.mjs",
+      "to": "server/pet-care.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pilot-store.mjs",
+      "to": "server/review-schedule.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pilot-store.mjs",
+      "to": "server/thinking-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pilot-store.mjs",
+      "to": "shared/pilot-math.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pilot-store.mjs",
+      "to": "shared/widget-state.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/pilot-store.mjs",
+      "to": "shared/withdrawn-checks.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/store.mjs",
+      "to": "server/pet-care.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/store.mjs",
+      "to": "server/pilot-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/store.mjs",
+      "to": "server/review-schedule.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/store.mjs",
+      "to": "shared/detective-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "server/thinking-store.mjs",
+      "to": "content/pilot/thinking-source.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/classroom-expression.mjs",
+      "to": "shared/core-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/classroom-expression.mjs",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/classroom-expression.mjs",
+      "to": "shared/pilot-math.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/detective-inbox.mjs",
+      "to": "shared/detective-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/detective-model.mjs",
+      "to": "shared/detective-inbox.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/detective-model.mjs",
+      "to": "shared/pilot-math.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/operation-models.mjs",
+      "to": "shared/pilot-math.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/solid-rendering.mjs",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/textbook-models.mjs",
+      "to": "shared/core-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/two-ring-view.mjs",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/widget-state.mjs",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/widget-state.mjs",
+      "to": "shared/operation-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "shared/widget-state.mjs",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "content/pilot/intro-visuals.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "shared/classroom-expression.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "shared/scene-context.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "shared/withdrawn-checks.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "src/studio/IntroVisual.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "src/studio/StoryPicture.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "src/studio/TeachingDiagrams.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "src/studio/classroom.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/ChildClassroom.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/FoundationWidgets.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/IntroVisual.tsx",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/IntroVisual.tsx",
+      "to": "shared/intro-visuals.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/IntroVisual.tsx",
+      "to": "src/studio/concept/SolidView.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/IntroVisual.tsx",
+      "to": "src/studio/intro-visual.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/LengthWorkbench.tsx",
+      "to": "src/studio/measurement/ChainExperiment.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/LengthWorkbench.tsx",
+      "to": "src/studio/measurement/MeasuringExperiments.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/LengthWorkbench.tsx",
+      "to": "src/studio/measurement/WalkingExperiments.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/LengthWorkbench.tsx",
+      "to": "src/studio/measurement/measurement.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/LengthWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/MathSceneVisual.tsx",
+      "to": "src/studio/concept/OperationVisual.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/MathSceneVisual.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/Practice.tsx",
+      "to": "shared/inverse-index.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/Practice.tsx",
+      "to": "src/studio/api.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/Practice.tsx",
+      "to": "src/studio/concept/ConceptVisual.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/Practice.tsx",
+      "to": "src/studio/measurement/InverseTaskFigure.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/Practice.tsx",
+      "to": "src/studio/measurement/TaskDiagram.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/Practice.tsx",
+      "to": "src/studio/navigationGuard.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/Practice.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/Practice.tsx",
+      "to": "src/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/StoryPicture.tsx",
+      "to": "content/pilot/intro-visuals.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/StoryPicture.tsx",
+      "to": "src/studio/IntroVisual.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/StoryPicture.tsx",
+      "to": "src/studio/MathSceneVisual.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/StoryPicture.tsx",
+      "to": "src/studio/measurement/TaskDiagram.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/StoryPicture.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/TeachingDiagrams.tsx",
+      "to": "shared/pilot-math.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/TeachingDiagrams.tsx",
+      "to": "shared/scene-context.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/TeachingDiagrams.tsx",
+      "to": "src/studio/FoundationWidgets.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/TeachingDiagrams.tsx",
+      "to": "src/studio/LengthWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/TeachingDiagrams.tsx",
+      "to": "src/studio/MathSceneVisual.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/TeachingDiagrams.tsx",
+      "to": "src/studio/concept/ConceptWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/TeachingDiagrams.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/api.ts",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/api.ts",
+      "to": "src/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptVisual.tsx",
+      "to": "src/studio/concept/concept.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptVisual.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptWorkbench.tsx",
+      "to": "src/studio/concept/MassWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptWorkbench.tsx",
+      "to": "src/studio/concept/OperationExtensionLab.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptWorkbench.tsx",
+      "to": "src/studio/concept/SpatialWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptWorkbench.tsx",
+      "to": "src/studio/concept/StaticConceptFigure.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptWorkbench.tsx",
+      "to": "src/studio/concept/concept.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptWorkbench.tsx",
+      "to": "src/studio/textbook/TextbookWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/ConceptWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/MassWorkbench.tsx",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/MassWorkbench.tsx",
+      "to": "src/studio/concept/hands-on.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/MassWorkbench.tsx",
+      "to": "src/studio/concept/useHandsOn.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/MassWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/MassWorkbench.tsx",
+      "to": "src/studio/useMotionValue.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/OperationExtensionLab.tsx",
+      "to": "shared/operation-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/OperationExtensionLab.tsx",
+      "to": "shared/pilot-math.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/OperationExtensionLab.tsx",
+      "to": "src/studio/concept/OperationVisual.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/OperationExtensionLab.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/OperationVisual.tsx",
+      "to": "shared/operation-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/OperationVisual.tsx",
+      "to": "src/studio/useMotionValue.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/RelationshipFigures.tsx",
+      "to": "shared/visual-relations.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/RelationshipFigures.tsx",
+      "to": "src/studio/concept/relationships.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/RelationshipFigures.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/SolidView.tsx",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/SolidView.tsx",
+      "to": "shared/solid-rendering.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "public/math-paper-folding/print-templates.html",
+      "kind": "fold-only static link; not first observe lesson"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "public/math-paper-folding/template-cube-1.svg",
+      "kind": "fold-only static link; not first observe lesson"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "public/math-paper-folding/template-cube-2.svg",
+      "kind": "fold-only static link; not first observe lesson"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "public/math-paper-folding/template-cube-3.svg",
+      "kind": "fold-only static link; not first observe lesson"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "public/math-paper-folding/template-rectangular-box.svg",
+      "kind": "fold-only static link; not first observe lesson"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "src/studio/concept/SolidView.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "src/studio/concept/hands-on.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "src/studio/concept/useHandsOn.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/SpatialWorkbench.tsx",
+      "to": "src/studio/useMotionValue.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/StaticConceptFigure.tsx",
+      "to": "src/studio/concept/RelationshipFigures.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/StaticConceptFigure.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/useHandsOn.tsx",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/concept/useHandsOn.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainExperiment.tsx",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainExperiment.tsx",
+      "to": "src/studio/measurement/ChainOverview.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainExperiment.tsx",
+      "to": "src/studio/measurement/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainExperiment.tsx",
+      "to": "src/studio/measurement/TwoRingWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainExperiment.tsx",
+      "to": "src/studio/measurement/chain-classroom.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainExperiment.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainJointFigure.tsx",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainJointFigure.tsx",
+      "to": "src/studio/measurement/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainOverview.tsx",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainOverview.tsx",
+      "to": "shared/two-ring-view.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainOverview.tsx",
+      "to": "src/studio/measurement/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/ChainOverview.tsx",
+      "to": "src/studio/measurement/TwoRingWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/InverseTaskFigure.tsx",
+      "to": "src/studio/measurement/measurement.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/InverseTaskFigure.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/MeasuringExperiments.tsx",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/MeasuringExperiments.tsx",
+      "to": "src/studio/measurement/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/MeasuringExperiments.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/Primitives.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/TaskDiagram.tsx",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/TaskDiagram.tsx",
+      "to": "src/studio/measurement/ChainJointFigure.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/TaskDiagram.tsx",
+      "to": "src/studio/measurement/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/TaskDiagram.tsx",
+      "to": "src/studio/measurement/measurement.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/TaskDiagram.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/TwoRingWorkbench.tsx",
+      "to": "shared/two-ring-view.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/TwoRingWorkbench.tsx",
+      "to": "src/studio/measurement/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/TwoRingWorkbench.tsx",
+      "to": "src/studio/measurement/two-ring.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/WalkingExperiments.tsx",
+      "to": "shared/length-model.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/WalkingExperiments.tsx",
+      "to": "src/studio/measurement/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/measurement/WalkingExperiments.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/AngleWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/AngleWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/AngleWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/AngleWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/BankWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/BankWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/BankWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/BankWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/CoreWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/CoreWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/CoreWorkbench.tsx",
+      "to": "src/studio/textbook/RegroupFigure.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/CoreWorkbench.tsx",
+      "to": "src/studio/textbook/core.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/CoreWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/CoreWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/DataWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/DataWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/DataWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/DataWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/FractionWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/FractionWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/FractionWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/FractionWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/GeometryWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/GeometryWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/GeometryWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/GeometryWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/MotionWorkbench.tsx",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/MotionWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/MotionWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/MotionWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/MotionWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/MotionWorkbench.tsx",
+      "to": "src/studio/useMotionValue.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/RegroupFigure.tsx",
+      "to": "shared/visual-relations.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/RegroupFigure.tsx",
+      "to": "src/studio/concept/relationships.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/SymbolWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/SymbolWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/SymbolWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/SymbolWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/AngleWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/BankWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/CoreWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/DataWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/FractionWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/GeometryWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/MotionWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/SymbolWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/TimeWorkbench.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/textbook/textbook.css",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TextbookWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TimeWorkbench.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TimeWorkbench.tsx",
+      "to": "src/studio/textbook/Primitives.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TimeWorkbench.tsx",
+      "to": "src/studio/textbook/useTextbook.tsx",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/TimeWorkbench.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/useTextbook.tsx",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/textbook/useTextbook.tsx",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/types.ts",
+      "to": "shared/hands-on-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/types.ts",
+      "to": "shared/intro-visuals.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/types.ts",
+      "to": "shared/operation-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/types.ts",
+      "to": "shared/textbook-models.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/studio/types.ts",
+      "to": "src/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "src/types.ts",
+      "to": "src/studio/types.ts",
+      "kind": "static import/css"
+    },
+    {
+      "from": "tests/fixtures/self-check.mjs",
+      "to": "server/pilot-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "tests/pilot-math.test.mjs",
+      "to": "shared/pilot-math.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "tests/pilot-store.test.mjs",
+      "to": "content/pilot/source.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "tests/pilot-store.test.mjs",
+      "to": "server/pet-care.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "tests/pilot-store.test.mjs",
+      "to": "server/pilot-store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "tests/pilot-store.test.mjs",
+      "to": "server/store.mjs",
+      "kind": "static import/css"
+    },
+    {
+      "from": "tests/pilot-store.test.mjs",
+      "to": "tests/fixtures/self-check.mjs",
+      "kind": "static import/css"
+    }
+  ],
+  "externalModules": [
+    "lucide-react",
+    "node:assert/strict",
+    "node:child_process",
+    "node:crypto",
+    "node:fs",
+    "node:http",
+    "node:path",
+    "node:sqlite",
+    "node:test",
+    "node:url",
+    "node:util",
+    "react",
+    "react-dom",
+    "vite"
+  ],
+  "nonliteralImports": [],
+  "lessonInventory": {
+    "count": 70,
+    "uniqueLessonIds": 70,
+    "contentVersions": [
+      "2026-10-02.1",
+      "2026-10-07.2",
+      "2026-10-09.4",
+      "2026-10-18.1"
+    ],
+    "statusCounts": {
+      "draft": 70
+    }
+  },
+  "firstLesson": {
+    "selectedSourcePaths": [
+      "content/pilot/lessons.json",
+      "shared/hands-on-models.mjs",
+      "shared/solid-rendering.mjs",
+      "src/studio/IntroVisual.tsx",
+      "src/studio/concept/SolidView.tsx",
+      "src/studio/concept/SpatialWorkbench.tsx",
+      "src/studio/concept/hands-on.css",
+      "src/studio/intro-visual.css",
+      "src/studio/useMotionValue.ts"
+    ],
+    "selectionRequiresAdaptation": true,
+    "lessonId": "G3-U01-B01",
+    "contentVersion": "2026-10-07.2",
+    "editorialRevision": "2026-10-09.4",
+    "status": "draft",
+    "classroomStepCount": 6,
+    "taskSetCounts": {
+      "warmup": 2,
+      "core": 3,
+      "transfer": 2,
+      "challenge": 1,
+      "review": 4
+    },
+    "taskIds": {
+      "warmup": [
+        "G3-U01-B01-P01",
+        "G3-U01-B01-P02"
+      ],
+      "core": [
+        "G3-U01-B01-P03",
+        "G3-U01-B01-P04",
+        "G3-U01-B01-P07"
+      ],
+      "transfer": [
+        "G3-U01-B01-P05",
+        "G3-U01-B01-P08"
+      ],
+      "challenge": [
+        "G3-U01-B01-P06"
+      ],
+      "review": [
+        "G3-U01-B01-P09",
+        "G3-U01-B01-P10",
+        "G3-U01-B01-P11",
+        "G3-U01-B01-P12"
+      ]
+    },
+    "blockIds": [
+      "start",
+      "try",
+      "meaning",
+      "examples",
+      "why",
+      "check",
+      "connections",
+      "practice"
+    ],
+    "introType": "box-camera",
+    "sceneId": "G3-U01-B01-MODEL1",
+    "handsOnMode": "observe",
+    "handsOnVersion": "spatial.v2",
+    "sourceAssetIds": [],
+    "sensitiveFieldPaths": [
+      "/articleBlocks/*/referenceAnswer",
+      "/conceptScenes/*/expectedExplanation",
+      "/rewardRuleId",
+      "/taskSets/challenge/*/diagnostic",
+      "/taskSets/challenge/*/hint",
+      "/taskSets/challenge/*/solution",
+      "/taskSets/core/*/diagnostic",
+      "/taskSets/core/*/expected",
+      "/taskSets/core/*/hint",
+      "/taskSets/core/*/solution",
+      "/taskSets/review/*/diagnostic",
+      "/taskSets/review/*/expected",
+      "/taskSets/review/*/hint",
+      "/taskSets/review/*/responseSpec/expectedEvidence",
+      "/taskSets/review/*/solution",
+      "/taskSets/transfer/*/diagnostic",
+      "/taskSets/transfer/*/expected",
+      "/taskSets/transfer/*/hint",
+      "/taskSets/transfer/*/responseSpec/expectedEvidence",
+      "/taskSets/transfer/*/solution",
+      "/taskSets/warmup/*/diagnostic",
+      "/taskSets/warmup/*/expected",
+      "/taskSets/warmup/*/hint",
+      "/taskSets/warmup/*/solution",
+      "/validatorIds"
+    ],
+    "externalBinaryAssetsForObserve": [],
+    "inlineSvgGeneratedBy": [
+      "src/studio/IntroVisual.tsx",
+      "src/studio/concept/SolidView.tsx",
+      "src/studio/concept/SpatialWorkbench.tsx"
+    ],
+    "foldTemplatesRequired": false
+  },
+  "generatedPathsNotRead": [
+    {
+      "path": "content/catalog.json",
+      "producer": "scripts/build-upper-primary-catalog.mjs",
+      "consumer": "server/index.mjs",
+      "reason": "gitignored generated catalog; not a frozen tracked input"
+    },
+    {
+      "path": "content/grade-3/catalog.json",
+      "producer": "scripts/build-grade3-catalog.mjs",
+      "consumer": "scripts/build-upper-primary-catalog.mjs",
+      "reason": "gitignored build product; generation not executed"
+    }
+  ],
+  "privateRuntimeReadsNotFollowed": [
+    "server/store.mjs: runtime progress.sqlite and backups",
+    "server/parent-access.mjs: runtime credential/recovery files",
+    "server/detective-inbox-store.mjs: runtime inbox"
+  ],
+  "excludedPathPolicies": [
+    "data/**",
+    "**/backups/**",
+    "**/inbox/**",
+    ".env*",
+    "**/*.sqlite*",
+    "**/*.key",
+    "research/**",
+    "untracked files",
+    "all word-request blobs"
+  ],
+  "sourceFilesCopied": 0,
+  "oldBuildExecuted": false,
+  "nasAccessed": false
+}
