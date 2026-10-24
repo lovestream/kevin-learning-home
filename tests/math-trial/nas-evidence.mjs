@@ -33,6 +33,23 @@ export function learningSnapshot() {
   console.log(JSON.stringify({sha256:hash(rows),tables:Object.fromEntries(tables.map(t=>[t,{count:rows[t].length,sha256:hash(rows[t])}]))}));db.close()`;
   return JSON.parse(docker('exec',state.containers.app,'node','-e',code));
 }
+export function credentialBudget() {
+  ownedApp();
+  const logins={parent:credentials.parent.login,learner:credentials.learner.login};
+  const code=`const {DatabaseSync}=require('node:sqlite');const {createHash}=require('node:crypto');
+  const d=new DatabaseSync('/data/learning.sqlite',{readOnly:true});const out={};
+  for(const [role,login] of Object.entries(${JSON.stringify(logins)})){
+    const key=createHash('sha256').update('credential:'+login).digest('hex');
+    const r=d.prepare('SELECT attempts,expires_at FROM auth_limits WHERE bucket_digest=?').get(key);
+    out[role]=r?{attempts:r.attempts,expiresAtMs:r.expires_at}:null;
+  }
+  const parent=d.prepare('SELECT id FROM actors WHERE login_name=?').get(${JSON.stringify(logins.parent)});
+  const key=createHash('sha256').update('credential:unlock:'+parent.id).digest('hex');
+  const r=d.prepare('SELECT attempts,expires_at FROM auth_limits WHERE bucket_digest=?').get(key);
+  out.parentUnlock=r?{attempts:r.attempts,expiresAtMs:r.expires_at}:null;
+  console.log(JSON.stringify({nowMs:Date.now(),actors:out}));d.close()`;
+  return JSON.parse(docker('exec',state.containers.app,'node','-e',code));
+}
 export function changeGrant(action, learnerId) {
   assert(['grant-learner','revoke-grant'].includes(action));
   assert(/^[A-Za-z0-9:._-]+$/.test(learnerId));

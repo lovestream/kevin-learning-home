@@ -5,7 +5,8 @@ import assert from 'node:assert/strict';
 import {mkdirSync,readFileSync,writeFileSync,rmSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {trustedProfile} from '../../infra/math-trial/browser-trust.mjs';
-import {plan,state,credentials,learningSnapshot,changeGrant} from './nas-evidence.mjs';
+import {plan,state,credentials,learningSnapshot,changeGrant,credentialBudget} from './nas-evidence.mjs';
+import {budgetFor} from '../../infra/math-trial/auth-budget.mjs';
 import {canonical} from '../../packages/contracts/index.ts';
 import {mathResponseSchema} from '../../packages/contracts/math-readonly.ts';
 import https from 'node:https';
@@ -16,12 +17,20 @@ const title=dto.lesson.title;
 const dir='docs/implementation/evidence/math-nas-01';mkdirSync(dir,{recursive:true});
 const before=learningSnapshot(), results=[], screenshots=[], observations={};
 let failed=false,stage='init';
+const mode=process.env.KLH_MATH_NAS_CASE||'all';assert(['all','parent'].includes(mode));
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const tlsCall=(url,headers={},method='GET')=>new Promise((resolve,reject)=>{
   const req=https.request(origin+url,{method,ca:readFileSync('.trial-private/tls/ca.crt'),rejectUnauthorized:true,servername:'',headers},r=>{
     let body='';r.on('data',b=>body+=b);r.on('end',()=>resolve({status:r.statusCode,body}));
   });req.on('error',reject);req.setTimeout(10000,()=>req.destroy(Error('TIMEOUT')));req.end(method==='POST'?'{}':undefined);
 });
+async function waitReady(){
+  for(let i=0;i<30;i++){
+    try{const r=await tlsCall('/health/ready');if(r.status===200&&JSON.parse(r.body).status==='ready')return;}catch{}
+    await new Promise(r=>setTimeout(r,1000));
+  }
+  throw Error('READY_REQUIRED');
+}
 const api=(p,url,method='GET',body)=>p.evaluate(async({url,method,body})=>{
   const session=method==='GET'?null:await(await fetch('/api/v1/auth/session',{cache:'no-store'})).json();
   const r=await fetch(url,{method,cache:'no-store',headers:method==='GET'?{}:{'Content-Type':'application/json','X-CSRF-Token':session.csrfToken},...(method==='GET'?{}:{body:JSON.stringify(body??{})})});
@@ -56,7 +65,7 @@ async function run(name,width,fn){
     // Remove Chromium's initial blank pages before collecting only LAN-page observations.
     for(const p of c.pages())await p.close();
     let csp=0,external=0,errors=0,leak=false,hashChecked=0,cspHeaders=0,eventFailures=0;
-    const posts=[],pending=[];
+    const posts=[],pending=[],controls={offlineMaintenance:false};
     const track=promise=>pending.push(promise.catch(()=>{eventFailures++;}));
     await c.exposeBinding('reportPolicyViolation',()=>csp++);
     await c.addInitScript(()=>document.addEventListener('securitypolicyviolation',()=>void window.reportPolicyViolation()));
@@ -69,10 +78,14 @@ async function run(name,width,fn){
         const h=await r.allHeaders();posts.push({endpoint:new URL(r.url()).pathname,originMatches:h.origin===origin,csrfPresent:!!h['x-csrf-token']});
       })());
     });
-    p.on('response',r=>{track((async()=>{
+    p.on('response',r=>{const duringMaintenance=controls.offlineMaintenance;track((async()=>{
       const u=new URL(r.url());if(u.origin!==origin)return;
       const headers=await r.allHeaders();
       assert.equal(headers['cache-control'],'no-store');
+      if(duringMaintenance&&r.status()===503&&u.pathname.startsWith('/api/v1/')){
+        assert.equal(await r.text(),'Trial service unavailable');
+        observations.expectedMaintenance503=(observations.expectedMaintenance503||0)+1;return;
+      }
       assert.match(headers['content-security-policy'],/default-src 'self'; script-src 'self'; style-src 'self'/);cspHeaders++;
       if(r.status()!==200)return;
       const file=manifest.files.find(f=>'/'+f.path===u.pathname);
@@ -86,7 +99,7 @@ async function run(name,width,fn){
       }
     })());});
     stage=name;
-    await fn(p,c);
+    await fn(p,c,controls);
     stage='safety-and-hashes';await Promise.all(pending);
     assert.equal(eventFailures,0);assert.equal(csp,0);assert.equal(external,0);assert.equal(errors,0);assert.equal(leak,false);
     assert(hashChecked>=2&&cspHeaders>0);
@@ -100,17 +113,17 @@ async function run(name,width,fn){
   }finally{await c?.close();rmSync(profile,{recursive:true,force:true});}
 }
 try{
+  stage='synthetic-login-budget';
+  const budget=credentialBudget();
+  observations.loginBudget=Object.fromEntries(['parent','learner','parentUnlock'].map(role=>[role,
+    budgetFor(budget.actors[role],budget.nowMs,role==='parentUnlock'?2:role==='learner'&&mode==='parent'?0:3)]));
+  assert(Object.values(observations.loginBudget).every(x=>x.enough),'WAIT_NATURAL_AUTH_WINDOW');
   stage='strict-TLS-readiness';
-  let ready=false;
-  for(let i=0;i<30&&!ready;i++){
-    try{ready=(await tlsCall('/health/ready')).status===200;}catch{}
-    if(!ready)await new Promise(r=>setTimeout(r,1000));
-  }
-  assert(ready,'READY_REQUIRED');
+  await waitReady();
   assert.equal((await tlsCall('/api/v1/config',{Host:'evil.invalid'})).status,403);
   assert.equal((await tlsCall('/api/v1/auth/session',{Origin:'https://evil.invalid'})).status,403);
   observations.hostOriginBoundary={hostRejected:403,wrongOriginRejected:403,tlsChainAndIpValidated:true};
-  for(const width of [390,768,1280]){
+  for(const width of mode==='all'?[390,768,1280]:[]){
     await run('child-six-steps-'+width,width,async p=>{
       stage='anonymous-gate';await p.goto(origin+path);
       await expect(p.getByRole('heading',{name:'请先登录学习家园',exact:true})).toBeVisible();
@@ -168,7 +181,7 @@ try{
     });
     if(failed)break;
   }
-  if(!failed)await run('parent-permissions-continuity-revoke',1280,async p=>{
+  if(!failed)await run('parent-permissions-continuity-revoke',1280,async (p,c,controls)=>{
     stage='locked-parent';await login(p,true);
     const childSession=await api(p,'/api/v1/auth/session');assert.deepEqual(childSession.body.learnerIds,[]);
     await unlock(p);const s=(await api(p,'/api/v1/auth/session')).body;
@@ -182,22 +195,35 @@ try{
     await p.getByRole('link',{name:'打开首课只读课堂',exact:true}).click();
     await expect(p.locator('.math-lesson')).toBeVisible();
     await p.locator('.classroom-route button').nth(2).click();
+    await expect(p.locator('[data-model=observe]')).toBeVisible();
+    await expect(p.locator('.classroom-stage')).toBeFocused();
     const button=p.getByRole('button',{name:'从右侧看',exact:true});await button.focus();await p.keyboard.press('Enter');
     const node=await button.elementHandle();let authPolls=0,mathPolls=0;
     p.on('response',r=>{if(r.status()===200){if(r.url().endsWith('/auth/session'))authPolls++;if(r.url().endsWith(url))mathPolls++;}});
     stage='two-auth-math-polls-focus';const start=Date.now();
-    for(let i=0;i<12;i++){await p.waitForTimeout(1000);await expect(button).toBeFocused();assert(await node.evaluate(n=>n.isConnected&&n===document.activeElement));}
-    assert(authPolls>=2&&mathPolls>=2);
+    for(let i=0;i<12;i++){
+      stage='parent-continuity-second-'+(i+1);await p.waitForTimeout(1000);
+      observations.lastContinuitySample={second:i+1,authPolls,mathPolls,
+        connected:await node.evaluate(n=>n.isConnected),
+        active:await node.evaluate(n=>n===document.activeElement),
+        lessonVisible:await p.locator('.math-lesson').isVisible(),
+        visibility:await p.evaluate(()=>document.visibilityState)};
+      await expect(button).toBeFocused();assert(await node.evaluate(n=>n.isConnected&&n===document.activeElement));
+    }
+    stage='parent-successful-poll-counts';assert(authPolls>=2&&mathPolls>=2);
     observations.parentContinuity={authPolls,mathPolls,wallClockMs:Date.now()-start,stableDOMAndFocus:true};
     await shot(p,'parent-continuity');
-    stage='offline-revoke-formal-cli';changeGrant('revoke-grant',learnerId);
+    stage='offline-revoke-formal-cli';controls.offlineMaintenance=true;changeGrant('revoke-grant',learnerId);
     try{
       await expect.poll(async()=>{try{return(await api(p,url)).status}catch{return 0}},{timeout:20000}).toBe(403);
       await expect(p.locator('.math-lesson')).toHaveCount(0,{timeout:10000});
       assert(!(await p.locator('body').innerText()).includes(title));
-    }finally{changeGrant('grant-learner',learnerId);}
+    }finally{changeGrant('grant-learner',learnerId);await waitReady();}
     observations.grantRevoke={formalOfflineSyntheticCLI:true,newAppStoppedForWriterLock:true,revokedHttp:403,privateDOMCleared:true,grantRestored:true};
-    await p.goto(origin+'/parent');await p.getByRole('button',{name:'退出',exact:true}).click();
+    stage='parent-restored-ready-logout';controls.offlineMaintenance=false;
+    assert.equal((await p.goto(origin+'/parent')).status(),200);
+    await p.getByRole('button',{name:'退出',exact:true}).click();
+    await expect(p.getByRole('heading',{name:'请先登录学习家园',exact:true})).toBeVisible();
   });
 }catch{
   failed=true;results.push({name:'setup-or-finalization',status:'FAIL',stage,error:'NAS_MATH_ASSERTION'});
@@ -206,7 +232,7 @@ try{
   try{after=learningSnapshot();if(JSON.stringify(after)!==JSON.stringify(before))failed=true;}
   catch{failed=true;results.push({name:'learning-snapshot',status:'FAIL',error:'OWNED_DB_SNAPSHOT_FAILED'});}
   writeFileSync(dir+'/browser-results.json',JSON.stringify({status:failed?'FAIL':'PASS',sourceSha:plan.sourceSha,runId:plan.runId,imageId:state.imageId,
-    strictTLS:true,profileOnlyCA:true,physicalDevices:'NEEDS_USER_ACTION',build:manifest,learningBefore:before,learningAfter:after,results,screenshots,observations},null,2)+'\n');
+    filtered:mode!=='all',strictTLS:true,profileOnlyCA:true,physicalDevices:'NEEDS_USER_ACTION',build:manifest,learningBefore:before,learningAfter:after,results,screenshots,observations},null,2)+'\n');
   if(failed){
     // Stop only ID+label+image verified new resources, keep diagnostics and data.
     const {execFileSync}=await import('node:child_process');

@@ -132,6 +132,7 @@ class Trial:
                   '手机/iPad 如不支持浏览器配置内独立 CA，先停止在该设备试用，反馈证书阻碍。',
                   'Safari 通常需要系统证书信任；本任务没有授权这一操作。可另行审查受信任域名证书方案。',
                   '实体手机/iPad：NEEDS_USER_ACTION，虚拟视口截图不代表实体通过。',
+                  '合成账户仍执行正式限速：同一账号 15 分钟最多 5 次登录尝试；自动化/离线验证也占次数。遇到 429 等自然窗口，不清理计数或反复重试。',
                   '请在能完整验证证书的测试浏览器内登录孩子账号，打开数学首课、六步导航、旋转、三视图、临时照片、刷新重置并退出。',
                   '旧入口账号登录仍由你手工验收；控制器未读取旧口令、Cookie 或数据库。',
                   '', '## 本机打开严格校验浏览器',
@@ -262,7 +263,15 @@ os.chmod(root+'/owner-marker.json',0o600)
                 assert info['NetworkSettings']['Ports']['8443/tcp'] == expected
                 assert len(info['NetworkSettings']['Networks']) == 2
             containers[role] = {'status': info['State']['Status'], 'memoryBytes': host['Memory'], 'readonly': True, 'nonRoot': True, 'capDropAll': True, 'restartPolicy': host['RestartPolicy']['Name'], 'health': info['State'].get('Health', {}).get('Status', 'not-configured')}
-        out = {'sourceSha': PLAN['sourceSha'], 'runId': PLAN['runId'], 'status': 'TRIAL_RUNNING_SYNTHETIC_ONLY', 'containers': containers, 'existingServices': self.invariance(), 'preflight': self.state['preflight'], 'imageId': self.state['imageId'], 'archiveSha256': self.state['archiveSha256'], 'physicalDevices': 'NEEDS_USER_ACTION', 'certificateTrust': 'PROFILE_ONLY_NO_GLOBAL_TRUST', 'nasConfigChanged': False}
+        networks = {}
+        for role, nid in [('internal', self.state['networkId']), ('edge', self.state['edgeNetworkId'])]:
+            network = json.loads(self.docker(['network','inspect',nid]).stdout)[0]
+            assert network['Id'] == nid and network['Labels'][LABEL] == PLAN['runId']
+            assert network['Driver'] == 'bridge' and network['Internal'] == (role == 'internal')
+            expected = set(self.state['containers'].values()) if role == 'internal' else {self.state['containers']['tls']}
+            assert set(network['Containers']) == expected
+            networks[role] = {'driver':'bridge','internal':network['Internal'],'onlyOwnedContainers':True}
+        out = {'sourceSha': PLAN['sourceSha'], 'runId': PLAN['runId'], 'status': 'TRIAL_RUNNING_SYNTHETIC_ONLY', 'containers': containers, 'networks': networks, 'existingServices': self.invariance(), 'preflight': self.state['preflight'], 'imageId': self.state['imageId'], 'archiveSha256': self.state['archiveSha256'], 'physicalDevices': 'NEEDS_USER_ACTION', 'certificateTrust': 'PROFILE_ONLY_NO_GLOBAL_TRUST', 'nasConfigChanged': False}
         (PRIVATE/'nas-status.json').write_text(json.dumps(out, indent=2)+'\n')
         print(json.dumps(out))
 

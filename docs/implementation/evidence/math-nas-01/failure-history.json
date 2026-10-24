@@ -1,0 +1,73 @@
+[
+  {
+    "attempt": 1,
+    "status": "FAIL",
+    "filtered": false,
+    "cases": [
+      {
+        "name": "child-six-steps-390",
+        "status": "PASS"
+      },
+      {
+        "name": "child-six-steps-768",
+        "status": "PASS"
+      },
+      {
+        "name": "child-six-steps-1280",
+        "status": "PASS"
+      },
+      {
+        "name": "parent-permissions-continuity-revoke",
+        "status": "FAIL",
+        "stage": "two-auth-math-polls-focus",
+        "error": "NAS_MATH_ASSERTION"
+      }
+    ],
+    "learningTablesUnchanged": true,
+    "parentContinuity": null,
+    "grantRevoke": null
+  },
+  {
+    "attempt": 2,
+    "status": "FAIL",
+    "filtered": true,
+    "cases": [
+      {
+        "name": "parent-permissions-continuity-revoke",
+        "status": "FAIL",
+        "stage": "offline-revoke-formal-cli",
+        "error": "NAS_MATH_ASSERTION"
+      }
+    ],
+    "learningTablesUnchanged": true,
+    "parentContinuity": {
+      "authPolls": 2,
+      "mathPolls": 2,
+      "wallClockMs": 12112,
+      "stableDOMAndFocus": true
+    },
+    "grantRevoke": {
+      "formalOfflineSyntheticCLI": true,
+      "newAppStoppedForWriterLock": true,
+      "revokedHttp": 403,
+      "privateDOMCleared": true,
+      "grantRestored": true
+    }
+  },
+  {
+    "attempt": 3,
+    "status": "FAIL",
+    "filtered": true,
+    "cases": [
+      {
+        "name": "parent-permissions-continuity-revoke",
+        "status": "FAIL",
+        "stage": "locked-parent",
+        "error": "NAS_MATH_ASSERTION"
+      }
+    ],
+    "learningTablesUnchanged": true,
+    "parentContinuity": null,
+    "grantRevoke": null
+  }
+]
