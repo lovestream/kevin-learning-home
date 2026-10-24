@@ -4,8 +4,8 @@
 
 ## 当前审查关口：MATH-01
 
-- [Issue #11](https://github.com/lovestream/kevin-learning-home/issues/11)；分支 `codex/math-01-readonly-lesson`，从 main `a40d97495d0065cd4f9ce2e8706372de122f2179` 建立。独立 Draft PR 的精确最终 HEAD、push/PR 两套 CI URL、下载核验结论见 PR 描述；报告与源码同一分支归档。
-- [执行报告/A01–A12矩阵/失败与修复/许可](../implementation/MATH-01-EXECUTION-REPORT.md)、[来源→目标hash](../implementation/evidence/math-01/origins.json)、[单课逐字段等价](../implementation/evidence/math-01/public-projection-check.json)、[原仓边界](../implementation/evidence/math-01/source-boundaries.json)。CI 原60 Node/18 UI/原3视口/Docker/Compose保留，新增12 Node/9真实浏览器/flag-on生产镜像回归单列。
+- [Issue #11](https://github.com/lovestream/kevin-learning-home/issues/11)；分支 `codex/math-01-readonly-lesson`，从 main `a40d97495d0065cd4f9ce2e8706372de122f2179` 建立。[Draft PR #12](https://github.com/lovestream/kevin-learning-home/pull/12) 的精确最终 HEAD、push/PR 两套 CI URL、下载核验结论见 PR 描述；报告与源码同一分支归档。
+- [执行报告/A01–A12矩阵/失败与修复/许可](../implementation/MATH-01-EXECUTION-REPORT.md)、[来源→目标hash](../implementation/evidence/math-01/origins.json)、[单课逐字段等价](../implementation/evidence/math-01/public-projection-check.json)、[原仓边界](../implementation/evidence/math-01/source-boundaries.json)。[实施提交CI双事件永久归档](../implementation/evidence/math-01/ci/index.json)已通过下载核验；原60 Node/18 UI/原3视口/Docker/Compose保留，新增12 Node/9真实浏览器/flag-on生产镜像回归单列。最终证据/累计CSP测试提交的HEAD CI在PR描述单独核验。
 - 首课 `G3-U01-B01` / `2026-10-07.2` / `2026-10-09.4` / draft，保持原教学文本/几何；只复制9候选的必要片段与单课公开投影，没有70课/题库/答案/旧API。新GET与页面遵循[合同](../implementation/MATH-01-READONLY-ACCEPTANCE.md)。
 - `KLH_MATH_READONLY=1` 必须显式启用且正式auth已配置；默认关闭，英语/钱包不变。孩子绑定session learner，家长二次解锁+实时grant；无测试身份捷径。相机/照片/六步仅组件内存，刷新重置，第六步显示练习尚未接入；11张学习业务表不变，认证必要写入保留。
 - MATH-00勘误：BoxCamera原有3处inline color已换math作用域CSS；快速连续箭头用原目标方向驱动控制，防动画旧值丢键，几何不改。原审计历史保留，改动明示于本报告。

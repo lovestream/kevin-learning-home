@@ -2,6 +2,8 @@
 # Usage: python3 scripts/math01/check-ci.py ARTIFACT_DIR EXACT_HEAD_SHA
 import json,sys,pathlib,xml.etree.ElementTree as ET
 p=pathlib.Path(sys.argv[1]); sha=sys.argv[2]
+legacy='--implementation-snapshot' in sys.argv[3:]
+if legacy: assert sha=='3970dd8aa449417f7e42a2bb678380cee1729836'
 def get(name): return json.loads((p/name).read_text())
 v=get('verification.json'); s=get('shell-browser.json'); c=get('container.json'); a=get('auth-container.json'); b=get('browser.json')
 assert v['status']=='PASS_CI' and v['executedHeadSha']==sha and v['worktreeDirty'] is False
@@ -49,6 +51,7 @@ assert mb['total']==9 and mb['failures']==0 and mb['filtered'] is False
 assert mb['viewports']==[390,768,1280] and len(mb['screenshots'])==10
 for case in mb['cases']:
  assert case['status']=='PASS' and case['realAuthBackend'] and case['learningTablesUnchanged']
+ if not legacy: assert case['cumulativeCspViolations']==0
  assert not case['consoleSecretLeak']
  for field in ['scriptErrors','cspViolations','externalRequests','persistentBrowserEntries','databases','workers','caches']: assert case[field]==0,(case['name'],field)
  assert len(case['learningTables'])==11

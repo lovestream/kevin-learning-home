@@ -3,10 +3,10 @@
   "total": 9,
   "failures": 0,
   "filtered": false,
-  "executedHeadSha": "a40d97495d0065cd4f9ce2e8706372de122f2179",
+  "executedHeadSha": "3970dd8aa449417f7e42a2bb678380cee1729836",
   "node": "v24.15.0",
   "worktreeDirty": true,
-  "timestamp": "2026-10-24T07:34:41.138Z",
+  "timestamp": "2026-10-24T07:37:17.045Z",
   "viewports": [
     390,
     768,
@@ -29,27 +29,28 @@
       "name": "child-six-steps-390",
       "status": "PASS",
       "width": 390,
-      "durationMs": 2848,
+      "durationMs": 2847,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "baa043806232ace5c774d8adf2b4874139e9cfca056fa2608202beb0219229a8"
+            "sha256": "3e212433ef3ec508d8f51547aaf58fea8618c3a7678eb0c4b6e377c3854647c1"
           },
           "after": {
             "count": 2,
-            "sha256": "baa043806232ace5c774d8adf2b4874139e9cfca056fa2608202beb0219229a8"
+            "sha256": "3e212433ef3ec508d8f51547aaf58fea8618c3a7678eb0c4b6e377c3854647c1"
           }
         },
         "learners": {
           "before": {
             "count": 2,
-            "sha256": "d1d91140b25e8369d8a353c2a89d27fb89cedfc421e6bd5d2829044d521174be"
+            "sha256": "d1be843079ff4b34ba4ab7643aa5619dc95a22fdae1f35a0258be9a7f363e534"
           },
           "after": {
             "count": 2,
-            "sha256": "d1d91140b25e8369d8a353c2a89d27fb89cedfc421e6bd5d2829044d521174be"
+            "sha256": "d1be843079ff4b34ba4ab7643aa5619dc95a22fdae1f35a0258be9a7f363e534"
           }
         },
         "subjects": {
@@ -171,27 +172,28 @@
       "name": "child-six-steps-768",
       "status": "PASS",
       "width": 768,
-      "durationMs": 2838,
+      "durationMs": 2822,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "355011988af27ccf2cca7b19a331f088bc5ed81c58a674aeb9980f530a8986cf"
+            "sha256": "860fa6837ced00b1bb1e44bb4936a010ab1a2e92feec60ef503df64753e18209"
           },
           "after": {
             "count": 2,
-            "sha256": "355011988af27ccf2cca7b19a331f088bc5ed81c58a674aeb9980f530a8986cf"
+            "sha256": "860fa6837ced00b1bb1e44bb4936a010ab1a2e92feec60ef503df64753e18209"
           }
         },
         "learners": {
           "before": {
             "count": 2,
-            "sha256": "774c9fb76da8336b1871e77514ea7e4d037269c21b683ca59de99b4ce15a289e"
+            "sha256": "a1d86514d4f783da7c8f3d563ac78a5487ef1a5d29556f78cbb2a2792c8b8209"
           },
           "after": {
             "count": 2,
-            "sha256": "774c9fb76da8336b1871e77514ea7e4d037269c21b683ca59de99b4ce15a289e"
+            "sha256": "a1d86514d4f783da7c8f3d563ac78a5487ef1a5d29556f78cbb2a2792c8b8209"
           }
         },
         "subjects": {
@@ -313,27 +315,28 @@
       "name": "child-six-steps-1280",
       "status": "PASS",
       "width": 1280,
-      "durationMs": 2896,
+      "durationMs": 2884,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "7af8d055c60fe38f4dca011515dd410580c11a69380cacf848478acb856c29ce"
+            "sha256": "8a3a3432505dbff51c692a6211bf6ac03c635b0addad47d8c1580cb6fc7a2817"
           },
           "after": {
             "count": 2,
-            "sha256": "7af8d055c60fe38f4dca011515dd410580c11a69380cacf848478acb856c29ce"
+            "sha256": "8a3a3432505dbff51c692a6211bf6ac03c635b0addad47d8c1580cb6fc7a2817"
           }
         },
         "learners": {
           "before": {
             "count": 2,
-            "sha256": "2d0a8e6f34c0ea8c6105acf47c79c58264bdee82f3c2a38a6b77183e469e289c"
+            "sha256": "c31745cbcdf1fcad24b561aa68703c1a02b9e77bd22d3ee7263949fb7cd0738a"
           },
           "after": {
             "count": 2,
-            "sha256": "2d0a8e6f34c0ea8c6105acf47c79c58264bdee82f3c2a38a6b77183e469e289c"
+            "sha256": "c31745cbcdf1fcad24b561aa68703c1a02b9e77bd22d3ee7263949fb7cd0738a"
           }
         },
         "subjects": {
@@ -455,27 +458,28 @@
       "name": "parent-two-background-rechecks-focus-stable",
       "status": "PASS",
       "width": 1280,
-      "durationMs": 13962,
+      "durationMs": 13946,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "4d97c3ad19fa90905f0f3d53098c465e243bc5a96da98376bb2722d773fad337"
+            "sha256": "2f53fed6e183fbb5cc4bec4c2c118698348e71b76d14f9e213a90bc21a591364"
           },
           "after": {
             "count": 2,
-            "sha256": "4d97c3ad19fa90905f0f3d53098c465e243bc5a96da98376bb2722d773fad337"
+            "sha256": "2f53fed6e183fbb5cc4bec4c2c118698348e71b76d14f9e213a90bc21a591364"
           }
         },
         "learners": {
           "before": {
             "count": 2,
-            "sha256": "f60432b8668d060e5be4060b9638aaaee64686e3731018cb2631624d6728e5cb"
+            "sha256": "a30b9ef48ffdc5895a1d95fe45ef729d0bc5c261f171e7418c7af83e8a0e41eb"
           },
           "after": {
             "count": 2,
-            "sha256": "f60432b8668d060e5be4060b9638aaaee64686e3731018cb2631624d6728e5cb"
+            "sha256": "a30b9ef48ffdc5895a1d95fe45ef729d0bc5c261f171e7418c7af83e8a0e41eb"
           }
         },
         "subjects": {
@@ -597,27 +601,28 @@
       "name": "parent-locked-grant-revoke-and-learner-switch-reset",
       "status": "PASS",
       "width": 768,
-      "durationMs": 7346,
+      "durationMs": 7357,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "bd3788a200c3790a325a16b1969987df0fec174371408749498b58c1cbc67ff3"
+            "sha256": "011c67f3180729986bfb6710f88862e1043d6512760b862f3b29d5cde7a9d8f5"
           },
           "after": {
             "count": 2,
-            "sha256": "bd3788a200c3790a325a16b1969987df0fec174371408749498b58c1cbc67ff3"
+            "sha256": "011c67f3180729986bfb6710f88862e1043d6512760b862f3b29d5cde7a9d8f5"
           }
         },
         "learners": {
           "before": {
             "count": 3,
-            "sha256": "92044ea211031f055edd7b654abf0294618f43cb24b7199a4cc1056266ce13af"
+            "sha256": "d22a23748263c723a2bec28f2899833e9afe73ae46494f98b3c4db95c9fe2338"
           },
           "after": {
             "count": 3,
-            "sha256": "92044ea211031f055edd7b654abf0294618f43cb24b7199a4cc1056266ce13af"
+            "sha256": "d22a23748263c723a2bec28f2899833e9afe73ae46494f98b3c4db95c9fe2338"
           }
         },
         "subjects": {
@@ -739,27 +744,28 @@
       "name": "parent-blur-unconfirmed-masks-course-and-lock-clears",
       "status": "PASS",
       "width": 1280,
-      "durationMs": 1856,
+      "durationMs": 1829,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "184b64363b9cfe155ea55566faf70405e4ed8d19b9560cfbd2ff520ea8c4a6e1"
+            "sha256": "eb5217ce9a9ac52f6e39c456874b22e28f2e5fee979f22fc2769dad5a2efe31e"
           },
           "after": {
             "count": 2,
-            "sha256": "184b64363b9cfe155ea55566faf70405e4ed8d19b9560cfbd2ff520ea8c4a6e1"
+            "sha256": "eb5217ce9a9ac52f6e39c456874b22e28f2e5fee979f22fc2769dad5a2efe31e"
           }
         },
         "learners": {
           "before": {
             "count": 2,
-            "sha256": "253daf3ad0cce4ee119c18bcd57964df39062f96081e95ffffc785531b18b45c"
+            "sha256": "e6c06521e298cd8ded4acd13af9526ef8424c1de19b45275dfed0d66d9f98d25"
           },
           "after": {
             "count": 2,
-            "sha256": "253daf3ad0cce4ee119c18bcd57964df39062f96081e95ffffc785531b18b45c"
+            "sha256": "e6c06521e298cd8ded4acd13af9526ef8424c1de19b45275dfed0d66d9f98d25"
           }
         },
         "subjects": {
@@ -886,27 +892,28 @@
       "name": "unknown-field-and-public-hash-corruption-never-paint",
       "status": "PASS",
       "width": 1280,
-      "durationMs": 2211,
+      "durationMs": 2194,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "d5158fb769ce4bbd60bea3d2a79bd048aa4cb5f5230b1a286065de122e1b410d"
+            "sha256": "72699983f3842ff1be0a353a6b4d08cf5bc6bc48161ae16e5389a0ccc4fda41a"
           },
           "after": {
             "count": 2,
-            "sha256": "d5158fb769ce4bbd60bea3d2a79bd048aa4cb5f5230b1a286065de122e1b410d"
+            "sha256": "72699983f3842ff1be0a353a6b4d08cf5bc6bc48161ae16e5389a0ccc4fda41a"
           }
         },
         "learners": {
           "before": {
             "count": 2,
-            "sha256": "aa202f9fabeb043ba5eba4d6cc3a7faf7a2e00ab78f8ac5640b541b9325a7bf1"
+            "sha256": "eb578caf5bab6f80be4346be1e1964f8e84b68478db09c3f5c5fc0b7499356a1"
           },
           "after": {
             "count": 2,
-            "sha256": "aa202f9fabeb043ba5eba4d6cc3a7faf7a2e00ab78f8ac5640b541b9325a7bf1"
+            "sha256": "eb578caf5bab6f80be4346be1e1964f8e84b68478db09c3f5c5fc0b7499356a1"
           }
         },
         "subjects": {
@@ -1023,27 +1030,28 @@
       "name": "lesson-network-failure-removes-previous-content",
       "status": "PASS",
       "width": 390,
-      "durationMs": 6480,
+      "durationMs": 6482,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "dd2e3071fe9979138d6e89c398c6d2b36de653fdf0f4904760c58c3441f3aff6"
+            "sha256": "ce4da59340b0b20a516d44fcad821fac483a4e07344c9518bfc58d40123b622a"
           },
           "after": {
             "count": 2,
-            "sha256": "dd2e3071fe9979138d6e89c398c6d2b36de653fdf0f4904760c58c3441f3aff6"
+            "sha256": "ce4da59340b0b20a516d44fcad821fac483a4e07344c9518bfc58d40123b622a"
           }
         },
         "learners": {
           "before": {
             "count": 2,
-            "sha256": "8c17b630c95ecd86eb0ad436d29996f32ddbd7e79acd991f22999e2b6c91e1f5"
+            "sha256": "62e151c76a868442beb77c033246b07e1b9b6e6aac0851446cd021383513674d"
           },
           "after": {
             "count": 2,
-            "sha256": "8c17b630c95ecd86eb0ad436d29996f32ddbd7e79acd991f22999e2b6c91e1f5"
+            "sha256": "62e151c76a868442beb77c033246b07e1b9b6e6aac0851446cd021383513674d"
           }
         },
         "subjects": {
@@ -1160,27 +1168,28 @@
       "name": "normal-motion-cancel-on-leaving-and-reduced-motion",
       "status": "PASS",
       "width": 1280,
-      "durationMs": 1754,
+      "durationMs": 1751,
       "learningTablesUnchanged": true,
+      "cumulativeCspViolations": 0,
       "learningTables": {
         "schema_migrations": {
           "before": {
             "count": 2,
-            "sha256": "b5e9131f31b2d2ca393e0d6f1c55ead4367e8c4f039d67329a6f27cf7ce5b6ee"
+            "sha256": "5611f40f6763047d51a1db7666a2d1c81b8da0ebb7d86f6d07b2814f417f4627"
           },
           "after": {
             "count": 2,
-            "sha256": "b5e9131f31b2d2ca393e0d6f1c55ead4367e8c4f039d67329a6f27cf7ce5b6ee"
+            "sha256": "5611f40f6763047d51a1db7666a2d1c81b8da0ebb7d86f6d07b2814f417f4627"
           }
         },
         "learners": {
           "before": {
             "count": 2,
-            "sha256": "226273a8ed2cbb5d14d2540a8c167b8b506def5c251a998945693d0a05681351"
+            "sha256": "b0e35c8b6d900548f0c92a57c63e4338fc94fbc27cf161fd61be46b64868017d"
           },
           "after": {
             "count": 2,
-            "sha256": "226273a8ed2cbb5d14d2540a8c167b8b506def5c251a998945693d0a05681351"
+            "sha256": "b0e35c8b6d900548f0c92a57c63e4338fc94fbc27cf161fd61be46b64868017d"
           }
         },
         "subjects": {
@@ -1298,7 +1307,7 @@
     "parentContinuity": {
       "successfulAuthPolls": 2,
       "successfulLessonPolls": 2,
-      "wallClockMs": 12107,
+      "wallClockMs": 12108,
       "stableDOMAndFocus": true
     },
     "motion": {

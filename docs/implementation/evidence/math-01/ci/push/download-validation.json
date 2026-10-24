@@ -1,0 +1,66 @@
+[
+  {
+    "sha": "3970dd8aa449417f7e42a2bb678380cee1729836",
+    "status": "PASS_CI",
+    "nodeTests": 60,
+    "original55Preserved": true,
+    "legacyViewports": 3,
+    "realShellScenarios": 18,
+    "screenshots": 15,
+    "autoRestartCount": 1,
+    "shellHarnessExcluded": true
+  },
+  {
+    "R1": {
+      "continuity": {
+        "wallClockMs": 12090,
+        "successfulPolls": 2,
+        "unchangedUnlockDeadline": true,
+        "stableDOMAndFocus": true
+      },
+      "config": {
+        "realBackendResponse": true,
+        "sameDOMNodeAndKeyboardFocus": true
+      },
+      "revocation": {
+        "hiddenBeforeMetadata": true,
+        "actual503FailsClosed": true,
+        "offlineRecovery": true
+      },
+      "race": {
+        "boundedTimeoutMs": 8000,
+        "intervalsDoNotRestartPendingCheck": true,
+        "foregroundLockWins": true
+      },
+      "expiry": {
+        "serverExpiryDiscoveredByPoll": true,
+        "realCredentialReset401": true
+      }
+    },
+    "original60Preserved": true,
+    "original13UIPreserved": true
+  },
+  {
+    "status": "PASS_MATH_CI",
+    "sha": "3970dd8aa449417f7e42a2bb678380cee1729836",
+    "mathNodeTests": 12,
+    "mathBrowserScenarios": 9,
+    "screenshots": 10,
+    "all11LearningTablesUnchanged": true,
+    "parentContinuity": {
+      "successfulAuthPolls": 2,
+      "successfulLessonPolls": 2,
+      "wallClockMs": 12083,
+      "stableDOMAndFocus": true
+    },
+    "motion": {
+      "requested": 19,
+      "cancelled": 2,
+      "cancelledOnUnmount": true,
+      "reducedMotionRequestsAdded": 0
+    },
+    "productionMathContainer": true,
+    "publicDtoSha256": "7397a9c3140e6f6afd2c928a094e5dfbf5641f3903e9ec042561ce12965746cc",
+    "visualArtifactSha256": "4075f790b25ee9a6e37561b3fedb7a1bc9b0c4a3a654963f29ad7d05cb415c2e"
+  }
+]

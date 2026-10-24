@@ -1,6 +1,6 @@
 # MATH-01：首课可视化只读接入执行报告
 
-2026-10-24。[Issue #11](https://github.com/lovestream/kevin-learning-home/issues/11) 授权的单课本地/CI实现。基线 main `a40d97495d0065cd4f9ce2e8706372de122f2179`；开发分支 `codex/math-01-readonly-lesson`。本文件随代码归档；精确最终 HEAD、push/PR 双事件 CI URL 和下载核验见本 Draft PR 描述，避免在提交内容中引用它自身的 SHA。
+2026-10-24。[Issue #11](https://github.com/lovestream/kevin-learning-home/issues/11) 授权的单课本地/CI实现。基线 main `a40d97495d0065cd4f9ce2e8706372de122f2179`；开发分支 `codex/math-01-readonly-lesson`。本文件随代码归档；精确最终 HEAD、push/PR 双事件 CI URL 和下载核验见 [Draft PR #12](https://github.com/lovestream/kevin-learning-home/pull/12) 描述，避免在提交内容中引用它自身的 SHA。
 
 ## 交付行为与默认配置
 
@@ -53,20 +53,22 @@
 
 ## A01–A12 验收矩阵
 
-| ID | 交付与证据 |
-|---|---|
-| A01 | 原仓 HEAD/status 前后不变、9来源/8目标hash、真实数据零读、NAS零连接；source-boundaries / source-verification / origins。 |
-| A02 | 精确首课元数据、逐字段公开投影比对、4角度几何fixture；源/public/build核验、损坏/缺文件/清单缺项/HTML不符503，真实HTTP无fallback。 |
-| A03 | 两孩子、HTTPS Secure/HttpOnly/Strict真实cookie、401/跨范围403/query拒绝/标题不泄漏；Node HTTP与匿名深链浏览器测试。 |
-| A04 | 两家长、解锁前IDs空、解锁/grant/另家长/撤销/5分钟到期/主动锁定/失焦/选人切换；浏览器12秒两轮auth+lesson复核焦点稳定，失败清空。 |
-| A05 | strict深层白名单与合成答案哨兵；实际bundle不含题库/authored首课题干；真实响应schema/hash故障注入不渲染，原始作者库不静态提供。 |
-| A06 | HEAD/POST/PUT/PATCH/DELETE405；旧数学/导入/奖励等API403。所有操作前后11学习表count/hash一致，认证last_seen/audit/session必要写入按原规则发生。 |
-| A07 | 冻结纯算法4视角、三投影96×60/48×60/96×48与标记、唯一SVG ID/连续箭头/pointer取消。 |
-| A08 | 编译React→Node→SQLite真实390×900/768×1024/1280×900；登录、六步、照片、刷新重置、退出、无溢出/小触控目标/脚本异常；9张课堂+1张家长稳定截图。 |
-| A09 | 键盘登录/步骤/方向/照片/上下步、舞台焦点、正常动画与reduced-motion、卸载取消RAF；浏览器自动化。 |
-| A10 | 实际CSP零违例，外部请求0，本地/sessionStorage/IndexedDB/CacheStorage/ServiceWorker0；math前后家长按钮computed style相等；原Host/Origin/CSRF/Cookie回归保留。 |
-| A11 | 原60 Node、18 UI、3旧视口及Docker/Compose完整验证；新增12 Node、9浏览器独立核对，另增flag-on真实生产镜像/恢复/隔离检查。最终HEAD双事件CI与artifact核验见PR。 |
-| A12 | 本报告、逐文件来源/许可、fixture、截图、失败与修复、handoff及Draft PR归档；未部署NAS、不合并、不进入MATH-02/03。 |
+| ID | 状态 | 交付与证据 |
+|---|---|---|
+| A01 | PASS（自动化/归档范围；最终HEAD见PR） | 原仓 HEAD/status 前后不变、9来源/8目标hash、真实数据零读、NAS零连接；source-boundaries / source-verification / origins。 |
+| A02 | PASS（自动化/归档范围；最终HEAD见PR） | 精确首课元数据、逐字段公开投影比对、4角度几何fixture；源/public/build核验、损坏/缺文件/清单缺项/HTML不符503，真实HTTP无fallback。 |
+| A03 | PASS（自动化/归档范围；最终HEAD见PR） | 两孩子、HTTPS Secure/HttpOnly/Strict真实cookie、401/跨范围403/query拒绝/标题不泄漏；Node HTTP与匿名深链浏览器测试。 |
+| A04 | PASS（自动化/归档范围；最终HEAD见PR） | 两家长、解锁前IDs空、解锁/grant/另家长/撤销/5分钟到期/主动锁定/失焦/选人切换；浏览器12秒两轮auth+lesson复核焦点稳定，失败清空。 |
+| A05 | PASS（自动化/归档范围；最终HEAD见PR） | strict深层白名单与合成答案哨兵；实际bundle不含题库/authored首课题干；真实响应schema/hash故障注入不渲染，原始作者库不静态提供。 |
+| A06 | PASS（自动化/归档范围；最终HEAD见PR） | HEAD/POST/PUT/PATCH/DELETE405；旧数学/导入/奖励等API403。所有操作前后11学习表count/hash一致，认证last_seen/audit/session必要写入按原规则发生。 |
+| A07 | PASS（自动化/归档范围；最终HEAD见PR） | 冻结纯算法4视角、三投影96×60/48×60/96×48与标记、唯一SVG ID/连续箭头/pointer取消。 |
+| A08 | PASS（自动化/归档范围；最终HEAD见PR） | 编译React→Node→SQLite真实390×900/768×1024/1280×900；登录、六步、照片、刷新重置、退出、无溢出/小触控目标/脚本异常；9张课堂+1张家长稳定截图。 |
+| A09 | PASS（自动化/归档范围；最终HEAD见PR） | 键盘登录/步骤/方向/照片/上下步、舞台焦点、正常动画与reduced-motion、卸载取消RAF；浏览器自动化。 |
+| A10 | PASS（自动化/归档范围；最终HEAD见PR） | 实际CSP跨导航/刷新累计零违例（测试Node侧binding累计，不随页面重载归零），外部请求0，本地/sessionStorage/IndexedDB/CacheStorage/ServiceWorker0；math前后家长按钮computed style相等；原Host/Origin/CSRF/Cookie回归保留。 |
+| A11 | PASS（自动化/归档范围；最终HEAD见PR） | 原60 Node、18 UI、3旧视口及Docker/Compose完整验证；新增12 Node、9浏览器独立核对，另增flag-on真实生产镜像/恢复/隔离检查。最终HEAD双事件CI与artifact核验见PR。 |
+| A12 | PASS（自动化/归档范围；最终HEAD见PR） | 本报告、逐文件来源/许可、fixture、截图、失败与修复、handoff及Draft PR归档；未部署NAS、不合并、不进入MATH-02/03。 |
+
+实施提交 `3970dd8aa449417f7e42a2bb678380cee1729836` 的 [push CI40074735680](https://github.com/lovestream/kevin-learning-home/actions/runs/40074735680) 与 [PR CI40074751659](https://github.com/lovestream/kevin-learning-home/actions/runs/40074751659) 均成功，ZIP摘要/CRC、源码SHA、60/18/3与12/9、Docker/Compose均下载独立复核通过；[永久CI归档](evidence/math-01/ci/index.json)、[CI截图](evidence/math-01/ci/screenshots)。运行代码此后不变；追加提交仅归档文档及累计CSP测试，最终HEAD两套CI链接/下载摘要/验收结论在 PR #12 描述中永久记录。旧实施快照如需用当前校验器重验，显式加 `--implementation-snapshot`（仅允许该3970 SHA）；最终HEAD不得使用该选项。
 
 上述自动化项目的最终结果由 CI artifact 和 PR 精确 HEAD 核验记录决定；不能用本机目标测试代替整套 CI。实体 Mac/手机/iPad/Android 的**数学课程**人工验收全部 `NOT_RUN`，旧02B登录反馈不计入数学验收。当前NAS试用仍是原02B，不包含本次数学代码。
 

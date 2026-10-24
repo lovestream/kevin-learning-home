@@ -1,0 +1,100 @@
+{
+  "status": "PASS_CI",
+  "scope": "modern Linux amd64, never NAS",
+  "executedHeadSha": "3970dd8aa449417f7e42a2bb678380cee1729836",
+  "writerProtocol": "kernel-flock-v2",
+  "nativeAddonRuntime": "fs-ext@2.1.1, built for Node24/linux-amd64",
+  "contenderExitCode": 1,
+  "activeOwnerNotEvicted": true,
+  "liveBackupExcluded": true,
+  "killedContainerExitCode": 137,
+  "killRecreatePreserved": true,
+  "restartPolicy": "unless-stopped",
+  "autoRestartCount": 1,
+  "autoRestartAfterProcessKill": true,
+  "autoRestartTrigger": "SIGKILL to verified Node child of init; not docker kill",
+  "unhealthyAloneDidNotRestart": true,
+  "productionHealthCommandRecovered": true,
+  "nonRoot": true,
+  "readOnlyRootfs": true,
+  "deletedRecreatedVolumePersistent": true,
+  "restoredHostReady": true,
+  "exactTableHashesPreserved": true,
+  "actualImageId": "sha256:9d3ec079db4da726e523e4e3c57354fedb58b1dddda0c1e11a9b26ff1d4e5719",
+  "architecture": "linux/amd64",
+  "healthcheckCommandPassed": true,
+  "wrongUidRejected": true,
+  "testHarnessExcludedFromImage": true,
+  "tables": {
+    "schema_migrations": {
+      "count": 2,
+      "sha256": "ea11599f8c35e79eb73fae54884f02f285441a677ed5654b85e85bc9cde116b9"
+    },
+    "learners": {
+      "count": 1,
+      "sha256": "f7b991c7323373745d2031432a656a597fd50c37eb08272971c48811d87bb171"
+    },
+    "subjects": {
+      "count": 1,
+      "sha256": "f331387722a0faff534734b5e4e4b2420e914d75dcfa12c39866d7b0853af682"
+    },
+    "subject_states": {
+      "count": 1,
+      "sha256": "1073233beb2dfed948c99e9dc52da580dfe7a74bcf3f208edb2c549aa6e8c4f5"
+    },
+    "server_attempts": {
+      "count": 1,
+      "sha256": "7a07a032206b865fca407c4a8e6f828c4ff67a601d4727194b71c783a5bbbf87"
+    },
+    "command_receipts": {
+      "count": 1,
+      "sha256": "87b2de2b8eead31a48639d78f555cc45a4dc35c499babf91085f7d6c42e35d34"
+    },
+    "learning_events": {
+      "count": 1,
+      "sha256": "034671c6ad9d55c0b4580161fd47731f63045e18e6d36072731cc7270e59367a"
+    },
+    "media_assets": {
+      "count": 1,
+      "sha256": "df54d47d0177d16bd2307e0a32902c53551b4610b817f35c999fcd4d81ea17f8"
+    },
+    "content_manifests": {
+      "count": 1,
+      "sha256": "edc9978cda61709c275d3c970d4c5f41dec264e36d33fd76307d6f34d03fe2b3"
+    },
+    "content_media_refs": {
+      "count": 1,
+      "sha256": "f665f5e23f4d15dadf791faa8fd5e7f48ec9f4a8917c08cc7fa5cb5068928aff"
+    },
+    "audit_log": {
+      "count": 1,
+      "sha256": "3a1581b2ea778ee92f5ffbae06b6bad9fe527e4427c795b1931ece3cc7d81bd9"
+    },
+    "actors": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "learner_grants": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_controls": {
+      "count": 1,
+      "sha256": "6f2ddf806965cf1326d63bb677b084c76cfaa080e6928a79b886575b6abca2f4"
+    },
+    "auth_sessions": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_limits": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "auth_audit": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "kernel": "6.17.0-1022-azure",
+  "dockerVersion": "28.0.4"
+}

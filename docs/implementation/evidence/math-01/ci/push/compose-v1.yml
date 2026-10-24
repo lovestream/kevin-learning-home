@@ -1,0 +1,34 @@
+services:
+  app:
+    cap_drop:
+    - ALL
+    cpuset: '0'
+    environment:
+      KLH_AUTH_MODE: production
+      KLH_AUTH_ORIGIN: ''
+      KLH_INTERNAL_ORIGIN: http://127.0.0.1:4177
+      NODE_ENV: production
+    image: klh-ci:synthetic
+    init: true
+    logging:
+      driver: json-file
+      options:
+        max-file: '3'
+        max-size: 5m
+    mem_limit: 512m
+    platform: linux/amd64
+    ports:
+    - 127.0.0.1:4177:4177/tcp
+    read_only: true
+    restart: unless-stopped
+    security_opt:
+    - no-new-privileges:true
+    tmpfs:
+    - /tmp:rw,noexec,nosuid,size=16m
+    user: 1001:1001
+    volumes:
+    - /tmp/klh-ci/data:/data:rw
+    - /tmp/klh-ci/media:/media:ro
+    - /tmp/klh-ci/content:/content:ro
+version: '2.4'
+

@@ -96,6 +96,18 @@ async function run(
       siblings,
       true,
     );
+    let cumulativeCspViolations = 0;
+    await f.context.exposeBinding(
+      "mathPolicyViolation",
+      () => cumulativeCspViolations++,
+    );
+    await f.context.addInitScript(() => {
+      document.addEventListener("securitypolicyviolation", () => {
+        void (
+          window as unknown as { mathPolicyViolation: () => Promise<void> }
+        ).mathPolicyViolation();
+      });
+    });
     f.context.setDefaultTimeout(7000);
     const before = f.store.summary();
     await fn(f);
@@ -103,6 +115,7 @@ async function run(
     if (process.env.KLH_MATH_DEBUG) console.log(JSON.stringify({ stage }));
     const safety = await f.verify(),
       after = f.store.summary();
+    assert.equal(cumulativeCspViolations, 0);
     for (const table of LEGACY_TABLES)
       assert.deepEqual(after[table], before[table]);
     assert(safety.posts.every((p) => p.endpoint.startsWith("/api/v1/auth/")));
@@ -120,6 +133,7 @@ async function run(
       width,
       durationMs: Date.now() - start,
       learningTablesUnchanged: true,
+      cumulativeCspViolations,
       learningTables: Object.fromEntries(
         LEGACY_TABLES.map((t) => [t, { before: before[t], after: after[t] }]),
       ),
