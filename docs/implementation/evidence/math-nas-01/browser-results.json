@@ -1,0 +1,415 @@
+{
+  "status": "PASS",
+  "sourceSha": "e594b3e6db0563f6a6b56bc2b0724f1bcd8c961e",
+  "runId": "20261024-8f228391",
+  "imageId": "sha256:b7d952cb310aab5a52d7efadf1b38417df17f121e2a172140b84e2cda944fdd5",
+  "filtered": false,
+  "strictTLS": true,
+  "profileOnlyCA": true,
+  "physicalDevices": "NEEDS_USER_ACTION",
+  "build": {
+    "schemaVersion": 1,
+    "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+    "sourceArtifactSha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
+    "publicDtoSha256": "7397a9c3140e6f6afd2c928a094e5dfbf5641f3903e9ec042561ce12965746cc",
+    "visualSources": [
+      {
+        "path": "shared/hands-on-models.mjs",
+        "sha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1"
+      },
+      {
+        "path": "shared/solid-rendering.mjs",
+        "sha256": "0e25d58f5e448373fa4fe4b936646798380da2cd0f72b542d78cba57fe9e50f8"
+      },
+      {
+        "path": "src/studio/IntroVisual.tsx",
+        "sha256": "dac2d08e72210b1a25ccc2b888cb716bcdbcfc7caf620db6f6af1fe67e116d16"
+      },
+      {
+        "path": "src/studio/concept/SolidView.tsx",
+        "sha256": "2a155e9eadaceb59f9ff3035a614575876783684c4810f0a0bcd0db25a3e6b46"
+      },
+      {
+        "path": "src/studio/concept/SpatialWorkbench.tsx",
+        "sha256": "a17218ebfc8975b802b82fac96ad2f3efbeb7f40650aea9889c8e2269d4fa731"
+      },
+      {
+        "path": "src/studio/concept/hands-on.css",
+        "sha256": "94ead72727ab8cf234349871575ae717dc0d19c1e172bb5deb615895f30d1a7f"
+      },
+      {
+        "path": "src/studio/intro-visual.css",
+        "sha256": "1104560fd3149f8aec1f0ad0b56dd41cfa127a241e88c9ab445bf4cd9ff54f49"
+      },
+      {
+        "path": "src/studio/useMotionValue.ts",
+        "sha256": "373eaa239b6758064a61a088d5ac1076e95f555832f65422cab94400db4b551b"
+      }
+    ],
+    "files": [
+      {
+        "path": "assets/Lesson-C8XbRmWt.css",
+        "sha256": "343c47bda6a15186f7fb3e86469bee002b0490ebb7b5d0f89e653f11299635ce",
+        "sizeBytes": 5956
+      },
+      {
+        "path": "assets/Lesson-OqB4PRPh.js",
+        "sha256": "c9bfe2afef11ade08c53a9bef50d4a5cc60f9a72fbbf9de3c036a8cb9065e8ab",
+        "sizeBytes": 17795
+      },
+      {
+        "path": "assets/index-BOuQnPF6.js",
+        "sha256": "ac52fbb2393b218d56a11286a7a5f044c687d163f53e2cfa0f16aee96a16b901",
+        "sizeBytes": 343587
+      },
+      {
+        "path": "assets/index-DgLtmhTr.css",
+        "sha256": "fbb160e0d95408a64f3122e8234f4c013e4bc722122c6848ae2ee66a0637cdfb",
+        "sizeBytes": 13043
+      }
+    ],
+    "visualArtifactSha256": "4075f790b25ee9a6e37561b3fedb7a1bc9b0c4a3a654963f29ad7d05cb415c2e"
+  },
+  "learningBefore": {
+    "sha256": "56affd74cc615b6e0485f57a412155272b2983ea90aaa8eba8ec645408fbe0e0",
+    "tables": {
+      "schema_migrations": {
+        "count": 2,
+        "sha256": "c6be99340b28cc9734fadaf736a9fe1c17061604c1bcea353bb8fd2588d32503"
+      },
+      "learners": {
+        "count": 1,
+        "sha256": "c42c4553193ce654cb2fe5089edb6dd25aa77cbd2c837a29e0a25f69844fa61f"
+      },
+      "subjects": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "subject_states": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "server_attempts": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "command_receipts": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "learning_events": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "media_assets": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "content_manifests": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "content_media_refs": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "audit_log": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  },
+  "learningAfter": {
+    "sha256": "56affd74cc615b6e0485f57a412155272b2983ea90aaa8eba8ec645408fbe0e0",
+    "tables": {
+      "schema_migrations": {
+        "count": 2,
+        "sha256": "c6be99340b28cc9734fadaf736a9fe1c17061604c1bcea353bb8fd2588d32503"
+      },
+      "learners": {
+        "count": 1,
+        "sha256": "c42c4553193ce654cb2fe5089edb6dd25aa77cbd2c837a29e0a25f69844fa61f"
+      },
+      "subjects": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "subject_states": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "server_attempts": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "command_receipts": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "learning_events": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "media_assets": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "content_manifests": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "content_media_refs": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "audit_log": {
+        "count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  },
+  "results": [
+    {
+      "name": "child-six-steps-390",
+      "status": "PASS",
+      "durationMs": 12008,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "pageErrors": 0,
+      "secretLeaks": false,
+      "hashChecked": 14,
+      "cspHeaders": 49,
+      "eventFailures": 0,
+      "postBoundaries": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/lessons/G3-U01-B01",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/commands",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/state",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/wallet/commands",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ]
+    },
+    {
+      "name": "child-six-steps-768",
+      "status": "PASS",
+      "durationMs": 9686,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "pageErrors": 0,
+      "secretLeaks": false,
+      "hashChecked": 14,
+      "cspHeaders": 49,
+      "eventFailures": 0,
+      "postBoundaries": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/lessons/G3-U01-B01",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/commands",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/state",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/wallet/commands",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ]
+    },
+    {
+      "name": "child-six-steps-1280",
+      "status": "PASS",
+      "durationMs": 9371,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "pageErrors": 0,
+      "secretLeaks": false,
+      "hashChecked": 14,
+      "cspHeaders": 49,
+      "eventFailures": 0,
+      "postBoundaries": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/lessons/G3-U01-B01",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/commands",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/learners/9b72fc81-c7e7-4771-b8fd-2af1bb3df896/subjects/math/state",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/wallet/commands",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ]
+    },
+    {
+      "name": "parent-permissions-continuity-revoke",
+      "status": "PASS",
+      "durationMs": 47645,
+      "cspViolations": 0,
+      "externalRequests": 0,
+      "pageErrors": 0,
+      "secretLeaks": false,
+      "hashChecked": 12,
+      "cspHeaders": 46,
+      "eventFailures": 0,
+      "postBoundaries": [
+        {
+          "endpoint": "/api/v1/auth/login",
+          "originMatches": true,
+          "csrfPresent": false
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-unlock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/parent-lock",
+          "originMatches": true,
+          "csrfPresent": true
+        },
+        {
+          "endpoint": "/api/v1/auth/logout",
+          "originMatches": true,
+          "csrfPresent": true
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "home-390.png",
+    "story-390.png",
+    "experiment-390.png",
+    "home-768.png",
+    "story-768.png",
+    "experiment-768.png",
+    "home-1280.png",
+    "story-1280.png",
+    "experiment-1280.png",
+    "parent-continuity.png"
+  ],
+  "observations": {
+    "loginBudget": {
+      "parent": {
+        "needed": 3,
+        "remaining": 5,
+        "enough": true,
+        "waitSeconds": 0
+      },
+      "learner": {
+        "needed": 3,
+        "remaining": 3,
+        "enough": true,
+        "waitSeconds": 0
+      },
+      "parentUnlock": {
+        "needed": 2,
+        "remaining": 5,
+        "enough": true,
+        "waitSeconds": 0
+      }
+    },
+    "hostOriginBoundary": {
+      "hostRejected": 403,
+      "wrongOriginRejected": 403,
+      "tlsChainAndIpValidated": true
+    },
+    "csrfAndLearnerBoundary": {
+      "missingCsrfRejected": 403,
+      "otherLearnerRejected": 403
+    },
+    "lastContinuitySample": {
+      "second": 12,
+      "authPolls": 2,
+      "mathPolls": 2,
+      "connected": true,
+      "active": true,
+      "lessonVisible": true,
+      "visibility": "visible"
+    },
+    "parentContinuity": {
+      "authPolls": 2,
+      "mathPolls": 2,
+      "wallClockMs": 12134,
+      "stableDOMAndFocus": true
+    },
+    "expectedMaintenance503": 3,
+    "grantRevoke": {
+      "formalOfflineSyntheticCLI": true,
+      "newAppStoppedForWriterLock": true,
+      "revokedHttp": 403,
+      "privateDOMCleared": true,
+      "grantRestored": true
+    }
+  }
+}

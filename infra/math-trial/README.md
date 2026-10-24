@@ -11,7 +11,7 @@ node --test tests/math-trial/*.test.mjs
 node --check tests/math-trial/browser.mjs
 ```
 
-`--dry-run` 不连接 NAS、不创建目录。14 项 Python 安全测试模拟 SSH；Node 测试只在本机临时目录/端口运行 TLS 代理与 Chromium 独立证书配置的正反验收。
+`--dry-run` 不连接 NAS、不创建目录。15 项 Python 安全测试模拟 SSH；Node 测试只在本机临时目录/端口运行 TLS 代理与 Chromium 独立证书配置的正反验收。
 
 ## 明确批准后的本地操作
 

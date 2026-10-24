@@ -69,5 +69,24 @@
     "learningTablesUnchanged": true,
     "parentContinuity": null,
     "grantRevoke": null
+  },
+  {
+    "attempt": 4,
+    "status": "FAIL",
+    "filtered": false,
+    "cases": [
+      {
+        "name": "child-six-steps-390",
+        "status": "PASS"
+      },
+      {
+        "name": "child-six-steps-768",
+        "status": "FAIL",
+        "stage": "six-steps-and-rotation",
+        "error": "NAS_MATH_ASSERTION"
+      }
+    ],
+    "learningTablesUnchanged": true,
+    "correction": "Await the existing requestAnimationFrame stage focus after child step 2, same as approved MATH-01 browser tests; app unchanged."
   }
 ]

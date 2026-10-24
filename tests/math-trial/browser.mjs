@@ -132,6 +132,8 @@ try{
       const config=(await api(p,'/api/v1/config')).body;
       assert.equal(config.subjects.find(x=>x.id==='math').status,'readonly-preview');
       assert.equal(config.subjects.find(x=>x.id==='english').status,'awaiting-migration');
+      await expect(p.locator('a[href="/subjects/math"]').first()).toContainText('只读课堂');
+      await expect(p.locator('a[href="/subjects/english"]').first()).toContainText('待迁入');
       await shot(p,'home-'+width);
       await p.locator('a[href="/subjects/math"]').first().click();
       await p.getByRole('link',{name:'打开首课只读课堂',exact:true}).click();
@@ -143,6 +145,9 @@ try{
       await expect(p.locator('.classroom-stage')).toBeFocused();
       await p.getByRole('button',{name:dto.lesson.classroom.predictionOptions[0],exact:true}).click();
       await p.getByRole('button',{name:'下一步',exact:true}).click();
+      await expect(p.locator('[data-model=observe]')).toBeVisible();
+      await expect(p.locator('.classroom-stage')).toBeFocused();
+      stage='child-keyboard-rotation-and-three-views';
       const svg=p.locator('.solid-viewport[tabindex]');await svg.focus();
       await p.keyboard.press('ArrowRight');await p.keyboard.press('ArrowUp');
       await expect(p.locator('[data-evidence=direction]')).toHaveText('绕盒子45°，抬高35°');

@@ -238,6 +238,7 @@ os.chmod(root+'/owner-marker.json',0o600)
 
     def status(self):
         assert self.state
+        self.python("import os,json,stat;root=%r;assert os.path.realpath(root)==root;assert json.load(open(root+'/owner-marker.json'))==%r;assert os.stat(root).st_uid==1024 and os.stat(root).st_gid==100;assert all(stat.S_IMODE(os.stat(root+'/'+x).st_mode)==0o700 for x in ['.','data','media','content','tls','code','artifacts'])" % (self.root, PLAN))
         containers = {}
         for role, cid in self.state['containers'].items():
             info = self.inspect(cid)

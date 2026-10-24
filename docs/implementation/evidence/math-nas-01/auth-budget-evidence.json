@@ -1,0 +1,43 @@
+{
+  "limitedSyntheticAccounts": {
+    "parent": {
+      "attempts": 5,
+      "expiresAtMs": 1792851219206,
+      "nasNowMs": 1792850704149,
+      "waitSeconds": 516
+    },
+    "learner": {
+      "attempts": 3,
+      "expiresAtMs": 1792851247970,
+      "nasNowMs": 1792850704149,
+      "waitSeconds": 544
+    }
+  },
+  "naturalWindow": {
+    "allSyntheticLimitWindowsExpireAt": "2026-10-24T14:14:36.914Z",
+    "notBeforeMs": 1792851278914,
+    "waitSeconds": 280
+  },
+  "finalTestBudget": {
+    "parent": {
+      "needed": 3,
+      "remaining": 5,
+      "enough": true,
+      "waitSeconds": 0
+    },
+    "learner": {
+      "needed": 3,
+      "remaining": 3,
+      "enough": true,
+      "waitSeconds": 0
+    },
+    "parentUnlock": {
+      "needed": 2,
+      "remaining": 5,
+      "enough": true,
+      "waitSeconds": 0
+    }
+  },
+  "manuallyResetCounters": false,
+  "authRulesChanged": false
+}

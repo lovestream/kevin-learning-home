@@ -1,5 +1,5 @@
 """Safety gates execute with SSH mocked: no NAS, credentials, or old state."""
-import importlib.util, json, pathlib, tempfile, unittest, types
+import importlib.util, json, pathlib, tempfile, unittest, types, hashlib
 from unittest.mock import patch
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location('math_controller',ROOT/'infra/math-trial/controller.py')
@@ -74,5 +74,14 @@ class Safety(unittest.TestCase):
         for token in ['git archive "$SOURCE_SHA"','linux/amd64','main-ci.json','build-evidence.json','retention-days: 1']:
             self.assertIn(token,s)
         self.assertNotIn('docker push',s);self.assertNotIn('nas-codex',s)
+    def test_review_head_keeps_actual_nas_acceptance_harness(self):
+        snapshot=json.loads((ROOT/'docs/implementation/evidence/math-nas-01/harness-files.json').read_text())
+        expected={'tests/math-trial/browser.mjs','tests/math-trial/nas-evidence.mjs',
+                  'infra/math-trial/controller.py','infra/math-trial/browser-trust.mjs',
+                  'infra/math-trial/auth-budget.mjs','infra/math-trial/tls-proxy.mjs','infra/math-trial/plan.json'}
+        self.assertEqual(set(snapshot['files']),expected)
+        for name,digest in snapshot['files'].items():
+            self.assertEqual(hashlib.sha256((ROOT/name).read_bytes()).hexdigest(),digest,
+                             'NAS_EVIDENCE_STALE_FOR_REVIEWED_HARNESS')
 
 if __name__=='__main__':unittest.main()
