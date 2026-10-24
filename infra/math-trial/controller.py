@@ -165,6 +165,10 @@ class Trial:
         assert image['Config']['Labels'][LABEL] == PLAN['runId']
         assert image['Config']['Labels']['org.opencontainers.image.revision'] == PLAN['sourceSha']
         assert self.docker(['image', 'inspect', PREFIX+':app'], check=False).returncode != 0
+        for name in [PREFIX+'-'+x for x in ['app','tls','admin','verify']]:
+            assert self.docker(['inspect', name], check=False).returncode != 0, 'RESOURCE_NAME_OCCUPIED'
+        for name in [PREFIX+'-network', PREFIX+'-edge']:
+            assert self.docker(['network', 'inspect', name], check=False).returncode != 0, 'NETWORK_NAME_OCCUPIED'
         before = self.services()
         assert len(before) == 10 and all(r[2] == 'running' for r in before), 'EXPECTED_TEN_RUNNING_EXISTING_SERVICES'
         preflight = json.loads(self.python('''import os,json,socket
@@ -178,10 +182,11 @@ s=socket.socket();s.bind((%r,%r));s.close()
 assert os.statvfs(parent).f_bavail*os.statvfs(parent).f_frsize > 2*1024**3
 mem={a[0].rstrip(':'):int(a[1])*1024 for a in (l.split() for l in open('/proc/meminfo')) if len(a)>=2}
 assert mem.get('MemAvailable',mem['MemFree']) > 768*1024**2
-print(json.dumps({'filesystem':m[2],'uid':os.getuid(),'gid':os.getgid(),'portFree':True,'newRootAbsent':True}))
+print(json.dumps({'filesystem':m[2],'uid':os.getuid(),'gid':os.getgid(),'portFree':True,'newRootAbsent':True,'freeBytes':os.statvfs(parent).f_bavail*os.statvfs(parent).f_frsize,'availableMemoryBytes':mem.get('MemAvailable',mem['MemFree']),'kernel':os.uname().release,'architecture':os.uname().machine,'cpuBinding':'0'}))
 ''' % (self.root, self.args.lan_ip, self.args.port)))
         self.state = {'plan': PLAN, 'origin': self.origin, 'root': self.root, 'servicesBefore': before, 'imageId': image['Id'], 'archiveSha256': digest, 'preflight': preflight, 'buildEvidence': evidence, 'containers': {}, 'networkId': None, 'createdRoot': False}
         self.save()
+        self.invariance()
         self.python('''import os,json
 os.umask(0o077);root=%r;os.mkdir(root);os.chmod(root,0o700)
 for name in ['data','media','content','tls','code','artifacts']:
@@ -271,6 +276,20 @@ os.chmod(root+'/owner-marker.json',0o600)
         self.save()
         print(json.dumps({'status': 'OWNED_TRIAL_STOPPED', 'existingServices': self.invariance()}))
 
+    def resume(self):
+        # Explicit local retry after a reviewed harness correction, never an automatic bypass.
+        self.invariance()
+        self.python("import json;assert json.load(open(%r))==%r" % (self.root+'/owner-marker.json', PLAN))
+        for role, cid in self.state['containers'].items():
+            info = self.inspect(cid)
+            assert info['Id'] == cid and info['Name'] == '/'+PREFIX+'-'+role
+            assert info['Config']['Labels'][LABEL] == PLAN['runId'] and info['Image'] == self.state['imageId']
+            assert info['HostConfig']['ReadonlyRootfs'] and info['Config']['User'] == '1024:100'
+        for role in ['app','tls']:
+            self.docker(['start',self.state['containers'][role]])
+        self.state['stopped'] = False; self.save()
+        self.status()
+
     def cleanup(self):
         assert self.state
         for role in ['tls', 'app', 'admin']:
@@ -301,7 +320,7 @@ shutil.rmtree(root)
 if __name__ == '__main__':
     os.umask(0o077)
     parser = argparse.ArgumentParser()
-    parser.add_argument('action', choices=['deploy', 'status', 'stop', 'cleanup'])
+    parser.add_argument('action', choices=['deploy', 'status', 'stop', 'resume', 'cleanup'])
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--bundle')
     parser.add_argument('--lan-ip', default=PLAN['lanIp'])

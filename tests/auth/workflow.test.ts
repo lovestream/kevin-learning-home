@@ -23,6 +23,7 @@ test("R1-02 main push and development push/PR share the unconditional complete v
       "codex/02b-nas-trial",
       "codex/math-00-source-audit",
       "codex/math-01-readonly-lesson",
+      "codex/math-01-nas-trial",
       "codex/implement-01-foundation",
       "codex/implement-02a-auth",
       "codex/implement-02b-shell",

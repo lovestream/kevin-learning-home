@@ -10,6 +10,7 @@ on:
         codex/02b-nas-trial,
         codex/math-00-source-audit,
         codex/math-01-readonly-lesson,
+        codex/math-01-nas-trial,
       ]
   pull_request:
     branches: [main]
@@ -43,6 +44,11 @@ jobs:
           python3 -m py_compile infra/trial/controller.py
           node --check tests/trial/browser.mjs
           node --test tests/trial/proxy.test.mjs
+      - name: Math trial offline safety checks (no NAS access)
+        run: |
+          python3 -m unittest discover -s tests/math-trial -p 'test_*.py' -v
+          node --test tests/math-trial/*.test.mjs
+          node --check tests/math-trial/browser.mjs
       - name: MATH-00 source evidence checks (offline; no old repo or NAS)
         run: |
           set -euo pipefail

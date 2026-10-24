@@ -9,7 +9,7 @@ import { X509Certificate, createHash } from 'node:crypto';
 import { DatabaseSync } from 'node:sqlite';
 import { join } from 'node:path';
 
-export async function trustedProfile(chromium, profile, caPath) {
+export async function trustedProfile(chromium, profile, caPath, finalOptions = {}) {
   await mkdir(profile, {mode:0o700}); // must be new; never an existing browser profile
   const ca = new X509Certificate(await readFile(caPath));
   assert(ca.ca && Date.parse(ca.validTo) > Date.now(), 'VALID_NEW_CA_REQUIRED');
@@ -32,5 +32,6 @@ export async function trustedProfile(chromium, profile, caPath) {
       createHash('sha256').update(ca.raw).digest('hex'),ca.raw,Buffer.from([10,2,8,3]));
   } finally { db.close(); }
   await chmod(dbPath,0o600);
-  return chromium.launchPersistentContext(profile, options);
+  assert(Object.keys(finalOptions).every(k=>['headless','viewport','reducedMotion'].includes(k)));
+  return chromium.launchPersistentContext(profile, {...options,...finalOptions});
 }
