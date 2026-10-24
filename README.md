@@ -1,5 +1,8 @@
 # Kevin Learning Home · Kevin 学习家园
 
+2026-10-24：当前独立分支完成[MATH-00来源审计](docs/implementation/MATH-00-SOURCE-AUDIT.md)与[首课只读接入任务书](docs/implementation/MATH-01-READONLY-ACCEPTANCE.md)，[Issue #9](https://github.com/lovestream/kevin-learning-home/issues/9)。**尚未复制/接入数学课程**；133项来源/273依赖已审计，待Draft PR和ChatGPT审查，不执行MATH-01。下方02B/02A段落保留原阶段说明，最新事实以[当前交接](docs/handoff/current.md)为准。
+
+
 2026-10-23：[PR #7](https://github.com/lovestream/kevin-learning-home/pull/7)已按用户明确授权合并，实际合并提交`7790da6c07e118da93d8e3221b20a4fcf78c727f`。[合并后的main完整CI](https://github.com/lovestream/kevin-learning-home/actions/runs/39950875578)成功：Node60、真实界面18、原3视口、Docker/Compose。React登录、孩子学习首页、家长解锁导航与学科空入口现已在main。
 
 当前进行**NAS局域网隔离合成试运行和数学复制适配规划**，独立[Draft PR #8](https://github.com/lovestream/kevin-learning-home/pull/8)等待ChatGPT审查，未合并。NAS使用精确7790da6正式镜像、独立数据卷和临时测试TLS；原8个容器未改变。手机/iPad实体操作仍需实际验收，试用不代表生产上线。只需LAN访问，外部沿用用户现有Tailscale，不配置公网或更改Tailscale。

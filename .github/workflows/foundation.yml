@@ -8,6 +8,7 @@ on:
         codex/implement-02a-auth,
         codex/implement-02b-shell,
         codex/02b-nas-trial,
+        codex/math-00-source-audit,
       ]
   pull_request:
     branches: [main]
@@ -41,6 +42,12 @@ jobs:
           python3 -m py_compile infra/trial/controller.py
           node --check tests/trial/browser.mjs
           node --test tests/trial/proxy.test.mjs
+      - name: MATH-00 source evidence checks (offline; no old repo or NAS)
+        run: |
+          set -euo pipefail
+          mkdir -p .evidence/math-00
+          python3 scripts/math-audit/check.py | tee .evidence/math-00/check.json
+          python3 -m unittest discover -s tests/math-audit -p 'test_*.py' -v 2>&1 | tee .evidence/math-00/tests.log
       - run: node scripts/verify.ts
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |

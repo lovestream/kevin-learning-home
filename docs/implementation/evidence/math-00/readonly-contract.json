@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "status": "PROPOSED_MATH01_NOT_IMPLEMENTED",
+  "issue": 9,
+  "subjectId": "math",
+  "lessonId": "G3-U01-B01",
+  "contentVersion": "2026-10-07.2",
+  "editorialRevision": "2026-10-09.4",
+  "sourceStatus": "draft",
+  "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "endpoint": "GET /api/v1/learners/{learnerId}/subjects/math/lessons/G3-U01-B01",
+  "page": "/subjects/math/lessons/G3-U01-B01",
+  "featureFlag": {
+    "proposedName": "KLH_MATH_READONLY",
+    "default": false
+  },
+  "authentication": {
+    "source": "Existing Secure/HttpOnly/Strict session cookie; verified server context only",
+    "child": "path learnerId must equal verified actor learner_id",
+    "parent": "unexpired parent elevation AND live non-revoked grant for path learnerId",
+    "noQueryOverrides": true,
+    "originPolicy": "Existing exact configured HTTPS origin and same-site policy; never trust forwarded headers"
+  },
+  "objectFieldAllowlists": {
+    "response": [
+      "schemaVersion",
+      "learnerId",
+      "subjectId",
+      "lessonId",
+      "contentVersion",
+      "editorialRevision",
+      "sourceStatus",
+      "mode",
+      "manifest",
+      "lesson"
+    ],
+    "manifest": [
+      "sourceCommit",
+      "sourceArtifactSha256",
+      "publicDtoSha256",
+      "visualSources",
+      "externalAssets",
+      "visualArtifactSha256"
+    ],
+    "visualSource": [
+      "path",
+      "sha256"
+    ],
+    "externalAsset": [],
+    "lesson": [
+      "title",
+      "question",
+      "subtitle",
+      "objectives",
+      "classroom",
+      "intro",
+      "spatial",
+      "predictionIntro"
+    ],
+    "objective": [
+      "id",
+      "action",
+      "scope"
+    ],
+    "classroom": [
+      "story",
+      "mission",
+      "predictQuestion",
+      "predictionOptions",
+      "discovery",
+      "symbols",
+      "retell",
+      "observedEvidence",
+      "whyQuestion",
+      "counterexamplePrompt"
+    ],
+    "intro": [
+      "type",
+      "title",
+      "caption",
+      "values",
+      "labels"
+    ],
+    "spatial": [
+      "sceneId",
+      "type",
+      "mode",
+      "version",
+      "dimensions"
+    ]
+  },
+  "literalConstraints": {
+    "response.schemaVersion": 1,
+    "response.subjectId": "math",
+    "response.lessonId": "G3-U01-B01",
+    "response.contentVersion": "2026-10-07.2",
+    "response.editorialRevision": "2026-10-09.4",
+    "response.sourceStatus": "draft",
+    "response.mode": "readonly",
+    "intro.type": "box-camera",
+    "intro.values": [],
+    "intro.labels": [],
+    "spatial.sceneId": "G3-U01-B01-MODEL1",
+    "spatial.type": "spatial",
+    "spatial.mode": "observe",
+    "spatial.version": "spatial.v2",
+    "spatial.dimensions": [
+      2.4,
+      1.5,
+      1.2
+    ],
+    "manifest.externalAssets": [],
+    "predictionIntro.type": "box-camera",
+    "predictionIntro.values": [],
+    "predictionIntro.labels": []
+  },
+  "forbiddenResponseKeysAtAnyDepth": [
+    "taskSets",
+    "tasks",
+    "expected",
+    "expectedEvidence",
+    "expectedExplanation",
+    "referenceAnswer",
+    "answer",
+    "answers",
+    "hint",
+    "solution",
+    "diagnostic",
+    "rewardRuleId",
+    "validatorIds",
+    "masteryRuleId",
+    "reviewRecord",
+    "wallet",
+    "pets",
+    "progress",
+    "auth",
+    "csrfToken"
+  ],
+  "cache": "Cache-Control: no-store; no service worker, localStorage, sessionStorage, IndexedDB or persistence",
+  "writes": "ALL math writes disabled server-side; no reading saves, attempts, notes, rewards, entitlement, PIN or old service APIs",
+  "localInteraction": "Camera, view buttons, temporary photos, six-step navigation only in component memory; reload resets; no correctness grading",
+  "assets": "Reviewed compiled JSX inline SVG only. No raw SVG/HTML route or MIME extension; no remote images, printing, pet media or textbook PDFs.",
+  "errorsWhenEnabled": {
+    "sessionMissingExpiredRevoked": "401 SESSION_REQUIRED",
+    "crossOrigin": "403 ORIGIN_REJECTED",
+    "parentLocked": "403 PARENT_ACCESS_REQUIRED",
+    "otherLearnerOrGrantRevoked": "403 LEARNER_FORBIDDEN",
+    "wrongLessonAfterAuthorization": "404 LESSON_NOT_FOUND",
+    "queryOrMalformedId": "400 REQUEST_INVALID",
+    "nonGet": "405 METHOD_NOT_ALLOWED",
+    "featureOff": "403 FEATURE_DISABLED",
+    "manifestHashMismatch": "503 CONTENT_UNAVAILABLE"
+  },
+  "csp": "Keep current main CSP unchanged; no unsafe-inline/unsafe-eval, external network, iframe, foreignObject, raw innerHTML or data URL exceptions",
+  "acceptanceIds": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12"
+  ],
+  "digestDefinition": {
+    "sourceArtifactSha256": "SHA256 of pinned complete source lessons.json; never serve that whole file",
+    "publicDtoSha256": "SHA256(canonical({lessonId,contentVersion,editorialRevision,sourceStatus,lesson})); excludes learner-specific envelope and manifest to avoid circular hashing",
+    "visualSources": "Exactly 8 reviewed visual source paths+source hashes in inventory (selectedSourcePaths excluding lessons.json); origin metadata is not a raw content URL",
+    "visualArtifactSha256": "SHA256(canonical(sorted [{path,sha256,sizeBytes}] of emitted first-lesson JS/CSS build assets)); verify against reviewed build manifest before enablement"
+  }
+}
