@@ -1,25 +1,23 @@
 # Kevin 学习家园：当前交接
 
-2026-10-24。当前分支是 Issue #11 / MATH-01 的独立只读实现，**尚未合并、尚未部署**。main 与 NAS 现有版本不能因为本分支代码完成而被视为已包含数学课堂。
+2026-10-24。**MATH-01 独立审查已完成、PR #12 已合并；本地/CI拥有首课只读功能，但NAS原有试用镜像仍是02B，不含数学课程。** 本文覆盖先前Draft阶段交接的历史状态。
 
-## 当前审查关口：MATH-01
+## MATH-01 合并与验收
 
-- [Issue #11](https://github.com/lovestream/kevin-learning-home/issues/11)；分支 `codex/math-01-readonly-lesson`，从 main `a40d97495d0065cd4f9ce2e8706372de122f2179` 建立。[Draft PR #12](https://github.com/lovestream/kevin-learning-home/pull/12) 的精确最终 HEAD、push/PR 两套 CI URL、下载核验结论见 PR 描述；报告与源码同一分支归档。
-- [执行报告/A01–A12矩阵/失败与修复/许可](../implementation/MATH-01-EXECUTION-REPORT.md)、[来源→目标hash](../implementation/evidence/math-01/origins.json)、[单课逐字段等价](../implementation/evidence/math-01/public-projection-check.json)、[原仓边界](../implementation/evidence/math-01/source-boundaries.json)。[实施提交CI双事件永久归档](../implementation/evidence/math-01/ci/index.json)已通过下载核验；原60 Node/18 UI/原3视口/Docker/Compose保留，新增12 Node/9真实浏览器/flag-on生产镜像回归单列。最终证据/累计CSP测试提交的HEAD CI在PR描述单独核验。
-- 首课 `G3-U01-B01` / `2026-10-07.2` / `2026-10-09.4` / draft，保持原教学文本/几何；只复制9候选的必要片段与单课公开投影，没有70课/题库/答案/旧API。新GET与页面遵循[合同](../implementation/MATH-01-READONLY-ACCEPTANCE.md)。
-- `KLH_MATH_READONLY=1` 必须显式启用且正式auth已配置；默认关闭，英语/钱包不变。孩子绑定session learner，家长二次解锁+实时grant；无测试身份捷径。相机/照片/六步仅组件内存，刷新重置，第六步显示练习尚未接入；11张学习业务表不变，认证必要写入保留。
-- MATH-00勘误：BoxCamera原有3处inline color已换math作用域CSS；快速连续箭头用原目标方向驱动控制，防动画旧值丢键，几何不改。原审计历史保留，改动明示于本报告。
-- 本轮无NAS连接，无旧仓文件变更、真实账户/记录/备份/.env/inbox/私有词包读取。数学课堂的实体Mac/手机/iPad/Android人工验收 `NOT_RUN`；本机/CI Chromium视口不能替代实体设备。
+- [PR #12](https://github.com/lovestream/kevin-learning-home/pull/12) 最终审查 HEAD `824907055badc8484d9be2d480730fc1516013a8`，已审查并合并，merge SHA `f62a485492f79afe7832e8ec7021bfbfb62e214a`。[ChatGPT审查意见](https://github.com/lovestream/kevin-learning-home/pull/12#issuecomment-6383023852)归档于PR评论：GitHub不允许作者正式Approve自己的PR，不能冒充平台APPROVED。
+- [push CI40075159711](https://github.com/lovestream/kevin-learning-home/actions/runs/40075159711)、[PR CI40075162094](https://github.com/lovestream/kevin-learning-home/actions/runs/40075162094)已核实精确HEAD、completed/success。原60 Node、18 UI、3视口、新12数学Node/9数学浏览器、Docker/Compose和容器恢复保持通过。合并后的main独立CI另行看Actions，不得将PR CI称为main通过。
+- [实施报告/A01–A12/原始失败修复](../implementation/MATH-01-EXECUTION-REPORT.md)、[来源9项至8目标与hash](../implementation/evidence/math-01/origins.json)、[实际单课投影等价](../implementation/evidence/math-01/public-projection-check.json)、[来源边界](../implementation/evidence/math-01/source-boundaries.json)。仓库 `evidence/math-01/ci`归档的是早期实现提交`3970dd8`的快照；最终HEAD两套CI日志/PR正文独立验证，不混淆时点。
+- 只读首课：`G3-U01-B01` / contentVersion `2026-10-07.2` / editorialRevision `2026-10-09.4` / `draft`。六步教学、相机/盒子投影与临时照片可交互，只在浏览器组件内存；第六步说明练习未接入。只复制原审计批准片段及单课公开DTO，未将70课、题库答案或旧数学写API移入。
+- 功能开关`KLH_MATH_READONLY=1`必须显式配置且有正式auth，默认关闭；服务端session/孩子身份/家长解锁与实时grant为唯一来源，现有Host/Origin/Cookie/CSRF/CSP维持。学习状态11业务表不变，认证必要last_seen/audit/session写入另计。
+- Math实体Mac/Safari/手机/iPad/Android人工验收`NOT_RUN`。既有手机/iPad通过的是02B登录，不是本次课程页面验收；真实Kevin学习记录未导入。本次未连接/部署/清理NAS。
 
-## 已合并的历史事实
+## 前置已合并
 
-- IMPLEMENT-01/02A/02B 的 PR5/6/7 已合并。正式02B版本 `7790da6c07e118da93d8e3221b20a4fcf78c727f`；[main CI39950875578](https://github.com/lovestream/kevin-learning-home/actions/runs/39950875578) 成功。
-- [PR8](https://github.com/lovestream/kevin-learning-home/pull/8) NAS合成隔离试用/工具已审查合并 `8b99528dbbfca186770f629007225903a89b2875`。用户2026-10-23反馈手机/iPad实体访问和登录成功；这是旧02B登录反馈，不是数学课程或生产上线验收。详见[试用报告](../implementation/IMPLEMENT-02B-NAS-TRIAL.md)。
-- MATH-00 [PR10](https://github.com/lovestream/kevin-learning-home/pull/10) 审查通过合并 `6864de8779953348c031faafdd18571447c38e0c`，[Issue9](https://github.com/lovestream/kevin-learning-home/issues/9)已关闭。133来源/273依赖/9候选、70 draft、12审计测试归档；[独立审查评论](https://github.com/lovestream/kevin-learning-home/pull/10#issuecomment-6378456178)。该阶段未复制课程；本分支首次实现单课只读。
-- 基线 main 的merge CI [40052074154](https://github.com/lovestream/kevin-learning-home/actions/runs/40052074154)、文档CI [40052148061](https://github.com/lovestream/kevin-learning-home/actions/runs/40052148061)与[40052150824](https://github.com/lovestream/kevin-learning-home/actions/runs/40052150824)均已核实成功。
+- IMPLEMENT-01/02A/02B：PR5/6/7已合并，原正式02B NAS试用镜像来源`7790da6`；NAS隔离试用归档PR8合并`8b99528`，仍保留原容器和临时CA。
+- MATH-00：PR10合并`6864de8`，来源审计133文件/273依赖/70 draft元数据/9候选与首课只读合同，Issue9关闭。
 
-## 严格停止线
+## 下一关口：MATH-02（未授权实施）
 
-提交 Draft PR、确认最终HEAD双事件完整CI与artifact后暂停，等待ChatGPT独立审查；不合并、不自动关闭Issue11、不进入MATH-02/03或英语适配、不启用阅读保存/练习/钱包/蛋仔、不迁真实身份/记录。
+MATH-02 将首次涉及数学学习阅读记录的持久化，需要单独范围审查和任务授权，不能基于MATH-01通过自动放开写入。开发前必须确认数据模型按learnerId+math+contentVersion隔离，服务端重新鉴权，命令schema/revision/幂等receipt/event落在同一SQLite事务，含重试、409冲突、权限撤销、SIGKILL重启、备份新卷恢复与多孩子隔离的独立测试；这仍**不是**练习、积分或蛋仔权限。每阶段独立分支、Draft PR、完整双事件CI及审查。
 
-NAS现有试用仍为02B且 `restart=no`，不得清理/重建/覆盖、改旧8容器、端口、DSM/Docker/Tailscale/sudoers或7天CA。后续课程试用需另获授权及实体设备验收。真实家庭使用尚需受信持续HTTPS、生产身份、加密异地备份/新卷恢复、上线回滚、外部Tailscale及Node24/DSM Linux4.4长期支持评估；不以降低TLS检查绕过。
+当前NAS隔离试用`restart=no`，旧8容器、原数学/英语站和真实数据不能触碰；7天CA有期限，不得降低TLS验证或自动替换生产证书。正式家庭使用仍须持续受信HTTPS、真实身份/密钥恢复、加密异地备份、新卷恢复、外部Tailscale路线与Node24/DSM Linux4.4支持评估。NAS数学课程试用另获明确授权后方能开展。
