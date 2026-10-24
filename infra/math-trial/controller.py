@@ -109,8 +109,8 @@ class Trial:
         tls = PRIVATE / 'tls'
         tls.mkdir(mode=0o700)
         def run(args): subprocess.run(['openssl', *args], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        run(['req', '-x509', '-newkey', 'rsa:2048', '-nodes', '-days', '7', '-subj', '/CN=KLH isolated synthetic trial CA', '-keyout', str(tls/'ca.key'), '-out', str(tls/'ca.crt')])
-        run(['req', '-newkey', 'rsa:2048', '-nodes', '-subj', '/CN=KLH isolated LAN trial', '-keyout', str(tls/'server.key'), '-out', str(tls/'server.csr')])
+        run(['req', '-x509', '-newkey', 'rsa:2048', '-nodes', '-days', '7', '-subj', '/CN=KLH math '+PLAN['runId']+' synthetic CA', '-keyout', str(tls/'ca.key'), '-out', str(tls/'ca.crt')])
+        run(['req', '-newkey', 'rsa:2048', '-nodes', '-subj', '/CN=KLH math '+PLAN['runId']+' LAN trial', '-keyout', str(tls/'server.key'), '-out', str(tls/'server.csr')])
         (tls/'extensions').write_text('subjectAltName=IP:'+self.args.lan_ip+'\nbasicConstraints=CA:FALSE\nkeyUsage=digitalSignature,keyEncipherment\nextendedKeyUsage=serverAuth\n')
         run(['x509', '-req', '-in', str(tls/'server.csr'), '-CA', str(tls/'ca.crt'), '-CAkey', str(tls/'ca.key'), '-CAcreateserial', '-days', '7', '-extfile', str(tls/'extensions'), '-out', str(tls/'server.crt')])
         run(['x509', '-in', str(tls/'ca.crt'), '-outform', 'DER', '-out', str(PRIVATE/'klh-trial-ca.cer')])
@@ -284,7 +284,17 @@ os.chmod(root+'/owner-marker.json',0o600)
             info = self.inspect(cid)
             assert info['Id'] == cid and info['Name'] == '/'+PREFIX+'-'+role
             assert info['Config']['Labels'][LABEL] == PLAN['runId'] and info['Image'] == self.state['imageId']
-            assert info['HostConfig']['ReadonlyRootfs'] and info['Config']['User'] == '1024:100'
+            h = info['HostConfig']
+            assert h['ReadonlyRootfs'] and not h['Privileged'] and info['Config']['User'] == '1024:100'
+            assert h['Memory'] == (512 if role == 'app' else 128)*1024**2
+            assert h['CpusetCpus'] == '0' and 'ALL' in h['CapDrop']
+            assert 'no-new-privileges:true' in h['SecurityOpt'] and h['RestartPolicy']['Name'] == 'no'
+            assert all(x['Source'].startswith(self.root+'/') for x in info['Mounts'] if x['Type']=='bind')
+            if role == 'app':
+                assert not h['PortBindings'] and 'KLH_MATH_READONLY=1' in info['Config']['Env']
+                assert 'KLH_AUTH_ORIGIN='+self.origin in info['Config']['Env']
+            else:
+                assert h['PortBindings'] == {'8443/tcp':[{'HostIp':self.args.lan_ip,'HostPort':str(self.args.port)}]}
         for role in ['app','tls']:
             self.docker(['start',self.state['containers'][role]])
         self.state['stopped'] = False; self.save()
