@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "phase": "MATH-01",
+  "testedImplementationHead": "3970dd8aa449417f7e42a2bb678380cee1729836",
+  "status": "PASS_CI",
+  "runs": [
+    {
+      "event": "push",
+      "runId": 40074735680,
+      "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/40074735680",
+      "artifactId": 12552867294,
+      "zipSha256": "c9052998e6be8787fcdd159b28fed8bf801da56f05c591d50251be5bd4861077",
+      "conclusion": "success",
+      "downloadedAndValidated": true
+    },
+    {
+      "event": "pull_request",
+      "runId": 40074751659,
+      "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/40074751659",
+      "artifactId": 12553130730,
+      "zipSha256": "7652afca68539a1ae4b2a77c20fbdc08701d263b3b9083d7087694987b82f852",
+      "conclusion": "success",
+      "downloadedAndValidated": true
+    }
+  ],
+  "originalNodeTests": 60,
+  "originalShellBrowserScenarios": 18,
+  "originalViewports": 3,
+  "mathNodeTests": 12,
+  "mathBrowserScenarios": 9,
+  "mathScreenshots": 10,
+  "artifactDigestAndCRCVerified": true,
+  "all11LearningTablesUnchanged": true,
+  "productionMathContainerVerified": true,
+  "composeVersion": "1.28.5",
+  "nasConnections": 0,
+  "realDataRead": false,
+  "notes": "This archive verifies the runtime implementation commit. A subsequent documentation/test-only commit adds cross-navigation cumulative CSP evidence. Its exact final HEAD push/PR CI and download verification are recorded permanently in PR #12, avoiding a self-referential commit SHA.",
+  "macAndLinuxBuildManifestEqual": true,
+  "publicDtoSha256": "7397a9c3140e6f6afd2c928a094e5dfbf5641f3903e9ec042561ce12965746cc",
+  "visualArtifactSha256": "4075f790b25ee9a6e37561b3fedb7a1bc9b0c4a3a654963f29ad7d05cb415c2e"
+}

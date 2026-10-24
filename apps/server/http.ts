@@ -3,7 +3,9 @@ import { readFileSync, existsSync, realpathSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { randomUUID } from "node:crypto";
 import { AppError, parseCommand } from "../../packages/contracts/index.ts";
-import { subjects, wallet } from "../../packages/subjects/index.ts";
+import { subjectCatalog, wallet } from "../../packages/subjects/index.ts";
+import { mathHTTP } from "./math-http.ts";
+import type { MathLessonService } from "../../packages/subjects/math/service.ts";
 import { authHTTP } from "./auth-http.ts";
 import { authConfig, type AuthConfig } from "../../packages/auth/config.ts";
 import type { AuthService } from "../../packages/auth/service.ts";
@@ -20,6 +22,7 @@ export function createHttp(
     webRoot: string;
     origin: string;
     auth?: { service: AuthService; config: AuthConfig };
+    math?: MathLessonService;
     readiness?: () => void;
     testContext?: (req: IncomingMessage) => TestContext | null;
     afterWrites?: () => void;
@@ -75,7 +78,7 @@ export function createHttp(
       if (req.method === "GET" && path === "/api/v1/config")
         return json(200, {
           schemaVersion: 1,
-          subjects,
+          subjects: subjectCatalog(!!options.math),
           features: {
             auth: !!options.auth,
             learning: false,
@@ -96,6 +99,7 @@ export function createHttp(
         ))
       )
         return;
+      if (mathHTTP(req, path, url, options.auth, options.math, json)) return;
       if (path.startsWith("/api/")) {
         const route =
           /^\/api\/v1\/learners\/([^/]+)\/subjects\/(foundation-demo)\/(state|commands)$/.exec(

@@ -300,6 +300,7 @@ try {
   assert.match(denied.stderr, /WRITER_LOCKED_OR_UNWRITABLE|STARTUP_FAILED/);
   assert.equal(denied.error, undefined);
   await verifyContainerAuth(image, name + "-auth");
+  await verifyContainerAuth(image, name + "-math", true);
   const evidence = {
     status: "PASS_CI",
     scope: "modern Linux amd64, never NAS",

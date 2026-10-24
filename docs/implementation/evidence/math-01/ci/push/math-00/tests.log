@@ -1,0 +1,17 @@
+test_committed_contract_and_inventory (test_audit.AuditGate.test_committed_contract_and_inventory) ... ok
+test_draft_status_cannot_be_upgraded (test_audit.AuditGate.test_draft_status_cannot_be_upgraded) ... ok
+test_fs_resource_edges_required (test_audit.AuditGate.test_fs_resource_edges_required) ... ok
+test_hidden_nested_answer_cannot_enter_whitelist (test_audit.AuditGate.test_hidden_nested_answer_cannot_enter_whitelist) ... ok
+test_import_scanner_distinguishes_methods_from_static_imports (test_audit.AuditGate.test_import_scanner_distinguishes_methods_from_static_imports) ... ok
+test_missing_dependency_fails (test_audit.AuditGate.test_missing_dependency_fails) ... ok
+test_prior17_hash_drift_fails (test_audit.AuditGate.test_prior17_hash_drift_fails) ... ok
+test_real_paths_rejected_without_opening_them (test_audit.AuditGate.test_real_paths_rejected_without_opening_them) ... ok
+test_runtime_service_never_allow (test_audit.AuditGate.test_runtime_service_never_allow) ... ok
+test_source_head_mismatch_stops_before_blob_read (test_audit.AuditGate.test_source_head_mismatch_stops_before_blob_read) ... ok
+test_source_status_change_fails (test_audit.AuditGate.test_source_status_change_fails) ... ok
+test_wrong_freeze_fails (test_audit.AuditGate.test_wrong_freeze_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.023s
+
+OK

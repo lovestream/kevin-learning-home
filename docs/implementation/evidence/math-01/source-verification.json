@@ -1,0 +1,66 @@
+{
+  "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "sources": [
+    {
+      "path": "content/pilot/lessons.json",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "5fa95a64b2f8c7d7ebbf907ef640106c09661c66",
+      "sha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa"
+    },
+    {
+      "path": "shared/hands-on-models.mjs",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "3bd12df8718c0dcc9ef9e4f4ad517f1ae2bd2e37",
+      "sha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1"
+    },
+    {
+      "path": "shared/solid-rendering.mjs",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "f13902f568c3b813ba75c26504eb76436683c78c",
+      "sha256": "0e25d58f5e448373fa4fe4b936646798380da2cd0f72b542d78cba57fe9e50f8"
+    },
+    {
+      "path": "src/studio/IntroVisual.tsx",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "24c621d8222cffd99033020910533e3abfcd2153",
+      "sha256": "dac2d08e72210b1a25ccc2b888cb716bcdbcfc7caf620db6f6af1fe67e116d16"
+    },
+    {
+      "path": "src/studio/concept/SolidView.tsx",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "c282177f598c3d658f5ac3109e82292bf81fb9c5",
+      "sha256": "2a155e9eadaceb59f9ff3035a614575876783684c4810f0a0bcd0db25a3e6b46"
+    },
+    {
+      "path": "src/studio/concept/SpatialWorkbench.tsx",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "6483002ca38c5d1e9f3c011bc664a47d51bb2295",
+      "sha256": "a17218ebfc8975b802b82fac96ad2f3efbeb7f40650aea9889c8e2269d4fa731"
+    },
+    {
+      "path": "src/studio/concept/hands-on.css",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "a4d7114d5be395f7f9d12d994ecdeacc6b77c406",
+      "sha256": "94ead72727ab8cf234349871575ae717dc0d19c1e172bb5deb615895f30d1a7f"
+    },
+    {
+      "path": "src/studio/intro-visual.css",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "557919afc16fe1f7d9b0dfbf65e09fac6114f205",
+      "sha256": "1104560fd3149f8aec1f0ad0b56dd41cfa127a241e88c9ab445bf4cd9ff54f49"
+    },
+    {
+      "path": "src/studio/useMotionValue.ts",
+      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+      "gitBlob": "39a03559fd9f11b193eef462d395d18fc8872fc3",
+      "sha256": "373eaa239b6758064a61a088d5ac1076e95f555832f65422cab94400db4b551b"
+    }
+  ],
+  "courseCopied": "single public field projection only",
+  "sourceStatusBeforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sourceStatusAfterSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "oldBuildExecuted": false,
+  "isolatedPureGeometryFixture": true,
+  "realRecordsRead": false,
+  "nasAccessed": false
+}

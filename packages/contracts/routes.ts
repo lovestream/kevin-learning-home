@@ -12,6 +12,7 @@ export const shellRoutes = [
 ] as const;
 export function isShellRoute(path: string) {
   return (
+    path === "/subjects/math/lessons/G3-U01-B01" ||
     (shellRoutes as readonly string[]).includes(path) ||
     /^\/subjects\/[a-z][a-z0-9-]{0,47}$/.test(path)
   );

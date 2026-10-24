@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="M01 A02/A05 explicit one-lesson projection matches reviewed public canonical digest and strips nested synthetic answer sentinels" time="0.008683" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/contract.test.ts"/>
+	<testcase name="M01 A05 unknown public DTO fields and deep expectedEvidence are rejected; source version never follows latest" time="0.007567" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/contract.test.ts"/>
+	<testcase name="M01 A02 service and browser validate source/public/build hashes and learner binding" time="0.011815" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/contract.test.ts"/>
+	<testcase name="M01 A02 corrupted public data, schema, manifest source, visual hash and missing asset fail closed without fallback" time="0.011468" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/contract.test.ts"/>
+	<testcase name="M01 A07 exact selected geometry matches frozen pure-snippet golden fixture for front/right/top/isometric" time="0.001936" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/contract.test.ts"/>
+	<testcase name="M01 A01/A05 emitted client assets contain no public lesson text, bank, synthetic sentinel or raw static resources; import tool not in runtime bundle" time="0.001684" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/contract.test.ts"/>
+	<testcase name="M01 A06 feature flag defaults closed and rejects ambiguous values" time="0.000198" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/contract.test.ts"/>
+	<testcase name="M01 A02 unavailable packaged lesson returns HTTP 503 without title or fallback" time="0.671243" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/http.test.ts"/>
+	<testcase name="M01 A03/A04 HTTPS real cookies bind two children and two parents; lock/grant/revoke/logout/expiry cannot expose lesson" time="2.645476" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/http.test.ts"/>
+	<testcase name="M01 A03/A06 exact request policy, no metadata oracle, all writes closed, original 11 learning tables unchanged" time="1.101429" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/http.test.ts"/>
+	<testcase name="M01 A06 default-off configuration preserves disabled math/english/wallet and rejects new course route" time="1.063725" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/http.test.ts"/>
+	<testcase name="M01 A07 two real SolidView instances have unique SVG definitions and local references without inline style or raw SVG" time="0.175690" classname="test" file="/home/runner/work/kevin-learning-home/kevin-learning-home/tests/math01/svg.test.ts"/>
+	<!-- tests 12 -->
+	<!-- suites 0 -->
+	<!-- pass 12 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 6510.029301 -->
+</testsuites>
