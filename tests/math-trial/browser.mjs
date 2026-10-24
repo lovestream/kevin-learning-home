@@ -8,6 +8,7 @@ import {trustedProfile} from '../../infra/math-trial/browser-trust.mjs';
 import {plan,state,credentials,learningSnapshot,changeGrant} from './nas-evidence.mjs';
 import {canonical} from '../../packages/contracts/index.ts';
 import {mathResponseSchema} from '../../packages/contracts/math-readonly.ts';
+import https from 'node:https';
 const origin=state.origin, path='/subjects/math/lessons/G3-U01-B01';
 const evidence=state.buildEvidence, manifest=evidence.manifest;
 const dto=JSON.parse(readFileSync('packages/subjects/math/public-lesson.json'));
@@ -16,6 +17,11 @@ const dir='docs/implementation/evidence/math-nas-01';mkdirSync(dir,{recursive:tr
 const before=learningSnapshot(), results=[], screenshots=[], observations={};
 let failed=false,stage='init';
 const hash=x=>createHash('sha256').update(x).digest('hex');
+const tlsCall=(url,headers={},method='GET')=>new Promise((resolve,reject)=>{
+  const req=https.request(origin+url,{method,ca:readFileSync('.trial-private/tls/ca.crt'),rejectUnauthorized:true,servername:'',headers},r=>{
+    let body='';r.on('data',b=>body+=b);r.on('end',()=>resolve({status:r.statusCode,body}));
+  });req.on('error',reject);req.setTimeout(10000,()=>req.destroy(Error('TIMEOUT')));req.end(method==='POST'?'{}':undefined);
+});
 const api=(p,url,method='GET',body)=>p.evaluate(async({url,method,body})=>{
   const session=method==='GET'?null:await(await fetch('/api/v1/auth/session',{cache:'no-store'})).json();
   const r=await fetch(url,{method,cache:'no-store',headers:method==='GET'?{}:{'Content-Type':'application/json','X-CSRF-Token':session.csrfToken},...(method==='GET'?{}:{body:JSON.stringify(body??{})})});
@@ -49,8 +55,9 @@ async function run(name,width,fn){
       viewport:{width,height:width===768?1024:900},reducedMotion:'reduce'});
     // Remove Chromium's initial blank pages before collecting only LAN-page observations.
     for(const p of c.pages())await p.close();
-    let csp=0,external=0,errors=0,leak=false,hashChecked=0,cspHeaders=0;
+    let csp=0,external=0,errors=0,leak=false,hashChecked=0,cspHeaders=0,eventFailures=0;
     const posts=[],pending=[];
+    const track=promise=>pending.push(promise.catch(()=>{eventFailures++;}));
     await c.exposeBinding('reportPolicyViolation',()=>csp++);
     await c.addInitScript(()=>document.addEventListener('securitypolicyviolation',()=>void window.reportPolicyViolation()));
     const p=await c.newPage();p.setDefaultTimeout(15000);
@@ -58,11 +65,11 @@ async function run(name,width,fn){
     p.on('console',m=>{if([credentials.parent.password,credentials.learner.password].some(s=>m.text().includes(s)))leak=true;});
     p.on('request',r=>{
       if(new URL(r.url()).origin!==origin)external++;
-      if(r.method()==='POST')pending.push((async()=>{
+      if(r.method()==='POST')track((async()=>{
         const h=await r.allHeaders();posts.push({endpoint:new URL(r.url()).pathname,originMatches:h.origin===origin,csrfPresent:!!h['x-csrf-token']});
       })());
     });
-    p.on('response',r=>{pending.push((async()=>{
+    p.on('response',r=>{track((async()=>{
       const u=new URL(r.url());if(u.origin!==origin)return;
       const headers=await r.allHeaders();
       assert.equal(headers['cache-control'],'no-store');
@@ -81,18 +88,28 @@ async function run(name,width,fn){
     stage=name;
     await fn(p,c);
     stage='safety-and-hashes';await Promise.all(pending);
-    assert.equal(csp,0);assert.equal(external,0);assert.equal(errors,0);assert.equal(leak,false);
+    assert.equal(eventFailures,0);assert.equal(csp,0);assert.equal(external,0);assert.equal(errors,0);assert.equal(leak,false);
     assert(hashChecked>=2&&cspHeaders>0);
     assert(posts.every(x=>x.originMatches&&(x.endpoint==='/api/v1/auth/login'||x.csrfPresent)));
     assert(await p.evaluate(async()=>localStorage.length===0&&sessionStorage.length===0&&(await indexedDB.databases()).length===0&&(await caches.keys()).length===0));
     assert.deepEqual(learningSnapshot(),before);
-    results.push({name,status:'PASS',durationMs:Date.now()-start,cspViolations:csp,externalRequests:external,pageErrors:errors,secretLeaks:leak,hashChecked,cspHeaders,postBoundaries:posts});
+    results.push({name,status:'PASS',durationMs:Date.now()-start,cspViolations:csp,externalRequests:external,pageErrors:errors,secretLeaks:leak,hashChecked,cspHeaders,eventFailures,postBoundaries:posts});
   }catch{
     failed=true;results.push({name,status:'FAIL',stage,error:'NAS_MATH_ASSERTION'});
     console.error(JSON.stringify({name,stage,error:'NAS_MATH_ASSERTION'}));
   }finally{await c?.close();rmSync(profile,{recursive:true,force:true});}
 }
 try{
+  stage='strict-TLS-readiness';
+  let ready=false;
+  for(let i=0;i<30&&!ready;i++){
+    try{ready=(await tlsCall('/health/ready')).status===200;}catch{}
+    if(!ready)await new Promise(r=>setTimeout(r,1000));
+  }
+  assert(ready,'READY_REQUIRED');
+  assert.equal((await tlsCall('/api/v1/config',{Host:'evil.invalid'})).status,403);
+  assert.equal((await tlsCall('/api/v1/auth/session',{Origin:'https://evil.invalid'})).status,403);
+  observations.hostOriginBoundary={hostRejected:403,wrongOriginRejected:403,tlsChainAndIpValidated:true};
   for(const width of [390,768,1280]){
     await run('child-six-steps-'+width,width,async p=>{
       stage='anonymous-gate';await p.goto(origin+path);
@@ -132,6 +149,10 @@ try{
       const session=(await api(p,'/api/v1/auth/session')).body;
       const lessonApi='/api/v1/learners/'+session.learnerIds[0]+'/subjects/math/lessons/';
       assert.equal((await api(p,lessonApi+'G3-U01-B02')).status,404);
+      assert.equal((await api(p,'/api/v1/learners/ungranted-synthetic/subjects/math/lessons/G3-U01-B01')).status,403);
+      const cookie=(await p.context().cookies()).map(c=>c.name+'='+c.value).join('; ');
+      assert.equal((await tlsCall('/api/v1/auth/parent-lock',{Cookie:cookie,'Content-Type':'application/json',Origin:origin},'POST')).status,403);
+      observations.csrfAndLearnerBoundary={missingCsrfRejected:403,otherLearnerRejected:403};
       for(const endpoint of [lessonApi+'G3-U01-B01','/api/v1/learners/'+session.learnerIds[0]+'/subjects/math/commands','/api/v1/learners/'+session.learnerIds[0]+'/subjects/math/state','/api/v1/wallet/commands']){
         const r=await api(p,endpoint,'POST');assert.equal(r.status,endpoint.includes('/lessons/')?405:403);
       }
@@ -143,6 +164,7 @@ try{
       await p.getByRole('button',{name:'退出',exact:true}).click();
       await expect(p.getByRole('heading',{name:'请先登录学习家园',exact:true})).toBeVisible();
       await p.goto(origin+path);await expect(p.locator('.math-lesson')).toHaveCount(0);
+      assert.equal((await api(p,lessonApi+'G3-U01-B01')).status,401);
     });
     if(failed)break;
   }
@@ -177,8 +199,12 @@ try{
     observations.grantRevoke={formalOfflineSyntheticCLI:true,newAppStoppedForWriterLock:true,revokedHttp:403,privateDOMCleared:true,grantRestored:true};
     await p.goto(origin+'/parent');await p.getByRole('button',{name:'退出',exact:true}).click();
   });
+}catch{
+  failed=true;results.push({name:'setup-or-finalization',status:'FAIL',stage,error:'NAS_MATH_ASSERTION'});
 }finally{
-  const after=learningSnapshot();if(JSON.stringify(after)!==JSON.stringify(before))failed=true;
+  let after=null;
+  try{after=learningSnapshot();if(JSON.stringify(after)!==JSON.stringify(before))failed=true;}
+  catch{failed=true;results.push({name:'learning-snapshot',status:'FAIL',error:'OWNED_DB_SNAPSHOT_FAILED'});}
   writeFileSync(dir+'/browser-results.json',JSON.stringify({status:failed?'FAIL':'PASS',sourceSha:plan.sourceSha,runId:plan.runId,imageId:state.imageId,
     strictTLS:true,profileOnlyCA:true,physicalDevices:'NEEDS_USER_ACTION',build:manifest,learningBefore:before,learningAfter:after,results,screenshots,observations},null,2)+'\n');
   if(failed){
