@@ -1,5 +1,9 @@
 # Kevin Learning Home · 项目当前状态
 
+## 最新执行入口：MATH-NAS-01（2026-10-24，尚未部署）
+
+用户检查旧LAN入口 `https://192.168.2.100:38443/` 时数学和英语仍显示“待迁入”。此现象**符合旧02B镜像**；MATH-01已进GitHub main，但**不在当前NAS**，且新功能`KLH_MATH_READONLY`默认关闭。合并main CI [40085478959](https://github.com/lovestream/kevin-learning-home/actions/runs/40085478959)及最新main归档CI [40085571114](https://github.com/lovestream/kevin-learning-home/actions/runs/40085571114)现均success。下一优先任务为[Issue #13：独立数学LAN隔离试用](https://github.com/lovestream/kevin-learning-home/issues/13)：准备新镜像、**另建合成数据/容器/新端口（候选38444）**，绝不覆盖现有38443和原真实服务。当前仅创建任务/审查边界，未在NAS执行任何操作；数学实体手机/iPad验收仍待新试用入口准备后进行。MATH-02不启动。
+
 更新：2026-10-24。**MATH-01 已完成独立审查、合并至 main；数学课堂只读功能尚未部署NAS。** 历史PR报告按其归档时点解释，不把“待合并”混同于当前状态。
 
 | 阶段 | 当前事实 | 证据 |

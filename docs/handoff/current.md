@@ -1,5 +1,11 @@
 # Kevin 学习家园：当前交接
 
+## 最新优先任务：让用户实际看见首课（MATH-NAS-01，2026-10-24）
+
+[Issue #13](https://github.com/lovestream/kevin-learning-home/issues/13)已建立完整NAS数学隔离试用任务。用户反馈现有[02B LAN入口](https://192.168.2.100:38443/)数学和英语均“待迁入”，准确原因是旧NAS试用仍为源`7790da6`、并未部署合并到main的MATH-01（且`KLH_MATH_READONLY`默认关闭）。**不要把“GitHub已合并/CI成功”再当作用户已经能看到课堂。**
+
+核实[main合并CI 40085478959](https://github.com/lovestream/kevin-learning-home/actions/runs/40085478959)和[最新main CI 40085571114](https://github.com/lovestream/kevin-learning-home/actions/runs/40085571114)均已completed/success。下一个任务是由有本地`nas-codex`权限的执行环境**新建完全隔离**的数学只读LAN试用实例（候选38444需预检），使用独立合成账号、新数据卷、单独owner marker、独立临时TLS和资源配额；仅该新app设置`KLH_MATH_READONLY=1`。**当前任务仅完成GitHub登记，尚未实际部署**；原38443、旧8容器、两旧网站、真实Kevin学习数据均不触碰。新入口实测成功后需用户实体手机/iPad检查课堂六步和可视化；无结果时保持NOT_RUN。MATH-02仍未启动。
+
 2026-10-24。**MATH-01 独立审查已完成、PR #12 已合并；本地/CI拥有首课只读功能，但NAS原有试用镜像仍是02B，不含数学课程。** 本文覆盖先前Draft阶段交接的历史状态。
 
 ## MATH-01 合并与验收
