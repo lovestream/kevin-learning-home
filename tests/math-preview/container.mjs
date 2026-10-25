@@ -65,6 +65,19 @@ try {
   assert.equal(info.Architecture, "amd64");
   assert.equal(info.Config.Labels["org.opencontainers.image.revision"], head);
   docker(
+    "run",
+    "--rm",
+    ...owner,
+    ...hardening,
+    "--network",
+    "none",
+    image,
+    "node",
+    "--input-type=module",
+    "-e",
+    "await import('./apps/preview/server.ts');console.log('RUNTIME_IMPORT_CLOSURE_OK');",
+  );
+  docker(
     "network",
     "create",
     "--subnet",
@@ -135,12 +148,20 @@ try {
       req.end();
     });
   let ready = false;
+  let lastProbe = null;
   for (let i = 0; i < 100; i++) {
     try {
-      ready = (await request("/health/ready")).status === 200;
+      lastProbe = await request("/health/ready");
+      ready = lastProbe.status === 200;
       if (ready) break;
-    } catch {}
+    } catch (e) {
+      lastProbe = { error: String(e) };
+    }
     await new Promise((r) => setTimeout(r, 100));
+  }
+  if (!ready) {
+    console.error(JSON.stringify(lastProbe));
+    console.error(docker("logs", "--tail", "40", app));
   }
   assert(ready, "PREVIEW_HTTP_NOT_READY");
   const runtime = JSON.parse((await request("/preview-api/v1/runtime")).body);

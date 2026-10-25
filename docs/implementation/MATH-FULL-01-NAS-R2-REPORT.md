@@ -34,3 +34,5 @@
 首次 R2 CI 的专用镜像已构建成功，随后 CI 容器启动因自动分配的网络未声明子网而拒绝固定 IP；NAS 工具本来就显式指定子网，尚未执行任何 NAS 写入。已为 CI 使用同样的显式专用子网。镜像门禁提前执行并单独归档，方便传输；原全部回归、全课浏览器、Compose/正式容器恢复仍完整执行，未删减或忽略失败。首次失败 [push](https://github.com/lovestream/kevin-learning-home/actions/runs/40205872734) / [PR](https://github.com/lovestream/kevin-learning-home/actions/runs/40205876513) 留档。
 
 第二次 CI 显示新版 Docker 在无容器的网络 inspect 中未给出默认 Gateway；进一步显式指定网关（与 NAS 规划一致），不再依赖此隐式值。该失败仍发生在 CI，不曾停止 NAS 旧入口。
+
+进一步的真实镜像启动门禁发现，严格裁剪最终镜像时遗漏了 schema 运行时所需的 `intro-visuals.mjs` 常量模块；已仅补入该冻结模块，并在网络启动前增加实际镜像 Node import 闭包门禁，保留零身份/零 SQLite。就绪失败会归档最后响应与无账号容器日志，便于精确定位，不再只给超时。
