@@ -1,6 +1,12 @@
 # Kevin 学习家园：当前交接
 
-## 当前交接：PR #14 R1 Mac 可用性交付完成，仍保持 Draft
+## 最新阶段：70课+849题优先，账号密码暂停（2026-10-25）
+
+用户已在自己Mac实际体验G3-U01-B01并认可现有六步风格，反馈手机/iPad适配观感满意；据此确定快速全量内容路线，不再扩展账号密码。**PR14已由ChatGPT复审并合并**：merge `942dc508858f548af1e0517aa3365e08bfbee0e4`，[复审记录](https://github.com/lovestream/kevin-learning-home/pull/14#issuecomment-6392804835)。旧38443仍02B；新38444为合成账号单课试用，并不自动变为70课。Issue13已按其合成试用交付范围关闭，手机/iPad可信TLS/旧身份验收仍未等价完成。Mac工作目录11份零删除，当前秘密源及启动器继续保留。
+
+**立即实施优先级**：[Issue15：70节六步课堂＋原教具＋免账号独立体验](https://github.com/lovestream/kevin-learning-home/issues/15) → [Issue16：849道题／三项自查／本次临时作答](https://github.com/lovestream/kevin-learning-home/issues/16)。[统一范围与验收](../implementation/MATH-FULL-ROADMAP.md)明确70课仅为三年级当前可运行入口；数学小侦探、17张已审卡、四至六年级旧来源需要随后审计补齐。体验预览独立于正式认证，无真实数据/登录资料迁移、无学习写入/积分/蛋仔。**目前尚未实现免账号70课预览，也未部署新的数学课程。** 原MATH-02持久化仍暂停。
+
+## 历史交接：PR #14 R1 Mac 可用性交付（现已合并）
 
 2026-10-25，按 [R1 审查要求](https://github.com/lovestream/kevin-learning-home/pull/14#issuecomment-6385527963)先解决用户实际体验。**固定入口：`~/Documents/Kevin-Learning-Home-Trial/`**，用户 Mac Finder 已确认 `START-HERE.md`、公开 CA、`打开数学课堂.command`、`目录整理清单.md`。目录 0700，指南/公开 CA 0600、启动器 0700。原指南确实在同一 Mac `/Users/<user>/Downloads/codex/kevin-learning-home-math-trial/.trial-private/START-HERE.md`；真实未脱敏绝对路径在本机指南与交付消息，密码没有进 GitHub。
 

@@ -1,6 +1,12 @@
 # Kevin Learning Home · 项目当前状态
 
-## 最新执行：PR #14 R1 可用性交付（2026-10-25）
+## 2026-10-25：转入数学内容全量快速迁入
+
+用户已在Mac体验首课并认可视觉风格，手机/iPad响应式表现获认可。PR14的R1复审/最终双CI成功，已合并main（`942dc508858f548af1e0517aa3365e08bfbee0e4`），[审查评论](https://github.com/lovestream/kevin-learning-home/pull/14#issuecomment-6392804835)；Issue13合成隔离试用交付范围已关闭，NAS旧38443与新38444运行环境都未覆盖。11个Mac相关worktree均未删除。**不要再显示“PR14待审/未合并”为当前事实**，其下旧报告作为历史时点记录。
+
+当前下一步是[Issue15 全70课](https://github.com/lovestream/kevin-learning-home/issues/15)＋[Issue16 全849题](https://github.com/lovestream/kevin-learning-home/issues/16)，执行与准确旧站剩余功能见[全量路线](docs/implementation/MATH-FULL-ROADMAP.md)。**不要再开发正式账号/密码**，计划独立零真实数据的免登录纯体验；暂不迁Kevin真实记录、不启用学习写入/积分/蛋仔。70课全部是draft，64有原交互验证标记/6为静态，课堂迁入≠题库完成≠数学侦探/高年级全站完成。新体验代码/入口尚未实现或NAS部署，现有38444只是一课需要合成凭据的试用，测试CA 10月31日到期。
+
+## 历史执行：PR #14 R1 可用性交付（已合并）
 
 已确认原隐藏指南就在用户当前 Mac，安全交付至 **`~/Documents/Kevin-Learning-Home-Trial/`**（0700）：私密 `START-HERE.md`、公开 CA（均 0600）、可双击启动器与目录整理清单。已在 Finder 确认可见，实际本机 headed Chromium 用新合成孩子登录 **38444**，首页数学「只读课堂」、英语「待迁入」，进入六步首课；关闭最后标签后可重新打开，重复启动不会堆新 profile。旧 **38443** 仍是 02B 两科「待迁入」，不要混用入口/账号。
 
