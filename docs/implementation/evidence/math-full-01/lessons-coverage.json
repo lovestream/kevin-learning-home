@@ -7,10 +7,10 @@
   "static": 6,
   "browserScenarios": 210,
   "execution": {
-    "head": "35434db666603b78ccabb053716530bfc9449e14",
-    "dirty": true,
+    "head": "eb59d3fc04dedca89a693d9e6e04f3dfb6245808",
+    "dirty": false,
     "files": {
-      "tests/math-full-01/browser.mjs": "1db3ca63e14a45dbc445203fc8daf74c5b1a264ebdee136817a0e7fac5e8b769",
+      "tests/math-full-01/browser.mjs": "d862c9970df1bb1c6b7f49424a0e8bf509731750da44cbc183013de05ae1f942",
       "tests/math-full-01/exercise.mjs": "e3fafe3d02ccf165417e3b50e9ba34c7e9e532a33a6bf0c89c1c0e0614c60ab0",
       "apps/preview/main.tsx": "b52a8254d9444348c9a306ca1b85fe04e0dbcc659c9d9b382b528c192ab09b03",
       "apps/preview/contract.ts": "15ac563c2356be88f9bb4fa7953e47e578ccc9d55b9f0309824d1df8509e405f",

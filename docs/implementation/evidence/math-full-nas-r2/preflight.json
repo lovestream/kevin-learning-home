@@ -74,5 +74,7 @@
   "protectedSnapshotSha256": "20afc615bb3d60468ba9517237c873595c534879646fe7f7619e96e64f0285f8",
   "oldSyntheticAndTLSFilesSha256": "082411153695e65a0d45d3ccae4f6eb8735880829ca7dd4cb52621715a0df04c",
   "localFilesystem": "ext2/ext3",
-  "remoteWritesPerformed": false
+  "remoteWritesPerformed": false,
+  "canonicalProtectedContainersSha256": "be40f79c8587326f2e693f32ad96866939008ab97685f249fe00de0dd20e48ee",
+  "canonicalHashNote": "Canonicalized by mount destination; original recorded fingerprint retained. All metadata values preserved."
 }

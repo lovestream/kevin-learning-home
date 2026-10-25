@@ -1,24 +1,24 @@
-# 当前交付目标：NAS 局域网免登录数学课堂
+# 当前交付：NAS 局域网免登录数学课堂
 
-用户已明确要求采用 **http://192.168.2.100:38444/**，不使用 HTTPS/证书，不调整 Tailscale。R2 正在原 PR #18 实装，状态以 [R2 执行报告](docs/implementation/MATH-FULL-01-NAS-R2-REPORT.md)及 PR 最终 NAS 证据为准。下方 localhost 仅是开发复现，不作为用户交付。
+用户已明确要求采用 **http://192.168.2.100:38444/**，不使用 HTTPS/证书，不调整 Tailscale。R2 已在原 PR #18 完成 NAS 交付，状态以 [R2 执行报告](docs/implementation/MATH-FULL-01-NAS-R2-REPORT.md)及 PR 最终 NAS 证据为准。下方 localhost 仅是开发复现，不作为用户交付。
 
 # Kevin Learning Home · Kevin 学习家园
 
 本分支 **MATH-FULL-01 / Issue #15** 已完成冻结入口的 70 节六步数学课堂与对应教具，交付一个 Draft PR 等待 ChatGPT 独立审查。全部仍是 draft 教学预览：64 原交互课、6 静态关系图/纸笔课；**不是 849 道练习或旧数学整站迁入完成**。
 
-## 直接体验：无需账号
+## 直接体验：NAS 局域网，无需账号
 
-同一 Mac 的本机入口：**http://127.0.0.1:4179/**。已在可见 Chromium 确认 70 个课程入口，并实际进入折纸课操作；不需要账号、密码或证书安装。源码工作目录继续复用 `~/Downloads/codex/kevin-learning-home-math-trial`，没有新增 worktree。
+打开 **[NAS 学习家园](http://192.168.2.100:38444/)**，直接进入 70 课数学目录；不需要密码、证书或 Mac 启动终端。同一局域网的 Mac、手机、iPad 使用同一个地址。普通 Mac Chrome 已实际访问并操作纸盒教具；实体手机/iPad 仍待用户体验，响应式自动化不等同实体设备验收。
 
-Finder「前往文件夹」输入 **`~/Documents/Kevin-Learning-Home-Trial/`**，打开 `70课体验说明.md`，双击 `打开70课体验.command`，体验时保留运行终端。旧 START-HERE/CA/单课启动器保持原样。若 Mac 锁屏先自行解锁；本轮可见操作已在锁屏前完成，Finder 双击尚未作人工验收。
+Mac 已有目录 `/Users/yako/Documents/Kevin-Learning-Home-Trial/` 内新增 `打开NAS学习家园.webloc` 和 `NAS学习家园使用说明.md`。旧凭据、CA、单课与本机启动文件保留供历史回退，不必运行。
 
-本机回环 HTTP 只用于无身份、无真实数据的内容体验，不修改正式服务的 HTTPS/session/家长授权。**新 70 课版本尚未部署 NAS，也不能在手机/iPad 输入这个本机地址访问 Mac。** 原 NAS 38443 仍是 02B，38444 仍是原合成单课；均未覆盖。
+NAS 部署源码 `974fdee8134c833d718b574d79e18d96756a73e0`；后续提交只补验证工具和文档证据，166 个镜像/课程构建输入保持相同，见 [发布输入清单](docs/implementation/evidence/math-full-nas-r2/release-inputs.json)。实际 NAS 完成 30 代表课和全部 210 场景，旧 38444 回退及恢复成功，11 个受保护容器及旧合成数据/证书 hash 不变。原 38443、数学/英语网站和真实数据不动。
 
-体验状态只留当前页面内存；刷新清空，无阅读记录、成绩、积分或蛋仔。完整 849 题按 [Issue #16](https://github.com/lovestream/kevin-learning-home/issues/16) 后续独立 PR 接入，335 解释题须人工核对。正式账号、真实学习记录和生产部署暂停。
+体验状态只留页面内存；刷新清空，无阅读记录、成绩、积分或蛋仔。849 题和其它数学功能尚未接入，分别按 Issue #16/#17 交付同一 NAS 入口。PR #18 保持 Draft，等待审查。
 
 ## 复现与证据
 
-Node 24.15.0 / npm 11.12.1：`npm ci`，`npm run build:math-preview`，`npm run preview:math`，然后在本机打开上方地址。可见 Mac 启动器还需 `npx playwright install chromium`。预览是 `apps/preview` 独立内容进程，必须显式启用，仅绑定 127.0.0.1；不依赖正式认证或 SQLite，正式容器最终运行层不含预览代码/内容。
+Node 24.15.0 / npm 11.12.1：`npm ci`，`npm run build:math-preview`，`npm run preview:math`，然后在本机打开 http://127.0.0.1:4179/（开发复现）。可见 Mac 启动器还需 `npx playwright install chromium`。预览是 `apps/preview` 独立内容进程，必须显式启用；开发默认仅绑定 127.0.0.1，NAS 隔离容器显式绑定专用私网 IP；不依赖正式认证或 SQLite，正式容器最终运行层不含预览代码/内容。
 
 - [执行报告与接口/边界](docs/implementation/MATH-FULL-01-REPORT.md)
 - [冻结来源/许可与全站残余范围](docs/implementation/MATH-FULL-SOURCE-SCOPE.md)

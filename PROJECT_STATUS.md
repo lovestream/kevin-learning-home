@@ -1,15 +1,19 @@
 # Kevin Learning Home · 项目当前状态
 
-## R2：按用户最新要求采用局域网 HTTP，切换执行中
+## MATH-FULL-01 R2：70 课已交付 NAS 局域网入口
 
-用户验收标准是 **NAS 上同一个 Kevin 学习家园入口**：直接进入免登录数学目录，保留已认可的六步课堂，随后接通原 849 题和其它实际可用数学功能。Mac 本地与 CI 是开发证据，不能代替 NAS 交付，也不能把 70 课教学称为全站迁移完成。
+**[打开 NAS 学习家园](http://192.168.2.100:38444/)**：直接进入数学目录，无需登录、HTTPS 证书或 Mac 本地服务器。用户最新 HTTP 要求覆盖此前证书方案；没有申请证书或修改 Tailscale/DSM/DNS。
 
-本轮按 [PR #18 R2](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6399021659) 在原分支/工作副本继续；受控替换现有合成试用 38444 已获用户授权。旧 38443、8 个生产服务、原数学/英语、真实学习数据、DSM/Docker 权限及家庭 Tailscale 配置保持原样；用户随后明确要求使用局域网 HTTP；证书方案已停止，不改 Tailscale/DSM/DNS。PR #18 保持 Draft，不合并。
+运行源码 `974fdee8134c833d718b574d79e18d96756a73e0`，专用内容镜像 `sha256:03fc82b25c501c8e8f71ef92ea66c3e5d14e1f0cc2fee7be8b0c1cb90b60d521`。后续验证工具/文档提交未改变 166 个发布构建输入，NAS 实际 seal 的 11 个静态文件与测试构建一致。
 
-70/70 教学与原教具代码保留，64 交互 / 6 静态、30 代表课及 210 浏览器场景已通过；原 HEAD `9aa2371bb3eb28055a3b5879f48dc6ebc73c457b` 两套完整 CI 成功。**这些是此前中间成果：NAS 新 70 课尚未交付。**
+70/70 六步课堂（64 交互 / 6 静态）已在该 NAS 地址通过 30 代表课及全部 210 个浏览器场景，覆盖 390/768/1280 宽度、教具、键盘/触摸、刷新清空及零浏览器持久化。普通 Mac Chrome 已实际进入课堂并操作纸盒从展开到 100% 折合，随后返回目录；实体手机/iPad 待用户体验，不把视口测试称为实体设备验收。
 
-R2 只读核查：DS918+ Docker 20.10.3 / Compose 1.28.5 管理权限可用；38444 的旧 app/TLS 两容器与旧 38443、8 服务仍在运行。38444 证书为旧私有 CA，2026-10-31 到期，默认 TLS 信任校验失败；DSM 443/5001 同样是未受信的 Synology 自签链。NAS Tailscale 名称 `diskstation.taildbf7c.ts.net`，Serve 当前为空，未申请证书、改设置或停止旧入口。
+已演练原 38444 合成单课回退并恢复新 HTTP 入口。旧 app、合成卷、证书及原 TLS 容器完整保留；11 个受保护容器的身份/镜像/启动时间/挂载/状态及旧合成文件 hash 均不变。原 38443、8 个生产服务、数学/英语旧项目、真实学习记录和系统权限未变更。
 
-已补齐 preview-only Linux/amd64 镜像、私网监听/精确 HTTP Origin、数学路由与科目导航、owned 部署/回退工具。目标为 **http://192.168.2.100:38444/**，无账号无证书；正在验证并实装。见 [R2 报告](docs/implementation/MATH-FULL-01-NAS-R2-REPORT.md)。
+Mac 原交付目录 `/Users/yako/Documents/Kevin-Learning-Home-Trial/` 已加入 `打开NAS学习家园.webloc` 和 `NAS学习家园使用说明.md`，没有新建工作树或复制新的项目目录。
 
-[路线图](docs/implementation/MATH-FULL-ROADMAP.md) · [交接](docs/handoff/current.md)。后续依次为 [Issue #16](https://github.com/lovestream/kevin-learning-home/issues/16) 849 题和 [Issue #17](https://github.com/lovestream/kevin-learning-home/issues/17) 其余可用功能，均交付同一 NAS 入口；无正式账号/成绩持久化/积分/蛋仔。
+[PR #18](https://github.com/lovestream/kevin-learning-home/pull/18) 保持 Draft，不合并。部署源码的 [push CI](https://github.com/lovestream/kevin-learning-home/actions/runs/40207392981) / [PR CI](https://github.com/lovestream/kevin-learning-home/actions/runs/40207396436) 均成功；本轮最终证据提交的精确 HEAD 双 CI 由 PR 正文单独核实，不沿用旧 SHA。
+
+**70 课教学不等于完整数学网站迁移。** [Issue #16](https://github.com/lovestream/kevin-learning-home/issues/16) 的 849 题及 [Issue #17](https://github.com/lovestream/kevin-learning-home/issues/17) 其它实际可用功能尚未迁入，后续独立 Draft PR 接到同一 NAS 入口。无正式账号、真实记录、成绩持久化、积分或蛋仔迁移。
+
+[R2 执行报告](docs/implementation/MATH-FULL-01-NAS-R2-REPORT.md) · [NAS 原始交付证据](docs/implementation/evidence/math-full-nas-r2/delivery.json) · [路线图](docs/implementation/MATH-FULL-ROADMAP.md) · [交接](docs/handoff/current.md)

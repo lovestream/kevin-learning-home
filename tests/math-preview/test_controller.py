@@ -1,4 +1,5 @@
-import importlib.util,pathlib,unittest,copy,tempfile
+import importlib.util,pathlib,unittest,copy,tempfile,json,os
+from unittest.mock import patch
 p=pathlib.Path(__file__).resolve().parents[2]/'infra/math-preview/controller.py'
 spec=importlib.util.spec_from_file_location('preview_controller',p);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 class BoundaryTests(unittest.TestCase):
@@ -39,3 +40,24 @@ class BoundaryTests(unittest.TestCase):
   self.assertEqual(module.stable(row),module.stable(reordered))
   reordered['Mounts'][0]['RW']=not reordered['Mounts'][0]['RW']
   self.assertNotEqual(module.stable(row),module.stable(reordered))
+
+ def test_inherited_modes_are_fixed_only_after_owner_marker_matches(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=pathlib.Path(d).resolve()/'owned';root.mkdir();(root/'artifacts').mkdir()
+   marker=root/'owner-marker.json';marker.write_text(json.dumps(module.PLAN))
+   for p in [root,root/'artifacts']:p.chmod(0o777)
+   original_stat=os.stat
+   def nas_stat(path,*args,**kwargs):
+    row=list(original_stat(path,*args,**kwargs))
+    if str(path).startswith(str(root)):row[4]=1024
+    return os.stat_result(row)
+   c=object.__new__(module.Controller);c.python=lambda code:exec(code,{})
+   with patch.object(module,'ROOT',str(root)),patch('os.stat',side_effect=nas_stat):
+    c.ensure_root()
+    self.assertEqual(root.stat().st_mode&0o777,0o700)
+    self.assertEqual((root/'artifacts').stat().st_mode&0o777,0o700)
+    self.assertEqual(marker.stat().st_mode&0o777,0o600)
+    marker.write_text('{}')
+    with patch('os.chmod') as chmod:
+     with self.assertRaises(AssertionError):c.ensure_root()
+     chmod.assert_not_called()

@@ -59,12 +59,8 @@
     {
       "name": "G3-LP01-B02-768.png",
       "sha256": "cd1099c727de0ed4eddf8f3734a2417e1a90ae8c8a3446a9f5f6de821e83bcff"
-    },
-    {
-      "name": "mac-visible-catalog.png",
-      "sha256": "eb08910f6b751591311e56099bf36de995d4fa2cafc9bca4a3be91cfd33cfaa3"
     }
   ],
-  "source": "Real production preview build in local Chromium; headed Mac catalog separately identified",
-  "physicalPhoneOrIPad": "NOT_DEPLOYED_NOT_RUN"
+  "source": "Real NAS LAN HTTP production preview build in Chromium at 390/768/1280 widths; ordinary Chrome evidence separately archived",
+  "physicalPhoneOrIPad": "NEEDS_USER_ACTION"
 }

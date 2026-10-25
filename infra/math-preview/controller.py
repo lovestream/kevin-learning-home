@@ -135,7 +135,7 @@ if not os.path.exists(root):
  for name in ['artifacts']:os.mkdir(root+'/'+name,0o700)
 assert os.path.realpath(root)==root and os.stat(root).st_uid==1024
 assert not os.path.islink(root+'/owner-marker.json')
-assert json.load(open(root+'/owner-marker.json'))==plan
+with open(root+'/owner-marker.json') as f:assert json.load(f)==plan
 os.chmod(root,0o700)
 os.chmod(root+'/owner-marker.json',0o600)
 for name in ['artifacts']:

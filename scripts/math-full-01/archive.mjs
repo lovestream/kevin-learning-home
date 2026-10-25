@@ -3,8 +3,10 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 const read=p=>JSON.parse(fs.readFileSync(p));
 const hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
-const source='.evidence/math-full-01',target='docs/implementation/evidence/math-full-01';
+const nas=process.argv.includes('--nas');
+const source=nas?'.evidence/math-full-nas-r2':'.evidence/math-full-01',target='docs/implementation/evidence/math-full-01';
 const browser=read(source+'/browser.json'),checkpoint=read(source+'/checkpoint.json'),catalog=read('apps/preview/content/catalog.json'),mappings=read(target+'/field-mappings.json');
+if(nas&&[browser,checkpoint].some(x=>x.target?.origin!=='http://192.168.2.100:38444'||x.target?.transport!=='LAN_HTTP_USER_EXPLICITLY_REQUESTED'))throw Error('ACTUAL_NAS_HTTP_EVIDENCE_REQUIRED');
 if(browser.status!=='PASS'||browser.filtered||browser.results.length!==210||checkpoint.status!=='PASS'||checkpoint.results.length<10)throw Error('COMPLETE_REAL_BROWSER_EVIDENCE_REQUIRED');
 for(const [name,digest]of Object.entries(browser.execution.files))if(hash(name)!==digest)throw Error('MEASURED_BROWSER_SOURCE_CHANGED '+name);
 for(const [name,digest]of Object.entries(checkpoint.execution.files))if(hash(name)!==digest)throw Error('CHECKPOINT_SOURCE_CHANGED '+name);
@@ -22,5 +24,5 @@ const screenshots=[];
 for(const id of screenshotIds)for(const width of [390,1280]){const name=id+'-'+width+'.png';fs.copyFileSync(source+'/'+name,target+'/'+name);screenshots.push(name);}
 for(const id of ['G3-U01-B03','G3-U04-B01','G3-LP01-B02']){const name=id+'-768.png';fs.copyFileSync(source+'/'+name,target+'/'+name);screenshots.push(name);}
 if(fs.existsSync(source+'/mac-visible-catalog.png')){fs.copyFileSync(source+'/mac-visible-catalog.png',target+'/mac-visible-catalog.png');screenshots.push('mac-visible-catalog.png');}
-fs.writeFileSync(target+'/screenshots.json',JSON.stringify({screenshots:screenshots.map(name=>({name,sha256:hash(target+'/'+name)})),source:'Real production preview build in local Chromium; headed Mac catalog separately identified',physicalPhoneOrIPad:'NOT_DEPLOYED_NOT_RUN'},null,2)+'\n');
+fs.writeFileSync(target+'/screenshots.json',JSON.stringify({screenshots:screenshots.map(name=>({name,sha256:hash(target+'/'+name)})),source:nas?'Real NAS LAN HTTP production preview build in Chromium at 390/768/1280 widths; ordinary Chrome evidence separately archived':'Real production preview build in local Chromium; headed Mac catalog separately identified',physicalPhoneOrIPad:nas?'NEEDS_USER_ACTION':'NOT_DEPLOYED_NOT_RUN'},null,2)+'\n');
 console.log(JSON.stringify({status:'ARCHIVED',lessons:matrix.length,browserScenarios:210,permanentScreenshots:screenshots.length}));

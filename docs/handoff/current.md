@@ -1,15 +1,17 @@
 # Kevin 学习家园：当前交接
 
-## R2：以 NAS 局域网 HTTP 入口验收
+## R2 已交付：NAS HTTP 免登录 70 课
 
-用户验收标准是 **NAS 上同一个 Kevin 学习家园入口**：直接进入免登录数学目录，保留已认可的六步课堂，随后接通原 849 题和其它实际可用数学功能。Mac 本地与 CI 是开发证据，不能代替 NAS 交付，也不能把 70 课教学称为全站迁移完成。
+入口 **http://192.168.2.100:38444/**，根路径直接显示数学教材目录。用户明确要求局域网 HTTP，证书方案停止；没有申请证书或改 Tailscale/DSM/DNS/系统权限。使用同一 PR #18、分支 `codex/math-full-01-70-lessons`、工作副本 `/Users/yako/Downloads/codex/kevin-learning-home-math-trial`，未新增工作树。
 
-本轮按 [PR #18 R2](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6399021659) 在原分支/工作副本继续；受控替换现有合成试用 38444 已获用户授权。旧 38443、8 个生产服务、原数学/英语、真实学习数据、DSM/Docker 权限及家庭 Tailscale 配置保持原样；用户随后明确要求使用局域网 HTTP；证书方案已停止，不改 Tailscale/DSM/DNS。PR #18 保持 Draft，不合并。
+NAS 安装源码 `974fdee8134c833d718b574d79e18d96756a73e0`；内容镜像 `sha256:03fc82b25c501c8e8f71ef92ea66c3e5d14e1f0cc2fee7be8b0c1cb90b60d521`。后续仅变更测试/部署工具及证据，166 个运行/构建输入与发布源相同，实际 NAS seal 的 11 个静态文件等同浏览器测试构建。部署源码双 CI 成功：[push](https://github.com/lovestream/kevin-learning-home/actions/runs/40207392981) / [PR](https://github.com/lovestream/kevin-learning-home/actions/runs/40207396436)。最终证据 HEAD 的双 CI 另见 PR 正文，不能把上述旧 SHA 的成功当作新 HEAD 通过。
 
-70/70 教学与原教具代码保留，64 交互 / 6 静态、30 代表课及 210 浏览器场景已通过；原 HEAD `9aa2371bb3eb28055a3b5879f48dc6ebc73c457b` 两套完整 CI 成功。**这些是此前中间成果：NAS 新 70 课尚未交付。**
+专用目录 `/volume2/homes/admin/klh-math-preview-20261025-c6ae9e7f`；app `klh-math-preview-20261025-c6ae9e7f-app`，网络同前缀 `-net`，单容器非 root `1024:100`、只读根、256 MiB、cpuset 0、零挂载，显式发布 NAS LAN IP 的 38444。此内容镜像没有正式身份服务、SQLite、fs-ext 或学习数据，不能添加真实账户或借此放宽正式服务保护。
 
-R2 只读核查：DS918+ Docker 20.10.3 / Compose 1.28.5 管理权限可用；38444 的旧 app/TLS 两容器与旧 38443、8 服务仍在运行。38444 证书为旧私有 CA，2026-10-31 到期，默认 TLS 信任校验失败；DSM 443/5001 同样是未受信的 Synology 自签链。NAS Tailscale 名称 `diskstation.taildbf7c.ts.net`，Serve 当前为空，未申请证书、改设置或停止旧入口。
+真实 NAS HTTP 通过 30 代表课、210 全课/视口场景；普通 Mac Chrome 可见访问、0%→100% 折盒和返回目录均通过。实体手机/iPad 尚未操作，仍为 `NEEDS_USER_ACTION`。Mac `/Users/yako/Documents/Kevin-Learning-Home-Trial/` 内已有 `打开NAS学习家园.webloc` 与 `NAS学习家园使用说明.md`；保留旧交付文件，不要求运行 Mac 本地服务器。
 
-已补齐 preview-only Linux/amd64 镜像、私网监听/精确 HTTP Origin、数学路由与科目导航、owned 部署/回退工具。目标为 **http://192.168.2.100:38444/**，无账号无证书；正在验证并实装。见 [R2 报告](../implementation/MATH-FULL-01-NAS-R2-REPORT.md)。
+原 38444 TLS 容器 `a1629cb9635ed627aa927b969e12cf37ec0a827b9c5469f9ad5d35c1c3173f85` 当前停止但完整保留；旧 app `188bcd47bf4b8781376b5cccbf0c8c38752ea261ca34ed8385ba0ed2e813d49c` 持续运行。旧目录 `klh-math-trial-20261024-8f228391` 的合成数据库、CA/证书/密钥不变，不能删除或复制进新预览。已实际回退并恢复新入口；`python3 infra/math-preview/controller.py rollback` / `switch` 只核对并操作已归属容器。旧 38443、8 个生产服务等 11 个受保护容器保持原身份、镜像、启动时间及挂载，旧合成文件 hash 不变。
 
-工作副本仍为 `~/Downloads/codex/kevin-learning-home-math-trial`，分支 `codex/math-full-01-70-lessons`；未新增或删除工作树。旧合成试用根目录 `klh-math-trial-20261024-8f228391` 及原私密凭据/CA 必须保留，不能复制其数据库到新预览。后续 849 题使用独立 Draft PR，接口稳定后接到同一 NAS 入口；70 课未上线前不得将 Mac 入口当完成，也不自动开始真实记录迁移。
+NAS 目录继承宽权限导致首次 stage 安全停止，核对本次 owner marker 后只收紧本次新目录；工具已补同样守卫和回归。第一次 NAS 浏览器探针因 HTTP 没有 Cache API 失败；修正为可用时枚举、不可用时确认无条目，Service Worker 同理，保留全部持久化阴性。原始错误、回退技术探针和证据均见 [R2 报告](../implementation/MATH-FULL-01-NAS-R2-REPORT.md)。
+
+**当前只完成 70 课教学交付，不是整个数学站迁移完成。** 849 题（Issue #16）及数学侦探/思维卡等其它能力（Issue #17）后续独立 Draft PR 接入同一 NAS 学习家园。PR #18 保持 Draft、暂停等待审查；不合并，不动旧项目或真实数据，不自动进入正式账户/成绩持久化。
