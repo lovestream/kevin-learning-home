@@ -18,6 +18,7 @@ NAS 38443/38444 保留旧 02B/合成单课，**新 70 课 NAS 及实体手机/iP
 
 - 原 60 Node / 18 UI / 3 基础视口 / 12 数学 Node / 9 数学浏览器、typecheck/build 本地全部通过。
 - 新 16 项测试、145 目标/5,003 字段来源检查、70 实际 GET 与 210 实际浏览器六步/图形/操作/刷新测试通过；正式匿名拒绝与家长权限回归保留。
+- 首次 PR CI 暴露原 Docker SIGKILL 探针的退出时序竞态：仅测试注入器改为收集并严格核对 0/137、同步标记与空 stderr，后续实际自动重启/健康/数据/恢复断言完整保留；服务与部署配置未改。
 - 最终事件 HEAD 的 push / pull_request 全 CI 包含原 Docker/Compose/恢复；精确 SHA/run/状态在本批 Draft PR 正文核实。本地实测明确记录 base HEAD + dirty 及实际文件 hash，不冒充最终干净提交。
 
 [完整报告](../implementation/MATH-FULL-01-REPORT.md)、[来源/许可与全站范围](../implementation/MATH-FULL-SOURCE-SCOPE.md)、[70课矩阵](../implementation/evidence/math-full-01/lessons-coverage.json)、[210场景](../implementation/evidence/math-full-01/browser.json)、[Mac交付](../implementation/evidence/math-full-01/mac-access.json)、[截图索引](../implementation/evidence/math-full-01/screenshots.json)。复现：`npm ci` → `npm run build:math-preview` → `npm run preview:math`；测试命令见报告/README。
