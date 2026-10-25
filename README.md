@@ -1,3 +1,7 @@
+# 当前交付目标：NAS 局域网免登录数学课堂
+
+用户已明确要求采用 **http://192.168.2.100:38444/**，不使用 HTTPS/证书，不调整 Tailscale。R2 正在原 PR #18 实装，状态以 [R2 执行报告](docs/implementation/MATH-FULL-01-NAS-R2-REPORT.md)及 PR 最终 NAS 证据为准。下方 localhost 仅是开发复现，不作为用户交付。
+
 # Kevin Learning Home · Kevin 学习家园
 
 本分支 **MATH-FULL-01 / Issue #15** 已完成冻结入口的 70 节六步数学课堂与对应教具，交付一个 Draft PR 等待 ChatGPT 独立审查。全部仍是 draft 教学预览：64 原交互课、6 静态关系图/纸笔课；**不是 849 道练习或旧数学整站迁入完成**。

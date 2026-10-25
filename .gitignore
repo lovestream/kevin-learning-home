@@ -9,3 +9,5 @@ test-results/
 .trial-private/
 __pycache__/
 .DS_Store
+
+.math-preview-private/

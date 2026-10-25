@@ -1,4 +1,5 @@
 // Offline preview build seal. Does not read or execute an old repository.
+import { execFileSync } from "node:child_process";
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -22,6 +23,13 @@ for (const file of origins.files) {
   if (hash(readFileSync(join(root, file.target))) !== file.targetSha256)
     throw Error("ADAPTED_SOURCE_HASH_CHANGED " + file.target);
 }
+const buildSha =
+  process.env.KLH_BUILD_SHA ??
+  execFileSync("git", ["rev-parse", "HEAD"], {
+    cwd: root,
+    encoding: "utf8",
+  }).trim();
+if (!/^[a-f0-9]{40}$/.test(buildSha)) throw Error("EXACT_BUILD_SHA_REQUIRED");
 const { catalog } = loadContent(root),
   files: Record<string, string> = {};
 function visit(dir: string, prefix = "") {
@@ -37,6 +45,7 @@ writeFileSync(
   JSON.stringify(
     {
       schemaVersion: 1,
+      buildSha,
       catalogSha256: hash(
         readFileSync(join(root, "apps/preview/content/catalog.json")),
       ),

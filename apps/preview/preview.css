@@ -176,3 +176,29 @@
     width: 210mm;
   }
 }
+
+.preview-subjects,
+.preview-breadcrumb,
+.preview-neighbors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+.preview-subjects {
+  padding: 1rem 0;
+  border-bottom: 1px solid #c8dce5;
+}
+.preview-subjects [aria-disabled] {
+  color: #597482;
+}
+.preview-breadcrumb {
+  margin-bottom: 1.5rem;
+}
+.preview-neighbors {
+  justify-content: space-between;
+}
+.preview-neighbors a {
+  flex: 1 1 15rem;
+  overflow-wrap: anywhere;
+}

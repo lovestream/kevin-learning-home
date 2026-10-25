@@ -1,3 +1,4 @@
+import { contentDigest } from "./integrity.ts";
 import { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -83,7 +84,9 @@ function ContextPicture({
     </div>
   );
 }
-function Lesson({ lesson }: { lesson: FullLesson }) {
+function Lesson({ lesson, catalog }: { lesson: FullLesson; catalog: Catalog }) {
+  const at = catalog.lessons.findIndex((x) => x.lessonId === lesson.lessonId);
+  const neighbors = [catalog.lessons[at - 1], catalog.lessons[at + 1]];
   const [step, setStep] = useState(0),
     [prediction, setPrediction] = useState(""),
     [thought, setThought] = useState(""),
@@ -297,8 +300,22 @@ function Lesson({ lesson }: { lesson: FullLesson }) {
         </button>
       </footer>
       <p>
-        <a href="/">返回全部 70 课</a>
+        <a href="/subjects/math">返回全部 70 课</a>
       </p>
+      <nav aria-label="相邻课堂" className="preview-neighbors">
+        {neighbors.map((item, i) =>
+          item ? (
+            <a
+              key={item.lessonId}
+              href={"/subjects/math/lessons/" + item.lessonId}
+            >
+              {i === 0 ? "上一课" : "下一课"}：{item.title}
+            </a>
+          ) : (
+            <span key={i} />
+          ),
+        )}
+      </nav>
     </article>
   );
 }
@@ -365,7 +382,7 @@ function CatalogPage({ catalog }: { catalog: Catalog }) {
         {visible.map((l) => (
           <a
             className="preview-lesson-card"
-            href={"/lesson/" + encodeURIComponent(l.lessonId)}
+            href={"/subjects/math/lessons/" + encodeURIComponent(l.lessonId)}
             key={l.lessonId}
             data-lesson-link={l.lessonId}
           >
@@ -385,25 +402,15 @@ function CatalogPage({ catalog }: { catalog: Catalog }) {
     </section>
   );
 }
-async function digest(value: unknown) {
-  return Array.from(
-    new Uint8Array(
-      await crypto.subtle.digest(
-        "SHA-256",
-        new TextEncoder().encode(canonical(value)),
-      ),
-    ),
-  )
-    .map((x) => x.toString(16).padStart(2, "0"))
-    .join("");
-}
 function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null),
     [lesson, setLesson] = useState<FullLesson | null>(null),
     [error, setError] = useState(false);
-  const requested = location.pathname.startsWith("/lesson/")
-      ? decodeURIComponent(location.pathname.slice(8))
-      : null,
+  const requested = location.pathname.startsWith("/subjects/math/lessons/")
+      ? decodeURIComponent(location.pathname.slice(23))
+      : location.pathname.startsWith("/lesson/")
+        ? decodeURIComponent(location.pathname.slice(8))
+        : null,
     print = location.pathname === "/math-paper-folding/print-templates.html";
   useEffect(() => {
     let alive = true;
@@ -427,7 +434,7 @@ function App() {
         const data = fullLessonSchema.parse(await r.json());
         if (
           data.lessonId !== requested ||
-          (await digest(data)) !== entry.dtoSha256
+          contentDigest(data) !== entry.dtoSha256
         )
           throw Error("CONTENT_HASH_MISMATCH");
         adapterFor(data);
@@ -457,10 +464,25 @@ function App() {
         </a>
         <span className="role-tag">数学内容体验 · 无需账号</span>
       </header>
+      <nav aria-label="学科导航" className="preview-subjects">
+        <a href="/subjects/math" aria-current="page">
+          数学 · 70课教学
+        </a>
+        <span aria-disabled="true">英语 · 待迁入</span>
+      </nav>
       <p className="preview-banner">
         体验模式不会保存：无真实学习数据、无账号、无成绩记录。刷新或离开课堂会清空本次操作。
       </p>
       <main id="main-content" className="reading-area" tabIndex={-1}>
+        <nav aria-label="当前位置" className="preview-breadcrumb">
+          <a href="/">学习家园</a>
+          <span>›</span>
+          <a href="/subjects/math">数学</a>
+          <span>›</span>
+          <span>
+            {requested ? "六步课堂" : print ? "折纸模板" : "教材单元目录"}
+          </span>
+        </nav>
         {error ? (
           <section role="alert">
             <h1>课堂暂时无法确认</h1>
@@ -488,7 +510,7 @@ function App() {
             ))}
           </section>
         ) : requested && lesson ? (
-          <Lesson key={lesson.lessonId} lesson={lesson} />
+          <Lesson key={lesson.lessonId} lesson={lesson} catalog={catalog} />
         ) : (
           <CatalogPage catalog={catalog} />
         )}

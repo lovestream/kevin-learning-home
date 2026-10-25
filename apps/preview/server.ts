@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { join, dirname, extname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { loadContent, hash } from "./content.ts";
+import { runtimeBoundary, type PreviewRuntime } from "./runtime.ts";
 const ROOT = fileURLToPath(new URL("../..", import.meta.url));
 const CSP =
   "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'";
@@ -19,19 +20,23 @@ export async function startPreview({
   root = ROOT,
   port = 4179,
   enabled = false,
-}: { root?: string; port?: number; enabled?: boolean } = {}) {
+  ...runtime
+}: { root?: string; port?: number; enabled?: boolean } & PreviewRuntime = {}) {
   if (!enabled) throw Error("EXPLICIT_CONTENT_PREVIEW_ENABLE_REQUIRED");
   if (!Number.isInteger(port) || port < 0 || port > 65535)
     throw Error("INVALID_PREVIEW_PORT");
+  const boundary = runtimeBoundary(runtime);
   const { catalog, lessons } = loadContent(root),
     dist = join(root, "apps/preview/dist");
   const seal = JSON.parse(readFileSync(join(dist, "seal.json"), "utf8")) as {
     schemaVersion: number;
+    buildSha: string;
     catalogSha256: string;
     files: Record<string, string>;
   };
   if (
     seal.schemaVersion !== 1 ||
+    !/^[a-f0-9]{40}$/.test(seal.buildSha) ||
     seal.catalogSha256 !==
       hash(readFileSync(join(root, "apps/preview/content/catalog.json")))
   )
@@ -56,7 +61,9 @@ export async function startPreview({
       return;
     }
     const host = req.headers.host,
-      allowed = [`127.0.0.1:${address.port}`, `localhost:${address.port}`],
+      allowed = boundary.origin
+        ? [boundary.origin.host]
+        : [`127.0.0.1:${address.port}`, `localhost:${address.port}`],
       origin = req.headers.origin;
     const headers = {
       "Cache-Control": "no-store",
@@ -81,9 +88,11 @@ export async function startPreview({
       res.end(req.method === "HEAD" ? undefined : data);
     }
     if (
+      !boundary.allowPeer(req.socket.remoteAddress ?? "") ||
       !host ||
       !allowed.includes(host) ||
-      (origin !== undefined && origin !== "http://" + host)
+      (origin !== undefined &&
+        origin !== (boundary.origin?.origin ?? "http://" + host))
     ) {
       send(403, '{"error":"PREVIEW_ORIGIN_DENIED"}');
       return;
@@ -103,6 +112,19 @@ export async function startPreview({
       send(
         200,
         '{"status":"content-only-ready","lessons":70,"database":false}',
+      );
+      return;
+    }
+    if (pathname === "/preview-api/v1/runtime") {
+      send(
+        200,
+        JSON.stringify({
+          buildSha: seal.buildSha,
+          catalogSha256: seal.catalogSha256,
+          contentOnly: true,
+          database: false,
+          lessons: 70,
+        }),
       );
       return;
     }
@@ -128,10 +150,21 @@ export async function startPreview({
       send(200, lesson.body);
       return;
     }
+    if (pathname.startsWith("/lesson/") && lessons.has(pathname.slice(8))) {
+      res
+        .writeHead(308, {
+          ...headers,
+          Location: "/subjects/math/lessons/" + pathname.slice(8),
+        })
+        .end();
+      return;
+    }
     if (
       pathname === "/" ||
+      pathname === "/subjects/math" ||
       pathname === "/math-paper-folding/print-templates.html" ||
-      (pathname.startsWith("/lesson/") && lessons.has(pathname.slice(8)))
+      (pathname.startsWith("/subjects/math/lessons/") &&
+        lessons.has(pathname.slice(23)))
     ) {
       send(200, assets.get("/index.html")!, "text/html; charset=utf-8");
       return;
@@ -145,7 +178,7 @@ export async function startPreview({
   });
   await new Promise<void>((resolve, reject) => {
     server.once("error", reject);
-    server.listen(port, "127.0.0.1", () => resolve());
+    server.listen(port, boundary.bind, () => resolve());
   });
   return server;
 }
@@ -156,13 +189,18 @@ if (
   const server = await startPreview({
     enabled: process.env.KLH_CONTENT_PREVIEW === "1",
     port: Number(process.env.KLH_PREVIEW_PORT ?? 4179),
+    runtime: process.env.KLH_PREVIEW_RUNTIME as PreviewRuntime["runtime"],
+    bindAddress: process.env.KLH_PREVIEW_BIND,
+    publicOrigin: process.env.KLH_PREVIEW_ORIGIN,
+    peers: process.env.KLH_PREVIEW_PEERS?.split(","),
   });
   const addr = server.address();
   console.log(
-    "数学内容体验：无账号、不保存，仅本机 " +
-      (typeof addr === "object" && addr
-        ? "http://127.0.0.1:" + addr.port + "/"
-        : ""),
+    "数学内容体验：无账号、不保存；入口 " +
+      (process.env.KLH_PREVIEW_ORIGIN ??
+        (typeof addr === "object" && addr
+          ? "http://127.0.0.1:" + addr.port + "/"
+          : "")),
   );
   for (const signal of ["SIGINT", "SIGTERM"])
     process.once(signal, () => server.close());

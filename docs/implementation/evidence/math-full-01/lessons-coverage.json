@@ -7,18 +7,21 @@
   "static": 6,
   "browserScenarios": 210,
   "execution": {
-    "head": "44dca2affc369f89b3540ec7e1a11f0e3a100c08",
+    "head": "35434db666603b78ccabb053716530bfc9449e14",
     "dirty": true,
     "files": {
-      "tests/math-full-01/browser.mjs": "33c84ee5ec7ebd226dd2ba1477ee627c436d5f29a0f51f6b5cf90f0d78ffff90",
+      "tests/math-full-01/browser.mjs": "1db3ca63e14a45dbc445203fc8daf74c5b1a264ebdee136817a0e7fac5e8b769",
       "tests/math-full-01/exercise.mjs": "e3fafe3d02ccf165417e3b50e9ba34c7e9e532a33a6bf0c89c1c0e0614c60ab0",
-      "apps/preview/main.tsx": "23363c251d0ca48b330a69657d4e4fa6b4bf39696db3d3de7e8c35777fffdc3c",
+      "apps/preview/main.tsx": "b52a8254d9444348c9a306ca1b85fe04e0dbcc659c9d9b382b528c192ab09b03",
       "apps/preview/contract.ts": "15ac563c2356be88f9bb4fa7953e47e578ccc9d55b9f0309824d1df8509e405f",
       "apps/preview/content.ts": "170a6099bd2a0ac75cabc75eb9025cee4c43250f0fd781f5db5e74d199ad6ff2",
-      "apps/preview/server.ts": "515e60a6a837482572a706b177b25742e041199cd32abb209aaa670d77b104e4",
+      "apps/preview/server.ts": "fdef2b1c4343b842aa7b9d26e0477d26638be7497bdb4df746abd89b63c8056f",
+      "apps/preview/runtime.ts": "ceaaa526e5b5b8f4084464931654c93cc796b44bae508fa92436a3943e340613",
+      "apps/preview/integrity.ts": "758441b686ecb550c9048b05cc705004563af0999b63c06491ed4a48490c0eb8",
+      "scripts/math-full-01/build.ts": "1352f8d7252296e77b1a233e546ac8ef781991486822459691c72229dc9245d0",
       "apps/preview/registry.tsx": "df091637447d16644d268a433b4027fed7c0bcb7ed2a208c6d09601066ae6dd9",
       "apps/preview/registry-meta.ts": "8aad5e9b0dd4b352ec02c4e873e196df5b6b5f996396e82687ffab93ab578bc9",
-      "apps/preview/preview.css": "3747abf2132703e158488f0f873c4170d40d8b6c4d42490ac888324f40494a01"
+      "apps/preview/preview.css": "220d36154bf03b57ea36160ccf84b922e1977351cfe9a8a07b02c707798174b4"
     }
   },
   "lessons": [

@@ -32,17 +32,38 @@ const representativeIds = [
 const representatives = new Map();
 for (const entry of catalog.lessons) {
   const scene = lessons.get(entry.lessonId).data.conceptScenes[0];
-  const key = scene ? scene.family + (scene.handsOnSpec ? ':' + scene.handsOnSpec.mode : '') : entry.widget;
+  const key = scene
+    ? scene.family + (scene.handsOnSpec ? ":" + scene.handsOnSpec.mode : "")
+    : entry.widget;
   const previous = representatives.get(key);
-  if (!previous || (previous.interactionStatus === 'static-visual' && entry.interactionStatus === 'verified')) representatives.set(key, entry);
+  if (
+    !previous ||
+    (previous.interactionStatus === "static-visual" &&
+      entry.interactionStatus === "verified")
+  )
+    representatives.set(key, entry);
 }
-const checkpointIds = new Set([...representativeIds, ...[...representatives.values()].map(x=>x.lessonId)]);
-const selected = checkpoint ? catalog.lessons.filter(l=>checkpointIds.has(l.lessonId)) : catalog.lessons;
-const output = ".evidence/math-full-01";
+const checkpointIds = new Set([
+  ...representativeIds,
+  ...[...representatives.values()].map((x) => x.lessonId),
+]);
+const selected = checkpoint
+  ? catalog.lessons.filter((l) => checkpointIds.has(l.lessonId))
+  : catalog.lessons;
+const nas = process.argv.includes("--nas");
+const target = process.env.KLH_PREVIEW_TEST_ORIGIN;
+if (
+  nas &&
+  (!target ||
+    target !== "http://192.168.2.100:38444" ||
+    !/^[a-f0-9]{40}$/.test(process.env.KLH_PREVIEW_EXPECT_SHA ?? ""))
+)
+  throw Error("EXPLICIT_NAS_LAN_HTTP_AND_BUILD_SHA_REQUIRED");
+if (!nas && target) throw Error("NAS_MODE_REQUIRED");
+const output = nas ? ".evidence/math-full-nas-r2" : ".evidence/math-full-01";
 fs.mkdirSync(output, { recursive: true });
-const server = await startPreview({ port: 0, enabled: true }),
-  port = server.address().port,
-  origin = "http://127.0.0.1:" + port;
+const server = nas ? null : await startPreview({ port: 0, enabled: true });
+const origin = nas ? target : "http://127.0.0.1:" + server.address().port;
 const browser = await chromium.launch({ headless: true }),
   results = [],
   errors = [];
@@ -60,6 +81,9 @@ const execution = {
       "apps/preview/contract.ts",
       "apps/preview/content.ts",
       "apps/preview/server.ts",
+      "apps/preview/runtime.ts",
+      "apps/preview/integrity.ts",
+      "scripts/math-full-01/build.ts",
       "apps/preview/registry.tsx",
       "apps/preview/registry-meta.ts",
       "apps/preview/preview.css",
@@ -99,11 +123,30 @@ try {
     });
     await page.goto(origin);
     await expect(page.locator("[data-lesson-link]")).toHaveCount(70);
+    await expect(
+      page.getByRole("navigation", { name: "学科导航" }),
+    ).toContainText("英语 · 待迁入");
+    assert.equal(await page.locator('input[type="password"]').count(), 0);
+    const liveRuntime = await (
+      await context.request.get(origin + "/preview-api/v1/runtime")
+    ).json();
+    assert.equal(liveRuntime.lessons, 70);
+    assert.equal(liveRuntime.database, false);
+    if (nas) {
+      assert.equal(liveRuntime.buildSha, process.env.KLH_PREVIEW_EXPECT_SHA);
+      assert.equal(await page.evaluate(() => window.isSecureContext), false);
+    }
+    for (const href of await page
+      .locator("[data-lesson-link]")
+      .evaluateAll((nodes) => nodes.map((n) => n.getAttribute("href"))))
+      assert(href.startsWith("/subjects/math/lessons/"));
     for (const entry of selected) {
       const begin = Date.now();
       try {
         const response = await page.goto(
-          origin + "/lesson/" + encodeURIComponent(entry.lessonId),
+          origin +
+            "/subjects/math/lessons/" +
+            encodeURIComponent(entry.lessonId),
         );
         assert.equal(response.status(), 200);
         const article = page.locator("[data-lesson-id]");
@@ -316,12 +359,20 @@ try {
   process.exitCode = 1;
 } finally {
   await browser.close();
-  await new Promise((r) => server.close(r));
+  if (server) await new Promise((r) => server.close(r));
   const summary = {
     mode: checkpoint ? "representative-checkpoint" : "all-70-all-viewports",
     filtered: checkpoint,
     execution,
     sourceCommit: catalog.sourceCommit,
+    target: nas
+      ? {
+          origin,
+          expectedBuildSha: process.env.KLH_PREVIEW_EXPECT_SHA,
+          transport: "LAN_HTTP_USER_EXPLICITLY_REQUESTED",
+          physicalIPad: "NEEDS_USER_ACTION",
+        }
+      : { mode: "LOCAL_DEVELOPMENT_ONLY" },
     elapsedMs: Date.now() - started,
     results,
     errors,

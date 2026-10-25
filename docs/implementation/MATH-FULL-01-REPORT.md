@@ -1,3 +1,5 @@
+> **R2 当前交付更正：** 用户已明确要求 NAS 局域网 HTTP，不使用证书。正在同一 PR #18 实装 `http://192.168.2.100:38444/`；见 [NAS R2 报告](MATH-FULL-01-NAS-R2-REPORT.md)。下文是 R1 的本地中间成果，不能当作 NAS 已交付或整站迁移完成。
+
 # MATH-FULL-01 执行报告
 
 2026-10-25，[Issue #15](https://github.com/lovestream/kevin-learning-home/issues/15)，分支 `codex/math-full-01-70-lessons`。**本分支 70/70 教学课堂完成，30 代表课 checkpoint 与 70×3=210 课堂场景通过；独立 Draft PR 待 ChatGPT 审查，不合并。** 本批不是 849 题或整站完成，NAS 新 70 课版本 **NOT_DEPLOYED**。

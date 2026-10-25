@@ -64,6 +64,18 @@ jobs:
           node --test --test-concurrency=1 tests/math-full-01/*.test.*
           node tests/math-full-01/browser.mjs --checkpoint
           node tests/math-full-01/browser.mjs
+      - name: NAS R2 preview-only image, LAN HTTP boundary and all 70 APIs (CI only)
+        env:
+          KLH_EXPORT_PREVIEW_IMAGE: ${{ github.event_name == 'push' && '1' || '0' }}
+        run: |
+          python3 -m unittest discover -s tests/math-preview -p 'test_*.py' -v
+          node --test tests/math-preview/*.test.mjs
+          mkdir -p .evidence/math-full-nas-r2
+          set +e
+          node tests/math-preview/container.mjs > .evidence/math-full-nas-r2/container.log 2>&1
+          task_exit=$?
+          tail -c 4000 .evidence/math-full-nas-r2/container.log
+          exit "$task_exit"
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1
