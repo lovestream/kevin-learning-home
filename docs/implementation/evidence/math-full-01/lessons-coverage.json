@@ -1,0 +1,2978 @@
+{
+  "status": "PASS",
+  "scope": "70 teaching classrooms only; not 849 practice tasks or the entire old site",
+  "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "total": 70,
+  "interactive": 64,
+  "static": 6,
+  "browserScenarios": 210,
+  "execution": {
+    "head": "44dca2affc369f89b3540ec7e1a11f0e3a100c08",
+    "dirty": true,
+    "files": {
+      "tests/math-full-01/browser.mjs": "33c84ee5ec7ebd226dd2ba1477ee627c436d5f29a0f51f6b5cf90f0d78ffff90",
+      "tests/math-full-01/exercise.mjs": "e3fafe3d02ccf165417e3b50e9ba34c7e9e532a33a6bf0c89c1c0e0614c60ab0",
+      "apps/preview/main.tsx": "23363c251d0ca48b330a69657d4e4fa6b4bf39696db3d3de7e8c35777fffdc3c",
+      "apps/preview/contract.ts": "15ac563c2356be88f9bb4fa7953e47e578ccc9d55b9f0309824d1df8509e405f",
+      "apps/preview/content.ts": "170a6099bd2a0ac75cabc75eb9025cee4c43250f0fd781f5db5e74d199ad6ff2",
+      "apps/preview/server.ts": "515e60a6a837482572a706b177b25742e041199cd32abb209aaa670d77b104e4",
+      "apps/preview/registry.tsx": "df091637447d16644d268a433b4027fed7c0bcb7ed2a208c6d09601066ae6dd9",
+      "apps/preview/registry-meta.ts": "8aad5e9b0dd4b352ec02c4e873e196df5b6b5f996396e82687ffab93ab578bc9",
+      "apps/preview/preview.css": "3747abf2132703e158488f0f873c4170d40d8b6c4d42490ac888324f40494a01"
+    }
+  },
+  "lessons": [
+    {
+      "lessonId": "G3-U01-B01",
+      "textbookUnit": "G3-U01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "1c3a2a155aa0931284e6bb1fd39f678d55391448d5d6488d22e74549296f4004",
+      "targetDTOHash": "1695c3e5dadd64ff54fedbd333c6b93490e2d14b981865918ae1bd520cafcbe7",
+      "renderer": "spatial:observe",
+      "visualComponents": [
+        "SpatialWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "立体观察",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "立体观察",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "立体观察",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "textbookUnit": "G3-U01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "d7eb06ba286d87e7667ee8b75ff0795403ae4c47a1eed1d9e4c17f684fd8ae6a",
+      "targetDTOHash": "286ed661917fea2d36abed985fb22eef5219e1349f0128cdd2a82919d4d025ee",
+      "renderer": "spatial:hidden",
+      "visualComponents": [
+        "SpatialWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "立体观察",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "立体观察",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "立体观察",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "textbookUnit": "G3-U01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "ba4e8663fa948b867fd45a494578e41fa8ee1a73fa9f654b73ff9ca53618efc5",
+      "targetDTOHash": "064e07bcf866cb6f92ec20d512eb062f4f59dbf4cc1f6d0c6c8c259b366d7b3c",
+      "renderer": "spatial:fold",
+      "visualComponents": [
+        "SpatialWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "fold-six-faces-to-100-percent",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "fold-six-faces-to-100-percent",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "fold-six-faces-to-100-percent",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "7ebc56ccce2614efa3725d9e85971a505200169da256aaeafccdfbb93a8cdecd",
+      "targetDTOHash": "7bfbf3d478733393c41c4cc088914e1bf0a66f776ad0645c1b0e03f68e635d38",
+      "renderer": "mixedOperations",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "8ab2b8e0f4aecf9269fcc6244156310ae4c4003a9b1113ff1d38f9cc451079fa",
+      "targetDTOHash": "a6efb20d272dbdc2ab05629866062a41e2c41441e0b9ff553661d06a726ed1a7",
+      "renderer": "mixedOperations",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "c2965e246f504192590297b99b62a8d2efcc43c26ecb462af26f330d7b3abd6c",
+      "targetDTOHash": "abc03dac02fdac2ae07ab6aad61681c7430e29454a44ed49191a14685b87fa71",
+      "renderer": "mixedOperations",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "8163379944784a2958fe8385c04a285dddbed8c53def59a70a64c2ad8f4f7535",
+      "targetDTOHash": "66988c495ece3d7652e13f05115e58535239c4aa7346f51565bd981811d19846",
+      "renderer": "mixedOperations",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "20ff60399f9dfe04a3d5c67e932663f85789a9abcbf9d7a532d181a438990e0f",
+      "targetDTOHash": "251ff9104ab0a796da8393e64466154b0e6d26b1a24da797babae92f646e6745",
+      "renderer": "mixedOperations",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "865e0495c2be7f80ad9006774aee776c7a7d2d56ab258500f3469d0e7d9a99c7",
+      "targetDTOHash": "44aed1006ca316e727f3cd34a04865c585a9d04daf23d04fdcd323c09f92ffd2",
+      "renderer": "mixedOperations",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "mixed-first-operation-with-intermediate",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "931678ebc0e8a814ba15613b91be8ca3286ea622dc6107f763f508c3201b84bc",
+      "targetDTOHash": "f0d246cfb3be92ccddd176d6bc9a813653bac95325c39f6fdb2ef0c9510df143",
+      "renderer": "operations:wallet",
+      "visualComponents": [
+        "OperationExtensionLab"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "computed-output:wallet",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "computed-output:wallet",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "computed-output:wallet",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "c94ae3062397913592bb35401e09a85de1e87a87cc8f909dc4ad8de0421f8e0f",
+      "targetDTOHash": "bc6d8d085d7205f28f4231a0f13feb062dccd19584ef343c4d3c861aa459a638",
+      "renderer": "operations:division-groups",
+      "visualComponents": [
+        "OperationExtensionLab"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "computed-output:division-groups",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "computed-output:division-groups",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "computed-output:division-groups",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "64ebbb8e3676a306a79a1bca6db09b0bfc942daf868ca9b150e9d219953bf358",
+      "targetDTOHash": "bf653c9f3c3c3f974c46c150637b090b166096a229ff6d0f0253fbfeadede596",
+      "renderer": "operations:laws",
+      "visualComponents": [
+        "OperationExtensionLab"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "computed-output:laws",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "computed-output:laws",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "computed-output:laws",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "959cd4832c858d77e7d2e861513a535753ba3d5acff07c65b7f38af7dbcc1841",
+      "targetDTOHash": "996ad8c3f57e8f9c1de03a0132d8081ecce9fbc2f88fb935298b42837c2712d7",
+      "renderer": "operations:split-array",
+      "visualComponents": [
+        "OperationExtensionLab"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "computed-output:split-array",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "computed-output:split-array",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "computed-output:split-array",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "a53f96189a207662761b055890d4b9346af4f077c341651fa838bc4ca704c142",
+      "targetDTOHash": "74ec007b2355949a50500c1c08bad07775dd8b8760d0da4030e5db70f3fae0cb",
+      "renderer": "operations:reverse",
+      "visualComponents": [
+        "OperationExtensionLab"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "computed-output:reverse",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "computed-output:reverse",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "computed-output:reverse",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "textbookUnit": "G3-U02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "c8991d5847c6be879c01332d50fa2c34b6ad7dffe4b2dedd31ed823a4553789f",
+      "targetDTOHash": "abecdf76e76b0f719ed679576d7dafeabe6fa8247c7640c42020809e9bcae886",
+      "renderer": "operations:substitution",
+      "visualComponents": [
+        "OperationExtensionLab"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "computed-output:substitution",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "computed-output:substitution",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "computed-output:substitution",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "textbookUnit": "G3-U03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "a9174d1bd989c4e2613de11c19c5f0302c9b60e776ae0fbf967d05a506cc82a9",
+      "targetDTOHash": "ddbc459365009c6d752c127849ec8c51db0d01ed7b5804c5b1c9d4367685745b",
+      "renderer": "lengthWorkbench",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "把零刻度对齐左端",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "把零刻度对齐左端",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "把零刻度对齐左端",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "textbookUnit": "G3-U03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "10604efdd3c332d0dde1e0230cf8e321452dac585e6a19d9cc0cce4bf2c4aa88",
+      "targetDTOHash": "df328ebb0d918e6f3f7ef05ebe7cd518be3ed0c88c9cf32475811f0f1ede80fc",
+      "renderer": "lengthWorkbench",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "再走100米",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "再走100米",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "再走100米",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "textbookUnit": "G3-UP01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "0031e328ed151a4c6ee6f18bac115e2d5aca358c0d882feb22e6f71be0faad96",
+      "targetDTOHash": "4d02c0fb5a75048ec3d34a495fff2f4937189e0075089635f9b1143f819850e9",
+      "renderer": "mass:weigh",
+      "visualComponents": [
+        "MassWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "电子秤与单位",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "电子秤与单位",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "电子秤与单位",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "textbookUnit": "G3-UP01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "913cf63285d021c8886b9d3a9b8159fa368753be0f46d547796d0d64a394ada5",
+      "targetDTOHash": "03bad1f04abe8805e1bd51ee947d88ec9697d3eaaf457de06727f26b6294c08b",
+      "renderer": "mass:boat",
+      "visualComponents": [
+        "MassWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "标记模型象的水线",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "标记模型象的水线",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "标记模型象的水线",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "textbookUnit": "G3-U04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "e69f7844cfa30bb338169fb4c541c9c11129945d6bc8c25b05612aa67ea57981",
+      "targetDTOHash": "b90b21cb5f4bce3f529e540d46db55bfb6214cb9d59733c7847f02930697d223",
+      "renderer": "textbook:product-place",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "再放入一组",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "再放入一组",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "再放入一组",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "textbookUnit": "G3-U04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "e25e2f1df9efb9e8ac9cee2b2a90c6111a0a21b04df49161ca30f49ed7dca413",
+      "targetDTOHash": "97f38bf98b5689ff67b30b27511a50a89c68f00f23006053e4a5268256c4c9b9",
+      "renderer": "textbook:place-value",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "拆1个十 → 10个一",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "拆1个十 → 10个一",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "拆1个十 → 10个一",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "textbookUnit": "G3-U04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "494c435de19f52021b67ccd0a65f6cfce1a69926cb8a3707a65c42aeafb54893",
+      "targetDTOHash": "783f63b6a0fe79c6e53cba24841626beca6bea5415e78836f335012142922d5f",
+      "renderer": "textbook:product-place",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "再放入一组",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "再放入一组",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "再放入一组",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "textbookUnit": "G3-U04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "c0496f2f773f2d762f4c083ead48621828d9f828e3d1bb3e0f95f8bdb17e35c0",
+      "targetDTOHash": "c204bd60a15d2f97ddfe32b6d20c55e9bc882f4b72de2c7a26f486eeeb8a37c9",
+      "renderer": "textbook:product-place",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "再放入一组",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "再放入一组",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "再放入一组",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "textbookUnit": "G3-U04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "7db934a8d61f14e056f4cceca27bdfa00cb21b987878e5c9b605378697e4335e",
+      "targetDTOHash": "bb8e9df08da5f39bb211ec675c37a5b019a016c4cddd17e9c4192425baae303d",
+      "renderer": "textbook:estimate-product",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "把人数估成390",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "把人数估成390",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "把人数估成390",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "textbookUnit": "G3-UP02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "1abb8135f05ce3a1456b2c255dfc89e5b589fc32c17a7ccb999bdad30424e641",
+      "targetDTOHash": "d1c2c980a954eabc10e45bc2d7a91cae5990a68d8340e47d0af47aa655cf612a",
+      "renderer": "textbook:coding",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "试试去掉分隔符",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "试试去掉分隔符",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "试试去掉分隔符",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "textbookUnit": "G3-U05",
+      "sourceStatus": "draft",
+      "interactionStatus": "static-visual",
+      "sourceHash": "963e895b1ab7558e0c8e08ad0d9c448800d69288808f2880c2d0e9c8eef3ac0b",
+      "targetDTOHash": "555ce4609f7d5888a7d6c33836dfc1e1bd9589bfad594780b588c894ad1ac34a",
+      "renderer": "static:angles",
+      "visualComponents": [
+        "StaticConceptFigure"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 768,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 1280,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [
+        "原源为静态关系图，保留纸笔指导，不标成拖动交互"
+      ],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "textbookUnit": "G3-U05",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "777ecf10cdd2bc3106d61339a4d2842aba85eabeeb3f6df7d1da18e6a71f8573",
+      "targetDTOHash": "aae8258d35954bb2743ea90a940c03baa30f0b036aa49054e0e0290f24c3f72a",
+      "renderer": "textbook:angle",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "叠上直角工具",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "叠上直角工具",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "叠上直角工具",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "textbookUnit": "G3-U05",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "d12f6d9693970f8002d3b0b5f2b90aa962ee0b0a9698deed16f11ffc2bf0107c",
+      "targetDTOHash": "7b72deda489bebe93254c1cb2f6ab8d2053f1e2b9ce4947ee0c25da134e997c2",
+      "renderer": "textbook:angle",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "叠上直角工具",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "叠上直角工具",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "叠上直角工具",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "textbookUnit": "G3-U06",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "5ccca4b9832c3110c3f5f6f3c37b16a997f01f27179c7711de0ab2adc6afaa4f",
+      "targetDTOHash": "9da4d3255eef132738cd7f36d5586b1858957840ed1d83a160eb0ad94c1b172c",
+      "renderer": "textbook:fraction",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "第1段",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "第1段",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "第1段",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "textbookUnit": "G3-U06",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "f04f2f109ebc2d7676f2b97f4479e7cd5cfe361eb5c79bd16941351051ba4456",
+      "targetDTOHash": "b9fad1d4123e67f80a2c75f48c45cb17aa11bcc2ed7c92d0d480909a237af84a",
+      "renderer": "textbook:fraction",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "第1段",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "第1段",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "第1段",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "textbookUnit": "G3-U06",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "88a471adcea61e14f0e4207dc93ced030d44b5f996ba6eacaaad75ca539acfa7",
+      "targetDTOHash": "d760156e40a04e7aa99e72704e05d11c0425e72ee82e9f4f2df1717e37dd15c6",
+      "renderer": "textbook:fraction-core",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "一小份1/8第1份",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "一小份1/8第1份",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "一小份1/8第1份",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "textbookUnit": "G3-U06",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "3295361137a554d8911e032908cb39c8b70f72b023de0a2ec1097a3344663609",
+      "targetDTOHash": "fc1b87f3cbca44fd1c66f57dffba8ae076798fe839b029f53da798cf314c866d",
+      "renderer": "textbook:fraction-core",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "第1份",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "第1份",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "第1份",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "textbookUnit": "G3-U06",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "6cb94aa3b4b7ec87be1099b6f4aed94a326006b0475ab8c6195580e252764d28",
+      "targetDTOHash": "8172d85f47a6093f0c3015513b5ba02c5d9d286883d73968e1a074f861151c20",
+      "renderer": "textbook:fraction-core",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "第1份",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "第1份",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "第1份",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "textbookUnit": "G3-U06",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "f80e77d3a2dce495094e0cbdb80c6635e259a8adc079ec5efb5ad3b3b0bd4eac",
+      "targetDTOHash": "0854a7234fc76204d51e4aa8f71f6f35ab4a485d1051cc8626db0bdde94bff40",
+      "renderer": "textbook:fraction",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "第1段",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "第1段",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "第1段",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "textbookUnit": "G3-U07",
+      "sourceStatus": "draft",
+      "interactionStatus": "static-visual",
+      "sourceHash": "3e58d32029a32bf4e40cf4a4059f77b4304f246658ad8075893d90c7aec25ea7",
+      "targetDTOHash": "6529a5ac09138a2caaf17fa9504e2eb152116f62f198ffc177c6c98f5b06a95a",
+      "renderer": "static:planning",
+      "visualComponents": [
+        "StaticConceptFigure"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 768,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 1280,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [
+        "原源为静态关系图，保留纸笔指导，不标成拖动交互"
+      ],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "textbookUnit": "G3-U07",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "d8bf4ede3c4b4bcfdb8ad87bdec0c402ca33a44e875d132854b878c2da869c30",
+      "targetDTOHash": "8342caa9a5714d6f29c33fc7c2e631189300d128992f99555996ac326b35c426",
+      "renderer": "textbook:outfits",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "上衣A",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "上衣A",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "上衣A",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "textbookUnit": "G3-L01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "f42b25d3be0f6e738f0b7d9c9f62c7b56f86fde74826fab659a04ce6f6efaa03",
+      "targetDTOHash": "3186701861414d0215c7fcd5c39edf6190568d1659aa7dbd2d0be041b0f7eb1d",
+      "renderer": "textbook:paper-fold",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "完全对折",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "完全对折",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "完全对折",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "textbookUnit": "G3-L01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "37c967cbd0cbc737bf982510e569940981a91693ffbd76a5a9a642ce9e834273",
+      "targetDTOHash": "3562b96664dbaa2c6e50dcb59fec3c5c3454bef2aacd99e1abfdc2a1198dcac1",
+      "renderer": "textbook:motion",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "向右平移两格",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "向右平移两格",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "向右平移两格",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "textbookUnit": "G3-L02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "f5fb8d13ac508fe27bc8dd5d9eef96dde765d32523ae166fe30e0e5f6c81527b",
+      "targetDTOHash": "79db6cb79676597f9a8e34d9031268fa9158fbc339e0e0d552eb0ddf48d5f753",
+      "renderer": "textbook:share-place",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "捆10个百 → 1个千",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "捆10个百 → 1个千",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "捆10个百 → 1个千",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "textbookUnit": "G3-L02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "16ba6c5ec6be9e64c7505bc6c36791832c7d4e393e2bae334745fcaffdc62e36",
+      "targetDTOHash": "a8006dcd02d903dcd54c2e198ba4a10729fa2a8aa809b1fa9bf41399d72adc4d",
+      "renderer": "textbook:division",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "拆1个十 → 10个一",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "拆1个十 → 10个一",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "拆1个十 → 10个一",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "textbookUnit": "G3-L02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "61d9c53a8741e7aeaaba9d55991a279ef32e66eb45450c7ce0456561c3b21988",
+      "targetDTOHash": "81eedb7c1f856b5d8b304bc3818d20cb77d2f1aa08e4dba67015307273e91f1a",
+      "renderer": "textbook:pack-remainder",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "装一满袋",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "装一满袋",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "装一满袋",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "textbookUnit": "G3-L02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "0e1480493dc8db121a7574a743fcf9abfeb918229be1a4550e4a8ca1d3b83ea8",
+      "targetDTOHash": "1a9a109f7df71e2b3b3250d7edb4ca04afb00158a8f594e13853f2ed77d7a608",
+      "renderer": "textbook:division",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "拆1个百 → 10个十",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "拆1个百 → 10个十",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "拆1个百 → 10个十",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "textbookUnit": "G3-L02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "cca923803b7f86ec4cf8f6fb5fe63ab1f530bbfb8f89223b6a6920b9a2141b45",
+      "targetDTOHash": "46b2c8541ea0536ba341c7287260a7e43e7b807f203ddc6981308d39f0b0b066",
+      "renderer": "textbook:nested-groups",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "第1盒 · 6个",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "第1盒 · 6个",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "第1盒 · 6个",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "textbookUnit": "G3-L02",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "9a1e970ee10c9d89026ced086e8aab5400971ec6d38b60c95af53fd9a879da07",
+      "targetDTOHash": "4db7d61349d3d05791518977001b83b963299eb9bdf7bd4512228de3ca565163",
+      "renderer": "textbook:invariant-table",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "同价商品：单价不变",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "同价商品：单价不变",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "同价商品：单价不变",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "textbookUnit": "G3-L03",
+      "sourceStatus": "draft",
+      "interactionStatus": "static-visual",
+      "sourceHash": "39fbdcaf6c86b9ac54739f76576b1043f04e2112702e68470be860dbab58ea42",
+      "targetDTOHash": "854cdaf678c98bdea852f763f3753b8ca89840ac10826162bfb0734caa2e8a7d",
+      "renderer": "static:boundary",
+      "visualComponents": [
+        "StaticConceptFigure"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 768,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 1280,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [
+        "原源为静态关系图，保留纸笔指导，不标成拖动交互"
+      ],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "textbookUnit": "G3-L03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "9f2d685ca4cb5ba3e7c0cbb23916384edb683527fff5627228f6405b988f6953",
+      "targetDTOHash": "bbab99695df08cfbae1189bbdfee2a3984b9fe49167be17d0cb82af44713c7fd",
+      "renderer": "textbook:boundary",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "描第1条外边",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "描第1条外边",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "描第1条外边",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "textbookUnit": "G3-L03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "d28ce612d6c288fd629a586bd127b018e921b025832c78a03d38a49f57f6af8a",
+      "targetDTOHash": "254553d70b80100c3b2e7b7f8a016bc681bc7cdc1063c36a676f8e1186814dc7",
+      "renderer": "textbook:joining",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "两块完整拼好",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "两块完整拼好",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "两块完整拼好",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "textbookUnit": "G3-L04",
+      "sourceStatus": "draft",
+      "interactionStatus": "static-visual",
+      "sourceHash": "f56b9ed26de5cf136e1368d87df4c4090fc8e10bbea3ab5497776865a3a53cf4",
+      "targetDTOHash": "a3f92a30f05b09c4a53825839c4781412fe24de377dee4fcc15539218ed03fd3",
+      "renderer": "static:areaGrid",
+      "visualComponents": [
+        "StaticConceptFigure"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 768,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 1280,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [
+        "原源为静态关系图，保留纸笔指导，不标成拖动交互"
+      ],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "textbookUnit": "G3-L04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "db632563bc3e78d4f3f5a613891518afff09b70f85d408c047e25d92b9c32ac7",
+      "targetDTOHash": "3161e21c185c9164efcfea1a7da553ccdc3872ceb786eb16c52fd84a7320e8a0",
+      "renderer": "textbook:tiling",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "铺第1块方砖",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "铺第1块方砖",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "铺第1块方砖",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "textbookUnit": "G3-L04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "19a60be971cba2283602f0dbc378e22385ae5692a8c70b4d47660f5e14104cbf",
+      "targetDTOHash": "b8e663f5ed376d3d444861c68f0c7265a08f0eddc93b514a3fb6f2a08c155d4a",
+      "renderer": "textbook:cut-area",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "把剪块移到右边",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "把剪块移到右边",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "把剪块移到右边",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "textbookUnit": "G3-L05",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "d4e105afdb2d76bd51c25cdf3ac9e4f46be1bd8025027af35cb2bd0359d5be17",
+      "targetDTOHash": "76356bdea54b22df7d59e417d2dcd4650cd186674fb62434e67d2d58f752f7a3",
+      "renderer": "textbook:vote",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "classify-record-once:vote",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "classify-record-once:vote",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "classify-record-once:vote",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "textbookUnit": "G3-L05",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "890b5fb166acab28436c2b5ee1d573b5492fc31bc822c8b49011f27a1d7a8b69",
+      "targetDTOHash": "a8ae077548241616f54d5b5a83444e2bad39d25e1951e54bfde4e6f414d59ccb",
+      "renderer": "textbook:data-bins",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "classify-record-once:data-bins",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "classify-record-once:data-bins",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "classify-record-once:data-bins",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "textbookUnit": "G3-LP01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "e7b7456bd73b0e20875c548985bc6d0823b062443f323d5ff401a121169cd25d",
+      "targetDTOHash": "2b1467f831be893b2f19f74f47909d2f85468e2ca3d86b22730ae18e1a5bc9a2",
+      "renderer": "textbook:calendar",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "2023年2月",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "2023年2月",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "2023年2月",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "textbookUnit": "G3-LP01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "ffe5c8daa99a63203b49c6786cf07abada6e9718f53388896fb659cb59d67235",
+      "targetDTOHash": "b41303c6f10d4e200d0f31c9dffd84afc761898877f4412b1b1e83c7b7dbbca8",
+      "renderer": "textbook:clock",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "向前1分钟",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "向前1分钟",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "向前1分钟",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "textbookUnit": "G3-LP01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "add077836b1ed9c3f17f52401f7fadff7d7aa6d34dfeda4963c32ff088b77a80",
+      "targetDTOHash": "15c42395e2e9c37c31e96f4b6c9cfc405610bcfd53fb954f195e2f70bbde83ef",
+      "renderer": "textbook:calendar",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "2023年2月",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "2023年2月",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "2023年2月",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "textbookUnit": "G3-L06",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "aac82509641b669b64ec9035c0542e40bfc79f19368091c9c7150d193a448970",
+      "targetDTOHash": "5cde866aafff185196c25f25e1d7dbfb6ab31427ce1192648ba4a84a23ded262",
+      "renderer": "textbook:decimal",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "0",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "0",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "0",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "textbookUnit": "G3-L06",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "2f5f88808f0bed013de9adb927ba2170d6614ff23b8ee751803176d205b51bbb",
+      "targetDTOHash": "3790adff10f823e26357203f5de4f409596ab75b2b5f998bfe47a27373ccf00c",
+      "renderer": "textbook:decimal",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "0",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "0",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "0",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "textbookUnit": "G3-L06",
+      "sourceStatus": "draft",
+      "interactionStatus": "static-visual",
+      "sourceHash": "b325c24b6a2be3c9ed822f2fb50c3fe5c0c189702ecf2c4e16afae88e47b09a8",
+      "targetDTOHash": "671d6e1235cd444c705d4bbbe2fe5144c9c9af26ff51c949febf76312f11ffef",
+      "renderer": "static:decimals",
+      "visualComponents": [
+        "StaticConceptFigure"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 768,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 1280,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [
+        "原源为静态关系图，保留纸笔指导，不标成拖动交互"
+      ],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "textbookUnit": "G3-L07",
+      "sourceStatus": "draft",
+      "interactionStatus": "static-visual",
+      "sourceHash": "361e0ba2c36fe13bebd1b0f75ed8c6a068088a2159b820cae4226ed80ef6ece0",
+      "targetDTOHash": "3c7014e50dcacefa7ff428a73c22cc6cab07f20a09e417ec4d82a2d6102013e0",
+      "renderer": "static:sets",
+      "visualComponents": [
+        "StaticConceptFigure"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 768,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        },
+        {
+          "viewport": 1280,
+          "action": "STATIC_PAPER_GUIDANCE",
+          "interactive": false
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [
+        "原源为静态关系图，保留纸笔指导，不标成拖动交互"
+      ],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "textbookUnit": "G3-L07",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "0cec72f928e57f99bf2f040c078ba93b1587703a2d97ebe5b2ba7d33445abe0f",
+      "targetDTOHash": "57929806af6f44c0401b5631e3b4c1f9dfe1f41f98a5ae0a3073015a2fd799bf",
+      "renderer": "textbook:sets",
+      "visualComponents": [
+        "TextbookWorkbench"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "classify-record-once:sets",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "classify-record-once:sets",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "classify-record-once:sets",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "textbookUnit": "G3-U03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "bf4f354f38237ecd08c309feb2245bf6dea3e5e526705b708094c2e6bdd0146f",
+      "targetDTOHash": "c944c9f6ad30a437dcee2cdec333759830856dbde01dfa0f831050d623e5b4ea",
+      "renderer": "lengthWorkbench",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "两板首尾相接",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "两板首尾相接",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "两板首尾相接",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "textbookUnit": "G3-U03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "0096681516461878cfd5d07003cfe6d2efaae08e04c7747e95f693fb97d2f1a8",
+      "targetDTOHash": "b9aa598e9c231352b4cb591e40aa237fb6d30ab9c8c9816cd956e774b4e00648",
+      "renderer": "lengthWorkbench",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "逐个新增",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "逐个新增",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "逐个新增",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "textbookUnit": "G3-U03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "ac424f2eecbc3afa32114da068856e2d0cf819f2b313e4c15de017dfb768d259",
+      "targetDTOHash": "22cee684f346eefeb65e8d31437dec3c5109ecb6031160fbee8c21fc2d6fe671",
+      "renderer": "lengthWorkbench",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "一条直绳",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "一条直绳",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "一条直绳",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "textbookUnit": "N07",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "bbc3899b6be2fe67eae24c27fba7ecc888a5fc7eef030b9e83862effad669651",
+      "targetDTOHash": "d66c46eb7b75f41ab772d6b678e526eeaf5e01498ed8cefaf5b54c5476f90540",
+      "renderer": "fraction",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "全部放回去",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "全部放回去",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "全部放回去",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "textbookUnit": "G04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "5377f801e8d9356e4a4ea7e3bb9995edf00bde5d98558bd93bbb14fae6eef9c0",
+      "targetDTOHash": "27cc02e1483de030823faf66d3f599f2f927a60154b87d63a07fc7eb66f9bbd9",
+      "renderer": "area",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "3排 · 每排4块",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "3排 · 每排4块",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "3排 · 每排4块",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "textbookUnit": "A04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "ebd883bd98f01fb4521a9593c2b16247af6aea93a71f05e5b6e4281948c95765",
+      "targetDTOHash": "2b505da6ccebf5b56b67d77b0552fd08966eaf0c8df39d8952f3009c124fbcc8",
+      "renderer": "substitution",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "第1盒点心盒里面：1袋＋2颗点我打开",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "第1盒点心盒里面：1袋＋2颗点我打开",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "第1盒点心盒里面：1袋＋2颗点我打开",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "textbookUnit": "A04",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "63f0c178c3c3c8cc3da31721b2f917049896c5bb8bca3b5182fdb4f6847bc9d2",
+      "targetDTOHash": "caae27d098a7bd6d2f737fe7cb3cefb90fb80d3e8fa694dbfd097259e3e92820",
+      "renderer": "balance",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "1袋＋3颗，共10颗",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "1袋＋3颗，共10颗",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "1袋＋3颗，共10颗",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "textbookUnit": "N01",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "fe796a9661db48715ef38ec7709ea9b0fd5ba875af2dbcf4c647ac028baf1d04",
+      "targetDTOHash": "2de4824e89e8c785d8496f82f3549ad501caf81e2f64581936eebc363ca013f7",
+      "renderer": "quantity",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "饭盒 1＋点我放苹果",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "饭盒 1＋点我放苹果",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "饭盒 1＋点我放苹果",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "textbookUnit": "N03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "0f347780505fc1f79448b0ac69c4f20ffe34acd0dbb8865c8b5d3da304833ad2",
+      "targetDTOHash": "96423aaa74161cc40c13103a12431ed3a4845df36dac3709ddbcf1cf7cc9d979",
+      "renderer": "addition",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "合起来看看",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "合起来看看",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "合起来看看",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "textbookUnit": "N03",
+      "sourceStatus": "draft",
+      "interactionStatus": "verified",
+      "sourceHash": "7bd676d4eb8c9a2cd77d4a621b482e83caa1c9158847f79125c8955aaafe2a45",
+      "targetDTOHash": "4f2a88995faf065417f8e9078328f42d8f49ea86c4d78e603afe3b96ba41193b",
+      "renderer": "subtraction",
+      "visualComponents": [
+        "TeachingWidget"
+      ],
+      "sixSteps": "PASS",
+      "actualPublicGET": "PASS",
+      "browserDOM": "PASS",
+      "operatedModels": [
+        {
+          "viewport": 390,
+          "action": "送出贴纸：求剩下",
+          "interactive": true
+        },
+        {
+          "viewport": 768,
+          "action": "送出贴纸：求剩下",
+          "interactive": true
+        },
+        {
+          "viewport": 1280,
+          "action": "送出贴纸：求剩下",
+          "interactive": true
+        }
+      ],
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "refreshClearsState": true,
+      "persistentBrowserEntries": 0,
+      "knownGaps": [],
+      "intendedLimitations": [],
+      "acceptance": "PASS"
+    }
+  ]
+}

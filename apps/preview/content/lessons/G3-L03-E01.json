@@ -1,0 +1,155 @@
+{
+  "lessonId": "G3-L03-E01",
+  "contentVersion": "2026-10-18.1",
+  "editorialRevision": "2026-10-18.1",
+  "status": "draft",
+  "title": "拼在一起以后，哪些边不再露在外面",
+  "shortTitle": "拼在一起以后，哪些边不再露在外…",
+  "question": "两个边长3厘米的方形相框并排拼成一块板，外面绕一圈需要24厘米吗？",
+  "subtitle": "拼接前共有两条相同的接缝边；拼接后它们都在内部，不属于外边界。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "enhancement",
+  "parentUnitId": "G3-L03",
+  "recommendedPrerequisites": [
+    "G3-L03-B02；本课实践与周长优化有教材依据。"
+  ],
+  "relatedLessonIds": [
+    "G3-L03-B01",
+    "G3-L03-B02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "两块边长3厘米的实心正方形板，沿一条完整边紧紧拼在一起。外面绕一圈，还是两块原来的周长合计24厘米吗？",
+    "predictQuestion": "两块方板拼在一起，共同的边还在外圈吗？",
+    "predictionOptions": [
+      "只去掉一条就够了",
+      "不在，接缝成了内部",
+      "还在，要都算"
+    ],
+    "discovery": [
+      "拼接前共有两条相同的接缝边；拼接后它们都在内部，不属于外边界。"
+    ],
+    "symbols": [
+      "两个周长的和−2×接缝长",
+      "4×3×2−2×3＝18（厘米）"
+    ],
+    "mission": "指认两条被藏进内部的边，再数外圈。",
+    "retell": "为什么算外周长时，同一接缝长度要从两块原周长中各去一次？",
+    "observedEvidence": "找出两块板上成为内部的两条接缝边。",
+    "whyQuestion": "为什么算外周长时，同一接缝长度要从两块原周长中各去一次？",
+    "counterexamplePrompt": "只减一条接缝，还有哪一块板的内部边被算进外圈？",
+    "predictionFocus": "两块方板拼在一起，共同的边还在外圈吗？"
+  },
+  "storyVisual": {
+    "type": "joined-squares",
+    "title": "两个方形相框并排拼接",
+    "caption": "每块边长3厘米。虚线是两块之间的接缝，不是拼好后外边界上的一段。",
+    "values": [
+      3
+    ],
+    "labels": [
+      "厘米"
+    ]
+  },
+  "predictionVisual": {
+    "type": "joined-squares",
+    "title": "两个方形相框并排拼接",
+    "caption": "每块边长3厘米。虚线是两块之间的接缝，不是拼好后外边界上的一段。",
+    "values": [
+      3
+    ],
+    "labels": [
+      "厘米"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "两块边长3厘米正方形沿一条完整边拼接，新外周长多少？",
+      "steps": [
+        {
+          "math": "12+12=24",
+          "why": "合计周长12+12=24。",
+          "expressionBefore": "12+12",
+          "operation": "=",
+          "expressionAfter": "24"
+        },
+        {
+          "math": "减掉两次接缝3厘米。",
+          "why": "减掉两次接缝3厘米。"
+        },
+        {
+          "math": "结论：18厘米。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L03-E01-OBJ1",
+      "action": "解释拼接周长变化，系统比较同数量方格的外边界。",
+      "scope": "解释拼接周长变化，系统比较同数量方格的外边界。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L03",
+    "title": "长方形和正方形",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "39–51",
+    "notes": "多边形、边角特征、周长、拼图与周长优化，包含单元实践。",
+    "sequence": [
+      "G3-L03-B01",
+      "G3-L03-B02",
+      "G3-L03-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L03-E01-MODEL1",
+      "family": "boundary",
+      "variant": "G3-L03-E01",
+      "title": "拼在一起以后",
+      "prompt": "解释拼接周长变化，系统比较同数量方格的外边界。",
+      "initialState": "两块3厘米正方形分开，共8条边；接缝各有颜色。",
+      "learnerAction": "沿完整边拼接，再只点仍在外边界的边。",
+      "observableChange": "合周长24减两段3，得18；内部接缝不计。",
+      "question": "用两种颜色指出接缝为什么要减两次。",
+      "wrongActionFeedback": "只减3时分别追踪原来两条边，解释两条都变成内部。",
+      "guidance": [
+        {
+          "label": "原两块周长合24",
+          "explanation": "原两块周长合24。"
+        },
+        {
+          "label": "接缝长3",
+          "explanation": "接缝长3，被原周长计算了两次。"
+        },
+        {
+          "label": "新周长24−2×3=18",
+          "explanation": "新周长24−2×3=18；面积没有因拼接消失。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "拼在一起以后，哪些边不再露在外面",
+        "两个3×3正方形沿整边拼成长6宽3长方形；把两条接缝标记再从外圈中划去。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "joining",
+        "title": "拖方块拼合，再沿外边走",
+        "version": "textbook.v1",
+        "side": 3
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

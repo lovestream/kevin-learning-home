@@ -1,0 +1,176 @@
+{
+  "lessonId": "G3-U02-E02",
+  "contentVersion": "2026-10-18.1",
+  "editorialRevision": "2026-10-18.1",
+  "status": "draft",
+  "title": "连续除与括号里的乘除，为什么有关联",
+  "shortTitle": "连续除与括号里的乘除，为什么有…",
+  "question": "48张卡先平分给6组，每组再平分给2人。每人分到几张？",
+  "subtitle": "每人属于全部6×2个人之一，所以连除可合成除以人数的乘积；这不是随意挪动括号。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "enhancement",
+  "parentUnitId": "G3-U02",
+  "recommendedPrerequisites": [
+    "G3-U02-B03；表内乘除。"
+  ],
+  "relatedLessonIds": [
+    "G3-U02-B01",
+    "G3-U02-B02",
+    "G3-U02-B03",
+    "G3-U02-B04",
+    "G3-U02-B05",
+    "G3-U02-E01",
+    "G3-U02-E03",
+    "G3-U02-E04",
+    "G3-U02-E05",
+    "G3-U02-O01",
+    "G3-U02-O02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "48张卡先平分给6组，每组再平分给2人。每人分到几张？",
+    "predictQuestion": "6组每组2人，总人数怎样求？",
+    "predictionOptions": [
+      "6÷2人",
+      "6＋2人",
+      "6×2人"
+    ],
+    "discovery": [
+      "每人属于全部6×2个人之一，所以连除可合成除以人数的乘积；这不是随意挪动括号。"
+    ],
+    "symbols": [
+      "48÷6÷2＝48÷(6×2)",
+      "先找总人数，而不是把组数除以2"
+    ],
+    "mission": "比较分两次与一次分给所有人的结果。",
+    "retell": "分给6组后又分给每组2人，为什么等于分给6×2人？",
+    "observedEvidence": "指出6个组中每组的2个人，再数所有人。",
+    "whyQuestion": "分给6组后又分给每组2人，为什么等于分给6×2人？",
+    "counterexamplePrompt": "48÷(6÷2)表示分给几份，和原来的12人一样吗？",
+    "predictionFocus": "6组每组2人，总人数怎样求？"
+  },
+  "storyVisual": {
+    "type": "nested-share",
+    "title": "先分到组，再分给组内的人",
+    "caption": "框表示组，圆点表示人；每人分到的卡片数还不知道。",
+    "values": [
+      48,
+      6,
+      2
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "nested-share",
+    "title": "先分到组，再分给组内的人",
+    "caption": "框表示组，圆点表示人；每人分到的卡片数还不知道。",
+    "values": [
+      48,
+      6,
+      2
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "48张卡先分6组、每组2人，每人多少张？若改成48÷(6÷2)，还表示同一分法吗？",
+      "steps": [
+        {
+          "math": "6×2=12",
+          "why": "总人数6×2=12，每人4张。",
+          "expressionBefore": "6×2",
+          "operation": "=",
+          "expressionAfter": "12"
+        },
+        {
+          "math": "6÷2=3；48÷3=16",
+          "why": "6÷2=3，48÷3=16，代表只分3份。",
+          "expressionBefore": "6÷2",
+          "operation": "=",
+          "expressionAfter": "3；48÷3"
+        },
+        {
+          "math": "结论：4张；另一个式子是16，不是同一分法。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U02-E02-OBJ1",
+      "action": "用具体整除例子区分a÷b÷c与a÷(b÷c)，不把除法当成结合律。",
+      "scope": "用具体整除例子区分a÷b÷c与a÷(b÷c)，不把除法当成结合律。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U02",
+    "title": "混合运算",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "6–19",
+    "notes": "教材印刷6–19页为主线。先完成B01–B05；E01→E03解释去/添括号，E02比较除以积与除以商，E04/E05用具体数体验运算律，O01/O02为可选思想。ID稳定，顺序以本表为准；不要求连续做完所有提升。",
+    "sequence": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U02-E02-MODEL1",
+      "family": "operations",
+      "variant": "G3-U02-E02",
+      "title": "连续除与括号里的乘除",
+      "prompt": "用具体整除例子区分a÷b÷c与a÷(b÷c)，不把除法当成结合律。",
+      "initialState": "48张卡、6组每组2人；另一个面板48张卡分给6÷2=3人。",
+      "learnerAction": "先把人数卡组成6×2，比较两级分配和直接12等分；再切到3等分。",
+      "observableChange": "48÷6÷2与48÷(6×2)均4；48÷(6÷2)为16。",
+      "question": "画出“6组每组2人”和“6÷2组”有什么不同。",
+      "wrongActionFeedback": "把×2改成÷2时人数从12变3；提示被平均分成的份数已经改变。",
+      "guidance": [
+        {
+          "label": "48÷6÷2=4",
+          "explanation": "48÷6÷2=4，对应48÷(6×2)。"
+        },
+        {
+          "label": "48÷(6÷2)=16",
+          "explanation": "48÷(6÷2)=16，对应48÷6×2。"
+        },
+        {
+          "label": "乘号与除号的变化取决于分组含义",
+          "explanation": "乘号与除号的变化取决于分组含义；本课限定正整数与各步整除，不能除以0。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "连续除与括号里的乘除，为什么有关联",
+        "画6组、每组2人，共12个相等份；再比较只分给6÷2=3组的另一情境。"
+      ],
+      "modelStatus": "registered",
+      "modelSpec": {
+        "type": "division-groups",
+        "total": 48,
+        "groups": 6,
+        "perGroup": 2
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

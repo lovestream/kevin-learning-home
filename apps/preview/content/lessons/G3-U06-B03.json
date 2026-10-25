@@ -1,0 +1,225 @@
+{
+  "lessonId": "G3-U06-B03",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "分数加减，先确认数的是同一种小份",
+  "shortTitle": "分数加减，先确认数的是同一种小…",
+  "question": "一块饼上午吃2/8，下午吃3/8，一共吃多少，还剩多少？",
+  "subtitle": "把相同的小份合并时，份的大小不变，只改变份数；这与2支加3支的道理相通。",
+  "grade": [
+    3
+  ],
+  "strand": "fractions",
+  "track": "foundation",
+  "parentUnitId": "G3-U06",
+  "recommendedPrerequisites": [
+    "G3-U06-B02。"
+  ],
+  "relatedLessonIds": [
+    "G3-U06-B01",
+    "G3-U06-B02",
+    "G3-U06-B04",
+    "G3-U06-B05",
+    "G3-U06-E01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "一块饼上午吃2/8，下午吃3/8，一共吃多少，还剩多少？",
+    "predictQuestion": "上午2份下午3份合起来，每小份会变大吗？",
+    "predictionOptions": [
+      "会变成十六分之一",
+      "份的大小和份数都翻倍",
+      "不会，只增加份数"
+    ],
+    "discovery": [
+      "把相同的小份合并时，份的大小不变，只改变份数；这与2支加3支的道理相通。"
+    ],
+    "symbols": [
+      "2/8＋3/8＝5/8",
+      "1−5/8＝3/8"
+    ],
+    "mission": "在同一块饼上合并两次取出的八分之一。",
+    "retell": "合并两次取用，为什么只加份数、不把分母加成16？",
+    "observedEvidence": "先取的2份与再取的3份都来自同一块饼的8等份。",
+    "whyQuestion": "合并两次取用，为什么只加份数、不把分母加成16？",
+    "counterexamplePrompt": "把2份又取一次当新取的3份，会把同一块饼的哪部分重复计数？",
+    "predictionFocus": "上午2份下午3份合起来，每小份会变大吗？"
+  },
+  "storyVisual": {
+    "type": "fraction-strip",
+    "title": "同一块饼的两次取用",
+    "caption": "蓝色表示上午吃的2份，橙色表示下午吃的3份，每份都是这块饼的八分之一。",
+    "values": [
+      8,
+      2,
+      3
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "fraction-strip",
+    "title": "同一块饼的两次取用",
+    "caption": "蓝色表示上午吃的2份，橙色表示下午吃的3份，每份都是这块饼的八分之一。",
+    "values": [
+      8,
+      2,
+      3
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "一块饼吃去2/8又吃去3/8，还剩多少？",
+      "steps": [
+        {
+          "math": "共吃5/8。",
+          "why": "共吃5/8。"
+        },
+        {
+          "math": "1=8/8；8/8−5/8=3/8",
+          "why": "1=8/8，8/8−5/8=3/8。",
+          "expressionBefore": "1",
+          "operation": "=",
+          "expressionAfter": "8/8；8/8−5/8"
+        },
+        {
+          "math": "结论：剩3/8块。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U06-B03-OBJ1",
+      "action": "解释同分母分数加减和1减几分之几。",
+      "scope": "解释同分母分数加减和1减几分之几。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U06",
+    "title": "分数的初步认识",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "73–91",
+    "notes": "几分之一、几分之几、同分母比较与加减、一个整体及一组物品的分数。",
+    "sequence": [
+      "G3-U06-B01",
+      "G3-U06-B02",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05",
+      "G3-U06-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U06-B03-MODEL1",
+      "family": "fractions",
+      "variant": "G3-U06-B03",
+      "title": "分数加减",
+      "prompt": "解释同分母分数加减和1减几分之几。",
+      "initialState": "同一块饼先吃2/8，后来吃3/8；一共吃多少，还剩多少？",
+      "learnerAction": "在同一块饼上合并两次取出的八分之一。",
+      "observableChange": "先取的2份与再取的3份都来自同一块饼的8等份。",
+      "question": "合并两次取用，为什么只加份数、不把分母加成16？",
+      "wrongActionFeedback": "选5/16时要求指出16等份在哪里，撤回无依据改分母。",
+      "guidance": [
+        {
+          "label": "2个1/8加3个1/8是5个1/8",
+          "explanation": "2个1/8加3个1/8是5个1/8。"
+        },
+        {
+          "label": "完整1可写成8/8",
+          "explanation": "完整1可写成8/8。"
+        },
+        {
+          "label": "剩8/8−5/8=3/8",
+          "explanation": "剩8/8−5/8=3/8；本课不把异分母规则提前硬塞。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "分数加减，先确认数的是同一种小份",
+        "同一纸带8格：先涂2格再涂不重叠的3格；分母仍是8。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "fraction-core",
+        "title": "同一块饼，两次拿走的份不能重叠",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            8,
+            2,
+            3
+          ],
+          [
+            6,
+            1,
+            2
+          ],
+          [
+            10,
+            3,
+            4
+          ],
+          [
+            4,
+            1,
+            2
+          ],
+          [
+            8,
+            3,
+            5
+          ],
+          [
+            6,
+            2,
+            3
+          ]
+        ],
+        "mode": "add",
+        "contexts": [
+          {
+            "story": "同一块饼先吃2/8，后来吃3/8；一共吃多少，还剩多少？",
+            "unit": "份",
+            "kind": "strip"
+          },
+          {
+            "story": "同一块饼先吃1/6，后来吃2/6；一共吃多少，还剩多少？",
+            "unit": "份",
+            "kind": "strip"
+          },
+          {
+            "story": "同一块饼先吃3/10，后来吃4/10；一共吃多少，还剩多少？",
+            "unit": "份",
+            "kind": "strip"
+          },
+          {
+            "story": "同一块饼先吃1/4，后来吃2/4；一共吃多少，还剩多少？",
+            "unit": "份",
+            "kind": "strip"
+          },
+          {
+            "story": "同一块饼先吃3/8，后来吃5/8；一共吃多少，还剩多少？",
+            "unit": "份",
+            "kind": "strip"
+          },
+          {
+            "story": "同一根木条，先锯下全长的2/6，再锯下原来全长的3/6。总共锯去几分之几？第二次仍以原来的整根为整体。",
+            "unit": "份",
+            "kind": "strip"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

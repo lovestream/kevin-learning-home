@@ -1,0 +1,229 @@
+{
+  "lessonId": "G3-U04-B04",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "乘数中的0，为什么不能跳过它的位置",
+  "shortTitle": "乘数中的0，为什么不能跳过它的…",
+  "question": "604个座位组成一个区，8个区共有多少？十位0意味着整个数只剩64吗？",
+  "subtitle": "0占住缺少的计数单位；省略它的位置会把600变成60。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U04",
+  "recommendedPrerequisites": [
+    "G3-U04-B03。"
+  ],
+  "relatedLessonIds": [
+    "G3-U04-B01",
+    "G3-U04-B02",
+    "G3-U04-B03",
+    "G3-U04-B05"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "604个座位组成一个区，8个区共有多少？十位0意味着整个数只剩64吗？",
+    "predictQuestion": "604的十位是0，可以把它写成64吗？",
+    "predictionOptions": [
+      "只算6×8就够了",
+      "不可以，数位会变",
+      "可以，0不用看"
+    ],
+    "discovery": [
+      "0占住缺少的计数单位；省略它的位置会把600变成60。"
+    ],
+    "symbols": [
+      "604＝600＋0＋4",
+      "604×8＝600×8＋4×8"
+    ],
+    "mission": "保留没有十的位置，核对8个区的座位。",
+    "retell": "604中的0为什么不能删；乘的时候进来的十还能放哪里？",
+    "observedEvidence": "把604的百、十、个位与64分别摆出来。",
+    "whyQuestion": "604中的0为什么不能删；乘的时候进来的十还能放哪里？",
+    "counterexamplePrompt": "604的十位是0，能据此断定604×8的十位也一定是0吗？",
+    "predictionFocus": "604的十位是0，可以把它写成64吗？"
+  },
+  "storyVisual": {
+    "type": "groups",
+    "title": "8个区，每区604个座位",
+    "caption": "每个框是一个区，604表示这个区里的座位数，十位的0也保留。",
+    "values": [
+      8,
+      604
+    ],
+    "labels": [
+      "个座位"
+    ]
+  },
+  "predictionVisual": {
+    "type": "groups",
+    "title": "8个区，每区604个座位",
+    "caption": "每个框是一个区，604表示这个区里的座位数，十位的0也保留。",
+    "values": [
+      8,
+      604
+    ],
+    "labels": [
+      "个座位"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "205×4是多少，为什么答案不是8200？",
+      "steps": [
+        {
+          "math": "5×4=20",
+          "why": "5×4=20，写0进2。",
+          "expressionBefore": "5×4",
+          "operation": "=",
+          "expressionAfter": "20"
+        },
+        {
+          "math": "0×4+2=2",
+          "why": "十位0×4+2=2。",
+          "expressionBefore": "0×4+2",
+          "operation": "=",
+          "expressionAfter": "2"
+        },
+        {
+          "math": "2×4=8",
+          "why": "百位2×4=8。",
+          "expressionBefore": "2×4",
+          "operation": "=",
+          "expressionAfter": "8"
+        },
+        {
+          "math": "结论：820。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U04-B04-OBJ1",
+      "action": "理解0乘任何数得0，区分中间0和末尾0。",
+      "scope": "理解0乘任何数得0，区分中间0和末尾0。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U04",
+    "title": "多位数乘一位数",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "39–56",
+    "notes": "口算、竖式、连续进位、零、估算与解决问题；分配律以拆分模型体验。",
+    "sequence": [
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-U04-B05"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U04-B04-MODEL1",
+      "family": "placeValue",
+      "variant": "G3-U04-B04",
+      "title": "乘数中的0",
+      "prompt": "理解0乘任何数得0，区分中间0和末尾0。",
+      "initialState": "每区604个座位，共8区，一共有多少座位？",
+      "learnerAction": "保留没有十的位置，核对8个区的座位。",
+      "observableChange": "把604的百、十、个位与64分别摆出来。",
+      "question": "604中的0为什么不能删；乘的时候进来的十还能放哪里？",
+      "wrongActionFeedback": "删0把2百挤成2十时冻结列宽，展示数位意义已改变。",
+      "guidance": [
+        {
+          "label": "604×8个位得32",
+          "explanation": "604×8个位得32，十位0×8加3进位得3。"
+        },
+        {
+          "label": "百位6×8=48",
+          "explanation": "百位6×8=48。"
+        },
+        {
+          "label": "600×8可看6个百的8倍",
+          "explanation": "600×8可看6个百的8倍；末尾0来自单位。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "乘数中的0，为什么不能跳过它的位置",
+        "百十个位表中填604；个位乘积仍可能向十位进位。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "product-place",
+        "title": "0保留数位，进来的十仍要接住",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            604,
+            8
+          ],
+          [
+            305,
+            6
+          ],
+          [
+            240,
+            4
+          ],
+          [
+            508,
+            7
+          ],
+          [
+            700,
+            9
+          ],
+          [
+            406,
+            5
+          ]
+        ],
+        "mode": "zero",
+        "contexts": [
+          {
+            "story": "每区604个座位，共8区，一共有多少座位？",
+            "unit": "个",
+            "group": "区"
+          },
+          {
+            "story": "每区305个座位，共6区，一共有多少座位？",
+            "unit": "个",
+            "group": "区"
+          },
+          {
+            "story": "每区240个座位，共4区，一共有多少座位？",
+            "unit": "个",
+            "group": "区"
+          },
+          {
+            "story": "每区508个座位，共7区，一共有多少座位？",
+            "unit": "个",
+            "group": "区"
+          },
+          {
+            "story": "每区700个座位，共9区，一共有多少座位？",
+            "unit": "个",
+            "group": "区"
+          },
+          {
+            "story": "5袋米，每袋406克。总质量多少克？袋数变了，中间0的数位能不能省掉？",
+            "unit": "克",
+            "group": "袋"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

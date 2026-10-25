@@ -1,0 +1,218 @@
+{
+  "lessonId": "G3-L02-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "把几十、几百平均分，先看计数单位",
+  "shortTitle": "把几十、几百平均分，先看计数单…",
+  "question": "把90张纸平分3人，怎样把9个十平均分，而不一张张发？",
+  "subtitle": "除法可以分计数单位；90÷3分的是9个十，所得3个十。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-L02",
+  "recommendedPrerequisites": [
+    "三上位值、乘法与平均分。"
+  ],
+  "relatedLessonIds": [
+    "G3-L02-B02",
+    "G3-L02-B03",
+    "G3-L02-B04",
+    "G3-L02-B05",
+    "G3-L02-B06"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "把90张纸平分3人，怎样把9个十平均分，而不一张张发？",
+    "predictQuestion": "90张纸平均分3人，可以先分9个十吗？",
+    "predictionOptions": [
+      "可以，计数单位也是十",
+      "不可以，只能逐张分",
+      "先把90变成9张"
+    ],
+    "discovery": [
+      "除法可以分计数单位；90÷3分的是9个十，所得3个十。"
+    ],
+    "symbols": [
+      "9个十÷3＝3个十",
+      "90÷3＝30"
+    ],
+    "mission": "分十捆再换成张数，检查每人一样多。",
+    "retell": "分得3个十，为什么不能把答案写成3张？",
+    "observedEvidence": "把9个十分给3人，保留每一捆的十张标签。",
+    "whyQuestion": "分得3个十，为什么不能把答案写成3张？",
+    "counterexamplePrompt": "进入96张情境：另有6张，也要分给同样3人吗？",
+    "predictionFocus": "90张纸平均分3人，可以先分9个十吗？"
+  },
+  "storyVisual": {
+    "type": "groups",
+    "title": "90张纸，准备平分给3人",
+    "caption": "每捆是10张纸，9捆合计90张；三个人的框还空着。",
+    "values": [
+      3,
+      90
+    ],
+    "labels": [
+      "张纸"
+    ]
+  },
+  "predictionVisual": {
+    "type": "groups",
+    "title": "90张纸，准备平分给3人",
+    "caption": "每捆是10张纸，9捆合计90张；三个人的框还空着。",
+    "values": [
+      3,
+      90
+    ],
+    "labels": [
+      "张纸"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "96张纸平分3人，每人多少？",
+      "steps": [
+        {
+          "math": "90张每人30张。",
+          "why": "90张每人30张。"
+        },
+        {
+          "math": "6张每人2张，合起来32。",
+          "why": "6张每人2张，合起来32。"
+        },
+        {
+          "math": "结论：32张。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L02-B01-OBJ1",
+      "action": "用位值理解口算除法，选合适近似数估商。",
+      "scope": "用位值理解口算除法，选合适近似数估商。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L02",
+    "title": "除数是一位数的除法",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "10–38",
+    "notes": "口算估算、竖式与余数验算、商含0、连乘连除、归一归总、整理；和三上混合运算衔接。",
+    "sequence": [
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L02-B05",
+      "G3-L02-B06"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L02-B01-MODEL1",
+      "family": "division",
+      "variant": "G3-L02-B01",
+      "title": "把几十、几百平均分",
+      "prompt": "用位值理解口算除法，选合适近似数估商。",
+      "initialState": "90张纸平均分给3人，每人多少张？",
+      "learnerAction": "分十捆再换成张数，检查每人一样多。",
+      "observableChange": "把9个十分给3人，保留每一捆的十张标签。",
+      "question": "分得3个十，为什么不能把答案写成3张？",
+      "wrongActionFeedback": "把9÷3=3直接当3张时保留捆的十标签，追问3的单位。",
+      "guidance": [
+        {
+          "label": "90÷3=30",
+          "explanation": "90÷3=30。"
+        },
+        {
+          "label": "96÷3=(90÷3)+(6÷3)=32",
+          "explanation": "96÷3=(90÷3)+(6÷3)=32，两个部分都可整分。"
+        },
+        {
+          "label": "估98÷3可用接近的可整除数99",
+          "explanation": "估98÷3可用接近的可整除数99，结果约33，注明不是精确值。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "把几十、几百平均分，先看计数单位",
+        "9捆十张纸分3堆；96张先分90张再分6张。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "share-place",
+        "title": "把计数单位平均分，分错可以退回",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            90,
+            3
+          ],
+          [
+            96,
+            3
+          ],
+          [
+            600,
+            3
+          ],
+          [
+            840,
+            4
+          ],
+          [
+            1000,
+            5
+          ],
+          [
+            168,
+            4
+          ]
+        ],
+        "mode": "share",
+        "contexts": [
+          {
+            "story": "90张纸平均分给3人，每人多少张？",
+            "unit": "张",
+            "group": "人"
+          },
+          {
+            "story": "96张纸平均分给3人，每人多少张？",
+            "unit": "张",
+            "group": "人"
+          },
+          {
+            "story": "600张纸平均分给3人，每人多少张？",
+            "unit": "张",
+            "group": "人"
+          },
+          {
+            "story": "840张纸平均分给4人，每人多少张？",
+            "unit": "张",
+            "group": "人"
+          },
+          {
+            "story": "1000张纸平均分给5人，每人多少张？",
+            "unit": "张",
+            "group": "人"
+          },
+          {
+            "story": "168厘米丝带要平均剪成4段，不计剪口损耗，每段多长？把计数单位当厘米，平均分的关系还一样吗？",
+            "unit": "厘米",
+            "group": "段"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

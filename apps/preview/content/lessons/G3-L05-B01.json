@@ -1,0 +1,162 @@
+{
+  "lessonId": "G3-L05-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "先问清问题，再收集能回答它的数据",
+  "shortTitle": "先问清问题，再收集能回答它的数…",
+  "question": "班级要选一次集体活动地点，怎样知道大家最想去哪儿？",
+  "subtitle": "数据是针对问题收集的记录；规则含糊会让统计结果无法解释。",
+  "grade": [
+    3
+  ],
+  "strand": "logic",
+  "track": "foundation",
+  "parentUnitId": "G3-L05",
+  "recommendedPrerequisites": [
+    "整数加减和分类。"
+  ],
+  "relatedLessonIds": [
+    "G3-L05-B02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "班级要选一次集体活动地点，怎样知道大家最想去哪儿？",
+    "predictQuestion": "调查大家最想去哪里，每人能随意多选吗？",
+    "predictionOptions": [
+      "先约定单选还是多选",
+      "选得越多越准确",
+      "不需要说明规则"
+    ],
+    "discovery": [
+      "数据是针对问题收集的记录；规则含糊会让统计结果无法解释。"
+    ],
+    "symbols": [
+      "同一调查要使用同一规则",
+      "分类记录→核对人数→比较票数"
+    ],
+    "mission": "先问清问题，统一记录规则后再比较票数。",
+    "retell": "为什么要先约定单选规则，才能解释哪地最受欢迎？",
+    "observedEvidence": "每个姓名只投一票，核对投过的人和总票数。",
+    "whyQuestion": "为什么要先约定单选规则，才能解释哪地最受欢迎？",
+    "counterexamplePrompt": "让一个人投三票，却仍说票数就是人数，哪里不对应了？",
+    "predictionFocus": "调查大家最想去哪里，每人能随意多选吗？"
+  },
+  "storyVisual": {
+    "type": "vote-board",
+    "title": "每个人一票，选一个目的地",
+    "caption": "18个人都按同一单选规则投票。各地票数暂时未知。",
+    "values": [
+      18
+    ],
+    "labels": [
+      "公园",
+      "科技馆",
+      "图书馆"
+    ]
+  },
+  "predictionVisual": {
+    "type": "vote-board",
+    "title": "每个人一票，选一个目的地",
+    "caption": "18个人都按同一单选规则投票。各地票数暂时未知。",
+    "values": [
+      18
+    ],
+    "labels": [
+      "公园",
+      "科技馆",
+      "图书馆"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "18人每人选一处：博物馆8人、公园6人、科技馆4人。票数怎样核对？最受欢迎是哪处？",
+      "steps": [
+        {
+          "math": "8+6+4=18",
+          "why": "8+6+4=18，与人数相符。",
+          "expressionBefore": "8+6+4",
+          "operation": "=",
+          "expressionAfter": "18"
+        },
+        {
+          "math": "8最大。",
+          "why": "8最大。"
+        },
+        {
+          "math": "结论：记录合计正确；博物馆票数最多。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L05-B01-OBJ1",
+      "action": "设计明确调查、逐项记录，用单式与复式表整理。",
+      "scope": "设计明确调查、逐项记录，用单式与复式表整理。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L05",
+    "title": "数据的收集与整理",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "65–76",
+    "notes": "调查、分类记录、单复式统计表、按标准分组、比较与表达；不把平均数提前当主课。",
+    "sequence": [
+      "G3-L05-B01",
+      "G3-L05-B02"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L05-B01-MODEL1",
+      "family": "data",
+      "variant": "G3-L05-B01",
+      "title": "先问清问题",
+      "prompt": "设计明确调查、逐项记录，用单式与复式表整理。",
+      "initialState": "18个虚拟名字，每人只能投一个目的地，票数初始0。",
+      "learnerAction": "逐个投票并统计；故意重复一个名字触发核对，再按类别合计。",
+      "observableChange": "18张有效票应各有一个不同投票者；合计相同也仍可检查具体记录。",
+      "question": "为什么一次只能选一个与可以多选的票数不能直接比较？",
+      "wrongActionFeedback": "重复投票先提示哪条事实不符合规则，不按多出票给出全班偏好结论。",
+      "guidance": [
+        {
+          "label": "先定义调查对象与每人可选几项",
+          "explanation": "先定义调查对象与每人可选几项。"
+        },
+        {
+          "label": "逐项记录",
+          "explanation": "逐项记录，合计与参与人数核对。"
+        },
+        {
+          "label": "两组同题同规则的表可合并为复式表",
+          "explanation": "两组同题同规则的表可合并为复式表，不能丢失行列含义。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "先问清问题，再收集能回答它的数据",
+        "每人只投1票，选项互斥，唱票逐一画正字；表格行是组别、列是选项。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "vote",
+        "title": "每个人只投一票",
+        "version": "textbook.v1",
+        "options": [
+          "公园",
+          "科技馆",
+          "图书馆"
+        ],
+        "people": 18
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

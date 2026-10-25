@@ -1,0 +1,144 @@
+{
+  "lessonId": "G3-L03-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "从边与角给图形分类",
+  "shortTitle": "从边与角给图形分类",
+  "question": "做相框前，要确定四条边和四个角满足什么条件。",
+  "subtitle": "图形名称归纳共同结构；分类依据要能检验，而不只看摆放方向。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-L03",
+  "recommendedPrerequisites": [
+    "角与长度测量。"
+  ],
+  "relatedLessonIds": [
+    "G3-L03-B02",
+    "G3-L03-E01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "static-visual",
+  "classroom": {
+    "story": "做相框前，要确定四条边和四个角满足什么条件。",
+    "predictQuestion": "把正方形斜着放，它还是正方形吗？",
+    "predictionOptions": [
+      "是，边和角没有变",
+      "不是，必须放正",
+      "只要看着像菱形就改名"
+    ],
+    "discovery": [
+      "图形名称归纳共同结构；分类依据要能检验，而不只看摆放方向。"
+    ],
+    "symbols": [
+      "长方形有4个直角、对边相等",
+      "正方形还要求4条边都相等"
+    ],
+    "mission": "根据边和角分类，不靠摆放方向取名字。",
+    "retell": "正方形转斜了，为什么名称仍由边和角决定？",
+    "observedEvidence": "用边长和直角标记核对图形，不靠摆放方向。",
+    "whyQuestion": "正方形转斜了，为什么名称仍由边和角决定？",
+    "counterexamplePrompt": "只有四边一样长，就一定有四个直角吗？",
+    "predictionFocus": "把正方形斜着放，它还是正方形吗？"
+  },
+  "storyVisual": {
+    "type": "frame-shapes",
+    "title": "做相框之前，先看形状",
+    "caption": "长方形和正方形有四个直角；右边的斜菱形四边一样长，但角不同。",
+    "values": [
+      7,
+      4
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "frame-shapes",
+    "title": "做相框之前，先看形状",
+    "caption": "长方形和正方形有四个直角；右边的斜菱形四边一样长，但角不同。",
+    "values": [
+      7,
+      4
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "一个四边形四个角都是直角，四边都3厘米，它既是正方形也是长方形吗？",
+      "steps": [
+        {
+          "math": "符合正方形的边角要求。",
+          "why": "符合正方形的边角要求。"
+        },
+        {
+          "math": "也满足长方形的四直角、对边相等。",
+          "why": "也满足长方形的四直角、对边相等。"
+        },
+        {
+          "math": "结论：是。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L03-B01-OBJ1",
+      "action": "辨认多边形、长方形、正方形，理解包含关系。",
+      "scope": "辨认多边形、长方形、正方形，理解包含关系。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L03",
+    "title": "长方形和正方形",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "39–51",
+    "notes": "多边形、边角特征、周长、拼图与周长优化，包含单元实践。",
+    "sequence": [
+      "G3-L03-B01",
+      "G3-L03-B02",
+      "G3-L03-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L03-B01-MODEL1",
+      "family": "boundary",
+      "variant": "G3-L03-B01",
+      "title": "从边与角给图形分类",
+      "prompt": "辨认多边形、长方形、正方形，理解包含关系。",
+      "initialState": "长方形4×7、正方形4×4与斜菱形，边长和直角工具可开关。",
+      "learnerAction": "量四边并对齐角工具，用四直角条件分类再检查是否等边。",
+      "observableChange": "正方形也满足长方形条件；菱形虽等边却无四直角。",
+      "question": "说出一个满足长方形定义却不是正方形的例子。",
+      "wrongActionFeedback": "只凭斜着摆分类时旋转图形，边角数据保持不变。",
+      "guidance": [
+        {
+          "label": "多边形由线段围成封闭图形",
+          "explanation": "多边形由线段围成封闭图形。"
+        },
+        {
+          "label": "长方形四个角都是直角、对边相等",
+          "explanation": "长方形四个角都是直角、对边相等。"
+        },
+        {
+          "label": "正方形四边相等且四角直角",
+          "explanation": "正方形四边相等且四角直角，是特殊长方形。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "从边与角给图形分类",
+        "摆直线段首尾连接成封闭图形；用尺和三角尺验证长方形的对边与直角。"
+      ],
+      "modelStatus": "static-review"
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

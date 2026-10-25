@@ -1,21 +1,27 @@
 # Kevin Learning Home · Kevin 学习家园
 
-## 当前入口（2026-10-25，以下历史段落不代表当前状态）
+本分支 **MATH-FULL-01 / Issue #15** 已完成冻结入口的 70 节六步数学课堂与对应教具，交付一个 Draft PR 等待 ChatGPT 独立审查。全部仍是 draft 教学预览：64 原交互课、6 静态关系图/纸笔课；**不是 849 道练习或旧数学整站迁入完成**。
 
-MATH-01 已合并，**新数学合成试用：`https://192.168.2.100:38444/`**；孩子登录后数学「只读课堂」、英语「待迁入」。旧 `38443` 保留 02B，两科仍「待迁入」，账户与证书不同。
+## 直接体验：无需账号
 
-用户 Mac 的固定交付目录是 **`~/Documents/Kevin-Learning-Home-Trial/`**。Finder「前往文件夹」输入此路径，打开 `START-HERE.md` 获取新合成账号，双击 `打开数学课堂.command`。已在实际 Mac Finder 确认可见，并用本机可见 Chromium 登录首课。指南 0600、目录 0700，只交付公开 CA，不复制私钥。启动后保留终端；重复启动不再建配置，关闭最后标签后可重开。密码只在本机指南，不放 GitHub、不保存到浏览器。
+同一 Mac 的本机入口：**http://127.0.0.1:4179/**。已在可见 Chromium 确认 70 个课程入口，并实际进入折纸课操作；不需要账号、密码或证书安装。源码工作目录继续复用 `~/Downloads/codex/kevin-learning-home-math-trial`，没有新增 worktree。
 
-唯一活动工作副本 `/Users/<user>/Downloads/codex/kevin-learning-home-math-trial`，原秘密源在其 `.trial-private`；实际用户名绝对路径已在本机指南和交付消息给出。共 11 个相关项目目录，只有一份 math-trial；[逐目录整理清单](docs/implementation/MATH-NAS-01-R1-DIRECTORIES.md)区分保留、两份可清理候选及待归档项，**本轮零删除**。
+Finder「前往文件夹」输入 **`~/Documents/Kevin-Learning-Home-Trial/`**，打开 `70课体验说明.md`，双击 `打开70课体验.command`，体验时保留运行终端。旧 START-HERE/CA/单课启动器保持原样。若 Mac 锁屏先自行解锁；本轮可见操作已在锁屏前完成，Finder 双击尚未作人工验收。
 
-测试 CA 到期 **2026-10-31 13:58:29 UTC**，只在专属 Chromium profile 信任。Safari/手机/iPad 仍 `NEEDS_USER_ACTION/NOT_RUN`；不跳过警告或全局安装根证书。长期受信域名路线仅作评估，未改 NAS/Tailscale/系统信任。
+本机回环 HTTP 只用于无身份、无真实数据的内容体验，不修改正式服务的 HTTPS/session/家长授权。**新 70 课版本尚未部署 NAS，也不能在手机/iPad 输入这个本机地址访问 Mac。** 原 NAS 38443 仍是 02B，38444 仍是原合成单课；均未覆盖。
 
-[R1 交付报告](docs/implementation/MATH-NAS-01-R1-DELIVERY.md)、[原 NAS 4/4 报告](docs/implementation/MATH-01-NAS-TRIAL-REPORT.md)、[当前交接](docs/handoff/current.md)；精确最终 HEAD 的 push/PR 完整 CI 见 [Draft PR #14](https://github.com/lovestream/kevin-learning-home/pull/14)正文。仍保持 Draft，不合并、不进入 MATH-02。旧数学/英语独立，无真实记录迁入、练习/钱包/蛋仔整合或生产部署。
+体验状态只留当前页面内存；刷新清空，无阅读记录、成绩、积分或蛋仔。完整 849 题按 [Issue #16](https://github.com/lovestream/kevin-learning-home/issues/16) 后续独立 PR 接入，335 解释题须人工核对。正式账号、真实学习记录和生产部署暂停。
 
-## 工程验证与历史证据
+## 复现与证据
 
-本地使用 Node 24.15.0 / npm 11.12.1。`npm ci`、`npm run build`、`npx playwright install chromium` 后运行 `node scripts/verify.ts`，保留 60 Node、18 UI、3 基础视口、12 数学 Node、9 数学浏览器；Linux CI 另验 Docker/Compose 和恢复。工具回归为 `node --test tests/math-trial/*.test.mjs` 与 `python3 -m unittest discover -s tests/math-trial -p 'test_*.py' -q`。
+Node 24.15.0 / npm 11.12.1：`npm ci`，`npm run build:math-preview`，`npm run preview:math`，然后在本机打开上方地址。可见 Mac 启动器还需 `npx playwright install chromium`。预览是 `apps/preview` 独立内容进程，必须显式启用，仅绑定 127.0.0.1；不依赖正式认证或 SQLite，正式容器最终运行层不含预览代码/内容。
 
-PR5/6/7（工程底座、身份、网页外壳）、PR8（02B 隔离试用）、PR10（数学来源审计）、PR12（数学首课）已合并。[项目状态](PROJECT_STATUS.md)、[MATH-01 实施报告](docs/implementation/MATH-01-EXECUTION-REPORT.md)、[来源审计](docs/implementation/MATH-00-SOURCE-AUDIT.md)、[02A 身份接口](docs/implementation/IMPLEMENT-02A-api-and-operations.md)、[底座部署手册](docs/implementation/IMPLEMENT-01-deployment-runbook.md)保留各阶段证据，按归档时点解释。
+- [执行报告与接口/边界](docs/implementation/MATH-FULL-01-REPORT.md)
+- [冻结来源/许可与全站残余范围](docs/implementation/MATH-FULL-SOURCE-SCOPE.md)
+- [70 课逐项验收矩阵](docs/implementation/evidence/math-full-01/lessons-coverage.json)
+- [210 组真实浏览器结果](docs/implementation/evidence/math-full-01/browser.json)
+- [当前交接](docs/handoff/current.md) · [项目状态](PROJECT_STATUS.md)
 
-正式家庭使用前仍须独立完成长期受信 HTTPS、真实身份、加密异地备份/新卷恢复、Linux 4.4 与 Node 24 维护兼容性及上线验收。
+`node scripts/verify.ts` 保留原 60 Node / 18 UI / 3 基础视口 / 12 数学 Node / 9 数学浏览器；Linux CI 另验原 Docker/Compose 与恢复。新增 `python3 scripts/math-full-01/check.py`、`node --test --test-concurrency=1 tests/math-full-01/*.test.*`、`node tests/math-full-01/browser.mjs --checkpoint` 与完整 `node tests/math-full-01/browser.mjs`。最终精确 HEAD 的 push / pull_request 两套 CI 以本批 Draft PR 正文交付记录为准。
+
+PR5/6/7/8/10/12/14 已合并，历史报告按归档时点解读。旧 `math-learning`、`word-request` 完全独立，不反向修改、不导入真实记录。此批完成后暂停，不自行合并或进入下一批正式开发。

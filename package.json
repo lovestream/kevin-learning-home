@@ -27,7 +27,9 @@
     "test:auth": "node --test --test-concurrency=1 tests/auth/*.test.ts",
     "auth:admin": "node scripts/auth-admin.ts",
     "test:math01": "node --test --test-concurrency=1 tests/math01/*.test.ts",
-    "test:math01:browser": "node tests/math01/browser.ts"
+    "test:math01:browser": "node tests/math01/browser.ts",
+    "build:math-preview": "vite build --config apps/preview/vite.config.ts && node scripts/math-full-01/build.ts",
+    "preview:math": "KLH_CONTENT_PREVIEW=1 node apps/preview/server.ts"
   },
   "dependencies": {
     "fs-ext": "2.1.1",
@@ -41,6 +43,7 @@
     "@types/node": "24.19.2",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
+    "lucide-react": "0.468.0",
     "prettier": "3.9.10",
     "typescript": "7.0.2",
     "vite": "8.3.4"

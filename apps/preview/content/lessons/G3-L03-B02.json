@@ -1,0 +1,158 @@
+{
+  "lessonId": "G3-L03-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-17.1",
+  "status": "draft",
+  "title": "围一圈需要多长：周长的意义",
+  "shortTitle": "围一圈需要多长：周长的意义",
+  "question": "给长8米宽5米的花坛装一圈围栏，要买多少米？",
+  "subtitle": "围栏沿边界延伸，求的是线的总长度；不能用内部铺多少块地砖代替。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-L03",
+  "recommendedPrerequisites": [
+    "G3-L03-B01；混合运算。"
+  ],
+  "relatedLessonIds": [
+    "G3-L03-B01",
+    "G3-L03-E01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "给长8米宽5米的花坛装一圈围栏，要买多少米？",
+    "predictQuestion": "买花坛围栏，要量里面还是外面一圈？",
+    "predictionOptions": [
+      "里面铺满多大",
+      "只量长边",
+      "外边界一圈"
+    ],
+    "discovery": [
+      "围栏沿边界延伸，求的是线的总长度；不能用内部铺多少块地砖代替。"
+    ],
+    "symbols": [
+      "8＋5＋8＋5",
+      "(长＋宽)×2＝周长"
+    ],
+    "mission": "沿四条外边走一圈，不重复、不遗漏。",
+    "retell": "长加宽只走了两边，为什么一圈还要再有一份长加宽？",
+    "observedEvidence": "沿花坛外面四条边走一次，标记已经走过的边。",
+    "whyQuestion": "长加宽只走了两边，为什么一圈还要再有一份长加宽？",
+    "counterexamplePrompt": "铺满里面的小砖，数出的量可以直接当围栏米数吗？",
+    "predictionFocus": "买花坛围栏，要量里面还是外面一圈？"
+  },
+  "storyVisual": {
+    "type": "rectangle",
+    "title": "花坛的里面与外边一圈",
+    "caption": "红线表示准备装围栏的外边界。已知长8米、宽5米，围栏总长还不知道。",
+    "values": [
+      8,
+      5
+    ],
+    "labels": [
+      "米"
+    ]
+  },
+  "predictionVisual": {
+    "type": "rectangle",
+    "title": "花坛的里面与外边一圈",
+    "caption": "红线表示准备装围栏的外边界。已知长8米、宽5米，围栏总长还不知道。",
+    "values": [
+      8,
+      5
+    ],
+    "labels": [
+      "米"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "长8米宽5米的花坛，整圈围栏需要多长？",
+      "steps": [
+        {
+          "math": "两条8米、两条5米。",
+          "why": "两条8米、两条5米。"
+        },
+        {
+          "math": "8+5+8+5=26",
+          "why": "8+5+8+5=26。",
+          "expressionBefore": "8+5+8+5",
+          "operation": "=",
+          "expressionAfter": "26"
+        },
+        {
+          "math": "结论：26米（没有留入口）。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L03-B02-OBJ1",
+      "action": "把周长理解为封闭图形外边界一周长度，推导长方形正方形公式。",
+      "scope": "把周长理解为封闭图形外边界一周长度，推导长方形正方形公式。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L03",
+    "title": "长方形和正方形",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "39–51",
+    "notes": "多边形、边角特征、周长、拼图与周长优化，包含单元实践。",
+    "sequence": [
+      "G3-L03-B01",
+      "G3-L03-B02",
+      "G3-L03-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L03-B02-MODEL1",
+      "family": "boundary",
+      "variant": "G3-L03-B02",
+      "title": "围一圈需要多长：周长的意义",
+      "prompt": "把周长理解为封闭图形外边界一周长度，推导长方形正方形公式。",
+      "initialState": "长8米宽5米长方形花坛，四边标8、5、8、5，无入口。",
+      "learnerAction": "从同一角沿外边界走满一圈，累计每边一次，再打开2米入口。",
+      "observableChange": "完整26米，实际围栏24米；轨迹是线不是内部格子。",
+      "question": "不看公式，用走一圈解释为什么长和宽的和还要乘2。",
+      "wrongActionFeedback": "只加一长一宽时轨迹停在对角，提示还没回起点。",
+      "guidance": [
+        {
+          "label": "先确认走的是外边一圈",
+          "explanation": "先确认走的是外边一圈。"
+        },
+        {
+          "label": "四边相加8+5+8+5",
+          "explanation": "四边相加8+5+8+5。"
+        },
+        {
+          "label": "合成(8+5)×2",
+          "explanation": "合成(8+5)×2；正方形则是边长×4。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "围一圈需要多长：周长的意义",
+        "从花坛一个角出发沿四条边走一圈，依次标8、5、8、5米。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "boundary",
+        "title": "沿花坛的四条边走一圈",
+        "version": "textbook.v1",
+        "width": 8,
+        "height": 5
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

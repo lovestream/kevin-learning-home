@@ -1,0 +1,105 @@
+{
+  "lessonId": "algebra.balance.intro",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "不打开袋子，也能知道有几颗糖",
+  "shortTitle": "天平与方程",
+  "question": "袋里的糖加上3颗，共10颗。袋里有几颗？",
+  "subtitle": "先用同样多的两堆糖，再理解等号和方程。",
+  "grade": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "strand": "algebra",
+  "track": "foundation",
+  "parentUnitId": "A04",
+  "recommendedPrerequisites": [
+    "等号",
+    "加减和乘除互逆"
+  ],
+  "relatedLessonIds": [
+    "algebra.substitution.intro"
+  ],
+  "estimatedActiveMinutes": 18,
+  "widget": "balance",
+  "prerequisiteNote": "x只是盒子里还不知道的数量。先试物体天平，再看符号；不要求提前会解方程。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "一袋糖加袋外3颗，合起来与10颗散糖一样多。把袋和3颗放左盘、10颗放右盘：两盘同时拿走3颗，怎样找到袋里的颗数？",
+    "predictQuestion": "左边拿走3颗，右边需要怎样做？",
+    "predictionOptions": [
+      "保持不动",
+      "再添3颗",
+      "也拿走3颗"
+    ],
+    "discovery": [
+      "等量两边拿走同样多，剩下的仍相等；只动一边会破坏等量关系。"
+    ],
+    "symbols": [
+      "x＋3＝10",
+      "两边减3：x＝7"
+    ],
+    "mission": "让等号两边保持相等，再找到袋里的颗数。",
+    "retell": "为什么一边拿走3颗，另一边也必须拿走3颗？",
+    "observedEvidence": "两盘同时拿走3颗，观察仍然一样多的剩余部分。",
+    "whyQuestion": "为什么一边拿走3颗，另一边也必须拿走3颗？",
+    "counterexamplePrompt": "只从左盘拿走，两边还一样多吗？",
+    "predictionFocus": "左边拿走3颗，右边需要怎样做？"
+  },
+  "contextDiagram": "candyEquality",
+  "workedExamples": [
+    {
+      "title": "1袋和3颗散糖，合起来10颗",
+      "steps": [
+        {
+          "math": "x＋3＝10",
+          "why": "先记录“袋里颗数＋散糖颗数＝总颗数”。"
+        },
+        {
+          "math": "x＝10−3＝7",
+          "why": "把散糖去掉，剩下的是袋里的7颗。"
+        }
+      ]
+    },
+    {
+      "title": "2袋一样多的糖和3颗散糖，合起来11颗",
+      "steps": [
+        {
+          "math": "2x＋3＝11",
+          "why": "每袋都是x颗，两袋就是2x。"
+        },
+        {
+          "math": "2x＝8",
+          "why": "两边都去掉3，剩两袋，共8颗。"
+        },
+        {
+          "math": "x＝4",
+          "why": "两袋同样多，把8平均分成2份，每份4。再检查：4＋4＋3＝11。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "balance.equal",
+      "action": "比较单边操作与两边同步操作",
+      "scope": "等式加减"
+    },
+    {
+      "id": "balance.solve",
+      "action": "用同减或同除得到未知量",
+      "scope": "除数已知且非零"
+    },
+    {
+      "id": "balance.verify",
+      "action": "代回原等式核对左右数值",
+      "scope": "一次方程"
+    }
+  ],
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": []
+}

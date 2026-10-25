@@ -1,0 +1,152 @@
+{
+  "lessonId": "G3-U01-B01",
+  "contentVersion": "2026-10-07.2",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "换一个位置，看到的样子为什么变了",
+  "shortTitle": "换一个位置，看到的样子为什么变…",
+  "question": "Kevin给朋友寄一个玩具盒。盒子前面是红圆点，右面是蓝菱形，上面是黄星星。朋友只收到一张照片，能知道你站在哪边拍的吗？",
+  "subtitle": "照片只保留朝向观察者的部分；视图变化并不代表物体改变。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-U01",
+  "recommendedPrerequisites": [
+    "能辨认长方体、正方体、球、圆柱；不要求画三视图。"
+  ],
+  "relatedLessonIds": [
+    "G3-U01-B02",
+    "G3-U01-B03"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "Kevin给朋友寄一个玩具盒。盒子前面是红圆点，右面是蓝菱形，上面是黄星星。朋友只收到一张照片，能知道你站在哪边拍的吗？",
+    "predictQuestion": "盒子放着不动，相机从正前方移到右侧，照片会怎样？",
+    "predictionOptions": [
+      "仍然正对红圆点",
+      "改为正对蓝菱形",
+      "盒子必须先转一下"
+    ],
+    "discovery": [
+      "固定的是盒子，移动的是观察者。",
+      "正前方、右侧、上方拍到不同的面；斜着看时，可以同时看见多个面。",
+      "同一件物体可以有不同照片。照片中的一个面，不能替代整个物体。"
+    ],
+    "symbols": [
+      "正前方 → 红圆点所在面",
+      "右侧 → 蓝菱形所在面",
+      "上方 → 黄星星所在面"
+    ],
+    "mission": "拍三张不同方向的照片，指出观察者在哪里。",
+    "retell": "盒子没有转，为什么换个站位看到的图案变了？",
+    "observedEvidence": "比较正前方和右侧的照片，留意相机位置和盒子标记。",
+    "whyQuestion": "盒子没有转，为什么换个站位看到的图案变了？",
+    "counterexamplePrompt": "把相机移回正前方：照片是否也跟着恢复？",
+    "modelText": "盒子固定在桌上，前面贴红圆点、右面贴蓝菱形、上面贴黄星星。移动观察者，不转动物体；用正面、右面、上面照片比较。",
+    "predictionFocus": "盒子放着不动，相机从正前方移到右侧，照片会怎样？"
+  },
+  "storyVisual": {
+    "type": "box-camera",
+    "title": "桌上这个盒子与拍照位置",
+    "caption": "盒子不动。先认清三个标记，再看相机站在哪里。",
+    "values": [],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "box-camera",
+    "title": "相机从前方移到右侧：新照片先不揭晓",
+    "caption": "盒子不动。先认清三个标记，再看相机站在哪里。",
+    "values": [],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "盒子前面有红点，右面有蓝点。Kevin只想拍到蓝点所在面的正面，应从哪里拍？",
+      "steps": [
+        {
+          "math": "先找蓝点在哪个面。",
+          "why": "先找蓝点在哪个面。"
+        },
+        {
+          "math": "让镜头正对右面，而不是转动盒子。",
+          "why": "让镜头正对右面，而不是转动盒子。"
+        },
+        {
+          "math": "结论：从盒子的右侧正对蓝点拍。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U01-B01-OBJ1",
+      "action": "能说清观察位置与所见面的对应。",
+      "scope": "能说清观察位置与所见面的对应。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U01",
+    "title": "观察物体",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "1–5",
+    "notes": "正面、侧面、上面观察；单一视图信息不足；剪展纸盒。",
+    "sequence": [
+      "G3-U01-B01",
+      "G3-U01-B02",
+      "G3-U01-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U01-B01-MODEL1",
+      "family": "spatial",
+      "variant": "G3-U01-B01",
+      "title": "换一个位置",
+      "prompt": "能说清观察位置与所见面的对应。",
+      "initialState": "盒子固定在桌上，前面贴红圆点、右面贴蓝菱形、上面贴黄星星。移动观察者，不转动物体；用正面、右面、上面照片比较。",
+      "learnerAction": "拍三张不同方向的照片，指出观察者在哪里。",
+      "observableChange": "固定的是盒子，移动的是观察者。 正前方、右侧、上方拍到不同的面；斜着看时，可以同时看见多个面。 同一件物体可以有不同照片。照片中的一个面，不能替代整个物体。",
+      "question": "盒子放着不动，相机从正前方移到右侧，照片会怎样？",
+      "wrongActionFeedback": "若拖盒子，提示本次只换观察位置；先把盒子恢复原位再试。",
+      "guidance": [
+        {
+          "label": "固定的是盒子",
+          "explanation": "固定的是盒子，移动的是观察者。"
+        },
+        {
+          "label": "正前方、右侧、上方拍到不同的面",
+          "explanation": "正前方、右侧、上方拍到不同的面；斜着看时，可以同时看见多个面。"
+        },
+        {
+          "label": "同一件物体可以有不同照片",
+          "explanation": "同一件物体可以有不同照片。照片中的一个面，不能替代整个物体。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "换一个位置，看到的样子为什么变了",
+        "盒子固定在桌上，前面贴红圆点、右面贴蓝菱形、上面贴黄星星。移动观察者，不转动物体；用正面、右面、上面照片比较。"
+      ],
+      "modelStatus": "registered",
+      "handsOnSpec": {
+        "type": "spatial",
+        "mode": "observe",
+        "version": "spatial.v2",
+        "dimensions": [
+          2.4,
+          1.5,
+          1.2
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

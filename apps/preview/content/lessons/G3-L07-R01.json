@@ -1,0 +1,150 @@
+{
+  "lessonId": "G3-L07-R01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-17.1",
+  "status": "draft",
+  "title": "给一次班级活动做完整计划",
+  "shortTitle": "给一次班级活动做完整计划",
+  "question": "24人做手工，每人2张纸，纸每包12张6元；活动15:10至15:50。怎样做简明计划？",
+  "subtitle": "一个真实计划包含多个不同结构，先定义要回答的问题，才能选择合适运算。",
+  "grade": [
+    3
+  ],
+  "strand": "logic",
+  "track": "foundation",
+  "parentUnitId": "G3-L07",
+  "recommendedPrerequisites": [
+    "三年级上下册核心概念。"
+  ],
+  "relatedLessonIds": [
+    "G3-L07-B01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "static-visual",
+  "classroom": {
+    "story": "24人做手工，每人2张纸，每包12张、6元，需要买齐材料（这一题不另给库存）。活动从15:10到15:50。分别需要几包、多少钱、多少分钟？",
+    "predictQuestion": "24人每人2张，每包12张，能直接用24÷12求包数吗？",
+    "predictionOptions": [
+      "直接用24×12",
+      "不能，先算纸的总张数",
+      "可以，不用看每人几张"
+    ],
+    "discovery": [
+      "一个真实计划包含多个不同结构，先定义要回答的问题，才能选择合适运算。"
+    ],
+    "symbols": [
+      "24×2÷12＝4（包）",
+      "4×6＝24（元）；15:10到15:50是40分钟"
+    ],
+    "mission": "把人数、张数、包数、费用与时长分开记录。",
+    "retell": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？",
+    "observedEvidence": "在计划表分开写需求、已有材料、补购和活动起止时间。",
+    "whyQuestion": "为什么先求总张数，再算购买包数，不能把人数直接除每包张数？",
+    "counterexamplePrompt": "把活动结束时刻当成活动时长，会混淆哪两种量？",
+    "predictionFocus": "24人每人2张，每包12张，能直接用24÷12求包数吗？"
+  },
+  "storyVisual": {
+    "type": "materials-plan",
+    "title": "手工材料和活动时间分开算",
+    "caption": "本题没有库存。纸的数量、包数、价钱与经过时间是不同的量。",
+    "values": [
+      24,
+      2,
+      12,
+      6,
+      910,
+      950
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "materials-plan",
+    "title": "手工材料和活动时间分开算",
+    "caption": "本题没有库存。纸的数量、包数、价钱与经过时间是不同的量。",
+    "values": [
+      24,
+      2,
+      12,
+      6,
+      910,
+      950
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "24人做手工，每人需要2张纸。每包纸12张，售价6元。如果从零购买，需要几包、花多少钱？如果已经有1整包未用的纸，还要再买几包、花多少钱？",
+      "steps": [
+        {
+          "math": "共需4包24元。",
+          "why": "共需4包24元。"
+        },
+        {
+          "math": "已有1包，再买3包18元。",
+          "why": "已有1包，再买3包18元。"
+        },
+        {
+          "math": "结论：4包24元；有1包时再买3包18元。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L07-R01-OBJ1",
+      "action": "综合处理预算、平均分、周长面积与时间，解释各量意义。",
+      "scope": "综合处理预算、平均分、周长面积与时间，解释各量意义。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L07",
+    "title": "复习与关联（含重叠问题）",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "95–104",
+    "notes": "综合诊断数与量、图形和统计；重叠问题是实际教材数学广角，单独学习但不另造重复思想课。",
+    "sequence": [
+      "G3-L07-R01",
+      "G3-L07-B01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L07-R01-MODEL1",
+      "family": "sets",
+      "variant": "G3-L07-R01",
+      "title": "给一次班级活动做完整计划",
+      "prompt": "综合处理预算、平均分、周长面积与时间，解释各量意义。",
+      "initialState": "24人每人2张纸，每包12张6元；本题不另给库存，分别求总需求、购买费用和时长。",
+      "learnerAction": "自行填中间量并选择所需数据，不提供运算名称。",
+      "observableChange": "需48张4包，补3包18元；每行量义清楚。",
+      "question": "这个计划中，哪一步用了归一或分组，哪一步用了时间间隔？",
+      "wrongActionFeedback": "误算4包都要新买时指向库存记录，要求先核对尚缺数量。",
+      "guidance": [
+        {
+          "label": "总纸数24×2=48张",
+          "explanation": "总纸数24×2=48张。"
+        },
+        {
+          "label": "包数48÷12=4",
+          "explanation": "包数48÷12=4，费用4×6=24元。"
+        },
+        {
+          "label": "时长40分",
+          "explanation": "时长40分；独立核对单位与现实条件，按错误回补相应课。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "给一次班级活动做完整计划",
+        "列“材料需求—包装数量—费用—时间”四行表，分开记录，不把所有数字塞进同一算式。"
+      ],
+      "modelStatus": "static-review"
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

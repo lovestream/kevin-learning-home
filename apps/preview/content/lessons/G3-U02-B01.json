@@ -1,0 +1,237 @@
+{
+  "lessonId": "G3-U02-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "同级运算：为什么从左往右",
+  "shortTitle": "同级运算顺序",
+  "question": "24÷6×2，先算出4就结束了吗？",
+  "subtitle": "加减是一组同级运算，乘除也是一组；没有括号时按出现顺序从左往右完成整条算式。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U02",
+  "recommendedPrerequisites": [
+    "会口算表内乘除和两位数加减"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 22,
+  "widget": "mixedOperations",
+  "prerequisiteNote": "每节都可以直接进入；先把故事里的量说清楚，再动算式。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "车上原来有28人，到站下去9人，又上来6人。现在车上有多少人？",
+    "predictQuestion": "先有人下车，再有人上车，第一步怎样算？",
+    "predictionOptions": [
+      "先减下车的人",
+      "先加上车的人",
+      "把三个数都相加"
+    ],
+    "discovery": [
+      "下车后是19人，上车后是25人。28−9＋6从左往右，记录前一步的结果接着变化。相反的加减操作不能随意改次序；纯算式同级运算按从左往右的约定计算。"
+    ],
+    "symbols": [
+      "28−9＋6",
+      "先下车：28−9；再上车：19＋6"
+    ],
+    "mission": "用车上人数解释为什么按发生顺序计算。",
+    "retell": "28−9得到的人数，为什么要作为下一步加6的起点？",
+    "observedEvidence": "看看下车后的人数，再看上车后的人数。",
+    "whyQuestion": "28−9得到的人数，为什么要作为下一步加6的起点？",
+    "counterexamplePrompt": "把9和6都减掉，就相当于让哪一批人也下车了？",
+    "predictionFocus": "先有人下车，再有人上车，第一步怎样算？"
+  },
+  "workedExamples": [
+    {
+      "title": "车上原来有28人，到站下去9人，又上来6人。现在车上有多少人？",
+      "steps": [
+        {
+          "math": "28－9＋6",
+          "why": "先算下车后剩19人，再加上车的6人，得到25人。"
+        },
+        {
+          "math": "结果：25人",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    },
+    {
+      "title": "24颗珠子，每6颗装一盒；每盒贴2张标签。一共要贴多少张标签？",
+      "steps": [
+        {
+          "math": "24÷6×2",
+          "why": "先装成4盒，再算4盒各贴2张标签，共贴8张。"
+        },
+        {
+          "math": "结果：8张",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "order",
+      "action": "按从左往右完成同级运算",
+      "scope": "不含括号的连续加减或乘除"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U02",
+    "title": "混合运算",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "6–19",
+    "notes": "教材印刷6–19页为主线。先完成B01–B05；E01→E03解释去/添括号，E02比较除以积与除以商，E04/E05用具体数体验运算律，O01/O02为可选思想。ID稳定，顺序以本表为准；不要求连续做完所有提升。",
+    "sequence": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [
+    {
+      "sceneId": "G3-U02-B01-A",
+      "lessonId": "G3-U02-B01",
+      "story": {
+        "text": "车上原来有28人，到站下去9人，又上来6人。现在车上有多少人？",
+        "quantities": [
+          {
+            "id": "start",
+            "value": 28,
+            "unit": "人",
+            "role": "原有人数"
+          },
+          {
+            "id": "leave",
+            "value": 9,
+            "unit": "人",
+            "role": "下车人数"
+          },
+          {
+            "id": "board",
+            "value": 6,
+            "unit": "人",
+            "role": "上车人数"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "add",
+        "left": {
+          "type": "operation",
+          "operator": "subtract",
+          "left": {
+            "type": "number",
+            "value": 28
+          },
+          "right": {
+            "type": "number",
+            "value": 9
+          },
+          "grouped": false
+        },
+        "right": {
+          "type": "number",
+          "value": 6
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "people-line",
+        "quantityRefs": [
+          "start",
+          "leave",
+          "board"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "A_order_and_model",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "28－9＋6"
+      }
+    },
+    {
+      "sceneId": "G3-U02-B01-B",
+      "lessonId": "G3-U02-B01",
+      "story": {
+        "text": "24颗珠子，每6颗装一盒；每盒贴2张标签。一共要贴多少张标签？",
+        "quantities": [
+          {
+            "id": "beads",
+            "value": 24,
+            "unit": "颗",
+            "role": "珠子总数"
+          },
+          {
+            "id": "perBox",
+            "value": 6,
+            "unit": "颗/盒",
+            "role": "每盒珠子"
+          },
+          {
+            "id": "labels",
+            "value": 2,
+            "unit": "张/盒",
+            "role": "每盒标签"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "multiply",
+        "left": {
+          "type": "operation",
+          "operator": "divide",
+          "left": {
+            "type": "number",
+            "value": 24
+          },
+          "right": {
+            "type": "number",
+            "value": 6
+          },
+          "grouped": false
+        },
+        "right": {
+          "type": "number",
+          "value": 2
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "group-boxes",
+        "quantityRefs": [
+          "beads",
+          "perBox",
+          "labels"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "A_order_and_model",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "24÷6×2"
+      }
+    }
+  ],
+  "lengthScenes": []
+}

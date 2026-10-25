@@ -1,0 +1,237 @@
+{
+  "lessonId": "G3-U02-B03",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "括号：把必须先完成的事圈起来",
+  "shortTitle": "认识括号",
+  "question": "都是12、8和4，为什么两个故事答案不同？",
+  "subtitle": "括号把需要先合成的量圈成一个整体。先读单位，就能判断12是颗还是袋。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U02",
+  "recommendedPrerequisites": [
+    "会口算表内乘除和两位数加减"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 22,
+  "widget": "mixedOperations",
+  "prerequisiteNote": "每节都可以直接进入；先把故事里的量说清楚，再动算式。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "12颗红珠和8颗蓝珠混在一起，每4颗装一盒。需要多少盒？",
+    "predictQuestion": "装盒以前，先要知道什么？",
+    "predictionOptions": [
+      "先算8÷4",
+      "两种珠子合起来有多少颗",
+      "只数红珠"
+    ],
+    "discovery": [
+      "括号里的12＋8先求全部20颗，再按每盒4颗装盒。在这组数中两种颜色也各能装满盒；不是所有数量都能这样分开装，合起来分才符合原问题。"
+    ],
+    "symbols": [
+      "(12＋8)÷4",
+      "括号记录先合起来的20颗珠子"
+    ],
+    "mission": "先合并红蓝珠，再按每盒4颗分装。",
+    "retell": "只给12颗红珠装盒，为什么还没有回答总盒数？",
+    "observedEvidence": "先看红蓝珠合在一起，再看每盒装4颗的分组。",
+    "whyQuestion": "只给12颗红珠装盒，为什么还没有回答总盒数？",
+    "counterexamplePrompt": "如果改成红珠13颗、蓝珠7颗，能先各装满盒再直接相加吗？",
+    "predictionFocus": "装盒以前，先要知道什么？"
+  },
+  "workedExamples": [
+    {
+      "title": "12颗红珠和8颗蓝珠混在一起，每4颗装一盒。需要多少盒？",
+      "steps": [
+        {
+          "math": "(12＋8)÷4",
+          "why": "要把两种珠子都装盒，所以先合成20颗，再每4颗装一盒。"
+        },
+        {
+          "math": "结果：5盒",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    },
+    {
+      "title": "仓库原有12袋珠子，又有8颗散珠；每4颗散珠装1袋。装好后一共有多少袋？",
+      "steps": [
+        {
+          "math": "12＋8÷4",
+          "why": "12已经是袋数；只把8颗散珠装成2袋，再和原有12袋合起来。"
+        },
+        {
+          "math": "结果：14袋",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "brackets",
+      "action": "用括号标出先合并的整体",
+      "scope": "两步含括号算式"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U02",
+    "title": "混合运算",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "6–19",
+    "notes": "教材印刷6–19页为主线。先完成B01–B05；E01→E03解释去/添括号，E02比较除以积与除以商，E04/E05用具体数体验运算律，O01/O02为可选思想。ID稳定，顺序以本表为准；不要求连续做完所有提升。",
+    "sequence": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [
+    {
+      "sceneId": "G3-U02-B03-A",
+      "lessonId": "G3-U02-B03",
+      "story": {
+        "text": "12颗红珠和8颗蓝珠混在一起，每4颗装一盒。需要多少盒？",
+        "quantities": [
+          {
+            "id": "red",
+            "value": 12,
+            "unit": "颗",
+            "role": "红珠"
+          },
+          {
+            "id": "blue",
+            "value": 8,
+            "unit": "颗",
+            "role": "蓝珠"
+          },
+          {
+            "id": "perBox",
+            "value": 4,
+            "unit": "颗/盒",
+            "role": "每盒珠子"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "divide",
+        "left": {
+          "type": "operation",
+          "operator": "add",
+          "left": {
+            "type": "number",
+            "value": 12
+          },
+          "right": {
+            "type": "number",
+            "value": 8
+          },
+          "grouped": true
+        },
+        "right": {
+          "type": "number",
+          "value": 4
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "combine-then-share",
+        "quantityRefs": [
+          "red",
+          "blue",
+          "perBox"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "A_order_and_model",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "(12＋8)÷4"
+      }
+    },
+    {
+      "sceneId": "G3-U02-B03-B",
+      "lessonId": "G3-U02-B03",
+      "story": {
+        "text": "仓库原有12袋珠子，又有8颗散珠；每4颗散珠装1袋。装好后一共有多少袋？",
+        "quantities": [
+          {
+            "id": "bags",
+            "value": 12,
+            "unit": "袋",
+            "role": "原有整袋"
+          },
+          {
+            "id": "loose",
+            "value": 8,
+            "unit": "颗",
+            "role": "散珠"
+          },
+          {
+            "id": "perBag",
+            "value": 4,
+            "unit": "颗/袋",
+            "role": "每袋珠子"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "add",
+        "left": {
+          "type": "number",
+          "value": 12
+        },
+        "right": {
+          "type": "operation",
+          "operator": "divide",
+          "left": {
+            "type": "number",
+            "value": 8
+          },
+          "right": {
+            "type": "number",
+            "value": 4
+          },
+          "grouped": false
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "bags-plus-loose",
+        "quantityRefs": [
+          "bags",
+          "loose",
+          "perBag"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "A_order_and_model",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "12＋8÷4"
+      }
+    }
+  ],
+  "lengthScenes": []
+}

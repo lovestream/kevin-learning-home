@@ -1,0 +1,178 @@
+.preview-shell {
+  max-width: 1320px;
+}
+.preview-shell .topbar {
+  min-height: 84px;
+}
+.preview-banner {
+  padding: 12px 18px;
+  background: #e8f1ed;
+  border-left: 4px solid #469684;
+  border-radius: 4px;
+  color: #294b53;
+}
+.preview-context {
+  margin: 18px 0;
+  color: var(--muted);
+}
+.preview-context summary {
+  cursor: pointer;
+  min-height: 44px;
+}
+.preview-filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0 10px;
+}
+.preview-filters label {
+  display: grid;
+  gap: 6px;
+}
+.preview-filters input,
+.preview-filters select,
+.preview-shell input,
+.preview-shell select {
+  min-height: 44px;
+  border: 1px solid #bed3df;
+  border-radius: 6px;
+  padding: 8px;
+  background: #fff;
+  color: var(--ink);
+  max-width: 100%;
+}
+.preview-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.preview-lesson-card {
+  display: block;
+  background: white;
+  border: 1px solid var(--line);
+  border-top: 4px solid #82a8b6;
+  border-radius: 8px;
+  padding: 22px;
+  text-decoration: none;
+  min-height: 188px;
+}
+.preview-lesson-card:hover {
+  background: #edf5fa;
+}
+.preview-lesson-card h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.preview-lesson-card small,
+.preview-lesson-card span {
+  color: var(--muted);
+  font-size: 13px;
+}
+.preview-lesson-card p {
+  font-size: 14px;
+}
+.preview-static-note {
+  background: #fbf2d9;
+  padding: 14px;
+  border-radius: 6px;
+}
+.preview-footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--muted);
+}
+.preview-shell .classroom-stage {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.preview-shell .classroom-stage svg {
+  max-width: 100%;
+  height: auto;
+}
+.preview-shell figure {
+  margin: 16px 0;
+}
+.preview-shell img {
+  width: 100%;
+  max-width: 520px;
+}
+.preview-shell button {
+  min-height: 44px;
+}
+.preview-shell .hands-on-workbench,
+.preview-shell .textbook-workbench {
+  min-width: 0;
+}
+.preview-shell .math-lesson {
+  max-width: none;
+}
+.preview-shell select:focus-visible {
+  outline: 3px solid #9e6511;
+  outline-offset: 3px;
+}
+@media (max-width: 850px) {
+  .preview-catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .preview-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .preview-filters label:first-child {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 560px) {
+  .preview-shell {
+    padding: 0 16px;
+  }
+  .preview-shell .topbar {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 14px 0;
+    gap: 4px;
+  }
+  .preview-catalog {
+    grid-template-columns: 1fr;
+  }
+  .preview-filters {
+    grid-template-columns: 1fr;
+  }
+  .preview-filters label:first-child {
+    grid-column: auto;
+  }
+  .preview-shell .classroom-stage {
+    padding: 20px 14px;
+  }
+  .preview-banner {
+    font-size: 14px;
+  }
+  .preview-lesson-card {
+    min-height: 150px;
+  }
+  .preview-shell .brand {
+    font-size: 19px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preview-shell * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+@media print {
+  .preview-shell header,
+  .preview-banner,
+  .preview-footer {
+    display: none;
+  }
+  .preview-shell figure {
+    break-after: page;
+  }
+  .preview-shell img {
+    max-width: none;
+    width: 210mm;
+  }
+}

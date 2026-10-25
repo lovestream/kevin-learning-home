@@ -1,0 +1,153 @@
+{
+  "lessonId": "G3-L06-B03",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-17.1",
+  "status": "draft",
+  "title": "小数加减也要把相同单位对齐",
+  "shortTitle": "小数加减也要把相同单位对齐",
+  "question": "一盒彩笔3.8元、一本本子2.5元，合计多少钱？付10元找回多少？",
+  "subtitle": "元要和元相加，角要和角相加；小数点对齐是单位对齐的简写。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-L06",
+  "recommendedPrerequisites": [
+    "G3-L06-B01；整数进退位。"
+  ],
+  "relatedLessonIds": [
+    "G3-L06-B01",
+    "G3-L06-B02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "static-visual",
+  "classroom": {
+    "story": "一盒彩笔3.8元、一本本子2.5元，合计多少钱？付10元找回多少？",
+    "predictQuestion": "3.8元与2.5元相加，8和5代表什么？",
+    "predictionOptions": [
+      "都代表元",
+      "一个代表角，一个代表分",
+      "都代表角，满10角进1元"
+    ],
+    "discovery": [
+      "元要和元相加，角要和角相加；小数点对齐是单位对齐的简写。"
+    ],
+    "symbols": [
+      "3.8＋2.5＝6.3（元）",
+      "10−6.3＝3.7（元）"
+    ],
+    "mission": "元与元、角与角对齐，再核对付钱和找零。",
+    "retell": "为什么小数点对齐，就是把相同货币单位对齐？",
+    "observedEvidence": "把元对元、角对角，10角换1元后再找零。",
+    "whyQuestion": "为什么小数点对齐，就是把相同货币单位对齐？",
+    "counterexamplePrompt": "把3.8的8角与2.5的2元相加，还是同一种量吗？",
+    "predictionFocus": "3.8元与2.5元相加，8和5代表什么？"
+  },
+  "storyVisual": {
+    "type": "money-columns",
+    "title": "元对元、角对角",
+    "caption": "3.8元是3元8角，2.5元是2元5角。先把相同单位对齐，合计与找零留空。",
+    "values": [
+      3,
+      8,
+      2,
+      5,
+      10
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "money-columns",
+    "title": "元对元、角对角",
+    "caption": "3.8元是3元8角，2.5元是2元5角。先把相同单位对齐，合计与找零留空。",
+    "values": [
+      3,
+      8,
+      2,
+      5,
+      10
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "3.8元+2.5元合计多少，付10元找多少？",
+      "steps": [
+        {
+          "math": "合计6.3元。",
+          "why": "合计6.3元。"
+        },
+        {
+          "math": "10.0−6.3=3.7",
+          "why": "10.0−6.3=3.7元。",
+          "expressionBefore": "10.0−6.3",
+          "operation": "=",
+          "expressionAfter": "3.7"
+        },
+        {
+          "math": "结论：合计6.3元，找3.7元。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L06-B03-OBJ1",
+      "action": "理解小数点对齐背后的同单位相加与满十进退。",
+      "scope": "理解小数点对齐背后的同单位相加与满十进退。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L06",
+    "title": "小数的初步认识",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "86–94",
+    "notes": "一位两位小数、测量与货币联系、大小比较、一位小数简单加减；四年级再推广。",
+    "sequence": [
+      "G3-L06-B01",
+      "G3-L06-B02",
+      "G3-L06-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L06-B03-MODEL1",
+      "family": "decimals",
+      "variant": "G3-L06-B03",
+      "title": "小数加减也要把相同单位对齐",
+      "prompt": "理解小数点对齐背后的同单位相加与满十进退。",
+      "initialState": "元角表摆3元8角和2元5角，整数位与十分位对齐。",
+      "learnerAction": "合13角换1元3角，合并原5元；再从10元找零。",
+      "observableChange": "合6.3元、找3.7元；进位仍是10小单位换1大单位。",
+      "question": "小数加减和整数加减，共用什么道理？",
+      "wrongActionFeedback": "把5元13角直接写5.13元时用钱币验证小数第二位是分，不是13角。",
+      "guidance": [
+        {
+          "label": "先对齐个位与十分位",
+          "explanation": "先对齐个位与十分位。"
+        },
+        {
+          "label": "8角+5角=13角",
+          "explanation": "8角+5角=13角，换1元3角。"
+        },
+        {
+          "label": "求找零时10元看作10.0元",
+          "explanation": "求找零时10元看作10.0元，借1元为10角。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "小数加减也要把相同单位对齐",
+        "用元角钱币先算38角+25角，再转换为6元3角；竖式与钱币一一对应。"
+      ],
+      "modelStatus": "static-review"
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

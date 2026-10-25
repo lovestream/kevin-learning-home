@@ -11,6 +11,7 @@ on:
         codex/math-00-source-audit,
         codex/math-01-readonly-lesson,
         codex/math-01-nas-trial,
+        codex/math-full-01-70-lessons,
       ]
   pull_request:
     branches: [main]
@@ -56,6 +57,13 @@ jobs:
           python3 scripts/math-audit/check.py | tee .evidence/math-00/check.json
           python3 -m unittest discover -s tests/math-audit -p 'test_*.py' -v 2>&1 | tee .evidence/math-00/tests.log
       - run: node scripts/verify.ts
+      - name: MATH-FULL-01 content-only preview and all 70 classrooms (no NAS access)
+        run: |
+          npm run build:math-preview
+          python3 scripts/math-full-01/check.py
+          node --test --test-concurrency=1 tests/math-full-01/*.test.*
+          node tests/math-full-01/browser.mjs --checkpoint
+          node tests/math-full-01/browser.mjs
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1

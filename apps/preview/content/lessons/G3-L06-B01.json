@@ -1,0 +1,160 @@
+{
+  "lessonId": "G3-L06-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "不足一米的部分，仍用十进制记录",
+  "shortTitle": "不足一米的部分，仍用十进制记录",
+  "question": "纸条长1米3分米，只用“米”怎样写，既简短又清楚？",
+  "subtitle": "十进制可以继续向小于1的单位延伸，小数点把整数部分与不足1的部分分开。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-L06",
+  "recommendedPrerequisites": [
+    "三上分数单位与长度关系。"
+  ],
+  "relatedLessonIds": [
+    "G3-L06-B02",
+    "G3-L06-B03"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "纸条长1米3分米，只用“米”怎样写，既简短又清楚？",
+    "predictQuestion": "1米3分米写成1.03米，对吗？",
+    "predictionOptions": [
+      "只要有小数点就对",
+      "不对，3分米是0.3米",
+      "对，都是1和3"
+    ],
+    "discovery": [
+      "十进制可以继续向小于1的单位延伸，小数点把整数部分与不足1的部分分开。"
+    ],
+    "symbols": [
+      "1米3分米＝1.3米",
+      "1米3厘米＝1.03米"
+    ],
+    "mission": "对照米、分米、厘米，说明数字所在的位置。",
+    "retell": "两个数都有1和3，为什么1.3米比1.03米长？",
+    "observedEvidence": "对照1米后面的3分米与3厘米，认清3所在的单位。",
+    "whyQuestion": "两个数都有1和3，为什么1.3米比1.03米长？",
+    "counterexamplePrompt": "把十分位的3挪到百分位，实际量还相等吗？",
+    "predictionFocus": "1米3分米写成1.03米，对吗？"
+  },
+  "storyVisual": {
+    "type": "length-comparison",
+    "title": "1米3分米的纸条",
+    "caption": "长的整段是1米，后面接3个1分米的小段。图上还没有写出用米表示的小数。",
+    "values": [
+      100,
+      130
+    ],
+    "labels": [
+      "1米",
+      "1米3分米"
+    ]
+  },
+  "predictionVisual": {
+    "type": "length-comparison",
+    "title": "1米3分米的纸条",
+    "caption": "长的整段是1米，后面接3个1分米的小段。图上还没有写出用米表示的小数。",
+    "values": [
+      100,
+      130
+    ],
+    "labels": [
+      "1米",
+      "1米3分米"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "1米3分米与1米3厘米，分别写成小数是多少米？",
+      "steps": [
+        {
+          "math": "3分米=0.3米。",
+          "why": "3分米=0.3米。"
+        },
+        {
+          "math": "3厘米=0.03米。",
+          "why": "3厘米=0.03米。"
+        },
+        {
+          "math": "结论：1.3米；1.03米。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L06-B01-OBJ1",
+      "action": "用米分米厘米或元角分理解一位两位小数的位值。",
+      "scope": "用米分米厘米或元角分理解一位两位小数的位值。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L06",
+    "title": "小数的初步认识",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "86–94",
+    "notes": "一位两位小数、测量与货币联系、大小比较、一位小数简单加减；四年级再推广。",
+    "sequence": [
+      "G3-L06-B01",
+      "G3-L06-B02",
+      "G3-L06-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L06-B01-MODEL1",
+      "family": "decimals",
+      "variant": "G3-L06-B01",
+      "title": "不足一米的部分",
+      "prompt": "用米分米厘米或元角分理解一位两位小数的位值。",
+      "initialState": "同一1米尺分10分米和100厘米，另有1米3分米及1米3厘米两绳。",
+      "learnerAction": "把两绳分别标1.3米和1.03米，点各数字看所代表的单位。",
+      "observableChange": "3分米与3厘米长度不同；十分位0占位不能删。",
+      "question": "1.3与1.03都含1和3，为什么长短不同？",
+      "wrongActionFeedback": "把1.03写1.3时两条实际长度对齐，显示多写成了27厘米。",
+      "guidance": [
+        {
+          "label": "1分米是1/10米",
+          "explanation": "1分米是1/10米，写0.1米。"
+        },
+        {
+          "label": "1厘米是1/100米",
+          "explanation": "1厘米是1/100米，写0.01米。"
+        },
+        {
+          "label": "1米3分米写1.3米",
+          "explanation": "1米3分米写1.3米，1米3厘米写1.03米，两者不同。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "不足一米的部分，仍用十进制记录",
+        "1米尺等分10份为分米，再每份细分10份为厘米；用同一米作整体。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "decimal",
+        "title": "把3放在分米位还是厘米位",
+        "version": "textbook.v1",
+        "digits": [
+          1,
+          3,
+          0
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

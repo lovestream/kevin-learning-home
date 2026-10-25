@@ -1,0 +1,237 @@
+{
+  "lessonId": "G3-U02-E01",
+  "contentVersion": "2026-10-18.1",
+  "editorialRevision": "2026-10-18.1",
+  "status": "draft",
+  "title": "去括号：退回的钱为什么变成加",
+  "shortTitle": "去括号与符号",
+  "question": "减去一笔“净支出”，为什么等于先减再加？",
+  "subtitle": "减去括号中的差，表示减去付出的同时，把退回的部分加回来。换数场景必须整张卡一起切换。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "enhancement",
+  "parentUnitId": "G3-U02",
+  "recommendedPrerequisites": [
+    "会口算表内乘除和两位数加减"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 22,
+  "widget": "mixedOperations",
+  "prerequisiteNote": "每节都可以直接进入；先把故事里的量说清楚，再动算式。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "Kevin有20元，买文具花8元，后来店员退回3元。最后还剩多少元？",
+    "predictQuestion": "退回3元后，实际花的钱怎样变化？",
+    "predictionOptions": [
+      "退的钱也要再扣一次",
+      "实际花的钱减少",
+      "实际花的钱增加"
+    ],
+    "discovery": [
+      "退回3元让实际支出从8元降为5元，余额增加。20−(8−3)＝20−8＋3，两种记录说的是同一余额。"
+    ],
+    "symbols": [
+      "20−8＋3＝20−(8−3)",
+      "减去实际花费：买价−退款"
+    ],
+    "mission": "比较逐次记账与先算实际花费。",
+    "retell": "减号后的括号去掉，为什么退回的3元要变成加？",
+    "observedEvidence": "比较先付8元再退3元，与一次扣净支出5元。",
+    "whyQuestion": "减号后的括号去掉，为什么退回的3元要变成加？",
+    "counterexamplePrompt": "把20−(8−3)写成20−8−3，等于把退款当成了什么？",
+    "predictionFocus": "退回3元后，实际花的钱怎样变化？"
+  },
+  "workedExamples": [
+    {
+      "title": "Kevin有20元，买文具花8元，后来店员退回3元。最后还剩多少元？",
+      "steps": [
+        {
+          "math": "20－(8－3)",
+          "why": "实际少花的是8－3元，所以20－(8－3)=20－8＋3。"
+        },
+        {
+          "math": "结果：15元",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    },
+    {
+      "title": "班级有70元活动费，先垫付28元，后来退回8元。实际还剩多少元？",
+      "steps": [
+        {
+          "math": "70－(28－8)",
+          "why": "减去“付出后退回”的净支出，等于先减28再加8。"
+        },
+        {
+          "math": "结果：50元",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "rewrite",
+      "action": "用钱的流向解释减去差的等值改写",
+      "scope": "a－(b－c)"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U02",
+    "title": "混合运算",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "6–19",
+    "notes": "教材印刷6–19页为主线。先完成B01–B05；E01→E03解释去/添括号，E02比较除以积与除以商，E04/E05用具体数体验运算律，O01/O02为可选思想。ID稳定，顺序以本表为准；不要求连续做完所有提升。",
+    "sequence": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [
+    {
+      "sceneId": "G3-U02-E01-A",
+      "lessonId": "G3-U02-E01",
+      "story": {
+        "text": "Kevin有20元，买文具花8元，后来店员退回3元。最后还剩多少元？",
+        "quantities": [
+          {
+            "id": "start",
+            "value": 20,
+            "unit": "元",
+            "role": "原有"
+          },
+          {
+            "id": "pay",
+            "value": 8,
+            "unit": "元",
+            "role": "付出"
+          },
+          {
+            "id": "refund",
+            "value": 3,
+            "unit": "元",
+            "role": "退回"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "subtract",
+        "left": {
+          "type": "number",
+          "value": 20
+        },
+        "right": {
+          "type": "operation",
+          "operator": "subtract",
+          "left": {
+            "type": "number",
+            "value": 8
+          },
+          "right": {
+            "type": "number",
+            "value": 3
+          },
+          "grouped": true
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "money-flow",
+        "quantityRefs": [
+          "start",
+          "pay",
+          "refund"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "B_equivalent_rewrite",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "20－(8－3)"
+      }
+    },
+    {
+      "sceneId": "G3-U02-E01-B",
+      "lessonId": "G3-U02-E01",
+      "story": {
+        "text": "班级有70元活动费，先垫付28元，后来退回8元。实际还剩多少元？",
+        "quantities": [
+          {
+            "id": "start",
+            "value": 70,
+            "unit": "元",
+            "role": "活动费"
+          },
+          {
+            "id": "pay",
+            "value": 28,
+            "unit": "元",
+            "role": "垫付"
+          },
+          {
+            "id": "refund",
+            "value": 8,
+            "unit": "元",
+            "role": "退回"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "subtract",
+        "left": {
+          "type": "number",
+          "value": 70
+        },
+        "right": {
+          "type": "operation",
+          "operator": "subtract",
+          "left": {
+            "type": "number",
+            "value": 28
+          },
+          "right": {
+            "type": "number",
+            "value": 8
+          },
+          "grouped": true
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "money-flow",
+        "quantityRefs": [
+          "start",
+          "pay",
+          "refund"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "B_equivalent_rewrite",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "70－(28－8)"
+      }
+    }
+  ],
+  "lengthScenes": []
+}

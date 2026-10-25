@@ -1,0 +1,156 @@
+{
+  "lessonId": "G3-U06-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "一份不到一个，怎样说清楚",
+  "shortTitle": "一份不到一个，怎样说清楚",
+  "question": "一块饼平均给4人，每人不到一块，用什么数记录每人所得？",
+  "subtitle": "整数个数不够表达分割后的份额；分数记录对同一整体怎样等分、取几份。",
+  "grade": [
+    3
+  ],
+  "strand": "fractions",
+  "track": "foundation",
+  "parentUnitId": "G3-U06",
+  "recommendedPrerequisites": [
+    "平均分与整数1的整体含义。"
+  ],
+  "relatedLessonIds": [
+    "G3-U06-B02",
+    "G3-U06-B03",
+    "G3-U06-B04",
+    "G3-U06-B05",
+    "G3-U06-E01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "一块饼平均给4人，每人不到一块，用什么数记录每人所得？",
+    "predictQuestion": "饼分4份，份大小不同，能各记成1/4吗？",
+    "predictionOptions": [
+      "只看拿了几份",
+      "不能，必须平均分",
+      "可以，只要有4份"
+    ],
+    "discovery": [
+      "整数个数不够表达分割后的份额；分数记录对同一整体怎样等分、取几份。"
+    ],
+    "symbols": [
+      "1个整体平均分4份",
+      "其中1份记作1/4"
+    ],
+    "mission": "先认整体，再检查四份是否同样大。",
+    "retell": "同样分成4份，为什么不等分就不能各说成1/4？",
+    "observedEvidence": "看整体是谁，再看四份的大小是否相同。",
+    "whyQuestion": "同样分成4份，为什么不等分就不能各说成1/4？",
+    "counterexamplePrompt": "把一份切得特别大，仍给四人各一份，这样每人相同吗？",
+    "predictionFocus": "饼分4份，份大小不同，能各记成1/4吗？"
+  },
+  "storyVisual": {
+    "type": "fraction-strip",
+    "title": "一块饼，平均分成4份",
+    "caption": "用纸带代替这块饼。四份一样大，蓝色表示其中一个人的那一份。",
+    "values": [
+      4,
+      1
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "fraction-strip",
+    "title": "一块饼，平均分成4份",
+    "caption": "用纸带代替这块饼。四份一样大，蓝色表示其中一个人的那一份。",
+    "values": [
+      4,
+      1
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "一条纸带平均分成5段，只涂1段，涂色占整条多少？",
+      "steps": [
+        {
+          "math": "整体是整条纸带。",
+          "why": "整体是整条纸带。"
+        },
+        {
+          "math": "5段同样长，取其中1段。",
+          "why": "5段同样长，取其中1段。"
+        },
+        {
+          "math": "结论：1/5。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U06-B01-OBJ1",
+      "action": "理解整体、平均分和几分之一的关系。",
+      "scope": "理解整体、平均分和几分之一的关系。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U06",
+    "title": "分数的初步认识",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "73–91",
+    "notes": "几分之一、几分之几、同分母比较与加减、一个整体及一组物品的分数。",
+    "sequence": [
+      "G3-U06-B01",
+      "G3-U06-B02",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05",
+      "G3-U06-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U06-B01-MODEL1",
+      "family": "fractions",
+      "variant": "G3-U06-B01",
+      "title": "一份不到一个",
+      "prompt": "理解整体、平均分和几分之一的关系。",
+      "initialState": "两条同长纸带，一条1整条参照，另一条4等份、首格涂色。",
+      "learnerAction": "对齐格子检验等长，再切换不等分的反例。",
+      "observableChange": "等分时涂色1/4；不等分不能仅数4块就判1/4。",
+      "question": "为什么1/4一定要先说清楚“哪个整体”的四分之一？",
+      "wrongActionFeedback": "忽略等分时展示大小不同的份，问每份是否可互相重合。",
+      "guidance": [
+        {
+          "label": "先指定1指哪条完整纸带",
+          "explanation": "先指定1指哪条完整纸带。"
+        },
+        {
+          "label": "平均分意味着每小份相等",
+          "explanation": "平均分意味着每小份相等，不是只分出4块。"
+        },
+        {
+          "label": "4份中的1份记作1/4",
+          "explanation": "4份中的1份记作1/4，分母说等分总份数。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "一份不到一个，怎样说清楚",
+        "一条完整纸带标为1，折成4段相同长度并涂其中1段；同时保留未分割的同长参照纸带。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "fraction",
+        "title": "你来折、分、取一份",
+        "version": "textbook.v1",
+        "parts": 4
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}
