@@ -1,0 +1,43 @@
+worktree /Users/<user>/Downloads/codex/kevin-learning-home
+HEAD 398074ea72cea1b41cfc837f43d49009f159f8aa
+branch refs/heads/codex/bench-shared-contract
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-auth
+HEAD c71fd6c05dab94ee6dc5118cc034d0d6c4eea5c0
+branch refs/heads/codex/implement-02a-auth
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-bench-cloudflare
+HEAD 7caecac7089536926eface6a054ac7dc009f5c81
+branch refs/heads/codex/bench-01-cloudflare
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-bench-node
+HEAD ca56951e0f4e3df841a129bee560abbeaa29acf2
+branch refs/heads/codex/bench-02-node-nas
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-foundation
+HEAD a81c4e326f6a2d4f023a374f5ebac3342749fe59
+branch refs/heads/codex/implement-01-foundation
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-math-trial
+HEAD 6d0e1909ae861af531e7a3c7207cf3f5faabf4de
+branch refs/heads/codex/math-01-nas-trial
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-math00
+HEAD 67e514566d23f8fecc823e2ec56bfdd1a28a7431
+branch refs/heads/codex/math-00-source-audit
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-math01
+HEAD 824907055badc8484d9be2d480730fc1516013a8
+branch refs/heads/codex/math-01-readonly-lesson
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-shell
+HEAD f179b895dfdb0d7c2c1961832d813be8d91724d2
+branch refs/heads/codex/implement-02b-shell
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-status
+HEAD 164ddbf22781bba5300652038436a0cf207d9469
+branch refs/heads/codex/02b-main-status
+
+worktree /Users/<user>/Downloads/codex/kevin-learning-home-trial
+HEAD faa0f1c43985e924f5688651d9f7cde20301c9fe
+branch refs/heads/codex/02b-nas-trial

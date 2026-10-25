@@ -1,0 +1,61 @@
+name: Isolated MATH-01 NAS trial image bundle
+on:
+  push:
+    branches: [codex/math-01-nas-trial]
+    paths:
+      - infra/math-trial/plan.json
+      - infra/math-trial/image-evidence.mjs
+      - infra/math-trial/tls-proxy.mjs
+      - tests/math-trial/proxy.test.mjs
+      - .github/workflows/math-trial-image.yml
+permissions:
+  contents: read
+  actions: read
+jobs:
+  bundle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: { node-version: "24.15.0" }
+      - run: npm install --global npm@11.12.1
+      - name: Test isolated TLS proxy
+        run: node --test tests/math-trial/proxy.test.mjs
+      - name: Require successful actual merged-main CI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/trial-source" "$RUNNER_TEMP/trial-bundle"
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$(node -p 'JSON.parse(require("fs").readFileSync("infra/math-trial/plan.json")).mainCiRun')" > "$RUNNER_TEMP/trial-bundle/main-ci.json"
+          python3 - <<'PY'
+          import json,os,re
+          p=json.load(open('infra/math-trial/plan.json'))
+          r=json.load(open(os.environ['RUNNER_TEMP']+'/trial-bundle/main-ci.json'))
+          assert re.fullmatch(r'[0-9]{8}-[a-f0-9]{8}',p['runId'])
+          assert re.fullmatch(r'[a-f0-9]{40}',p['sourceSha'])
+          assert p['resourcePrefix']=='klh-math-trial-'+p['runId']
+          assert r['event']=='push' and r['head_branch']=='main'
+          assert r['head_sha']==p['sourceSha'] and r['conclusion']=='success' and r['status']=='completed'
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write('TRIAL_PREFIX='+p['resourcePrefix']+'\nSOURCE_SHA='+p['sourceSha']+'\nRUN_ID='+p['runId']+'\n')
+          PY
+      - name: Build exact main source with unchanged formal Dockerfile
+        run: |
+          set -euo pipefail
+          git archive "$SOURCE_SHA" | tar -x -C "$RUNNER_TEMP/trial-source"
+          docker build --platform linux/amd64 --label org.kevin-learning-home.trial="$RUN_ID" --label org.opencontainers.image.revision="$SOURCE_SHA" -f "$RUNNER_TEMP/trial-source/infra/docker/Dockerfile" -t "$TRIAL_PREFIX:app" "$RUNNER_TEMP/trial-source"
+          docker image inspect "$TRIAL_PREFIX:app" --format '{{json .}}' > "$RUNNER_TEMP/trial-bundle/image-inspect.json"
+          docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges:true --entrypoint node "$TRIAL_PREFIX:app" --input-type=module -e "$(cat infra/math-trial/image-evidence.mjs)" > "$RUNNER_TEMP/trial-bundle/build-evidence.json"
+          sha256sum "$RUNNER_TEMP/trial-source/infra/docker/Dockerfile" "$RUNNER_TEMP/trial-source/package-lock.json" > "$RUNNER_TEMP/trial-bundle/source-inputs.sha256"
+          docker save "$TRIAL_PREFIX:app" | gzip -1 > "$RUNNER_TEMP/trial-bundle/image.tar.gz"
+          cp infra/math-trial/plan.json "$RUNNER_TEMP/trial-bundle/plan.json"
+          cd "$RUNNER_TEMP/trial-bundle"
+          sha256sum image.tar.gz > image.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: klh-math-trial-bundle
+          path: ${{ runner.temp }}/trial-bundle
+          retention-days: 1

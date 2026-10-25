@@ -1,0 +1,22 @@
+{
+  "collection": "post-run snapshot; these seven files did not change during the successful full NAS run",
+  "gitHeadAtCollection": "8d41cf3fe03c4204744bda6ebe8f116c106a94de",
+  "worktreeDirtyAtRun": true,
+  "runtimeSourceSha": "e594b3e6db0563f6a6b56bc2b0724f1bcd8c961e",
+  "browser": "Google Chrome for Testing 156.0.8078.4",
+  "client": {
+    "node": "v24.15.0",
+    "os": "darwin",
+    "arch": "arm64",
+    "kernel": "27.0.0"
+  },
+  "files": {
+    "tests/math-trial/browser.mjs": "27bd5d1aa32835dda33167d3fc472e12d9bfd3703b3243229d40ca05756635e6",
+    "tests/math-trial/nas-evidence.mjs": "2787dda55bd3fab1d79d67f9a5803e1b41b01af1133ae1f2dec408f5970b0ab9",
+    "infra/math-trial/controller.py": "f6e8fdd76094c17d7a8fe82beb7814d1ba0f32a4aa2ba43569eae201b75b745b",
+    "infra/math-trial/browser-trust.mjs": "5f01c040fe25a10cc3e910ca3e9a0214a82f895ef752c7b8e943ce27c2988af8",
+    "infra/math-trial/auth-budget.mjs": "7f88be177cdc8353a391f7bbf9ebc1d3ef66d906020f7079715071dde533af51",
+    "infra/math-trial/tls-proxy.mjs": "46aae7b2c3a144c232d7a81839ee8b3dd60297ab2a59cc5d965fd9a9df541fd7",
+    "infra/math-trial/plan.json": "5d610e2ca8650eb2b2d7bc0bdaabe94f7cdc289e7145b93299cd6d8ef5e60164"
+  }
+}

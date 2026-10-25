@@ -1,0 +1,33 @@
+{
+  "before": {
+    "count": 10,
+    "productionCount": 8,
+    "oldTrialCount": 2,
+    "allSha256": "84495a51ef825c2248e20e59c4161bd01890b8ef60acd1c08c8c59b30896bf37",
+    "productionSha256": "1db8992f5e8aff9427372e4a51ae0ece6e2318ec0122cb578027e268355e7da7",
+    "oldTrialSha256": "a83b6113635baaffff8e79778a8cc27716f41f6d5f1f9799f93e7b4236e86b09",
+    "publicCaSha256": "0dc0043fadfaa2caa52f0b491e3285418c9e1b9048fb49b9023e264e4c36783d",
+    "leafSha256": "2f79c512ce66e11e495bf2bc9de7292b8e878dd581b618e9a58d3af3659017cd",
+    "httpsReady": 200,
+    "anonymousLoginPage": 200,
+    "oldMathStatus": "awaiting-migration",
+    "oldAccountLogin": "NEEDS_USER_ACTION_NO_OLD_CREDENTIAL_READ"
+  },
+  "after": {
+    "count": 10,
+    "productionCount": 8,
+    "oldTrialCount": 2,
+    "allSha256": "84495a51ef825c2248e20e59c4161bd01890b8ef60acd1c08c8c59b30896bf37",
+    "productionSha256": "1db8992f5e8aff9427372e4a51ae0ece6e2318ec0122cb578027e268355e7da7",
+    "oldTrialSha256": "a83b6113635baaffff8e79778a8cc27716f41f6d5f1f9799f93e7b4236e86b09",
+    "publicCaSha256": "0dc0043fadfaa2caa52f0b491e3285418c9e1b9048fb49b9023e264e4c36783d",
+    "leafSha256": "2f79c512ce66e11e495bf2bc9de7292b8e878dd581b618e9a58d3af3659017cd",
+    "httpsReady": 200,
+    "anonymousLoginPage": 200,
+    "oldMathStatus": "awaiting-migration",
+    "oldAccountLogin": "NEEDS_USER_ACTION_NO_OLD_CREDENTIAL_READ"
+  },
+  "unchanged": true,
+  "oldCredentialRead": false,
+  "oldDatabaseRead": false
+}

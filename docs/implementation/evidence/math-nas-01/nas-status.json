@@ -1,0 +1,59 @@
+{
+  "sourceSha": "e594b3e6db0563f6a6b56bc2b0724f1bcd8c961e",
+  "runId": "20261024-8f228391",
+  "status": "TRIAL_RUNNING_SYNTHETIC_ONLY",
+  "containers": {
+    "app": {
+      "status": "running",
+      "memoryBytes": 536870912,
+      "readonly": true,
+      "nonRoot": true,
+      "capDropAll": true,
+      "restartPolicy": "no",
+      "health": "healthy"
+    },
+    "tls": {
+      "status": "running",
+      "memoryBytes": 134217728,
+      "readonly": true,
+      "nonRoot": true,
+      "capDropAll": true,
+      "restartPolicy": "no",
+      "health": "not-configured"
+    }
+  },
+  "networks": {
+    "internal": {
+      "driver": "bridge",
+      "internal": true,
+      "onlyOwnedContainers": true
+    },
+    "edge": {
+      "driver": "bridge",
+      "internal": false,
+      "onlyOwnedContainers": true
+    }
+  },
+  "existingServices": {
+    "count": 10,
+    "unchanged": true,
+    "sha256": "89f1e3b64f919b6644b0adbf6525a3c7328cc4df3f873ebc8adf779af8de8f0c"
+  },
+  "preflight": {
+    "filesystem": "ext4",
+    "uid": 1024,
+    "gid": 100,
+    "portFree": true,
+    "newRootAbsent": true,
+    "freeBytes": 2419062931456,
+    "availableMemoryBytes": 4862701568,
+    "kernel": "4.4.180+",
+    "architecture": "x86_64",
+    "cpuBinding": "0"
+  },
+  "imageId": "sha256:b7d952cb310aab5a52d7efadf1b38417df17f121e2a172140b84e2cda944fdd5",
+  "archiveSha256": "5e2d24fe8712b3903bb199d00b95d34a397e2192793a2de54cd5aca77b9f279f",
+  "physicalDevices": "NEEDS_USER_ACTION",
+  "certificateTrust": "PROFILE_ONLY_NO_GLOBAL_TRUST",
+  "nasConfigChanged": false
+}

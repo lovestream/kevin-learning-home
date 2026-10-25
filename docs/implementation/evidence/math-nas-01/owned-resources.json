@@ -1,0 +1,33 @@
+{
+  "runId": "20261024-8f228391",
+  "root": "/volume2/homes/admin/klh-math-trial-20261024-8f228391",
+  "uid": 1024,
+  "gid": 100,
+  "rootMode": "0700",
+  "markerMatchesFrozenPlan": true,
+  "imageTag": "klh-math-trial-20261024-8f228391:app",
+  "imageId": "sha256:b7d952cb310aab5a52d7efadf1b38417df17f121e2a172140b84e2cda944fdd5",
+  "containers": {
+    "app": "188bcd47bf4b8781376b5cccbf0c8c38752ea261ca34ed8385ba0ed2e813d49c",
+    "tls": "a1629cb9635ed627aa927b969e12cf37ec0a827b9c5469f9ad5d35c1c3173f85"
+  },
+  "networks": {
+    "internal": "fdc786c6794857d83c82e3d4f216015f20092beecdaae1e807fde85cd1d17de8",
+    "edge": "de2b697b8592fcff7b71ca0f584f5d1d884465b02b4461e9e51b913b6aae2d4b"
+  },
+  "origin": "https://192.168.2.100:38444",
+  "proxySha256": "46aae7b2c3a144c232d7a81839ee8b3dd60297ab2a59cc5d965fd9a9df541fd7",
+  "certificate": {
+    "caSha256": "26e514236b8c1afc47449526ab1b1424acc6a3df63b54502f32017a9ebad9c28",
+    "leafSha256": "9027e47827e5cc7f4f9ad7c6697145b6af5623065a0d83e95307452a10d71f33",
+    "validFrom": "Oct 24 13:58:29 2026 GMT",
+    "validTo": "Oct 31 13:58:29 2026 GMT",
+    "ipSan": "192.168.2.100",
+    "profileOnlyTrust": true,
+    "globalTrustChanged": false
+  },
+  "preservedForUserTrial": true,
+  "production": false,
+  "realData": false,
+  "physicalDevices": "NEEDS_USER_ACTION"
+}
