@@ -56,14 +56,6 @@ jobs:
           mkdir -p .evidence/math-00
           python3 scripts/math-audit/check.py | tee .evidence/math-00/check.json
           python3 -m unittest discover -s tests/math-audit -p 'test_*.py' -v 2>&1 | tee .evidence/math-00/tests.log
-      - run: node scripts/verify.ts
-      - name: MATH-FULL-01 content-only preview and all 70 classrooms (no NAS access)
-        run: |
-          npm run build:math-preview
-          python3 scripts/math-full-01/check.py
-          node --test --test-concurrency=1 tests/math-full-01/*.test.*
-          node tests/math-full-01/browser.mjs --checkpoint
-          node tests/math-full-01/browser.mjs
       - name: NAS R2 preview-only image, LAN HTTP boundary and all 70 APIs (CI only)
         env:
           KLH_EXPORT_PREVIEW_IMAGE: ${{ github.event_name == 'push' && '1' || '0' }}
@@ -76,6 +68,24 @@ jobs:
           task_exit=$?
           tail -c 4000 .evidence/math-full-nas-r2/container.log
           exit "$task_exit"
+      - name: Archive validated preview image for NAS transfer (push only)
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: math-preview-image
+          path: |
+            .evidence/math-full-nas-r2/image.json
+            .evidence/math-full-nas-r2/preview-amd64.tar.gz
+          retention-days: 3
+          compression-level: 0
+      - run: node scripts/verify.ts
+      - name: MATH-FULL-01 content-only preview and all 70 classrooms (no NAS access)
+        run: |
+          npm run build:math-preview
+          python3 scripts/math-full-01/check.py
+          node --test --test-concurrency=1 tests/math-full-01/*.test.*
+          node tests/math-full-01/browser.mjs --checkpoint
+          node tests/math-full-01/browser.mjs
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1
@@ -93,6 +103,8 @@ jobs:
         if: always()
         with:
           name: implement-02b-evidence
-          path: .evidence
+          path: |
+            .evidence
+            !.evidence/math-full-nas-r2/preview-amd64.tar.gz
           retention-days: 14
           include-hidden-files: true
