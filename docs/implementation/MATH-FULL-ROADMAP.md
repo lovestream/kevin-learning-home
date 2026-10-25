@@ -11,9 +11,9 @@
 | 三年级70课完整六步教学 | 70课；64 verified interactive / 6 static-visual；**全部draft** | 仅G3-U01-B01进入KLH并完成单课只读验收 | [Issue15 MATH-FULL-01](https://github.com/lovestream/kevin-learning-home/issues/15)，**全部70课同一个实现PR** |
 | 同一70课正式题组 | **849个唯一taskId**：warmup 140、core 249、transfer 143、challenge 73、review 244 | 未迁入；MATH-01第六步明确“练习尚未接入” | [Issue16 MATH-FULL-02](https://github.com/lovestream/kevin-learning-home/issues/16)，一个练习PR |
 | 按原题型拆分 | number357、choice93、explanation335、expression25、fields39 | 无新站可提交/核对 | 逐类型恢复首答→三项自查→终答；335解释题必须标“待人工核对”，不能假自动评分 |
-| 数学小侦探 | 独立专项系统，旧GitHub案卷/家长审核链路 | 未迁 | 在70课+练习稳定后专项适配；禁止读取旧私密案卷/学习数据 |
-| 17已审思维卡、43暂缓卡 | README描述前17已审定、后43暂缓 | 未迁 | 先迁17张受审可展示内容；43张仍标暂缓，不伪称已审核 |
-| 四至六年级旧课程与蓝图 | 存旧课程源/计划，蓝图168个coursePlans只是制作容器，不等于168课 | 未迁 | 另做准确可运行与仅规划台账，再决定后续实施PR；不可一次全标完成 |
+| 数学小侦探 | 独立专项系统，旧GitHub案卷/家长审核链路 | 未迁 | [Issue17专项盘点](https://github.com/lovestream/kevin-learning-home/issues/17)；70课+练习稳定后受审适配，禁止读取旧私密案卷/学习数据 |
+| 17已审思维卡、43暂缓卡 | README描述前17已审定、后43暂缓 | 未迁 | [Issue17](https://github.com/lovestream/kevin-learning-home/issues/17)先核对17张可展示受审内容；43张仍标暂缓，不伪称已审核 |
+| 四至六年级旧课程与蓝图 | 存旧课程源/计划，蓝图168个coursePlans只是制作容器，不等于168课 | 未迁 | [Issue17](https://github.com/lovestream/kevin-learning-home/issues/17)另做准确可运行与仅规划台账，再决定实施PR；不可一次全标完成 |
 | 钱包/积分/蛋仔、真实学习事件和账户 | 非本轮数学内容复制必需 | 不迁 | 正式上线时独立授权/安全验收 |
 
 ## 统一技术路线
