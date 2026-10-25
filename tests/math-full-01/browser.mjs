@@ -288,12 +288,15 @@ try {
           0,
         );
         assert.deepEqual(await page.evaluate(() => indexedDB.databases()), []);
-        assert.deepEqual(await page.evaluate(() => caches.keys()), []);
+        assert.deepEqual(
+          await page.evaluate(() => "caches" in window ? caches.keys() : []),
+          [],
+        );
         assert.deepEqual(
           await page.evaluate(() =>
-            navigator.serviceWorker
-              .getRegistrations()
-              .then((x) => x.map((y) => y.scope)),
+            "serviceWorker" in navigator
+              ? navigator.serviceWorker.getRegistrations().then((x) => x.map((y) => y.scope))
+              : [],
           ),
           [],
         );

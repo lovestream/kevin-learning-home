@@ -134,9 +134,14 @@ if not os.path.exists(root):
  os.chmod(root+'/owner-marker.json',0o600)
  for name in ['artifacts']:os.mkdir(root+'/'+name,0o700)
 assert os.path.realpath(root)==root and os.stat(root).st_uid==1024
+assert not os.path.islink(root+'/owner-marker.json')
 assert json.load(open(root+'/owner-marker.json'))==plan
+os.chmod(root,0o700)
+os.chmod(root+'/owner-marker.json',0o600)
 for name in ['artifacts']:
  p=root+'/'+name
+ assert os.path.realpath(p)==p and os.stat(p).st_uid==1024
+ os.chmod(p,0o700)
  assert os.path.realpath(p)==p and os.stat(p).st_uid==1024 and os.stat(p).st_mode&0o777==0o700
 """ % (ROOT, PLAN))
 
