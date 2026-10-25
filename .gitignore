@@ -7,3 +7,4 @@ apps/web/dist/
 test-results/
 .trial-private/
 __pycache__/
+.DS_Store

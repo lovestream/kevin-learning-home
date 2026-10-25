@@ -1,0 +1,604 @@
+{
+  "scope": "/Users/<user>/Downloads/codex",
+  "paths": [
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home",
+      "birthTime": 1791458492.6501935,
+      "gitDirKind": "primary-repository",
+      "branch": "codex/bench-shared-contract",
+      "head": "398074ea72cea1b41cfc837f43d49009f159f8aa",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".bench-evidence": 1,
+        ".probe-evidence": 23,
+        "node_modules": 2503,
+        "scripts": 2,
+        "tests": 2
+      },
+      "ignoredSensitiveMetadataCounts": {},
+      "remoteContainingHead": [
+        "origin/codex/bench-01-cloudflare",
+        "  origin/codex/bench-02-node-nas",
+        "  origin/codex/bench-shared-contract"
+      ],
+      "cwdProcessMatches": [],
+      "establishedUse": "最初仓库/共享契约实验；保存全部工作树共用的.git",
+      "decision": "保留：共享Git数据库，不能当作普通旧副本删除",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-auth",
+      "birthTime": 1792628903.279635,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/implement-02a-auth",
+      "head": "c71fd6c05dab94ee6dc5118cc034d0d6c4eea5c0",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [
+        {
+          "category": ".evidence",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        },
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".evidence": 16,
+        "apps": 3,
+        "node_modules": 2219
+      },
+      "ignoredSensitiveMetadataCounts": {},
+      "remoteContainingHead": [
+        "origin/codex/implement-02a-auth"
+      ],
+      "cwdProcessMatches": [],
+      "establishedUse": "IMPLEMENT-02A认证开发遗留",
+      "decision": "待确认：先保留/归档忽略的历史证据或合成数据库，再考虑移除",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-bench-cloudflare",
+      "birthTime": 1791864870.2207258,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/bench-01-cloudflare",
+      "head": "7caecac7089536926eface6a054ac7dc009f5c81",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".bench-evidence-final-cf-ci": 2,
+        ".bench-evidence-latest-cf-ci": 2,
+        ".bench-evidence": 1,
+        ".bench-work-cf-Q8b4MT": 6,
+        ".bench-work-cf-e76LU8": 7,
+        ".bench-work-cf-iUNemI": 16,
+        ".bench-work": 12,
+        "dist": 1,
+        "experiments": 5,
+        "node_modules": 2504
+      },
+      "ignoredSensitiveMetadataCounts": {
+        ".bench-work-cf-iUNemI": 9
+      },
+      "remoteContainingHead": [
+        "origin/codex/bench-01-cloudflare"
+      ],
+      "cwdProcessMatches": [],
+      "establishedUse": "Cloudflare比较实验遗留",
+      "decision": "待确认：先保留/归档忽略的历史证据或合成数据库，再考虑移除",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-bench-node",
+      "birthTime": 1791864870.292913,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/bench-02-node-nas",
+      "head": "ca56951e0f4e3df841a129bee560abbeaa29acf2",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [
+        {
+          "category": ".bench-evidence-nas-image",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        },
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".bench-evidence-ci-passed": 3,
+        ".bench-evidence-final-node-ci": 3,
+        ".bench-evidence-latest-node-ci": 9,
+        ".bench-evidence-nas-image": 3,
+        ".bench-evidence-node-ci-failed": 2,
+        ".bench-evidence": 3,
+        ".bench-work-node-oWSmih": 9,
+        "node_modules": 2503
+      },
+      "ignoredSensitiveMetadataCounts": {
+        ".bench-work-node-oWSmih": 1
+      },
+      "remoteContainingHead": [
+        "origin/codex/bench-02-node-nas"
+      ],
+      "cwdProcessMatches": [],
+      "establishedUse": "Node/NAS比较实验遗留",
+      "decision": "待确认：先保留/归档忽略的历史证据或合成数据库，再考虑移除",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-foundation",
+      "birthTime": 1792504414.8549256,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/implement-01-foundation",
+      "head": "a81c4e326f6a2d4f023a374f5ebac3342749fe59",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [
+        {
+          "category": ".evidence",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        },
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".evidence": 90,
+        "apps": 3,
+        "node_modules": 2219
+      },
+      "ignoredSensitiveMetadataCounts": {
+        ".evidence": 2
+      },
+      "remoteContainingHead": [
+        "origin/codex/implement-01-foundation"
+      ],
+      "cwdProcessMatches": [],
+      "establishedUse": "IMPLEMENT-01工程底座开发遗留",
+      "decision": "待确认：先保留/归档忽略的历史证据或合成数据库，再考虑移除",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-math-trial",
+      "birthTime": 1792849081.9288282,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/math-01-nas-trial",
+      "head": "6d0e1909ae861af531e7a3c7207cf3f5faabf4de",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 5,
+      "finderMetadataCount": 5,
+      "untrackedPaths": [
+        ".DS_Store",
+        "infra/.DS_Store",
+        "packages/.DS_Store",
+        "scripts/.DS_Store",
+        "tests/.DS_Store"
+      ],
+      "ignoredDirectories": [
+        {
+          "category": ".trial-private",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o700"
+        },
+        {
+          "category": ".evidence",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        },
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {
+        "START-HERE.md": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "credentials.json": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "state.json": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "tls/ca.key": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "tls/ca.crt": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "tls/server.key": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "tls/server.crt": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "klh-trial-ca.cer": {
+          "present": true,
+          "mode": "0o600"
+        }
+      },
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".evidence": 38,
+        ".trial-private": 30,
+        "apps": 7,
+        "infra": 1,
+        "node_modules": 2219,
+        "tests": 1
+      },
+      "ignoredSensitiveMetadataCounts": {
+        ".trial-private": 5
+      },
+      "remoteContainingHead": [
+        "origin/codex/math-01-nas-trial"
+      ],
+      "cwdProcessMatches": [
+        {
+          "pid": 25852,
+          "process": "rtk"
+        },
+        {
+          "pid": 25864,
+          "process": "node"
+        },
+        {
+          "pid": 25895,
+          "process": "Google Chrome for Testing"
+        },
+        {
+          "pid": 25898,
+          "process": "chrome_crashpad_handler"
+        },
+        {
+          "pid": 25900,
+          "process": "chrome_crashpad_handler"
+        },
+        {
+          "pid": 25902,
+          "process": "Google Chrome for Testing Helpe"
+        },
+        {
+          "pid": 25903,
+          "process": "Google Chrome for Testing Helpe"
+        },
+        {
+          "pid": 25904,
+          "process": "Google Chrome for Testing Helpe"
+        },
+        {
+          "pid": 25906,
+          "process": "Google Chrome for Testing Helpe"
+        },
+        {
+          "pid": 25908,
+          "process": "Google Chrome for Testing Helpe"
+        },
+        {
+          "pid": 25909,
+          "process": "Google Chrome for Testing Helpe"
+        },
+        {
+          "pid": 26007,
+          "process": "rtk"
+        },
+        {
+          "pid": 26016,
+          "process": "lsof"
+        }
+      ],
+      "establishedUse": "当前MATH-NAS-01及R1",
+      "decision": "保留：唯一活动工作副本与本次数学秘密源",
+      "deleteAuthorized": false,
+      "currentR1Changes": "Inventory was taken before implementation: tracked clean then, five Finder .DS_Store only; current R1 commits documented separately."
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-math00",
+      "birthTime": 1792764470.0134737,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/math-00-source-audit",
+      "head": "67e514566d23f8fecc823e2ec56bfdd1a28a7431",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        "scripts": 2,
+        "tests": 1
+      },
+      "ignoredSensitiveMetadataCounts": {},
+      "remoteContainingHead": [
+        "origin/HEAD -> origin/main",
+        "  origin/codex/math-00-source-audit",
+        "  origin/codex/math-01-nas-trial",
+        "  origin/codex/math-01-readonly-lesson",
+        "  origin/main"
+      ],
+      "ignoredOnlyPythonCaches": true,
+      "cwdProcessMatches": [],
+      "establishedUse": "MATH-00来源审计遗留",
+      "decision": "可删候选（仅在用户确认后，非force移除工作树；分支保留）",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-math01",
+      "birthTime": 1792808834.9825761,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/math-01-readonly-lesson",
+      "head": "824907055badc8484d9be2d480730fc1516013a8",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [
+        {
+          "category": ".evidence",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        },
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".evidence": 39,
+        "apps": 7,
+        "node_modules": 2220,
+        "scripts": 2
+      },
+      "ignoredSensitiveMetadataCounts": {},
+      "remoteContainingHead": [
+        "origin/HEAD -> origin/main",
+        "  origin/codex/math-01-nas-trial",
+        "  origin/codex/math-01-readonly-lesson",
+        "  origin/main"
+      ],
+      "cwdProcessMatches": [],
+      "establishedUse": "MATH-01首课接入开发遗留",
+      "decision": "待确认：先保留/归档忽略的历史证据或合成数据库，再考虑移除",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-shell",
+      "birthTime": 1792669644.776901,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/implement-02b-shell",
+      "head": "f179b895dfdb0d7c2c1961832d813be8d91724d2",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [
+        {
+          "category": ".evidence",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        },
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".evidence": 40,
+        "apps": 3,
+        "node_modules": 2219
+      },
+      "ignoredSensitiveMetadataCounts": {},
+      "remoteContainingHead": [
+        "origin/HEAD -> origin/main",
+        "  origin/codex/02b-nas-trial",
+        "  origin/codex/implement-02b-shell",
+        "  origin/codex/math-00-source-audit",
+        "  origin/codex/math-01-nas-trial",
+        "  origin/codex/math-01-readonly-lesson",
+        "  origin/main"
+      ],
+      "cwdProcessMatches": [],
+      "establishedUse": "IMPLEMENT-02B界面开发遗留",
+      "decision": "待确认：先保留/归档忽略的历史证据或合成数据库，再考虑移除",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-status",
+      "birthTime": 1792759035.268009,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/02b-main-status",
+      "head": "164ddbf22781bba5300652038436a0cf207d9469",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [],
+      "privateMetadataOnly": {},
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {},
+      "ignoredSensitiveMetadataCounts": {},
+      "remoteContainingHead": [
+        "origin/HEAD -> origin/main",
+        "  origin/codex/02b-nas-trial",
+        "  origin/codex/math-00-source-audit",
+        "  origin/codex/math-01-nas-trial",
+        "  origin/codex/math-01-readonly-lesson",
+        "  origin/main"
+      ],
+      "ignoredOnlyPythonCaches": true,
+      "cwdProcessMatches": [],
+      "establishedUse": "02B合并后状态文档遗留",
+      "decision": "可删候选（仅在用户确认后，非force移除工作树；分支保留）",
+      "deleteAuthorized": false
+    },
+    {
+      "path": "/Users/<user>/Downloads/codex/kevin-learning-home-trial",
+      "birthTime": 1792757282.6964355,
+      "gitDirKind": "linked-worktree",
+      "branch": "codex/02b-nas-trial",
+      "head": "faa0f1c43985e924f5688651d9f7cde20301c9fe",
+      "commonGitDir": "/Users/<user>/Downloads/codex/kevin-learning-home/.git",
+      "trackedChanges": 0,
+      "untrackedCount": 0,
+      "finderMetadataCount": 0,
+      "untrackedPaths": [],
+      "ignoredDirectories": [
+        {
+          "category": ".trial-private",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o700"
+        },
+        {
+          "category": "node_modules",
+          "directory": true,
+          "symlink": false,
+          "mode": "0o755"
+        }
+      ],
+      "privateMetadataOnly": {
+        "START-HERE.md": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "credentials.json": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "state.json": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "tls/ca.key": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "tls/ca.crt": {
+          "present": true,
+          "mode": "0o644"
+        },
+        "tls/server.key": {
+          "present": true,
+          "mode": "0o600"
+        },
+        "tls/server.crt": {
+          "present": true,
+          "mode": "0o644"
+        },
+        "klh-trial-ca.cer": {
+          "present": true,
+          "mode": "0o600"
+        }
+      },
+      "processMatches": [],
+      "allIgnoredTopLevelCounts": {
+        ".trial-private": 13,
+        "infra": 1,
+        "node_modules": 2219
+      },
+      "ignoredSensitiveMetadataCounts": {
+        ".trial-private": 5
+      },
+      "remoteContainingHead": [
+        "origin/HEAD -> origin/main",
+        "  origin/codex/02b-nas-trial",
+        "  origin/codex/math-00-source-audit",
+        "  origin/codex/math-01-nas-trial",
+        "  origin/codex/math-01-readonly-lesson",
+        "  origin/main"
+      ],
+      "cwdProcessMatches": [],
+      "establishedUse": "旧02B隔离试用控制器/秘密源",
+      "decision": "保留：旧02B仍需的独有口令/CA/私钥/状态",
+      "deleteAuthorized": false
+    }
+  ],
+  "deletedOrMoved": 0,
+  "sameMathTrialDirectoriesAtRoot": 1,
+  "relatedGitWorkspaces": 11,
+  "processScope": "argv absolute-path match + lsof cwd; no raw argv/environment archived; does not certify other Codex chats finished"
+}

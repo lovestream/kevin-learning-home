@@ -2,6 +2,8 @@
 
 2026-10-24；任务：[Issue #13](https://github.com/lovestream/kevin-learning-home/issues/13)；工具分支 `codex/math-01-nas-trial`，交付 [Draft PR #14](https://github.com/lovestream/kevin-learning-home/pull/14)。
 
+**2026-10-25 R1 更新：** 以下为原技术验收，不能替代用户交付。[R1 报告](MATH-NAS-01-R1-DELIVERY.md)已补充同一用户 Mac 的真实路径/owner、固定 `~/Documents/Kevin-Learning-Home-Trial/` 安全交付、可见 Chromium 真实登录课堂、关闭/重开验证、11 个工作目录逐项核查及受信证书后续评估。本轮没有删除工作树或重部署 NAS；保持 Draft，用户本人体验和实体手机/iPad 仍待确认。最终 R1 HEAD 的双事件 CI 另在 PR 正文核实，不沿用下方历史 CI。
+
 **NAS 技术验收完成：全量 4/4 场景通过，新数学只读试用保留运行于 `https://192.168.2.100:38444/`；原 `38443` 仍是独立的旧 02B。这里只是合成账户隔离试用，不是生产上线。** 手机/iPad 实体课堂体验及旧账号登录仍为 `NEEDS_USER_ACTION`。MATH-02 未开始。
 
 ## 运行源和构建的可追溯性

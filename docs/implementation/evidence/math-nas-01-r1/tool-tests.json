@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-25",
+  "executionBaseHead": "6d0e1909ae861af531e7a3c7207cf3f5faabf4de",
+  "worktreeDirty": true,
+  "nodeCommand": "node --test tests/math-trial/*.test.mjs",
+  "nodePassed": 8,
+  "nodeFailed": 0,
+  "nodeSkipped": 0,
+  "pythonCommand": "python3 -m unittest discover -s tests/math-trial -p 'test_*.py' -q",
+  "pythonPassed": 15,
+  "pythonFailed": 0,
+  "originalSevenNasHarnessHashes": "UNCHANGED_CHECK_PASSED",
+  "formalAppAndOldTrialDiffAgainstOriginMain": "EMPTY",
+  "publicFileSecretScan": "PASS_502_FILES_NO_VALUES_PRINTED"
+}

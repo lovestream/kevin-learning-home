@@ -1,6 +1,18 @@
 # Kevin 学习家园：当前交接
 
-## 当前交接：MATH-NAS-01 技术验收完成，Draft PR #14 待审查
+## 当前交接：PR #14 R1 Mac 可用性交付完成，仍保持 Draft
+
+2026-10-25，按 [R1 审查要求](https://github.com/lovestream/kevin-learning-home/pull/14#issuecomment-6385527963)先解决用户实际体验。**固定入口：`~/Documents/Kevin-Learning-Home-Trial/`**，用户 Mac Finder 已确认 `START-HERE.md`、公开 CA、`打开数学课堂.command`、`目录整理清单.md`。目录 0700，指南/公开 CA 0600、启动器 0700。原指南确实在同一 Mac `/Users/<user>/Downloads/codex/kevin-learning-home-math-trial/.trial-private/START-HERE.md`；真实未脱敏绝对路径在本机指南与交付消息，密码没有进 GitHub。
+
+本机可见 Chromium 实际合成孩子登录 **38444** 成功，数学「只读课堂」、英语「待迁入」，首课六步可见；桌面界面独立核对窗口和地址。旧 **38443** 公开配置仍两科待迁入，未取旧密码/DB。新增启动器同机/Aqua/owner 检查，严格 TLS 仅信任专属 profile；已验证最后标签关闭释放 runtime、可重开、重复启动不建第二份配置。用户本人验收仍待反馈，执行代理成功不等于用户签收。
+
+唯一活动工作副本及新秘密源仍是 `kevin-learning-home-math-trial`。11 份目录来自 1 主仓库 + 10 worktree，只有 1 math-trial；共享 Git/当前数学/旧02B秘密源保留，math00/status 是待用户确认的两份候选，另外六份先归档 ignored 证据。**没有删除、移动或新增项目目录**，不要手删 `.git/worktrees`。详见[清单](../implementation/MATH-NAS-01-R1-DIRECTORIES.md)。
+
+[R1 执行报告](../implementation/MATH-NAS-01-R1-DELIVERY.md)、[Mac 可见访问](../implementation/evidence/math-nas-01-r1/mac-access.json)、[交付定位](../implementation/evidence/math-nas-01-r1/local-delivery.json)、[11 表不变](../implementation/evidence/math-nas-01-r1/learning-invariance.json)。本地完整正式回归与 15 Python / 8 工具 Node 通过；原七份 NAS 工具 hash 未变。最终精确 HEAD 的 push/PR 完整 CI 在 [PR #14 正文](https://github.com/lovestream/kevin-learning-home/pull/14)核对，不能沿用旧 6d0e190 的成功记录。
+
+普通 Safari/实体手机/iPad 因私有 CA 仍 `NEEDS_USER_ACTION/NOT_RUN`。测试 CA 到期 2026-10-31 13:58:29 UTC，仅专属 Chromium 内信任；后续 Tailscale 域名证书/自有域名 DNS-01 只作评估，没有实施。R1 未创建/修改 NAS 容器、配置、系统信任或 Tailscale；旧站、真实学习数据不动。**保持 Draft、不合并、不进入 MATH-02，等待 ChatGPT 重新审查和用户体验。**
+
+## MATH-NAS-01 原技术验收归档
 
 2026-10-24，按 [Issue #13](https://github.com/lovestream/kevin-learning-home/issues/13) 新建独立数学只读试用 **`https://192.168.2.100:38444/`**。旧 [38443](https://192.168.2.100:38443/) 保留源 `7790da6` 的 02B，不含数学；新实例固定已通过 main CI 的 `e594b3e6db0563f6a6b56bc2b0724f1bcd8c961e`，新 app 才启用 `KLH_MATH_READONLY=1`。用户在新入口应看到数学「只读课堂」、英语「待迁入」。不把 main 合并或旧02B成功误称为数学实体设备验收。
 
@@ -10,7 +22,7 @@
 - **真实 NAS LAN 全量 4/4 通过**（未筛选）：390/768/1280孩子登录与六步、旋转/三视图/照片/刷新/退出；家长锁定403、解锁grant200、12秒2轮auth+math复核 DOM/焦点稳定、撤销403和隐私遮蔽、正式离线CLI恢复grant。所有成功课件及实际JS/CSS对镜像hash，11学习表逐表count/hash相同。正常响应CSP与无外站请求等通过；离线维护期间3次固定无数据503单列。
 - 原8服务+旧02B两容器 ID/State/StartedAt/RestartCount、旧公开CA/叶证书hash不变；旧readiness和匿名登录页经严格TLS为200。**旧账号登录 NEEDS_USER_ACTION**：任务禁止读取旧密码/Cookie/DB，未用匿名200代替登录实测。
 - **实体手机/iPad NEEDS_USER_ACTION**。执行代理查看了真实NAS生成的多个尺寸截图，不是用户的实体触控验收。当前CA只在独立Chromium profile中信任，不改系统Keychain、不忽略证书错误；若设备不支持独立信任，应停在证书关口并另行审查受信域名方案，不跳过警告或安装全局信任。
-- 私密新入口/合成账号/本机浏览器命令只在本工作目录 `.trial-private/START-HERE.md`，不提交GitHub。正式账号限速保留，5次/15分钟含离线验证；测试重试曾耗尽额度，等待自然窗口后完成，未清理计数。试用证书2026-10-31到期，无自动续期、生产化或后台清理。
+- 原技术验收时账号指南仅在工作目录 `.trial-private/START-HERE.md`；R1 已新增上方固定 Documents 安全交付，密码仍不提交 GitHub。正式账号限速保留，5次/15分钟含离线验证；测试重试曾耗尽额度，等待自然窗口后完成，未清理计数。试用证书2026-10-31到期，无自动续期、生产化或后台清理。
 - 原数学/英语独立运行，正式应用/Dockerfile/Compose/旧trial工具不改，真实记录不导入；新实例按任务保留试用。保持Draft，不合并，不进入MATH-02。当前等待ChatGPT独立复审和用户实体设备反馈。
 
 ## MATH-01 合并时的历史验收
