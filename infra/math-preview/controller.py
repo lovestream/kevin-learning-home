@@ -178,7 +178,7 @@ for name in ['artifacts']:
                     if cfg.get('Subnet'):
                         other = ipaddress.ip_network(cfg['Subnet'])
                         assert other.version != subnet.version or not subnet.overlaps(other), 'DOCKER_SUBNET_COLLISION'
-            self.docker('network', 'create', '--subnet', PLAN['subnet'], '--label', LABEL + '=' + PLAN['runId'], NET)
+            self.docker('network', 'create', '--subnet', PLAN['subnet'], '--gateway', '172.30.244.1', '--label', LABEL + '=' + PLAN['runId'], NET)
         args = ['run', '-d', '--name', APP, *self.hardening(), '--memory', '256m', '--network', NET, '--ip', PLAN['appIP'], *self.env(PLAN['appIP']), image['Id']]
         if 'appId' not in self.state:
             self.state['appId'] = self.docker(*args); self.save()

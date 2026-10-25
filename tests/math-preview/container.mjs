@@ -64,7 +64,16 @@ try {
   assert.equal(info.Config.User, "node");
   assert.equal(info.Architecture, "amd64");
   assert.equal(info.Config.Labels["org.opencontainers.image.revision"], head);
-  docker("network", "create", "--subnet", "172.30.244.0/29", ...owner, network);
+  docker(
+    "network",
+    "create",
+    "--subnet",
+    "172.30.244.0/29",
+    "--gateway",
+    "172.30.244.1",
+    ...owner,
+    network,
+  );
   networkCreated = true;
   const net = JSON.parse(docker("network", "inspect", network))[0],
     gateway = net.IPAM.Config[0].Gateway,
