@@ -1,5 +1,15 @@
 # Kevin Learning Home · 项目当前状态
 
+## 紧急纠偏：唯一用户交付目标是NAS学习家园，不是Mac本地站（2026-10-25）
+
+**用户明确要求：他已经体验并认可NAS数学第一课的视觉/交互样式，立即把原数学学习网站现成教学、教具、练习等功能迁入NAS上的Kevin学习家园。现阶段不要登录/注册/账号密码，真实学习记录和积分留待正式上线。** 不允许以后再将`127.0.0.1:4179`、双CI success或单独的本地可见窗口当成最终交付。原NAS 38444合成单课是实际体验起点，旧38443仍是02B。
+
+截至本条： [Draft PR18](https://github.com/lovestream/kevin-learning-home/pull/18) HEAD `9aa2371bb3eb28055a3b5879f48dc6ebc73c457b` 的70/70教案、原教具适配、210/210浏览器及两套完整CI已通过，**但仅Mac localhost内容服务，NAS 70课尚未部署，849题/数学侦探/已审卡/可用高年级仍未迁入，不能当整站完成。**
+
+已在[PR18 R2整改指令](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6399021659)明确要求Codex**继续在同一Draft PR部署NAS免账号70课**，核验旧38444可回退、正式服务不取消认证、旧8容器/38443/旧数学英语网站/真实数据不受损、严格TLS、实际从NAS IP浏览器验收；解决Mac-only硬编码localhost监听、内容未打入Docker镜像、服务无学习家园数学入口等问题，不重复开发70课。随后直接续做[Issue16 849道原题完整练习到同一NAS](https://github.com/lovestream/kevin-learning-home/issues/16)、[Issue17其他现成数学能力](https://github.com/lovestream/kevin-learning-home/issues/17)。先完成可访问的NAS体验而不是先造报告；仍保持Draft待独立代码和实装复审。
+
+**权限边界**：本次用户明确要求替换现有**合成试用38444**的教学展示；不授权公开正式身份API/真实数据，旧38443与生产8容器不得动、证书和NAS系统/Tailscale不能未经必要审批变更。原2026-10-31到期私有CA在Safari/iPad可信度不足，必须实际核验，不可通过忽略TLS错误伪造移动端PASS。
+
 ## 2026-10-25：转入数学内容全量快速迁入
 
 用户已在Mac体验首课并认可视觉风格，手机/iPad响应式表现获认可。PR14的R1复审/最终双CI成功，已合并main（`942dc508858f548af1e0517aa3365e08bfbee0e4`），[审查评论](https://github.com/lovestream/kevin-learning-home/pull/14#issuecomment-6392804835)；Issue13合成隔离试用交付范围已关闭，NAS旧38443与新38444运行环境都未覆盖。11个Mac相关worktree均未删除。**不要再显示“PR14待审/未合并”为当前事实**，其下旧报告作为历史时点记录。
