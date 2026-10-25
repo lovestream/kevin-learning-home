@@ -206,7 +206,7 @@ try {
     "node",
     "--input-type=module",
     "-e",
-    "import fs from 'node:fs';import assert from 'node:assert/strict';for(const p of ['/app/apps/server','/app/packages','/app/scripts/auth-admin.ts','/app/node_modules/fs-ext','/data','/media','/content'])assert(!fs.existsSync(p),p);assert(process.getuid()>0);console.log('PREVIEW_ONLY_NO_IDENTITY_OR_DB');",
+    "import fs from 'node:fs';import assert from 'node:assert/strict';for(const p of ['/app/apps/server','/app/packages','/app/scripts/auth-admin.ts','/app/node_modules/fs-ext','/data','/content'])assert(!fs.existsSync(p),p);assert(!fs.existsSync('/media')||fs.readdirSync('/media').length===0,'base OS media directory must be empty');assert(process.getuid()>0);console.log('PREVIEW_ONLY_NO_IDENTITY_OR_DB');",
   ).trim();
   assert.equal(missing, "PREVIEW_ONLY_NO_IDENTITY_OR_DB");
   const appMeta = inspect(app);
