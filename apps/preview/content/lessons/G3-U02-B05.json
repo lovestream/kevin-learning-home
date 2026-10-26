@@ -1,0 +1,159 @@
+{
+  "lessonId": "G3-U02-B05",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "两步问题：先找到没直接告诉你的量",
+  "shortTitle": "寻找中间量",
+  "question": "题目没告诉一共有多少支，怎样求“还剩”？",
+  "subtitle": "两步问题的第一步常常在补齐一个缺少的量。先问“要算最后答案，还缺什么？”",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U02",
+  "recommendedPrerequisites": [
+    "会口算表内乘除和两位数加减"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 22,
+  "widget": "mixedOperations",
+  "prerequisiteNote": "每节都可以直接进入；先把故事里的量说清楚，再动算式。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "4盒彩笔，每盒6支，送给同学9支。还剩多少支？",
+    "predictQuestion": "送走9支之前，先要知道什么？",
+    "predictionOptions": [
+      "4−9是多少",
+      "每盒还剩多少",
+      "4盒共有多少支"
+    ],
+    "discovery": [
+      "4×6得到送出以前的总量24支；24−9才得到剩下15支。中间量把盒数与剩余支数连起来。"
+    ],
+    "symbols": [
+      "4×6−9",
+      "4×6表示送出前的总支数"
+    ],
+    "mission": "找到全部彩笔，再扣掉送出的9支。",
+    "retell": "题目没有直接给24支，你为什么需要先求它？",
+    "observedEvidence": "先看4盒中的全部24支，再指出送出的9支。",
+    "whyQuestion": "题目没有直接给24支，你为什么需要先求它？",
+    "counterexamplePrompt": "直接算4−9，减掉的还是同一种东西吗？",
+    "predictionFocus": "送走9支之前，先要知道什么？"
+  },
+  "workedExamples": [
+    {
+      "title": "4盒彩笔，每盒6支，送给同学9支。还剩多少支？",
+      "steps": [
+        {
+          "math": "4×6－9",
+          "why": "题目没直接告诉总支数；先求4盒共有24支，再减送出的9支。"
+        },
+        {
+          "math": "结果：15支",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "intermediate",
+      "action": "从最终问题倒推缺少的中间量",
+      "scope": "乘加、乘减两步问题"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U02",
+    "title": "混合运算",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "6–19",
+    "notes": "教材印刷6–19页为主线。先完成B01–B05；E01→E03解释去/添括号，E02比较除以积与除以商，E04/E05用具体数体验运算律，O01/O02为可选思想。ID稳定，顺序以本表为准；不要求连续做完所有提升。",
+    "sequence": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [
+    {
+      "sceneId": "G3-U02-B05-A",
+      "lessonId": "G3-U02-B05",
+      "story": {
+        "text": "4盒彩笔，每盒6支，送给同学9支。还剩多少支？",
+        "quantities": [
+          {
+            "id": "boxes",
+            "value": 4,
+            "unit": "盒",
+            "role": "彩笔盒数"
+          },
+          {
+            "id": "perBox",
+            "value": 6,
+            "unit": "支/盒",
+            "role": "每盒彩笔"
+          },
+          {
+            "id": "give",
+            "value": 9,
+            "unit": "支",
+            "role": "送出"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "subtract",
+        "left": {
+          "type": "operation",
+          "operator": "multiply",
+          "left": {
+            "type": "number",
+            "value": 4
+          },
+          "right": {
+            "type": "number",
+            "value": 6
+          },
+          "grouped": false
+        },
+        "right": {
+          "type": "number",
+          "value": 9
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "boxes-and-items",
+        "quantityRefs": [
+          "boxes",
+          "perBox",
+          "give"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "A_order_and_model",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "4×6－9"
+      }
+    }
+  ],
+  "lengthScenes": []
+}

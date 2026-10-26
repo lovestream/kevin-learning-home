@@ -1,0 +1,222 @@
+{
+  "lessonId": "G3-U04-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "把几十、几百和零散个数分别乘",
+  "shortTitle": "把几十、几百和零散个数分别乘",
+  "question": "每盒12支笔，买3盒，怎样不用一支支数就知道总数？",
+  "subtitle": "每盒的1个十与2个一可以分别收集，结果仍是同一批笔。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U04",
+  "recommendedPrerequisites": [
+    "表内乘法与十进制位值。"
+  ],
+  "relatedLessonIds": [
+    "G3-U04-B02",
+    "G3-U04-B03",
+    "G3-U04-B04",
+    "G3-U04-B05"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "每盒12支笔，买3盒，怎样不用一支支数就知道总数？",
+    "predictQuestion": "3盒各12支，可以怎样拆着数？",
+    "predictionOptions": [
+      "把12和3相加",
+      "分别数十支和两支",
+      "只数每盒的2支"
+    ],
+    "discovery": [
+      "每盒的1个十与2个一可以分别收集，结果仍是同一批笔。"
+    ],
+    "symbols": [
+      "12×3＝10×3＋2×3",
+      "两部分都要取3份"
+    ],
+    "mission": "分别合并十和一，再把两部分合起来。",
+    "retell": "12拆成10和2后，为什么两部分都要取3份？",
+    "observedEvidence": "先收集3组的十，再收集3组的一。",
+    "whyQuestion": "12拆成10和2后，为什么两部分都要取3份？",
+    "counterexamplePrompt": "只算10×3＋2，哪两组的2支笔被漏掉了？",
+    "predictionFocus": "3盒各12支，可以怎样拆着数？"
+  },
+  "storyVisual": {
+    "type": "groups",
+    "title": "每盒12支笔，买3盒",
+    "caption": "框是一盒，每盒同样12支；先看每盒，再想三盒合起来。",
+    "values": [
+      3,
+      12
+    ],
+    "labels": [
+      "支笔"
+    ]
+  },
+  "predictionVisual": {
+    "type": "groups",
+    "title": "每盒12支笔，买3盒",
+    "caption": "框是一盒，每盒同样12支；先看每盒，再想三盒合起来。",
+    "values": [
+      3,
+      12
+    ],
+    "labels": [
+      "支笔"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "23×3怎样口算？",
+      "steps": [
+        {
+          "math": "20×3=60；3×3=9",
+          "why": "20×3=60，3×3=9。",
+          "expressionBefore": "20×3",
+          "operation": "=",
+          "expressionAfter": "60；3×3"
+        },
+        {
+          "math": "60+9=69",
+          "why": "60+9=69。",
+          "expressionBefore": "60+9",
+          "operation": "=",
+          "expressionAfter": "69"
+        },
+        {
+          "math": "结论：69。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U04-B01-OBJ1",
+      "action": "用位值拆分解释整十整百和两位数口算乘法。",
+      "scope": "用位值拆分解释整十整百和两位数口算乘法。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U04",
+    "title": "多位数乘一位数",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "39–56",
+    "notes": "口算、竖式、连续进位、零、估算与解决问题；分配律以拆分模型体验。",
+    "sequence": [
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-U04-B05"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U04-B01-MODEL1",
+      "family": "placeValue",
+      "variant": "G3-U04-B01",
+      "title": "把几十、几百和零散个数分别乘",
+      "prompt": "用位值拆分解释整十整百和两位数口算乘法。",
+      "initialState": "每盒12支笔，买3盒，一共有多少支？",
+      "learnerAction": "分别合并十和一，再把两部分合起来。",
+      "observableChange": "先收集3组的十，再收集3组的一。",
+      "question": "12拆成10和2后，为什么两部分都要取3份？",
+      "wrongActionFeedback": "只乘十位时高亮未计的6根，提示个位部分也重复3次。",
+      "guidance": [
+        {
+          "label": "先确认每个数字的位置与单位",
+          "explanation": "先确认每个数字的位置与单位。"
+        },
+        {
+          "label": "分别求几个十、几个一",
+          "explanation": "分别求几个十、几个一。"
+        },
+        {
+          "label": "合并总数",
+          "explanation": "合并总数；零的位置来自计数单位，不是随意补零。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "把几十、几百和零散个数分别乘",
+        "画3捆十根与3组2根，再合并；对应12×3=10×3+2×3。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "product-place",
+        "title": "每增加一盒，就增加同样的计数单位",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            12,
+            3
+          ],
+          [
+            21,
+            4
+          ],
+          [
+            112,
+            4
+          ],
+          [
+            230,
+            3
+          ],
+          [
+            102,
+            4
+          ],
+          [
+            32,
+            3
+          ]
+        ],
+        "mode": "no-carry",
+        "contexts": [
+          {
+            "story": "每盒12支笔，买3盒，一共有多少支？",
+            "unit": "支",
+            "group": "盒"
+          },
+          {
+            "story": "每盒21支笔，买4盒，一共有多少支？",
+            "unit": "支",
+            "group": "盒"
+          },
+          {
+            "story": "每盒112支笔，买4盒，一共有多少支？",
+            "unit": "支",
+            "group": "盒"
+          },
+          {
+            "story": "每盒230支笔，买3盒，一共有多少支？",
+            "unit": "支",
+            "group": "盒"
+          },
+          {
+            "story": "每盒102支笔，买4盒，一共有多少支？",
+            "unit": "支",
+            "group": "盒"
+          },
+          {
+            "story": "操场搭座位，每排32个，共3排。换成排数与每排数，还能按同一位值关系求总数吗？",
+            "unit": "个",
+            "group": "排"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

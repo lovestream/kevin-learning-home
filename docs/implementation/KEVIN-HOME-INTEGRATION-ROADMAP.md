@@ -11,7 +11,7 @@
 
 | 顺序 | 功能 | 当前真实状态 | 已指派的GitHub任务 | 真正交付定义 |
 | --- | --- | --- | --- | --- |
-| 0 当前 | 数学70课六步+原教具 | NAS R2 70/70教学已运行；但主目录仍平铺70课；PR18仍Draft | [PR18的R3课本目录审查](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6405768281) / [Issue15](https://github.com/lovestream/kevin-learning-home/issues/15) | **直接NAS打开**三年级上下册、17教材单元、知识点和7衔接课，返回单元、搜索、触摸/桌面可用，实测版本/回退通过 |
+| 0 当前 | 数学70课六步+原教具 | NAS R3 70/70教学与17单元/知识点导航已实测交付；PR18仍Draft | [PR18的R3课本目录审查](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6405768281) / [Issue15](https://github.com/lovestream/kevin-learning-home/issues/15) | **直接NAS打开**三年级上下册、17教材单元、知识点和7衔接课，返回单元、搜索、触摸/桌面可用，实测版本/回退通过 |
 | 1 | 数学849道练习 | 未迁入；现第六步仅提示待接入 | [Issue16](https://github.com/lovestream/kevin-learning-home/issues/16) | 五组849题、首答/三项自查/终答、335解释题人工确认语义，同一NAS数学课可作答，不保存成绩 |
 | 2 | 原数学其余可用能力 | 数学小侦探、17已审思维卡、可运行的高年级等未迁入 | [Issue17](https://github.com/lovestream/kevin-learning-home/issues/17) | 冻结旧站现有菜单/源/实际可运行项对照清单；可公开可用部分**部署到同一个NAS网站**；43暂缓卡/仅蓝图项保持未开放 |
 | 3 | 英语 Word Quest | 目前新NAS英语为“待迁入” | [Issue19](https://github.com/lovestream/kevin-learning-home/issues/19) | `/subjects/english`真实词库/册/单元/词卡/发音/拼写/完形/临时回顾；源素材许可证审核，同一NAS可体验 |
@@ -58,4 +58,4 @@ R3只重做目录导航/关联、文档、测试与NAS部署；**不改70课已�
 - **NAS交付强制**：不能以GitHub提交/CI/localhost/视口模拟宣称“已上线”；每批只在自己的无数据预览容器滚动更新，审查源SHA/imageID/内容hash、真实NAS浏览器、前后旧服务/数据不变、回退验证。最终版本再更新项目状态和交接，保持Draft待独立代码复审。
 
 ## 本次记录和现实状态
-PR18最新报告的NAS R2是**70课教学交付**，非70课按课本完成导航，也非849题或整个数学网站的完成。用户亲自发现平铺70课的问题，R3已要求Codex改同一PR18并回到NAS真实验收。英语/积分/蛋仔均属后续任务，目前**没有运行在新学习家园**。
+PR18 的 NAS R3 已完成 70 课教学、17 教材单元和知识点导航，源码 020ceb9；真实 NAS 三视口、210 课堂、回退恢复及保护快照通过，见 [R3 报告](MATH-FULL-01-NAS-R3-REPORT.md)。849 题和其它数学功能仍未交付，不把 R3 称为整站完成。按用户最新指令直接继续 Issue16/#17，保持 Draft，不等待重复阶段授权。英语/积分/蛋仔均属后续任务，目前没有运行在新学习家园。

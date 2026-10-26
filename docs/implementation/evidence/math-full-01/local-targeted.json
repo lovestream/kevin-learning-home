@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/math-full-01/contract.test.ts",
+    "tests/math-full-01/http.test.ts",
+    "tests/math-full-01/mac.test.mjs",
+    "tests/math-full-01/models.test.mjs"
+  ],
+  "exitCode": 0,
+  "elapsedMs": 886,
+  "timestamp": "2026-10-25T09:54:10.833650+00:00",
+  "testFiles": {
+    "tests/math-full-01/contract.test.ts": "467ca707f7df03229a5c53121d2e06934d77215bdc0935afd700ec82a2482895",
+    "tests/math-full-01/http.test.ts": "bdad027dc0060c5ee4d46a678bec0023a22f803a33ce198af3f23bb709dfbad9",
+    "tests/math-full-01/mac.test.mjs": "c644fc4fadaff27ff5cf82b4039df1fa517c52d36e07186bc03c0cf28c6021ee",
+    "tests/math-full-01/models.test.mjs": "359ebcc94006d8806b6b0ed81587ab9f869a980dc626583f4464b249c80c4ad6"
+  },
+  "output": "✔ 70 unique draft lessons retain 64 interactive / 6 static, metadata and supported model families (0.344792ms)\n✔ all field projections match recorded source value hashes; no answer / private field enters public lessons (8.93525ms)\n✔ unknown schemas, nested answer fields, renderer drift and duplicate IDs fail closed (1.512542ms)\n✔ changed teaching content is rejected by catalog hash, not silently displayed (9.176917ms)\n✔ preview requires explicit enable; 70 real anonymous GETs have no cookies or write API (49.535042ms)\n✔ missing or changed build assets prevent startup; no partial healthy service (23.134458ms)\n✔ anonymous preview does not turn formal math / learner APIs anonymous or bypass parent grant (347.778708ms)\n✔ anonymous Mac delivery reuses one fixed folder and preserves the existing NAS credential guide (2.182917ms)\n✔ all 11 core models × 6 authored contexts initialize and preserve finite parameter domains (1.647583ms)\n✔ 35 textbook models initialize; angle invariants, unit changes and unequal allocations remain mathematical (0.766917ms)\n✔ fractions regroup without changing length; areas and common edges are conserved correctly (0.244708ms)\n✔ calendar leap years and clock fields use the copied time model without persistence (0.1005ms)\n✔ continuous folding preserves six faces, edge lengths, and the final cube topology (0.774667ms)\n✔ observer projection, hidden cubes, weighing and equal waterline substitution match source goldens (0.324208ms)\n✔ ruler, intervals, overlapping boards and chain joints retain physical units (0.166042ms)\n✔ operation array cuts, inverse flow and substitution preserve original mathematical semantics (0.245042ms)\nℹ tests 16\nℹ suites 0\nℹ pass 16\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 838.748833\n",
+  "errors": ""
+}

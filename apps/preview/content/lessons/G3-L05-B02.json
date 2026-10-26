@@ -1,0 +1,191 @@
+{
+  "lessonId": "G3-L05-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "按范围分组，边界上的数据放哪里",
+  "shortTitle": "按范围分组，边界上的数据放哪里",
+  "question": "整理8次阅读时长，直接看一串数不容易比较，怎样分组更清楚？",
+  "subtitle": "分类减少零散信息，但每条记录应恰好落入一组；结论不能超出数据范围。",
+  "grade": [
+    3
+  ],
+  "strand": "logic",
+  "track": "foundation",
+  "parentUnitId": "G3-L05",
+  "recommendedPrerequisites": [
+    "G3-L05-B01。"
+  ],
+  "relatedLessonIds": [
+    "G3-L05-B01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "整理8次阅读时长，直接看一串数不容易比较，怎样分组更清楚？",
+    "predictQuestion": "10分钟放在0—9分钟组，还是10—19分钟组？",
+    "predictionOptions": [
+      "两组都放",
+      "两组都不放",
+      "10—19分钟组"
+    ],
+    "discovery": [
+      "分类减少零散信息，但每条记录应恰好落入一组；结论不能超出数据范围。"
+    ],
+    "symbols": [
+      "0—9；10—19；20及以上",
+      "各组个数之和＝全部记录数"
+    ],
+    "mission": "让每个时长只进一个组，检查总个数。",
+    "retell": "为什么每条记录必须只进一个组，分类才不重不漏？",
+    "observedEvidence": "把8条分钟记录各放一组，重点检查10和20的边界。",
+    "whyQuestion": "为什么每条记录必须只进一个组，分类才不重不漏？",
+    "counterexamplePrompt": "让10同时进0—10和10—19，两组相加还能等于8条吗？",
+    "predictionFocus": "10分钟放在0—9分钟组，还是10—19分钟组？"
+  },
+  "storyVisual": {
+    "type": "data-cards",
+    "title": "把阅读时长卡各放进一个组",
+    "caption": "先看8条原始记录；10分钟该去哪组，要由你判断。",
+    "values": [
+      5,
+      8,
+      10,
+      12,
+      15,
+      18,
+      20,
+      22
+    ],
+    "labels": [
+      "0—9分钟",
+      "10—19分钟",
+      "20分钟及以上"
+    ]
+  },
+  "predictionVisual": {
+    "type": "data-cards",
+    "title": "把阅读时长卡各放进一个组",
+    "caption": "先看8条原始记录；10分钟该去哪组，要由你判断。",
+    "values": [
+      5,
+      8,
+      10,
+      12,
+      15,
+      18,
+      20,
+      22
+    ],
+    "labels": [
+      "0—9分钟",
+      "10—19分钟",
+      "20分钟及以上"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "8人的阅读时长按整数分钟记录为5、8、10、12、15、18、20、22。按0–9、10–19、20及以上分组，各几人？",
+      "steps": [
+        {
+          "math": "0–9有5、8，共2。",
+          "why": "0–9有5、8，共2。"
+        },
+        {
+          "math": "10–19有10、12、15、18，共4；其余2。",
+          "why": "10–19有10、12、15、18，共4；其余2。"
+        },
+        {
+          "math": "结论：分别2、4、2人。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L05-B02-OBJ1",
+      "action": "用不重叠不遗漏的区间整理数据，依据数据作有范围的结论。",
+      "scope": "用不重叠不遗漏的区间整理数据，依据数据作有范围的结论。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L05",
+    "title": "数据的收集与整理",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "65–76",
+    "notes": "调查、分类记录、单复式统计表、按标准分组、比较与表达；不把平均数提前当主课。",
+    "sequence": [
+      "G3-L05-B01",
+      "G3-L05-B02"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L05-B02-MODEL1",
+      "family": "data",
+      "variant": "G3-L05-B02",
+      "title": "按范围分组",
+      "prompt": "用不重叠不遗漏的区间整理数据，依据数据作有范围的结论。",
+      "initialState": "整数分钟卡5、8、10、12、15、18、20、22，区间0–9/10–19/20及以上。",
+      "learnerAction": "每卡拖入唯一栏，专门试10与20的边界；合计人数。",
+      "observableChange": "三栏2、4、2，共8；每卡恰一次。",
+      "question": "给出一组有重复边界的分类，再亲自修正。",
+      "wrongActionFeedback": "边界重叠时先修改分组标签，不能让同一张卡在两栏复制。",
+      "guidance": [
+        {
+          "label": "先定分组标准",
+          "explanation": "先定分组标准，写清边界。"
+        },
+        {
+          "label": "逐个划去已记数据",
+          "explanation": "逐个划去已记数据，核对总频数。"
+        },
+        {
+          "label": "解释哪组多",
+          "explanation": "解释哪组多，不把一次调查说成永远如此。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "按范围分组，边界上的数据放哪里",
+        "阅读分钟数5、8、10、12、15、18、20、22；分0–9、10–19、20及以上三组。所有分钟数按整数分钟记录，区间两端均包含。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "data-bins",
+        "title": "把阅读分钟卡拖入唯一分组",
+        "version": "textbook.v1",
+        "data": [
+          5,
+          8,
+          10,
+          12,
+          15,
+          18,
+          20,
+          22
+        ],
+        "bins": [
+          [
+            0,
+            9
+          ],
+          [
+            10,
+            19
+          ],
+          [
+            20,
+            100
+          ]
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

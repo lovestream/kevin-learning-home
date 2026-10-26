@@ -1,0 +1,99 @@
+{
+  "lessonId": "G3-U03-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "毫米、厘米、米：尺子量到的到底是什么",
+  "shortTitle": "长度单位与读尺",
+  "question": "尺子的零刻度坏了，物体从2厘米放到7厘米3毫米，它到底长多少？",
+  "subtitle": "先建立1毫米、1厘米、1米的真实感觉，再用“两端读数之差”测长度。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-U03",
+  "recommendedPrerequisites": [
+    "会做百以内加减",
+    "知道1厘米＝10毫米"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 24,
+  "widget": "lengthWorkbench",
+  "prerequisiteNote": "可以直接进入。单位写在题目和输入框旁，不需要另外选择单位。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "尺子的零刻度坏了，物体从2厘米放到7厘米3毫米，它到底长多少？",
+    "predictQuestion": "从2厘米量起，能把右端读数当长度吗？",
+    "predictionOptions": [
+      "要减去左端读数",
+      "直接用右端读数",
+      "把两端读数相加"
+    ],
+    "discovery": [
+      "长度不是终点读数，而是终点与起点之间的距离：73−20＝53毫米。"
+    ],
+    "symbols": [
+      "7厘米3毫米＝73毫米",
+      "长度＝右端读数−左端读数"
+    ],
+    "mission": "指出两端，用同一单位求它们之间的距离。",
+    "retell": "左端不在0，为什么用右端减左端还能求长度？",
+    "observedEvidence": "指出尺子的左端读数与右端读数。",
+    "whyQuestion": "左端不在0，为什么用右端减左端还能求长度？",
+    "counterexamplePrompt": "把整件物体向右挪1厘米，两端都加1，长度也加1吗？",
+    "predictionFocus": "从2厘米量起，能把右端读数当长度吗？"
+  },
+  "workedExamples": [
+    {
+      "title": "零刻度坏了，还能量吗",
+      "steps": [
+        {
+          "math": "物体左端对着2厘米，右端对着7厘米3毫米。先指出两端读数，再求它们相差多少。",
+          "why": "先在尺上圈出左端和右端，把厘米和毫米都写成毫米；要量的是两个端点之间，不是从0到右端。"
+        },
+        {
+          "math": "长度不是终点读数，而是终点与起点之间的距离：73−20＝53毫米。",
+          "why": "移动尺子再量一次：两个读数变了，差没有变，说明算式量的确实是同一根小棒。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "length.units",
+      "action": "在毫米、厘米、米之间正确换算",
+      "scope": "整数单位换算"
+    },
+    {
+      "id": "length.ruler",
+      "action": "用终点读数减起点读数求物体长度",
+      "scope": "直尺同向测量"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U03",
+    "title": "毫米、分米和千米",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "20–30",
+    "notes": "实际测量、单位关系、长距离估计与整理。",
+    "sequence": [
+      "G3-U03-B01",
+      "G3-U03-B02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": [
+    {
+      "sceneId": "G3-U03-B01-ruler",
+      "mode": "ruler",
+      "title": "零刻度坏了，还能量吗",
+      "prompt": "物体左端对着2厘米，右端对着7厘米3毫米。先指出两端读数，再求它们相差多少。",
+      "startMm": 20,
+      "endMm": 73,
+      "explanation": "长度不是终点读数，而是终点与起点之间的距离：73−20＝53毫米。"
+    }
+  ]
+}

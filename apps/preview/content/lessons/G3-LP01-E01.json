@@ -1,0 +1,146 @@
+{
+  "lessonId": "G3-LP01-E01",
+  "contentVersion": "2026-10-18.1",
+  "editorialRevision": "2026-10-18.1",
+  "status": "draft",
+  "title": "星期循环与制作月历",
+  "shortTitle": "星期循环与制作月历",
+  "question": "已知某月1日是星期二，怎样不查整张日历就知道15日是星期几？",
+  "subtitle": "每过7天回到同一星期位置；余下几天决定最终变化。",
+  "grade": [
+    3
+  ],
+  "strand": "patterns",
+  "track": "enhancement",
+  "parentUnitId": "G3-LP01",
+  "recommendedPrerequisites": [
+    "G3-LP01-B01、B02；有余数除法。"
+  ],
+  "relatedLessonIds": [
+    "G3-LP01-B01",
+    "G3-LP01-B02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "已知某月1日是星期二，怎样不查整张日历就知道15日是星期几？",
+    "predictQuestion": "1日是周二，15日和1日相隔几天？",
+    "predictionOptions": [
+      "15天",
+      "16天",
+      "14天"
+    ],
+    "discovery": [
+      "每过7天回到同一星期位置；余下几天决定最终变化。"
+    ],
+    "symbols": [
+      "15−1＝14＝2×7",
+      "相隔整周，星期相同"
+    ],
+    "mission": "从1日出发，按7天一轮检查星期。",
+    "retell": "为什么15日与1日相隔14天，而不是15天？",
+    "observedEvidence": "从1日出发，走7天回同一星期，再走到15日。",
+    "whyQuestion": "为什么15日与1日相隔14天，而不是15天？",
+    "counterexamplePrompt": "把“第15日”当“从1日再过15天”，终点会差几天？",
+    "predictionFocus": "1日是周二，15日和1日相隔几天？"
+  },
+  "storyVisual": {
+    "type": "week-calendar",
+    "title": "某月1日是星期二",
+    "caption": "只填好已知的1日；其他日期与星期的对应关系由你来排。",
+    "values": [],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "week-calendar",
+    "title": "某月1日是星期二",
+    "caption": "只填好已知的1日；其他日期与星期的对应关系由你来排。",
+    "values": [],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "某月1日是周二，15日与18日各周几？",
+      "steps": [
+        {
+          "math": "15−1=14",
+          "why": "15−1=14，两个星期，仍周二。",
+          "expressionBefore": "15−1",
+          "operation": "=",
+          "expressionAfter": "14"
+        },
+        {
+          "math": "18比15晚3天，是周五。",
+          "why": "18比15晚3天，是周五。"
+        },
+        {
+          "math": "结论：15日周二，18日周五。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-LP01-E01-OBJ1",
+      "action": "用7天周期推算星期，结合日期规则制作并验证月历。",
+      "scope": "用7天周期推算星期，结合日期规则制作并验证月历。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-LP01",
+    "title": "年、月、日的秘密",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "77–85",
+    "notes": "年历、大小月、平闰年、24时计时、时长、制作月历与日影记录实践。",
+    "sequence": [
+      "G3-LP01-B01",
+      "G3-LP01-B02",
+      "G3-LP01-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-LP01-E01-MODEL1",
+      "family": "time",
+      "variant": "G3-LP01-E01",
+      "title": "星期循环与制作月历",
+      "prompt": "用7天周期推算星期，结合日期规则制作并验证月历。",
+      "initialState": "周一至周日7格环，某月1日周二；31格月历为空。",
+      "learnerAction": "走完整7天回原格，再处理余天；计算15日与18日时先求日期差。",
+      "observableChange": "15日相隔14天仍周二，18日相隔17天为周五。",
+      "question": "说清“第15天”与“过15天”为什么可能指不同日期。",
+      "wrongActionFeedback": "把第15日当过15天时同时标1日已在起点，不再多走第一天。",
+      "guidance": [
+        {
+          "label": "15日与1日间隔14天",
+          "explanation": "15日与1日间隔14天，不是15天。"
+        },
+        {
+          "label": "14是2个完整星期",
+          "explanation": "14是2个完整星期，所以同为周二。"
+        },
+        {
+          "label": "扩展做日影观察日志时固定地点、时刻与测量办法",
+          "explanation": "扩展做日影观察日志时固定地点、时刻与测量办法，只描述数据，不把一次记录当全年规律。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "星期循环与制作月历",
+        "七个格按周一到周日排成一圈；再画真实月历，区别循环位置和日期编号。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "calendar",
+        "title": "日期往前走，星期每七天循环",
+        "version": "textbook.v1"
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

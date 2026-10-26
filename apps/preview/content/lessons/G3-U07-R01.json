@@ -1,0 +1,150 @@
+{
+  "lessonId": "G3-U07-R01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-17.1",
+  "status": "draft",
+  "title": "把计算、分数与测量连成一个方案",
+  "shortTitle": "把计算、分数与测量连成一个方案",
+  "question": "班级要做36份小礼物，每份贴2张贴纸，已有20张，还需买多少？",
+  "subtitle": "同一计划会遇到总量、份数、缺少多少等结构；复习的目的在于辨认何时用什么。",
+  "grade": [
+    3
+  ],
+  "strand": "logic",
+  "track": "foundation",
+  "parentUnitId": "G3-U07",
+  "recommendedPrerequisites": [
+    "三上基础课；可直接诊断后跳过已会内容。"
+  ],
+  "relatedLessonIds": [
+    "G3-U07-B01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "static-visual",
+  "classroom": {
+    "story": "班级要做36份小礼物，每份贴2张贴纸，已有20张，还需买多少？",
+    "predictQuestion": "做36份礼物，每份2张贴纸，先算什么？",
+    "predictionOptions": [
+      "20乘2",
+      "全部需要的贴纸数",
+      "36减20"
+    ],
+    "discovery": [
+      "同一计划会遇到总量、份数、缺少多少等结构；复习的目的在于辨认何时用什么。"
+    ],
+    "symbols": [
+      "36×2−20",
+      "需要的总数−已有的数量＝还缺的数量"
+    ],
+    "mission": "先求总需求，再扣掉已有贴纸。",
+    "retell": "为什么先算36×2，而不是先用36减20？",
+    "observedEvidence": "在计划表中分开写总需求、已有量和还缺的量。",
+    "whyQuestion": "为什么先算36×2，而不是先用36减20？",
+    "counterexamplePrompt": "已有贴纸超过需求时，还要继续买负数张贴纸吗？",
+    "predictionFocus": "做36份礼物，每份2张贴纸，先算什么？"
+  },
+  "storyVisual": {
+    "type": "supply-bar",
+    "title": "需要的贴纸与已有的贴纸",
+    "caption": "36份礼物，每份2张；已有20张。蓝色是已有，问号是还缺。",
+    "values": [
+      36,
+      2,
+      20
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "supply-bar",
+    "title": "需要的贴纸与已有的贴纸",
+    "caption": "36份礼物，每份2张；已有20张。蓝色是已有，问号是还缺。",
+    "values": [
+      36,
+      2,
+      20
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "做36份礼物，每份2张贴纸，已有20张，还要多少？",
+      "steps": [
+        {
+          "math": "36×2=72",
+          "why": "需求36×2=72张。",
+          "expressionBefore": "36×2",
+          "operation": "=",
+          "expressionAfter": "72"
+        },
+        {
+          "math": "72−20=52",
+          "why": "72−20=52张。",
+          "expressionBefore": "72−20",
+          "operation": "=",
+          "expressionAfter": "52"
+        },
+        {
+          "math": "结论：还要52张。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U07-R01-OBJ1",
+      "action": "综合选择运算结构，找出需要回补的单元而非重做全册。",
+      "scope": "综合选择运算结构，找出需要回补的单元而非重做全册。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U07",
+    "title": "复习与关联（含搭配问题）",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "92–102",
+    "notes": "按知识关系诊断，不重新从数数教起；搭配为本册数学广角。",
+    "sequence": [
+      "G3-U07-R01",
+      "G3-U07-B01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U07-R01-MODEL1",
+      "family": "planning",
+      "variant": "G3-U07-R01",
+      "title": "把计算、分数与测量连成一个方案",
+      "prompt": "综合选择运算结构，找出需要回补的单元而非重做全册。",
+      "initialState": "36份礼物每份2贴纸、已有20张；表格列需求与库存，不预填运算。",
+      "learnerAction": "自行选相关数据，先列总需求，再求补购数量。",
+      "observableChange": "总72张，补52；36份与20张不能直接减。",
+      "question": "举出两个看起来不同但都用“每份×份数−已有”的问题。",
+      "wrongActionFeedback": "把份数减张数时先标各数据含义，再找必须知道的中间量。",
+      "guidance": [
+        {
+          "label": "先找总需求与已有量",
+          "explanation": "先找总需求与已有量。"
+        },
+        {
+          "label": "列式后估计答案范围",
+          "explanation": "列式后估计答案范围。"
+        },
+        {
+          "label": "依据具体错误返回混合运算、乘法、测量或分数课",
+          "explanation": "依据具体错误返回混合运算、乘法、测量或分数课，不整册重学。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "把计算、分数与测量连成一个方案",
+        "用“每份—份数—总数”表和一条整体纸带组织已知、未知。"
+      ],
+      "modelStatus": "static-review"
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

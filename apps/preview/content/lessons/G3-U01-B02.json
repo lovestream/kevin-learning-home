@@ -1,0 +1,149 @@
+{
+  "lessonId": "G3-U01-B02",
+  "contentVersion": "2026-10-07.2",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "看见一个面，能猜出整个物体吗",
+  "shortTitle": "看见一个面，能猜出整个物体吗",
+  "question": "前排竖着叠了2块积木，后排也可以放积木。机器人只从正前方拍照，后排完全被挡住了。它说“一共只有2块”，这个结论可靠吗？",
+  "subtitle": "判断要看证据是否足够；同一平面形状可能来自不同立体物体。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-U01",
+  "recommendedPrerequisites": [
+    "G3-U01-B01 的视角经验。"
+  ],
+  "relatedLessonIds": [
+    "G3-U01-B01",
+    "G3-U01-B03"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "前排竖着叠了2块积木，后排也可以放积木。机器人只从正前方拍照，后排完全被挡住了。它说“一共只有2块”，这个结论可靠吗？",
+    "predictQuestion": "后排从1块变成2块，哪张照片一定能看出变化？",
+    "predictionOptions": [
+      "正面照片",
+      "右面照片",
+      "上面照片"
+    ],
+    "discovery": [
+      "正面只记录能看见的轮廓。前排2块，可以挡住后排1块或2块。",
+      "后排有1块和2块时，正面都是2格，上面也都是2格；右侧能看到不同的后排高度。",
+      "同一张正面照片可以对应不同的积木总数。需要补充新方向的证据。"
+    ],
+    "symbols": [
+      "前排2块＋后排1块＝3块",
+      "前排2块＋后排2块＝4块",
+      "正面相同 ≠ 总数相同"
+    ],
+    "mission": "保留同样的正面照片，搭出两种不同的积木总数。",
+    "retell": "正面一样，为什么总块数却可能不同？",
+    "observedEvidence": "固定前排，比较后排1块和2块的正面、侧面照片。",
+    "whyQuestion": "正面一样，为什么总块数却可能不同？",
+    "counterexamplePrompt": "只看正面说总共2块，后排放1块就能反驳吗？",
+    "modelText": "前排固定竖叠2块。后排可放0、1、2块；分别观察正面、右面、上面。重点比较后排1块与2块：前面与上面的投影都相同，侧面不同。",
+    "predictionFocus": "后排从1块变成2块，哪张照片一定能看出变化？"
+  },
+  "storyVisual": {
+    "type": "hidden-blocks",
+    "title": "两种搭法：前排一样，后排不同",
+    "caption": "这是从斜上方看的搭法示意，不是机器人拍到的正面照片。",
+    "values": [],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "hidden-blocks",
+    "title": "后排由1块变成2块：哪种照片能看出变化？",
+    "caption": "这是从斜上方看的搭法示意，不是机器人拍到的正面照片。",
+    "values": [],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "物体正面是正方形。从右侧看是一个很长的长方形。它可能是正方体吗？",
+      "steps": [
+        {
+          "math": "正方体各面都是同样大的正方形。",
+          "why": "正方体各面都是同样大的正方形。"
+        },
+        {
+          "math": "右侧是非正方形的长方形，与此冲突。",
+          "why": "右侧是非正方形的长方形，与此冲突。"
+        },
+        {
+          "math": "结论：不是正方体，可以是有正方形端面的长方体。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U01-B02-OBJ1",
+      "action": "知道线索可能不足，能提出补充观察。",
+      "scope": "知道线索可能不足，能提出补充观察。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U01",
+    "title": "观察物体",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "1–5",
+    "notes": "正面、侧面、上面观察；单一视图信息不足；剪展纸盒。",
+    "sequence": [
+      "G3-U01-B01",
+      "G3-U01-B02",
+      "G3-U01-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U01-B02-MODEL1",
+      "family": "spatial",
+      "variant": "G3-U01-B02",
+      "title": "看见一个面",
+      "prompt": "知道线索可能不足，能提出补充观察。",
+      "initialState": "前排固定竖叠2块。后排可放0、1、2块；分别观察正面、右面、上面。重点比较后排1块与2块：前面与上面的投影都相同，侧面不同。",
+      "learnerAction": "保留同样的正面照片，搭出两种不同的积木总数。",
+      "observableChange": "正面只记录能看见的轮廓。前排2块，可以挡住后排1块或2块。 后排有1块和2块时，正面都是2格，上面也都是2格；右侧能看到不同的后排高度。 同一张正面照片可以对应不同的积木总数。需要补充新方向的证据。",
+      "question": "后排从1块变成2块，哪张照片一定能看出变化？",
+      "wrongActionFeedback": "选“一定同样”时展示侧面，不说猜错，而问多了哪条证据。",
+      "guidance": [
+        {
+          "label": "正面只记录能看见的轮廓",
+          "explanation": "正面只记录能看见的轮廓。前排2块，可以挡住后排1块或2块。"
+        },
+        {
+          "label": "后排有1块和2块时",
+          "explanation": "后排有1块和2块时，正面都是2格，上面也都是2格；右侧能看到不同的后排高度。"
+        },
+        {
+          "label": "同一张正面照片可以对应不同的积木总数",
+          "explanation": "同一张正面照片可以对应不同的积木总数。需要补充新方向的证据。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "看见一个面，能猜出整个物体吗",
+        "前排固定竖叠2块。后排可放0、1、2块；分别观察正面、右面、上面。重点比较后排1块与2块：前面与上面的投影都相同，侧面不同。"
+      ],
+      "modelStatus": "registered",
+      "handsOnSpec": {
+        "type": "spatial",
+        "mode": "hidden",
+        "version": "spatial.v2",
+        "frontHeight": 2,
+        "maxRearHeight": 2
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

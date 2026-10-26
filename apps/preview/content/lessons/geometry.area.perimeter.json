@@ -1,0 +1,99 @@
+{
+  "lessonId": "geometry.area.perimeter",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "给阅读角铺地垫，再围一圈绳子",
+  "shortTitle": "面积与周长",
+  "question": "买多少块地垫？准备多长的绳子？",
+  "subtitle": "一块一块数里面，一段一段走外圈，认识面积和周长。",
+  "grade": [
+    3,
+    4
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G04",
+  "recommendedPrerequisites": [
+    "乘法阵列",
+    "长度单位"
+  ],
+  "relatedLessonIds": [
+    "numbers.fractions.meaning"
+  ],
+  "estimatedActiveMinutes": 20,
+  "widget": "area",
+  "prerequisiteNote": "会数方格、会把边长相加就能开始；公式会从操作里长出来。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "地垫摆成3排、每排4块，没有空隙和重叠。用边长1厘米的方纸做缩小模型：数里面的方块，再沿最外一圈量长度。为什么铺地垫与绕绳子量的是两种不同的量？",
+    "predictQuestion": "中间两块地垫的接缝，要绕绳子吗？",
+    "predictionOptions": [
+      "只量里面的格数",
+      "不用，绳子只沿外圈",
+      "要，所有边都算"
+    ],
+    "discovery": [
+      "面积数里面的单位方格，周长量外边界。拼接后的内部接缝不属于外边界。"
+    ],
+    "symbols": [
+      "3×4记录方格数",
+      "4＋3＋4＋3记录外边界长度"
+    ],
+    "mission": "分别指出铺满的部分与绳子经过的外圈。",
+    "retell": "为什么地垫接缝不算要绕的绳子，地垫本身却要全部数？",
+    "observedEvidence": "数里面12块地垫，再沿最外一圈走，不沿内部接缝走。",
+    "whyQuestion": "为什么地垫接缝不算要绕的绳子，地垫本身却要全部数？",
+    "counterexamplePrompt": "把每条接缝也算进外圈，绳子会跑到地垫里面吗？",
+    "predictionFocus": "中间两块地垫的接缝，要绕绳子吗？"
+  },
+  "contextDiagram": "readingCorner",
+  "workedExamples": [
+    {
+      "title": "还是刚才的图：3排，每排4格",
+      "steps": [
+        {
+          "math": "面积：4＋4＋4＝12（平方厘米）",
+          "why": "一排4格，三排合起来12格。也可以写成3×4。"
+        },
+        {
+          "math": "周长：4＋3＋4＋3＝14（厘米）",
+          "why": "从上边开始：向右4，向下3，向左4，再向上3，回到起点。"
+        }
+      ]
+    },
+    {
+      "title": "把12格重新摆成2排，每排6格",
+      "steps": [
+        {
+          "math": "面积：6＋6＝12（平方厘米）",
+          "why": "格子一块没添、一块没拿走，铺满的大小不变。"
+        },
+        {
+          "math": "周长：6＋2＋6＋2＝16（厘米）",
+          "why": "外圈的样子变了，绳子要比原来多2厘米。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "area.units",
+      "action": "区分长度单位与面积单位",
+      "scope": "厘米与平方厘米"
+    },
+    {
+      "id": "area.boundary",
+      "action": "从方格邻接关系数出外边界",
+      "scope": "网格图形"
+    },
+    {
+      "id": "area.invariant",
+      "action": "在12块方格的不同排列中比较面积和周长",
+      "scope": "整数边长矩形"
+    }
+  ],
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": []
+}

@@ -1,0 +1,16 @@
+export type Rational={n:bigint;d:bigint};
+export function rational(n:number|string|bigint,d?:number|string|bigint):Rational;
+export function add(a:Rational,b:Rational):Rational;
+export function multiply(a:Rational,b:Rational):Rational;
+export function divide(a:Rational,b:Rational):Rational;
+export function formatFraction(a:Rational):string;
+export function parseNumber(raw:unknown):Rational;
+export function equivalent(a:string,b:string):boolean;
+export function gridMeasure(cells:number[][]):{area:number;perimeter:number};
+export function rectangleCells(rows:number,cols:number):number[][];
+export type ExpressionAST={type:'number';value:number}|{type:'operation';operator:'add'|'subtract'|'multiply'|'divide';left:ExpressionAST;right:ExpressionAST;grouped?:boolean};
+export function validateExpressionAST(node:ExpressionAST):ExpressionAST;
+export function evaluateExpressionAST(node:ExpressionAST):Rational;
+export function expressionASTText(node:ExpressionAST):string;
+export function firstOperationOptions(ast:ExpressionAST,seed?:string):{id:string;text:string;correct:boolean}[];
+export function buildReverseAddMultiplyFlow(addend:number,multiplier:number,target:number):{unknown:number;afterAdd:number;target:number;addend:number;multiplier:number;forward:ExpressionAST;intended:ExpressionAST;intendedValue:string;inverseSteps:string[];forwardText:string};

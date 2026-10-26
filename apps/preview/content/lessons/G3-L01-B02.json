@@ -1,0 +1,141 @@
+{
+  "lessonId": "G3-L01-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "平移和旋转，移动方式哪里不同",
+  "shortTitle": "平移和旋转，移动方式哪里不同",
+  "question": "抽屉拉开和风车转动都在动，它们按同一种方式动吗？",
+  "subtitle": "记录运动方式能预测每个部分去哪里；平移保持朝向，旋转围绕中心改变朝向。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-L01",
+  "recommendedPrerequisites": [
+    "G3-L01-B01；角的直观认识。"
+  ],
+  "relatedLessonIds": [
+    "G3-L01-B01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "抽屉拉开与风车转动，都是位置变化。用纸箭头代替它们：先保持朝向向右滑，再绕尾端转动，这两种动作有什么不同？",
+    "predictQuestion": "抽屉拉开和风车转动，方向都不变吗？",
+    "predictionOptions": [
+      "两个都绕中心转",
+      "抽屉平移，风车绕中心转",
+      "两个都只向前移动"
+    ],
+    "discovery": [
+      "记录运动方式能预测每个部分去哪里；平移保持朝向，旋转围绕中心改变朝向。"
+    ],
+    "symbols": [
+      "平移：各点同方向、同距离",
+      "旋转：围绕同一个中心转"
+    ],
+    "mission": "追踪同一个点，区分平移与旋转。",
+    "retell": "为什么都是换了位置，平移和旋转仍是不同动作？",
+    "observedEvidence": "跟踪箭头尖和尾；比较一起滑动与绕尾端转动。",
+    "whyQuestion": "为什么都是换了位置，平移和旋转仍是不同动作？",
+    "counterexamplePrompt": "只看最终中心位置，能知道物体有没有转过吗？",
+    "predictionFocus": "抽屉拉开和风车转动，方向都不变吗？"
+  },
+  "storyVisual": {
+    "type": "movement",
+    "title": "抽屉拉开与风车转动",
+    "caption": "箭头表示准备怎样移动：抽屉向外滑，风车绕中心转。",
+    "values": [],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "movement",
+    "title": "抽屉拉开与风车转动",
+    "caption": "箭头表示准备怎样移动：抽屉向外滑，风车绕中心转。",
+    "values": [],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "纸箭头朝上，先整体向右移，再绕尾端转成朝右。哪一步是平移，哪一步旋转？",
+      "steps": [
+        {
+          "math": "第一步朝向没变，只换位置。",
+          "why": "第一步朝向没变，只换位置。"
+        },
+        {
+          "math": "第二步绕尾端改变方向。",
+          "why": "第二步绕尾端改变方向。"
+        },
+        {
+          "math": "结论：先平移，再旋转。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L01-B02-OBJ1",
+      "action": "辨别整体平移、绕点旋转，明确物体与观察视角。",
+      "scope": "辨别整体平移、绕点旋转，明确物体与观察视角。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L01",
+    "title": "生活中的运动现象",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "1–9",
+    "notes": "轴对称、平移、旋转与剪纸实践；暂不要求坐标化精确作图。",
+    "sequence": [
+      "G3-L01-B01",
+      "G3-L01-B02"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L01-B02-MODEL1",
+      "family": "transform",
+      "variant": "G3-L01-B02",
+      "title": "平移和旋转",
+      "prompt": "辨别整体平移、绕点旋转，明确物体与观察视角。",
+      "initialState": "朝上的纸箭头，按钮向右滑动与绕尾端转向右。",
+      "learnerAction": "分别执行两动作，跟踪箭头尖和尾，再合成一次完整运动。",
+      "observableChange": "平移不改朝向；绕点转动改变朝向；复合过程不能只标平移。",
+      "question": "用一支铅笔演示平移与旋转，说明固定了什么、改变了什么。",
+      "wrongActionFeedback": "只看最终位置时显示路径和固定点，问运动方式而非是否换了位置。",
+      "guidance": [
+        {
+          "label": "平移时各部分沿相同方向移动相同距离",
+          "explanation": "平移时各部分沿相同方向移动相同距离。"
+        },
+        {
+          "label": "旋转围绕固定点转动",
+          "explanation": "旋转围绕固定点转动，不能只看中心没动。"
+        },
+        {
+          "label": "实际物体可能同时移动和转动",
+          "explanation": "实际物体可能同时移动和转动；本课先分析单一动作。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "平移和旋转，移动方式哪里不同",
+        "纸箭头沿直尺滑动再用图钉绕固定点转动；观察箭头尖与尾的共同变化。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "motion",
+        "title": "把箭头平移，再绕尾端旋转",
+        "version": "textbook.v1"
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

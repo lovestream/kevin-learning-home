@@ -1,0 +1,176 @@
+{
+  "lessonId": "G3-U02-O01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "从算错的结果倒着找回去",
+  "shortTitle": "从算错的结果倒着找回去",
+  "question": "原式是7+□×4，小乐先算加法再乘法，错误结果得到44。方框里是什么？",
+  "subtitle": "错误结果仍包含信息；把每个实际做过的动作倒着撤销，就能还原。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "olympiad",
+  "parentUnitId": "G3-U02",
+  "recommendedPrerequisites": [
+    "G3-U02-B01至B05；本课可选。"
+  ],
+  "relatedLessonIds": [
+    "G3-U02-B01",
+    "G3-U02-B02",
+    "G3-U02-B03",
+    "G3-U02-B04",
+    "G3-U02-B05",
+    "G3-U02-E01",
+    "G3-U02-E03",
+    "G3-U02-E02",
+    "G3-U02-E04",
+    "G3-U02-E05",
+    "G3-U02-O02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "原式是7+□×4，小乐先算加法再乘法，错误结果得到44。方框里是什么？",
+    "predictQuestion": "小乐把44算出来以前，最后做了什么？",
+    "predictionOptions": [
+      "先乘4再加7",
+      "把44加7",
+      "把加法结果乘4"
+    ],
+    "discovery": [
+      "错误结果仍包含信息；把每个实际做过的动作倒着撤销，就能还原。"
+    ],
+    "symbols": [
+      "错误步骤：(7＋□)×4＝44",
+      "44÷4−7＝□；再放回原式检验"
+    ],
+    "mission": "还原他的错误步骤，再倒着找到方框里的数。",
+    "retell": "为什么倒推44时要先除4，而不是先减7？",
+    "observedEvidence": "还原先加7再乘4的错算路径，然后倒着撤销。",
+    "whyQuestion": "为什么倒推44时要先除4，而不是先减7？",
+    "counterexamplePrompt": "找到方框后，用正确的7＋□×4验算，结果还应是44吗？",
+    "predictionFocus": "小乐把44算出来以前，最后做了什么？"
+  },
+  "storyVisual": {
+    "type": "reverse-routes",
+    "title": "同一个方框，两条计算路线",
+    "caption": "44是错算路线得到的结果；原式结果和方框都未揭晓。",
+    "values": [
+      7,
+      4,
+      44
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "reverse-routes",
+    "title": "同一个方框，两条计算路线",
+    "caption": "44是错算路线得到的结果；原式结果和方框都未揭晓。",
+    "values": [
+      7,
+      4,
+      44
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "7+□×4被误算为(7+□)×4，结果44。求□及正确结果。",
+      "steps": [
+        {
+          "math": "44÷4=11；11−7=4",
+          "why": "44÷4=11，11−7=4。",
+          "expressionBefore": "44÷4",
+          "operation": "=",
+          "expressionAfter": "11；11−7"
+        },
+        {
+          "math": "7+4×4=23；(7+4)×4=44",
+          "why": "正确7+4×4=23；错误(7+4)×4=44，核对通过。",
+          "expressionBefore": "7+4×4",
+          "operation": "=",
+          "expressionAfter": "23；(7+4)×4"
+        },
+        {
+          "math": "结论：□=4，正确结果23。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U02-O01-OBJ1",
+      "action": "能沿运算流程逆推未知数并检验，不依赖猜口诀。",
+      "scope": "能沿运算流程逆推未知数并检验，不依赖猜口诀。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U02",
+    "title": "混合运算",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "6–19",
+    "notes": "教材印刷6–19页为主线。先完成B01–B05；E01→E03解释去/添括号，E02比较除以积与除以商，E04/E05用具体数体验运算律，O01/O02为可选思想。ID稳定，顺序以本表为准；不要求连续做完所有提升。",
+    "sequence": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U02-O01-MODEL1",
+      "family": "operations",
+      "variant": "G3-U02-O01",
+      "title": "从算错的结果倒着找回去",
+      "prompt": "能沿运算流程逆推未知数并检验，不依赖猜口诀。",
+      "initialState": "流程□→加7→乘4→44，标题明确这是错算者实际执行的过程。",
+      "learnerAction": "从44端撤销最后一步，再撤销加7；最后分别沿错误与正确流程代回。",
+      "observableChange": "44÷4=11，11−7=4；错流程44，正确7+4×4=23。",
+      "question": "7+□×4被小乐按先加后乘算成44。说清他实际怎样算、你怎样逆推、正确原式怎样验算。",
+      "wrongActionFeedback": "先减7时让孩子指出原流程最后一步，提示撤销最后一步，不把“减法先算”当新口诀。",
+      "guidance": [
+        {
+          "label": "先写出他实际算的是(7+□)×4",
+          "explanation": "先写出他实际算的是(7+□)×4。"
+        },
+        {
+          "label": "由44÷4=11",
+          "explanation": "由44÷4=11，再11−7=4。"
+        },
+        {
+          "label": "把4代回正确原式7+4×4",
+          "explanation": "把4代回正确原式7+4×4，求正确结果并检查错误路线。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "从算错的结果倒着找回去",
+        "流程图：□→加7→乘4→44；逆向箭头标除4、减7。"
+      ],
+      "modelStatus": "registered",
+      "modelSpec": {
+        "type": "reverse",
+        "addend": 7,
+        "multiplier": 4,
+        "target": 44
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

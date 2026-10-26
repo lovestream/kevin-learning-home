@@ -1,12 +1,14 @@
+> **最新用户指令（2026-10-25）：** NAS 试用采用 `http://192.168.2.100:38444/`，无登录、无证书；不再以 HTTPS/证书为前置关口，不调整 Tailscale/DSM。此指令覆盖下方旧证书要求；后续课程、练习及其余数学功能均交付同一 NAS 入口。
+
 # MATH-FULL：数学站全量迁入的快速实施路线
 
 ## 2026-10-25：修正“交付”定义（本节优先于原Mac-first的过渡计划）
 
-此项目最终验收只针对**NAS上的Kevin学习家园同一入口**；旧NAS `38444` 是用户已体验的单课起点，`38443` 是需保留的旧02B。Mac`127.0.0.1:4179`只算开发验证。任何PR、CI、Mac演示、本地数字单课截图**都不能**将部署字段改成`USER_DELIVERED`，必须NAS实际运行，手机/iPad可访问性与证书链准确报告，真实70/70教具/849/849练习功能逐项通过。NAS免账号展示应运行与正式认证数据库绝对隔离的内容只读进程，旧账户服务权限不放松。
+此项目最终验收只针对**NAS上的Kevin学习家园同一入口**；旧NAS `38444` 是用户已体验的单课起点，`38443` 是需保留的旧02B。Mac`127.0.0.1:4179`只算开发验证。每阶段必须 NAS 实际运行并准确报告手机/iPad验证范围，才能标该阶段已交付；70课教具、849题和其余能力分别验收，不混称整站完成。NAS免账号展示运行与正式认证数据库隔离的内容只读进程，旧账户服务权限不放松。
 
 开发可以分三波以节省时间，但是**每波要交到同一NAS数学网站**：1) 保留PR18已完成的70课代码，R2补镜像/受控38444切换/一键回退/NAS真实无账号操作验收；2) 紧接Issue16的849道原题五种作答类型/三项自查并部署NAS；3) Issue17的旧站数学侦探公开示例、17张已审卡及实际已开发的高年级/其它能力，对照原站后部署NAS。禁止另开只在Mac访问的演示站或把一个技术阶段再次表述为“数学已经全部迁入”。NAS端口或受信域名/TLS变更必须独立审查安全边界，不修改原8生产/旧38443/真实学习数据。
 
-详见[PR18 R2部署和整站交付审查](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6399021659)。目前NAS新70课为**NOT_DEPLOYED**，849题为**NOT_IMPLEMENTED**，原站其它能力未迁，MATH-02账户/持久化不在本轮。
+详见[PR18 R2部署和整站交付审查](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6399021659)。NAS 新70课现为 **PASS_NAS_HTTP_DELIVERY_70_TEACHING_ONLY**，849题为 **NOT_IMPLEMENTED**，原站其它能力未迁，MATH-02账户/持久化不在本轮。实体手机/iPad仍待用户体验。
 
 更新：2026-10-25。根据用户本人体验`G3-U01-B01`后确认：**保留当前六步课堂视觉与交互风格，下一步优先集中迁入旧数学内容；正式账号、密码、学习存档、奖励暂缓。**
 
@@ -16,7 +18,7 @@
 
 | 来源层 | 已核实规模 | 当前迁入状态 | 快速路径 |
 |---|---:|---|---|
-| 三年级70课完整六步教学 | 70课；64 verified interactive / 6 static-visual；**全部draft** | 仅G3-U01-B01进入KLH并完成单课只读验收 | [Issue15 MATH-FULL-01](https://github.com/lovestream/kevin-learning-home/issues/15)，**全部70课同一个实现PR** |
+| 三年级70课完整六步教学 | 70课；64 verified interactive / 6 static-visual；**全部draft** | 70/70 已在 NAS HTTP 入口交付，30/210 自动化与普通 Chrome 通过 | [Issue15 MATH-FULL-01](https://github.com/lovestream/kevin-learning-home/issues/15)，**全部70课同一个 Draft PR #18** |
 | 同一70课正式题组 | **849个唯一taskId**：warmup 140、core 249、transfer 143、challenge 73、review 244 | 未迁入；MATH-01第六步明确“练习尚未接入” | [Issue16 MATH-FULL-02](https://github.com/lovestream/kevin-learning-home/issues/16)，一个练习PR |
 | 按原题型拆分 | number357、choice93、explanation335、expression25、fields39 | 无新站可提交/核对 | 逐类型恢复首答→三项自查→终答；335解释题必须标“待人工核对”，不能假自动评分 |
 | 数学小侦探 | 独立专项系统，旧GitHub案卷/家长审核链路 | 未迁 | [Issue17专项盘点](https://github.com/lovestream/kevin-learning-home/issues/17)；70课+练习稳定后受审适配，禁止读取旧私密案卷/学习数据 |
@@ -28,7 +30,7 @@
 
 **课程不是70次复制粘贴**，而是“固定源内容→全量manifest/严格public DTO→通用六步课堂→不同教具族适配器→全课真实自动化验收”。现有用户认可风格、源原文、数学关系、几何数值、lessonId/taskId、版本保留。52份conceptLab下还有不同模型族，不能用一个通用占位SVG代替；其余mixedOperations6/lengthWorkbench5/其它7分别适配。避免按课程创建多个Mac worktree、PR或旧网页iframe。
 
-**体验模式不开发账号密码**：新建与正式业务应用分离的preview build/content-only服务，仅暴露经过审计的教学白名单，没有真实资料挂载、真实AuthService绕过、数据库写入、学籍、统计、奖励。动画/猜想/本次练习保存在当前浏览器内存中，刷新失效；先完成Mac本地可见体验，NAS展示必须使用独立受控试用实例、可靠TLS，不能覆盖旧38443或38444。手机/iPad布局用户主观认可，证书链/到期问题仍待可验证方案；不能点过浏览器TLS警告。
+**体验模式不开发账号密码**：与正式业务应用分离的preview build/content-only服务，仅暴露经过审计的教学白名单，没有真实资料挂载、真实AuthService绕过、数据库写入、学籍、统计、奖励。动画/猜想/本次练习保存在当前浏览器内存中，刷新失效；NAS展示采用用户明确要求的 LAN HTTP。已授权受控替换 owned 38444 合成试用并保留完整回退，旧38443及生产服务不动。手机/iPad布局仍需用户实际体验，不绕过浏览器警告。
 
 **答案和判分**：公开教学DTO不含`taskSets`、`expected/solution/hint/referenceAnswer/expectedExplanation/expectedEvidence/validatorIds`等来源敏感数据。下一专项按题目类型严格提供作答/检查逻辑；原解释题不用虚假自动打分，答案和讲解只在用户完成对应步骤后呈现，且永久记录/正式奖励仍不开放。
 
@@ -43,8 +45,8 @@
 - 70课：清单唯一ID/内容版本/状态与冻结源逐项相同；每课教学6屏、故事/预测图、可用教材关系/教具；64 verified课按原受审行为验证，6 static课不硬造拖动。针对典型模型至少一次真实操作后取证；390/768/1280、键盘/指针/reduced-motion/CSP无回归。
 - 849题：ID全数与源相同，五个题组与五种类型分布精确，数字单位/等价算式/多字段完整检查，解释型335题人工核对标记明确；不是849张只有题干的空页面。
 - 来源/版权：按新扩展的依赖集合逐文件记录原commit/blob/SHA、目标hash/适配原因/许可；不拿素材版权不明的游戏/教材文件补图。不运行旧项目危险脚本、不读真实备份/DB、旧账号或私有题包。
-- 正式服务仍维持session/家长grant，demo不可通过匿名请求触发正式功能；现有NAS两套试用与8个旧服务不动，GitHub合并不等于部署新demo。
+- 正式服务仍维持session/家长grant，demo不可通过匿名请求触发正式功能；38444仅执行已授权受控替换，旧38443与8个旧服务不动，GitHub合并不等于部署新demo。
 - 每个阶段必须有源台账、机器可读覆盖率、截图、完整CI（旧60 Node/18 UI/原数学12 Node/9浏览器/Docker+Compose不可删减）、审查HEAD、明确的**实际可启动预览入口**，最后停在Draft待ChatGPT独立复审。
 
 ## 当前状态
-PR14 复审完成合并`942dc508858f548af1e0517aa3365e08bfbee0e4`；用户Mac上有已可用的一课试用，既有38444仍需要原合成账户且试用CA将于2026-10-31到期。新免账号/70课体验入口**还没有实现或部署**。Issue15、Issue16为已登记开发任务，不能把Issue创建视为内容已经迁入。
+PR14 已合并。PR18 R2 已将免账号70课部署到 **http://192.168.2.100:38444/**，用户不需旧合成账号或 CA。旧 app/数据库/证书/TLS 容器保留回退；11 个受保护容器及旧合成文件不变。实际 NAS 30 代表课、210 场景和普通 Mac Chrome 通过，实体手机/iPad待体验。完整交付见 [NAS R2 报告](MATH-FULL-01-NAS-R2-REPORT.md)。PR18 保持 Draft 未合并，等待独立审查。Issue16 的849题尚未接入，不能将教学课堂完成视为练习或整站完成。

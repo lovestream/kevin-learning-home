@@ -1,0 +1,166 @@
+{
+  "lessonId": "G3-L02-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "除法竖式为什么从高位开始",
+  "shortTitle": "除法竖式为什么从高位开始",
+  "question": "52颗糖平均分4人，5捆十颗分完后剩的一捆怎么办？",
+  "subtitle": "剩下的高位单位仍属于总数，拆成低位后继续分能保证公平和完整。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-L02",
+  "recommendedPrerequisites": [
+    "G3-L02-B01。"
+  ],
+  "relatedLessonIds": [
+    "G3-L02-B01",
+    "G3-L02-B03",
+    "G3-L02-B04",
+    "G3-L02-B05",
+    "G3-L02-B06"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "52颗糖平均分4人，5捆十颗分完后剩的一捆怎么办？",
+    "predictQuestion": "5捆十颗分4人，剩1捆怎么办？",
+    "predictionOptions": [
+      "把它丢掉",
+      "把剩的一捆都给一人",
+      "拆成10颗继续分"
+    ],
+    "discovery": [
+      "剩下的高位单位仍属于总数，拆成低位后继续分能保证公平和完整。"
+    ],
+    "symbols": [
+      "1个十＝10个一",
+      "52÷4：剩下的十与2个一一起分"
+    ],
+    "mission": "保持糖总数，拆开剩下的十再平均分。",
+    "retell": "剩下的十为什么不能丢掉，必须换成一继续分？",
+    "observedEvidence": "把剩下的一捆拆成10颗，再和2颗一起分。",
+    "whyQuestion": "剩下的十为什么不能丢掉，必须换成一继续分？",
+    "counterexamplePrompt": "只发掉4捆就结束，52颗中还有多少没有分？",
+    "predictionFocus": "5捆十颗分4人，剩1捆怎么办？"
+  },
+  "storyVisual": {
+    "type": "groups",
+    "title": "52颗糖，准备平分给4人",
+    "caption": "每捆表示10颗，散点表示1颗。下面四个分配框还没有放糖。",
+    "values": [
+      4,
+      52
+    ],
+    "labels": [
+      "颗糖"
+    ]
+  },
+  "predictionVisual": {
+    "type": "groups",
+    "title": "52颗糖，准备平分给4人",
+    "caption": "每捆表示10颗，散点表示1颗。下面四个分配框还没有放糖。",
+    "values": [
+      4,
+      52
+    ],
+    "labels": [
+      "颗糖"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "52÷4怎样分？",
+      "steps": [
+        {
+          "math": "先分40，每人10，剩12。",
+          "why": "先分40，每人10，剩12。"
+        },
+        {
+          "math": "再分12，每人3。",
+          "why": "再分12，每人3。"
+        },
+        {
+          "math": "结论：13。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L02-B02-OBJ1",
+      "action": "理解高位分得多少、剩余换成低位单位继续分。",
+      "scope": "理解高位分得多少、剩余换成低位单位继续分。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L02",
+    "title": "除数是一位数的除法",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "10–38",
+    "notes": "口算估算、竖式与余数验算、商含0、连乘连除、归一归总、整理；和三上混合运算衔接。",
+    "sequence": [
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L02-B05",
+      "G3-L02-B06"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L02-B02-MODEL1",
+      "family": "division",
+      "variant": "G3-L02-B02",
+      "title": "除法竖式为什么从高位开始",
+      "prompt": "理解高位分得多少、剩余换成低位单位继续分。",
+      "initialState": "52颗以5捆十和2颗表示，4个分配框。",
+      "learnerAction": "先每框一捆，余一捆拆10颗，连同2颗再均分。",
+      "observableChange": "每框10+3=13；每步剩余回到总量表中。",
+      "question": "用52颗糖解释商的13不是把两个无关数字拼起来。",
+      "wrongActionFeedback": "丢余下1捆时显示已分40与总52的差12，提示还有数量未分。",
+      "guidance": [
+        {
+          "label": "十位5÷4商1余1个十",
+          "explanation": "十位5÷4商1余1个十。"
+        },
+        {
+          "label": "余下1个十与2个一合成12个一",
+          "explanation": "余下1个十与2个一合成12个一。"
+        },
+        {
+          "label": "12÷4=3",
+          "explanation": "12÷4=3，每人13；4×13回到52。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "除法竖式为什么从高位开始",
+        "5捆十颗加2颗，先每人1捆，余1捆拆10颗，加2成12颗。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "division",
+        "title": "把52颗糖分给4人",
+        "version": "textbook.v1",
+        "total": 52,
+        "bank": [
+          0,
+          5,
+          2
+        ],
+        "groups": 4
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

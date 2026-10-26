@@ -1,0 +1,229 @@
+{
+  "lessonId": "G3-L02-B03",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "有剩余时，怎样判断答案真的分完了",
+  "shortTitle": "有剩余时，怎样判断答案真的分完…",
+  "question": "53颗糖每4颗装一袋，装了13袋后还剩多少？",
+  "subtitle": "余数表示无法再凑出一份的部分；若还够一份，分配就没完成。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-L02",
+  "recommendedPrerequisites": [
+    "G3-L02-B02。"
+  ],
+  "relatedLessonIds": [
+    "G3-L02-B01",
+    "G3-L02-B02",
+    "G3-L02-B04",
+    "G3-L02-B05",
+    "G3-L02-B06"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "53颗糖每4颗装一袋，装了13袋后还剩多少？",
+    "predictQuestion": "53颗每4颗一袋，剩5颗算装完吗？",
+    "predictionOptions": [
+      "把5颗当一整袋",
+      "没有，还够再装一袋",
+      "算装完"
+    ],
+    "discovery": [
+      "余数表示无法再凑出一份的部分；若还够一份，分配就没完成。"
+    ],
+    "symbols": [
+      "总数＝每袋颗数×袋数＋剩余",
+      "0≤余数＜每袋颗数"
+    ],
+    "mission": "装到剩下的糖不够一袋，再核对总数。",
+    "retell": "12袋余5也能加回53，为什么还不是装完的结果？",
+    "observedEvidence": "试试剩下5颗还能不能装一满袋，再乘加核对总数。",
+    "whyQuestion": "12袋余5也能加回53，为什么还不是装完的结果？",
+    "counterexamplePrompt": "余数恰好4颗时，仍可以说不能再装一袋吗？",
+    "predictionFocus": "53颗每4颗一袋，剩5颗算装完吗？"
+  },
+  "storyVisual": {
+    "type": "groups",
+    "title": "53颗糖，每4颗装一袋",
+    "caption": "每捆代表10颗，不是一个袋子；袋子每袋能装4颗，袋数暂时未知。",
+    "values": [
+      0,
+      53,
+      4
+    ],
+    "labels": [
+      "颗糖"
+    ]
+  },
+  "predictionVisual": {
+    "type": "groups",
+    "title": "53颗糖，每4颗装一袋",
+    "caption": "每捆代表10颗，不是一个袋子；袋子每袋能装4颗，袋数暂时未知。",
+    "values": [
+      0,
+      53,
+      4
+    ],
+    "labels": [
+      "颗糖"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "53÷4写成12余5为何不合要求？",
+      "steps": [
+        {
+          "math": "12×4+5=53",
+          "why": "12×4+5=53数量虽对。",
+          "expressionBefore": "12×4+5",
+          "operation": "=",
+          "expressionAfter": "53"
+        },
+        {
+          "math": "5≥4，还可装1袋，变13余1。",
+          "why": "5≥4，还可装1袋，变13余1。"
+        },
+        {
+          "math": "结论：正确为13余1。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L02-B03-OBJ1",
+      "action": "理解余数小于除数及被除数=商×除数+余数。",
+      "scope": "理解余数小于除数及被除数=商×除数+余数。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L02",
+    "title": "除数是一位数的除法",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "10–38",
+    "notes": "口算估算、竖式与余数验算、商含0、连乘连除、归一归总、整理；和三上混合运算衔接。",
+    "sequence": [
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L02-B05",
+      "G3-L02-B06"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L02-B03-MODEL1",
+      "family": "division",
+      "variant": "G3-L02-B03",
+      "title": "有剩余时",
+      "prompt": "理解余数小于除数及被除数=商×除数+余数。",
+      "initialState": "53颗糖，每袋装4颗，能装几满袋，还余几颗？",
+      "learnerAction": "装到剩下的糖不够一袋，再核对总数。",
+      "observableChange": "试试剩下5颗还能不能装一满袋，再乘加核对总数。",
+      "question": "12袋余5也能加回53，为什么还不是装完的结果？",
+      "wrongActionFeedback": "仅见12×4+5=53就判对时让孩子试余5还能不能再装一袋。",
+      "guidance": [
+        {
+          "label": "53÷4=13余1",
+          "explanation": "53÷4=13余1。"
+        },
+        {
+          "label": "4×13+1=53验算",
+          "explanation": "4×13+1=53验算。"
+        },
+        {
+          "label": "余数1小于4",
+          "explanation": "余数1小于4；12袋余5虽然总量对，但还能再装一袋，不是标准结果。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "有剩余时，怎样判断答案真的分完了",
+        "把53个点分成13个四点框，框外1点；与“12袋余5颗”比较。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "pack-remainder",
+        "title": "剩下的还能装一满袋吗",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            53,
+            4
+          ],
+          [
+            38,
+            5
+          ],
+          [
+            47,
+            6
+          ],
+          [
+            60,
+            7
+          ],
+          [
+            29,
+            3
+          ],
+          [
+            71,
+            8
+          ]
+        ],
+        "mode": "remainder",
+        "contexts": [
+          {
+            "story": "53颗糖，每袋装4颗，能装几满袋，还余几颗？",
+            "unit": "颗",
+            "group": "袋",
+            "kind": "bags"
+          },
+          {
+            "story": "38颗糖，每袋装5颗，能装几满袋，还余几颗？",
+            "unit": "颗",
+            "group": "袋",
+            "kind": "bags"
+          },
+          {
+            "story": "47颗糖，每袋装6颗，能装几满袋，还余几颗？",
+            "unit": "颗",
+            "group": "袋",
+            "kind": "bags"
+          },
+          {
+            "story": "60颗糖，每袋装7颗，能装几满袋，还余几颗？",
+            "unit": "颗",
+            "group": "袋",
+            "kind": "bags"
+          },
+          {
+            "story": "29颗糖，每袋装3颗，能装几满袋，还余几颗？",
+            "unit": "颗",
+            "group": "袋",
+            "kind": "bags"
+          },
+          {
+            "story": "71厘米胶带，每段剪8厘米，不计剪口损耗。能剪几段？余下为什么不能再算一段？",
+            "unit": "厘米",
+            "group": "段",
+            "kind": "strip"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

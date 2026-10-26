@@ -1,0 +1,101 @@
+{
+  "lessonId": "algebra.substitution.intro",
+  "contentVersion": "2026-10-18.1",
+  "editorialRevision": "2026-10-18.1",
+  "status": "draft",
+  "title": "打开三盒点心，多出的糖有几颗？",
+  "shortTitle": "等量替换",
+  "question": "每盒都有一袋糖和2颗散糖，三盒里有什么？",
+  "subtitle": "把盒子拆开看，再用括号记住每盒的全部东西。",
+  "grade": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "strand": "algebra",
+  "track": "olympiad",
+  "parentUnitId": "A04",
+  "recommendedPrerequisites": [
+    "等号的含义",
+    "相同的几份"
+  ],
+  "relatedLessonIds": [
+    "algebra.balance.intro"
+  ],
+  "estimatedActiveMinutes": 20,
+  "widget": "substitution",
+  "prerequisiteNote": "只需要知道甲和乙代表数量。这一课先练替换，不要求解出未知数。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "Kevin 做了3个一模一样的点心盒。每个盒子里，都放了1袋糖和另外2颗散糖。三袋糖里的颗数也都相同。",
+    "predictQuestion": "3盒各有一袋糖和2颗散糖，总数能写3袋＋2颗吗？",
+    "predictionOptions": [
+      "不能，每盒都有2颗",
+      "能，只算一次散糖",
+      "不能，袋数也要加2"
+    ],
+    "discovery": [
+      "每盒都是完整的“乙＋2”。三盒既有三袋糖，也有三份2颗散糖。"
+    ],
+    "symbols": [
+      "3×(乙＋2)＝3乙＋6",
+      "替换整个相等的量，保留外层运算"
+    ],
+    "mission": "整盒替换，让每一盒的散糖都被数到。",
+    "retell": "为什么三盒不仅有三袋糖，还要有三份2颗散糖？",
+    "observedEvidence": "把每盒的一袋糖加2颗整体替换，并保留三盒框。",
+    "whyQuestion": "为什么三盒不仅有三袋糖，还要有三份2颗散糖？",
+    "counterexamplePrompt": "写3袋＋2颗，只记了哪一盒外面的散糖？",
+    "predictionFocus": "3盒各有一袋糖和2颗散糖，总数能写3袋＋2颗吗？"
+  },
+  "contextDiagram": "snackBox",
+  "workedExamples": [
+    {
+      "title": "三盒全部打开",
+      "steps": [
+        {
+          "math": "(乙＋2)＋(乙＋2)＋(乙＋2)",
+          "why": "三个括号就是三个盒子，每盒都带着那2颗散糖。"
+        },
+        {
+          "math": "3乙＋6",
+          "why": "三袋糖合起来是3乙，散糖是2＋2＋2＝6。"
+        }
+      ]
+    },
+    {
+      "title": "如果每袋有4颗糖",
+      "steps": [
+        {
+          "math": "每盒：4＋2＝6（颗）",
+          "why": "袋里的4颗和散放的2颗都要算。"
+        },
+        {
+          "math": "三盒：6＋6＋6＝18（颗）",
+          "why": "也可以算三袋12颗，再加散糖6颗，合起来18颗。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "substitution.whole",
+      "action": "把一个甲替换成完整的乙+2",
+      "scope": "已知相等关系"
+    },
+    {
+      "id": "substitution.outer",
+      "action": "保留外层乘法和未替换部分",
+      "scope": "一次表达式"
+    },
+    {
+      "id": "substitution.check",
+      "action": "用具体数比较漏乘常数的错误表达式",
+      "scope": "反例检查"
+    }
+  ],
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": []
+}
