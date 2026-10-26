@@ -1,0 +1,13 @@
+{
+  "status": "PASS_ROLLBACK_TO_R2_HTTP",
+  "runtime": {
+    "buildSha": "974fdee8134c833d718b574d79e18d96756a73e0",
+    "catalogSha256": "65ea81366c6644af0d6985ef0f4d5299a89da8a21e2fbfdfcb8aa5e5e41e1774",
+    "contentOnly": true,
+    "database": false,
+    "lessons": 70
+  },
+  "catalogLessons": 70,
+  "sameOriginalR2ContainerId": "ed08a3afdf924f1c349f4c0bcdd13e38f9b1bc55f87f6057a3ba4a7384ca79fc",
+  "certificateOrAccountRequired": false
+}

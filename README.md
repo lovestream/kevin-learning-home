@@ -1,8 +1,8 @@
 # 当前交付：NAS 局域网免登录数学课堂
 
-R3 正在同一 PR #18 将目录恢复为“上册 9 单元 39 课／下册 8 单元 24 课／7 节基础衔接”，增加知识点层和返回原单元。当前 NAS 仍为 R2，R3 发布与真机结果见 [R3 执行报告](docs/implementation/MATH-FULL-01-NAS-R3-REPORT.md)。验收后继续 849 题及其它数学能力，不另开基础建设。
+R3 已在同一 PR #18 将目录恢复为“上册 9 单元 39 课／下册 8 单元 24 课／7 节基础衔接”，增加知识点层和返回原单元。当前 NAS 已运行 R3，发布与真机结果见 [R3 执行报告](docs/implementation/MATH-FULL-01-NAS-R3-REPORT.md)。验收后继续 849 题及其它数学能力，不另开基础建设。
 
-用户已明确要求采用 **http://192.168.2.100:38444/**，不使用 HTTPS/证书，不调整 Tailscale。R2 已在原 PR #18 完成 NAS 交付，状态以 [R2 执行报告](docs/implementation/MATH-FULL-01-NAS-R2-REPORT.md)及 PR 最终 NAS 证据为准。下方 localhost 仅是开发复现，不作为用户交付。
+用户已明确要求采用 **http://192.168.2.100:38444/**，不使用 HTTPS/证书，不调整 Tailscale。R3 已在原 PR #18 完成 NAS 交付，状态以 [R3 执行报告](docs/implementation/MATH-FULL-01-NAS-R3-REPORT.md)及 PR 最终 NAS 证据为准。下方 localhost 仅是开发复现，不作为用户交付。
 
 # Kevin Learning Home · Kevin 学习家园
 
@@ -14,7 +14,7 @@ R3 正在同一 PR #18 将目录恢复为“上册 9 单元 39 课／下册 8 �
 
 Mac 已有目录 `/Users/yako/Documents/Kevin-Learning-Home-Trial/` 内新增 `打开NAS学习家园.webloc` 和 `NAS学习家园使用说明.md`。旧凭据、CA、单课与本机启动文件保留供历史回退，不必运行。
 
-NAS 部署源码 `974fdee8134c833d718b574d79e18d96756a73e0`；后续提交只补验证工具和文档证据，166 个镜像/课程构建输入保持相同，见 [发布输入清单](docs/implementation/evidence/math-full-nas-r2/release-inputs.json)。实际 NAS 完成 30 代表课和全部 210 场景，旧 38444 回退及恢复成功，11 个受保护容器及旧合成数据/证书 hash 不变。原 38443、数学/英语网站和真实数据不动。
+NAS 部署源码 `020ceb9a6792a18e8d020914ec4250b631ef13d0`；后续提交只补验证工具和文档证据，169 个镜像/课程构建输入保持相同，见 [发布输入清单](docs/implementation/evidence/math-full-r3/release-inputs.json)。实际 NAS 完成 30 代表课和全部 210 场景，R3→R2 HTTP→R3 回退及恢复成功，11 个受保护容器及旧合成数据/证书 hash 不变。原 38443、数学/英语网站和真实数据不动。
 
 体验状态只留页面内存；刷新清空，无阅读记录、成绩、积分或蛋仔。849 题和其它数学功能尚未接入，分别按 Issue #16/#17 交付同一 NAS 入口。PR #18 保持 Draft，等待审查。
 
@@ -30,4 +30,4 @@ Node 24.15.0 / npm 11.12.1：`npm ci`，`npm run build:math-preview`，`npm run 
 
 `node scripts/verify.ts` 保留原 60 Node / 18 UI / 3 基础视口 / 12 数学 Node / 9 数学浏览器；Linux CI 另验原 Docker/Compose 与恢复。新增 `python3 scripts/math-full-01/check.py`、`node --test --test-concurrency=1 tests/math-full-01/*.test.*`、`node tests/math-full-01/browser.mjs --checkpoint` 与完整 `node tests/math-full-01/browser.mjs`。最终精确 HEAD 的 push / pull_request 两套 CI 以本批 Draft PR 正文交付记录为准。
 
-PR5/6/7/8/10/12/14 已合并，历史报告按归档时点解读。旧 `math-learning`、`word-request` 完全独立，不反向修改、不导入真实记录。此批完成后暂停，不自行合并或进入下一批正式开发。
+PR5/6/7/8/10/12/14 已合并，历史报告按归档时点解读。旧 `math-learning`、`word-request` 完全独立，不反向修改、不导入真实记录。按用户最新指令继续 Issue #16/#17，保持独立 Draft PR，不自行合并，不提前进入正式身份或奖励持久化。

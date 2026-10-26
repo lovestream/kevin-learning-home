@@ -1,0 +1,78 @@
+{
+  "source": "Actual NAS LAN HTTP in Chromium at 390/768/1280; native Chrome separately identified",
+  "physicalIPhoneIPad": "NEEDS_USER_ACTION",
+  "screenshots": [
+    {
+      "name": "home-390.png",
+      "sha256": "65105c0c719324d65355cc95c5a5193fc2a8345d4c013a3c9c6cf2e29ad6d7e6"
+    },
+    {
+      "name": "upper-open-390.png",
+      "sha256": "1b952f9369a4bd35a1141ded4a8c9f3edaca5a118625002a05794a58e318991b"
+    },
+    {
+      "name": "u02-390.png",
+      "sha256": "0ad2d8a8038734eb2efcd866c3a82c02737b584d9d4f520b54dfd67e36d2fc8b"
+    },
+    {
+      "name": "classroom-return-390.png",
+      "sha256": "0ad2d8a8038734eb2efcd866c3a82c02737b584d9d4f520b54dfd67e36d2fc8b"
+    },
+    {
+      "name": "lower-open-390.png",
+      "sha256": "0f138be11ffc9bd032840daf899360b6c0693dad99b3424e29d15c682e878a55"
+    },
+    {
+      "name": "bridge-390.png",
+      "sha256": "e581f1d6432085cd0186785f98e0a79ed6a30c05fffd29bcf66d5810c106448a"
+    },
+    {
+      "name": "home-768.png",
+      "sha256": "1ed1b1ba4aa1f63329b5fc82398736f0e439bdc5b74ff8415d0057a5c603f095"
+    },
+    {
+      "name": "upper-open-768.png",
+      "sha256": "7c9c8170ae3805c6aa43edcebb18ed26c2f7dca36d34471dc67e238e3f30b45c"
+    },
+    {
+      "name": "u02-768.png",
+      "sha256": "cecfb2457813ba5a0d44f415850aeec63455041f7bdf8bce45c5d4b29a14af7b"
+    },
+    {
+      "name": "classroom-return-768.png",
+      "sha256": "cecfb2457813ba5a0d44f415850aeec63455041f7bdf8bce45c5d4b29a14af7b"
+    },
+    {
+      "name": "lower-open-768.png",
+      "sha256": "c6a6ac878c40e2d9b6f73461301faf806c5efe8ab7943f8b3472c2452492e6c0"
+    },
+    {
+      "name": "bridge-768.png",
+      "sha256": "d54274e597565a244f5ca0108a393e1dbbb41fe9dae4eca47f79dba4045963b9"
+    },
+    {
+      "name": "home-1280.png",
+      "sha256": "0c6eee338d863e3770e29c8027f1ce04a9a3428365b423b341dea196b45d0cab"
+    },
+    {
+      "name": "upper-open-1280.png",
+      "sha256": "8e64d19fab199fefd40424c18bfb75cdcdea47d01ae5f40e2c4901eba4fcb01d"
+    },
+    {
+      "name": "u02-1280.png",
+      "sha256": "31bd35e85769caa7a96bbf21d055bb69a2b11e524e7a61ca48b906952e1ec680"
+    },
+    {
+      "name": "classroom-return-1280.png",
+      "sha256": "31bd35e85769caa7a96bbf21d055bb69a2b11e524e7a61ca48b906952e1ec680"
+    },
+    {
+      "name": "lower-open-1280.png",
+      "sha256": "a83c6053a9aa9c7deb1e2ed2aff04a09a269015d0abe029b3f65257db5cfb31e"
+    },
+    {
+      "name": "bridge-1280.png",
+      "sha256": "5d334d8aab242eccc7eda939cbf5b42354c3c36702d850b8e3b35a06152c919b"
+    }
+  ]
+}

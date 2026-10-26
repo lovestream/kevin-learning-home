@@ -4,7 +4,26 @@
 
 R3 按 [审查意见](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6405768281) 继续原 PR #18、原工作副本，没有另开基础建设或重做 70 课。main 的统一整合路线图 `ab73c9b` 已合入本分支并保留。用户最新要求覆盖旧暂停点：R3 在 NAS 验收后直接继续 Issue #16 的 849 题和 Issue #17 的其它可用数学能力；不合并 Draft PR，不等待重复阶段授权。
 
-本次中间状态为 **CODE_READY, NAS_R3_NOT_UPDATED**；NAS 此刻仍为 R2。只有完成真 NAS 发布、版本/回退/服务不变核验及网页操作后，才能在本报告和 PR 中更新 R3 交付状态。不得用下方本地截图替代 NAS。
+**PASS_R3_NAS_TEXTBOOK_NAVIGATION_DELIVERED**。当前入口 [NAS 学习家园](http://192.168.2.100:38444/) 已是 R3，无需登录、证书或 Mac 本地服务。NAS 部署源码为 `020ceb9a6792a18e8d020914ec4250b631ef13d0`，不是后续证据文档提交。部署源码精确 HEAD 的 [push CI](https://github.com/lovestream/kevin-learning-home/actions/runs/40253781809) 与 [PR CI](https://github.com/lovestream/kevin-learning-home/actions/runs/40253785707) 全部成功。最终证据提交的 CI 以 PR 正文的精确 HEAD 记录为准。
+
+## NAS 实际交付证据
+
+| 项目 | 实测结果 |
+| --- | --- |
+| 镜像 | `sha256:942c3001a5f703a38c8d90cd7ca2a21b0360f6b05f7c262d3c11c26641d31690` |
+| 活跃容器 | `klh-math-preview-20261025-c6ae9e7f-020ceb9a6792-app`；ID `159ef39bdc11e872045dfb42e286eb7c7c59844c1cabf52939c16f67fe51642a` |
+| 运行限制 | 非 root 1024:100、只读根、零挂载、256 MiB、cpuset 0、全部 capabilities 丢弃、no-new-privileges |
+| 目录导航 | 390/768/1280 三视口全通过，13,290 ms；每视口核验全部 17 单元、70 唯一入口及搜索、返回、刷新、后退 |
+| 课堂回归 | 30 代表课 18,147 ms；全部 210 课堂/视口场景 125,314 ms；runner HEAD 为 020ceb9，工作树无未提交变更 |
+| 回退恢复 | 实际 R3→R2 HTTP→R3；原 R2 容器/镜像保留，最终 R3 正常运行 |
+| 服务与数据保护 | 11 个受保护容器前后快照完全相同；旧合成数据及 TLS 文件 hash 完全相同 |
+| 构建对应 | 169 个发布输入与部署源码一致；NAS 11 个静态 seal 文件与测试构建一致 |
+| 普通浏览器 | 用户 Mac 的普通 Chrome 实际刷新 R2→R3，进入上册/混合运算/先乘除课堂、返回原单元；无登录和证书绕过 |
+| 实体手机/iPad | `NEEDS_USER_ACTION`；三视口自动化不冒充实体设备验收 |
+
+[完整交付回执](evidence/math-full-r3/delivery.json)、[导航原始结果](evidence/math-full-r3/navigation-nas.json)、[210 场景](evidence/math-full-r3/nas-browser.json)、[回退](evidence/math-full-r3/rollback.json)、[169 输入](evidence/math-full-r3/release-inputs.json)、[静态 seal](evidence/math-full-r3/static-seal.json)、[截图 hash](evidence/math-full-r3/screenshots.json) 已归档。18 张响应式截图及普通 Chrome 三张截图均来自实际 NAS。Mac 仍使用 `/Users/yako/Documents/Kevin-Learning-Home-Trial/` 原目录的快捷方式和指南，已核实内容与权限，没有再创建项目副本。
+
+![NAS 数学课本目录](evidence/math-full-r3/home-1280.png)
 
 ## 目录结构与来源
 
