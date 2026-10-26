@@ -12,9 +12,11 @@ on:
         codex/math-01-readonly-lesson,
         codex/math-01-nas-trial,
         codex/math-full-01-70-lessons,
+        codex/math-full-02-practice,
+        codex/math-full-03-capabilities,
       ]
   pull_request:
-    branches: [main]
+    branches: [main, codex/math-full-01-70-lessons, codex/math-full-02-practice]
 permissions:
   contents: read
 jobs:
@@ -87,6 +89,8 @@ jobs:
           node tests/math-full-01/navigation.mjs
           node tests/math-full-01/browser.mjs --checkpoint
           node tests/math-full-01/browser.mjs
+          node --test tests/math-full-02/practice.test.mjs
+          node tests/math-full-02/browser.mjs
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1

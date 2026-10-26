@@ -1,0 +1,2 @@
+export const firstAnswer=t=>t.kind==='explanation'?{value:'我先读清条件，再用图和算式说明关系。'}:t.fields?Object.fromEntries(t.fields.map(f=>[f.key,f.expected])):{value:t.expected,...(t.responseSpec.expectedEvidence?{evidence:t.responseSpec.expectedEvidence}:{})};
+export const submission=(row,answer=firstAnswer(row.task))=>({lessonId:row.lessonId,contentVersion:row.contentVersion,taskId:row.task.id,firstAnswer:answer,checks:[true,true,true],finalAnswer:answer});

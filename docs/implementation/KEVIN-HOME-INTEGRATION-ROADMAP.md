@@ -12,7 +12,7 @@
 | 顺序 | 功能 | 当前真实状态 | 已指派的GitHub任务 | 真正交付定义 |
 | --- | --- | --- | --- | --- |
 | 0 当前 | 数学70课六步+原教具 | NAS R3 70/70教学与17单元/知识点导航已实测交付；PR18仍Draft | [PR18的R3课本目录审查](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6405768281) / [Issue15](https://github.com/lovestream/kevin-learning-home/issues/15) | **直接NAS打开**三年级上下册、17教材单元、知识点和7衔接课，返回单元、搜索、触摸/桌面可用，实测版本/回退通过 |
-| 1 | 数学849道练习 | 未迁入；现第六步仅提示待接入 | [Issue16](https://github.com/lovestream/kevin-learning-home/issues/16) | 五组849题、首答/三项自查/终答、335解释题人工确认语义，同一NAS数学课可作答，不保存成绩 |
+| 1 | 数学849道练习 | 已在 NAS 交付 849 题；第六步五组临时练习，335 解释题人审；PR21 Draft | [Issue16](https://github.com/lovestream/kevin-learning-home/issues/16) | 五组849题、首答/三项自查/终答、335解释题人工确认语义，同一NAS数学课可作答，不保存成绩 |
 | 2 | 原数学其余可用能力 | 数学小侦探、17已审思维卡、可运行的高年级等未迁入 | [Issue17](https://github.com/lovestream/kevin-learning-home/issues/17) | 冻结旧站现有菜单/源/实际可运行项对照清单；可公开可用部分**部署到同一个NAS网站**；43暂缓卡/仅蓝图项保持未开放 |
 | 3 | 英语 Word Quest | 目前新NAS英语为“待迁入” | [Issue19](https://github.com/lovestream/kevin-learning-home/issues/19) | `/subjects/english`真实词库/册/单元/词卡/发音/拼写/完形/临时回顾；源素材许可证审核，同一NAS可体验 |
 | 4 并行设计/最后启用 | 数学英语共用积分/蛋仔 | 新站无统一真实账本及宠物状态 | [Issue20](https://github.com/lovestream/kevin-learning-home/issues/20) | 先审统一学习事件+防刷积分+宠物状态模型；正式账户及持久化得到单独授权**之后**实现，不能让匿名点击刷真实积分 |

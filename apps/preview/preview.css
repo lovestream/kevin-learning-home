@@ -416,3 +416,25 @@
   flex: 1 1 15rem;
   overflow-wrap: anywhere;
 }
+
+/* Authored practice continues inside step six, with the existing classroom palette. */
+.practice-panel { margin-block: 1.3rem; }
+.practice-notice { color: #3d745e; border-left: 3px solid currentColor; padding: .6rem 1rem; }
+.practice-groups,.practice-numbers,.practice-actions { display:flex; flex-wrap:wrap; gap:.5rem; margin-block:1rem; }
+.practice-groups button { flex:1 1 6rem; min-height:48px; }
+.practice-groups button[aria-pressed=true],.practice-numbers button[aria-current] { background:#2f6985; color:white; }
+.practice-question { border:1px solid #bfd0d8; border-radius:16px; background:#fff; padding:clamp(.8rem,3vw,1.5rem); }
+.practice-prompt { font-size:1.15rem; line-height:1.8; white-space:pre-wrap; }
+.practice-panel fieldset { border:1px solid #bfd0d8; margin-block:1rem; border-radius:10px; min-width:0; }
+.practice-option,.practice-self-check label { display:flex; gap:.7rem; align-items:center; min-height:48px; padding:.6rem; cursor:pointer; }
+.practice-panel input[type=checkbox],.practice-panel input[type=radio] { width:22px; height:22px; flex-shrink:0; }
+.practice-panel textarea { display:block; min-height:120px; width:100%; padding:.8rem; font:inherit; resize:vertical; }
+.practice-fields label { display:block; margin-block:1rem; }
+.practice-fields label>span { display:flex; align-items:center; gap:.7rem; }
+.practice-fields input { min-width:0; width:100%; padding:.8rem; font:inherit; }
+.practice-self-check,.practice-feedback { background:#f4f8fc; border-radius:12px; padding:1rem; margin-top:1.1rem; }
+.practice-feedback p,.practice-question figcaption { overflow-wrap:anywhere; white-space:pre-wrap; }
+.practice-panel button { min-height:44px; min-width:44px; }
+.practice-panel h3:focus { outline:2px solid #2f6985; outline-offset:5px; }
+.task-relationship-card { background:#f4f8fc; padding:1rem; border-radius:12px; }
+.relationship-prompts { display:flex; flex-wrap:wrap; gap:1rem; margin-block:1rem; }

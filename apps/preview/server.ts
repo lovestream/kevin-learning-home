@@ -1,5 +1,6 @@
 // Standalone content-only process. No production server, identity, math service or SQLite imports.
 import http from "node:http";
+import { loadPractice, gradePractice } from "./practice/service.ts";
 import { readFileSync } from "node:fs";
 import { join, dirname, extname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -33,6 +34,8 @@ export async function startPreview({
     buildSha: string;
     catalogSha256: string;
     files: Record<string, string>;
+    practiceBankSha256: string;
+    practicePublicSha256: string;
   };
   if (
     seal.schemaVersion !== 1 ||
@@ -54,6 +57,8 @@ export async function startPreview({
     assets.set(name, data);
   }
   if (!assets.has("/index.html")) throw Error("PREVIEW_ENTRY_MISSING");
+  const practice = loadPractice(root);
+  if (practice.bankSha256 !== seal.practiceBankSha256 || practice.publicSha256 !== seal.practicePublicSha256) throw Error("PRACTICE_SEAL_MISMATCH");
   const server = http.createServer((req, res) => {
     const address = server.address();
     if (!address || typeof address === "string") {
@@ -97,6 +102,16 @@ export async function startPreview({
       send(403, '{"error":"PREVIEW_ORIGIN_DENIED"}');
       return;
     }
+    if (req.method === "POST" && req.url === "/preview-api/v1/practice/grade") {
+      // Bounded, stateless calculation only. All production/write APIs remain unavailable.
+      if (req.headers['content-type'] !== 'application/json' || req.headers['content-encoding'] || (req.headers['sec-fetch-site'] && !['same-origin','none'].includes(req.headers['sec-fetch-site']))) { send(415,'{"error":"JSON_SAME_ORIGIN_REQUIRED"}'); req.resume(); return; }
+      if (Number(req.headers['content-length'] ?? 0)>16384) {send(413,'{"error":"BODY_TOO_LARGE"}'); req.resume(); return;}
+      const chunks: Buffer[]=[]; let size=0,done=false;
+      req.setTimeout(5000,()=>{if(!done){done=true;send(408,'{"error":"REQUEST_TIMEOUT"}');req.destroy();}});
+      req.on('data',(b:Buffer)=>{if(done)return;size+=b.length;if(size>16384){done=true;send(413,'{"error":"BODY_TOO_LARGE"}');chunks.length=0;}else chunks.push(b);});
+      req.on('end',()=>{if(done)return;done=true;try{send(200,JSON.stringify(gradePractice(practice,JSON.parse(Buffer.concat(chunks).toString('utf8')))));}catch{send(400,'{"error":"INVALID_PRACTICE_SUBMISSION"}');}});
+      req.on('error',()=>{done=true;chunks.length=0;});return;
+    }
     if (req.method !== "GET" && req.method !== "HEAD") {
       send(405, '{"error":"CONTENT_ONLY_NO_WRITES"}');
       return;
@@ -124,6 +139,8 @@ export async function startPreview({
           contentOnly: true,
           database: false,
           lessons: 70,
+          practiceTasks: 849,
+          practicePublicSha256: practice.publicSha256,
         }),
       );
       return;
@@ -135,6 +152,11 @@ export async function startPreview({
     if (pathname === "/preview-api/v1/learning-map") {
       send(200, JSON.stringify(learningMap));
       return;
+    }
+    if (pathname.startsWith('/preview-api/v1/practice/lessons/')) {
+      const id=pathname.slice('/preview-api/v1/practice/lessons/'.length), lesson=practice.lessons.get(id);
+      if(!lesson){send(404,'{"error":"UNKNOWN_PRACTICE_LESSON"}');return;}
+      send(200,JSON.stringify(lesson));return;
     }
     if (pathname.startsWith("/preview-api/v1/lessons/")) {
       let id: string;

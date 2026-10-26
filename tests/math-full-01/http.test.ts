@@ -95,6 +95,7 @@ test("missing or changed build assets prevent startup; no partial healthy servic
   const root = mkdtempSync(join(tmpdir(), "klh-preview-assets-"));
   try {
     mkdirSync(join(root, "apps/preview"), { recursive: true });
+    cpSync("apps/preview/practice", join(root, "apps/preview/practice"), { recursive: true });
     cpSync("apps/preview/content", join(root, "apps/preview/content"), {
       recursive: true,
     });
