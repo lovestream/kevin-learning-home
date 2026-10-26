@@ -61,6 +61,6 @@
       "sha256": "5d73308e18fc448e77c538a562290bf55d9e16eae9da0f960a64f421190265af"
     }
   ],
-  "source": "Real production preview build in local Chromium at 390/768/1280 widths; NAS/native evidence is separately identified",
+  "source": "Real NAS LAN HTTP production preview build in Chromium at 390/768/1280 widths; ordinary Chrome evidence separately archived",
   "physicalPhoneOrIPad": "NEEDS_USER_ACTION"
 }

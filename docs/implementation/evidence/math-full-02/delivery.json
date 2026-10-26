@@ -1,0 +1,103 @@
+{
+  "status": "PASS_849_PRACTICE_DELIVERED_TO_SAME_NAS",
+  "recordedAt": "2026-10-26T11:19:35.932716+00:00",
+  "origin": "http://192.168.2.100:38444",
+  "deployedSourceCommit": "d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12",
+  "imageId": "sha256:15de948d7a34fe00286aee8b59b96bae48b81afce95478a56fb45c3fe30568c1",
+  "appId": "ae61af1c1b40524ac8a872eaf840321d98686e295afff2301325d94f05a6010b",
+  "directory": "/volume2/homes/admin/klh-math-preview-20261025-c6ae9e7f",
+  "runtime": {
+    "buildSha": "d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12",
+    "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+    "contentOnly": true,
+    "database": false,
+    "lessons": 70,
+    "practiceTasks": 849,
+    "practicePublicSha256": "306dc7ec07a5b7f6f2a6aa31628e8e0147b357c46ade8403ae29e4b6643b495f"
+  },
+  "limits": {
+    "user": "1024:100",
+    "readonlyRoot": true,
+    "mountCount": 0,
+    "memoryBytes": 268435456,
+    "cpuset": "0",
+    "capDrop": [
+      "ALL"
+    ],
+    "securityOpt": [
+      "no-new-privileges:true"
+    ],
+    "ports": {
+      "4179/tcp": [
+        {
+          "HostIp": "192.168.2.100",
+          "HostPort": "38444"
+        }
+      ]
+    },
+    "restartPolicy": {
+      "Name": "unless-stopped",
+      "MaximumRetryCount": 0
+    }
+  },
+  "protectedContainers": {
+    "count": 11,
+    "beforeSha256": "be40f79c8587326f2e693f32ad96866939008ab97685f249fe00de0dd20e48ee",
+    "afterSha256": "be40f79c8587326f2e693f32ad96866939008ab97685f249fe00de0dd20e48ee",
+    "unchanged": true
+  },
+  "oldSyntheticDataAndTLS": {
+    "beforeSha256": "d133d507ceade37422f1af20448ed292919a14337b4c34502f279f2fb44a220c",
+    "afterSha256": "d133d507ceade37422f1af20448ed292919a14337b4c34502f279f2fb44a220c",
+    "unchanged": true
+  },
+  "rollback": {
+    "status": "PASS_PRACTICE_TO_R3_TO_PRACTICE_HTTP",
+    "previousIdRetained": "159ef39bdc11e872045dfb42e286eb7c7c59844c1cabf52939c16f67fe51642a",
+    "previousImageRetained": "sha256:942c3001a5f703a38c8d90cd7ca2a21b0360f6b05f7c262d3c11c26641d31690",
+    "previousFinallyRunning": false,
+    "practiceFinallyRunning": true
+  },
+  "browser": {
+    "runnerHead": "d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12",
+    "runnerDirty": false,
+    "navigationViewports": 3,
+    "practiceViewports": 3,
+    "tasksPerViewport": 849,
+    "completePracticeFlows": 84,
+    "practiceElapsedMs": 132627,
+    "teachingScenarios": 210,
+    "teachingElapsedMs": 133116,
+    "allTaskHTTP": 849,
+    "httpElapsedMs": 6509,
+    "gradeLatencyMs": {
+      "p50": 5.811792000000423,
+      "p95": 9.490459000000556,
+      "max": 77.0012079999999
+    },
+    "physicalIPhoneIPad": "NEEDS_USER_ACTION"
+  },
+  "nativeChrome": {
+    "status": "NOT_AVAILABLE_THIS_PASS",
+    "reason": "Previously selected ordinary Chrome browser disconnected; only Codex Apps/IAB surfaces were available. No settings changed or warning bypassed.",
+    "priorR3OrdinaryChromeProof": "math-full-r3/native-classroom.jpg; applies to R3 only",
+    "actualNASChromiumThreeViewports": "PASS"
+  },
+  "ci": {
+    "sourceHead": "d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12",
+    "push": {
+      "run": 40274239518,
+      "conclusion": "success"
+    },
+    "pull_request": {
+      "run": 40274276385,
+      "conclusion": "success"
+    }
+  },
+  "realDataImportedOrModified": false,
+  "oldProjectsModified": false,
+  "systemPermissionsDSMOrTailscaleChanged": false,
+  "learningWrites": 0,
+  "practice849Integrated": true,
+  "remainingMathCapabilities": "ISSUE_17_NOT_YET_DELIVERED"
+}

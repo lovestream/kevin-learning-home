@@ -1,8 +1,18 @@
 # Kevin 学习家园：当前交接
 
-## Issue #16 练习批次正在开发，NAS 仍运行已验收 R3
+## Issue #16 已交付 NAS，继续 Issue #17
 
-分支 `codex/math-full-02-practice` 从 R3 证据提交 8628f0a 建立；Draft PR 叠加到 PR #18 分支。本地 849 题、五组/五型、无状态评分和六步课堂内流程已实现；最新完整本地/CI与 NAS 发布仍需完成，不能标为已交付。见 [练习报告](../implementation/MATH-FULL-02-REPORT.md)。原 60 Node/18 UI/12 数学 Node/9 数学浏览器全量本地验证通过。新增 CI 仅扩充分支与叠加 PR base，原精确分支测试同步扩展，全部原门禁保留。
+当前分支 `codex/math-full-02-practice`、独立叠加 Draft PR #21；基于 PR #18 的稳定 R3 8628f0a。当前 NAS 源码 `d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12`，镜像 `sha256:15de948d7a34fe00286aee8b59b96bae48b81afce95478a56fb45c3fe30568c1`；源码完整 push 40274239518 / PR 40274276385 成功。后续归档提交不改变 178 发布输入，最终精确 HEAD 双 CI 见 PR 正文。
+
+同一 HTTP 38444 已含 70 课与 849 题；五组/五型、首答/三自查/终答、335 解释题人审、刷新清空。实际 NAS 849 HTTP、三视口/84 练习流程、30/210 课堂、教材导航及练习版→R3→练习版均通过；11 个受保护容器与旧合成文件不变。普通 Chrome 此轮连接不可用，未修改设置或绕过警告；实体手机/iPad及普通 Chrome 仍待用户体验。
+
+当前容器 `klh-math-preview-20261025-c6ae9e7f-d835f8c7fbd5-app`，ID `ae61af1c1b40524ac8a872eaf840321d98686e295afff2301325d94f05a6010b`，IP 172.30.244.4；零挂载/只读根/非 root/256 MiB/cpuset 0。R3 容器 159ef39…及镜像 942c300…保留停止，作为当前直接回退；R2 与初始合成单课同样保留。
+
+[完整报告](../implementation/MATH-FULL-02-REPORT.md) · [回执](../implementation/evidence/math-full-02/delivery.json) · [输入清单](../implementation/evidence/math-full-02/release-inputs.json)。管理仍用 `infra/math-preview/release.py` 和现有私密 owner ledger，不能调用旧 controller switch/rollback，不改 daemon/DSM/Tailscale/权限。
+
+按最新人类指令继续 Issue #17，不在此暂停。只读审计已确认 17 已审思维卡、14 公开匿名模拟案卷、54 高年级旧版课/432 题与 28 方法条目（6 完整指南）；43 暂缓卡/168 蓝图不当作可运行。准备资料位于忽略的 `.evidence/math-full-remainder/`，未修改当前 runtime、旧仓库或真实数据；将在同一工作副本建立 `codex/math-full-03-capabilities`、叠加 PR #21 的独立 Draft，实际接入同一 NAS 后再验收。不要合并任何 Draft、接入私密案卷/上传箱、正式身份/真实成绩/钱包/宠物。
+
+## 以下为 R3 时点归档，当前运行版本以上文为准
 
 ## R3 已在 NAS 验收，直接连续推进 Issue #16/#17
 

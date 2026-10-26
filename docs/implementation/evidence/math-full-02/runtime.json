@@ -1,0 +1,9 @@
+{
+  "buildSha": "d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12",
+  "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+  "contentOnly": true,
+  "database": false,
+  "lessons": 70,
+  "practiceTasks": 849,
+  "practicePublicSha256": "306dc7ec07a5b7f6f2a6aa31628e8e0147b357c46ade8403ae29e4b6643b495f"
+}

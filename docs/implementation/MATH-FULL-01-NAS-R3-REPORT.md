@@ -1,5 +1,7 @@
 # PR #18 R3：课本目录与知识点导航
 
+> R3 时点归档，源码 020ceb9。后续练习版当前状态见 [PROJECT_STATUS](../../PROJECT_STATUS.md) 和 [练习报告](MATH-FULL-02-REPORT.md)，本报告不把历史截图/CI标成后续版本。
+
 ## 当前状态
 
 R3 按 [审查意见](https://github.com/lovestream/kevin-learning-home/pull/18#issuecomment-6405768281) 继续原 PR #18、原工作副本，没有另开基础建设或重做 70 课。main 的统一整合路线图 `ab73c9b` 已合入本分支并保留。用户最新要求覆盖旧暂停点：R3 在 NAS 验收后直接继续 Issue #16 的 849 题和 Issue #17 的其它可用数学能力；不合并 Draft PR，不等待重复阶段授权。

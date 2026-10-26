@@ -1,0 +1,24 @@
+{
+  "status": "PASS_ACTUAL_NAS_STATIC_FILES_IDENTICAL",
+  "fileCount": 11,
+  "seal": {
+    "schemaVersion": 1,
+    "practiceBankSha256": "1008208c4afcd310bfe5e9440649123691d8b18abb77129404625794dfc1c0b7",
+    "practicePublicSha256": "306dc7ec07a5b7f6f2a6aa31628e8e0147b357c46ade8403ae29e4b6643b495f",
+    "buildSha": "d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12",
+    "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+    "files": {
+      "/.vite/manifest.json": "f7ea228a377c514d732122274730b2990576b82489ee90c15feba2e35804842b",
+      "/THIRD-PARTY-NOTICES.txt": "ccf7b2dd8f5e7175c7653c6fad3eb7459f27e97f3e04b190daa5d9cd050e050f",
+      "/assets/CoreWorkbench-BhX3VX24.css": "01f26493bc8f2163ab74db850d02951f9fdaf3b851bdf3f13261be0485978876",
+      "/assets/CoreWorkbench-D3yneh8X.js": "0c37f4a0c96ea3318adb3bfb4645a29208a8e42bff90e13d67d3df49eff45804",
+      "/assets/index-BZdKQTo2.js": "ffbf17d532afeaad0cb6dd152ff6b13dd32639d4754de5bf7060d42beeca8c63",
+      "/assets/index-Dc2eMg1u.css": "65a958d10b3f8876e04be49c2c37c03d521d58158e3433a033806a234277629d",
+      "/index.html": "e476751a08ec68d91265b038d66bad288c27f49ece80043c6f00f327fe20a2cb",
+      "/math-paper-folding/template-cube-1.svg": "e66f2602fa4ce4b19c66cfe696b516a787be3a345d86f128a30bbb153fbb598d",
+      "/math-paper-folding/template-cube-2.svg": "a044ac55cef35eb8c879178cbaa501632db18f226ad174efc9cf08518c58f364",
+      "/math-paper-folding/template-cube-3.svg": "8c19c8ee451fca20c7c762367f93b79ff216ad1cccfc7991e9918967a97e09a7",
+      "/math-paper-folding/template-rectangular-box.svg": "f470fcc5f42c5cee6af80b7ba4a2dcc5cfc6936bda61f81073acb2ea04c98585"
+    }
+  }
+}

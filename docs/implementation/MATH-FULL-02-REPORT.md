@@ -4,7 +4,25 @@
 
 按 [Issue #16](https://github.com/lovestream/kevin-learning-home/issues/16) 及用户最新连续推进指令，在稳定 R3 `8628f0aa8b50fd32c3efe4485d92293582cdc420` 上创建 `codex/math-full-02-practice`。PR #18 未合并，因此本 Draft PR 叠加到 `codex/math-full-01-70-lessons`，避免重复混入 70 课变更；不合并任一 PR。工作目录仍为原副本，没有新 worktree。
 
-**CODE_READY_LOCAL_PASS，NAS 尚为 R3 教学版本 `020ceb9`。** 本报告只有实际发布并复核运行源码/镜像、849 题、回退和保护快照后，才标为 NAS 交付。入口仍是 `http://192.168.2.100:38444/`，不使用登录或证书，不依赖 Mac 本地运行。
+**PASS_849_PRACTICE_DELIVERED_TO_SAME_NAS**。当前入口 [NAS 学习家园](http://192.168.2.100:38444/) 已含 70 课和全量 849 题；每课第六步“自己验证”即可作答，无需登录、证书或 Mac 本地服务。
+
+部署源码 `d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12`，镜像 `sha256:15de948d7a34fe00286aee8b59b96bae48b81afce95478a56fb45c3fe30568c1`。精确源码完整 [push CI](https://github.com/lovestream/kevin-learning-home/actions/runs/40274239518) / [PR CI](https://github.com/lovestream/kevin-learning-home/actions/runs/40274276385) 均成功。[Draft PR #21](https://github.com/lovestream/kevin-learning-home/pull/21) 不合并。后续只归档证据，不冒称 NAS 部署了文档 HEAD；178 个发布输入与部署源码一致。
+
+## 实际 NAS 验收
+
+| 验收 | 实测结果 |
+| --- | --- |
+| 全题 HTTP | 70 课公开投影 / 849 终答全通过：514 确定题、335 人审；6,509 ms，零 cookie/学习写入 |
+| 三视口练习 | 390/768/1280 各 849 唯一题可达；84 个首答/自查/终答/纠错/重做流程，132,627 ms |
+| 原课堂 | 30 代表场景 18,521 ms；210 全课堂场景 133,116 ms |
+| 教材目录 | 三视口全部单元/知识点导航通过，15,220 ms |
+| 响应时延 | 全题连续核对与浏览器探针并行时，grade p50 5.81 ms / p95 9.49 ms / max 77.00 ms；是本次合成测试，不作生产承诺 |
+| 回退 | 实际练习版→R3 HTTP→练习版；原 R3 ID/镜像保留，最终练习版运行 |
+| 服务保护 | 11 个受保护容器前后完全一致；旧合成数据/TLS 文件 hash 一致 |
+| 构建对应 | 178 发布输入与源码一致，实际 NAS seal 的 11 静态文件等同测试构建 |
+| 普通浏览器/实体设备 | 此轮普通 Chrome 工具连接不可用，仅有 Codex Apps/IAB；不更改浏览器设置、不绕过警告。真实 NAS Chromium 三视口通过，不能冒充实体手机/iPad或本轮普通用户 Chrome 验收。此前 R3 普通 Chrome 证据仅适用于 R3 |
+
+[完整交付回执](evidence/math-full-02/delivery.json)、[全题 HTTP 与延时](evidence/math-full-02/nas-http.json)、[实际 NAS 浏览器](evidence/math-full-02/browser-nas.json)、[210 课堂](evidence/math-full-02/classrooms-nas.json)、[回退](evidence/math-full-02/rollback.json)、[发布输入](evidence/math-full-02/release-inputs.json) 与截图/hash 已归档。运行容器 `klh-math-preview-20261025-c6ae9e7f-d835f8c7fbd5-app`，ID `ae61af1c1b40524ac8a872eaf840321d98686e295afff2301325d94f05a6010b`，IP 172.30.244.4；非 root 1024:100、只读根、零挂载、256 MiB、cpuset 0、cap-drop ALL。没有升级 DSM、改权限/daemon/Tailscale 或证书。
 
 ## 课程与来源
 

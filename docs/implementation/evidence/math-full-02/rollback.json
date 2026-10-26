@@ -1,0 +1,11 @@
+{
+  "status": "PASS_PRACTICE_TO_R3_HTTP",
+  "runtime": {
+    "buildSha": "020ceb9a6792a18e8d020914ec4250b631ef13d0",
+    "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+    "contentOnly": true,
+    "database": false,
+    "lessons": 70
+  },
+  "noCertificateOrLoginRequired": true
+}
