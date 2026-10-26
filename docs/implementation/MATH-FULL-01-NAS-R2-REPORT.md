@@ -1,5 +1,7 @@
 # MATH-FULL-01 NAS R2：局域网直接交付
 
+> 本文是 R2 历史交付记录，对应归档提交 `c064fdd499ee5100fc3d122b71f0c34928090052`。当前 R3 教材目录整改见 [R3 报告](MATH-FULL-01-NAS-R3-REPORT.md)，不能把后来更新的通用矩阵当作 R2 原始运行。
+
 ## 当前执行状态
 
 用户在 2026-10-25 明确要求“不用 HTTPS，在本地 NAS 用”。此最新指令覆盖 R2 原文的证书前置要求：采用 **http://192.168.2.100:38444/**，无账号、无证书、无真实数据、无成绩持久化。此前 Tailscale 证书方案停止，没有申请证书或更改 Tailscale/DSM/DNS/权限。70 课现有代码继续复用，不重做课程。
@@ -60,7 +62,7 @@
 NAS 浏览器测量脚本提交 `eb59d3fc04dedca89a693d9e6e04f3dfb6245808`，开始时 working tree clean；测试预期运行版本始终明确为上述 `974fdee`，不是伪称 NAS 部署了测量脚本提交。后续仅补测试、目录守卫、归档工具和报告，**166 个 Docker COPY/依赖/构建输入逐文件 hash 与已部署提交完全相同**；实际 NAS 读取的 seal 中 11 个静态文件与测试构建完全相同。最终文档提交不为更新一个 Git 元数据 SHA 而重建用户入口。复审时可逐项重算 [release-inputs.json](evidence/math-full-nas-r2/release-inputs.json)；最终 HEAD 的完整双 CI 另在 PR 正文交付。
 
 - [实际交付/保护性不变检查](evidence/math-full-nas-r2/delivery.json)、[实时版本响应归档](evidence/math-full-nas-r2/runtime.json)、[CI 镜像证明](evidence/math-full-nas-r2/image.json)、[实际 NAS 静态 seal](evidence/math-full-nas-r2/static-seal.json)
-- [实际 NAS 全部 210 场景](evidence/math-full-01/browser.json)、[30 代表课](evidence/math-full-01/checkpoint.json)、[逐课矩阵](evidence/math-full-01/lessons-coverage.json)：原公共矩阵已更新为真实 NAS 测量，并保留原全量基线证据。测量不 mock 后端，不忽略 TLS，不写账号/学习数据。
+- R2 原始 [NAS 全部 210 场景](https://github.com/lovestream/kevin-learning-home/blob/c064fdd499ee5100fc3d122b71f0c34928090052/docs/implementation/evidence/math-full-01/browser.json)、[30 代表课](https://github.com/lovestream/kevin-learning-home/blob/c064fdd499ee5100fc3d122b71f0c34928090052/docs/implementation/evidence/math-full-01/checkpoint.json)、[逐课矩阵](https://github.com/lovestream/kevin-learning-home/blob/c064fdd499ee5100fc3d122b71f0c34928090052/docs/implementation/evidence/math-full-01/lessons-coverage.json) 均锁定归档提交，避免后续 R3 覆盖通用证据路径。测量不 mock 后端，不忽略 TLS，不写账号/学习数据。
 - [普通 Chrome 目录截图](evidence/math-full-nas-r2/native-chrome-catalog.jpg)、[实际折合截图](evidence/math-full-nas-r2/native-chrome-fold100.jpg)；截图已实际查看。页面使用普通用户 Chrome，未绕过证书警告、修改浏览器信任或使用临时不安全浏览器参数。
 
 Mac **既有** `/Users/yako/Documents/Kevin-Learning-Home-Trial/` 已交付 `打开NAS学习家园.webloc` 和 `NAS学习家园使用说明.md`。写入前验证目录归属、旧 delivery marker 及 NAS 构建版本；文件 0600，保留用户已有文件，不增加工作树或新项目副本。用户双击快捷方式即可使用。

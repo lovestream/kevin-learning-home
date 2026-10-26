@@ -8,6 +8,7 @@ import {
   type FullLesson,
 } from "./contract.ts";
 import { adapterFor } from "./registry-meta.ts";
+import { validateLearningMap } from "./learning-map.ts";
 export const hash = (b: string | Buffer) =>
   createHash("sha256").update(b).digest("hex");
 export function loadContent(root: string) {
@@ -36,5 +37,12 @@ export function loadContent(root: string) {
       throw Error("CONTENT_INTEGRITY_FAILED");
     lessons.set(entry.lessonId, { data, body: JSON.stringify(data) });
   }
-  return { catalog, lessons };
+  const mapBytes = readFileSync(join(directory, "learning-map.json"));
+  const learningMap = validateLearningMap(
+    JSON.parse(mapBytes.toString()),
+    catalog,
+  );
+  if (hash(canonical(learningMap)) !== catalog.navigationSha256)
+    throw Error("LEARNING_MAP_HASH_MISMATCH");
+  return { catalog, lessons, learningMap };
 }

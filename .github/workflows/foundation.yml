@@ -84,6 +84,7 @@ jobs:
           npm run build:math-preview
           python3 scripts/math-full-01/check.py
           node --test --test-concurrency=1 tests/math-full-01/*.test.*
+          node tests/math-full-01/navigation.mjs
           node tests/math-full-01/browser.mjs --checkpoint
           node tests/math-full-01/browser.mjs
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)

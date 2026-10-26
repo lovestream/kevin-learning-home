@@ -82,7 +82,16 @@ class Controller:
         return [json.loads(x) for x in self.docker('inspect', '--format', '{{json .}}', *ids).splitlines()]
 
     def protected(self):
-        return sorted([stable(m) for m in self.services() if m['Name'].lstrip('/') not in [APP, TLS, OLD_TLS]], key=lambda m: m['Id'])
+        releases = {r['name']: r for r in self.state.get('releases', {}).values()}
+        rows=[]
+        for meta in self.services():
+            name=meta['Name'].lstrip('/')
+            if name in releases:
+                release=releases[name]
+                owned(meta,name)
+                assert meta['Id']==release['appId'] and meta['Image']==release['imageId'] and not meta['Mounts'], 'RELEASE_IDENTITY_CHANGED'
+            elif name not in [APP,TLS,OLD_TLS]:rows.append(stable(meta))
+        return sorted(rows,key=lambda row:row['Id'])
 
     def invariance(self):
         assert self.protected() == self.state['protectedBefore'], 'PROTECTED_SERVICE_CHANGED'
@@ -219,12 +228,14 @@ for name in ['artifacts']:
                 request=urllib.request.Request(self.state['origin']+'/preview-api/v1/runtime',headers={'Cache-Control':'no-store'})
                 opener=urllib.request.build_opener(urllib.request.ProxyHandler({}))
                 with opener.open(request,timeout=3) as response: actual=json.load(response)
-                assert actual['buildSha']==self.state['buildSha'] and actual['lessons']==70 and actual['database'] is False
+                expected=self.state['releases'][self.state['activeRelease']]['buildSha'] if self.state.get('activeRelease') else self.state['buildSha']
+                assert actual['buildSha']==expected and actual['lessons']==70 and actual['database'] is False
                 return actual
             except Exception:time.sleep(.25)
         raise RuntimeError('NAS_PUBLIC_HTTP_VERSION_NOT_READY')
 
     def switch(self):
+        assert not self.state.get('activeRelease'), 'USE_VERSIONED_RELEASE_ACTIVATE_OR_ROLLBACK'
         assert self.state.get('imageId') and self.state['origin']=='http://192.168.2.100:38444', 'STAGED_HTTP_IMAGE_REQUIRED'
         self.invariance()
         old=self.inspect(OLD_TLS);validate_old(old,OLD_TLS)
@@ -250,6 +261,7 @@ for name in ['artifacts']:
         return {'status':'NAS_HTTP_ACTIVE','origin':self.state['origin'],'buildSha':actual['buildSha'],'appId':self.state['appId'],'oldTLSRetained':old['Id'],'certificateOrTailscaleChanges':False}
 
     def rollback(self):
+        assert not self.state.get('activeRelease'), 'USE_VERSIONED_RELEASE_ROLLBACK_FIRST'
         assert self.state, 'PREFLIGHT_REQUIRED'
         self.invariance()
         old=self.inspect(OLD_TLS);validate_old(old,OLD_TLS)

@@ -1,5 +1,11 @@
 # Kevin Learning Home · 项目当前状态
 
+## R3 执行中：课本目录 → NAS 验收 → 849 题与其余数学能力
+
+按用户最新指示继续原 PR #18。17 教材单元 63 课 + 7 节基础衔接的目录、知识点搜索及返回单元已实现；本地真实导航验证通过，正在构建并发布 NAS 候选镜像。NAS 此刻仍是下文 R2，不能标 R3 已交付。见 [R3 报告](docs/implementation/MATH-FULL-01-NAS-R3-REPORT.md)。main 新 [统一整合路线图](docs/implementation/KEVIN-HOME-INTEGRATION-ROADMAP.md) 已合入。
+
+R3 真 NAS 验收后直接继续 Issue #16/#17，不以 Draft PR 或中间技术阶段为停止点；保持各 Draft 不合并，不修改旧网站或真实数据，不启用正式账户与积分。下文为 R2 历史交付记录。
+
 ## MATH-FULL-01 R2：70 课已交付 NAS 局域网入口
 
 **[打开 NAS 学习家园](http://192.168.2.100:38444/)**：直接进入数学目录，无需登录、HTTPS 证书或 Mac 本地服务器。用户最新 HTTP 要求覆盖此前证书方案；没有申请证书或修改 Tailscale/DSM/DNS。

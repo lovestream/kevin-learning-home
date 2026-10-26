@@ -9,6 +9,13 @@ import {
   type FullLesson,
 } from "./contract.ts";
 import { Exploration, adapterFor } from "./registry.tsx";
+import { CatalogPage, MapBreadcrumb } from "./MapNavigation.tsx";
+import {
+  validateLearningMap,
+  lessonLocation,
+  neighborLessons,
+  type LearningMap,
+} from "./learning-map.ts";
 import type {
   WidgetState,
   MeasurementTaskDiagram,
@@ -84,9 +91,17 @@ function ContextPicture({
     </div>
   );
 }
-function Lesson({ lesson, catalog }: { lesson: FullLesson; catalog: Catalog }) {
-  const at = catalog.lessons.findIndex((x) => x.lessonId === lesson.lessonId);
-  const neighbors = [catalog.lessons[at - 1], catalog.lessons[at + 1]];
+function Lesson({
+  lesson,
+  catalog,
+  map,
+}: {
+  lesson: FullLesson;
+  catalog: Catalog;
+  map: LearningMap;
+}) {
+  const neighbors = neighborLessons(map, catalog, lesson.lessonId);
+  const currentUnit = lessonLocation(map, lesson.lessonId);
   const [step, setStep] = useState(0),
     [prediction, setPrediction] = useState(""),
     [thought, setThought] = useState(""),
@@ -133,8 +148,8 @@ function Lesson({ lesson, catalog }: { lesson: FullLesson; catalog: Catalog }) {
         <summary>课程单元与推荐先修</summary>
         <p>
           {lesson.textbookUnit?.title ?? lesson.parentUnitId} ·{" "}
-          {trackLabel(lesson.track)} · {lesson.contentVersion} /{" "}
-          {lesson.editorialRevision}
+          {/-R\d+$/.test(lesson.lessonId) ? "复习 R" : trackLabel(lesson.track)}{" "}
+          · {lesson.contentVersion} / {lesson.editorialRevision}
         </p>
         {lesson.recommendedPrerequisites.map((x) => (
           <p key={x}>{x}</p>
@@ -300,7 +315,9 @@ function Lesson({ lesson, catalog }: { lesson: FullLesson; catalog: Catalog }) {
         </button>
       </footer>
       <p>
-        <a href="/subjects/math">返回全部 70 课</a>
+        <a data-return-unit href={currentUnit.returnHref}>
+          返回{currentUnit.returnTitle}
+        </a>
       </p>
       <nav aria-label="相邻课堂" className="preview-neighbors">
         {neighbors.map((item, i) =>
@@ -319,91 +336,9 @@ function Lesson({ lesson, catalog }: { lesson: FullLesson; catalog: Catalog }) {
     </article>
   );
 }
-function CatalogPage({ catalog }: { catalog: Catalog }) {
-  const [query, setQuery] = useState(""),
-    [unit, setUnit] = useState("all"),
-    [track, setTrack] = useState("all");
-  const units = [
-    ...new Map(
-      catalog.lessons.map((l) => [
-        l.textbookUnit?.id ?? l.parentUnitId,
-        l.textbookUnit?.title ?? l.parentUnitId,
-      ]),
-    ).entries(),
-  ];
-  const visible = catalog.lessons.filter(
-    (l) =>
-      (unit === "all" || (l.textbookUnit?.id ?? l.parentUnitId) === unit) &&
-      (track === "all" || l.track === track) &&
-      (l.title + l.lessonId).toLowerCase().includes(query.toLowerCase()),
-  );
-  return (
-    <section>
-      <p className="intro-note">三年级数学 · 全部 70 课 · 64 交互 / 6 静态</p>
-      <h1>选一节课，动手想一想</h1>
-      <p>
-        沿用原课程的六个短步骤。所有内容仍为 draft
-        教学预览，不代表教材已经正式审定。
-      </p>
-      <div className="preview-filters">
-        <label>
-          找课程
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="课程名称或编号"
-          />
-        </label>
-        <label>
-          教材单元
-          <select value={unit} onChange={(e) => setUnit(e.target.value)}>
-            <option value="all">全部单元</option>
-            {units.map(([id, title]) => (
-              <option key={id} value={id}>
-                {title}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          课程层次
-          <select value={track} onChange={(e) => setTrack(e.target.value)}>
-            <option value="all">全部层次</option>
-            {[...new Set(catalog.lessons.map((l) => l.track))].map((x) => (
-              <option key={x} value={x}>
-                {trackLabel(x)}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
-      <p role="status">当前 {visible.length} / 70 课</p>
-      <div className="preview-catalog">
-        {visible.map((l) => (
-          <a
-            className="preview-lesson-card"
-            href={"/subjects/math/lessons/" + encodeURIComponent(l.lessonId)}
-            key={l.lessonId}
-            data-lesson-link={l.lessonId}
-          >
-            <small>
-              {l.textbookUnit?.title ?? l.parentUnitId} · {trackLabel(l.track)}
-            </small>
-            <h2>{l.title}</h2>
-            <span>{l.lessonId} · draft</span>
-            <p>
-              {l.interactionStatus === "verified"
-                ? "交互教具 · 六步课堂"
-                : "静态关系图 · 纸笔指导"}
-            </p>
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
 function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null),
+    [learningMap, setLearningMap] = useState<LearningMap | null>(null),
     [lesson, setLesson] = useState<FullLesson | null>(null),
     [error, setError] = useState(false);
   const requested = location.pathname.startsWith("/subjects/math/lessons/")
@@ -423,6 +358,15 @@ function App() {
       });
       if (!response.ok) throw Error("CATALOG_UNAVAILABLE");
       const cat = catalogSchema.parse(await response.json());
+      const mapResponse = await fetch("/preview-api/v1/learning-map", {
+        credentials: "omit",
+        cache: "no-store",
+        signal: controller.signal,
+      });
+      if (!mapResponse.ok) throw Error("LEARNING_MAP_UNAVAILABLE");
+      const map = validateLearningMap(await mapResponse.json(), cat);
+      if (contentDigest(map) !== cat.navigationSha256)
+        throw Error("LEARNING_MAP_HASH_MISMATCH");
       if (requested) {
         const entry = cat.lessons.find((l) => l.lessonId === requested);
         if (!entry) throw Error("UNKNOWN_LESSON");
@@ -440,12 +384,16 @@ function App() {
         adapterFor(data);
         if (alive) setLesson(data);
       }
-      if (alive) setCatalog(cat);
+      if (alive) {
+        setCatalog(cat);
+        setLearningMap(map);
+      }
     })().catch(() => {
       if (alive) {
         setError(true);
         setLesson(null);
         setCatalog(null);
+        setLearningMap(null);
       }
     });
     return () => {
@@ -474,22 +422,20 @@ function App() {
         体验模式不会保存：无真实学习数据、无账号、无成绩记录。刷新或离开课堂会清空本次操作。
       </p>
       <main id="main-content" className="reading-area" tabIndex={-1}>
-        <nav aria-label="当前位置" className="preview-breadcrumb">
-          <a href="/">学习家园</a>
-          <span>›</span>
-          <a href="/subjects/math">数学</a>
-          <span>›</span>
-          <span>
-            {requested ? "六步课堂" : print ? "折纸模板" : "教材单元目录"}
-          </span>
-        </nav>
+        {learningMap && (
+          <MapBreadcrumb
+            map={learningMap}
+            id={requested ?? undefined}
+            title={lesson?.title}
+          />
+        )}
         {error ? (
           <section role="alert">
             <h1>课堂暂时无法确认</h1>
             <p>内容或资源校验未通过，请返回目录或联系维护者。</p>
             <a href="/">返回目录</a>
           </section>
-        ) : !catalog ? (
+        ) : !catalog || !learningMap ? (
           <p role="status">正在摆好课堂…</p>
         ) : print ? (
           <section>
@@ -510,9 +456,14 @@ function App() {
             ))}
           </section>
         ) : requested && lesson ? (
-          <Lesson key={lesson.lessonId} lesson={lesson} catalog={catalog} />
+          <Lesson
+            key={lesson.lessonId}
+            lesson={lesson}
+            catalog={catalog}
+            map={learningMap}
+          />
         ) : (
-          <CatalogPage catalog={catalog} />
+          <CatalogPage catalog={catalog} map={learningMap} />
         )}
       </main>
       <footer className="preview-footer">

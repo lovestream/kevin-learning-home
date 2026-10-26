@@ -78,6 +78,8 @@ const execution = {
       "tests/math-full-01/browser.mjs",
       "tests/math-full-01/exercise.mjs",
       "apps/preview/main.tsx",
+      "apps/preview/MapNavigation.tsx",
+      "apps/preview/learning-map.ts",
       "apps/preview/contract.ts",
       "apps/preview/content.ts",
       "apps/preview/server.ts",
@@ -122,7 +124,8 @@ try {
       });
     });
     await page.goto(origin);
-    await expect(page.locator("[data-lesson-link]")).toHaveCount(70);
+    await expect(page.locator("[data-term-link]")).toHaveCount(3);
+    await expect(page.locator("[data-lesson-link]")).toHaveCount(0);
     await expect(
       page.getByRole("navigation", { name: "学科导航" }),
     ).toContainText("英语 · 待迁入");
@@ -136,10 +139,6 @@ try {
       assert.equal(liveRuntime.buildSha, process.env.KLH_PREVIEW_EXPECT_SHA);
       assert.equal(await page.evaluate(() => window.isSecureContext), false);
     }
-    for (const href of await page
-      .locator("[data-lesson-link]")
-      .evaluateAll((nodes) => nodes.map((n) => n.getAttribute("href"))))
-      assert(href.startsWith("/subjects/math/lessons/"));
     for (const entry of selected) {
       const begin = Date.now();
       try {
@@ -289,13 +288,15 @@ try {
         );
         assert.deepEqual(await page.evaluate(() => indexedDB.databases()), []);
         assert.deepEqual(
-          await page.evaluate(() => "caches" in window ? caches.keys() : []),
+          await page.evaluate(() => ("caches" in window ? caches.keys() : [])),
           [],
         );
         assert.deepEqual(
           await page.evaluate(() =>
             "serviceWorker" in navigator
-              ? navigator.serviceWorker.getRegistrations().then((x) => x.map((y) => y.scope))
+              ? navigator.serviceWorker
+                  .getRegistrations()
+                  .then((x) => x.map((y) => y.scope))
               : [],
           ),
           [],

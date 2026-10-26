@@ -12,6 +12,8 @@ import {
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { startPreview } from "../../apps/preview/server.ts";
+import { hash } from "../../apps/preview/content.ts";
+import { canonical } from "../../apps/preview/contract.ts";
 import { authFixture } from "../auth/helpers.ts";
 test("preview requires explicit enable; 70 real anonymous GETs have no cookies or write API", async () => {
   await assert.rejects(startPreview({ port: 0 }), /EXPLICIT/);
@@ -22,8 +24,15 @@ test("preview requires explicit enable; 70 real anonymous GETs have no cookies o
   try {
     const catalog = (await (
       await fetch(origin + "/preview-api/v1/catalog")
-    ).json()) as { lessons: { lessonId: string }[] };
+    ).json()) as { lessons: { lessonId: string }[]; navigationSha256: string };
     assert.equal(catalog.lessons.length, 70);
+    const mapResponse = await fetch(origin + "/preview-api/v1/learning-map");
+    assert.equal(mapResponse.status, 200);
+    assert.equal(mapResponse.headers.get("set-cookie"), null);
+    assert.equal(
+      hash(canonical(await mapResponse.json())),
+      catalog.navigationSha256,
+    );
     for (const l of catalog.lessons) {
       const r = await fetch(origin + "/preview-api/v1/lessons/" + l.lessonId, {
         headers: { Cookie: "untrusted-synthetic-cookie" },

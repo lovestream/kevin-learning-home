@@ -353,6 +353,7 @@ export const catalogSchema = z
     sourceArtifactSha256: z.literal(
       "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
     ),
+    navigationSha256: hash,
     lessons: z.array(catalogItem).length(70),
   })
   .superRefine((v, c) => {

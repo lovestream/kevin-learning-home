@@ -1,0 +1,425 @@
+{
+  "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "path": "content/course-plan-v2/grade-3.json",
+  "gitBlob": "542fc70d3c37514ac722361c2ced35068363f2f6",
+  "sourceSha256": "dc7108db68922e96e8b5a53e63cb5611c5c87064bcefa042a168d8cf2a2baec0",
+  "target": "apps/preview/content/learning-map.json",
+  "targetSha256": "c3a0f63b540d27b12057c8ff9cc3132849035824780d6889ef0469386843e35b",
+  "sourceValueHashes": [
+    {
+      "pointer": "/units/0/id",
+      "sha256": "e6a1a81a06d62b9abf381971034337b219dc8a63cce0b3c729c1f9dd791b22d3"
+    },
+    {
+      "pointer": "/units/0/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/0/title",
+      "sha256": "b939279a6d53d79d84d9e4927d9e4104d3a077c087a311cc90ff5b9a3f1cdd80"
+    },
+    {
+      "pointer": "/units/0/printedPages",
+      "sha256": "48066e3a45aa9a8e59d0c8a402b4ff97a2ebadc0833e30ed5f4ab9208d6ef8ea"
+    },
+    {
+      "pointer": "/units/0/coverage",
+      "sha256": "9b3f50b973b8f15b9de3eb78eac16d8af0dae686fcfc43c8f5db8614df8aac8b"
+    },
+    {
+      "pointer": "/units/0/sequence",
+      "sha256": "9cfd1cbad3b9a7741d38234cd71f8d4ca13c17d7bfa157c3d290531aae282dab"
+    },
+    {
+      "pointer": "/units/1/id",
+      "sha256": "414be62e9a8e80cd20d14b3f26d5562fdd0609436a39a62ff92b5b8c807f4924"
+    },
+    {
+      "pointer": "/units/1/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/1/title",
+      "sha256": "559d124c1740bb1fc6de84ed88e6300ff50d03bec4dbf0d29907f7301d9529ca"
+    },
+    {
+      "pointer": "/units/1/printedPages",
+      "sha256": "871ba8e1fb07fa4a1d89013bc237f17c75f9aeafc183a9a2c24db14e665fa495"
+    },
+    {
+      "pointer": "/units/1/coverage",
+      "sha256": "0a5b14d59019c77eee2f41001c5cd1c8e6eca1d9d277374c01a057cc7c95ee13"
+    },
+    {
+      "pointer": "/units/1/sequence",
+      "sha256": "5fdbe994c17bcd7a8307c16231972c54b9119c757084efd1c225945c34413ad8"
+    },
+    {
+      "pointer": "/units/2/id",
+      "sha256": "0f91e3f25eb07c725eedb1f82c0dc4610d1e38ab3008c2d7cf29f78cfc39c0e2"
+    },
+    {
+      "pointer": "/units/2/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/2/title",
+      "sha256": "27693ec38cd4bad4bea19ab0e2bfbfd9d1606111e2cf623f48a45a50790f473b"
+    },
+    {
+      "pointer": "/units/2/printedPages",
+      "sha256": "303aaf07b527f9179a7dcce141b6a071a635f20bbf969fc8c94e79fa0802a117"
+    },
+    {
+      "pointer": "/units/2/coverage",
+      "sha256": "0a3176ae250c0c1df7fe3d5813936db63cf51c2d80e8f9b0140390f37a0c133e"
+    },
+    {
+      "pointer": "/units/2/sequence",
+      "sha256": "01cb65d949b2e50abadf033a2ef2dd965667ebc684dd08573919a798a8c500ac"
+    },
+    {
+      "pointer": "/units/3/id",
+      "sha256": "d1c5a19daa463ebbd2d7af0e8214797e9b4bfdbbdfecc8ac97e67fca4ba4a1c9"
+    },
+    {
+      "pointer": "/units/3/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/3/title",
+      "sha256": "bd3f8e77c340b8da2771c9ca2ff7f31aebd5c270164082e932663ea0993a3461"
+    },
+    {
+      "pointer": "/units/3/printedPages",
+      "sha256": "3077e0d23f831a2b8ee0693ec61f09e68d8c335a374dc41bd5d183ce776e73aa"
+    },
+    {
+      "pointer": "/units/3/coverage",
+      "sha256": "89ca5df9430a1dac8dc6c545d132e1c921f7559d717dc5d4af9976a90c0871db"
+    },
+    {
+      "pointer": "/units/3/sequence",
+      "sha256": "d20e4f5542a031e54ea31524a0147e197c80c666ef0a11dc9638284efd176e2c"
+    },
+    {
+      "pointer": "/units/4/id",
+      "sha256": "30949fe378a6c4c7ddae39a28e427c8304bd81ac56f3658e9db8736f9e5cfad0"
+    },
+    {
+      "pointer": "/units/4/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/4/title",
+      "sha256": "aed4935fbf30013e2982ca19feffe93b90e344197a719cd814f2c695e0118140"
+    },
+    {
+      "pointer": "/units/4/printedPages",
+      "sha256": "03a00f8914b917672dc2041b51c26c41cb78a108671dd9e5fc18e8984195c89d"
+    },
+    {
+      "pointer": "/units/4/coverage",
+      "sha256": "13e5bc3b6b592550f9f1087b9e126bdc2dfe442f64f03a5d23eea2457dd9ada8"
+    },
+    {
+      "pointer": "/units/4/sequence",
+      "sha256": "0176682d7238c1c390f73f83e922472755385d025c24ceaa22b6c41eec54c098"
+    },
+    {
+      "pointer": "/units/5/id",
+      "sha256": "5ae202f4ff4f7922ed2a879cb7dfd643f20c3189c4f0f426e53fd476a813e733"
+    },
+    {
+      "pointer": "/units/5/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/5/title",
+      "sha256": "525e9c393c0bfded5e3f2dedcfbad322bde13771366ff8335ec9c237fbd398cc"
+    },
+    {
+      "pointer": "/units/5/printedPages",
+      "sha256": "fb8885be85f9e1359410472f6fcc87f16dad8a1845e02aa870e190c71e4188a2"
+    },
+    {
+      "pointer": "/units/5/coverage",
+      "sha256": "db61ffad62c025436d2e86ab3bd15ba49f750eadea67f9f68492337e9b6b8fe6"
+    },
+    {
+      "pointer": "/units/5/sequence",
+      "sha256": "4aaf7540d4fb4ce46ab03897660847c541583e4da4d633430180ec9de461e519"
+    },
+    {
+      "pointer": "/units/6/id",
+      "sha256": "4d2e9247c0687911fe876edd0be76f6783b8b53c7b26ea63b839dd5b945a779b"
+    },
+    {
+      "pointer": "/units/6/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/6/title",
+      "sha256": "9899d710db6232ab7fe7c17c296a8e6d75b6eed1163c5ef15a8985ec55de69a1"
+    },
+    {
+      "pointer": "/units/6/printedPages",
+      "sha256": "73ec583cf27f2257815154e1d6b965496920348bde1f43704be76e2963855074"
+    },
+    {
+      "pointer": "/units/6/coverage",
+      "sha256": "281a473c727c0782d218d7d883f63be38d59529a24aaa8384052a3102311d3d2"
+    },
+    {
+      "pointer": "/units/6/sequence",
+      "sha256": "28e510bf139682bc2cc529f47d36fa7b87b7d00b1b7d1dd0069eb3c29549104d"
+    },
+    {
+      "pointer": "/units/7/id",
+      "sha256": "e2ad5e052d96b57f03a85399fcb1782aae0e933a2031b026b6ac22a41ed25edf"
+    },
+    {
+      "pointer": "/units/7/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/7/title",
+      "sha256": "065aca605c462946545614e2f1b6e95143b02519670750a132917eb5d334e527"
+    },
+    {
+      "pointer": "/units/7/printedPages",
+      "sha256": "41bedc0f0060b6329e6cd3a32e56563dafba7ea99b7381b795517a29f38f9c65"
+    },
+    {
+      "pointer": "/units/7/coverage",
+      "sha256": "e3e9f03a677a62da8a68c688404919f0c56863c4aaf6e56b42b86170e8e18f96"
+    },
+    {
+      "pointer": "/units/7/sequence",
+      "sha256": "adf1672ff6a5e9503988e27df98fb0da6975e52e051f127c1d75648fd8f63598"
+    },
+    {
+      "pointer": "/units/8/id",
+      "sha256": "9dba09fed3b8c502ac0b6b36403586e9bae838ca67ea5a8afe30dc9cabe1b67b"
+    },
+    {
+      "pointer": "/units/8/term",
+      "sha256": "cc5cd8767d58f4d203fdc67873273778950900205dfb3337e5559396dc4ae5b6"
+    },
+    {
+      "pointer": "/units/8/title",
+      "sha256": "b2585c840818d1c7103180dcb1160e85980b41cec8195fe2ddf5bc871f27156a"
+    },
+    {
+      "pointer": "/units/8/printedPages",
+      "sha256": "82e3f1deecac135721b67aebe7cc4cbc24fc79cc4e94285b69d9b4241822b4ac"
+    },
+    {
+      "pointer": "/units/8/coverage",
+      "sha256": "ebfc2f0aa561b880a45eb5d337ef157a8d5afea8b4550ef82bba16d7b39a0e16"
+    },
+    {
+      "pointer": "/units/8/sequence",
+      "sha256": "342e5753a18c80dbeb22fdf9dd8cd836d2b12c5e7072875d1c88fc44d0830c7a"
+    },
+    {
+      "pointer": "/units/9/id",
+      "sha256": "b610b641988c4e9101477777892fa8a66eedae5b69118254e79f6e3d19591f91"
+    },
+    {
+      "pointer": "/units/9/term",
+      "sha256": "e0faa231577b36a37a5d745ae0cbf003ce456c9214b692bc964c622a05f609ca"
+    },
+    {
+      "pointer": "/units/9/title",
+      "sha256": "2ad76a938aa17ada5d3d91d68eda0e34f2da9e4e33adf8aaca013d82a398242f"
+    },
+    {
+      "pointer": "/units/9/printedPages",
+      "sha256": "bf77f14b3fbe5ca9ac093dddd029a67d9bbccdf44aadbe35d64f1bb73684bf09"
+    },
+    {
+      "pointer": "/units/9/coverage",
+      "sha256": "3f6c8f7ca01f26c4f94abc0a103f3fedfe6890394548bd1a24e4af0c4c2dc367"
+    },
+    {
+      "pointer": "/units/9/sequence",
+      "sha256": "a1e973f75dee35f10f405aaca09d8fa49e1602376f80c884ed1310194e79d41d"
+    },
+    {
+      "pointer": "/units/10/id",
+      "sha256": "76dd85f17fd1d11149056e191667eb9eba89ed839fd658afbe2b64c967c75fc1"
+    },
+    {
+      "pointer": "/units/10/term",
+      "sha256": "e0faa231577b36a37a5d745ae0cbf003ce456c9214b692bc964c622a05f609ca"
+    },
+    {
+      "pointer": "/units/10/title",
+      "sha256": "fce04308410752209fe6d271dfe6a08c1f6bdb0549654eb560b2cba900c88368"
+    },
+    {
+      "pointer": "/units/10/printedPages",
+      "sha256": "277dbb17c51759c0812517b7241db5c22d24579f63f1d3076a9743797dfaab33"
+    },
+    {
+      "pointer": "/units/10/coverage",
+      "sha256": "0a3abe65134594af006d95129e15ac2f9e5d5991ae8785a46c41d14d4a510462"
+    },
+    {
+      "pointer": "/units/10/sequence",
+      "sha256": "1467371b2440a695eb00ecae3fb254a4221f609227e589283a45fba80f6a1d4b"
+    },
+    {
+      "pointer": "/units/11/id",
+      "sha256": "3cad453701839b44183a109f58b7c9dbb23375ddbbbc0dd3ba027897acb0d0ec"
+    },
+    {
+      "pointer": "/units/11/term",
+      "sha256": "e0faa231577b36a37a5d745ae0cbf003ce456c9214b692bc964c622a05f609ca"
+    },
+    {
+      "pointer": "/units/11/title",
+      "sha256": "556b2b29d1132327e41acf05bdf9d20d46eed756d8bdd144f6337e6aaccdb68a"
+    },
+    {
+      "pointer": "/units/11/printedPages",
+      "sha256": "f18c72d49d1b374cac262555f7d31515715662b72712eb520a32cefc799a7830"
+    },
+    {
+      "pointer": "/units/11/coverage",
+      "sha256": "fb13e1480f2f2ea0e10df1f713f64c5bcc8bd5fd20f0bf7ab47965b8996948c6"
+    },
+    {
+      "pointer": "/units/11/sequence",
+      "sha256": "4f7c740710f79c060372819c2a27006d54a3c1714f7dcf27987d09e67b411734"
+    },
+    {
+      "pointer": "/units/12/id",
+      "sha256": "f963ae45bfa65d0cd3f46776ebf9ba30aa2e0643825155e59996f8ee70eeb20e"
+    },
+    {
+      "pointer": "/units/12/term",
+      "sha256": "e0faa231577b36a37a5d745ae0cbf003ce456c9214b692bc964c622a05f609ca"
+    },
+    {
+      "pointer": "/units/12/title",
+      "sha256": "8bbdd99cd1c32964397983310040879e8d001732cfd23167fe4774e1ab1d46a2"
+    },
+    {
+      "pointer": "/units/12/printedPages",
+      "sha256": "d6271e848bb6c122b3ca3079c84a7e5a4246b599bb971d04378747d1e3fa27cf"
+    },
+    {
+      "pointer": "/units/12/coverage",
+      "sha256": "e825b269992afa2bbfd5b17a0c163e4586a374f88723fbb9a5f06064a9649278"
+    },
+    {
+      "pointer": "/units/12/sequence",
+      "sha256": "ae7eb74cdb1014de9b9eb9fe0a8a9917104bc0caa5b956952443df8eec97d5cf"
+    },
+    {
+      "pointer": "/units/13/id",
+      "sha256": "5f4c402b17885ef8771d5264211b6718bd3e7fa35c750ce7ca5458ba58412f48"
+    },
+    {
+      "pointer": "/units/13/term",
+      "sha256": "e0faa231577b36a37a5d745ae0cbf003ce456c9214b692bc964c622a05f609ca"
+    },
+    {
+      "pointer": "/units/13/title",
+      "sha256": "e7a958cec8812562e8216a30b69afe329ea712b358d8ee8ba262a9e7b3cbddbd"
+    },
+    {
+      "pointer": "/units/13/printedPages",
+      "sha256": "9a49de8078e70e4d9c058ee2fddb9404a2fcaf1081a5c15e6c945b8e3194e632"
+    },
+    {
+      "pointer": "/units/13/coverage",
+      "sha256": "b8d65d0988f00ad82465b34a2095a2a12cce644e0b4c988bb95e710440b387c9"
+    },
+    {
+      "pointer": "/units/13/sequence",
+      "sha256": "2a80d6ab1b20f22ed4832adc35b24c56062ae260b81d1204e8e0021546c4e59c"
+    },
+    {
+      "pointer": "/units/14/id",
+      "sha256": "83343ea2b1ff2b43bb9761a14ddd6548e5819694befc3935a1efd014b4fd318b"
+    },
+    {
+      "pointer": "/units/14/term",
+      "sha256": "e0faa231577b36a37a5d745ae0cbf003ce456c9214b692bc964c622a05f609ca"
+    },
+    {
+      "pointer": "/units/14/title",
+      "sha256": "c2681758ba3756fcc22cc6ad8b1a1cfd0aa29d3fa6b299e69f6021d79f559df6"
+    },
+    {
+      "pointer": "/units/14/printedPages",
+      "sha256": "9595dcca333e356de0c89fe8535fa6de3a2abe3dc935285ab90101db1ee01c00"
+    },
+    {
+      "pointer": "/units/14/coverage",
+      "sha256": "f1941d6c8530a27993c554c9a0e39ca98652893a1f8f74c06cfe3c6b8c0b22e3"
+    },
+    {
+      "pointer": "/units/14/sequence",
+      "sha256": "fbedea8c3599bf26d7136dbadd8df87c6d6ed43a54bc25ec163c54718400c5b4"
+    },
+    {
+      "pointer": "/units/15/id",
+      "sha256": "048901be77c440eab145d2c6979365296997ce037f1573482010ccfdc0725679"
+    },
+    {
+      "pointer": "/units/15/term",
+      "sha256": "e0faa231577b36a37a5d745ae0cbf003ce456c9214b692bc964c622a05f609ca"
+    },
+    {
+      "pointer": "/units/15/title",
+      "sha256": "610f62195b7bdb145086e6eb8fe614b14542057a8e578911848d9f7987646f38"
+    },
+    {
+      "pointer": "/units/15/printedPages",
+      "sha256": "a0bc57cf304ca0e852c6dabbed8a6f8d6e0c487ea6d64caa611a2881ba876c81"
+    },
+    {
+      "pointer": "/units/15/coverage",
+      "sha256": "063d4925d7eb30c5dcfa531ee217380a2a7ca4a5f9f67c85dd05d08394266cd1"
+    },
+    {
+      "pointer": "/units/15/sequence",
+      "sha256": "3a6c6fc026842e50ef33b32fe1476051de776eabefc50beefc9363e36058312f"
+    },
+    {
+      "pointer": "/units/16/id",
+      "sha256": "ff1ad8ad9230140b0b03fb9c1d077e769fd6a251abd32e5558635bcb85d4c16c"
+    },
+    {
+      "pointer": "/units/16/term",
+      "sha256": "e0faa231577b36a37a5d745ae0cbf003ce456c9214b692bc964c622a05f609ca"
+    },
+    {
+      "pointer": "/units/16/title",
+      "sha256": "1ba132c3c765df945518c78925bbab5ff111b48836eaf155058de9f23bc70467"
+    },
+    {
+      "pointer": "/units/16/printedPages",
+      "sha256": "6b9a1524a7c0b62ac5153f50bc600dd40f1d460b3dd6c6a63fc7c6ac1453cc39"
+    },
+    {
+      "pointer": "/units/16/coverage",
+      "sha256": "5d707307824911480526903de781b40d0a578a972114ee432cfb52541529531d"
+    },
+    {
+      "pointer": "/units/16/sequence",
+      "sha256": "2a080ee8ddcc20f2b927f429baefa90e8493c649f9e819b264a4598180306dff"
+    }
+  ],
+  "projection": "units[].id/term/title/printedPages/coverage.topic/coverage.lessons/sequence only; three U03 supplements absent from textbook sequence appended in frozen pilot/catalog order; bridge labels are editorial navigation, not textbook chapters",
+  "referenceComponent": {
+    "path": "src/UnitLearningMap.tsx",
+    "sha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+    "copied": false
+  },
+  "license": "User-authorized reuse of own frozen project; no textbook PDF, game assets, answers or learning records."
+}

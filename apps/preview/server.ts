@@ -26,7 +26,7 @@ export async function startPreview({
   if (!Number.isInteger(port) || port < 0 || port > 65535)
     throw Error("INVALID_PREVIEW_PORT");
   const boundary = runtimeBoundary(runtime);
-  const { catalog, lessons } = loadContent(root),
+  const { catalog, lessons, learningMap } = loadContent(root),
     dist = join(root, "apps/preview/dist");
   const seal = JSON.parse(readFileSync(join(dist, "seal.json"), "utf8")) as {
     schemaVersion: number;
@@ -130,6 +130,10 @@ export async function startPreview({
     }
     if (pathname === "/preview-api/v1/catalog") {
       send(200, JSON.stringify(catalog));
+      return;
+    }
+    if (pathname === "/preview-api/v1/learning-map") {
+      send(200, JSON.stringify(learningMap));
       return;
     }
     if (pathname.startsWith("/preview-api/v1/lessons/")) {

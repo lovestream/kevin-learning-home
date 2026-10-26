@@ -1,5 +1,13 @@
 # Kevin 学习家园：当前交接
 
+## 最新指令与 R3 进行状态
+
+当前用户明确要求：继续同一 PR #18 的 R3 课本目录整改；真 NAS 验收后**直接进入** 849 题及其它可用数学功能，不再次等待阶段批准。此指令覆盖下面 R2 的“暂停”等旧交接语句；PR 仍保持 Draft，不能自行合并，不动旧项目、真实记录或正式积分。
+
+main `ab73c9b` 的 [统一整合路线图](../implementation/KEVIN-HOME-INTEGRATION-ROADMAP.md) 已合入。17 单元/63 课与 7 衔接、知识点层、搜索、返回原单元、册内相邻课已实现；来源白名单和 102 字段 hash、23 Node 与 11 部署保护测试及三视口真实导航本地通过。正在准备 NAS R3 发布；当前 NAS 仍 R2。下一步：候选精确 SHA 镜像→版本化 owned 发布→真 NAS 导航和 210 场景→回退/保护检查→归档，再建立 Issue #16 独立 Draft PR，后续 #17 连续推进。[R3 报告](../implementation/MATH-FULL-01-NAS-R3-REPORT.md)。
+
+以下是 R2 历史记录；后续版本化更新使用 `infra/math-preview/release.py`，不在新发布活跃时直接调用旧单课 `switch/rollback`。
+
 ## R2 已交付：NAS HTTP 免登录 70 课
 
 入口 **http://192.168.2.100:38444/**，根路径直接显示数学教材目录。用户明确要求局域网 HTTP，证书方案停止；没有申请证书或改 Tailscale/DSM/DNS/系统权限。使用同一 PR #18、分支 `codex/math-full-01-70-lessons`、工作副本 `/Users/yako/Downloads/codex/kevin-learning-home-math-trial`，未新增工作树。

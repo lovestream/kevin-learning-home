@@ -1,5 +1,7 @@
 # 当前交付：NAS 局域网免登录数学课堂
 
+R3 正在同一 PR #18 将目录恢复为“上册 9 单元 39 课／下册 8 单元 24 课／7 节基础衔接”，增加知识点层和返回原单元。当前 NAS 仍为 R2，R3 发布与真机结果见 [R3 执行报告](docs/implementation/MATH-FULL-01-NAS-R3-REPORT.md)。验收后继续 849 题及其它数学能力，不另开基础建设。
+
 用户已明确要求采用 **http://192.168.2.100:38444/**，不使用 HTTPS/证书，不调整 Tailscale。R2 已在原 PR #18 完成 NAS 交付，状态以 [R2 执行报告](docs/implementation/MATH-FULL-01-NAS-R2-REPORT.md)及 PR 最终 NAS 证据为准。下方 localhost 仅是开发复现，不作为用户交付。
 
 # Kevin Learning Home · Kevin 学习家园

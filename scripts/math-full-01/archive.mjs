@@ -23,6 +23,6 @@ const screenshotIds=['G3-U01-B03','G3-UP01-B01','G3-U04-B01','G3-U06-B01','G3-LP
 const screenshots=[];
 for(const id of screenshotIds)for(const width of [390,1280]){const name=id+'-'+width+'.png';fs.copyFileSync(source+'/'+name,target+'/'+name);screenshots.push(name);}
 for(const id of ['G3-U01-B03','G3-U04-B01','G3-LP01-B02']){const name=id+'-768.png';fs.copyFileSync(source+'/'+name,target+'/'+name);screenshots.push(name);}
-if(fs.existsSync(source+'/mac-visible-catalog.png')){fs.copyFileSync(source+'/mac-visible-catalog.png',target+'/mac-visible-catalog.png');screenshots.push('mac-visible-catalog.png');}
-fs.writeFileSync(target+'/screenshots.json',JSON.stringify({screenshots:screenshots.map(name=>({name,sha256:hash(target+'/'+name)})),source:nas?'Real NAS LAN HTTP production preview build in Chromium at 390/768/1280 widths; ordinary Chrome evidence separately archived':'Real production preview build in local Chromium; headed Mac catalog separately identified',physicalPhoneOrIPad:nas?'NEEDS_USER_ACTION':'NOT_DEPLOYED_NOT_RUN'},null,2)+'\n');
+// Historical headed R1 catalog is deliberately not relabelled as a current R3 capture.
+fs.writeFileSync(target+'/screenshots.json',JSON.stringify({screenshots:screenshots.map(name=>({name,sha256:hash(target+'/'+name)})),source:nas?'Real NAS LAN HTTP production preview build in Chromium at 390/768/1280 widths; ordinary Chrome evidence separately archived':'Real production preview build in local Chromium at 390/768/1280 widths; NAS/native evidence is separately identified',physicalPhoneOrIPad:'NEEDS_USER_ACTION'},null,2)+'\n');
 console.log(JSON.stringify({status:'ARCHIVED',lessons:matrix.length,browserScenarios:210,permanentScreenshots:screenshots.length}));

@@ -1,0 +1,654 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "sourceFileSha256": "dc7108db68922e96e8b5a53e63cb5611c5c87064bcefa042a168d8cf2a2baec0",
+  "units": [
+    {
+      "id": "G3-U01",
+      "term": "upper",
+      "title": "观察物体",
+      "printedPages": "1–5",
+      "coverage": [
+        {
+          "topic": "换一个位置，看到的样子为什么变了",
+          "lessons": [
+            "G3-U01-B01"
+          ]
+        },
+        {
+          "topic": "看见一个面，能猜出整个物体吗",
+          "lessons": [
+            "G3-U01-B02"
+          ]
+        },
+        {
+          "topic": "把纸盒打开，六个面去了哪里",
+          "lessons": [
+            "G3-U01-B03"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-U01-B01",
+        "G3-U01-B02",
+        "G3-U01-B03"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-U02",
+      "term": "upper",
+      "title": "混合运算",
+      "printedPages": "6–19",
+      "coverage": [
+        {
+          "topic": "一串加减或乘除，按什么顺序算",
+          "lessons": [
+            "G3-U02-B01"
+          ]
+        },
+        {
+          "topic": "没有括号时，先乘除，再加减",
+          "lessons": [
+            "G3-U02-B02"
+          ]
+        },
+        {
+          "topic": "括号把需要先做的事圈在一起",
+          "lessons": [
+            "G3-U02-B03"
+          ]
+        },
+        {
+          "topic": "同一个“剩多少”，可以怎样列式",
+          "lessons": [
+            "G3-U02-B04"
+          ]
+        },
+        {
+          "topic": "两步问题：先找到缺少的那个数量",
+          "lessons": [
+            "G3-U02-B05"
+          ]
+        },
+        {
+          "topic": "去掉括号，怎样仍表示同一笔钱",
+          "lessons": [
+            "G3-U02-E01"
+          ]
+        },
+        {
+          "topic": "添括号但值不变：把净变化打成一包",
+          "lessons": [
+            "G3-U02-E03"
+          ]
+        },
+        {
+          "topic": "连续除与括号里的乘除，为什么有关联",
+          "lessons": [
+            "G3-U02-E02"
+          ]
+        },
+        {
+          "topic": "换位置、换分组：交换律和结合律的具体体验",
+          "lessons": [
+            "G3-U02-E04"
+          ]
+        },
+        {
+          "topic": "一块点阵分两块：为什么每部分都要乘",
+          "lessons": [
+            "G3-U02-E05"
+          ]
+        },
+        {
+          "topic": "从算错的结果倒着找回去",
+          "lessons": [
+            "G3-U02-O01"
+          ]
+        },
+        {
+          "topic": "把一整包数量临时换个名字",
+          "lessons": [
+            "G3-U02-O02"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-U02-B01",
+        "G3-U02-B02",
+        "G3-U02-B03",
+        "G3-U02-B04",
+        "G3-U02-B05",
+        "G3-U02-E01",
+        "G3-U02-E03",
+        "G3-U02-E02",
+        "G3-U02-E04",
+        "G3-U02-E05",
+        "G3-U02-O01",
+        "G3-U02-O02"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-U03",
+      "term": "upper",
+      "title": "毫米、分米和千米",
+      "printedPages": "20–30",
+      "coverage": [
+        {
+          "topic": "尺子的小格为什么还要细分",
+          "lessons": [
+            "G3-U03-B01"
+          ]
+        },
+        {
+          "topic": "很远的路怎样估计长度",
+          "lessons": [
+            "G3-U03-B02"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-U03-B01",
+        "G3-U03-B02",
+        "G3-U03-E01",
+        "G3-U03-E02",
+        "G3-U03-O01"
+      ],
+      "supplemental": [
+        "G3-U03-E01",
+        "G3-U03-E02",
+        "G3-U03-O01"
+      ]
+    },
+    {
+      "id": "G3-UP01",
+      "term": "upper",
+      "title": "曹冲称象的故事：质量与替换测量",
+      "printedPages": "31–38",
+      "coverage": [
+        {
+          "topic": "用什么尺度记录轻重",
+          "lessons": [
+            "G3-UP01-B01"
+          ]
+        },
+        {
+          "topic": "称不了大物体，怎样换成小物体",
+          "lessons": [
+            "G3-UP01-B02"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-UP01-B01",
+        "G3-UP01-B02"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-U04",
+      "term": "upper",
+      "title": "多位数乘一位数",
+      "printedPages": "39–56",
+      "coverage": [
+        {
+          "topic": "把几十、几百和零散个数分别乘",
+          "lessons": [
+            "G3-U04-B01"
+          ]
+        },
+        {
+          "topic": "竖式是把拆分过程排整齐",
+          "lessons": [
+            "G3-U04-B02"
+          ]
+        },
+        {
+          "topic": "连续进位也只是反复“满十换一”",
+          "lessons": [
+            "G3-U04-B03"
+          ]
+        },
+        {
+          "topic": "乘数中的0，为什么不能跳过它的位置",
+          "lessons": [
+            "G3-U04-B04"
+          ]
+        },
+        {
+          "topic": "先估一估，才知道答案靠不靠谱",
+          "lessons": [
+            "G3-U04-B05"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-U04-B01",
+        "G3-U04-B02",
+        "G3-U04-B03",
+        "G3-U04-B04",
+        "G3-U04-B05"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-UP02",
+      "term": "upper",
+      "title": "数字编码",
+      "printedPages": "57–60",
+      "coverage": [
+        {
+          "topic": "数字有时表示身份，而不是多少",
+          "lessons": [
+            "G3-UP02-B01"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-UP02-B01"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-U05",
+      "term": "upper",
+      "title": "线和角",
+      "printedPages": "61–72",
+      "coverage": [
+        {
+          "topic": "线的端点和长度告诉我们什么",
+          "lessons": [
+            "G3-U05-B01"
+          ]
+        },
+        {
+          "topic": "角的大小看张口，不看边画多长",
+          "lessons": [
+            "G3-U05-B02"
+          ]
+        },
+        {
+          "topic": "用一个直角作标准来分类",
+          "lessons": [
+            "G3-U05-B03"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-U05-B01",
+        "G3-U05-B02",
+        "G3-U05-B03"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-U06",
+      "term": "upper",
+      "title": "分数的初步认识",
+      "printedPages": "73–91",
+      "coverage": [
+        {
+          "topic": "一份不到一个，怎样说清楚",
+          "lessons": [
+            "G3-U06-B01"
+          ]
+        },
+        {
+          "topic": "几个同样的小份，怎样合成一个分数",
+          "lessons": [
+            "G3-U06-B02"
+          ]
+        },
+        {
+          "topic": "分数加减，先确认数的是同一种小份",
+          "lessons": [
+            "G3-U06-B03"
+          ]
+        },
+        {
+          "topic": "一个整体，也可以是一盒东西",
+          "lessons": [
+            "G3-U06-B04"
+          ]
+        },
+        {
+          "topic": "先求一小份，再求几小份",
+          "lessons": [
+            "G3-U06-B05"
+          ]
+        },
+        {
+          "topic": "合并格子，已经涂色的长度会变吗",
+          "lessons": [
+            "G3-U06-E01"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-U06-B01",
+        "G3-U06-B02",
+        "G3-U06-B03",
+        "G3-U06-B04",
+        "G3-U06-B05",
+        "G3-U06-E01"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-U07",
+      "term": "upper",
+      "title": "复习与关联（含搭配问题）",
+      "printedPages": "92–102",
+      "coverage": [
+        {
+          "topic": "把计算、分数与测量连成一个方案",
+          "lessons": [
+            "G3-U07-R01"
+          ]
+        },
+        {
+          "topic": "每种选择都配一遍，怎样不重复不遗漏",
+          "lessons": [
+            "G3-U07-B01"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-U07-R01",
+        "G3-U07-B01"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-L01",
+      "term": "lower",
+      "title": "生活中的运动现象",
+      "printedPages": "1–9",
+      "coverage": [
+        {
+          "topic": "对折后能重合，才是轴对称",
+          "lessons": [
+            "G3-L01-B01"
+          ]
+        },
+        {
+          "topic": "平移和旋转，移动方式哪里不同",
+          "lessons": [
+            "G3-L01-B02"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-L01-B01",
+        "G3-L01-B02"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-L02",
+      "term": "lower",
+      "title": "除数是一位数的除法",
+      "printedPages": "10–38",
+      "coverage": [
+        {
+          "topic": "把几十、几百平均分，先看计数单位",
+          "lessons": [
+            "G3-L02-B01"
+          ]
+        },
+        {
+          "topic": "除法竖式为什么从高位开始",
+          "lessons": [
+            "G3-L02-B02"
+          ]
+        },
+        {
+          "topic": "有剩余时，怎样判断答案真的分完了",
+          "lessons": [
+            "G3-L02-B03"
+          ]
+        },
+        {
+          "topic": "商里有0，也不能漏掉位置",
+          "lessons": [
+            "G3-L02-B04"
+          ]
+        },
+        {
+          "topic": "连乘连除：每箱、每盒、每个怎样对应",
+          "lessons": [
+            "G3-L02-B05"
+          ]
+        },
+        {
+          "topic": "归一与归总：先找哪个量没有变",
+          "lessons": [
+            "G3-L02-B06"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-L02-B01",
+        "G3-L02-B02",
+        "G3-L02-B03",
+        "G3-L02-B04",
+        "G3-L02-B05",
+        "G3-L02-B06"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-L03",
+      "term": "lower",
+      "title": "长方形和正方形",
+      "printedPages": "39–51",
+      "coverage": [
+        {
+          "topic": "从边与角给图形分类",
+          "lessons": [
+            "G3-L03-B01"
+          ]
+        },
+        {
+          "topic": "围一圈需要多长：周长的意义",
+          "lessons": [
+            "G3-L03-B02"
+          ]
+        },
+        {
+          "topic": "拼在一起以后，哪些边不再露在外面",
+          "lessons": [
+            "G3-L03-E01"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-L03-B01",
+        "G3-L03-B02",
+        "G3-L03-E01"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-L04",
+      "term": "lower",
+      "title": "图形的面积",
+      "printedPages": "52–64",
+      "coverage": [
+        {
+          "topic": "铺满里面，需要多少个小方块",
+          "lessons": [
+            "G3-L04-B01"
+          ]
+        },
+        {
+          "topic": "长乘宽为什么得到面积",
+          "lessons": [
+            "G3-L04-B02"
+          ]
+        },
+        {
+          "topic": "分割、拼补和换单位，面积怎样保持一致",
+          "lessons": [
+            "G3-L04-B03"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-L04-B01",
+        "G3-L04-B02",
+        "G3-L04-B03"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-L05",
+      "term": "lower",
+      "title": "数据的收集与整理",
+      "printedPages": "65–76",
+      "coverage": [
+        {
+          "topic": "先问清问题，再收集能回答它的数据",
+          "lessons": [
+            "G3-L05-B01"
+          ]
+        },
+        {
+          "topic": "按范围分组，边界上的数据放哪里",
+          "lessons": [
+            "G3-L05-B02"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-L05-B01",
+        "G3-L05-B02"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-LP01",
+      "term": "lower",
+      "title": "年、月、日的秘密",
+      "printedPages": "77–85",
+      "coverage": [
+        {
+          "topic": "日历为什么不能每月都排30天",
+          "lessons": [
+            "G3-LP01-B01"
+          ]
+        },
+        {
+          "topic": "时刻是一个点，时长是一段路",
+          "lessons": [
+            "G3-LP01-B02"
+          ]
+        },
+        {
+          "topic": "星期循环与制作月历",
+          "lessons": [
+            "G3-LP01-E01"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-LP01-B01",
+        "G3-LP01-B02",
+        "G3-LP01-E01"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-L06",
+      "term": "lower",
+      "title": "小数的初步认识",
+      "printedPages": "86–94",
+      "coverage": [
+        {
+          "topic": "不足一米的部分，仍用十进制记录",
+          "lessons": [
+            "G3-L06-B01"
+          ]
+        },
+        {
+          "topic": "比较小数，先比较同样的计数单位",
+          "lessons": [
+            "G3-L06-B02"
+          ]
+        },
+        {
+          "topic": "小数加减也要把相同单位对齐",
+          "lessons": [
+            "G3-L06-B03"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-L06-B01",
+        "G3-L06-B02",
+        "G3-L06-B03"
+      ],
+      "supplemental": []
+    },
+    {
+      "id": "G3-L07",
+      "term": "lower",
+      "title": "复习与关联（含重叠问题）",
+      "printedPages": "95–104",
+      "coverage": [
+        {
+          "topic": "给一次班级活动做完整计划",
+          "lessons": [
+            "G3-L07-R01"
+          ]
+        },
+        {
+          "topic": "同一个人出现两次，怎样只数一次",
+          "lessons": [
+            "G3-L07-B01"
+          ]
+        }
+      ],
+      "sequence": [
+        "G3-L07-R01",
+        "G3-L07-B01"
+      ],
+      "supplemental": []
+    }
+  ],
+  "bridgeGroups": [
+    {
+      "id": "quantity-operations",
+      "title": "数量与运算",
+      "lessons": [
+        "numbers.quantity.intro",
+        "numbers.addition.meaning",
+        "numbers.subtraction.meaning"
+      ]
+    },
+    {
+      "id": "fractions",
+      "title": "分数",
+      "lessons": [
+        "numbers.fractions.meaning"
+      ]
+    },
+    {
+      "id": "area-perimeter",
+      "title": "面积与周长",
+      "lessons": [
+        "geometry.area.perimeter"
+      ]
+    },
+    {
+      "id": "equality",
+      "title": "等量替换与天平",
+      "lessons": [
+        "algebra.balance.intro",
+        "algebra.substitution.intro"
+      ]
+    }
+  ]
+}

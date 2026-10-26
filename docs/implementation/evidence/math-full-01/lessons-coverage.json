@@ -7,21 +7,23 @@
   "static": 6,
   "browserScenarios": 210,
   "execution": {
-    "head": "eb59d3fc04dedca89a693d9e6e04f3dfb6245808",
-    "dirty": false,
+    "head": "371e16501cff9b23243f04297aa91c680ee34a97",
+    "dirty": true,
     "files": {
-      "tests/math-full-01/browser.mjs": "d862c9970df1bb1c6b7f49424a0e8bf509731750da44cbc183013de05ae1f942",
+      "tests/math-full-01/browser.mjs": "2e9c2924e090c6946728262cc2c4f3d48a29b013a1e40aeebbd3b7bdb33c1d27",
       "tests/math-full-01/exercise.mjs": "e3fafe3d02ccf165417e3b50e9ba34c7e9e532a33a6bf0c89c1c0e0614c60ab0",
-      "apps/preview/main.tsx": "b52a8254d9444348c9a306ca1b85fe04e0dbcc659c9d9b382b528c192ab09b03",
-      "apps/preview/contract.ts": "15ac563c2356be88f9bb4fa7953e47e578ccc9d55b9f0309824d1df8509e405f",
-      "apps/preview/content.ts": "170a6099bd2a0ac75cabc75eb9025cee4c43250f0fd781f5db5e74d199ad6ff2",
-      "apps/preview/server.ts": "fdef2b1c4343b842aa7b9d26e0477d26638be7497bdb4df746abd89b63c8056f",
+      "apps/preview/main.tsx": "35d9c32aaee7ef4a40e53de84f3a33764e2f8ceea624d954a94ed3d5a9bb6f99",
+      "apps/preview/MapNavigation.tsx": "f875d3119acab74c5e87caa1b8cc9f522c5a17e1419e8fb298ecb14e7e30ec40",
+      "apps/preview/learning-map.ts": "1a232e67502ae9e3db48b1d9a9adb7193ab62e39c4b727dc4a8bea465d2aa07f",
+      "apps/preview/contract.ts": "f5562a80441b0505868ff4fc303cd9f2a4b984f6d060509de4cf421039018010",
+      "apps/preview/content.ts": "8e8a17ca493f294ce2e2053b41b21879045e9e851b9634cb91a16b2910969168",
+      "apps/preview/server.ts": "2244039ea34f53c177e6d3b6462019060fc0c624449c3758c7697e6ff74f4ef7",
       "apps/preview/runtime.ts": "ceaaa526e5b5b8f4084464931654c93cc796b44bae508fa92436a3943e340613",
       "apps/preview/integrity.ts": "758441b686ecb550c9048b05cc705004563af0999b63c06491ed4a48490c0eb8",
       "scripts/math-full-01/build.ts": "1352f8d7252296e77b1a233e546ac8ef781991486822459691c72229dc9245d0",
       "apps/preview/registry.tsx": "df091637447d16644d268a433b4027fed7c0bcb7ed2a208c6d09601066ae6dd9",
       "apps/preview/registry-meta.ts": "8aad5e9b0dd4b352ec02c4e873e196df5b6b5f996396e82687ffab93ab578bc9",
-      "apps/preview/preview.css": "220d36154bf03b57ea36160ccf84b922e1977351cfe9a8a07b02c707798174b4"
+      "apps/preview/preview.css": "c9886eaa726636297e6209a7709b47f428029cc7cb402d1af19340c302c8c6cc"
     }
   },
   "lessons": [

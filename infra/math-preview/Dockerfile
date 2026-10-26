@@ -19,7 +19,7 @@ COPY package.json ./
 COPY --from=build /app/node_modules/zod ./node_modules/zod
 COPY --from=build /app/apps/preview/dist ./apps/preview/dist
 COPY --from=build /app/apps/preview/content ./apps/preview/content
-COPY apps/preview/server.ts apps/preview/content.ts apps/preview/contract.ts apps/preview/registry-meta.ts apps/preview/runtime.ts ./apps/preview/
+COPY apps/preview/server.ts apps/preview/content.ts apps/preview/contract.ts apps/preview/registry-meta.ts apps/preview/runtime.ts apps/preview/learning-map.ts ./apps/preview/
 COPY apps/preview/adapters/source/shared/intro-visuals.mjs ./apps/preview/adapters/source/shared/intro-visuals.mjs
 USER node
 CMD ["node","apps/preview/server.ts"]
