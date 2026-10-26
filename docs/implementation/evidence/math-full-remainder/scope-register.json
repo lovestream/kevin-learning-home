@@ -1,0 +1,159 @@
+{
+  "status": "CODE_AUDITED_NOT_YET_NAS_DELIVERED",
+  "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "originalDataFilesRead": false,
+  "rows": [
+    {
+      "id": "home",
+      "source": "src/App.tsx",
+      "oldEntry": "/?view=today",
+      "newEntry": "/subjects/math",
+      "state": "ADAPTED_FREE_CATALOG",
+      "note": "No personalized daily/history data"
+    },
+    {
+      "id": "grade3-map",
+      "source": "src/UnitLearningMap.tsx",
+      "oldEntry": "/?view=map",
+      "newEntry": "/subjects/math",
+      "state": "DELIVERED_PR18",
+      "note": "17 units / 63 textbook + 7 bridges"
+    },
+    {
+      "id": "grade3-practice",
+      "source": "content/pilot/lessons.json",
+      "oldEntry": "original classroom taskSets",
+      "newEntry": "classroom step 6",
+      "state": "DELIVERED_PR21",
+      "note": "849 IDs, 335 human-review explanations"
+    },
+    {
+      "id": "grade3-legacy",
+      "source": "content/grade-3/legacy-seed.json",
+      "oldEntry": "hidden by hasCompleteGrade3",
+      "newEntry": null,
+      "state": "SUPERSEDED",
+      "note": "50 old nodes replaced by 70 published preview entries"
+    },
+    {
+      "id": "upper-primary",
+      "source": "scripts/build-upper-primary-catalog.mjs",
+      "oldEntry": "/?view=map grades 4-6",
+      "newEntry": "/subjects/math/library?kind=legacy",
+      "state": "IMPLEMENTED_PENDING_NAS",
+      "note": "54 legacy courses / 432 questions / 7 generic labs; teaching acceptance pending"
+    },
+    {
+      "id": "thinking",
+      "source": "content/pilot/thinking-publication.mjs",
+      "oldEntry": "?thinking=<id>",
+      "newEntry": "/subjects/math/library?kind=thinking",
+      "state": "IMPLEMENTED_PENDING_NAS",
+      "note": "17 fingerprint-approved cards / 3 models; human review only"
+    },
+    {
+      "id": "thinking-deferred",
+      "source": "content/pilot/thinking-source.mjs",
+      "oldEntry": "prepared-not-published",
+      "newEntry": null,
+      "state": "DEFERRED_SOURCE",
+      "note": "43 unpublished cards not served"
+    },
+    {
+      "id": "thinking-review-chain",
+      "source": "server/thinking-store.mjs",
+      "oldEntry": "parent review / delayed variants",
+      "newEntry": null,
+      "state": "EXCLUDED_AUTH_HISTORY",
+      "note": "Depends on parental adjudication and learning evidence; not opened as anonymous rewards"
+    },
+    {
+      "id": "detective-public",
+      "source": "content/detective/seed-cases.mjs",
+      "oldEntry": "/?view=detective",
+      "newEntry": "/subjects/math/library?kind=detective",
+      "state": "IMPLEMENTED_PENDING_NAS",
+      "note": "14 anonymous authored simulations; no medals"
+    },
+    {
+      "id": "detective-private",
+      "source": "server/detective-inbox-store.mjs",
+      "oldEntry": "parent private cases/inbox",
+      "newEntry": null,
+      "state": "EXCLUDED_PRIVATE",
+      "note": "No private case, inbox, reviewed file or pending export read/imported"
+    },
+    {
+      "id": "review",
+      "source": "src/LearningReviewView.tsx",
+      "oldEntry": "/?view=review",
+      "newEntry": "/subjects/math/library?kind=review",
+      "state": "IMPLEMENTED_PENDING_NAS",
+      "note": "244 existing review tasks, no personal due dates"
+    },
+    {
+      "id": "inverse-index",
+      "source": "shared/inverse-index.mjs",
+      "oldEntry": "inverse practice index",
+      "newEntry": "/subjects/math/library?kind=review",
+      "state": "IMPLEMENTED_PENDING_NAS",
+      "note": "11 original task deep links; not additional questions"
+    },
+    {
+      "id": "methods",
+      "source": "src/MethodsView.tsx",
+      "oldEntry": "/?view=methods",
+      "newEntry": "/subjects/math/library?kind=methods",
+      "state": "IMPLEMENTED_PENDING_NAS",
+      "note": "28 entries / 6 complete guides; search/filter/empty state"
+    },
+    {
+      "id": "method-guides-pending",
+      "source": "content/pilot/methods.json",
+      "oldEntry": "22 guide=null entries",
+      "newEntry": null,
+      "state": "NOT_AUTHORED_SOURCE",
+      "note": "Applications retained; no fabricated full guides"
+    },
+    {
+      "id": "print",
+      "source": "public/math-paper-folding",
+      "oldEntry": "original generated SVG templates",
+      "newEntry": "/math-paper-folding/print-templates.html",
+      "state": "DELIVERED_PR18",
+      "note": "4 authored templates; no textbook PDF copied"
+    },
+    {
+      "id": "personal-mistakes",
+      "source": "src/ArticleMistakesPanel.tsx",
+      "oldEntry": "/?view=mistakes",
+      "newEntry": null,
+      "state": "EXCLUDED_REAL_HISTORY",
+      "note": "Temporary correction provided; personal records not read"
+    },
+    {
+      "id": "parent",
+      "source": "src/App.tsx",
+      "oldEntry": "/?view=parent",
+      "newEntry": null,
+      "state": "EXCLUDED_AUTH_HISTORY",
+      "note": "No PIN, data imports/exports or review authorization migration"
+    },
+    {
+      "id": "pets-wallet",
+      "source": "server/pet-care.mjs",
+      "oldEntry": "/?view=pets",
+      "newEntry": null,
+      "state": "EXCLUDED_REWARDS",
+      "note": "No wallet merge, medals, pet state or assets"
+    },
+    {
+      "id": "blueprints",
+      "source": "content/Kevin_数学课程结构清单.json",
+      "oldEntry": "coursePlans",
+      "newEntry": null,
+      "state": "BLUEPRINT_ONLY",
+      "note": "168 containers are not 168 runnable classes"
+    }
+  ]
+}

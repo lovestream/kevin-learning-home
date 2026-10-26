@@ -1,0 +1,3505 @@
+{
+  "status": "PASS",
+  "scope": "17 published thought cards / 54 legacy courses with 432 questions / 14 anonymous authored cases; no real records",
+  "origin": "http://127.0.0.1:63024",
+  "nas": false,
+  "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "bankSha256": "8019913ea0756db1351363475ace2d72c53e9ed982d418092779456f6479ad8d",
+  "publicSha256": "52ae6d22b03e7b026ddbdbe0aea1f7f28733d7c061f983252df7cc6a0cc0146b",
+  "execution": {
+    "head": "a7968501d29aa38dafb36bf7c983ed67a96cb5cc",
+    "dirty": true,
+    "files": {
+      "apps/preview/main.tsx": "a3fa5ecfec6533820ea91ee943df84e7bab7d1222f31a72df51b8143964cef33",
+      "apps/preview/MapNavigation.tsx": "6eaeca0e3b87814bb03277e8a11524e5fb028b7bcc586952efccfb19c0b7fd3b",
+      "apps/preview/server.ts": "e1dc5c9e91f4feeb6a47826e512d32ae325bb8745719cbb0217e67f77b3a5ebb",
+      "apps/preview/preview.css": "52f10d121d64550bffb79bf74c24ab314e93fcb506c3c226ce2465db9c65131e",
+      "apps/preview/practice/Practice.tsx": "f9c48ea6013706d1e315a75e5179d5136f93fd69191fd287f4b84138977fa85b",
+      "apps/preview/practice/service.ts": "f88b88f2e341f3fae357ddbd7363543d756ef30e69311beb9bdc8d74d8571377",
+      "apps/preview/library/Library.tsx": "69b2425e5dd985822e18ef8ba82396919b9108a29cb323a0dc144290723d8edb",
+      "apps/preview/library/PlaceValueLab.tsx": "4f4fab74cf5ad773dd33b4b8ddb3f489323ebff0b3d09db88b4c7d2f61b7981f",
+      "apps/preview/library/contract.ts": "01ce8871bedfcc3e443e37abd6674f055ed8452252eef3612a138dc1eb25669e",
+      "apps/preview/library/library.css": "78d4718e46245359ac2214bea231bb6217d67d9c8671c815e09eadf8c5163688",
+      "apps/preview/library/place-value.ts": "5e544f9e6dcb52bcc7b45b42de5ee3cc1793383ac2b48ea46487c55376b501d0",
+      "apps/preview/library/private/bank.json": "8019913ea0756db1351363475ace2d72c53e9ed982d418092779456f6479ad8d",
+      "apps/preview/library/private/detective-grading.d.mts": "cfc7430d93f2e2b4759d3354abde0e2e5f9ce70eba30287eb7f012f332d43d6d",
+      "apps/preview/library/private/detective-grading.mjs": "8cf6221d119f0425c80c7fa9df8fb1aadc613ec59c3a273fd3b5ad32230e78d0",
+      "apps/preview/library/service.ts": "622aa7ef314e481e3ff090edbaaa811a775fa3235bd530db520f4d71d6ff649c",
+      "apps/preview/library/source/DetectiveFigure.tsx": "9555812729d566ed446d3d04be34b6db4b920c208083a311a8f9c9ffb24e6fe3",
+      "apps/preview/library/source/MathLab.tsx": "7698632bd75fa7cc3d17fd3c7f4acfef35dc336d0a83a07150382deb39dbc09e",
+      "apps/preview/library/source/ThinkingFigure.tsx": "a03163737c92732d2996a7a10573ec7468ee23fd4fc2a374c268bc48ee93ee7c",
+      "apps/preview/library/source/ThinkingTools.tsx": "1f3874eb9ec84616dac17c4bbc462a8df023beb320a49764b4eaa3d75dd3173e",
+      "apps/preview/library/source/detective-presentation.d.mts": "321103a13fec853eae4fdfdc79f556295b6921e4fdf8de532a4f097669e975f6",
+      "apps/preview/library/source/detective-presentation.mjs": "73dc0882a3fddf971879a32fb581bef94b397d78c9acd8da281be3577c2794a8",
+      "apps/preview/library/source/model-styles.css": "b63d82773f56a4e4a82a2978ae433c2c9a9a445be65f773617db877b7f787430",
+      "apps/preview/library/source/thinking-tools.d.mts": "120839c5f59b91befccb9e8262464f55c518cc642ec27861d14a5152dd02b02d",
+      "apps/preview/library/source/thinking-tools.mjs": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+      "apps/preview/library/source/types.ts": "809630e6edf66465b28f718b46f9a41297c0ec1637e7d79b37bbd2932af858a8",
+      "tests/math-full-remainder/browser.mjs": "92906fd13a0c3718c0b28a0e22ec8ae5e13a344ab86863b5430a58ddb3b87073"
+    }
+  },
+  "counts": {
+    "thinking": 17,
+    "deferred": 43,
+    "legacy": 54,
+    "legacyQuestions": 432,
+    "blueprints": 168,
+    "cases": 14,
+    "methodGuides": 6
+  },
+  "inverse": {
+    "count": 11,
+    "entries": [
+      {
+        "taskId": "G3-U02-E01.r1",
+        "lessonId": "G3-U02-E01",
+        "direction": "逆推",
+        "unknown": "原有金额",
+        "group": "review",
+        "title": "去括号：退回的钱为什么变成加"
+      },
+      {
+        "taskId": "G3-U02-E02-P09",
+        "lessonId": "G3-U02-E02",
+        "direction": "逆推",
+        "unknown": "每箱盒数",
+        "group": "review",
+        "title": "连续除与括号里的乘除，为什么有关联"
+      },
+      {
+        "taskId": "G3-U02-E04-P09",
+        "lessonId": "G3-U02-E04",
+        "direction": "逆推",
+        "unknown": "每袋颗数",
+        "group": "review",
+        "title": "换位置、换分组：交换律和结合律的具体体验"
+      },
+      {
+        "taskId": "G3-U02-O02-P09",
+        "lessonId": "G3-U02-O02",
+        "direction": "逆推",
+        "unknown": "每盒颗数",
+        "group": "review",
+        "title": "把一整包数量临时换个名字"
+      },
+      {
+        "taskId": "G3-U06-E01-P09",
+        "lessonId": "G3-U06-E01",
+        "direction": "双向验证",
+        "unknown": "拆分后份数及分数",
+        "group": "review",
+        "title": "合并格子，已经涂色的长度会变吗"
+      },
+      {
+        "taskId": "G3-L03-E01-P09",
+        "lessonId": "G3-L03-E01",
+        "direction": "逆推",
+        "unknown": "贴合边长",
+        "group": "review",
+        "title": "拼在一起以后，哪些边不再露在外面"
+      },
+      {
+        "taskId": "G3-LP01-E01-P09",
+        "lessonId": "G3-LP01-E01",
+        "direction": "逆推",
+        "unknown": "原来的星期",
+        "group": "review",
+        "title": "星期循环与制作月历"
+      },
+      {
+        "taskId": "G3-U03-E01.r2",
+        "lessonId": "G3-U03-E01",
+        "direction": "逆推",
+        "unknown": "每块木板长",
+        "group": "review",
+        "title": "木板搭接：相加以后，哪一段被算了两次"
+      },
+      {
+        "taskId": "G3-U03-E02.c4",
+        "lessonId": "G3-U03-E02",
+        "direction": "逆推",
+        "unknown": "金属条厚度",
+        "group": "core",
+        "title": "四个链环扣起来：一个接头为什么要看两段厚度"
+      },
+      {
+        "taskId": "G3-U03-E02.t2",
+        "lessonId": "G3-U03-E02",
+        "direction": "逆推",
+        "unknown": "单环外长",
+        "group": "transfer",
+        "title": "四个链环扣起来：一个接头为什么要看两段厚度"
+      },
+      {
+        "taskId": "algebra.substitution.intro.r2",
+        "lessonId": "algebra.substitution.intro",
+        "direction": "逆推",
+        "unknown": "每盒糖数",
+        "group": "review",
+        "title": "打开三盒点心，多出的糖有几颗？"
+      }
+    ],
+    "note": "Existing primary task IDs only, each linked to the original group/task; browser harness visits every link at all three widths."
+  },
+  "methods": {
+    "entries": 28,
+    "fullGuides": 6,
+    "pendingGuides": 22
+  },
+  "review": {
+    "primaryCourses": 70,
+    "existingTasks": 244,
+    "personalSchedule": false
+  },
+  "deferredIDs": [
+    "G3-U01-TH2",
+    "G3-U02-TH2",
+    "G3-U03-TH2",
+    "G3-UP01-TH2",
+    "G3-U04-TH2",
+    "G3-UP02-TH2",
+    "G3-U05-TH2",
+    "G3-U06-TH2",
+    "G3-U07-TH2",
+    "G3-L01-TH2",
+    "G3-L02-TH2",
+    "G3-L03-TH2",
+    "G3-L04-TH2",
+    "G3-L05-TH2",
+    "G3-LP01-TH2",
+    "G3-L06-TH2",
+    "G3-L07-TH2",
+    "G3-U03-TH3",
+    "G3-U03-TH4",
+    "G3-U03-TH5",
+    "G3-U03-TH6",
+    "G3-U03-TH7",
+    "G3-U03-TH8",
+    "G3-U04-S01",
+    "G3-U02-S02",
+    "G3-U04-S03",
+    "G3-U04-S04",
+    "G3-U02-S05",
+    "G3-U02-S06",
+    "G3-U02-S07",
+    "G3-L02-S08",
+    "G3-UP01-S09",
+    "G3-U04-S10",
+    "G3-L02-S11",
+    "G3-LP01-S12",
+    "G3-L02-S13",
+    "G3-L02-S14",
+    "G3-U04-S15",
+    "G3-L02-S16",
+    "G3-U02-S17",
+    "G3-U02-S18",
+    "G3-U06-S19",
+    "G3-UP01-S20"
+  ],
+  "blueprintContainers": {
+    "count": 168,
+    "runnable": false
+  },
+  "knownLimits": [
+    "Legacy higher-grade courses retain original generic lab choices and await course-by-course teaching acceptance; not promoted to newly reviewed textbook classrooms.",
+    "17 thinking explanations require human review; no mastery or reward.",
+    "Private cases, personal mistake/review history, account, wallet and pets excluded.",
+    "43 cards remain deferred; 168 blueprint containers are not executed.",
+    "Physical phone/iPad and ordinary-user Chrome not certified by viewport tests."
+  ],
+  "capabilities": [
+    {
+      "id": "g4-place-value",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-place-value",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-place-value",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-place-value",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-round-estimate",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "numberline",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-round-estimate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-round-estimate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-round-estimate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-angle-measure",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-angle-measure",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-angle-measure",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-angle-measure",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-multi-multiply",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "array",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-multi-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-multi-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-multi-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-two-digit-divide",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "array",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-two-digit-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-two-digit-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-two-digit-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-operation-laws",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "array",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-operation-laws",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-operation-laws",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-operation-laws",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-quad-area",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-quad-area",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-quad-area",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-quad-area",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-area-unit",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-area-unit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-area-unit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-area-unit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-bar-chart",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-bar-chart",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-bar-chart",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-bar-chart",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-measurement-conversion",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-measurement-conversion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-measurement-conversion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-measurement-conversion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-chicken-rabbit",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-chicken-rabbit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-chicken-rabbit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-chicken-rabbit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-route-enumeration",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-route-enumeration",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-route-enumeration",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-route-enumeration",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-period-remainder",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-period-remainder",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-period-remainder",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-period-remainder",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-working-backward",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "balance",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-working-backward",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-working-backward",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-working-backward",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-pigeonhole",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-age-invariant",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "balance",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-age-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-age-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-age-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-pairing-sums",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-pairing-sums",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-pairing-sums",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-pairing-sums",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g4-matchstick-pattern",
+      "type": "legacy",
+      "grade": 4,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g4-matchstick-pattern",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g4-matchstick-pattern",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g4-matchstick-pattern",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-decimal-multiply",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "array",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-decimal-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-decimal-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-decimal-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-decimal-divide",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "array",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-decimal-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-decimal-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-decimal-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-fraction-equivalence",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "fraction",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-fraction-equivalence",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-fraction-equivalence",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-fraction-equivalence",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-composite-area",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-composite-area",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-composite-area",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-composite-area",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-cuboid-volume",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "array",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-cuboid-volume",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-cuboid-volume",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-cuboid-volume",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-equation-balance",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "balance",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-equation-balance",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-equation-balance",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-equation-balance",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-coordinate",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "numberline",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-coordinate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-coordinate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-coordinate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-probability",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-probability",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-probability",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-probability",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-factors-primes",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "array",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-factors-primes",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-factors-primes",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-factors-primes",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-figure-motion",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-figure-motion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-figure-motion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-figure-motion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-remainder-digit",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-remainder-digit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-remainder-digit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-remainder-digit",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-counting-tree",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-counting-tree",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-counting-tree",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-counting-tree",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-average-optimization",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "bar",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-average-optimization",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-average-optimization",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-average-optimization",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-area-invariant",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-area-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-area-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-area-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-work-rate",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "bar",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-work-rate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-work-rate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-work-rate",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-pigeonhole",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-reverse-equation",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "balance",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-reverse-equation",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-reverse-equation",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-reverse-equation",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g5-digit-pattern",
+      "type": "legacy",
+      "grade": 5,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "numberline",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g5-digit-pattern",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g5-digit-pattern",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g5-digit-pattern",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-fraction-multiply",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "fraction",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-fraction-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-fraction-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-fraction-multiply",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-fraction-divide",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "fraction",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-fraction-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-fraction-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-fraction-divide",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-ratio",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "bar",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-ratio",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-ratio",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-ratio",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-percent",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "fraction",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-percent",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-percent",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-percent",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-circle",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-circle",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-circle",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-circle",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-sector-data",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-sector-data",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-sector-data",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-sector-data",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-negative-number",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "numberline",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-negative-number",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-negative-number",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-negative-number",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-cylinder-volume",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-cylinder-volume",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-cylinder-volume",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-cylinder-volume",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-proportion",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "balance",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-proportion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-proportion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-proportion",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-algebra-model",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-algebra-model",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-algebra-model",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-algebra-model",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-combinatorics",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-combinatorics",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-combinatorics",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-combinatorics",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-extreme-principle",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-extreme-principle",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-extreme-principle",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-extreme-principle",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-parity-invariant",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "array",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-parity-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-parity-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-parity-invariant",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-speed-ratio",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "numberline",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-speed-ratio",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-speed-ratio",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-speed-ratio",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-geometry-transform",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "geometry",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-geometry-transform",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-geometry-transform",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-geometry-transform",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-working-backward",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "balance",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-working-backward",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-working-backward",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-working-backward",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-pigeonhole",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-pigeonhole",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "g6-probability-strategy",
+      "type": "legacy",
+      "grade": 6,
+      "sourceStatus": "legacy-not-new-curriculum-reviewed",
+      "model": "table",
+      "questionCount": 8,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "legacy",
+          "id": "g6-probability-strategy",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 768,
+          "type": "legacy",
+          "id": "g6-probability-strategy",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        },
+        {
+          "width": 1280,
+          "type": "legacy",
+          "id": "g6-probability-strategy",
+          "steps": 6,
+          "questions": 8,
+          "status": "correct"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-U01-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-U01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-U01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-U01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-U02-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-U02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-U02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-U02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-U03-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-U03-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-U03-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-U03-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-UP01-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-UP01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-UP01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-UP01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-U04-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-U04-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-U04-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-U04-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-UP02-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-UP02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-UP02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-UP02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-U05-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-U05-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-U05-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-U05-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-U06-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-U06-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-U06-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-U06-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-U07-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-U07-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-U07-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-U07-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-L01-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-L01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-L01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-L01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-L02-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-L02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-L02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-L02-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-L03-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-L03-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-L03-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-L03-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-L04-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-L04-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-L04-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-L04-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-L05-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-L05-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-L05-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-L05-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-LP01-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-LP01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-LP01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-LP01-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-L06-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-L06-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-L06-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-L06-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "G3-L07-TH1",
+      "type": "thinking",
+      "grade": 3,
+      "sourceStatus": "editorial-reviewed-awaiting-parent-trial",
+      "model": "authored-condition-figure",
+      "questionCount": 1,
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "thinking",
+          "id": "G3-L07-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 768,
+          "type": "thinking",
+          "id": "G3-L07-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        },
+        {
+          "width": 1280,
+          "type": "thinking",
+          "id": "G3-L07-TH1",
+          "status": "pendingReview",
+          "selfChecks": 3
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-001",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-001",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-001",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-001",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-002",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-002",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-002",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-002",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-003",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-003",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-003",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-003",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-004",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-004",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-004",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-004",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-005",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-005",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-005",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-005",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-006",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-006",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-006",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-006",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-007",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-007",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-007",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-007",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-008",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-008",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-008",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-008",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-009",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-009",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-009",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-009",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-010",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-010",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-010",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-010",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-011",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-011",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-011",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-011",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-012",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-012",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-012",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-012",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-013",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-013",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-013",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-013",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "DET-G3-014",
+      "type": "authored-simulation",
+      "viewports": [
+        390,
+        768,
+        1280
+      ],
+      "browserFlows": [
+        {
+          "width": 390,
+          "type": "detective",
+          "id": "DET-G3-014",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 768,
+          "type": "detective",
+          "id": "DET-G3-014",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        },
+        {
+          "width": 1280,
+          "type": "detective",
+          "id": "DET-G3-014",
+          "status": "correct",
+          "selfChecks": 3,
+          "reset": true
+        }
+      ],
+      "status": "PASS"
+    }
+  ]
+}

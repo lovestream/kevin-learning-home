@@ -1,0 +1,2165 @@
+{
+  "status": "PASS",
+  "origin": "http://127.0.0.1:63024",
+  "nas": false,
+  "execution": {
+    "head": "a7968501d29aa38dafb36bf7c983ed67a96cb5cc",
+    "dirty": true,
+    "files": {
+      "apps/preview/main.tsx": "a3fa5ecfec6533820ea91ee943df84e7bab7d1222f31a72df51b8143964cef33",
+      "apps/preview/MapNavigation.tsx": "6eaeca0e3b87814bb03277e8a11524e5fb028b7bcc586952efccfb19c0b7fd3b",
+      "apps/preview/server.ts": "e1dc5c9e91f4feeb6a47826e512d32ae325bb8745719cbb0217e67f77b3a5ebb",
+      "apps/preview/preview.css": "52f10d121d64550bffb79bf74c24ab314e93fcb506c3c226ce2465db9c65131e",
+      "apps/preview/practice/Practice.tsx": "f9c48ea6013706d1e315a75e5179d5136f93fd69191fd287f4b84138977fa85b",
+      "apps/preview/practice/service.ts": "f88b88f2e341f3fae357ddbd7363543d756ef30e69311beb9bdc8d74d8571377",
+      "apps/preview/library/Library.tsx": "69b2425e5dd985822e18ef8ba82396919b9108a29cb323a0dc144290723d8edb",
+      "apps/preview/library/PlaceValueLab.tsx": "4f4fab74cf5ad773dd33b4b8ddb3f489323ebff0b3d09db88b4c7d2f61b7981f",
+      "apps/preview/library/contract.ts": "01ce8871bedfcc3e443e37abd6674f055ed8452252eef3612a138dc1eb25669e",
+      "apps/preview/library/library.css": "78d4718e46245359ac2214bea231bb6217d67d9c8671c815e09eadf8c5163688",
+      "apps/preview/library/place-value.ts": "5e544f9e6dcb52bcc7b45b42de5ee3cc1793383ac2b48ea46487c55376b501d0",
+      "apps/preview/library/private/bank.json": "8019913ea0756db1351363475ace2d72c53e9ed982d418092779456f6479ad8d",
+      "apps/preview/library/private/detective-grading.d.mts": "cfc7430d93f2e2b4759d3354abde0e2e5f9ce70eba30287eb7f012f332d43d6d",
+      "apps/preview/library/private/detective-grading.mjs": "8cf6221d119f0425c80c7fa9df8fb1aadc613ec59c3a273fd3b5ad32230e78d0",
+      "apps/preview/library/service.ts": "622aa7ef314e481e3ff090edbaaa811a775fa3235bd530db520f4d71d6ff649c",
+      "apps/preview/library/source/DetectiveFigure.tsx": "9555812729d566ed446d3d04be34b6db4b920c208083a311a8f9c9ffb24e6fe3",
+      "apps/preview/library/source/MathLab.tsx": "7698632bd75fa7cc3d17fd3c7f4acfef35dc336d0a83a07150382deb39dbc09e",
+      "apps/preview/library/source/ThinkingFigure.tsx": "a03163737c92732d2996a7a10573ec7468ee23fd4fc2a374c268bc48ee93ee7c",
+      "apps/preview/library/source/ThinkingTools.tsx": "1f3874eb9ec84616dac17c4bbc462a8df023beb320a49764b4eaa3d75dd3173e",
+      "apps/preview/library/source/detective-presentation.d.mts": "321103a13fec853eae4fdfdc79f556295b6921e4fdf8de532a4f097669e975f6",
+      "apps/preview/library/source/detective-presentation.mjs": "73dc0882a3fddf971879a32fb581bef94b397d78c9acd8da281be3577c2794a8",
+      "apps/preview/library/source/model-styles.css": "b63d82773f56a4e4a82a2978ae433c2c9a9a445be65f773617db877b7f787430",
+      "apps/preview/library/source/thinking-tools.d.mts": "120839c5f59b91befccb9e8262464f55c518cc642ec27861d14a5152dd02b02d",
+      "apps/preview/library/source/thinking-tools.mjs": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+      "apps/preview/library/source/types.ts": "809630e6edf66465b28f718b46f9a41297c0ec1637e7d79b37bbd2932af858a8",
+      "tests/math-full-remainder/browser.mjs": "92906fd13a0c3718c0b28a0e22ec8ae5e13a344ab86863b5430a58ddb3b87073"
+    }
+  },
+  "elapsedMs": 382411,
+  "results": [
+    {
+      "width": 390,
+      "thinking": 17,
+      "legacy": 54,
+      "legacyQuestions": 432,
+      "libraryTasks": 449,
+      "detective": 14,
+      "methodEntries": 28,
+      "methodGuides": 6,
+      "reviewCourses": 70,
+      "reviewTasks": 244,
+      "models": {
+        "table": {
+          "id": "g4-place-value",
+          "action": "十位 −1"
+        },
+        "numberline": {
+          "id": "g4-round-estimate",
+          "action": "向左 1"
+        },
+        "geometry": {
+          "id": "g4-angle-measure",
+          "action": "keyboard slider"
+        },
+        "array": {
+          "id": "g4-multi-multiply",
+          "action": "keyboard slider"
+        },
+        "balance": {
+          "id": "g4-working-backward",
+          "action": "盒子多 1"
+        },
+        "fraction": {
+          "id": "g5-fraction-equivalence",
+          "action": "少一份"
+        },
+        "bar": {
+          "id": "g5-average-optimization",
+          "action": "放回多出的一段"
+        }
+      },
+      "persistentEntries": 0,
+      "pass": true
+    },
+    {
+      "width": 768,
+      "thinking": 17,
+      "legacy": 54,
+      "legacyQuestions": 432,
+      "libraryTasks": 449,
+      "detective": 14,
+      "methodEntries": 28,
+      "methodGuides": 6,
+      "reviewCourses": 70,
+      "reviewTasks": 244,
+      "models": {
+        "table": {
+          "id": "g4-place-value",
+          "action": "十位 −1"
+        },
+        "numberline": {
+          "id": "g4-round-estimate",
+          "action": "向左 1"
+        },
+        "geometry": {
+          "id": "g4-angle-measure",
+          "action": "keyboard slider"
+        },
+        "array": {
+          "id": "g4-multi-multiply",
+          "action": "keyboard slider"
+        },
+        "balance": {
+          "id": "g4-working-backward",
+          "action": "盒子多 1"
+        },
+        "fraction": {
+          "id": "g5-fraction-equivalence",
+          "action": "少一份"
+        },
+        "bar": {
+          "id": "g5-average-optimization",
+          "action": "放回多出的一段"
+        }
+      },
+      "persistentEntries": 0,
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "thinking": 17,
+      "legacy": 54,
+      "legacyQuestions": 432,
+      "libraryTasks": 449,
+      "detective": 14,
+      "methodEntries": 28,
+      "methodGuides": 6,
+      "reviewCourses": 70,
+      "reviewTasks": 244,
+      "models": {
+        "table": {
+          "id": "g4-place-value",
+          "action": "十位 −1"
+        },
+        "numberline": {
+          "id": "g4-round-estimate",
+          "action": "向左 1"
+        },
+        "geometry": {
+          "id": "g4-angle-measure",
+          "action": "keyboard slider"
+        },
+        "array": {
+          "id": "g4-multi-multiply",
+          "action": "keyboard slider"
+        },
+        "balance": {
+          "id": "g4-working-backward",
+          "action": "盒子多 1"
+        },
+        "fraction": {
+          "id": "g5-fraction-equivalence",
+          "action": "少一份"
+        },
+        "bar": {
+          "id": "g5-average-optimization",
+          "action": "放回多出的一段"
+        }
+      },
+      "persistentEntries": 0,
+      "pass": true
+    }
+  ],
+  "flows": [
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-U01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-U02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-U03-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-UP01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-U04-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-UP02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-U05-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-U06-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-U07-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-L01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-L02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-L03-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-L04-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-L05-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-LP01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-L06-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "thinking",
+      "id": "G3-L07-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-place-value",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-round-estimate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-angle-measure",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-multi-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-two-digit-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-operation-laws",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-quad-area",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-area-unit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-bar-chart",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-measurement-conversion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-chicken-rabbit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-route-enumeration",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-period-remainder",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-working-backward",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-age-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-pairing-sums",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g4-matchstick-pattern",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-decimal-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-decimal-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-fraction-equivalence",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-composite-area",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-cuboid-volume",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-equation-balance",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-coordinate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-probability",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-factors-primes",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-figure-motion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-remainder-digit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-counting-tree",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-average-optimization",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-area-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-work-rate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-reverse-equation",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g5-digit-pattern",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-fraction-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-fraction-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-ratio",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-percent",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-circle",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-sector-data",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-negative-number",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-cylinder-volume",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-proportion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-algebra-model",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-combinatorics",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-extreme-principle",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-parity-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-speed-ratio",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-geometry-transform",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-working-backward",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "legacy",
+      "id": "g6-probability-strategy",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-001",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-002",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-003",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-004",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-005",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-006",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-007",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-008",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-009",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-010",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-011",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-012",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-013",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 390,
+      "type": "detective",
+      "id": "DET-G3-014",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-U01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-U02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-U03-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-UP01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-U04-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-UP02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-U05-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-U06-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-U07-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-L01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-L02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-L03-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-L04-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-L05-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-LP01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-L06-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "thinking",
+      "id": "G3-L07-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-place-value",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-round-estimate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-angle-measure",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-multi-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-two-digit-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-operation-laws",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-quad-area",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-area-unit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-bar-chart",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-measurement-conversion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-chicken-rabbit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-route-enumeration",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-period-remainder",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-working-backward",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-age-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-pairing-sums",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g4-matchstick-pattern",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-decimal-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-decimal-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-fraction-equivalence",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-composite-area",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-cuboid-volume",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-equation-balance",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-coordinate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-probability",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-factors-primes",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-figure-motion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-remainder-digit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-counting-tree",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-average-optimization",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-area-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-work-rate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-reverse-equation",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g5-digit-pattern",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-fraction-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-fraction-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-ratio",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-percent",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-circle",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-sector-data",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-negative-number",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-cylinder-volume",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-proportion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-algebra-model",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-combinatorics",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-extreme-principle",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-parity-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-speed-ratio",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-geometry-transform",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-working-backward",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "legacy",
+      "id": "g6-probability-strategy",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-001",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-002",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-003",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-004",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-005",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-006",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-007",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-008",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-009",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-010",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-011",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-012",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-013",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 768,
+      "type": "detective",
+      "id": "DET-G3-014",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-U01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-U02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-U03-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-UP01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-U04-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-UP02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-U05-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-U06-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-U07-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-L01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-L02-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-L03-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-L04-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-L05-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-LP01-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-L06-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "thinking",
+      "id": "G3-L07-TH1",
+      "status": "pendingReview",
+      "selfChecks": 3
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-place-value",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-round-estimate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-angle-measure",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-multi-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-two-digit-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-operation-laws",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-quad-area",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-area-unit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-bar-chart",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-measurement-conversion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-chicken-rabbit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-route-enumeration",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-period-remainder",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-working-backward",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-age-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-pairing-sums",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g4-matchstick-pattern",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-decimal-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-decimal-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-fraction-equivalence",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-composite-area",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-cuboid-volume",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-equation-balance",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-coordinate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-probability",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-factors-primes",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-figure-motion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-remainder-digit",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-counting-tree",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-average-optimization",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-area-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-work-rate",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-reverse-equation",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g5-digit-pattern",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-fraction-multiply",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-fraction-divide",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-ratio",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-percent",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-circle",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-sector-data",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-negative-number",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-cylinder-volume",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-proportion",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-algebra-model",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-combinatorics",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-extreme-principle",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-parity-invariant",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-speed-ratio",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-geometry-transform",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-working-backward",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-pigeonhole",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "legacy",
+      "id": "g6-probability-strategy",
+      "steps": 6,
+      "questions": 8,
+      "status": "correct"
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-001",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-002",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-003",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-004",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-005",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-006",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-007",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-008",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-009",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-010",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-011",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-012",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-013",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    },
+    {
+      "width": 1280,
+      "type": "detective",
+      "id": "DET-G3-014",
+      "status": "correct",
+      "selfChecks": 3,
+      "reset": true
+    }
+  ],
+  "errors": [],
+  "physicalIPhoneIPad": "NEEDS_USER_ACTION"
+}

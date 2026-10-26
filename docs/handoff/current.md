@@ -1,3 +1,13 @@
+# 当前实施：Issue #17 本地完成，待 CI 与 NAS 交付
+
+分支 `codex/math-full-03-capabilities` 基于 PR21 最终归档 `a796850`，复用同一工作副本。新库 17 卡/54 旧课432题/14 模拟案例、方法/自由复习/逆向深链已实现，最终本地三视口 255 流程及原全部基线通过；新增8 Node、6练习Node、21预览Node、11部署保护测试通过。当前 NAS 仍为下文 PR21，未把本地截图称为 NAS 证据。
+
+继续：推送独立 Draft（base PR21），等待精确源码 push/PR CI；只用受控 release.py 更新同一 HTTP38444，实测全部新增与原功能、回退/恢复、保护快照；归档证据、最终 HEAD 双 CI 后暂停给 ChatGPT 复审。保留前版和 owner ledger，不合并、不进入英语或真实身份/数据/奖励阶段。
+
+[新报告](../implementation/MATH-FULL-03-REPORT.md) · [逐项范围清单](../implementation/MATH-FULL-REMAINDER-INVENTORY.md)
+
+## PR21 已交付事实（当前 NAS 仍为此版）
+
 # Kevin 学习家园：当前交接
 
 ## Issue #16 已交付 NAS，继续 Issue #17

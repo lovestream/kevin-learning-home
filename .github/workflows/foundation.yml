@@ -22,7 +22,7 @@ permissions:
 jobs:
   foundation:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -91,6 +91,8 @@ jobs:
           node tests/math-full-01/browser.mjs
           node --test tests/math-full-02/practice.test.mjs
           node tests/math-full-02/browser.mjs
+          node --test tests/math-full-remainder/library.test.mjs
+          node tests/math-full-remainder/browser.mjs
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1

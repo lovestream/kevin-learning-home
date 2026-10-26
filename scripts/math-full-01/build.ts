@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadLibrary } from "../../apps/preview/library/service.ts";
 import { loadPractice } from "../../apps/preview/practice/service.ts";
 import { loadContent, hash } from "../../apps/preview/content.ts";
 const root = fileURLToPath(new URL("../..", import.meta.url)),
@@ -36,6 +37,13 @@ for(const f of practiceOrigin.files){
  if(!/^apps\/preview\/practice\/[A-Za-z0-9/.-]+$/.test(f.target)||f.target.includes('..'))throw Error('PRACTICE_SOURCE_OUT_OF_SCOPE');
  if(hash(readFileSync(join(root,f.target)))!==(f.targetSha256??f.sha256))throw Error('PRACTICE_SOURCE_CHANGED');
 }
+const libraryOrigin=JSON.parse(readFileSync(join(root,'docs/implementation/evidence/math-full-remainder/source.json'),'utf8')) as {privateBankSha256:string;targets:{target:string;sha256:string}[]};
+for(const f of libraryOrigin.targets){
+ if(!f.target.startsWith('apps/preview/library/')||f.target.includes('..'))throw Error('LIBRARY_SOURCE_OUT_OF_SCOPE');
+ if(hash(readFileSync(join(root,f.target)))!==f.sha256)throw Error('LIBRARY_SOURCE_CHANGED');
+}
+const library=loadLibrary(root);
+if(library.bankSha256!==libraryOrigin.privateBankSha256)throw Error('LIBRARY_BANK_SOURCE_CHANGED');
 const practice = loadPractice(root);
 if(practice.bankSha256!==practiceOrigin.privateBankSha256)throw Error('PRACTICE_BANK_SOURCE_CHANGED');
 const { catalog } = loadContent(root),
@@ -53,6 +61,8 @@ writeFileSync(
   JSON.stringify(
     {
       schemaVersion: 1,
+      libraryBankSha256:library.bankSha256,
+      libraryPublicSha256:library.publicSha256,
       practiceBankSha256: practice.bankSha256,
       practicePublicSha256: practice.publicSha256,
       buildSha,

@@ -2,38 +2,35 @@
   "mode": "all-70-all-viewports",
   "filtered": false,
   "execution": {
-    "head": "d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12",
-    "dirty": false,
+    "head": "a7968501d29aa38dafb36bf7c983ed67a96cb5cc",
+    "dirty": true,
     "files": {
       "tests/math-full-01/browser.mjs": "6c6d9dd3ad4e3adc88bfc689a2a73e14a36d3e476c49ea52cce06d36a5145aca",
       "tests/math-full-01/exercise.mjs": "e3fafe3d02ccf165417e3b50e9ba34c7e9e532a33a6bf0c89c1c0e0614c60ab0",
-      "apps/preview/main.tsx": "2f829adb843f832dd1602c4938b4378851d85209af62deca984638fb36d4a5f5",
-      "apps/preview/practice/Practice.tsx": "5d566fb60142bb8d2cd2822810ec3c75e72a277291139957caa38015cde3980a",
-      "apps/preview/practice/service.ts": "4de81ee8e6f7d09cfe0df221cad829c346baace5f7265047e2b1061d3ffce761",
+      "apps/preview/main.tsx": "a3fa5ecfec6533820ea91ee943df84e7bab7d1222f31a72df51b8143964cef33",
+      "apps/preview/practice/Practice.tsx": "f9c48ea6013706d1e315a75e5179d5136f93fd69191fd287f4b84138977fa85b",
+      "apps/preview/practice/service.ts": "f88b88f2e341f3fae357ddbd7363543d756ef30e69311beb9bdc8d74d8571377",
       "apps/preview/practice/contract.ts": "db00544d3cbccfe99128713de8237630491fa6be25d7ce419505fbbce3d23786",
       "apps/preview/practice/private/bank.json": "1008208c4afcd310bfe5e9440649123691d8b18abb77129404625794dfc1c0b7",
       "apps/preview/practice/private/pilot-math.mjs": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
-      "apps/preview/MapNavigation.tsx": "5680f41447e2ec55ae504c45d72486f59f3646bd8b289b301e2e548f827acf04",
+      "apps/preview/MapNavigation.tsx": "6eaeca0e3b87814bb03277e8a11524e5fb028b7bcc586952efccfb19c0b7fd3b",
       "apps/preview/learning-map.ts": "1a232e67502ae9e3db48b1d9a9adb7193ab62e39c4b727dc4a8bea465d2aa07f",
       "apps/preview/contract.ts": "f5562a80441b0505868ff4fc303cd9f2a4b984f6d060509de4cf421039018010",
       "apps/preview/content.ts": "8e8a17ca493f294ce2e2053b41b21879045e9e851b9634cb91a16b2910969168",
-      "apps/preview/server.ts": "d0e47cf9ded59811d77fdbeb4d3052623fcd3fbded3dd42899cef7447094a364",
+      "apps/preview/server.ts": "e1dc5c9e91f4feeb6a47826e512d32ae325bb8745719cbb0217e67f77b3a5ebb",
       "apps/preview/runtime.ts": "ceaaa526e5b5b8f4084464931654c93cc796b44bae508fa92436a3943e340613",
       "apps/preview/integrity.ts": "758441b686ecb550c9048b05cc705004563af0999b63c06491ed4a48490c0eb8",
-      "scripts/math-full-01/build.ts": "aab5901e77545abb87b1d225dc795d20c67eb79627142685fe023e589ee3e534",
+      "scripts/math-full-01/build.ts": "e13352a700153a9b4e2071eefbe134ff6eabfe0234f9a6cb086b4ef6182ddf0a",
       "apps/preview/registry.tsx": "df091637447d16644d268a433b4027fed7c0bcb7ed2a208c6d09601066ae6dd9",
       "apps/preview/registry-meta.ts": "8aad5e9b0dd4b352ec02c4e873e196df5b6b5f996396e82687ffab93ab578bc9",
-      "apps/preview/preview.css": "9544b186be42a25921a0c9e7cb4219600dcc1674564b599978bc113f757465bd"
+      "apps/preview/preview.css": "52f10d121d64550bffb79bf74c24ab314e93fcb506c3c226ce2465db9c65131e"
     }
   },
   "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
   "target": {
-    "origin": "http://192.168.2.100:38444",
-    "expectedBuildSha": "d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12",
-    "transport": "LAN_HTTP_USER_EXPLICITLY_REQUESTED",
-    "physicalIPad": "NEEDS_USER_ACTION"
+    "mode": "LOCAL_DEVELOPMENT_ONLY"
   },
-  "elapsedMs": 133116,
+  "elapsedMs": 105351,
   "results": [
     {
       "lessonId": "G3-U01-B01",
@@ -53,7 +50,7 @@
       ],
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 737,
+      "elapsedMs": 566,
       "pass": true
     },
     {
@@ -69,7 +66,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 511,
+      "elapsedMs": 433,
       "pass": true
     },
     {
@@ -85,7 +82,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 540,
+      "elapsedMs": 453,
       "pass": true
     },
     {
@@ -101,7 +98,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 591,
+      "elapsedMs": 459,
       "pass": true
     },
     {
@@ -117,7 +114,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 459,
+      "elapsedMs": 385,
       "pass": true
     },
     {
@@ -133,7 +130,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 503,
+      "elapsedMs": 401,
       "pass": true
     },
     {
@@ -149,7 +146,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 525,
+      "elapsedMs": 417,
       "pass": true
     },
     {
@@ -165,7 +162,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 527,
+      "elapsedMs": 383,
       "pass": true
     },
     {
@@ -181,7 +178,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 572,
+      "elapsedMs": 383,
       "pass": true
     },
     {
@@ -197,7 +194,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 475,
+      "elapsedMs": 384,
       "pass": true
     },
     {
@@ -213,7 +210,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 541,
+      "elapsedMs": 383,
       "pass": true
     },
     {
@@ -229,7 +226,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 496,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -245,7 +242,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 575,
+      "elapsedMs": 352,
       "pass": true
     },
     {
@@ -261,7 +258,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 495,
+      "elapsedMs": 385,
       "pass": true
     },
     {
@@ -277,7 +274,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 531,
+      "elapsedMs": 399,
       "pass": true
     },
     {
@@ -293,7 +290,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 540,
+      "elapsedMs": 425,
       "pass": true
     },
     {
@@ -309,7 +306,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 491,
+      "elapsedMs": 366,
       "pass": true
     },
     {
@@ -325,7 +322,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 524,
+      "elapsedMs": 429,
       "pass": true
     },
     {
@@ -341,7 +338,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 526,
+      "elapsedMs": 429,
       "pass": true
     },
     {
@@ -357,7 +354,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1289,
+      "elapsedMs": 1192,
       "pass": true
     },
     {
@@ -373,7 +370,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 425,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -389,7 +386,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1242,
+      "elapsedMs": 1133,
       "pass": true
     },
     {
@@ -405,7 +402,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1277,
+      "elapsedMs": 1113,
       "pass": true
     },
     {
@@ -421,7 +418,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1212,
+      "elapsedMs": 1114,
       "pass": true
     },
     {
@@ -437,7 +434,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 426,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -453,7 +450,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 505,
+      "elapsedMs": 401,
       "pass": true
     },
     {
@@ -469,7 +466,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 488,
+      "elapsedMs": 348,
       "pass": true
     },
     {
@@ -485,7 +482,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 475,
+      "elapsedMs": 348,
       "pass": true
     },
     {
@@ -501,7 +498,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 542,
+      "elapsedMs": 420,
       "pass": true
     },
     {
@@ -517,7 +514,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 494,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -533,7 +530,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1209,
+      "elapsedMs": 1134,
       "pass": true
     },
     {
@@ -549,7 +546,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1210,
+      "elapsedMs": 1150,
       "pass": true
     },
     {
@@ -565,7 +562,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1392,
+      "elapsedMs": 1118,
       "pass": true
     },
     {
@@ -581,7 +578,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 428,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -597,7 +594,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 523,
+      "elapsedMs": 315,
       "pass": true
     },
     {
@@ -613,7 +610,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 492,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -629,7 +626,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 559,
+      "elapsedMs": 365,
       "pass": true
     },
     {
@@ -645,7 +642,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 491,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -661,7 +658,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1209,
+      "elapsedMs": 1133,
       "pass": true
     },
     {
@@ -677,7 +674,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 428,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -693,7 +690,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1226,
+      "elapsedMs": 1168,
       "pass": true
     },
     {
@@ -709,7 +706,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 424,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -725,7 +722,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1212,
+      "elapsedMs": 1116,
       "pass": true
     },
     {
@@ -741,7 +738,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1275,
+      "elapsedMs": 1115,
       "pass": true
     },
     {
@@ -757,7 +754,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 394,
+      "elapsedMs": 314,
       "pass": true
     },
     {
@@ -773,7 +770,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 452,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -789,7 +786,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 560,
+      "elapsedMs": 366,
       "pass": true
     },
     {
@@ -805,7 +802,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 472,
+      "elapsedMs": 316,
       "pass": true
     },
     {
@@ -821,7 +818,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 597,
+      "elapsedMs": 384,
       "pass": true
     },
     {
@@ -837,7 +834,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 467,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -853,7 +850,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 720,
+      "elapsedMs": 507,
       "pass": true
     },
     {
@@ -869,7 +866,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 524,
+      "elapsedMs": 380,
       "pass": true
     },
     {
@@ -885,7 +882,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 492,
+      "elapsedMs": 367,
       "pass": true
     },
     {
@@ -901,7 +898,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 572,
+      "elapsedMs": 428,
       "pass": true
     },
     {
@@ -917,7 +914,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 494,
+      "elapsedMs": 365,
       "pass": true
     },
     {
@@ -933,7 +930,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 555,
+      "elapsedMs": 441,
       "pass": true
     },
     {
@@ -949,7 +946,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 509,
+      "elapsedMs": 368,
       "pass": true
     },
     {
@@ -965,7 +962,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 545,
+      "elapsedMs": 315,
       "pass": true
     },
     {
@@ -981,7 +978,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 491,
+      "elapsedMs": 347,
       "pass": true
     },
     {
@@ -997,7 +994,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 574,
+      "elapsedMs": 497,
       "pass": true
     },
     {
@@ -1013,7 +1010,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 507,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -1029,7 +1026,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 511,
+      "elapsedMs": 385,
       "pass": true
     },
     {
@@ -1045,7 +1042,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 510,
+      "elapsedMs": 367,
       "pass": true
     },
     {
@@ -1061,7 +1058,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 577,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -1077,7 +1074,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 551,
+      "elapsedMs": 439,
       "pass": true
     },
     {
@@ -1093,7 +1090,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 501,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -1109,7 +1106,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 475,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -1125,7 +1122,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 575,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -1141,7 +1138,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 475,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -1157,7 +1154,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 510,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -1178,7 +1175,7 @@
       ],
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 891,
+      "elapsedMs": 610,
       "pass": true
     },
     {
@@ -1194,7 +1191,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 634,
+      "elapsedMs": 476,
       "pass": true
     },
     {
@@ -1210,7 +1207,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 637,
+      "elapsedMs": 475,
       "pass": true
     },
     {
@@ -1226,7 +1223,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 582,
+      "elapsedMs": 471,
       "pass": true
     },
     {
@@ -1242,7 +1239,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 459,
+      "elapsedMs": 399,
       "pass": true
     },
     {
@@ -1258,7 +1255,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 458,
+      "elapsedMs": 382,
       "pass": true
     },
     {
@@ -1274,7 +1271,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 457,
+      "elapsedMs": 398,
       "pass": true
     },
     {
@@ -1290,7 +1287,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 458,
+      "elapsedMs": 400,
       "pass": true
     },
     {
@@ -1306,7 +1303,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 540,
+      "elapsedMs": 384,
       "pass": true
     },
     {
@@ -1322,7 +1319,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 479,
+      "elapsedMs": 384,
       "pass": true
     },
     {
@@ -1338,7 +1335,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 519,
+      "elapsedMs": 416,
       "pass": true
     },
     {
@@ -1354,7 +1351,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 546,
+      "elapsedMs": 364,
       "pass": true
     },
     {
@@ -1370,7 +1367,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 522,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -1386,7 +1383,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 555,
+      "elapsedMs": 382,
       "pass": true
     },
     {
@@ -1402,7 +1399,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 509,
+      "elapsedMs": 415,
       "pass": true
     },
     {
@@ -1418,7 +1415,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 513,
+      "elapsedMs": 430,
       "pass": true
     },
     {
@@ -1434,7 +1431,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 492,
+      "elapsedMs": 348,
       "pass": true
     },
     {
@@ -1450,7 +1447,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 551,
+      "elapsedMs": 448,
       "pass": true
     },
     {
@@ -1466,7 +1463,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 521,
+      "elapsedMs": 455,
       "pass": true
     },
     {
@@ -1482,7 +1479,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1295,
+      "elapsedMs": 1195,
       "pass": true
     },
     {
@@ -1498,7 +1495,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 444,
+      "elapsedMs": 348,
       "pass": true
     },
     {
@@ -1514,7 +1511,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1211,
+      "elapsedMs": 1118,
       "pass": true
     },
     {
@@ -1530,7 +1527,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1295,
+      "elapsedMs": 1131,
       "pass": true
     },
     {
@@ -1546,7 +1543,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1210,
+      "elapsedMs": 1115,
       "pass": true
     },
     {
@@ -1562,7 +1559,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 426,
+      "elapsedMs": 346,
       "pass": true
     },
     {
@@ -1578,7 +1575,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 478,
+      "elapsedMs": 412,
       "pass": true
     },
     {
@@ -1594,7 +1591,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 442,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -1610,7 +1607,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 494,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -1626,7 +1623,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 554,
+      "elapsedMs": 428,
       "pass": true
     },
     {
@@ -1642,7 +1639,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 576,
+      "elapsedMs": 366,
       "pass": true
     },
     {
@@ -1658,7 +1655,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1210,
+      "elapsedMs": 1152,
       "pass": true
     },
     {
@@ -1674,7 +1671,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1207,
+      "elapsedMs": 1119,
       "pass": true
     },
     {
@@ -1690,7 +1687,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1266,
+      "elapsedMs": 1120,
       "pass": true
     },
     {
@@ -1706,7 +1703,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 493,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -1722,7 +1719,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 542,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -1738,7 +1735,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 476,
+      "elapsedMs": 367,
       "pass": true
     },
     {
@@ -1754,7 +1751,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 541,
+      "elapsedMs": 348,
       "pass": true
     },
     {
@@ -1770,7 +1767,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 492,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -1786,7 +1783,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1244,
+      "elapsedMs": 1132,
       "pass": true
     },
     {
@@ -1802,7 +1799,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 442,
+      "elapsedMs": 365,
       "pass": true
     },
     {
@@ -1818,7 +1815,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1210,
+      "elapsedMs": 1117,
       "pass": true
     },
     {
@@ -1834,7 +1831,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 445,
+      "elapsedMs": 366,
       "pass": true
     },
     {
@@ -1850,7 +1847,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1214,
+      "elapsedMs": 1119,
       "pass": true
     },
     {
@@ -1866,7 +1863,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1294,
+      "elapsedMs": 1149,
       "pass": true
     },
     {
@@ -1882,7 +1879,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 476,
+      "elapsedMs": 334,
       "pass": true
     },
     {
@@ -1898,7 +1895,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 507,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -1914,7 +1911,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 524,
+      "elapsedMs": 365,
       "pass": true
     },
     {
@@ -1930,7 +1927,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 543,
+      "elapsedMs": 332,
       "pass": true
     },
     {
@@ -1946,7 +1943,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 519,
+      "elapsedMs": 385,
       "pass": true
     },
     {
@@ -1962,7 +1959,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 528,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -1978,7 +1975,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 595,
+      "elapsedMs": 495,
       "pass": true
     },
     {
@@ -1994,7 +1991,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 478,
+      "elapsedMs": 385,
       "pass": true
     },
     {
@@ -2010,7 +2007,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 497,
+      "elapsedMs": 364,
       "pass": true
     },
     {
@@ -2026,7 +2023,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 505,
+      "elapsedMs": 444,
       "pass": true
     },
     {
@@ -2042,7 +2039,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 578,
+      "elapsedMs": 383,
       "pass": true
     },
     {
@@ -2058,7 +2055,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 559,
+      "elapsedMs": 430,
       "pass": true
     },
     {
@@ -2074,7 +2071,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 455,
+      "elapsedMs": 383,
       "pass": true
     },
     {
@@ -2090,7 +2087,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 544,
+      "elapsedMs": 334,
       "pass": true
     },
     {
@@ -2106,7 +2103,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 474,
+      "elapsedMs": 332,
       "pass": true
     },
     {
@@ -2122,7 +2119,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 597,
+      "elapsedMs": 482,
       "pass": true
     },
     {
@@ -2138,7 +2135,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 464,
+      "elapsedMs": 365,
       "pass": true
     },
     {
@@ -2154,7 +2151,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 558,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -2170,7 +2167,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 492,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -2186,7 +2183,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 577,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -2202,7 +2199,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 539,
+      "elapsedMs": 426,
       "pass": true
     },
     {
@@ -2218,7 +2215,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 469,
+      "elapsedMs": 347,
       "pass": true
     },
     {
@@ -2234,7 +2231,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 512,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -2250,7 +2247,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 559,
+      "elapsedMs": 348,
       "pass": true
     },
     {
@@ -2266,7 +2263,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 523,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -2282,7 +2279,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 490,
+      "elapsedMs": 381,
       "pass": true
     },
     {
@@ -2319,7 +2316,7 @@
       ],
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 838,
+      "elapsedMs": 591,
       "pass": true
     },
     {
@@ -2335,7 +2332,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 573,
+      "elapsedMs": 468,
       "pass": true
     },
     {
@@ -2351,7 +2348,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 568,
+      "elapsedMs": 480,
       "pass": true
     },
     {
@@ -2367,7 +2364,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 567,
+      "elapsedMs": 486,
       "pass": true
     },
     {
@@ -2383,7 +2380,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 441,
+      "elapsedMs": 383,
       "pass": true
     },
     {
@@ -2399,7 +2396,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 443,
+      "elapsedMs": 365,
       "pass": true
     },
     {
@@ -2415,7 +2412,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 511,
+      "elapsedMs": 399,
       "pass": true
     },
     {
@@ -2431,7 +2428,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 526,
+      "elapsedMs": 383,
       "pass": true
     },
     {
@@ -2447,7 +2444,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 511,
+      "elapsedMs": 385,
       "pass": true
     },
     {
@@ -2463,7 +2460,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 512,
+      "elapsedMs": 385,
       "pass": true
     },
     {
@@ -2479,7 +2476,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 593,
+      "elapsedMs": 384,
       "pass": true
     },
     {
@@ -2495,7 +2492,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 478,
+      "elapsedMs": 352,
       "pass": true
     },
     {
@@ -2511,7 +2508,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 562,
+      "elapsedMs": 366,
       "pass": true
     },
     {
@@ -2527,7 +2524,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 487,
+      "elapsedMs": 367,
       "pass": true
     },
     {
@@ -2543,7 +2540,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 509,
+      "elapsedMs": 384,
       "pass": true
     },
     {
@@ -2559,7 +2556,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 540,
+      "elapsedMs": 420,
       "pass": true
     },
     {
@@ -2575,7 +2572,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 524,
+      "elapsedMs": 335,
       "pass": true
     },
     {
@@ -2591,7 +2588,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 556,
+      "elapsedMs": 454,
       "pass": true
     },
     {
@@ -2607,7 +2604,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 503,
+      "elapsedMs": 445,
       "pass": true
     },
     {
@@ -2623,7 +2620,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1284,
+      "elapsedMs": 1211,
       "pass": true
     },
     {
@@ -2639,7 +2636,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 441,
+      "elapsedMs": 332,
       "pass": true
     },
     {
@@ -2655,7 +2652,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1193,
+      "elapsedMs": 1118,
       "pass": true
     },
     {
@@ -2671,7 +2668,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1259,
+      "elapsedMs": 1099,
       "pass": true
     },
     {
@@ -2687,7 +2684,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1193,
+      "elapsedMs": 1134,
       "pass": true
     },
     {
@@ -2703,7 +2700,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 410,
+      "elapsedMs": 333,
       "pass": true
     },
     {
@@ -2719,7 +2716,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 499,
+      "elapsedMs": 389,
       "pass": true
     },
     {
@@ -2735,7 +2732,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 541,
+      "elapsedMs": 368,
       "pass": true
     },
     {
@@ -2751,7 +2748,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 561,
+      "elapsedMs": 367,
       "pass": true
     },
     {
@@ -2767,7 +2764,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 544,
+      "elapsedMs": 419,
       "pass": true
     },
     {
@@ -2783,7 +2780,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 454,
+      "elapsedMs": 334,
       "pass": true
     },
     {
@@ -2799,7 +2796,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1195,
+      "elapsedMs": 1099,
       "pass": true
     },
     {
@@ -2815,7 +2812,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1191,
+      "elapsedMs": 1115,
       "pass": true
     },
     {
@@ -2831,7 +2828,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1258,
+      "elapsedMs": 1117,
       "pass": true
     },
     {
@@ -2847,7 +2844,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 409,
+      "elapsedMs": 338,
       "pass": true
     },
     {
@@ -2863,7 +2860,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 420,
+      "elapsedMs": 316,
       "pass": true
     },
     {
@@ -2879,7 +2876,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 423,
+      "elapsedMs": 348,
       "pass": true
     },
     {
@@ -2895,7 +2892,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 410,
+      "elapsedMs": 334,
       "pass": true
     },
     {
@@ -2911,7 +2908,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 480,
+      "elapsedMs": 349,
       "pass": true
     },
     {
@@ -2927,7 +2924,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1213,
+      "elapsedMs": 1115,
       "pass": true
     },
     {
@@ -2943,7 +2940,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 410,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -2959,7 +2956,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1215,
+      "elapsedMs": 1101,
       "pass": true
     },
     {
@@ -2975,7 +2972,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 408,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -2991,7 +2988,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1214,
+      "elapsedMs": 1113,
       "pass": true
     },
     {
@@ -3007,7 +3004,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 1353,
+      "elapsedMs": 1134,
       "pass": true
     },
     {
@@ -3023,7 +3020,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 449,
+      "elapsedMs": 300,
       "pass": true
     },
     {
@@ -3039,7 +3036,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 566,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -3055,7 +3052,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 496,
+      "elapsedMs": 351,
       "pass": true
     },
     {
@@ -3071,7 +3068,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 375,
+      "elapsedMs": 301,
       "pass": true
     },
     {
@@ -3087,7 +3084,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 493,
+      "elapsedMs": 386,
       "pass": true
     },
     {
@@ -3103,7 +3100,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 477,
+      "elapsedMs": 353,
       "pass": true
     },
     {
@@ -3119,7 +3116,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 565,
+      "elapsedMs": 523,
       "pass": true
     },
     {
@@ -3135,7 +3132,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 512,
+      "elapsedMs": 369,
       "pass": true
     },
     {
@@ -3151,7 +3148,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 547,
+      "elapsedMs": 352,
       "pass": true
     },
     {
@@ -3167,7 +3164,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 704,
+      "elapsedMs": 422,
       "pass": true
     },
     {
@@ -3183,7 +3180,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 567,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -3199,7 +3196,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 510,
+      "elapsedMs": 425,
       "pass": true
     },
     {
@@ -3215,7 +3212,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 477,
+      "elapsedMs": 334,
       "pass": true
     },
     {
@@ -3231,7 +3228,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 394,
+      "elapsedMs": 315,
       "pass": true
     },
     {
@@ -3247,7 +3244,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 438,
+      "elapsedMs": 332,
       "pass": true
     },
     {
@@ -3263,7 +3260,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 538,
+      "elapsedMs": 491,
       "pass": true
     },
     {
@@ -3279,7 +3276,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 592,
+      "elapsedMs": 347,
       "pass": true
     },
     {
@@ -3295,7 +3292,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 479,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -3311,7 +3308,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 582,
+      "elapsedMs": 335,
       "pass": true
     },
     {
@@ -3327,7 +3324,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 446,
+      "elapsedMs": 334,
       "pass": true
     },
     {
@@ -3343,7 +3340,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 733,
+      "elapsedMs": 439,
       "pass": true
     },
     {
@@ -3359,7 +3356,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 565,
+      "elapsedMs": 333,
       "pass": true
     },
     {
@@ -3375,7 +3372,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 482,
+      "elapsedMs": 350,
       "pass": true
     },
     {
@@ -3391,7 +3388,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 563,
+      "elapsedMs": 334,
       "pass": true
     },
     {
@@ -3407,7 +3404,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 500,
+      "elapsedMs": 335,
       "pass": true
     },
     {
@@ -3423,7 +3420,7 @@
       "trustedPointerTrace": null,
       "refreshClearsState": true,
       "noBrowserPersistence": true,
-      "elapsedMs": 565,
+      "elapsedMs": 351,
       "pass": true
     }
   ],

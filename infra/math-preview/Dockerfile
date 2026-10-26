@@ -8,6 +8,7 @@ COPY apps/web/src/math/math.css ./apps/web/src/math/math.css
 COPY scripts/math-full-01/build.ts ./scripts/math-full-01/build.ts
 COPY docs/implementation/evidence/math-full-01/origins.json ./docs/implementation/evidence/math-full-01/origins.json
 COPY docs/implementation/evidence/math-full-02/source.json ./docs/implementation/evidence/math-full-02/source.json
+COPY docs/implementation/evidence/math-full-remainder/source.json ./docs/implementation/evidence/math-full-remainder/source.json
 ARG KLH_BUILD_SHA
 RUN npm install --global npm@11.12.1 && npm ci --ignore-scripts && KLH_BUILD_SHA="$KLH_BUILD_SHA" npm run build:math-preview
 
@@ -20,6 +21,7 @@ COPY package.json ./
 COPY --from=build /app/node_modules/zod ./node_modules/zod
 COPY --from=build /app/apps/preview/dist ./apps/preview/dist
 COPY --from=build /app/apps/preview/content ./apps/preview/content
+COPY apps/preview/library ./apps/preview/library
 COPY apps/preview/practice ./apps/preview/practice
 COPY apps/preview/server.ts apps/preview/content.ts apps/preview/contract.ts apps/preview/registry-meta.ts apps/preview/runtime.ts apps/preview/learning-map.ts ./apps/preview/
 COPY apps/preview/adapters/source/shared/intro-visuals.mjs ./apps/preview/adapters/source/shared/intro-visuals.mjs

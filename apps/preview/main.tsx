@@ -1,3 +1,5 @@
+import { lazy, Suspense } from "react";
+const LibraryPage = lazy(() => import("./library/Library.tsx"));
 import Practice from "./practice/Practice.tsx";
 import { contentDigest } from "./integrity.ts";
 import { useEffect, useRef, useState } from "react";
@@ -103,7 +105,9 @@ function Lesson({
 }) {
   const neighbors = neighborLessons(map, catalog, lesson.lessonId);
   const currentUnit = lessonLocation(map, lesson.lessonId);
-  const [step, setStep] = useState(0),
+  const [step, setStep] = useState(
+      new URLSearchParams(location.search).has("practice") ? 5 : 0,
+    ),
     [prediction, setPrediction] = useState(""),
     [thought, setThought] = useState(""),
     [value, setValue] = useState<WidgetState>({}),
@@ -299,7 +303,10 @@ function Lesson({
             <h2>自己验证</h2>
             <p>回到开头的问题，用图、实物或口头说明验证你的发现。</p>
             <p>{c.retell}</p>
-            <Practice key={lesson.lessonId + ':' + revision} lessonId={lesson.lessonId} />
+            <Practice
+              key={lesson.lessonId + ":" + revision}
+              lessonId={lesson.lessonId}
+            />
             <button onClick={() => move(2)}>回实验再试一次</button>
           </section>
         )}
@@ -413,7 +420,7 @@ function App() {
       </header>
       <nav aria-label="学科导航" className="preview-subjects">
         <a href="/subjects/math" aria-current="page">
-          数学 · 70课教学
+          数学 · 课程与探索
         </a>
         <span aria-disabled="true">英语 · 待迁入</span>
       </nav>
@@ -454,6 +461,10 @@ function App() {
               </figure>
             ))}
           </section>
+        ) : location.pathname === "/subjects/math/library" ? (
+          <Suspense fallback={<p role="status">正在准备数学探索…</p>}>
+            <LibraryPage catalog={catalog} map={learningMap} />
+          </Suspense>
         ) : requested && lesson ? (
           <Lesson
             key={lesson.lessonId}
@@ -466,8 +477,8 @@ function App() {
         )}
       </main>
       <footer className="preview-footer">
-        仅三年级当前 70
-        课教学与 849 道临时练习；解释题待家长核对。数学侦探、思维卡与高年级尚未迁入。旧网站继续独立运行。
+        当前可体验三年级 70 课与 849 道临时练习，另有 17 思维卡、14 模拟侦探和
+        54 高年级旧版课。解释题待家长核对；旧网站继续独立运行。
       </footer>
     </div>
   );

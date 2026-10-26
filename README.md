@@ -12,6 +12,7 @@
 
 Node 24.15.0 / npm 11.12.1：`npm ci`，`npm run build:math-preview`，`npm run preview:math`；本机 http://127.0.0.1:4179/ 仅用于开发复现，用户交付是 NAS。
 
+- [其余数学能力报告与范围清单（本地通过，待 NAS）](docs/implementation/MATH-FULL-03-REPORT.md)
 - [849 题报告、接口、来源与 NAS 验收](docs/implementation/MATH-FULL-02-REPORT.md)
 - [849 逐题矩阵](docs/implementation/evidence/math-full-02/tasks-coverage.json) · [NAS 回执](docs/implementation/evidence/math-full-02/delivery.json)
 - [R3 课本目录历史报告](docs/implementation/MATH-FULL-01-NAS-R3-REPORT.md)

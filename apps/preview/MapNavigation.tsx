@@ -325,6 +325,7 @@ export function CatalogPage({
             ))}
         </div>
       )}
+      {!term && !query.trim() && <section className="math-extras"><h2>把方法用到新的问题里</h2><nav aria-label="更多数学探索">{[['thinking','17 张思维卡'],['detective','14 个数学侦探模拟'],['legacy','四至六年级 · 54 旧版课'],['review','自由复习站'],['methods','方法工具箱']].map(([kind,label])=><a key={kind} href={'/subjects/math/library?kind='+kind}>{label} →</a>)}</nav></section>}
       {term && (
         <p className="map-home-link">
           <a href="/subjects/math">返回上下册与基础衔接目录</a>
