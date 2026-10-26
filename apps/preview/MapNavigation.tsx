@@ -288,7 +288,7 @@ export function CatalogPage({
             </section>
           )}
           <p className="map-practice-note">
-            练习待接入。当前探索不会保存成绩或发放积分。
+            练习在本课第六步“自己验证”中进入。当前探索不会保存成绩或发放积分。
           </p>
           <a href={mapHref(term)}>返回{termTitles[term]}单元目录</a>
         </>

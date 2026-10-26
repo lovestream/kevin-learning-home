@@ -1,3 +1,4 @@
+import Practice from "./practice/Practice.tsx";
 import { contentDigest } from "./integrity.ts";
 import { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
@@ -298,9 +299,7 @@ function Lesson({
             <h2>自己验证</h2>
             <p>回到开头的问题，用图、实物或口头说明验证你的发现。</p>
             <p>{c.retell}</p>
-            <p>
-              完整练习将在下一批接入；本预览不保存成绩、阅读进度或掌握标签。
-            </p>
+            <Practice key={lesson.lessonId + ':' + revision} lessonId={lesson.lessonId} />
             <button onClick={() => move(2)}>回实验再试一次</button>
           </section>
         )}
@@ -468,7 +467,7 @@ function App() {
       </main>
       <footer className="preview-footer">
         仅三年级当前 70
-        课教学体验；完整练习、数学侦探、思维卡与高年级尚未迁入。旧网站继续独立运行。
+        课教学与 849 道临时练习；解释题待家长核对。数学侦探、思维卡与高年级尚未迁入。旧网站继续独立运行。
       </footer>
     </div>
   );

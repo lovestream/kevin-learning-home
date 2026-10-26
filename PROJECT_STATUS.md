@@ -8,6 +8,6 @@
 
 [PR #18](https://github.com/lovestream/kevin-learning-home/pull/18) 保持 Draft，不合并。[R3 报告与 CI](docs/implementation/MATH-FULL-01-NAS-R3-REPORT.md) · [NAS 交付回执](docs/implementation/evidence/math-full-r3/delivery.json) · [交接](docs/handoff/current.md)。后续证据文档提交不冒充 NAS 部署源码；169 个发布输入清单可验证对应关系。
 
-用户最新要求：R3 后直接继续 [Issue #16](https://github.com/lovestream/kevin-learning-home/issues/16) 的 849 道练习，再做 [Issue #17](https://github.com/lovestream/kevin-learning-home/issues/17) 其它实际可用数学能力，分别独立 Draft PR，交付同一 NAS 入口。当前 849 题尚未接入，不能把 70 课教学称为整个数学站迁移完成。
+用户最新要求：R3 后直接继续 [Issue #16](https://github.com/lovestream/kevin-learning-home/issues/16) 的 849 道练习，再做 [Issue #17](https://github.com/lovestream/kevin-learning-home/issues/17) 其它实际可用数学能力，分别独立 Draft PR，交付同一 NAS 入口。849 题的本地课堂内流程与纯评分器已实现，正在执行完整回归和准备独立 Draft PR；NAS 仍为 R3，不能把本地实现称为部署交付。见 [练习报告](docs/implementation/MATH-FULL-02-REPORT.md)。
 
 同一工作副本继续使用，没有新增工作树或重复项目目录。原数学、英语、38443 和 8 个生产服务及真实数据不动。无正式账号、成绩持久化、真实积分或蛋仔迁移，不申请证书，不改 Tailscale/DSM/daemon/权限。[统一路线图](docs/implementation/KEVIN-HOME-INTEGRATION-ROADMAP.md)。R2 历史证据见 [R2 报告](docs/implementation/MATH-FULL-01-NAS-R2-REPORT.md)。

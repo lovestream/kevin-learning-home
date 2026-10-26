@@ -1,5 +1,9 @@
 # Kevin 学习家园：当前交接
 
+## Issue #16 练习批次正在开发，NAS 仍运行已验收 R3
+
+分支 `codex/math-full-02-practice` 从 R3 证据提交 8628f0a 建立；Draft PR 叠加到 PR #18 分支。本地 849 题、五组/五型、无状态评分和六步课堂内流程已实现；最新完整本地/CI与 NAS 发布仍需完成，不能标为已交付。见 [练习报告](../implementation/MATH-FULL-02-REPORT.md)。原 60 Node/18 UI/12 数学 Node/9 数学浏览器全量本地验证通过。新增 CI 仅扩充分支与叠加 PR base，原精确分支测试同步扩展，全部原门禁保留。
+
 ## R3 已在 NAS 验收，直接连续推进 Issue #16/#17
 
 用户最新指令覆盖历史暂停点：在同一 PR #18 完成 R3 后，直接继续 849 题和其它可用数学功能；各 PR 保持 Draft、不合并，不等待重复阶段授权。main `ab73c9b` 的统一路线图已合入。工作副本仍 `/Users/yako/Downloads/codex/kevin-learning-home-math-trial`，不增加工作树。

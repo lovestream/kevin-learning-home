@@ -1,3 +1,5 @@
+> 本分支为 Issue #16 / MATH-FULL-02，叠加稳定 R3，新增 849 道课堂内临时练习。**当前 NAS 仍为下述已验收的 R3 教学版**；练习发布状态与接口见 [练习报告](docs/implementation/MATH-FULL-02-REPORT.md)，最终 NAS 实测前不标交付。
+
 # 当前交付：NAS 局域网免登录数学课堂
 
 R3 已在同一 PR #18 将目录恢复为“上册 9 单元 39 课／下册 8 单元 24 课／7 节基础衔接”，增加知识点层和返回原单元。当前 NAS 已运行 R3，发布与真机结果见 [R3 执行报告](docs/implementation/MATH-FULL-01-NAS-R3-REPORT.md)。验收后继续 849 题及其它数学能力，不另开基础建设。
