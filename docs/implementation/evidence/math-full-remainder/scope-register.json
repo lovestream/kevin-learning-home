@@ -1,5 +1,5 @@
 {
-  "status": "CODE_AUDITED_NOT_YET_NAS_DELIVERED",
+  "status": "PASS_ACTUAL_NAS_PUBLIC_CAPABILITIES_DELIVERED",
   "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
   "originalDataFilesRead": false,
   "rows": [
@@ -40,7 +40,7 @@
       "source": "scripts/build-upper-primary-catalog.mjs",
       "oldEntry": "/?view=map grades 4-6",
       "newEntry": "/subjects/math/library?kind=legacy",
-      "state": "IMPLEMENTED_PENDING_NAS",
+      "state": "DELIVERED_PR22_NAS",
       "note": "54 legacy courses / 432 questions / 7 generic labs; teaching acceptance pending"
     },
     {
@@ -48,7 +48,7 @@
       "source": "content/pilot/thinking-publication.mjs",
       "oldEntry": "?thinking=<id>",
       "newEntry": "/subjects/math/library?kind=thinking",
-      "state": "IMPLEMENTED_PENDING_NAS",
+      "state": "DELIVERED_PR22_NAS",
       "note": "17 fingerprint-approved cards / 3 models; human review only"
     },
     {
@@ -72,7 +72,7 @@
       "source": "content/detective/seed-cases.mjs",
       "oldEntry": "/?view=detective",
       "newEntry": "/subjects/math/library?kind=detective",
-      "state": "IMPLEMENTED_PENDING_NAS",
+      "state": "DELIVERED_PR22_NAS",
       "note": "14 anonymous authored simulations; no medals"
     },
     {
@@ -88,7 +88,7 @@
       "source": "src/LearningReviewView.tsx",
       "oldEntry": "/?view=review",
       "newEntry": "/subjects/math/library?kind=review",
-      "state": "IMPLEMENTED_PENDING_NAS",
+      "state": "DELIVERED_PR22_NAS",
       "note": "244 existing review tasks, no personal due dates"
     },
     {
@@ -96,7 +96,7 @@
       "source": "shared/inverse-index.mjs",
       "oldEntry": "inverse practice index",
       "newEntry": "/subjects/math/library?kind=review",
-      "state": "IMPLEMENTED_PENDING_NAS",
+      "state": "DELIVERED_PR22_NAS",
       "note": "11 original task deep links; not additional questions"
     },
     {
@@ -104,7 +104,7 @@
       "source": "src/MethodsView.tsx",
       "oldEntry": "/?view=methods",
       "newEntry": "/subjects/math/library?kind=methods",
-      "state": "IMPLEMENTED_PENDING_NAS",
+      "state": "DELIVERED_PR22_NAS",
       "note": "28 entries / 6 complete guides; search/filter/empty state"
     },
     {
@@ -155,5 +155,6 @@
       "state": "BLUEPRINT_ONLY",
       "note": "168 containers are not 168 runnable classes"
     }
-  ]
+  ],
+  "deployedSourceCommit": "52e781440b21a406286ac55bbfefdb6e06d119fe"
 }

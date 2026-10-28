@@ -1,0 +1,88 @@
+{
+  "status": "READ_ONLY_OBSERVED",
+  "nas": {
+    "kernel": "4.4.180+",
+    "architecture": "x86_64",
+    "model": "DS918+",
+    "dsmVersion": [
+      "majorversion=\"7\"",
+      "minorversion=\"1\"",
+      "major=\"7\"",
+      "minor=\"1\"",
+      "micro=\"1\"",
+      "productversion=\"7.1.1\"",
+      "buildphase=\"GM\"",
+      "buildnumber=\"42962\"",
+      "smallfixnumber=\"6\"",
+      "nano=\"6\"",
+      "base=\"42962\"",
+      "builddate=\"2023/05/29\"",
+      "buildtime=\"14:27:51\""
+    ]
+  },
+  "docker": {
+    "Platform": {
+      "Name": ""
+    },
+    "Components": [
+      {
+        "Name": "Engine",
+        "Version": "20.10.3",
+        "Details": {
+          "ApiVersion": "1.41",
+          "Arch": "amd64",
+          "BuildTime": "Thu Jul 21 10:21:56 2022",
+          "Experimental": "false",
+          "GitCommit": "b487c8f",
+          "GoVersion": "go1.17.1",
+          "KernelVersion": "4.4.180+",
+          "MinAPIVersion": "1.12",
+          "Os": "linux"
+        }
+      },
+      {
+        "Name": "containerd",
+        "Version": "v1.4.3",
+        "Details": {
+          "GitCommit": "3fa00912415f3e9c6f82dd72119179d599efd13b"
+        }
+      },
+      {
+        "Name": "runc",
+        "Version": "v1.0.0-rc93",
+        "Details": {
+          "GitCommit": "31cc25f16f5eba4d0f53e35374532873744f4b31"
+        }
+      },
+      {
+        "Name": "docker-init",
+        "Version": "0.19.0",
+        "Details": {
+          "GitCommit": "ed96d00"
+        }
+      }
+    ],
+    "Version": "20.10.3",
+    "ApiVersion": "1.41",
+    "MinAPIVersion": "1.12",
+    "GitCommit": "b487c8f",
+    "GoVersion": "go1.17.1",
+    "Os": "linux",
+    "Arch": "amd64",
+    "KernelVersion": "4.4.180+",
+    "BuildTime": "2022-07-21T10:21:56.000000000+00:00"
+  },
+  "node": "v24.15.0",
+  "loadSample": {
+    "BlockIO": "0B / 0B",
+    "CPUPerc": "1.24%",
+    "Container": "klh-math-preview-20261025-c6ae9e7f-52e781440b21-app",
+    "ID": "07ac2a63bf27",
+    "MemPerc": "12.62%",
+    "MemUsage": "32.3MiB / 256MiB",
+    "Name": "klh-math-preview-20261025-c6ae9e7f-52e781440b21-app",
+    "NetIO": "6.47MB / 1.08GB",
+    "PIDs": "0"
+  },
+  "note": "One instantaneous sample during synthetic browser validation, not capacity or production benchmark."
+}

@@ -4,9 +4,13 @@
 
 分支 `codex/math-full-03-capabilities`，从 PR21 最终归档 `a7968501d29aa38dafb36bf7c983ed67a96cb5cc` 建立，继续同一个工作副本，不创建新 worktree。PR21 的源码 `d835f8c` 已在 NAS 交付 849 题，最终归档 push 40314421970 / PR 40314426390 均成功。
 
-**本地全量验证通过，NAS 此刻仍为 PR21。** 最终三视口 255 流程 / 85 内容条目通过（382411 ms），另有原 849 题/84 流程、30/210 课堂、教材导航与完整 60/18/12/9 基线通过；新增 8 Node、原练习 6 Node、预览 21 Node 与 11 部署保护测试均通过。精确源码、镜像、双 CI、实际 NAS 证据与回退完成后更新本节。
+**已交付同一 NAS：[打开学习家园](http://192.168.2.100:38444/)，HTTP、免登录。** 独立 [Draft PR #22](https://github.com/lovestream/kevin-learning-home/pull/22)，base PR21。部署源码 `52e781440b21a406286ac55bbfefdb6e06d119fe`，镜像 `sha256:fff4f09e498239605ba2106733e0aea9fcc56c39616266858e8871d2bbadebda`；源码完整 [push CI](https://github.com/lovestream/kevin-learning-home/actions/runs/40321010963) / [PR CI](https://github.com/lovestream/kevin-learning-home/actions/runs/40321046913) 均成功。后续仅文档/证据提交不会冒充部署源码，最终归档 HEAD 双 CI 精确链接见 PR 正文。
 
-[逐能力矩阵](evidence/math-full-remainder/capabilities.json) · [来源与状态总账](evidence/math-full-remainder/scope-register.json) · [本地浏览器原始结果](evidence/math-full-remainder/browser-local.json)。所有截图均为实际浏览器页面；当前证据明确标记本地，尚不冒称 NAS。
+实际 NAS 三视口 255 完整能力流程（402334 ms）、全部 449 题及 14 案例 HTTP、原 849 题/84 流程、30/210 课堂及教材导航全部通过。能力版→PR21→能力版真实 HTTP 回退/恢复通过，PR21 容器和镜像停止保留。11 个受保护容器与旧合成数据/证书文件 hash 不变；无真实学习写入。198 发布输入和 13 静态 seal 文件与测试构建一致。
+
+[交付回执](evidence/math-full-remainder/delivery.json) · [逐能力矩阵](evidence/math-full-remainder/capabilities.json) · [范围总账](evidence/math-full-remainder/scope-register.json) · [实际 NAS 浏览器](evidence/math-full-remainder/browser-nas.json) · [HTTP](evidence/math-full-remainder/library-http.json) · [回退](evidence/math-full-remainder/rollback.json) · [发布输入](evidence/math-full-remainder/release-inputs.json)。42 张截图已由实际 NAS 页面重新生成，截图清单标明来源；另有普通 Mac Chrome 实际点击首页→思维卡→天平等量操作→撤销→首页及两张原生截图通过，没有绕过警告或修改设置；实体手机/iPad仍待用户体验。
+
+本地最终三视口255流程/85条目、原849/84、30/210、导航和完整60/18/12/9基线通过；新增8 Node、原练习6 Node、预览21 Node、11部署保护测试通过。源兼容 golden 为432确定题、17解释人审。CI还完成Compose1.28.5和容器恢复回归，未跳过既有门禁。
 
 ## 实现
 
@@ -37,6 +41,21 @@
 
 复现：`python3 scripts/math-full-03/import.py ../math-learning`（只读冻结源），`npm run build:math-preview`，`node --test tests/math-full-remainder/library.test.mjs`，`node tests/math-full-remainder/browser.mjs`；CI 不下载旧仓库。归档脚本校验所有测量文件 hash 后才生成 85 个条目矩阵和截图清单。
 
+## NAS 环境与测量边界
+
+DS918+、x86_64，DSM7.1.1-42962 Update6、Linux4.4.180+、Docker20.10.3、Node24.15.0，见[只读环境记录](evidence/math-full-remainder/environment.json)。复用已批准的内容预览隔离目录，仅替换其38444入口；零挂载/只读根/256MiB/cpuset0，不用学习数据库。原正式SQLite/Auth底座继续由既有CI验证，本轮不将无DB预览测试冒充NAS生产数据验收。
+
+| 实际 NAS LAN 测量 | 数量/时长 | 评分延迟 p50 / p95 / 最大 |
+| --- | --- | --- |
+| 原三年级题目 HTTP | 849题，7137ms | 6.27 / 12.66 / 79.13ms |
+| 新旧课/思维题及模拟案例 HTTP | 449题+14案例，4473ms | 6.70 / 10.93 / 78.03ms |
+| 新能力浏览器 | 三视口255流程，402334ms | 完整操作耗时，不是页面加载指标 |
+| 原练习/课堂浏览器 | 84流程133871ms；210场景134924ms | 完整操作耗时，不是吞吐量压测 |
+
+合成浏览器验证期间单次采样约32.3MiB/256MiB、CPU1.24%；只是瞬时观测，不推断长期容量或十年硬件稳定性。无新增付费服务/订阅。此次NAS未出现新启动/评分错误。三年级解释335题及新思维17题始终人审；源兼容golden不能替代高年级逐课教研。
+
+[普通Chrome核对记录](evidence/math-full-remainder/native-chrome.json)与`native-home.jpg`、`native-thinking.jpg`为本轮真实Mac Chrome；[源码CI完整步骤](evidence/math-full-remainder/source-ci.json)对应部署SHA。NAS HTTP/回退探针文本也归档在同证据目录，保留原`.evidence/math-full-remainder/`相对导入与输出路径，以便在项目根复现；标准库/浏览器测试源码位于`tests/math-full-remainder`，CI不连接NAS。
+
 ## 暂停点与限制
 
-实际 NAS 更新/回退、证据、执行报告和交接归档，并确认最终 HEAD 双 CI 后保持 Draft，等待 ChatGPT 独立审查；不合并、不开始英语或正式数据/奖励阶段。43 暂缓卡、168 蓝图、私密记录及生产部署不在本批。实体手机/iPad和本轮普通 Chrome 仍需用户亲自体验；自动化视口不冒充实体设备验收。
+实际 NAS 更新/回退、证据、执行报告和交接归档，并确认最终 HEAD 双 CI 后保持 Draft，等待 ChatGPT 独立审查；不合并、不开始英语或正式数据/奖励阶段。43 暂缓卡、168 蓝图、私密记录及生产部署不在本批。普通 Mac Chrome 已实际验收首页、天平操作/撤销及返回；实体手机/iPad仍待用户亲自体验，自动化视口不冒充实体设备验收。

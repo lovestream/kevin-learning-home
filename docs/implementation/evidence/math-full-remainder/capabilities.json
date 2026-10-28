@@ -1,14 +1,14 @@
 {
   "status": "PASS",
   "scope": "17 published thought cards / 54 legacy courses with 432 questions / 14 anonymous authored cases; no real records",
-  "origin": "http://127.0.0.1:63024",
-  "nas": false,
+  "origin": "http://192.168.2.100:38444",
+  "nas": true,
   "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
   "bankSha256": "8019913ea0756db1351363475ace2d72c53e9ed982d418092779456f6479ad8d",
   "publicSha256": "52ae6d22b03e7b026ddbdbe0aea1f7f28733d7c061f983252df7cc6a0cc0146b",
   "execution": {
-    "head": "a7968501d29aa38dafb36bf7c983ed67a96cb5cc",
-    "dirty": true,
+    "head": "52e781440b21a406286ac55bbfefdb6e06d119fe",
+    "dirty": false,
     "files": {
       "apps/preview/main.tsx": "a3fa5ecfec6533820ea91ee943df84e7bab7d1222f31a72df51b8143964cef33",
       "apps/preview/MapNavigation.tsx": "6eaeca0e3b87814bb03277e8a11524e5fb028b7bcc586952efccfb19c0b7fd3b",
