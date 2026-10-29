@@ -917,7 +917,10 @@ body:has(.preview-app) {
   font-size: 14px;
   line-height: 1.5;
 }
-.preview-app .place-columns small strong { white-space: nowrap; font-weight: 600; }
+.preview-app .place-columns small strong {
+  white-space: nowrap;
+  font-weight: 600;
+}
 .preview-app .place-columns section > span {
   font-size: 32px;
 }
@@ -2024,5 +2027,120 @@ body:has(.preview-app) {
   min-width: 100px;
 }
 
-.preview-app .dialog-subjects { display:flex; flex-wrap:wrap; gap:16px; padding:16px 0; border-bottom:1px solid var(--line); font-size:15px; }
-.preview-app .dialog-subjects span { color:var(--muted); }
+.preview-app .dialog-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+.preview-app .dialog-subjects span {
+  color: var(--muted);
+}
+
+.reading-print-only {
+  display: none;
+}
+@media print {
+  @page teaching-guide {
+    size: A4;
+    margin: 14mm;
+  }
+  .preview-app .reading-article {
+    page: teaching-guide;
+  }
+  .preview-app .reading-article h1 {
+    font-size: 22pt;
+  }
+  .preview-app .reading-article h2 {
+    font-size: 16pt;
+  }
+  .preview-app .reading-article h3 {
+    font-size: 13pt;
+  }
+  .preview-app .library-nav {
+    display: none !important;
+  }
+  .preview-app .reading-article header {
+    display: block !important;
+  }
+  .preview-app .reading-article figure {
+    break-after: auto;
+    break-inside: avoid;
+  }
+  .preview-app .reading-article .reading-print-only {
+    display: block;
+  }
+  .preview-app .reading-article .spatial-layout,
+  .preview-app .reading-article .balance-layout,
+  .preview-app .reading-article .scale-layout,
+  .preview-app .reading-article .boat-layout {
+    display: block;
+  }
+  .preview-app .reading-article .hands-on-workbench,
+  .preview-app .reading-article .hands-stage,
+  .preview-app .reading-article .hands-tools {
+    min-height: 0;
+    background: white;
+  }
+  .preview-app .reading-article .hands-tools {
+    border: 0;
+  }
+  .preview-app .reading-article :is(svg, .solid-viewport) {
+    max-height: 65mm;
+    width: 100%;
+  }
+  .preview-app .reading-article .projection-card svg {
+    max-height: 28mm;
+  }
+  .preview-app .reading-article :is(h1, h2, h3) {
+    break-after: avoid;
+  }
+  .preview-app .reading-article .reading-block {
+    border-color: #bbb;
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: white !important;
+  }
+  .preview-app,
+  .preview-app .preview-workspace {
+    min-height: 0 !important;
+  }
+  .preview-app .reading-article .session-policy,
+  .preview-app .reading-article .hands-toolbar,
+  .preview-app .reading-article .practice-notice {
+    display: none !important;
+  }
+  .preview-app .reading-article .reading-comparisons > section,
+  .preview-app .reading-article .reading-method,
+  .preview-app .reading-article #reading-retell {
+    break-inside: avoid;
+  }
+  .preview-app .reading-article .reading-checkpoint form {
+    min-height: 16mm;
+  }
+}
+
+@media print {
+  .preview-app .reading-article p {
+    font-size: 12pt;
+    line-height: 1.65;
+    margin: 6pt 0;
+  }
+  .preview-app .reading-article .reading-block {
+    padding: 8pt 0;
+  }
+  .preview-app
+    .reading-article
+    :is(.model-controls, .lab-controls, .view-controls, .practice-numbers) {
+    display: none !important;
+  }
+  .preview-app .library-page:has(.reading-article) > p:last-child {
+    display: none !important;
+  }
+}

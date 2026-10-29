@@ -136,6 +136,12 @@ jobs:
           mkdir -p ~/.local/share/fonts/klh-ci
           cp /tmp/klh-ci-noto.otf ~/.local/share/fonts/klh-ci/NotoSansCJKsc-Regular.otf
           fc-cache -f ~/.local/share/fonts/klh-ci
+      - name: PDF inspection tools (ephemeral CI runner only)
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install --yes --no-install-recommends poppler-utils
+          fi
       - name: Build all sealed teaching resources
         run: npm run build:math-preview
       - name: Synthetic domain, authorization, process crash and exact models
@@ -154,6 +160,8 @@ jobs:
         run: node tests/math-onepass/legacy-browser.mjs
       - name: All full articles, checkpoints, methods, page memory and print
         run: node tests/math-onepass/experience-browser.mjs
+      - name: Native print lifecycle and complete teaching PDFs
+        run: node tests/math-onepass/print-browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

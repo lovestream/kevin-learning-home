@@ -5,6 +5,7 @@ import type { FullLesson } from "../contract.ts";
 import type { WidgetState } from "../adapters/source/src/studio/types.ts";
 import { Exploration } from "../registry.tsx";
 import { TeachingDiagram } from "../adapters/source/src/studio/TeachingDiagrams.tsx";
+import { useTeachingPrint } from "./usePrint.ts";
 function Checkpoint({
   block,
   lessonId,
@@ -46,6 +47,13 @@ function Checkpoint({
   return (
     <div className="reading-checkpoint">
       <p>{block.prompt}</p>
+      {block.responseType === "choice" && (
+        <ol className="reading-print-only">
+          {block.options?.map((option, i) => (
+            <li key={i}>{option}</li>
+          ))}
+        </ol>
+      )}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -120,6 +128,7 @@ export default function ReadingArticle({
   onBack: () => void;
   onPractice: () => void;
 }) {
+  useTeachingPrint();
   const memory = usePageLearning();
   const [article, setArticle] = useState<Article | null>(null),
     [error, setError] = useState(""),

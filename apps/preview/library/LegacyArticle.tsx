@@ -5,6 +5,7 @@ import { publicLessonSchema } from "../practice/contract.ts";
 import { usePageLearning } from "../PageLearning.tsx";
 import LegacyLab from "./LegacyLab.tsx";
 import Practice from "../practice/Practice.tsx";
+import { useTeachingPrint } from "../reading/usePrint.ts";
 const exampleSchema = z.object({
   lessonId: z.string(),
   taskId: z.string(),
@@ -23,6 +24,7 @@ export default function LegacyArticle({
   onBack: () => void;
   onPractice: () => void;
 }) {
+  useTeachingPrint();
   const [example, setExample] = useState<z.infer<typeof exampleSchema> | null>(
       null,
     ),
@@ -83,8 +85,10 @@ export default function LegacyArticle({
       const v = exampleSchema.parse(await r.json());
       if (v.lessonId !== entry.id) throw Error();
       setExample(v);
+      return true;
     } catch {
       setError("参考过程暂未展开，请重试。");
+      return false;
     } finally {
       setBusy(false);
     }
@@ -101,7 +105,15 @@ export default function LegacyArticle({
         <div className="action-row">
           <button onClick={onBack}>回到六步探索</button>
           <button onClick={onPractice}>做本课8道练习</button>
-          <button onClick={() => window.print()}>打印本课教案</button>
+          <button
+            disabled={busy}
+            onClick={async () => {
+              if (example || (await reveal()))
+                requestAnimationFrame(() => window.print());
+            }}
+          >
+            打印本课教案
+          </button>
         </div>
       </header>
       <nav className="reading-jumps" aria-label="主题教案章节">
