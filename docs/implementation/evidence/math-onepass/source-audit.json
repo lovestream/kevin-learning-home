@@ -1,0 +1,782 @@
+{
+  "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+  "frozenRef": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "sourceMain": "1e8199dd2963c70f539b23300a86e7e645350798",
+  "readScope": "84 deliberately selected authored code/task/test files, plus exact anonymous reviewed fixtures; no learner uploads/database",
+  "selectedAuthored": [
+    {
+      "path": "src/App.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "bytes": 26614
+    },
+    {
+      "path": "src/LearningMapView.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "896a5845ce5835c948b62606dda5d1ec9c576267",
+      "sha256": "cc68e4ae8661de07c1bf826953baf3ddfbb7d741ddb64c64498032fbf6032793",
+      "bytes": 4365
+    },
+    {
+      "path": "src/UnitLearningMap.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "bytes": 5697
+    },
+    {
+      "path": "src/studio/CourseReader.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "4ed85d4110020c4d1534e9db60dc1a3ece1f7a9c",
+      "sha256": "4c1dd6b4cdbc1d5c6bae796e2218dfa99744190f2b39e594d7a9a6839e2f3f6b",
+      "bytes": 1928
+    },
+    {
+      "path": "src/studio/ChildClassroom.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "bytes": 8811
+    },
+    {
+      "path": "src/studio/LessonArticle.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "bytes": 12902
+    },
+    {
+      "path": "src/studio/LegacyLessonArticle.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "bytes": 7276
+    },
+    {
+      "path": "src/QuestExperience.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "ac965435b7f9cb5985b87a5034c99ff8bf5e107f",
+      "sha256": "fbf84de44201e8263567657919a5e1114afc4ebaf4e6f203457e727921d7ba88",
+      "bytes": 8465
+    },
+    {
+      "path": "src/LearningEvidencePanel.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "46d91f8cf2495dc8236de2bfacffc9fe115b75a4",
+      "sha256": "955a6fbc4d2085c8ac3f794eddc7b109321c8151555c9906ae8f0443bc4dc8e4",
+      "bytes": 3235
+    },
+    {
+      "path": "src/learningMap.ts",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "81d322ad0a5c4a96e0919798d44d528c0cce54fa",
+      "sha256": "dd7220e876b6441f4b5054bb18a99876356c171ea23bc44b10fa3d4c916c3445",
+      "bytes": 5843
+    },
+    {
+      "path": "src/LearningReviewView.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "7c5e1536a31709cfe5ec8668f33cac1d2ad60b1e",
+      "sha256": "129b1b203ea1392ba2000cf75e7ccfce4e9b449cd2f9ad0bbeef0e0db9475e2d",
+      "bytes": 2983
+    },
+    {
+      "path": "src/MethodsView.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "a70bfec5ef059a9b0212a86a93d590a34fac25bc",
+      "sha256": "404c126d262520d5e245edc5f436dc1e223ca9678cfc79e76bcec8d6183500b1",
+      "bytes": 2614
+    },
+    {
+      "path": "src/InversePracticeIndex.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "cac5084eeb2a233041928a9b5df0f92bcf1c90c3",
+      "sha256": "1aad5d622940cfa71e59004997b4664a1ec86f197c59a74653b66bb6b6a55f90",
+      "bytes": 1351
+    },
+    {
+      "path": "src/ArticleMistakesPanel.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "02e56265570da23ec10c9f94f686060dc84a2e60",
+      "sha256": "6b10a28bc781e5fd1ab8b778d0d937c80092281d21e3713590853b30ace84390",
+      "bytes": 935
+    },
+    {
+      "path": "src/types.ts",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "db6410aeb8324dbbb344090445975b3f01b6c476",
+      "sha256": "f990cbdbef1530347f40f7befc3589db5c2bca4af99d1f9abdc94c3c38ca0d87",
+      "bytes": 5275
+    },
+    {
+      "path": "src/MathLab.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "e4a7899a8b7c61a0068a2f20879790ca113dc1ab",
+      "sha256": "4634d9d88af25f2369aea87daf576e9c29516c4d7c879f9dc84baeb47104d6d4",
+      "bytes": 19193
+    },
+    {
+      "path": "server/index.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "01bdd7045cdef6efac134fcc0cf2fe836868dcc7",
+      "sha256": "5bb93c313fbe6556309880854220e7134259d81bce98f578ddded81023e93bda",
+      "bytes": 15918
+    },
+    {
+      "path": "server/review-schedule.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "288434f8de97c55d7fc5b8098625e26c0f452ff6",
+      "sha256": "e6126fd5a57f07de74756a325a8c375e25deed34d67f4662a416d3326ba1902d",
+      "bytes": 2129
+    },
+    {
+      "path": "server/pilot-store.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "bytes": 20751
+    },
+    {
+      "path": "server/thinking-store.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "bytes": 22240
+    },
+    {
+      "path": "server/detective-store.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "76368cb0efbc68ea2e14f0631f8c8963a3f22497",
+      "sha256": "f1a880fa2889899bb444ccbeb22eb35c9a337ad7a300ed2db3cb84fd0e62d5e2",
+      "bytes": 17462
+    },
+    {
+      "path": "server/detective-self-store.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "bytes": 18089
+    },
+    {
+      "path": "server/detective-self-questions.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "06c74ff29d3d189ac6a2563fd0745acad2de587e",
+      "sha256": "dffa181159c9f2cc21265ba2b54e7e6cecca6e5fdc1f5cefe0fd5d9ad8715743",
+      "bytes": 11056
+    },
+    {
+      "path": "server/detective-self-integrity.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "83f6beeb97b7ca5a163f77c2cf40b8850f619fcf",
+      "sha256": "94af24f4bf8d1f3fa2ef11c1a1e8aba57ac35acedd8f349570a76cc41b5f9c02",
+      "bytes": 3036
+    },
+    {
+      "path": "server/detective-check-evidence.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "745302798c1d89a042e0e538ace2cc2de1d7c019",
+      "sha256": "b981ef3a27cd7671fe84aa4f88474a6a47f2f0b7925a5fbb11cf5b72b8a7e495",
+      "bytes": 7270
+    },
+    {
+      "path": "shared/detective-self-validation.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "5f3108787b737f6b560c3ee9152583fe6aadc12a",
+      "sha256": "2def59e770d98a41603b36e849198c844982460c117e8e4249c1e591b48326f2",
+      "bytes": 3896
+    },
+    {
+      "path": "shared/detective-model.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "3a23eb9090d6c877a365bde7d0dc405b8721bb14",
+      "sha256": "23d959a846d26a4db3c6834e6d4259018a9de9ec32ff1fc51a20b44ae18a7f91",
+      "bytes": 9797
+    },
+    {
+      "path": "shared/detective-mass-spring.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "ce9bc475589995094de23fab0d7eca7aec233c5a",
+      "sha256": "0be656cbf3ebedd95b2d58dbbaf99d2f0520a7978317edbb2792a9d6735f81e0",
+      "bytes": 9077
+    },
+    {
+      "path": "shared/learning-evidence.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "3f94246029db195a86187e1f1dc1cd35dd42c77c",
+      "sha256": "0a5ffa4b2406a8d7e90248f5620b054a6309de85cf00cbd94d632dc68390a79d",
+      "bytes": 2426
+    },
+    {
+      "path": "shared/pilot-math.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "e33aca3ce40eed3a05f3e2505cddcf9d74cac933",
+      "sha256": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
+      "bytes": 11678
+    },
+    {
+      "path": "shared/inverse-index.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "3e050ba3ec23451720576ead3636ee9b0d81bf0d",
+      "sha256": "a33e81a9c440b1efaef4f151f0699dd6a2a5dc50c8987df27e3dde511e4d7306",
+      "bytes": 2360
+    },
+    {
+      "path": "content/detective/seed-cases.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "430f532d361e8734be797a74ebc4675357a4e375",
+      "sha256": "e3dd33b4507e491c1ee5c1ad5a1365823777c7c73990cebcaf05beaa06ef4990",
+      "bytes": 11156
+    },
+    {
+      "path": "content/detective/process-cases.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "dcee8a4ba0f9894831a83c50f96ea0c3be1fac53",
+      "sha256": "15f875df5ef38f3ac367a22c57c36c83300ce8b241251f8f8ff85b95d285a91e",
+      "bytes": 2913
+    },
+    {
+      "path": "content/pilot/methods.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "6195041aea454215121ba7069a2e5de5b80a4842",
+      "sha256": "f91720f95a0de52583579f0300ccc952adc37eb137464912a93bd0986151025c",
+      "bytes": 17406
+    },
+    {
+      "path": "content/pilot/thinking-source.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "5c4595fd6c303b3f57f214938c90bf8bb5cfde68",
+      "sha256": "844655d8993e657663ec2d90c5e5f0d2bccce4e181cad6859ad45b1102579437",
+      "bytes": 4951
+    },
+    {
+      "path": "content/pilot/thinking-publication.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "9ed5e01359f414eeee4aea54d6f8d35da0da3d68",
+      "sha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+      "bytes": 3453
+    },
+    {
+      "path": "content/pilot/thinking-variants.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "18c08631c4d73555a50b76642b89d1a99b729854",
+      "sha256": "8bdc93f8ab0a9d6bf96735f48e5713e6a739759009cd76bd7a34c12ba8ec8f0f",
+      "bytes": 16501
+    },
+    {
+      "path": "scripts/build-upper-primary-catalog.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "08b386c1c0805dd5d1923ae53b779f747f462166",
+      "sha256": "cfebd44896d669e0ec7267e62e103f0fa85276e7fa43afe4fbcc638837c70e02",
+      "bytes": 81959
+    },
+    {
+      "path": "scripts/course-framework.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "5a88d5536e948df89c3ffe9415599e6622f6e197",
+      "sha256": "a2636123db19fc46d6d72948d391b62c18dd64aa0cc84fcee550b0787b5ea67e",
+      "bytes": 13046
+    },
+    {
+      "path": "tests/detective-v2.test.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "205b9aa92374574d80cd13a666cf9f0485d0a69e",
+      "sha256": "750867c338bb87e28e8a76c356075150a602b70e8ec2581cc10552341e54ee75",
+      "bytes": 22668
+    },
+    {
+      "path": "tests/detective-evidence-review.test.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "d6c2c00a14d8f88c25aa4d2fbb733573ae6b1a99",
+      "sha256": "39a576355d1ff9a20bacaa93d976d2c95d94582f1c38d098071cc6f221dc17e8",
+      "bytes": 11923
+    },
+    {
+      "path": "shared/length-model.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "1c01ece619f0dc8801aca5ed2d6147bfbb9db680",
+      "sha256": "c4a737d13c68f8ec4a420823a556301c5b4abc0d62e077f515ba70c399feb492",
+      "bytes": 5483
+    },
+    {
+      "path": "content/pilot/thinking-hints.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "3af5f1373cce1afd1bcd87d3c3885d728edbd0da",
+      "sha256": "f73500b4109896babcfd8a0bbe302737b3562fcf25c986c2839d20cf71f6fbde",
+      "bytes": 4312
+    },
+    {
+      "path": "content/pilot/thinking-deeper-variants.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "a84bea714ff96c294e081a582ff8096b04f502b9",
+      "sha256": "0da0f513b7535138154b0ed8c29bc186509fe3f94e23589d6cc0244f31867d9b",
+      "bytes": 14863
+    },
+    {
+      "path": "content/course-plan-v2/grade-3-thinking.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "2c0b0b01e43adc79345620ce3e193987f7d85c92",
+      "sha256": "457b794d9b418d20550be510b598a469af972dcd559c6c797b9f7851c398b7ad",
+      "bytes": 234715
+    },
+    {
+      "path": "shared/operation-models.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "a711e5ed609b581a6fdecd5ce9b7192ec59a1029",
+      "sha256": "f51539a15a8be0deeadb2c357f1563c0278bf5f694148adb29fa6cfc277154f9",
+      "bytes": 2482
+    },
+    {
+      "path": "shared/hands-on-models.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "3bd12df8718c0dcc9ef9e4f4ad517f1ae2bd2e37",
+      "sha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1",
+      "bytes": 5414
+    },
+    {
+      "path": "shared/textbook-models.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "252842f51207dec7442e0db88bdc89a0fc4f1a06",
+      "sha256": "e76b8d85e58dfe0fff18991af9953f10cf3af89198d8566e985b4e3afa23f6cf",
+      "bytes": 12178
+    },
+    {
+      "path": "shared/core-models.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "35333a65f6bd5f7f08862e71646e09049de9902e",
+      "sha256": "e5ec016e741dc4bef74b85d71e4a5bfd905010ae96fea99ea5a7d79f16b9f636",
+      "bytes": 13476
+    },
+    {
+      "path": "shared/two-ring-view.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "840ecae22bbb2901b47f0dc53dcda519d4f4d57c",
+      "sha256": "e66ea4eb2d40f4a5656c193218b96c041719fe128f836dead3178bbe0b2afb0a",
+      "bytes": 1206
+    },
+    {
+      "path": "shared/thinking-tools.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "e5851e6033ea406410e94ad1f37bacb751bfb2ee",
+      "sha256": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+      "bytes": 4459
+    },
+    {
+      "path": "shared/widget-state.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "d8073d21b1c7ef6be3b001bebd431b5344bbc9ab",
+      "sha256": "51b59cbf8a7ae23e3973c7191d2b030a3aba8fea1a3339ffa940e09c3e0010ab",
+      "bytes": 8170
+    },
+    {
+      "path": "content/pilot/clarity-errata.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "78b2e06af753daa17bbf950331dec321b6e28c60",
+      "sha256": "00ee4d10bef32906ed5db3325fd21584546b51b12cbebbf585768ad8dcdf2beb",
+      "bytes": 2593
+    },
+    {
+      "path": "content/pilot/inverse-revisions.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "1bb5e356531d191844c0688f93094bccde9d84b9",
+      "sha256": "e05a0bc4d48a03253f5b894b1c0629224ba820a74de68165795ddcb7a21f90d4",
+      "bytes": 7019
+    },
+    {
+      "path": "content/pilot/lessons.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "5fa95a64b2f8c7d7ebbf907ef640106c09661c66",
+      "sha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
+      "bytes": 1904117
+    },
+    {
+      "path": "shared/withdrawn-checks.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4",
+      "sha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "bytes": 833
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261026-AVG-FOUNDATION-A.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "974a4eb717c8720a01388eb73cf7607199801b0a",
+      "sha256": "afecec0987f74de321ecfb4403b7a1f0227fb809ca5a22083fb79bc8194959cf",
+      "bytes": 6250
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261026-AVG-REVERSE-A.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "b430c15bb733f278135629dd586503551b524574",
+      "sha256": "f54086f5d4306de32a44207fd9b52b58c4a0a1f0d05814e63dd5056956c4146f",
+      "bytes": 6074
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261026-SPR-FORWARD-A.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "01f67fa1c42b0c76bfd4256e9d0455faca6cc6a0",
+      "sha256": "329f924ad9f7fa9b863a1f65015835888a6af1c0b49d1730a5302a44b86bc9b7",
+      "bytes": 6654
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261026-SPR-REVERSE-A.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "f8b32e2bf424ebe2c5fe0ad7948069a1cd246c4e",
+      "sha256": "62823d20052feea32cf388b7ff11c0fd892564f729395e781cb362a45f4d4345",
+      "bytes": 6588
+    },
+    {
+      "path": "content/detective/reviewed/DT-20261016-WIRE-A.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "e00e2ac22b5d7a263c389a92866a44630e5b442c",
+      "sha256": "4f75fd56e09fec0c9cde5a693652b9870d6689e1aad9f92700bb63545c2afe7d",
+      "bytes": 7751
+    },
+    {
+      "path": "docs/review/evidence-detective-content-20261016/deliveries.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "25230c501453f422ef1c202062f6f2f409c7be6c43c5151bfadf8485e9702606",
+      "bytes": 11312
+    },
+    {
+      "path": "shared/detective-inbox.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "5af42ef74bcc8af7813023902eaf0237459b0c52",
+      "sha256": "b1b20237794b38e6b5878ff9f41f5acbfe3fa9cfc0a6e21e0f16e86552c8de0f",
+      "bytes": 17791
+    },
+    {
+      "path": "shared/task-audit-oracle.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "3c54a68b54ba167869f2b6173f068c94c43c166a",
+      "sha256": "5fdeb04e708eda514a1c4493fd0295137bd9c311e6fb805a66a409bfce738454",
+      "bytes": 7257
+    },
+    {
+      "path": "scripts/fixtures/detective-inbox-fetch.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "96466ec0f07c3bbd39857826158267f8178972b4",
+      "sha256": "fc2b609db5e4e99392d919ee28636b0b2b9338b9c6e0040385103b2c8432a5c8",
+      "bytes": 1644
+    },
+    {
+      "path": "scripts/lib/detective-delivery-audit.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "bee9a86f6d305e4e542da4c68234ca1871f915ab",
+      "sha256": "aee6dc2b081a87bd5d5ce912d9d7269b4bcd7760dc81e35af868b3e4bf60c4c0",
+      "bytes": 5087
+    },
+    {
+      "path": "content/detective/reviewed/v2-source-manifest.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "8b47c86af65428203937b20015e9d4be41fad66c",
+      "sha256": "313e5b14e55c472867922fff1dd06f18cbe14f813f19b0861b49083a67ad3cdb",
+      "bytes": 440
+    },
+    {
+      "path": "src/detective/DetectiveFigure.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "0f7aaea0b5068f215e85e9c1b670ef40923c73b3",
+      "sha256": "7187166b18b460f59c2b835184dffccabaff4c399871ce6b475d6c72b28f3289",
+      "bytes": 5130
+    },
+    {
+      "path": "src/detective/DetectivePanel.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "bytes": 16639
+    },
+    {
+      "path": "src/detective/ParentDetectiveCases.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "fb0b9914479dadd12ac4c5eaaa2c885727f255d2",
+      "sha256": "608441ed300dff0b01ab9796a16184afd1eb1ea390776a344a254af37c4a6301",
+      "bytes": 18389
+    },
+    {
+      "path": "src/detective/ParentSelfTraining.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "62e44f05f6e27998bb7d94eb556381d7ce08fb62",
+      "sha256": "7d00e727ee6ec95665d9bd28decddda744398ade2c3dc0270dddbefeb8082aad",
+      "bytes": 4728
+    },
+    {
+      "path": "src/detective/SelfTraining.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "bytes": 15314
+    },
+    {
+      "path": "src/detective/api.ts",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "094935b30e376c9f8282f5728947f1d0004924f7",
+      "sha256": "0f821463fe298c6b00c6a06c34c7c79e8780f6189669b5ddaa45aeab703d97eb",
+      "bytes": 3189
+    },
+    {
+      "path": "src/detective/detective.css",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "82e35fc563d0fe7422ca0cce72e55ab3b32ff72e",
+      "sha256": "019107e682d4155a2b16e5cebe7d78ffdb2e519cb22db153e2e002e50cea36b4",
+      "bytes": 17343
+    },
+    {
+      "path": "src/detective/self-api.ts",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "1d0aa8fe2853fc04ee474f060707c18042514900",
+      "sha256": "623003f782a9a10c0082818042d77100eef15c80071bb5f756fe99a7c0166038",
+      "bytes": 2098
+    },
+    {
+      "path": "src/detective/self-training.css",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "ddf359720a95737bdded64e222bf38c3025aab62",
+      "sha256": "8e40d74165da1e7fc8cf58b8d6287fa44317248eb5876058ba922167752fcfe6",
+      "bytes": 4341
+    },
+    {
+      "path": "src/thinking/ParentFormalReview.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "b6695894e250d0ef3b0f68c7b59edb3140f2b32b",
+      "sha256": "c5f1f25573ce10036f8a6d38ef8c5334ffc08bab4fc816cd69f5838a256ad785",
+      "bytes": 3493
+    },
+    {
+      "path": "src/thinking/ParentThinkingReview.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "876dfa1c72dbcefd3cd21fd3fc84d10d2eb9ddf6",
+      "sha256": "216ef006870bbeee7078e94e490518c9260cab5532b21b0929cc3241e941799e",
+      "bytes": 17677
+    },
+    {
+      "path": "src/thinking/ThinkingFigure.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "0d0f40ca4f3ae9696122946ca63f4863ac562102",
+      "sha256": "d20026952c99cd2a915efb83976c798240d1b21b92190342147447db4be23418",
+      "bytes": 6306
+    },
+    {
+      "path": "src/thinking/ThinkingPanel.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "bytes": 8652
+    },
+    {
+      "path": "src/thinking/ThinkingTools.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "6cac76bbb2986e1e6e1eb1717d2f9d12f6ed2de0",
+      "sha256": "e263f07f2a5e29822eccc9cfa0ff205c82ee04a726b2bf2fc4729a0927359e80",
+      "bytes": 9505
+    },
+    {
+      "path": "src/thinking/ThinkingVariantFigure.tsx",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "45657ee1924824ec544d7465a957329740b4834b",
+      "sha256": "527bf1d62685dca878c73e6225d740f29dbaefbff3a185d6a2b56f7bd1c06f32",
+      "bytes": 15188
+    },
+    {
+      "path": "src/thinking/thinking.css",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "84eb2748c6ec7dc3694289a089007fb17fe70540",
+      "sha256": "b76adedbf66900fa060ce8ad7dbca8d98a7271941afdc18999fc423764e075be",
+      "bytes": 6365
+    },
+    {
+      "path": "docs/design/数学小侦探_四层自我纠错训练_一次性交付任务书_20261027.md",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "55d600e50b658e28c0c3724ba2f568198ffff198",
+      "sha256": "39ce399fd02f075c5ed1d7af58bdb4cc38a244b5c1ca9b59b809f41ca29eb173",
+      "bytes": 21998
+    }
+  ],
+  "runtimeDelta": [
+    {
+      "path": "server/detective-check-evidence.mjs",
+      "oldBlob": null,
+      "newBlob": "745302798c1d89a042e0e538ace2cc2de1d7c019"
+    },
+    {
+      "path": "server/detective-inbox-sync.mjs",
+      "oldBlob": "9d0c1d711aa35ca6b498e7e0ac226978dfd7b140",
+      "newBlob": "efc0ee630ff4bb9bfebdb206088f6a08756824d4"
+    },
+    {
+      "path": "server/detective-reviewed-editions.json",
+      "oldBlob": null,
+      "newBlob": "051278d309087fee0e09a36702ad07b69a8abb95"
+    },
+    {
+      "path": "server/detective-self-integrity.mjs",
+      "oldBlob": null,
+      "newBlob": "83f6beeb97b7ca5a163f77c2cf40b8850f619fcf"
+    },
+    {
+      "path": "server/detective-self-questions.mjs",
+      "oldBlob": null,
+      "newBlob": "06c74ff29d3d189ac6a2563fd0745acad2de587e"
+    },
+    {
+      "path": "server/detective-self-store.mjs",
+      "oldBlob": null,
+      "newBlob": "81128977513ccd22b58de0e89941093eace85c1a"
+    },
+    {
+      "path": "server/detective-store.mjs",
+      "oldBlob": "4cfe3cad8bf3a8bd853019338311765d4d95e8de",
+      "newBlob": "76368cb0efbc68ea2e14f0631f8c8963a3f22497"
+    },
+    {
+      "path": "server/index.mjs",
+      "oldBlob": "6481d9d16356cb47d2783b83ea89eae3959a6899",
+      "newBlob": "01bdd7045cdef6efac134fcc0cf2fe836868dcc7"
+    },
+    {
+      "path": "server/store.mjs",
+      "oldBlob": "41aabfa8b9bb9eb3f27bff72b52ed3692e03d56e",
+      "newBlob": "0d1600cd20481733f5c7c338f72cac1fc1b83712"
+    },
+    {
+      "path": "shared/detective-inbox.mjs",
+      "oldBlob": "51ac8e9189c71ed3b1d5d9680a19b9393aa5e73f",
+      "newBlob": "5af42ef74bcc8af7813023902eaf0237459b0c52"
+    },
+    {
+      "path": "shared/detective-mass-spring.mjs",
+      "oldBlob": null,
+      "newBlob": "ce9bc475589995094de23fab0d7eca7aec233c5a"
+    },
+    {
+      "path": "shared/detective-model.mjs",
+      "oldBlob": "38b59cef4a2c4f799fbe3aaf077de20362c0ab69",
+      "newBlob": "3a23eb9090d6c877a365bde7d0dc405b8721bb14"
+    },
+    {
+      "path": "shared/detective-self-validation.mjs",
+      "oldBlob": null,
+      "newBlob": "5f3108787b737f6b560c3ee9152583fe6aadc12a"
+    },
+    {
+      "path": "src/detective/DetectivePanel.tsx",
+      "oldBlob": "c23b5e32c673f427b735ff8863bea0fbe5b204e6",
+      "newBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900"
+    },
+    {
+      "path": "src/detective/ParentDetectiveCases.tsx",
+      "oldBlob": "76708503613dbe9ca62fc23524f0dbc67c262986",
+      "newBlob": "fb0b9914479dadd12ac4c5eaaa2c885727f255d2"
+    },
+    {
+      "path": "src/detective/ParentSelfTraining.tsx",
+      "oldBlob": null,
+      "newBlob": "62e44f05f6e27998bb7d94eb556381d7ce08fb62"
+    },
+    {
+      "path": "src/detective/SelfTraining.tsx",
+      "oldBlob": null,
+      "newBlob": "11750ea50f450852a60671fb12e36b988e701163"
+    },
+    {
+      "path": "src/detective/api.ts",
+      "oldBlob": "4e80f3134d34dbd6fc77b8bcfc69d46abe71b8bc",
+      "newBlob": "094935b30e376c9f8282f5728947f1d0004924f7"
+    },
+    {
+      "path": "src/detective/self-api.ts",
+      "oldBlob": null,
+      "newBlob": "1d0aa8fe2853fc04ee474f060707c18042514900"
+    }
+  ],
+  "anonymousFixtures": [
+    {
+      "bundleId": "DT-20261015-ARITH-A",
+      "sourceBlob": "487495c16239bf991d4d8ae2900aa84b1e113a1b",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "33ef3e1193a4dc5498d17b234148cb3edc019a4b6dd6b8a2b9ce45f49ff864f0",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261015-CARD-A",
+      "sourceBlob": "7d8afd779c25606d97f338399a753269458b088a",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "6f5af58fc0e4817f4e52449f00ec507a7642df0afd6497903ecee1194f6f4af6",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261015-EQUAL-A",
+      "sourceBlob": "0e431dc831a0130c9c1d8ba2a9d9da57b515da43",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "f5385d4c31de11c8abda974542bbf2197d4475a2baabc6ba9ad791d26e658608",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261015-ORDER-A",
+      "sourceBlob": "4762400997021be1d635ac89fb654e6fb1a3349f",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "88797a839bdfc89c103d93bafe3f44924339659c83606aa76087c55ec28f6cbd",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261015-UNIT-A",
+      "sourceBlob": "bbb424436eef7438c307c551bd3da97c1fc20934",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "c3a2a96d56c3a0e4e3684500539d461c590a7c5974ff053e7ccd420775a4e25e",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261026-AVG-REVERSE-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b430c15bb733f278135629dd586503551b524574",
+      "sha256": "f54086f5d4306de32a44207fd9b52b58c4a0a1f0d05814e63dd5056956c4146f",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    },
+    {
+      "bundleId": "DT-20261026-SPR-FORWARD-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "01f67fa1c42b0c76bfd4256e9d0455faca6cc6a0",
+      "sha256": "329f924ad9f7fa9b863a1f65015835888a6af1c0b49d1730a5302a44b86bc9b7",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    },
+    {
+      "bundleId": "DT-20261026-AVG-FOUNDATION-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "974a4eb717c8720a01388eb73cf7607199801b0a",
+      "sha256": "afecec0987f74de321ecfb4403b7a1f0227fb809ca5a22083fb79bc8194959cf",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    },
+    {
+      "bundleId": "DT-20261026-SPR-REVERSE-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "f8b32e2bf424ebe2c5fe0ad7948069a1cd246c4e",
+      "sha256": "62823d20052feea32cf388b7ff11c0fd892564f729395e781cb362a45f4d4345",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    },
+    {
+      "bundleId": "DT-20261016-WIRE-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e00e2ac22b5d7a263c389a92866a44630e5b442c",
+      "sha256": "4f75fd56e09fec0c9cde5a693652b9870d6689e1aad9f92700bb63545c2afe7d",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    }
+  ],
+  "privateSourceFilesRead": false,
+  "oldRepositoriesWritten": false
+}

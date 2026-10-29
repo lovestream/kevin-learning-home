@@ -1,3 +1,4 @@
+import type { MathTrainingRepository } from "../../packages/math-training/repository.ts";
 import { MathLessonService } from "../../packages/subjects/math/service.ts";
 import {
   createServer as httpsServer,
@@ -19,6 +20,7 @@ export async function authFixture(
   tls = false,
   empty = false,
   math: boolean | MathLessonService = false,
+  syntheticMathTraining?: MathTrainingRepository,
 ) {
   process.env.NODE_ENV = "test";
   const f = fixture(),
@@ -77,6 +79,7 @@ export async function authFixture(
     const inner = createHttp(store, {
       webRoot: resolve("apps/web/dist"),
       origin,
+      syntheticMathTraining,
       auth: { service: auth, config },
       ...(math
         ? {

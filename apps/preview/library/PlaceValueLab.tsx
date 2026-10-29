@@ -19,7 +19,7 @@ export default function PlaceValueLab({ lesson }: { lesson: Lesson }) {
                 <i className="one" key={i} />
               ))}
             </div>
-            <small>每块代表 1 {c.name}</small>
+            <small>每块代表<br /><strong>1{c.name}</strong></small>
           </section>
         ))}
       </div>

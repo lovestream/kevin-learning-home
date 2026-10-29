@@ -1,6 +1,11 @@
 import { lazy, Suspense } from "react";
+const ReadingArticle = lazy(() => import("./reading/Article.tsx"));
+const DetectiveTraining = lazy(() => import("./DetectiveTraining.tsx"));
 const LibraryPage = lazy(() => import("./library/Library.tsx"));
 import Practice from "./practice/Practice.tsx";
+import { withdrawnLessons } from "../../packages/math-training/source/shared/withdrawn-checks.mjs";
+import { PageLearning } from "./PageLearning.tsx";
+import DesignShell from "./DesignShell.tsx";
 import { contentDigest } from "./integrity.ts";
 import { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
@@ -36,6 +41,7 @@ import "../web/src/style.css";
 import "./adapters/source/src/studio/teaching.css";
 import "../web/src/math/math.css";
 import "./preview.css";
+import "./design-system.css";
 const trackLabels: Record<string, string> = {
   foundation: "基础 B",
   enhancement: "提高 E",
@@ -105,6 +111,7 @@ function Lesson({
 }) {
   const neighbors = neighborLessons(map, catalog, lesson.lessonId);
   const currentUnit = lessonLocation(map, lesson.lessonId);
+  const [reading, setReading] = useState(false);
   const [step, setStep] = useState(
       new URLSearchParams(location.search).has("practice") ? 5 : 0,
     ),
@@ -127,6 +134,19 @@ function Lesson({
     setStep(n);
     requestAnimationFrame(() => stage.current?.focus());
   }
+  if (reading)
+    return (
+      <Suspense fallback={<p role="status">正在展开教案…</p>}>
+        <ReadingArticle
+          lesson={lesson}
+          onBack={() => setReading(false)}
+          onPractice={() => {
+            setReading(false);
+            move(5);
+          }}
+        />
+      </Suspense>
+    );
   const current = currentClassroomExperiment(lesson, value),
     core = lesson.conceptScenes[0]?.textbookSpec;
   const mission = lesson.mathScenes.length
@@ -145,10 +165,25 @@ function Lesson({
         <h1>{lesson.title}</h1>
         <p>{lesson.subtitle}</p>
         <p className="math-readonly">
-          draft 教学预览 · {staticOnly ? "静态关系图与纸笔指导" : "交互教具"} ·
+          课堂探索 · {staticOnly ? "静态关系图与纸笔指导" : "交互教具"} ·
           体验模式不会保存
         </p>
       </header>
+      {withdrawnLessons.includes(lesson.lessonId) && (
+        <a
+          className="reading-mode-toggle"
+          href={
+            "/subjects/math/lessons/" +
+            lesson.lessonId +
+            "?practice=core&assessment=withdrawn-v1"
+          }
+        >
+          收起教具，独立做五题
+        </a>
+      )}
+      <button className="reading-mode-toggle" onClick={() => setReading(true)}>
+        展开完整教案
+      </button>
       <details className="preview-context">
         <summary>课程单元与推荐先修</summary>
         <p>
@@ -343,6 +378,43 @@ function Lesson({
   );
 }
 function App() {
+  const [route, setRoute] = useState(location.href);
+  useEffect(() => {
+    const update = () => {
+      setRoute(location.href);
+      window.scrollTo(0, 0);
+    };
+    const click = (event: MouseEvent) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      )
+        return;
+      const a =
+        event.target instanceof Element ? event.target.closest("a") : null;
+      if (!a || a.target || a.hasAttribute("download")) return;
+      const u = new URL(a.href, location.href);
+      if (
+        u.origin !== location.origin ||
+        !(u.pathname === "/" || u.pathname.startsWith("/subjects/math")) ||
+        u.hash
+      )
+        return;
+      event.preventDefault();
+      history.pushState(null, "", u);
+      update();
+    };
+    document.addEventListener("click", click);
+    window.addEventListener("popstate", update);
+    return () => {
+      document.removeEventListener("click", click);
+      window.removeEventListener("popstate", update);
+    };
+  }, []);
   const [catalog, setCatalog] = useState<Catalog | null>(null),
     [learningMap, setLearningMap] = useState<LearningMap | null>(null),
     [lesson, setLesson] = useState<FullLesson | null>(null),
@@ -354,6 +426,8 @@ function App() {
         : null,
     print = location.pathname === "/math-paper-folding/print-templates.html";
   useEffect(() => {
+    setError(false);
+    setLesson(null);
     let alive = true;
     const controller = new AbortController();
     void (async () => {
@@ -408,25 +482,7 @@ function App() {
     };
   }, [requested]);
   return (
-    <div className="site-shell preview-shell">
-      <a className="skip-link" href="#main-content">
-        跳到主要内容
-      </a>
-      <header className="topbar">
-        <a className="brand" href="/">
-          ⌂ Kevin 学习家园
-        </a>
-        <span className="role-tag">数学内容体验 · 无需账号</span>
-      </header>
-      <nav aria-label="学科导航" className="preview-subjects">
-        <a href="/subjects/math" aria-current="page">
-          数学 · 课程与探索
-        </a>
-        <span aria-disabled="true">英语 · 待迁入</span>
-      </nav>
-      <p className="preview-banner">
-        体验模式不会保存：无真实学习数据、无账号、无成绩记录。刷新或离开课堂会清空本次操作。
-      </p>
+    <DesignShell>
       <main id="main-content" className="reading-area" tabIndex={-1}>
         {learningMap && (
           <MapBreadcrumb
@@ -461,26 +517,32 @@ function App() {
               </figure>
             ))}
           </section>
+        ) : location.pathname === "/subjects/math/detective" ? (
+          <Suspense fallback={<p role="status">正在准备案卷…</p>}>
+            <DetectiveTraining />
+          </Suspense>
         ) : location.pathname === "/subjects/math/library" ? (
           <Suspense fallback={<p role="status">正在准备数学探索…</p>}>
-            <LibraryPage catalog={catalog} map={learningMap} />
+            <LibraryPage key={route} catalog={catalog} map={learningMap} />
           </Suspense>
+        ) : requested && (!lesson || lesson.lessonId !== requested) ? (
+          <p role="status">正在摆好课堂…</p>
         ) : requested && lesson ? (
           <Lesson
-            key={lesson.lessonId}
+            key={route}
             lesson={lesson}
             catalog={catalog}
             map={learningMap}
           />
         ) : (
-          <CatalogPage catalog={catalog} map={learningMap} />
+          <CatalogPage key={route} catalog={catalog} map={learningMap} />
         )}
       </main>
-      <footer className="preview-footer">
-        当前可体验三年级 70 课与 849 道临时练习，另有 17 思维卡、14 模拟侦探和
-        54 高年级旧版课。解释题待家长核对；旧网站继续独立运行。
-      </footer>
-    </div>
+    </DesignShell>
   );
 }
-createRoot(document.getElementById("root")!).render(<App />);
+createRoot(document.getElementById("root")!).render(
+  <PageLearning>
+    <App />
+  </PageLearning>,
+);

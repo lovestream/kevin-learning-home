@@ -1,5 +1,6 @@
 // Real compiled frontend + content process; no response stubs or personal learning data.
 import fs from "node:fs";
+import {runtimeInputs} from "../math-onepass/inputs.mjs";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
@@ -31,29 +32,7 @@ const server = nas ? null : await startPreview({ enabled: true, port: 0 }),
   results = [],
   flows = [],
   started = Date.now();
-const inputs = [
-  "apps/preview/main.tsx",
-  "apps/preview/MapNavigation.tsx",
-  "apps/preview/server.ts",
-  "apps/preview/preview.css",
-  "apps/preview/practice/Practice.tsx",
-  "apps/preview/practice/service.ts",
-  ...execFileSync(
-    "git",
-    [
-      "ls-files",
-      "--cached",
-      "--others",
-      "--exclude-standard",
-      "apps/preview/library",
-    ],
-    { encoding: "utf8" },
-  )
-    .trim()
-    .split("\n")
-    .filter(Boolean),
-  "tests/math-full-remainder/browser.mjs",
-];
+const inputs = [...Object.keys(runtimeInputs()),"tests/math-full-remainder/browser.mjs"];
 const execution = {
   head: execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }).trim(),
   dirty: !!execFileSync("git", ["status", "--porcelain"], {
@@ -264,9 +243,9 @@ try {
         await page.locator(".classroom-route button").nth(step).click();
         await expect(page.locator(".classroom-stage h2")).toHaveText(
           [
-            "本质结论",
-            "生活麻烦",
-            "为什么这样发明",
+            "核心发现",
+            "真实问题",
+            "图到数学",
             "动手建模",
             "分层练习",
             "自己复述",
@@ -494,6 +473,9 @@ try {
         [
           "/preview-api/v1/library/grade",
           "/preview-api/v1/detective/grade",
+          "/preview-api/v1/training/start",
+          "/preview-api/v1/training/study-event",
+          "/preview-api/v1/training/release",
         ].includes(x),
       ),
     );

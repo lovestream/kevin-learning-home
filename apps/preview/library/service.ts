@@ -127,6 +127,34 @@ export function gradeLibrary(
 ) {
   return gradePractice(bank.practice, input);
 }
+// An explicit teaching-example reveal, separate from answering a learner task.
+// Only the first original non-choice example in each of the 54 legacy lessons.
+export function legacyExample(
+  bank: ReturnType<typeof loadLibrary>,
+  input: unknown,
+) {
+  const { lessonId } = z
+    .object({ lessonId: z.string().max(120) })
+    .strict()
+    .parse(input);
+  if (
+    !bank.catalog.entries.some((e) => e.kind === "legacy" && e.id === lessonId)
+  )
+    throw Error("LEGACY_TEACHING_EXAMPLE_REQUIRED");
+  const task = Array.from(bank.practice.tasks.values()).find(
+    (r) => r.lessonId === lessonId && r.task.kind !== "choice",
+  )?.task;
+  if (!task) throw Error("LEGACY_EXAMPLE_MISSING");
+  return {
+    lessonId,
+    taskId: task.id,
+    prompt: task.prompt,
+    hint: task.hint,
+    solution: task.solution,
+    teachingOnly: true,
+    persisted: false,
+  };
+}
 export function gradeDetective(
   bank: ReturnType<typeof loadLibrary>,
   input: unknown,

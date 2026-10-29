@@ -1,3 +1,9 @@
+import {
+  withdrawnLessons,
+  withdrawnTaskIds,
+} from "../../../packages/math-training/source/shared/withdrawn-checks.mjs";
+import { usePracticeJourney } from "./usePracticeJourney.ts";
+import { usePageLearning } from "../PageLearning.tsx";
 import { useEffect, useRef, useState } from "react";
 import {
   groups,
@@ -19,6 +25,21 @@ type Attempt = {
   checks: boolean[];
   result?: PracticeResult;
 };
+function readableAnswer(task: PublicTask, answer: Answer) {
+  if (task.kind === "choice")
+    return [
+      task.options?.find((x) => x.id === answer.value)?.text ?? answer.value,
+      task.responseSpec.evidenceOptions?.find((x) => x.id === answer.evidence)
+        ?.text,
+    ]
+      .filter(Boolean)
+      .join("；");
+  if (task.fields)
+    return task.fields
+      .map((f) => `${f.label}：${answer[f.key] ?? ""}${f.unit ?? ""}`)
+      .join("；");
+  return `${answer.value ?? ""}${task.unit ?? ""}`;
+}
 const empty = (): Attempt => ({ answer: {}, checks: [false, false, false] });
 function AnswerInput({
   task,
@@ -35,7 +56,7 @@ function AnswerInput({
         我的解释
         <textarea
           aria-label="我的解释"
-          maxLength={1000}
+          maxLength={200}
           value={value.value ?? ""}
           onChange={(e) => onChange({ ...value, value: e.target.value })}
           placeholder="说出结论、关键一步，以及为什么"
@@ -113,12 +134,35 @@ export default function Practice({
   apiPrefix = "/preview-api/v1/practice",
   visibleGroups = groups,
   initialGroup,
+  onFirst,
+  onFinal,
+  externalBusy = false,
+  finalized = false,
+  assisted = false,
+  taskSelection,
 }: {
   lessonId: string;
   apiPrefix?: "/preview-api/v1/practice" | "/preview-api/v1/library";
   visibleGroups?: readonly (typeof groups)[number][];
   initialGroup?: (typeof groups)[number];
+  onFirst?: (
+    answer: Record<string, string>,
+  ) => Promise<void | Record<string, string>>;
+  onFinal?: (
+    answer: Record<string, string>,
+    checks: boolean[],
+  ) => Promise<void>;
+  externalBusy?: boolean;
+  finalized?: boolean;
+  assisted?: boolean;
+  taskSelection?: readonly string[];
 }) {
+  const withdrawn =
+    new URLSearchParams(location.search).get("assessment") === "withdrawn-v1" &&
+    withdrawnLessons.includes(lessonId);
+  const groupsShown = withdrawn ? (["core"] as const) : visibleGroups;
+  const pageLearning = usePageLearning();
+  const journey = usePracticeJourney(lessonId, !onFirst);
   const [lesson, setLesson] = useState<PracticeLesson | null>(null),
     [group, setGroup] = useState<(typeof groups)[number]>(() => {
       const q = new URLSearchParams(location.search).get(
@@ -126,7 +170,7 @@ export default function Practice({
       ) as (typeof groups)[number];
       return (
         initialGroup ??
-        (visibleGroups.includes(q) ? q : (visibleGroups[0] ?? "warmup"))
+        (groupsShown.includes(q) ? q : (groupsShown[0] ?? "warmup"))
       );
     }),
     [index, setIndex] = useState(0),
@@ -145,8 +189,28 @@ export default function Practice({
     })
       .then(async (r) => {
         if (!r.ok) throw Error();
-        const data = publicLessonSchema.parse(await r.json());
+        let data = publicLessonSchema.parse(await r.json());
+        if (withdrawn) {
+          const ids = withdrawnTaskIds(lessonId),
+            all = Object.values(data.taskSets).flat(),
+            core = ids.map((id) => all.find((t) => t.id === id));
+          if (core.some((t) => !t)) throw Error("WITHDRAWN_TASK_MISSING");
+          data = {
+            ...data,
+            taskSets: { ...data.taskSets, core: core as PublicTask[] },
+          };
+        }
         if (data.lessonId !== lessonId) throw Error();
+        if (taskSelection)
+          data = {
+            ...data,
+            taskSets: Object.fromEntries(
+              Object.entries(data.taskSets).map(([g, tasks]) => [
+                g,
+                tasks.filter((t) => taskSelection.includes(t.id)),
+              ]),
+            ) as PracticeLesson["taskSets"],
+          };
         if (!c.signal.aborted) {
           setLesson(data);
           const taskId = new URLSearchParams(location.search).get("task");
@@ -156,9 +220,7 @@ export default function Practice({
               ) as (typeof groups)[number],
               g =
                 initialGroup ??
-                (visibleGroups.includes(q)
-                  ? q
-                  : (visibleGroups[0] ?? "warmup")),
+                (groupsShown.includes(q) ? q : (groupsShown[0] ?? "warmup")),
               n = data.taskSets[g].findIndex((t) => t.id === taskId);
             if (n < 0) setError("原题链接暂时无法确认，请从本组重新选择。");
             else {
@@ -201,6 +263,17 @@ export default function Practice({
     setBusy(true);
     setError("");
     try {
+      if (onFinal) await onFinal(attempt.answer, attempt.checks);
+      else
+        await journey.run(
+          group,
+          task.id,
+          "final",
+          attempt.answer,
+          task.selfCheckItems ?? checksDefault,
+          "hint",
+          withdrawn,
+        );
       const r = await fetch(apiPrefix + "/grade", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -219,7 +292,23 @@ export default function Practice({
       if (!r.ok) throw Error();
       const result = resultSchema.parse(await r.json());
       if (result.taskId !== task.id) throw Error();
-      if (run === generation.current) update({ ...attempt, result });
+      if (run === generation.current) {
+        update({ ...attempt, result });
+        pageLearning.record({
+          lessonId,
+          taskId: task.id,
+          group,
+          prompt: task.prompt,
+          first: attempt.first,
+          answer: attempt.answer,
+          firstText: readableAnswer(task, attempt.first),
+          answerText: readableAnswer(task, attempt.answer),
+          status: result.status,
+          message: result.message,
+          source:
+            apiPrefix === "/preview-api/v1/practice" ? "primary" : "library",
+        });
+      }
     } catch {
       if (!c.signal.aborted && run === generation.current)
         setError("暂时无法核对；你的本次输入仍在页面中，请重试。");
@@ -230,10 +319,12 @@ export default function Practice({
   return (
     <section className="practice-panel" data-practice-lesson={lessonId}>
       <p className="practice-notice">
-        体验模式不会保存 · 仅本页临时作答，刷新清空 · 不记录成绩或积分
+        {withdrawn
+          ? "撤去教具五题 · 先留首答再自查，解释由家长核对"
+          : "本页临时作答，刷新清空 · 不记成绩或积分"}
       </p>
       <nav aria-label="五组练习" className="practice-groups">
-        {visibleGroups.map((g) => (
+        {groupsShown.map((g) => (
           <button
             key={g}
             data-practice-group={g}
@@ -269,18 +360,26 @@ export default function Practice({
             data-kind={task.kind}
           >
             <p className="practice-prompt">{task.prompt}</p>
-            {task.diagram?.type === "measurement" && (
+            {!withdrawn && task.diagram?.type === "measurement" && (
               <TaskDiagram diagram={task.diagram} />
             )}
-            {task.diagram?.type === "concept" && (
+            {!withdrawn && task.diagram?.type === "concept" && (
               <ConceptTaskDiagram diagram={task.diagram} />
             )}
-            {(task.diagram?.type === "fraction" ||
-              task.diagram?.type === "joined-perimeters") && (
-              <InverseTaskFigure diagram={task.diagram} />
-            )}
-            <fieldset disabled={busy} className="practice-answer">
-              <legend>独立作答</legend>
+            {!withdrawn &&
+              (task.diagram?.type === "fraction" ||
+                task.diagram?.type === "joined-perimeters") && (
+                <InverseTaskFigure diagram={task.diagram} />
+              )}
+            <fieldset
+              disabled={busy || externalBusy || finalized}
+              className="practice-answer"
+            >
+              <legend>
+                {assisted || journey.help[task.id]?.length
+                  ? "在辅助支持下作答"
+                  : "独立作答"}
+              </legend>
               <AnswerInput
                 task={task}
                 value={attempt.answer}
@@ -291,10 +390,37 @@ export default function Practice({
             </fieldset>
             {!attempt.first ? (
               <button
-                disabled={!Object.values(attempt.answer).some((v) => v.trim())}
-                onClick={() =>
-                  update({ ...attempt, first: { ...attempt.answer } })
+                disabled={
+                  busy ||
+                  externalBusy ||
+                  (!onFirst && !journey.ready) ||
+                  !Object.values(attempt.answer).some((v) => v.trim())
                 }
+                onClick={async () => {
+                  setBusy(true);
+                  setError("");
+                  try {
+                    const sealed = onFirst
+                      ? await onFirst(attempt.answer)
+                      : await journey.run(
+                          group,
+                          task.id,
+                          "first",
+                          attempt.answer,
+                          [],
+                          "hint",
+                          withdrawn,
+                        );
+                    update({
+                      ...attempt,
+                      first: { ...(sealed ?? attempt.answer) },
+                    });
+                  } catch {
+                    setError("首答尚未封存；你的输入仍在，请重试。");
+                  } finally {
+                    setBusy(false);
+                  }
+                }}
               >
                 完成首答，开始自查
               </button>
@@ -304,7 +430,7 @@ export default function Practice({
                 <p>首答仅在本页保留。可以修改上面的答案，再提交终答。</p>
                 <details>
                   <summary>看看我的独立首答</summary>
-                  <p>{Object.values(attempt.first).join("；")}</p>
+                  <p>{readableAnswer(task, attempt.first)}</p>
                 </details>
                 {(task.selfCheckItems ?? checksDefault).map((item, i) => (
                   <label key={item}>
@@ -326,14 +452,58 @@ export default function Practice({
                   </label>
                 ))}
                 <button
-                  disabled={busy || !attempt.checks.every(Boolean)}
+                  disabled={
+                    busy || externalBusy || !attempt.checks.every(Boolean)
+                  }
                   onClick={() => void submit()}
                 >
                   {busy ? "正在核对…" : "提交最终答案"}
                 </button>
               </section>
             )}
-            {error && <p role="alert">{error}</p>}
+            {!onFirst && (
+              <div className="help-actions">
+                {[
+                  ["hint", "看提示"],
+                  ["article", "回看讲解"],
+                  ["solution", "看参考解答"],
+                ].map(([kind, label]) => (
+                  <button
+                    key={kind}
+                    disabled={
+                      busy ||
+                      !journey.ready ||
+                      (kind === "solution" && !attempt.first)
+                    }
+                    onClick={async () => {
+                      setBusy(true);
+                      try {
+                        await journey.run(
+                          group,
+                          task.id,
+                          "help",
+                          {},
+                          [],
+                          kind,
+                          withdrawn,
+                        );
+                      } catch {
+                      } finally {
+                        setBusy(false);
+                      }
+                    }}
+                  >
+                    {label}（记辅助）
+                  </button>
+                ))}
+              </div>
+            )}
+            {journey.help[task.id]?.map((h, i) => (
+              <blockquote key={i}>{h.text}</blockquote>
+            ))}
+            {(error || journey.error) && (
+              <p role="alert">{error || journey.error}</p>
+            )}
             {attempt.result && (
               <section
                 role="status"

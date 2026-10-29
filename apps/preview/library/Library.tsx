@@ -1,3 +1,4 @@
+import { PageNotebook } from "../PageLearning.tsx";
 import { useEffect, useRef, useState } from "react";
 import { canonical, type Catalog } from "../contract.ts";
 import { contentDigest } from "../integrity.ts";
@@ -13,7 +14,11 @@ import {
   type ThinkingEntry,
   type DetectiveResult,
 } from "./contract.ts";
-import MathLab from "./source/MathLab.tsx";
+import { useThinkingJourney } from "./useThinkingJourney.ts";
+import { methodCompanions } from "./method-companions.ts";
+import LegacyArticle from "./LegacyArticle.tsx";
+import LegacyLab from "./LegacyLab.tsx";
+import { modelFor } from "./legacy-models.ts";
 import ThinkingFigure from "./source/ThinkingFigure.tsx";
 import ThinkingTools from "./source/ThinkingTools.tsx";
 import DetectiveFigure from "./source/DetectiveFigure.tsx";
@@ -42,24 +47,37 @@ const worldNames = {
 const primaryHref = (id: string) =>
   "/subjects/math/lessons/" + encodeURIComponent(id);
 function LegacyStudy({ entry }: { entry: LegacyEntry }) {
+  const [full, setFull] = useState(false);
   const [step, setStep] = useState(0),
     [retell, setRetell] = useState("");
   const labels = [
-    "本质结论",
-    "生活麻烦",
-    "为什么这样发明",
+    "核心发现",
+    "真实问题",
+    "图到数学",
     "动手建模",
     "分层练习",
     "自己复述",
   ];
+  if (full)
+    return (
+      <LegacyArticle
+        entry={entry}
+        onBack={() => setFull(false)}
+        onPractice={() => {
+          setFull(false);
+          setStep(4);
+        }}
+      />
+    );
   return (
     <article className="math-lesson library-study" data-library-id={entry.id}>
       <header className="math-heading">
-        <p>{entry.grade} 年级 · 原站旧版探索</p>
+        <p>{entry.grade} 年级 · 主题探索</p>
         <h1>{entry.title}</h1>
         <p>{entry.subtitle}</p>
-        <p>旧版内容体验 · 和家长一起核对 · 可以自由选课</p>
+        <p>观察、动手，再解释自己的发现。</p>
       </header>
+      <button onClick={() => setFull(true)}>展开完整主题教案</button>
       <nav className="classroom-route" aria-label="旧版课程六步">
         {labels.map((label, i) => (
           <button
@@ -81,14 +99,18 @@ function LegacyStudy({ entry }: { entry: LegacyEntry }) {
         )}
         {step === 1 && (
           <>
-            <h3>{entry.whyQuestion}</h3>
+            <h3>{modelFor(entry.id).problem}</h3>
             <p>{entry.humanNeed}</p>
             <p>{entry.story}</p>
           </>
         )}
         {step === 2 && (
           <>
-            <p>{entry.invention}</p>
+            <p>{modelFor(entry.id).connection}</p>
+            <details>
+              <summary>原课程的教学说明</summary>
+              <p>{entry.invention}</p>
+            </details>
             <p>{entry.discovery}</p>
             <ol>
               {entry.extensionChain.map((x) => (
@@ -99,7 +121,7 @@ function LegacyStudy({ entry }: { entry: LegacyEntry }) {
         )}
         {step === 3 && (
           <div className="legacy-lab" data-legacy-model={entry.lab}>
-            <MathLab key={entry.id} lesson={entry} />
+            <LegacyLab key={entry.id} entry={entry} />
           </div>
         )}
         {step === 4 && (
@@ -139,30 +161,18 @@ function ThinkingStudy({
   entry: ThinkingEntry;
   primary: Set<string>;
 }) {
-  const spec = thinkingToolSpec(entry.id),
-    [tool, setTool] = useState<ThinkingToolState | undefined>(() =>
-      spec ? initialThinkingTool(spec) : undefined,
-    ),
-    [history, setHistory] = useState<ThinkingToolState[]>([]),
-    [notice, setNotice] = useState("");
+  const journey = useThinkingJourney(entry.id),
+    spec = thinkingToolSpec(entry.id);
+  const tool = journey.tool ?? (spec ? initialThinkingTool(spec) : undefined),
+    history = journey.history ?? [];
   function act(command: string, index?: number, value?: number) {
-    if (!spec || !tool) return;
-    if (command === "undo") {
-      const previous = history.at(-1);
-      if (previous) {
-        setTool(previous);
-        setHistory(history.slice(0, -1));
-      }
-      return;
-    }
-    try {
-      const next = moveThinkingTool(spec, tool, command, index, value);
-      setHistory([...history, tool].slice(-100));
-      setTool(next);
-      setNotice("");
-    } catch {
-      setNotice("这一步不符合当前条件，请检查数量或重置教具。");
-    }
+    void journey
+      .act("tool", {
+        command,
+        ...(index === undefined ? {} : { index }),
+        ...(value === undefined ? {} : { value }),
+      })
+      .catch(() => {});
   }
   return (
     <article className="math-lesson library-study" data-thinking-id={entry.id}>
@@ -180,16 +190,48 @@ function ThinkingStudy({
         <ThinkingTools
           id={entry.id}
           record={{ tool, toolHistory: history }}
-          busy={false}
+          busy={journey.busy}
           onAction={act}
         />
       )}
-      {notice && <p role="status">{notice}</p>}
+      {journey.error && <p role="alert">{journey.error}</p>}
+      <div className="help-actions">
+        {[1, 2, 3].map((level) => (
+          <button
+            key={level}
+            disabled={journey.busy}
+            onClick={() => void journey.act("hint", { level }).catch(() => {})}
+          >
+            提示 {level}（记辅助）
+          </button>
+        ))}
+        <button
+          disabled={journey.busy || !journey.work?.firstAnswer}
+          onClick={() =>
+            void journey.act("solution", { level: 1 }).catch(() => {})
+          }
+        >
+          看参考解释（首答后开放，记辅助）
+        </button>
+      </div>
+      {journey.work?.help.map((h, i) => (
+        <blockquote key={i}>{h.text}</blockquote>
+      ))}
+      {journey.work?.phase === "pendingReview" && (
+        <p className="session-policy">
+          首次想法、自查与终答已在本页封存，等待家长核对；匿名页面不会批准为独立掌握。
+        </p>
+      )}
       <Practice
         lessonId={entry.id}
         apiPrefix="/preview-api/v1/library"
         visibleGroups={["core"]}
         initialGroup="core"
+        onFirst={journey.first}
+        onFinal={journey.final}
+        externalBusy={journey.busy}
+        finalized={journey.work?.phase === "pendingReview"}
+        assisted={!!journey.work?.tool || !!journey.work?.help.length}
       />
       <p>
         {primary.has(entry.parentLessonId) ? (
@@ -571,8 +613,8 @@ export default function LibraryPage({
       <nav aria-label="数学探索导航" className="library-nav">
         <a href="/subjects/math">课本目录</a>
         <a href={href("thinking")}>思维卡 17</a>
-        <a href={href("detective")}>小侦探 14</a>
-        <a href={href("legacy")}>高年级旧版课程 54</a>
+        <a href="/subjects/math/detective">数学侦探 · 四层训练</a>
+        <a href={href("legacy")}>四至六年级专题 54</a>
         <a href={href("review")}>复习站</a>
         <a href={href("methods")}>方法工具箱</a>
       </nav>
@@ -683,6 +725,7 @@ export default function LibraryPage({
           {kind === "review" && (
             <>
               <h1>自由复习站</h1>
+              <PageNotebook />
               <p>
                 三年级原 review 组共 244
                 题。自由选课复习，不生成到期日、历史错题或永久掌握标签。
@@ -746,7 +789,10 @@ export default function LibraryPage({
           {kind === "methods" && (
             <>
               <h1>方法工具箱 · 28 个条目</h1>
-              <p>6 张已有完整讲解，其余 22 条保留原应用说明并明确待补充。</p>
+              <p>
+                6 张保留原站完整讲解；22
+                张增加条件、例子、反例与对应模型，明确标为本次教学适配。
+              </p>
               <label>
                 查找数学方法
                 <input
@@ -766,48 +812,64 @@ export default function LibraryPage({
                 <p role="status">没有找到，换个关键词试试。</p>
               )}
               <div className="library-grid">
-                {visibleMethods.map((m) => (
-                  <details data-method-card key={m.thinkingSkillId}>
-                    <summary>
-                      <small>{m.guide ? "完整讲解" : "讲解待补充"}</small>
-                      <h2>{m.title}</h2>
-                      <p>{m.observableAction}</p>
-                    </summary>
-                    {m.guide ? (
-                      <>
-                        <h3>{m.guide.question}</h3>
-                        <dl>
-                          <dt>什么时候能用</dt>
-                          <dd>{m.guide.condition}</dd>
-                          <dt>为什么成立</dt>
-                          <dd>{m.guide.why}</dd>
-                          <dt>例子</dt>
-                          <dd>{m.guide.example}</dd>
-                          <dt>反例</dt>
-                          <dd>{m.guide.counterexample}</dd>
-                        </dl>
-                        {m.guide.lessonIds
-                          .filter((id) => primary.has(id))
-                          .map((id) => (
-                            <p key={id}>
-                              <a href={primaryHref(id)}>
-                                到对应课堂试试：
-                                {
-                                  catalog.lessons.find((l) => l.lessonId === id)
-                                    ?.title
-                                }
-                              </a>
-                            </p>
-                          ))}
-                      </>
-                    ) : (
-                      <p>
-                        {m.applicationStructures.join("；")}
-                        。完整条件、例子与反例尚待补充。
-                      </p>
-                    )}
-                  </details>
-                ))}
+                {visibleMethods.map((m) => {
+                  const guide = m.guide ?? methodCompanions[m.thinkingSkillId];
+                  return (
+                    <details data-method-card key={m.thinkingSkillId}>
+                      <summary>
+                        <small>
+                          {m.guide ? "原站完整讲解" : "本次教学适配"}
+                        </small>
+                        <h2>{m.title}</h2>
+                        <p>{m.observableAction}</p>
+                      </summary>
+                      {guide ? (
+                        <>
+                          <h3>{guide.question}</h3>
+                          <dl>
+                            <dt>什么时候能用</dt>
+                            <dd>{guide.condition}</dd>
+                            <dt>为什么成立</dt>
+                            <dd>{guide.why}</dd>
+                            <dt>例子</dt>
+                            <dd>{guide.example}</dd>
+                            <dt>反例</dt>
+                            <dd>{guide.counterexample}</dd>
+                          </dl>
+                          {guide.lessonIds
+                            .filter(
+                              (id) =>
+                                primary.has(id) ||
+                                data.entries.some((e) => e.id === id),
+                            )
+                            .map((id) => (
+                              <p key={id}>
+                                <a
+                                  href={
+                                    primary.has(id)
+                                      ? primaryHref(id)
+                                      : href("legacy", id)
+                                  }
+                                >
+                                  到对应课堂试试：
+                                  {catalog.lessons.find(
+                                    (l) => l.lessonId === id,
+                                  )?.title ??
+                                    data.entries.find((e) => e.id === id)
+                                      ?.title}
+                                </a>
+                              </p>
+                            ))}
+                        </>
+                      ) : (
+                        <p>
+                          {m.applicationStructures.join("；")}
+                          。完整条件、例子与反例尚待补充。
+                        </p>
+                      )}
+                    </details>
+                  );
+                })}
               </div>
             </>
           )}

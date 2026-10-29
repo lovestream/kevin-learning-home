@@ -47,7 +47,7 @@ export const families = [
   "decimals",
   "sets",
 ] as const;
-const diagramKinds = [
+export const diagramKinds = [
   "readingCorner",
   "joinedTiles",
   "ribbon",

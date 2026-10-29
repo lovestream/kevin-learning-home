@@ -1,4 +1,6 @@
 import { useState } from "react";
+import HomeSketch from "./HomeSketch.tsx";
+import { MathIcon } from "./DesignShell.tsx";
 import type { Catalog } from "./contract.ts";
 import {
   type LearningMap,
@@ -110,40 +112,66 @@ export function CatalogPage({
   ];
   return (
     <section className="learning-map" data-learning-map>
-      <header className="map-heading">
-        <p className="intro-note">数学课本与知识地图</p>
-        <h1>
-          {unit?.title ??
-            bridge?.title ??
-            (term ? termTitles[term] : "从课本找到今天想学的内容")}
-        </h1>
-        {unit ? (
-          <p>
-            参考教材印刷页 {unit.printedPages} · {unit.sequence.length}{" "}
-            节课。各课可自由进入，提升与思想课按兴趣选学。
-          </p>
-        ) : bridge ? (
-          <p>
-            {bridge.lessons.length}{" "}
-            节基础衔接课，探索共同的数量关系；推荐先修不锁课。
-          </p>
-        ) : term === "upper" ? (
-          <p>
-            按教材顺序排列的 9 个单元、39 节课。展开单元，再从知识点进入课堂。
-          </p>
-        ) : term === "lower" ? (
-          <p>
-            按教材顺序排列的 8 个单元、24 节课。展开单元，再从知识点进入课堂。
-          </p>
-        ) : term === "bridge" ? (
-          <p>4 个主题、7 节课，独立于教材单元；可从熟悉的问题自由开始。</p>
-        ) : (
-          <p>
-            17 个教材单元，63 节课；另有 7
-            节基础衔接。课堂保留六个短步骤与原教具。
-          </p>
-        )}
-      </header>
+      {!term && !query.trim() ? (
+        <div className="home-hero">
+          <header className="map-heading">
+            <p className="intro-note">Kevin 的数学手记</p>
+            <h1>
+              从一个问题，
+              <br />
+              走进数学。
+            </h1>
+            <p>
+              看一看，动手试一试。
+              <br />
+              让每一个“为什么”，都有自己的解释。
+            </p>
+            <a className="hero-link" href="/subjects/math?term=upper">
+              翻开我的课本 <MathIcon name="arrow" size={20} />
+            </a>
+          </header>
+          <HomeSketch />
+        </div>
+      ) : (
+        <>
+          <header className="map-heading">
+            <p className="intro-note">数学课本与知识地图</p>
+            <h1>
+              {unit?.title ??
+                bridge?.title ??
+                (term ? termTitles[term] : "从课本找到今天想学的内容")}
+            </h1>
+            {unit ? (
+              <p>
+                参考教材印刷页 {unit.printedPages} · {unit.sequence.length}{" "}
+                节课。各课可自由进入，提升与思想课按兴趣选学。
+              </p>
+            ) : bridge ? (
+              <p>
+                {bridge.lessons.length}{" "}
+                节基础衔接课，探索共同的数量关系；推荐先修不锁课。
+              </p>
+            ) : term === "upper" ? (
+              <p>
+                按教材顺序排列的 9 个单元、39
+                节课。展开单元，再从知识点进入课堂。
+              </p>
+            ) : term === "lower" ? (
+              <p>
+                按教材顺序排列的 8 个单元、24
+                节课。展开单元，再从知识点进入课堂。
+              </p>
+            ) : term === "bridge" ? (
+              <p>4 个主题、7 节课，独立于教材单元；可从熟悉的问题自由开始。</p>
+            ) : (
+              <p>
+                17 个教材单元，63 节课；另有 7
+                节基础衔接。课堂保留六个短步骤与原教具。
+              </p>
+            )}
+          </header>
+        </>
+      )}
       <div className="map-search">
         <label htmlFor="knowledge-search">找知识点或课程</label>
         <input
@@ -325,7 +353,72 @@ export function CatalogPage({
             ))}
         </div>
       )}
-      {!term && !query.trim() && <section className="math-extras"><h2>把方法用到新的问题里</h2><nav aria-label="更多数学探索">{[['thinking','17 张思维卡'],['detective','14 个数学侦探模拟'],['legacy','四至六年级 · 54 旧版课'],['review','自由复习站'],['methods','方法工具箱']].map(([kind,label])=><a key={kind} href={'/subjects/math/library?kind='+kind}>{label} →</a>)}</nav></section>}
+      {!term && !query.trim() && (
+        <section className="math-extras map-extras home-pathways">
+          <div className="section-heading">
+            <h2>也可以，从好奇出发</h2>
+            <p>选择一种方式，把关系想明白。</p>
+          </div>
+          <nav aria-label="更多数学探索">
+            {[
+              {
+                kind: "thinking",
+                title: "思维训练",
+                label: "17 张思维卡 →",
+                text: "借助图和教具，为你的解释找证据。",
+                icon: "bulb",
+              },
+              {
+                kind: "detective",
+                title: "数学侦探",
+                label: "数学侦探 V2 四层训练",
+                text: "判断、找第一错、换个问题，再检查自己。",
+                icon: "search",
+              },
+              {
+                kind: "legacy",
+                title: "专题探索",
+                label: "四至六年级 · 54 旧版课 →",
+                text: "数、图形和关系，沿主题去探索。",
+                icon: "shapes",
+              },
+              {
+                kind: "review",
+                title: "复习站",
+                label: "自由复习站 →",
+                text: "回到原题，试着用另一种方法说明。",
+                icon: "repeat",
+              },
+              {
+                kind: "methods",
+                title: "方法工具箱",
+                label: "方法工具箱 →",
+                text: "画图、分类、逆推……选一件趁手的工具。",
+                icon: "tools",
+              },
+            ].map((x) => (
+              <a
+                key={x.kind}
+                aria-label={x.label}
+                className={"pathway-entry pathway-" + x.kind}
+                href={
+                  x.kind === "detective"
+                    ? "/subjects/math/detective"
+                    : "/subjects/math/library?kind=" + x.kind
+                }
+              >
+                <MathIcon name={x.icon} size={28} />
+                <div>
+                  <h3>{x.title}</h3>
+                  <p>{x.text}</p>
+                </div>
+                <MathIcon name="arrow" size={20} />
+              </a>
+            ))}
+          </nav>
+        </section>
+      )}
+
       {term && (
         <p className="map-home-link">
           <a href="/subjects/math">返回上下册与基础衔接目录</a>

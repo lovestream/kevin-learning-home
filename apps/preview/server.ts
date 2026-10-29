@@ -1,7 +1,10 @@
 // Standalone content-only process. No production server, identity, math service or SQLite imports.
 import http from "node:http";
+import { loadReading } from "./reading/service.ts";
+import { PageTraining } from "./training.ts";
 import {
   loadLibrary,
+  legacyExample,
   gradeLibrary,
   gradeDetective,
 } from "./library/service.ts";
@@ -36,6 +39,8 @@ export async function startPreview({
     dist = join(root, "apps/preview/dist");
   const seal = JSON.parse(readFileSync(join(dist, "seal.json"), "utf8")) as {
     schemaVersion: number;
+    trainingSources: Record<string, string>;
+    readingSha256: string;
     buildSha: string;
     catalogSha256: string;
     files: Record<string, string>;
@@ -76,6 +81,20 @@ export async function startPreview({
     library.publicSha256 !== seal.libraryPublicSha256
   )
     throw Error("LIBRARY_SEAL_MISMATCH");
+  if (!seal.trainingSources || Object.keys(seal.trainingSources).length < 10)
+    throw Error("TRAINING_SEAL_MISSING");
+  for (const [path, expected] of Object.entries(seal.trainingSources)) {
+    if (
+      !/^packages\/math-training\/source\/[A-Za-z0-9/._-]+$/.test(path) ||
+      path.includes("..") ||
+      hash(readFileSync(join(root, path))) !== expected
+    )
+      throw Error("TRAINING_SOURCE_INTEGRITY_FAILED");
+  }
+  const reading = loadReading(root);
+  if (reading.sha256 !== seal.readingSha256)
+    throw Error("READING_SEAL_MISMATCH");
+  const training = new PageTraining();
   const server = http.createServer((req, res) => {
     const address = server.address();
     if (!address || typeof address === "string") {
@@ -124,10 +143,20 @@ export async function startPreview({
       [
         "/preview-api/v1/practice/grade",
         "/preview-api/v1/library/grade",
+        "/preview-api/v1/library/teaching-example",
         "/preview-api/v1/detective/grade",
+        "/preview-api/v1/reading/checkpoint",
+        ...[
+          "start",
+          "event",
+          "data",
+          "release",
+          "study-event",
+          "study-data",
+        ].map((x) => "/preview-api/v1/training/" + x),
       ].includes(req.url ?? "")
     ) {
-      // Bounded, stateless calculation only. All production/write APIs remain unavailable.
+      // Bounded authored math calculations and page-only training. No production writes.
       if (
         req.headers["content-type"] !== "application/json" ||
         req.headers["content-encoding"] ||
@@ -138,7 +167,9 @@ export async function startPreview({
         req.resume();
         return;
       }
-      if (Number(req.headers["content-length"] ?? 0) > 16384) {
+      const bodyLimit =
+        req.url === "/preview-api/v1/training/study-event" ? 65536 : 16384;
+      if (Number(req.headers["content-length"] ?? 0) > bodyLimit) {
         send(413, '{"error":"BODY_TOO_LARGE"}');
         req.resume();
         return;
@@ -156,7 +187,7 @@ export async function startPreview({
       req.on("data", (b: Buffer) => {
         if (done) return;
         size += b.length;
-        if (size > 16384) {
+        if (size > bodyLimit) {
           done = true;
           send(413, '{"error":"BODY_TOO_LARGE"}');
           chunks.length = 0;
@@ -169,24 +200,50 @@ export async function startPreview({
           send(
             200,
             JSON.stringify(
-              req.url === "/preview-api/v1/library/grade"
-                ? gradeLibrary(
+              req.url === "/preview-api/v1/library/teaching-example"
+                ? legacyExample(
                     library,
                     JSON.parse(Buffer.concat(chunks).toString("utf8")),
                   )
-                : req.url === "/preview-api/v1/detective/grade"
-                  ? gradeDetective(
-                      library,
+                : req.url === "/preview-api/v1/reading/checkpoint"
+                  ? reading.grade(
                       JSON.parse(Buffer.concat(chunks).toString("utf8")),
                     )
-                  : gradePractice(
-                      practice,
-                      JSON.parse(Buffer.concat(chunks).toString("utf8")),
-                    ),
+                  : req.url?.startsWith("/preview-api/v1/training/")
+                    ? training.dispatch(
+                        req.url.slice("/preview-api/v1/training/".length),
+                        JSON.parse(Buffer.concat(chunks).toString("utf8")),
+                      )
+                    : req.url === "/preview-api/v1/library/grade"
+                      ? gradeLibrary(
+                          library,
+                          JSON.parse(Buffer.concat(chunks).toString("utf8")),
+                        )
+                      : req.url === "/preview-api/v1/detective/grade"
+                        ? gradeDetective(
+                            library,
+                            JSON.parse(Buffer.concat(chunks).toString("utf8")),
+                          )
+                        : gradePractice(
+                            practice,
+                            JSON.parse(Buffer.concat(chunks).toString("utf8")),
+                          ),
             ),
           );
-        } catch {
-          send(400, '{"error":"INVALID_PRACTICE_SUBMISSION"}');
+        } catch (e) {
+          const status = (e as { status?: number }).status;
+          send(
+            status && [400, 403, 404, 409, 410, 503].includes(status)
+              ? status
+              : 400,
+            JSON.stringify({
+              error: "INVALID_PRACTICE_SUBMISSION",
+              message:
+                e instanceof Error && e.name !== "ZodError"
+                  ? e.message
+                  : "提交格式无效。",
+            }),
+          );
         }
       });
       req.on("error", () => {
@@ -204,6 +261,23 @@ export async function startPreview({
       pathname = new URL(req.url ?? "/", "http://" + host).pathname;
     } catch {
       send(400, '{"error":"INVALID_PATH"}');
+      return;
+    }
+    if (
+      pathname === "/preview-api/v1/training/catalog" &&
+      !new URL(req.url!, "http://" + host).search
+    ) {
+      send(200, JSON.stringify(training.catalog()));
+      return;
+    }
+    if (
+      pathname.startsWith("/preview-api/v1/reading/") &&
+      !new URL(req.url!, "http://" + host).search
+    ) {
+      const a = reading.articles.get(
+        pathname.slice("/preview-api/v1/reading/".length),
+      );
+      send(a ? 200 : 404, JSON.stringify(a ?? { error: "UNKNOWN_ARTICLE" }));
       return;
     }
     if (pathname === "/health/ready") {
@@ -225,6 +299,13 @@ export async function startPreview({
           practiceTasks: 849,
           practicePublicSha256: practice.publicSha256,
           libraryPublicSha256: library.publicSha256,
+          training: training.catalog().counts,
+          trainingCatalogSha256: hash(JSON.stringify(training.catalog())),
+          fullArticles: 70,
+          semanticModels: 54,
+          adaptedMethodGuides: 22,
+          readingSha256: reading.sha256,
+          storage: "page-memory-only",
           library: {
             thinking: 17,
             legacy: 54,
@@ -299,6 +380,7 @@ export async function startPreview({
       pathname === "/" ||
       pathname === "/subjects/math" ||
       pathname === "/subjects/math/library" ||
+      pathname === "/subjects/math/detective" ||
       pathname === "/math-paper-folding/print-templates.html" ||
       (pathname.startsWith("/subjects/math/lessons/") &&
         lessons.has(pathname.slice(23)))
@@ -313,6 +395,7 @@ export async function startPreview({
     }
     send(404, '{"error":"CONTENT_ONLY_NOT_FOUND"}');
   });
+  server.once("close", () => training.clear());
   await new Promise<void>((resolve, reject) => {
     server.once("error", reject);
     server.listen(port, boundary.bind, () => resolve());

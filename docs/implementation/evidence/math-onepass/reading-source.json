@@ -1,0 +1,22 @@
+{
+  "source": {
+    "path": "content/pilot/lessons.json",
+    "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+    "gitBlob": "5fa95a64b2f8c7d7ebbf907ef640106c09661c66",
+    "sha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
+    "bytes": 1904117
+  },
+  "projection": "Field allowlist; authored teaching blocks only. Checkpoint correctness, reason and reference answer remain server-only until the child submits a response. No taskSets, identities, reward rules or learning histories imported.",
+  "articles": 70,
+  "checkpoints": 70,
+  "files": [
+    {
+      "target": "apps/preview/reading/articles.json",
+      "targetSha256": "8215910f39a5ef0e04b2647698eea822aeac6eb9c4d0c2db384cf4160d4381fa"
+    },
+    {
+      "target": "apps/preview/reading/private/checkpoints.json",
+      "targetSha256": "f5d92ab2d19a89dedfc75851dc277c3248194c687c5c7a2de94f9e0fe9d008a7"
+    }
+  ]
+}
