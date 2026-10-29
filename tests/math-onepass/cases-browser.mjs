@@ -143,13 +143,39 @@ try {
       await p.locator("[data-training-case]").count(),
       collection.caseIds.length,
     );
+    const desk = p.locator(".case-desk"),
+      previous = await desk.getAttribute("data-case-id");
+    const a =
+      collection.caseIds[
+        (collection.caseIds.indexOf(previous) + 1) % collection.caseIds.length
+      ];
     await p.getByRole("button", { name: "对照另一份做法" }).click();
-    const a = await p.locator(".case-desk").getAttribute("data-case-id");
+    await expect(desk).toHaveAttribute("data-case-id", a);
+    const b =
+      collection.caseIds[
+        (collection.caseIds.indexOf(a) + 1) % collection.caseIds.length
+      ];
     await p.getByRole("button", { name: "对照另一份做法" }).click();
-    const b = await p.locator(".case-desk").getAttribute("data-case-id");
+    await expect(desk).toHaveAttribute("data-case-id", b);
     assert.notEqual(a, b);
+    const started = p.waitForResponse(
+      (r) =>
+        r.url().endsWith("/preview-api/v1/training/event") &&
+        r.request().method() === "POST" &&
+        r.request().postDataJSON().channel === "self" &&
+        r.request().postDataJSON().event.action === "start",
+    );
     await p.getByRole("button", { name: "换已知与所求，自己来试" }).click();
-    await expect(p.locator(".self-desk")).toBeVisible();
+    const transfer = await (await started).json();
+    assert.equal(transfer.mode, "transfer");
+    assert.equal(transfer.question.errorFamilyId, collection.selfFamily);
+    await expect(p.locator(".self-desk")).toContainText(
+      transfer.question.prompt,
+    );
+    await expect(p.locator(".training-room")).toHaveAttribute(
+      "aria-busy",
+      "false",
+    );
     await expect(p.getByLabel("选择题族")).toHaveValue(collection.selfFamily);
     rows.push({
       collection: collection.id,
