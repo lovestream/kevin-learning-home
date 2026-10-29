@@ -27,9 +27,11 @@ const articles = JSON.parse(
   rows = [],
   normalize = (s) => s.normalize("NFKC").replace(/\s+/gu, "");
 function checkPDF(file, required) {
+  // Preserve PDF content-stream order: baseline sorting splits Latin/CJK font
+  // runs on Linux (e.g. moves Kevin after the surrounding Chinese paragraph).
   const text = execFileSync(
     process.env.KLH_PDFTOTEXT ?? "pdftotext",
-    [file, "-"],
+    ["-raw", file, "-"],
     { encoding: "utf8", maxBuffer: 1024 * 1024 },
   );
   assert(
