@@ -53,6 +53,7 @@ try {
     await expect(desk).toHaveAttribute("data-case-id", entry.id);
     await expect(desk).toHaveAttribute("data-phase", "judge");
     await expect(p.locator(".case-index")).not.toHaveAttribute("open", "");
+    await expect(p.locator(".training-room")).toHaveAttribute("aria-busy", "false");
     await expect(desk.locator("h2")).toBeFocused();
     assert.equal(await desk.locator("form").count(), 0);
     assert.equal(await desk.locator(".learning-feedback").count(), 0);

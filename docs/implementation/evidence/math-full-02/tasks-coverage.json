@@ -6,13 +6,13 @@
   "lessons": 70,
   "bankSha256": "1008208c4afcd310bfe5e9440649123691d8b18abb77129404625794dfc1c0b7",
   "publicSha256": "306dc7ec07a5b7f6f2a6aa31628e8e0147b357c46ade8403ae29e4b6643b495f",
-  "browserOrigin": "http://127.0.0.1:63579",
+  "browserOrigin": "http://127.0.0.1:64967",
   "execution": {
-    "head": "0714073d3dbf3e64a7513f9d4498b42657e57087",
+    "head": "4fc8ad70457e437fe44c05a7395c2236c3cea87f",
     "dirty": true,
     "files": {
       "apps/preview/DesignShell.tsx": "41acca22510983bac2ec13dc13a9c75b4d11692e116909d7b32c46bb051cf8fb",
-      "apps/preview/DetectiveTraining.tsx": "94e5261eeab55000dd2142b1f93523024a0cee5dd191208c044f0d1ffc2a4ed5",
+      "apps/preview/DetectiveTraining.tsx": "1040786519ab3a04936554e21b5939fcfebb0b8c363a31e0b60a3ece524029ab",
       "apps/preview/HomeSketch.tsx": "00fd8c10a24236bcd9557cd760d4213b1f14907f996bdcf3635df6458601caa5",
       "apps/preview/MapNavigation.tsx": "44a299f926a0fed5cb76f3bf597e866512f663aae97df171f8a8195bf20b6951",
       "apps/preview/PageLearning.tsx": "52fa59bfeb77cb1f2d8306ee514d778ea20e03df5f15d6c299dd5ea8c2dbcaf2",

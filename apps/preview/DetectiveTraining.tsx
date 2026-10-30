@@ -1,6 +1,6 @@
 import { PageCommands } from "./commands.ts";
 import { eventId } from "./event-id.ts";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { z } from "zod";
 import {
   trainingCatalogSchema,
@@ -140,6 +140,12 @@ export default function DetectiveTraining() {
   const [collection, setCollection] = useState(""),
     [indexOpen, setIndexOpen] = useState(false);
   const caseFocus = useRef<HTMLHeadingElement>(null);
+  // A new attempt replaces the keyed desk. Focus after React commits its new
+  // heading, not in a frame that can still point at the outgoing desk. Keep the
+  // dependency on attempt identity so typing and later phases retain focus.
+  useLayoutEffect(() => {
+    caseFocus.current?.focus();
+  }, [caseWork?.attempt.id]);
   const commands = useRef(new PageCommands());
   const capability = useRef(""),
     pending = useRef(false);
@@ -234,7 +240,6 @@ export default function DetectiveTraining() {
         setCaseWork(caseAttemptSchema.parse(result));
         if (event.action === "start") {
           setIndexOpen(false);
-          requestAnimationFrame(() => caseFocus.current?.focus());
         }
         setAnswer("");
         setStep("");
