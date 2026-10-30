@@ -5,8 +5,7 @@ export default function HomeSketch() {
   return (
     <div className="home-sketch">
       <div className="sketch-caption">
-        <span>一个小观察</span>
-        <span aria-hidden="true">∠</span>
+        <span>换个方向看一看</span>
       </div>
       <svg
         viewBox="0 0 380 275"
@@ -21,19 +20,19 @@ export default function HomeSketch() {
         />
         <polygon
           points="95,90 235,90 235,230 95,230"
-          fill={side === 0 ? "#6aa993" : "#e0e9d5"}
+          fill={side === 0 ? "#36a58b" : "#d5eee5"}
           stroke="#173b47"
           strokeWidth="2.5"
         />
         <polygon
           points="235,90 310,42 310,181 235,230"
-          fill={side === 1 ? "#d7aa5c" : "#f1dfb8"}
+          fill={side === 1 ? "#f6c848" : "#ffe6a5"}
           stroke="#173b47"
           strokeWidth="2.5"
         />
         <polygon
           points="95,90 170,42 310,42 235,90"
-          fill={side === 2 ? "#80a9bc" : "#dce9eb"}
+          fill={side === 2 ? "#6ba9dc" : "#d4e8f6"}
           stroke="#173b47"
           strokeWidth="2.5"
         />
@@ -45,7 +44,7 @@ export default function HomeSketch() {
           同一个方块
         </text>
       </svg>
-      <p>换一个观察方向，会看到什么？</p>
+      <p>点一点，找找方块的三个面。</p>
       <div className="sketch-views" aria-label="观察方块的面">
         {names.map((n, i) => (
           <button key={n} aria-pressed={side === i} onClick={() => setSide(i)}>

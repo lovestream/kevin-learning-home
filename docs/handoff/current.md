@@ -1,5 +1,8 @@
 # 当前交接：Issue23 数学整站 NAS 交付与集中复审
 
+> **当前进度（2026-10-30 R3）**：用户已否定上一轮视觉，正在按原数学站风格修正全站显示。NAS暂保持e7b4302，待新提交完整CI成功再受控更新。下方为上一轮工程交付记录；不代表视觉获得用户认可。最新整改见 [MATH-VISUAL-R3](../implementation/MATH-VISUAL-R3.md)。
+
+
 入口 **http://192.168.2.100:38444/**，局域网HTTP、免登录、不需要Mac服务器。
 
 - 分支：`codex/math-full-03-capabilities`，现有Draft PR #22，base PR #21；PR18→21→22均不合并。没有新建worktree或项目根目录。

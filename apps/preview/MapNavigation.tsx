@@ -14,6 +14,72 @@ import {
   trackNames,
   searchLessons,
 } from "./learning-map.ts";
+function BookPicture({ term }: { term: Term }) {
+  return (
+    <svg className="book-picture" viewBox="0 0 100 92" aria-hidden="true">
+      {term === "upper" ? (
+        <>
+          <rect x="9" y="17" width="77" height="60" rx="12" fill="#fff" />
+          {[0, 1, 2].flatMap((x) =>
+            [0, 1].map((y) => (
+              <circle
+                key={x + "-" + y}
+                cx={28 + x * 20}
+                cy={36 + y * 22}
+                r="7"
+                fill={y === 0 ? "#167d7f" : "#f6c848"}
+              />
+            )),
+          )}
+          <path
+            d="M15 83h72"
+            stroke="#98cec1"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+        </>
+      ) : term === "lower" ? (
+        <>
+          <circle cx="49" cy="45" r="32" fill="#fff" />
+          <path d="M49 13a32 32 0 0 1 0 64Z" fill="#f6c848" />
+          <path
+            d="M49 13v64"
+            stroke="#bc7d19"
+            strokeWidth="2"
+            strokeDasharray="4 4"
+          />
+          <circle
+            cx="49"
+            cy="45"
+            r="32"
+            fill="none"
+            stroke="#d9a53c"
+            strokeWidth="3"
+          />
+        </>
+      ) : (
+        <>
+          <path d="m49 36-15 45h30Z" fill="#95bddc" />
+          <path
+            d="M13 32h73 M24 32v15 M75 32v15"
+            stroke="#3a6896"
+            strokeWidth="4"
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 48q15 24 30 0Z M60 48q15 24 30 0Z"
+            fill="#fff"
+            stroke="#3a6896"
+            strokeWidth="2"
+          />
+          <circle cx="49" cy="30" r="6" fill="#f6c848" />
+          <rect x="19" y="36" width="10" height="10" rx="2" fill="#3973b5" />
+          <rect x="70" y="36" width="10" height="10" rx="2" fill="#3973b5" />
+        </>
+      )}
+    </svg>
+  );
+}
 function selection(map: LearningMap) {
   const p = new URLSearchParams(location.search),
     raw = p.get("term"),
@@ -115,20 +181,30 @@ export function CatalogPage({
       {!term && !query.trim() ? (
         <div className="home-hero">
           <header className="map-heading">
-            <p className="intro-note">Kevin 的数学手记</p>
+            <p className="intro-note">
+              <MathIcon name="bulb" size={18} /> Kevin 的数学实验室
+            </p>
             <h1>
-              从一个问题，
+              数学，
               <br />
-              走进数学。
+              动手就明白。
             </h1>
             <p>
-              看一看，动手试一试。
+              翻开课本，摆一摆、画一画。
               <br />
-              让每一个“为什么”，都有自己的解释。
+              今天的发现，从一个小问题开始。
             </p>
-            <a className="hero-link" href="/subjects/math?term=upper">
-              翻开我的课本 <MathIcon name="arrow" size={20} />
-            </a>
+            <div className="hero-actions">
+              <a className="hero-link" href="/subjects/math?term=upper">
+                翻开我的课本 <MathIcon name="arrow" size={20} />
+              </a>
+              <a
+                className="hero-first-lesson"
+                href="/subjects/math/lessons/G3-U01-B01"
+              >
+                先试一课：观察物体
+              </a>
+            </div>
           </header>
           <HomeSketch />
         </div>
@@ -214,6 +290,10 @@ export function CatalogPage({
         </section>
       ) : !term ? (
         <div className="map-books" data-map-home>
+          <header className="book-section-heading">
+            <h2>我的数学课本</h2>
+            <p>选一本课本，找到正在学的单元</p>
+          </header>
           {(["upper", "lower", "bridge"] as const).map((t) => (
             <a
               data-term-link={t}
@@ -237,6 +317,7 @@ export function CatalogPage({
                     : "沿教材顺序，从知识点进入课堂"}
                 </span>
               </div>
+              <BookPicture term={t} />
             </a>
           ))}
         </div>

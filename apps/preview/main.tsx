@@ -169,33 +169,40 @@ function Lesson({
           体验模式不会保存
         </p>
       </header>
-      {withdrawnLessons.includes(lesson.lessonId) && (
-        <a
+      <div className="lesson-tools">
+        {withdrawnLessons.includes(lesson.lessonId) && (
+          <a
+            className="reading-mode-toggle"
+            href={
+              "/subjects/math/lessons/" +
+              lesson.lessonId +
+              "?practice=core&assessment=withdrawn-v1"
+            }
+          >
+            收起教具，独立做五题
+          </a>
+        )}
+        <button
           className="reading-mode-toggle"
-          href={
-            "/subjects/math/lessons/" +
-            lesson.lessonId +
-            "?practice=core&assessment=withdrawn-v1"
-          }
+          onClick={() => setReading(true)}
         >
-          收起教具，独立做五题
-        </a>
-      )}
-      <button className="reading-mode-toggle" onClick={() => setReading(true)}>
-        展开完整教案
-      </button>
-      <details className="preview-context">
-        <summary>课程单元与推荐先修</summary>
-        <p>
-          {lesson.textbookUnit?.title ?? lesson.parentUnitId} ·{" "}
-          {/-R\d+$/.test(lesson.lessonId) ? "复习 R" : trackLabel(lesson.track)}{" "}
-          · {lesson.contentVersion} / {lesson.editorialRevision}
-        </p>
-        {lesson.recommendedPrerequisites.map((x) => (
-          <p key={x}>{x}</p>
-        ))}
-        <p>{lesson.prerequisiteNote}</p>
-      </details>
+          展开完整教案
+        </button>
+        <details className="preview-context">
+          <summary>课程单元与推荐先修</summary>
+          <p>
+            {lesson.textbookUnit?.title ?? lesson.parentUnitId} ·{" "}
+            {/-R\d+$/.test(lesson.lessonId)
+              ? "复习 R"
+              : trackLabel(lesson.track)}{" "}
+            · {lesson.contentVersion} / {lesson.editorialRevision}
+          </p>
+          {lesson.recommendedPrerequisites.map((x) => (
+            <p key={x}>{x}</p>
+          ))}
+          <p>{lesson.prerequisiteNote}</p>
+        </details>
+      </div>
       <nav className="classroom-route" aria-label="本课六个短步骤">
         {steps.map((s, i) => (
           <button

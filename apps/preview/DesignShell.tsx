@@ -141,20 +141,20 @@ export default function DesignShell({ children }: { children: ReactNode }) {
       <aside className="learning-sidebar">
         <div className="side-sign">
           <span className="home-monogram" aria-hidden="true">
-            K<span>∠</span>
+            K
           </span>
           <div>
-            Kevin 学习家园<small>把问题想明白</small>
+            Kevin 学习家园<small>数学实验室</small>
           </div>
         </div>
-        <p className="side-caption">数学手记</p>
+        <p className="side-caption">今天想去哪里？</p>
         <Pathways />
         <div className="side-note">
-          <span aria-hidden="true">↗</span>
+          <MathIcon name="bulb" size={28} />
           <p>
-            先动手，
+            今天发现一个
             <br />
-            再说说你的发现。
+            “为什么”了吗？
           </p>
         </div>
         <span className="side-foot">探索 · 表达 · 验证</span>
@@ -205,7 +205,9 @@ export default function DesignShell({ children }: { children: ReactNode }) {
             </button>
           </div>
           <nav className="dialog-subjects" aria-label="学科导航">
-            <a href="/subjects/math" aria-current="page">数学 · 课程与探索</a>
+            <a href="/subjects/math" aria-current="page">
+              数学 · 课程与探索
+            </a>
             <span aria-disabled="true">英语 · 待迁入</span>
           </nav>
           <Pathways />
@@ -218,7 +220,7 @@ export default function DesignShell({ children }: { children: ReactNode }) {
         </details>
         {children}
         <footer className="preview-footer">
-          <span>Kevin 学习家园 · 数学手记</span>
+          <span>Kevin 学习家园 · 数学实验室</span>
           <span>认真想一想，也允许再试一次。</span>
           <details>
             <summary>关于本次体验</summary>
