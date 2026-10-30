@@ -778,5 +778,12 @@
     }
   ],
   "privateSourceFilesRead": false,
-  "oldRepositoriesWritten": false
+  "oldRepositoriesWritten": false,
+  "supplementaryAudit": {
+    "sourcePath": "content/grade-3/legacy-seed.json",
+    "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+    "sourceBlob": "0f27dc05a7053511edf18c265d3244f66f9cf593",
+    "sourceSha256": "9397cdcb9733f520922008406b87ce82cd3838f02e4617389bc28473455e956c",
+    "purpose": "Explicit50 hidden original quests to installed concepts; metadata only, no additional course import."
+  }
 }

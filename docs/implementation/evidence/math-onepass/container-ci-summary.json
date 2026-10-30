@@ -1,0 +1,16 @@
+{
+  "status": "PASS_CI",
+  "scope": "modern Linux amd64, never NAS",
+  "executedHeadSha": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "writerProtocol": "kernel-flock-v2",
+  "nativeAddonRuntime": "fs-ext@2.1.1, built for Node24/linux-amd64",
+  "contenderExitCode": 1,
+  "activeOwnerNotEvicted": true,
+  "liveBackupExcluded": true,
+  "killedContainerExitCode": 137,
+  "killRecreatePreserved": true,
+  "restartPolicy": "unless-stopped",
+  "autoRestartCount": 1,
+  "autoRestartAfterProcessKill": true,
+  "killInjectorExitCode": 0
+}

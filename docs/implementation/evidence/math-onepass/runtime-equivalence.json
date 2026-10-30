@@ -1,0 +1,9 @@
+{
+  "status": "PASS_EVIDENCE_ONLY_COMMIT_RUNTIME_EQUIVALENCE",
+  "deployedSource": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "comparisonTarget": "The Git commit containing this receipt; final exact HEAD and push/PR CI links are recorded in PR22 body.",
+  "comparedFiles": 276,
+  "changedRuntimeOrValidationSource": [],
+  "intentionalHarnessChange": "training-browser waits for the completed real stats request and verifies four rate values before its screenshot; actual five-width NAS rerun passed.",
+  "note": "release-inputs.json is an authored runtime/validation superset, not a list of files installed inside the image."
+}

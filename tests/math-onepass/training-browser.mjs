@@ -2,18 +2,33 @@ import { chromium, expect } from "@playwright/test";
 import fs from "node:fs";
 import assert from "node:assert/strict";
 import { startPreview } from "../../apps/preview/server.ts";
-const nas=process.argv.includes('--nas'),target=process.env.KLH_PREVIEW_TEST_ORIGIN,expected=process.env.KLH_PREVIEW_EXPECT_SHA;
-if(nas&&(target!=='http://192.168.2.100:38444'||!/^[a-f0-9]{40}$/.test(expected??'')))throw Error('EXPLICIT_NAS_SHA_REQUIRED');
-if(!nas&&target)throw Error('NAS_MODE_REQUIRED');
-const server = nas?null:await startPreview({ enabled: true, port: 0 }),
-  origin = nas?target:"http://127.0.0.1:" + server.address().port,
+const nas = process.argv.includes("--nas"),
+  target = process.env.KLH_PREVIEW_TEST_ORIGIN,
+  expected = process.env.KLH_PREVIEW_EXPECT_SHA;
+if (
+  nas &&
+  (target !== "http://192.168.2.100:38444" ||
+    !/^[a-f0-9]{40}$/.test(expected ?? ""))
+)
+  throw Error("EXPLICIT_NAS_SHA_REQUIRED");
+if (!nas && target) throw Error("NAS_MODE_REQUIRED");
+const server = nas ? null : await startPreview({ enabled: true, port: 0 }),
+  origin = nas ? target : "http://127.0.0.1:" + server.address().port,
   browser = await chromium.launch();
 const dir =
-  process.env.KLH_EVIDENCE_DIR ?? ".evidence/math-onepass/"+(nas?"visual-r2-nas-training":"visual-r1-training");
+  process.env.KLH_EVIDENCE_DIR ??
+  ".evidence/math-onepass/" +
+    (nas ? "visual-r2-nas-training" : "visual-r1-training");
 fs.mkdirSync(dir, { recursive: true });
 const results = [];
 try {
-  if(nas){const runtime=await(await fetch(origin+'/preview-api/v1/runtime')).json();assert.equal(runtime.buildSha,expected);assert.equal(runtime.training.cases,63);}
+  if (nas) {
+    const runtime = await (
+      await fetch(origin + "/preview-api/v1/runtime")
+    ).json();
+    assert.equal(runtime.buildSha, expected);
+    assert.equal(runtime.training.cases, 63);
+  }
   for (const width of [1440, 1280, 768, 390, 360]) {
     const page = await browser.newPage({
         viewport: { width, height: 960 },
@@ -38,7 +53,7 @@ try {
       .click();
     await page.getByRole("button", { name: "有错误", exact: true }).click();
     await expect(page.getByText("首个可证明的问题在哪里？")).toBeVisible();
-    await page.evaluate(()=>scrollTo(0,0));
+    await page.evaluate(() => scrollTo(0, 0));
     await page.screenshot({
       path: dir + "/case-" + width + ".png",
       fullPage: true,
@@ -57,7 +72,7 @@ try {
     await page
       .getByLabel("这怎样核对了原题条件")
       .fill("把每颗质量乘以25，回到总质量12.5克。");
-    await page.evaluate(()=>scrollTo(0,0));
+    await page.evaluate(() => scrollTo(0, 0));
     await page.screenshot({
       path: dir + "/self-check-" + width + ".png",
       fullPage: true,
@@ -67,7 +82,19 @@ try {
       page.getByText("本次有独立检查证据。", { exact: true }),
     ).toBeVisible();
     await expect(page.locator(".sealed-answer")).toContainText("9");
-    await page.evaluate(()=>scrollTo(0,0));
+    // Feedback can render before its following stats request completes. Verify
+    // settled real backend rates before capturing the final evidence image.
+    await expect(page.locator(".training-room")).toHaveAttribute(
+      "aria-busy",
+      "false",
+    );
+    await expect(page.locator(".evidence-rates strong")).toHaveText([
+      "0 / 1",
+      "1 / 1",
+      "1 / 1",
+      "尚无样本",
+    ]);
+    await page.evaluate(() => scrollTo(0, 0));
     await page.screenshot({
       path: dir + "/feedback-" + width + ".png",
       fullPage: true,
@@ -96,6 +123,7 @@ try {
       width,
       firstImmutable: true,
       reverseEvidence: true,
+      settledRatesVerified: true,
       refreshCleared: true,
       noBrowserPersistence: true,
     });
@@ -103,11 +131,24 @@ try {
   }
 } finally {
   await browser.close();
-  if(server){server.closeAllConnections();await new Promise((r) => server.close(r));}
+  if (server) {
+    server.closeAllConnections();
+    await new Promise((r) => server.close(r));
+  }
 }
 fs.writeFileSync(
   dir + "/results.json",
-  JSON.stringify({ status:"PASS",nas,origin,expectedSha:nas?expected:null,results }, null, 2) + "\n",
+  JSON.stringify(
+    {
+      status: "PASS",
+      nas,
+      origin,
+      expectedSha: nas ? expected : null,
+      results,
+    },
+    null,
+    2,
+  ) + "\n",
 );
 console.log(
   JSON.stringify({

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "nas": true,
+  "origin": "http://192.168.2.100:38444",
+  "expectedSha": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "results": [
+    {
+      "width": 1440,
+      "firstImmutable": true,
+      "reverseEvidence": true,
+      "settledRatesVerified": true,
+      "refreshCleared": true,
+      "noBrowserPersistence": true
+    },
+    {
+      "width": 1280,
+      "firstImmutable": true,
+      "reverseEvidence": true,
+      "settledRatesVerified": true,
+      "refreshCleared": true,
+      "noBrowserPersistence": true
+    },
+    {
+      "width": 768,
+      "firstImmutable": true,
+      "reverseEvidence": true,
+      "settledRatesVerified": true,
+      "refreshCleared": true,
+      "noBrowserPersistence": true
+    },
+    {
+      "width": 390,
+      "firstImmutable": true,
+      "reverseEvidence": true,
+      "settledRatesVerified": true,
+      "refreshCleared": true,
+      "noBrowserPersistence": true
+    },
+    {
+      "width": 360,
+      "firstImmutable": true,
+      "reverseEvidence": true,
+      "settledRatesVerified": true,
+      "refreshCleared": true,
+      "noBrowserPersistence": true
+    }
+  ]
+}

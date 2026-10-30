@@ -1,0 +1,109 @@
+{
+  "status": "PASS_MATH_ONEPASS_ANONYMOUS_NAS_DELIVERY",
+  "recordedAt": "2026-10-30T11:08:28.515176+00:00",
+  "origin": "http://192.168.2.100:38444",
+  "deployedSourceCommit": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "imageId": "sha256:6933c4d0689b2ab75ca8bde1b2c2cdf280102402ee647bfad151874c6aee322b",
+  "appId": "31abf393647d616fa4c9bee80e93b0daaa55892c592c942e8fbdbf2cbaee6c31",
+  "directory": "/volume2/homes/admin/klh-math-preview-20261025-c6ae9e7f",
+  "environment": {
+    "node": "v24.15.0",
+    "arch": "x64",
+    "kernel": "4.4.180+",
+    "privateComponentsAbsent": true
+  },
+  "runtime": {
+    "buildSha": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+    "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+    "contentOnly": true,
+    "database": false,
+    "lessons": 70,
+    "practiceTasks": 849,
+    "practicePublicSha256": "306dc7ec07a5b7f6f2a6aa31628e8e0147b357c46ade8403ae29e4b6643b495f",
+    "libraryPublicSha256": "52ae6d22b03e7b026ddbdbe0aea1f7f28733d7c061f983252df7cc6a0cc0146b",
+    "training": {
+      "legacyCases": 14,
+      "anonymousBundles": 10,
+      "anonymousCases": 30,
+      "processCases": 3,
+      "familyExamples": 16,
+      "cases": 63,
+      "families": 8,
+      "templates": 10,
+      "reviewDays": [
+        1,
+        3,
+        7,
+        14
+      ]
+    },
+    "trainingCatalogSha256": "97bc16ac3a34928f0c0bc251acc6a09602ff1ba9f806a47f226a746e3f9c7ebf",
+    "fullArticles": 70,
+    "semanticModels": 54,
+    "adaptedMethodGuides": 22,
+    "readingSha256": "f4055c3226f1a4fad0b639c3f5f31c90656adaa4786d462cbc74210dc790f9f9",
+    "storage": "page-memory-only",
+    "library": {
+      "thinking": 17,
+      "legacy": 54,
+      "legacyQuestions": 432,
+      "detective": 14
+    }
+  },
+  "limits": {
+    "user": "1024:100",
+    "readonlyRoot": true,
+    "mountCount": 0,
+    "memoryBytes": 268435456,
+    "cpuset": "0",
+    "capDrop": [
+      "ALL"
+    ],
+    "securityOpt": [
+      "no-new-privileges:true"
+    ],
+    "ports": {
+      "4179/tcp": [
+        {
+          "HostIp": "192.168.2.100",
+          "HostPort": "38444"
+        }
+      ]
+    },
+    "restartPolicy": {
+      "Name": "unless-stopped",
+      "MaximumRetryCount": 0
+    }
+  },
+  "protectedContainers": {
+    "count": 11,
+    "beforeSha256": "be40f79c8587326f2e693f32ad96866939008ab97685f249fe00de0dd20e48ee",
+    "afterSha256": "be40f79c8587326f2e693f32ad96866939008ab97685f249fe00de0dd20e48ee",
+    "unchanged": true
+  },
+  "oldSyntheticDataAndTLS": {
+    "beforeSha256": "d133d507ceade37422f1af20448ed292919a14337b4c34502f279f2fb44a220c",
+    "afterSha256": "d133d507ceade37422f1af20448ed292919a14337b4c34502f279f2fb44a220c",
+    "unchanged": true
+  },
+  "rollback": {
+    "previousSourceRetained": "52e781440b21a406286ac55bbfefdb6e06d119fe",
+    "previousIdRetained": "07ac2a63bf2704ee23b091757a4f8cfd57b66c3ad7c69930afc04008a2c39932",
+    "previousImageRetained": "sha256:fff4f09e498239605ba2106733e0aea9fcc56c39616266858e8871d2bbadebda",
+    "previousFinallyRunning": false,
+    "newFinallyRunning": true,
+    "evidence": "rollback.json"
+  },
+  "ci": {
+    "sourceHead": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+    "push": 40977114435,
+    "pull_request": 40977118591,
+    "bothConclusion": "success"
+  },
+  "physicalPhoneIPad": "NEEDS_USER_ACTION",
+  "realDataImportedOrModified": false,
+  "oldProjectsModified": false,
+  "systemPermissionsDSMOrTailscaleChanged": false,
+  "learningDatabaseWrites": 0,
+  "anonymousMemoryOnly": true
+}

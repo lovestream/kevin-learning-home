@@ -1,53 +1,94 @@
-# Issue23 · 数学整站最终验收（执行中，尚未交付新版 NAS）
+# MATH-ONEPASS-FINAL · 数学整站交付验收
 
-本文件随同一 Draft PR #22 持续补齐；不是要求中途审查或声称已更新 NAS。继续完成完整CI→同一NAS受控发布→全量回归/回退/视觉复盘→最终HEAD双CI后，才集中交付一次独立审计。PR18→PR21→PR22不合并。
+**访问：[http://192.168.2.100:38444/](http://192.168.2.100:38444/)**。同一局域网直接打开，免登录、HTTP，无需Mac服务或证书。新版已经实际运行，不是本地演示。
 
-## 来源与实际交付边界
+Issue #23 在原 `codex/math-full-03-capabilities` / Draft PR #22 连续执行。PR18→21→22仍为堆叠Draft，不合并，不进入英语、正式身份/真实学习记录或积分蛋仔。此报告的完成范围是原站成熟的匿名数学教学体验，以及受正式闸门保护、仅在合成环境验证的私人机制。用户审美与实体设备验收不由自动测试替代。
 
-源活跃旧数学 PR1 固定 `8292de85b40d6b2b5fba0f8b2dca359f5b2f821d`，原冻结 `a7c05aaa8d9c5eabae4f3453807f830da1cbf279`，旧main为9月27日版本。已逐项比较19个运行文件变化，只定向读取84份教学代码/任务/测试证明与10个确切已验证匿名案例包，不扫描2130份开发产物或私密作业。见[来源审计](evidence/math-onepass/source-audit.json)、[逐行为矩阵](MATH-COMPLETE-PARITY-MATRIX.md)和[机器清单](evidence/math-onepass/source-to-target.json)。
+## 发布与复审定位
 
-|原站能力|本轮实现|数据与证据边界|
+|项目|实际结果|
+|---|---|
+|NAS运行源码|`e7b4302889da7b07fc081ae68447cba404a76ad3`|
+|镜像|`sha256:6933c4d0689b2ab75ca8bde1b2c2cdf280102402ee647bfad151874c6aee322b`，linux/amd64|
+|容器|`31abf393647d616fa4c9bee80e93b0daaa55892c592c942e8fbdbf2cbaee6c31`|
+|专用目录|`/volume2/homes/admin/klh-math-preview-20261025-c6ae9e7f`，沿用本次owner与版本化发布工具|
+|源码push完整CI|[40977114435](https://github.com/lovestream/kevin-learning-home/actions/runs/40977114435)，成功|
+|源码PR完整CI|[40977118591](https://github.com/lovestream/kevin-learning-home/actions/runs/40977118591)，成功|
+|最终归档HEAD|最终文档提交的精确HEAD与两套完整CI链接记录在[PR #22正文](https://github.com/lovestream/kevin-learning-home/pull/22)，仅在其均成功后交独立审查|
+|源码与最终文档关系|后续只归档证据/文档，并加强五尺寸已完成反馈统计的测试；[276项输入](evidence/math-onepass/release-inputs.json)保持不变，不将文档HEAD冒充NAS运行SHA|
+
+[交付回执](evidence/math-onepass/delivery.json) · [13组NAS验收](evidence/math-onepass/nas-suite.json) · [实际回退](evidence/math-onepass/rollback.json) · [源CI状态](evidence/math-onepass/source-ci.json) · [镜像校验](evidence/math-onepass/image.json)。
+
+## 来源审计与原站—NAS完整差异
+
+原数学main停在9月，不能作为最新来源。实际对照活跃Draft PR1固定 `8292de85b40d6b2b5fba0f8b2dca359f5b2f821d` 与原冻结 `a7c05aaa8d9c5eabae4f3453807f830da1cbf279`，核实19个运行文件变化、84份定向源码/任务/测试材料、10包30宗明确匿名示例。另对50旧关种子清单做了逐关去向核对。每份按Git blob及SHA256校验；没有机械导入2130文件、私密投稿箱或学习数据库。执行期间再次核实原PR1仍为同一SHA。
+
+[164项逐控件对照](MATH-COMPLETE-PARITY-MATRIX.md)与[机器清单](evidence/math-onepass/source-to-target.json)区分108项NAS实测、49项隔离合成私有机制和7项明确排除；包含sourceGitRef/blob/SHA256、原路径/动作、目标路由、数据依赖和逐项证据。来源证据：[source-audit](evidence/math-onepass/source-audit.json)、[source-import](evidence/math-onepass/source-import.json)、[study-source](evidence/math-onepass/study-source.json)、[reading-source](evidence/math-onepass/reading-source.json)。
+
+|原站入口/能力|新NAS的实际落点与变化|边界与验收|
 |---|---|---|
-|70课六步课堂、教材顺序及原教具|全部保留；六个静态声明不冒充可操作|原内容hash及210课堂浏览器基线保留|
-|完整教案/家长一起读/例题/对照/自查/打印|70份原教案，18选择与52解释自查，段落/模型/参考/方法/复述/笔记/打印|解释仅与参考对照，不自动判掌握|
-|849题五组五型|题干、ID、原答案与评分不变；新增共享会话/首答/自查/帮助管道|514确定题、335人审解释；849全题HTTP及84浏览器流程保留|
-|54旧高年级课/432题|逐课真实问题→图→语义参数→公式→核验，54适配模型及完整原主题教案|[54课质量证据](evidence/math-onepass/legacy-quality.json)，五宽270视图与54张人工看过的模型截图；不是新编教材审定|
-|17已审思维卡|原图、专用教具、撤销/重置、分级提示、不可变首答、自查和解释人审|12原变式/卡；43暂缓不公开|
-|14原侦探、活跃V2四层|63宗=14+30+3+16；10包/8题族/18组对照，L1判断、L2首错、L3对照/逆向、L4独立首答与证据检查|8族×256可生成参数，其中每族240训练池及16保留。公开ID/标题去除答案暗示；排序、反查、提示、重试均真实走后端|
-|28方法，原6完整+22简条目|保留6原指南，22补成条件/原理/例子/反例/已安装课堂链接|22明确标“本次教学适配”，不冒充原站已审指南|
-|复习244原题、11逆向索引|全部原题及精确题号深链保留|匿名页面只有本次手记与订正，无跨日记忆|
-|今天/继续未完成/错题分组/到期安排|复用原选择器与共享规则，隔离合成私有接口验证|原1/3/7/21复习、思维延迟挑战、侦探1/3/7/14；正式服务未启用|
-|家长核对/学习者隔离/恢复|现有认证、实时授权、CSRF、家长二次解锁、独立合成SQLite/WAL/flock库|测试模式、专用OS临时目录；SIGKILL后恢复及带scope逻辑备份验证。NAS不带此仓库|
+|今天/学习地图|统一首页六条路径；按上下册→真实教材单元→知识点→课堂，而非平铺70卡|个性化下一课、继续未完成、到期和错题选择器复用在合成私有机制；匿名首页不假造私人推荐|
+|教材与首课|17单元63教材课+7衔接，共70课；搜索、空态、相邻课和返回单元；保留原六步/3D等教具|64交互、6原静态声明；210课堂与30代表检查实测|
+|CourseReader/课堂阅读|补回全部70份原完整文章、例题/步骤原因、对照、方法、口述、本页手记与打印|18选择+52解释检查真实前后端；文章与原图逐字段投影，来源hash留档|
+|原849题五组五型|题目/图→不可变首答→自查→终答；分级帮助、错因、单位与等价；保留每题原ID|全部HTTP及三尺寸849目录/84完整作答；335解释题待人审，不给假掌握或积分|
+|11组撤教具测验|保留原P01/P02/P07/P05/P08五题ID与首答/自查/终答，撤去图和直接提示|真实浏览器11组通过，不另编一套替代题|
+|四至六年级54旧课/432题|每课专属“问题—模型—式—反查”与参数操作、原8题、完整主题阅读|54独立数学不变量、五尺寸270模型视图、54逐课看图；保留原旧课来源身份，不冒充新审定教材章节|
+|17已审思维卡|原条件图、专属教具、撤销/重置、提示/支架、首答与证据自查、解释人审和12原变式/卡|43暂缓卡仍不公开；解释不自动判掌握|
+|数学侦探V2|63宗=14旧匿名+30包内+3过程反例+16题族示例；10模板、18对照组、8题族×256参数|L1判断、L2首错、L3变式/正确对照/逆向、L4独立首答/真实反查；与原judge/evidence/repair/verify四步骤分开|
+|原14模拟案|保留旧匿名兼容接口和路由，主导航统一进入新的V2|旧14兼容回归仍保留，不把14误称整个新侦探|
+|方法工具箱|28项都有条件、原理、例子、反例和已安装课堂链接；6原完整指南保留，22补成教学适配|22明确标“本次教学适配”，不是伪称原站已有完整已审指南；28真实浏览器检查|
+|自由复习/逆向索引|244原复习题、11原题精确深链、原折纸打印入口；按教材分组|不生成虚假跨日到期任务；原成熟入口实际可用|
+|错题/阅读记录|本页阅读标记、笔记与首答/订正；错题回到原题且保留第一回答|同一文档SPA导航保留，刷新清空；不把订正算成独立掌握|
+|私人历史/家长/延迟复测|共享规则+隔离SQLite/WAL/flock仓库，现有身份/实时授权/CSRF/家长二次解锁；事务、幂等、并发与逻辑恢复|只接受test+loopback合成服务，正式main不注入；匿名NAS无家长审核/私人历史/时钟/恢复API|
+|原奖励、钱包、蛋仔/PIN|保留清楚的未来接口边界，去掉数学核心对奖励副作用的耦合|paid/completionPaid固定0；不激活正式身份、不合并两钱包、不搬真实资料|
 
-所有1,298道原任务已通过实际新HTTP业务管道。数学正确性证据分层：[原849题golden](evidence/math-full-02/golden.json)是对原评分行为的全量回归；独立编辑审计覆盖所有题目，84题可直接由题干/图独立数值推导，294题为解法内部一致性检查，不能宣称849题全部被独立证明。335解释题仍需人审。54模型另有独立算术不变量，侦探8×256参数/等价反查/常量伪检验有独立规则测试。
+侦探每题族256个可生成参数，其中240训练、16保留；正确对照与过程不足都必须真实判断。公开ID为不带答案含义的opaque ID，8个原教师标题的答案暗示改成中性公开标题，原版本/规则留在服务端。排序题复用原整列值并支持拖动/上下移，口述明确待家长核对。首答、实际反查算式/结果、帮助证据、统计分母、1/3/7/14延迟复测、401/403/409/幂等均有独立测试；匿名只体验本次流程。原普通复习1/3/7/21安排复用在合成私有机制，不与侦探周期混淆。
 
-## 工程与匿名边界
+数学证据分层：[全部849原评分golden](evidence/math-full-02/golden.json)与[原449拓展golden](evidence/math-full-remainder/golden.json)验证行为一致；[独立编辑审计](evidence/math-onepass/849-math-audit.json)中84题可从题干/图独立推导，294题为解法内部一致性，不能说849题均已独立数学证明。54模型另做独立不变量；8×256侦探参数、错误反查、纯常量伪检验等另做规则测试。
 
-- `packages/math-training` 复用原数学业务逻辑；奖励/钱包/蛋仔耦合移除，响应中的paid/completionPaid固定零。原站代码和资料不反向修改。
-- 正式 `apps/server/main.ts` 不注入合成仓库。私有测试接口只接受test模式+现有loopback认证服务+实时学习者/家长授权；不能用环境变量在生产打开。正式身份/记录启用须独立审查。
-- NAS预览仅纯数学机制与作者题库；不含AuthService、SQLite仓库、native addon、学习数据挂载。随机页面能力只在有限内存/TTL内使用，不设置Cookie或浏览器持久化；刷新清空，无真实身份/家长历史API。
-- 局域网HTTP原地址38444，不申请证书，不改HTTPS/Tailscale/DSM/Docker权限或现有正式服务。
+## 工程与隐私
 
-## 视觉与使用验证
+`packages/math-training` 提取复用原共享数学规则，`study.mjs`复用原学习选择器/阅读/首答自查/思维/家长复核等机制，接口由共享严格schema约束。隔离仓库只允许专用OS临时目录、排除软链接/外来文件，并以flock、WAL/FULL、事务化状态和事件回执保护；每日计划持久化、跨学习者隔离、SIGKILL恢复、同事件重试和scope一致的逻辑备份均实测。
 
-[设计系统](MATH-ONEPASS-DESIGN-SYSTEM.md)已实装至所有模块，详见[三轮视觉复盘](VISUAL-REVIEW.md)。R0原NAS70全页截图、R1统一设计与54逐课看图/五尺寸业务回归已执行并自修；最终R2新NAS五尺寸截图、原生Chrome确认和回退证据待发布后补齐。自动截图不是用户审美批准；实体手机/iPad标NEEDS_USER_ACTION。
+NAS的PageTraining是有容量/TTL限制的匿名RAM能力：256位随机token，最多64页、约24MiB状态、30分钟TTL，离页释放；不设Cookie/localStorage/sessionStorage，不落学习库。LAN HTTP用getRandomValues，不依赖secure-context才有的randomUUID/subtle。父母审批/跨日复测等受限动作在匿名入口直接拒绝。镜像只带纯数学与作者题库，不带AuthService、正式server、SQLite仓库或native addon；零挂载、只读根、非root1024:100、256MiB、cpuset0、cap-drop ALL、no-new-privileges、unless-stopped，仅192.168.2.100:38444。
 
-## 当前验收状态
+[旧项目只读核对](evidence/math-onepass/old-projects-readonly.json)确认数学HEAD8292de...及英语HEADd0b42a...和工作区状态hash前后一致；英语原有一个未跟踪条目未读取或改动。没有创建新worktree/项目根目录，没有修改旧站、DSM、Docker权限/daemon、证书或Tailscale。11受保护容器及旧合成/TLS文件hash不变；未读取或导入Kevin学习记录。
 
-本地新167项Node以及原60Node/18UI/12数学Node/9数学浏览器均有完整通过记录。新增1298题HTTP、63案件/18对照、真实丢响应重试、非安全HTTP、五尺寸自查、完整教案/28方法/撤教具测验、错题深链订正和打印PDF已有通过记录。原210课堂、849题三尺寸/84作答流程、255原能力流程均已通过；849当前运行输入证据已重新归档。GitHub Docker/Compose完整双CI与新NAS发布尚待本次提交后执行。
+## 完整验收与实际性能
 
-NAS当前仍为旧源码 `52e781440b21a406286ac55bbfefdb6e06d119fe`，不把此旧入口冒充新版。最终此处应归档新源码完整SHA、镜像SHA、容器ID、真实NAS运行参数、11受保护容器/旧合成文件不变、实际回退/恢复、全量HTTP与浏览器截图、最终文档HEAD push/PR CI链接。
+|检查|结果/证据|
+|---|---|
+|原基础回归|60 Node、18 UI、12数学Node、9数学浏览器，精确源码CI全部通过；[foundation-ci](evidence/math-onepass/foundation-ci.json)|
+|新机制|167 Node，JUnit零失败；授权/隐私/反例/恢复/模型独立测试；[node-ci.xml](evidence/math-onepass/node-ci.xml)|
+|Docker/Compose|原Compose1.28.5解析、容器writer竞争、SIGKILL/重建、自动重启、备份恢复完整保留；[容器摘要](evidence/math-onepass/container-ci-summary.json)、[恢复摘要](evidence/math-onepass/recovery-ci-summary.json)、源码两套CI|
+|NAS全课程|70×3=210、代表30、教材导航；[classrooms](evidence/math-onepass/classrooms-nas.json)、[checkpoint](evidence/math-onepass/checkpoint-nas.json)、[navigation](evidence/math-onepass/navigation-nas.json)|
+|NAS练习|849×3目录、84完整流程、原255拓展流程，全部通过；[practice](evidence/math-onepass/practice-nas.json)、[compatibility](evidence/math-onepass/compatibility-nas.json)|
+|NAS业务HTTP|1298题完整首答/自查/终答，共352人审解释题；另保留849及449+14旧兼容HTTP；[business](evidence/math-onepass/business-http.json)|
+|NAS侦探|全部63宗分阶段表单、18组对照/迁移、真实服务提交后丢响应并以原事件重试，均通过；[cases](evidence/math-onepass/cases-browser.json)|
+|NAS五尺寸|1440/1280/768/390/360；270模型视图、124完整文章、28方法、11撤教具检查、错题订正/本页记录、移动菜单键盘和焦点、CSP/零浏览器持久化均通过；[experience](evidence/math-onepass/experience-results.json)、[models](evidence/math-onepass/models-results.json)|
+|已完成反馈统计|五尺寸等待实际后台统计返回后核对首答0/1、自查1/1、自主纠错1/1、迁移无样本，再截图；[training](evidence/math-onepass/training-results.json)|
+|教案打印|六份真实PDF，共20页，Poppler核对全部必需正文/折叠例题/原因/对照/选项，关闭状态恢复；[print](evidence/math-onepass/print-nas.json)、[六份PDF](evidence/math-onepass/prints)|
+|实际回退|新e7→原52e7814→新e7，同一HTTP入口实际访问通过；原容器/镜像保留；[rollback](evidence/math-onepass/rollback.json)|
+|资源与原生浏览器|19密封构建资源一致，276项构建/验证输入不变；普通Mac Chrome实际打开、首课拍照与故障案卷焦点复核；[seal](evidence/math-onepass/static-seal.json)、[native](evidence/math-onepass/native-chrome.json)|
 
-明确排除：原43暂缓卡、168蓝图、被70课替代的旧三年级50重复课；Kevin真实记录/正式账号/跨学科积分/钱包/蛋仔；英语。不能把其它成熟教学遗漏推给后续任务。
+NAS实机DS918+，DSM7.1.1-42962 Update6，Linux4.4.180+，Docker20.10.3，Node24.15.0/x64。两独立测试客户端下：1298题业务管道57.68秒；210课堂132.56秒；84练习流程159.23秒；255拓展流程444.99秒；270模型视图295.79秒。原兼容评分API：849题p50/p95为7.29/14.23ms，拓展为6.06/8.59ms。回退重启后的空闲瞬时内存64.65MiB/256MiB；这是测量点，不是峰值或长期容量承诺。详见[nas-suite](evidence/math-onepass/nas-suite.json)、[环境](evidence/math-onepass/nas-environment.json)、[stats](evidence/math-onepass/runtime-stats.json)。
 
-## 首轮GitHub CI自修记录
+## 三轮视觉与自修记录
 
-源码提交 `263a6427cf228297f2775bb99c76bd2358491282` 的push40883855285/PR40883860885未通过，尚未执行NAS发布。两个原因均已定位：侦探对照测试在异步响应前读取旧案卷ID；原70课离线闸门仍比对旧浏览器脚本的归档哈希。现改为等待明确新案ID，并核对实际迁移响应的mode/题族/题干；63宗、18对照及丢响应重试本地重新通过。原210课堂和30代表课堂的真实测量重新归档，离线hash闸门通过，保留全部案件与断言，不跳过测试。等待修订提交完整双CI，成功后继续NAS。
+[设计系统](MATH-ONEPASS-DESIGN-SYSTEM.md)和[完整视觉复盘](VISUAL-REVIEW.md)区分R0旧NAS、R1实装/逐课模型与打印、R2最终NAS。已归档[124张当前NAS截图](evidence/math-onepass/screenshots.json)、54份原模型观察及6份实际教案PDF；不是只检查首页或只跑DOM。全页布局总览与原分辨率关键区域分开，长文不冒称逐字二次编辑。
 
-## 打印回归与源码CI
+内部发现并自修：原角课误用面积网格、分数标签遮挡、位值重叠、立方体开放薄片误觉、单位显示、教师标题暗示答案、排序表单错误、原选项ID不适合儿童阅读、移动页头/卡片密度、打印遗漏折叠例题和隐藏标题。首轮CI的异步对照测试与旧归档hash也已真实重测修正，保留全部断言。
 
-提交0714073d3dbf3e64a7513f9d4498b42657e57087的push 40885469656及PR 40885476895完整通过。后续独立PDF检查发现教学打印遗漏折叠内容，现已修复并新增六份真实打印/Poppler文本回归，证据见print-local.json；还需以包含该修复的最新提交完成双CI及NAS验证。
+254d44d的PDF CI失败经下载实际PDF确认是Poppler默认字体基线排序将Kevin移到中文段末；用内容流顺序提取后完整20项必需文字及六PDF通过，不删内容检查。
 
-打印CI自修：254d44d提交的新增PDF检查在Linux失败。下载实际CI PDF后确认文字和版式齐全；Poppler默认按字体基线排序，将混合字体的Kevin移到中文段后。改用`pdftotext -raw`按内容流顺序提取，失败PDF的20项完整必需正文已全部匹配，六份本地PDF重新回归。没有删除文字断言或放宽内容完整性要求。运行代码与既有数学数据未再修改；以修订提交的完整双CI为最终依据。
+首个新NAS版本4fc8ad7的13组检查中12组通过，案卷标题焦点失败。真实诊断hasFocus=true、activeElement=body、新标题已出现：requestAnimationFrame先聚焦旧keyed节点，再被React替换。e7改为在DOM提交后按attempt.id聚焦，后台请求完成后仍保持；全部63案/18组在最新CI和NAS重测通过，普通Chrome对故障案卷也实际复核。保留[原失败诊断](evidence/math-onepass/focus-r2-failure.json)，不把失败试验标为完成。
 
-NAS首轮自修：4fc8ad70457e437fe44c05a7395c2236c3cea87f的push40973983559和PR40973989519完整成功，实际发布后发现案卷切换的标题焦点时序问题。已通过真实NAS复现并修复为React提交后聚焦，新增后台请求结束后的稳定焦点断言；首轮失败证据保留，不视为最终验收。继续完成修订提交双CI和NAS总复测，不中途交独立审查。
+最终截图还增强了等待统计稳定的断言，避免将反馈已经出现、统计请求尚未结束的中间帧当最终证据；五尺寸真实NAS重测通过，未再改运行代码。
+
+## 明确排除与停止点
+
+仅排除原43暂缓卡、168蓝图、被70课替代的旧三年级50重复课；真实身份/个人历史/跨日持久记录/正式家长审批启用、积分钱包蛋仔、英语及系统/网络配置变更。[50旧关逐关去向](evidence/math-onepass/grade3-legacy-supersession.json)记录原站hasCompleteGrade3隐藏规则与现有70课/思维卡/高年级专题的概念关联，不伪称原50关题目或年级逐一等价复制。其余成熟匿名数学能力已纳入本轮，不推给“后续补内容”。
+
+335原练习解释及17思维解释需要人工核对，不认证自动掌握。54旧课与22新增教学适配保留来源与审核身份。实体手机/iPad：NEEDS_USER_ACTION；实体打印机未测试；用户最终审美判断与ChatGPT独立代码审查均未代做。
+
+保持PR18/21/22 Draft、不合并，最终归档HEAD完整双CI成功后暂停，等待一次集中独立审查。不进入英语、正式数据或奖励阶段。

@@ -1,0 +1,6 @@
+{
+  "status": "PASS_CI",
+  "scope": "synthetic DB+media+content; offline snapshot into new empty host layout",
+  "tableHashesMatch": true,
+  "receiptReplay": true
+}
