@@ -4,6 +4,8 @@ import { join, resolve } from "node:path";
 import { randomUUID } from "node:crypto";
 import { AppError, parseCommand } from "../../packages/contracts/index.ts";
 import { subjectCatalog, wallet } from "../../packages/subjects/index.ts";
+import { mathTrainingHTTP } from "./math-training-http.ts";
+import type { MathTrainingRepository } from "../../packages/math-training/repository.ts";
 import { mathHTTP } from "./math-http.ts";
 import type { MathLessonService } from "../../packages/subjects/math/service.ts";
 import { authHTTP } from "./auth-http.ts";
@@ -23,11 +25,20 @@ export function createHttp(
     origin: string;
     auth?: { service: AuthService; config: AuthConfig };
     math?: MathLessonService;
+    syntheticMathTraining?: MathTrainingRepository;
     readiness?: () => void;
     testContext?: (req: IncomingMessage) => TestContext | null;
     afterWrites?: () => void;
   },
 ) {
+  if (
+    options.syntheticMathTraining &&
+    (process.env.NODE_ENV !== "test" ||
+      !options.auth ||
+      options.auth.config.mode !== "loopback-development" ||
+      !/^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(options.origin))
+  )
+    throw new AppError("MATH_TRAINING_SYNTHETIC_ONLY", 503);
   if (options.testContext && process.env.NODE_ENV !== "test")
     throw new AppError("TEST_CONTEXT_DISABLED", 503);
   if (options.auth) {
@@ -97,6 +108,17 @@ export function createHttp(
           json,
           (value) => res.setHeader("Set-Cookie", value),
         ))
+      )
+        return;
+      if (
+        await mathTrainingHTTP(
+          req,
+          path,
+          url,
+          options.auth,
+          options.syntheticMathTraining,
+          json,
+        )
       )
         return;
       if (mathHTTP(req, path, url, options.auth, options.math, json)) return;

@@ -1,0 +1,11 @@
+# Reused math mechanisms — isolated synthetic review only
+
+The source owner authorized reuse for Kevin Learning Home in Issue 23. Authored source snapshots, exact Git blobs, SHA256 and every adaptation are recorded in `docs/implementation/evidence/math-onepass/{source-import,study-source,source-audit}.json`. The old repositories remain read-only. No learner database, submitted private homework, real identity or game/reward assets are inputs.
+
+- `engine.mjs`: original detective case and V2 self-check rules. Only 63 approved anonymous cases, eight families and ten exact reviewed bundles are installed. Opaque public IDs and eight neutral title aliases prevent teacher-facing ERROR/CONTROL/correctness labels from leaking a verdict; original case content/version hashes remain unchanged.
+- `study.mjs`: original reading, sessions, immutable first answer, self-check, assistance, grading, notes, explanation review and delayed-thinking mechanisms. Rewards and personal-settings coupling are removed in the imported copy. Original Today/resume/mistakes/review selectors are reused. Authored bank IDs/answers are unchanged.
+- `repository.ts`: deliberately separate synthetic SQLite database; kernel writer flock, WAL/FULL, atomic transactions, per-learner keys and scoped logical recovery. Construction requires `NODE_ENV=test`, an owner-marked OS temporary directory and no foreign files/symlinks.
+- Production `apps/server/main.ts` never injects this repository. The optional private HTTP harness additionally requires test mode, the existing authenticated loopback development service and live learner/parent grants with CSRF. Formal deployment/account activation needs a separately reviewed integration; toggling an environment variable does not enable it.
+- The NAS content preview imports only the pure authored math mechanisms. It does not ship this repository, AuthService, native addon or any learning mount. An opaque page capability has bounded memory/TTL and no account/cookie/localStorage/IndexedDB writes. Parent approval, backup/restore and cross-day review are denied there.
+
+Run `node --test --test-concurrency=1 tests/math-onepass/*.test.*`. Browser and HTTP gates are defined in the `math-onepass` GitHub Actions job. Synthetic recovery tests use temporary owned directories and always clean them.

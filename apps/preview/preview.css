@@ -438,3 +438,7 @@
 .practice-panel h3:focus { outline:2px solid #2f6985; outline-offset:5px; }
 .task-relationship-card { background:#f4f8fc; padding:1rem; border-radius:12px; }
 .relationship-prompts { display:flex; flex-wrap:wrap; gap:1rem; margin-block:1rem; }
+.math-extras { margin-top:2rem; padding-top:1.5rem; border-top:1px solid #c2d5de; }
+.math-extras h2 { font-size:1.2rem; }
+.math-extras nav { display:flex; flex-wrap:wrap; gap:.8rem 1.3rem; }
+.math-extras a { display:inline-flex; align-items:center; min-height:44px; }

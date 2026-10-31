@@ -1,0 +1,656 @@
+[
+  {
+    "lessonId": "G3-U01-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "红点 视线正对前面。"
+  },
+  {
+    "lessonId": "G3-U01-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "不一定 圆柱的底面也可能是圆。"
+  },
+  {
+    "lessonId": "G3-U01-B03",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "6个 展开前后面数不变。"
+  },
+  {
+    "lessonId": "G3-U02-B01",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "只有同级运算才从左往右；括号和乘除会改变第一步。"
+      },
+      {
+        "correct": true,
+        "reason": "故事、数量关系和通用约定互相核对，更不容易机械套规则。"
+      },
+      {
+        "correct": false,
+        "reason": "数的大小不能决定运算顺序。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U02-B02",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "只有同级运算才从左往右；括号和乘除会改变第一步。"
+      },
+      {
+        "correct": true,
+        "reason": "故事、数量关系和通用约定互相核对，更不容易机械套规则。"
+      },
+      {
+        "correct": false,
+        "reason": "数的大小不能决定运算顺序。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U02-B03",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "只有同级运算才从左往右；括号和乘除会改变第一步。"
+      },
+      {
+        "correct": true,
+        "reason": "故事、数量关系和通用约定互相核对，更不容易机械套规则。"
+      },
+      {
+        "correct": false,
+        "reason": "数的大小不能决定运算顺序。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U02-B04",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "只有同级运算才从左往右；括号和乘除会改变第一步。"
+      },
+      {
+        "correct": true,
+        "reason": "故事、数量关系和通用约定互相核对，更不容易机械套规则。"
+      },
+      {
+        "correct": false,
+        "reason": "数的大小不能决定运算顺序。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U02-B05",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "只有同级运算才从左往右；括号和乘除会改变第一步。"
+      },
+      {
+        "correct": true,
+        "reason": "故事、数量关系和通用约定互相核对，更不容易机械套规则。"
+      },
+      {
+        "correct": false,
+        "reason": "数的大小不能决定运算顺序。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U02-E01",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "只有同级运算才从左往右；括号和乘除会改变第一步。"
+      },
+      {
+        "correct": true,
+        "reason": "故事、数量关系和通用约定互相核对，更不容易机械套规则。"
+      },
+      {
+        "correct": false,
+        "reason": "数的大小不能决定运算顺序。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U02-E03",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "80−(25+15)。 两次扣款合为40。"
+  },
+  {
+    "lessonId": "G3-U02-E02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "3 9÷3=3。"
+  },
+  {
+    "lessonId": "G3-U02-E04",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "相同，都是15。 只是两堆计数先后变了，没有增减小棒。"
+  },
+  {
+    "lessonId": "G3-U02-E05",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "3×4+3×2=18。 两部分各有3组。"
+  },
+  {
+    "lessonId": "G3-U02-O01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "7 撤销加5用减5。"
+  },
+  {
+    "lessonId": "G3-U02-O02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "□×2=24，□为12。 替换完整括号部分。"
+  },
+  {
+    "lessonId": "G3-U03-B01",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "7厘米是终点读数，没有扣掉起点前面的2厘米。"
+      },
+      {
+        "correct": true,
+        "reason": "7−2＝5厘米，这才是两个端点之间的距离。"
+      },
+      {
+        "correct": false,
+        "reason": "两个读数不能直接相加。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U03-B02",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "没有参照物，不能说明估计依据。"
+      },
+      {
+        "correct": true,
+        "reason": "估计有标尺、有份数，还能复核。"
+      },
+      {
+        "correct": false,
+        "reason": "整十整百不代表符合真实距离。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-UP01-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "2000克 每千克1000克。"
+  },
+  {
+    "lessonId": "G3-UP01-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "300克 替代物质量相加。"
+  },
+  {
+    "lessonId": "G3-U04-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "120 3个十乘4得12个十。"
+  },
+  {
+    "lessonId": "G3-U04-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "48 8个一、4个十。"
+  },
+  {
+    "lessonId": "G3-U04-B03",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "228 48进4，18+4=22个十。"
+  },
+  {
+    "lessonId": "G3-U04-B04",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "0 9组0仍没有。"
+  },
+  {
+    "lessonId": "G3-U04-B05",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "小 198<200且乘数为正。"
+  },
+  {
+    "lessonId": "G3-UP02-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "不一定 含义由编码规则决定。"
+  },
+  {
+    "lessonId": "G3-U05-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "线段 长度有限。"
+  },
+  {
+    "lessonId": "G3-U05-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "顶点 必须有共同起点。"
+  },
+  {
+    "lessonId": "G3-U05-B03",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "锐角 开口小于直角。"
+  },
+  {
+    "lessonId": "G3-U06-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "1/2块 整体一块等分为2份。"
+  },
+  {
+    "lessonId": "G3-U06-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "4/7 分子数取了几份。"
+  },
+  {
+    "lessonId": "G3-U06-B03",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "5/7 合并5个1/7。"
+  },
+  {
+    "lessonId": "G3-U06-B04",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "1/4 整体分成4个相等组。"
+  },
+  {
+    "lessonId": "G3-U06-B05",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "3个 18÷6。"
+  },
+  {
+    "lessonId": "G3-U06-E01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "4大格 8÷2。"
+  },
+  {
+    "lessonId": "G3-U07-R01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "52 先乘后减。"
+  },
+  {
+    "lessonId": "G3-U07-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "6种 3×2。"
+  },
+  {
+    "lessonId": "G3-L01-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "能 两半完全对应。"
+  },
+  {
+    "lessonId": "G3-L01-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "平移 整体方向与距离一致。"
+  },
+  {
+    "lessonId": "G3-L02-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "20 8个十平均分4份。"
+  },
+  {
+    "lessonId": "G3-L02-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "24 4个十分2份，每份2个十；8个一分2份。"
+  },
+  {
+    "lessonId": "G3-L02-B03",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "商9余2 27+2=29且2<3。"
+  },
+  {
+    "lessonId": "G3-L02-B04",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "0 每份都是0。"
+  },
+  {
+    "lessonId": "G3-L02-B05",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "48支 3×2×8。"
+  },
+  {
+    "lessonId": "G3-L02-B06",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "25元 先每支5元。"
+  },
+  {
+    "lessonId": "G3-L03-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "不是 边界不是线段围成。"
+  },
+  {
+    "lessonId": "G3-L03-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "16厘米 4条等长边。"
+  },
+  {
+    "lessonId": "G3-L03-E01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "6 8−2。"
+  },
+  {
+    "lessonId": "G3-L04-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "1厘米 平方单位的定义。"
+  },
+  {
+    "lessonId": "G3-L04-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "15平方厘米 5列3行。"
+  },
+  {
+    "lessonId": "G3-L04-B03",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "200平方厘米 每平方分米100。"
+  },
+  {
+    "lessonId": "G3-L05-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "15票 每个正字5笔。"
+  },
+  {
+    "lessonId": "G3-L05-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "10–19 边界已明确。"
+  },
+  {
+    "lessonId": "G3-LP01-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "12个月 年历的组织单位。"
+  },
+  {
+    "lessonId": "G3-LP01-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "20时 12+8。"
+  },
+  {
+    "lessonId": "G3-LP01-E01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "星期三 完整周期回原位。"
+  },
+  {
+    "lessonId": "G3-L06-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "0.7米 7个十分之一米。"
+  },
+  {
+    "lessonId": "G3-L06-B02",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "1.5 整数同，十分位5>2。"
+  },
+  {
+    "lessonId": "G3-L06-B03",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "3.7 同位单位相加。"
+  },
+  {
+    "lessonId": "G3-L07-R01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "6张 等分。"
+  },
+  {
+    "lessonId": "G3-L07-B01",
+    "blockId": "check",
+    "type": "self-explanation",
+    "referenceAnswer": "9人 没有重复计数。"
+  },
+  {
+    "lessonId": "G3-U03-E01",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "重叠的5厘米在两条中各算了一次。"
+      },
+      {
+        "correct": true,
+        "reason": "重复段应保留一次，所以只减去多算的一次。"
+      },
+      {
+        "correct": false,
+        "reason": "减两次会把实际存在的重叠段完全删掉。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U03-E02",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "第一个环先放好，后面每增加一个环才产生一个新接头。"
+      },
+      {
+        "correct": true,
+        "reason": "相邻连接发生在1-2、2-3、3-4之间，共3处。"
+      },
+      {
+        "correct": false,
+        "reason": "端部数量不等于相邻接头数量。"
+      }
+    ]
+  },
+  {
+    "lessonId": "G3-U03-O01",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "相邻小棒共享端点，但直线两端还各有一个。"
+      },
+      {
+        "correct": true,
+        "reason": "画出来是点—段—点—段—点—段—点。"
+      },
+      {
+        "correct": false,
+        "reason": "相邻两棒连接处是同一个位置，不能算两个。"
+      }
+    ]
+  },
+  {
+    "lessonId": "numbers.fractions.meaning",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "“2段”变成“1段”，不代表变短。下图的这一大段，正好包含上图的那两小段。请看：两幅图的涂色部分，从同一个位置开始，也在同一个位置结束。"
+      },
+      {
+        "correct": true,
+        "reason": "对！比较的是原来的两小段合起来，与重新分组后的一大段。它们是同一截彩带，所以2/6和1/3在这里表示相同的长度。"
+      },
+      {
+        "correct": false,
+        "reason": "一大段确实比一小段长。但题目让我们把一大段与两小段合起来比较，不是与一小段比较。下图的一大段恰好等于上图的两小段合起来。"
+      }
+    ]
+  },
+  {
+    "lessonId": "geometry.area.perimeter",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "你把两块方格分别围了一圈。拼起来后，中间的接缝不用围；刚才加起来的8厘米里，有2厘米要去掉。沿图上的外圈再数一次。"
+      },
+      {
+        "correct": true,
+        "reason": "对！2＋1＋2＋1＝6厘米。中间的接缝在里面，绳子不从那里走。"
+      },
+      {
+        "correct": false,
+        "reason": "两格告诉我们里面铺了多少，面积是2平方厘米。绳子要沿边走，请数外面的线段，不要数方格。"
+      }
+    ]
+  },
+  {
+    "lessonId": "algebra.substitution.intro",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "2颗只是一盒里的散糖。还有第二盒和第三盒，每盒也都有2颗。请把三盒的散糖一起数进去。"
+      },
+      {
+        "correct": true,
+        "reason": "对！三盒的散糖是2＋2＋2＝6颗。不知道袋里的颗数，也不影响我们数散糖。"
+      },
+      {
+        "correct": false,
+        "reason": "题目只问散糖。它们都在袋外面，每盒2颗，三盒就能直接相加。"
+      }
+    ]
+  },
+  {
+    "lessonId": "algebra.balance.intro",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "只拿左边，左边就比右边少3颗。请让右边也拿走同样多的糖。"
+      },
+      {
+        "correct": true,
+        "reason": "对！左边只剩袋子，右边剩10−3＝7颗。两边仍同样多，所以袋里是7颗。"
+      },
+      {
+        "correct": false,
+        "reason": "两边拿走的颗数不同。左边比右边多拿走1颗，剩下就不一样多了。"
+      }
+    ]
+  },
+  {
+    "lessonId": "numbers.quantity.intro",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "变长的是苹果之间的空隙。把上下苹果逐一配对，没有多出来的苹果。"
+      },
+      {
+        "correct": true,
+        "reason": "对！位置和间距变了，数量没变。每个上排苹果都能找到一个下排苹果配对。"
+      },
+      {
+        "correct": false,
+        "reason": "挤在一起会让一排变短，却不会多出苹果。请点着数一遍，上下各有7个。"
+      }
+    ]
+  },
+  {
+    "lessonId": "numbers.addition.meaning",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "挪完是左4、右1，合起来仍然5个。只是换了篮子。"
+      },
+      {
+        "correct": true,
+        "reason": "对！左篮变4个，右篮仍2个，4＋2＝6。这个苹果是从两篮之外新加进来的。"
+      },
+      {
+        "correct": false,
+        "reason": "交换位置，没有添或拿走苹果，总数仍为5。"
+      }
+    ]
+  },
+  {
+    "lessonId": "numbers.subtraction.meaning",
+    "blockId": "check",
+    "type": "choice",
+    "options": [
+      {
+        "correct": false,
+        "reason": "朋友的贴纸变多，正在接近 Kevin 的数量，差会缩小。现在是9−6，不是把原来的差再加1。"
+      },
+      {
+        "correct": false,
+        "reason": "这次只有朋友增加1张，两个人并没有同时增加。重新对齐后，Kevin 多出来的部分少了1张。"
+      },
+      {
+        "correct": true,
+        "reason": "对！Kevin 仍9张，朋友变成6张，9−6＝3。原来相差4，朋友追上1，差缩小到3。"
+      }
+    ]
+  }
+]

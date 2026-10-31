@@ -1,4 +1,6 @@
 import { useState } from "react";
+import HomeSketch from "./HomeSketch.tsx";
+import { MathIcon } from "./DesignShell.tsx";
 import type { Catalog } from "./contract.ts";
 import {
   type LearningMap,
@@ -12,6 +14,72 @@ import {
   trackNames,
   searchLessons,
 } from "./learning-map.ts";
+function BookPicture({ term }: { term: Term }) {
+  return (
+    <svg className="book-picture" viewBox="0 0 100 92" aria-hidden="true">
+      {term === "upper" ? (
+        <>
+          <rect x="9" y="17" width="77" height="60" rx="12" fill="#fff" />
+          {[0, 1, 2].flatMap((x) =>
+            [0, 1].map((y) => (
+              <circle
+                key={x + "-" + y}
+                cx={28 + x * 20}
+                cy={36 + y * 22}
+                r="7"
+                fill={y === 0 ? "#167d7f" : "#f6c848"}
+              />
+            )),
+          )}
+          <path
+            d="M15 83h72"
+            stroke="#98cec1"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+        </>
+      ) : term === "lower" ? (
+        <>
+          <circle cx="49" cy="45" r="32" fill="#fff" />
+          <path d="M49 13a32 32 0 0 1 0 64Z" fill="#f6c848" />
+          <path
+            d="M49 13v64"
+            stroke="#bc7d19"
+            strokeWidth="2"
+            strokeDasharray="4 4"
+          />
+          <circle
+            cx="49"
+            cy="45"
+            r="32"
+            fill="none"
+            stroke="#d9a53c"
+            strokeWidth="3"
+          />
+        </>
+      ) : (
+        <>
+          <path d="m49 36-15 45h30Z" fill="#95bddc" />
+          <path
+            d="M13 32h73 M24 32v15 M75 32v15"
+            stroke="#3a6896"
+            strokeWidth="4"
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 48q15 24 30 0Z M60 48q15 24 30 0Z"
+            fill="#fff"
+            stroke="#3a6896"
+            strokeWidth="2"
+          />
+          <circle cx="49" cy="30" r="6" fill="#f6c848" />
+          <rect x="19" y="36" width="10" height="10" rx="2" fill="#3973b5" />
+          <rect x="70" y="36" width="10" height="10" rx="2" fill="#3973b5" />
+        </>
+      )}
+    </svg>
+  );
+}
 function selection(map: LearningMap) {
   const p = new URLSearchParams(location.search),
     raw = p.get("term"),
@@ -110,40 +178,76 @@ export function CatalogPage({
   ];
   return (
     <section className="learning-map" data-learning-map>
-      <header className="map-heading">
-        <p className="intro-note">数学课本与知识地图</p>
-        <h1>
-          {unit?.title ??
-            bridge?.title ??
-            (term ? termTitles[term] : "从课本找到今天想学的内容")}
-        </h1>
-        {unit ? (
-          <p>
-            参考教材印刷页 {unit.printedPages} · {unit.sequence.length}{" "}
-            节课。各课可自由进入，提升与思想课按兴趣选学。
-          </p>
-        ) : bridge ? (
-          <p>
-            {bridge.lessons.length}{" "}
-            节基础衔接课，探索共同的数量关系；推荐先修不锁课。
-          </p>
-        ) : term === "upper" ? (
-          <p>
-            按教材顺序排列的 9 个单元、39 节课。展开单元，再从知识点进入课堂。
-          </p>
-        ) : term === "lower" ? (
-          <p>
-            按教材顺序排列的 8 个单元、24 节课。展开单元，再从知识点进入课堂。
-          </p>
-        ) : term === "bridge" ? (
-          <p>4 个主题、7 节课，独立于教材单元；可从熟悉的问题自由开始。</p>
-        ) : (
-          <p>
-            17 个教材单元，63 节课；另有 7
-            节基础衔接。课堂保留六个短步骤与原教具。
-          </p>
-        )}
-      </header>
+      {!term && !query.trim() ? (
+        <div className="home-hero">
+          <header className="map-heading">
+            <p className="intro-note">
+              <MathIcon name="bulb" size={18} /> Kevin 的数学实验室
+            </p>
+            <h1>
+              数学，
+              <br />
+              动手就明白。
+            </h1>
+            <p>
+              翻开课本，摆一摆、画一画。
+              <br />
+              今天的发现，从一个小问题开始。
+            </p>
+            <div className="hero-actions">
+              <a className="hero-link" href="/subjects/math?term=upper">
+                翻开我的课本 <MathIcon name="arrow" size={20} />
+              </a>
+              <a
+                className="hero-first-lesson"
+                href="/subjects/math/lessons/G3-U01-B01"
+              >
+                先试一课：观察物体
+              </a>
+            </div>
+          </header>
+          <HomeSketch />
+        </div>
+      ) : (
+        <>
+          <header className="map-heading">
+            <p className="intro-note">数学课本与知识地图</p>
+            <h1>
+              {unit?.title ??
+                bridge?.title ??
+                (term ? termTitles[term] : "从课本找到今天想学的内容")}
+            </h1>
+            {unit ? (
+              <p>
+                参考教材印刷页 {unit.printedPages} · {unit.sequence.length}{" "}
+                节课。各课可自由进入，提升与思想课按兴趣选学。
+              </p>
+            ) : bridge ? (
+              <p>
+                {bridge.lessons.length}{" "}
+                节基础衔接课，探索共同的数量关系；推荐先修不锁课。
+              </p>
+            ) : term === "upper" ? (
+              <p>
+                按教材顺序排列的 9 个单元、39
+                节课。展开单元，再从知识点进入课堂。
+              </p>
+            ) : term === "lower" ? (
+              <p>
+                按教材顺序排列的 8 个单元、24
+                节课。展开单元，再从知识点进入课堂。
+              </p>
+            ) : term === "bridge" ? (
+              <p>4 个主题、7 节课，独立于教材单元；可从熟悉的问题自由开始。</p>
+            ) : (
+              <p>
+                17 个教材单元，63 节课；另有 7
+                节基础衔接。课堂保留六个短步骤与原教具。
+              </p>
+            )}
+          </header>
+        </>
+      )}
       <div className="map-search">
         <label htmlFor="knowledge-search">找知识点或课程</label>
         <input
@@ -186,6 +290,10 @@ export function CatalogPage({
         </section>
       ) : !term ? (
         <div className="map-books" data-map-home>
+          <header className="book-section-heading">
+            <h2>我的数学课本</h2>
+            <p>选一本课本，找到正在学的单元</p>
+          </header>
           {(["upper", "lower", "bridge"] as const).map((t) => (
             <a
               data-term-link={t}
@@ -209,6 +317,7 @@ export function CatalogPage({
                     : "沿教材顺序，从知识点进入课堂"}
                 </span>
               </div>
+              <BookPicture term={t} />
             </a>
           ))}
         </div>
@@ -325,6 +434,72 @@ export function CatalogPage({
             ))}
         </div>
       )}
+      {!term && !query.trim() && (
+        <section className="math-extras map-extras home-pathways">
+          <div className="section-heading">
+            <h2>也可以，从好奇出发</h2>
+            <p>选择一种方式，把关系想明白。</p>
+          </div>
+          <nav aria-label="更多数学探索">
+            {[
+              {
+                kind: "thinking",
+                title: "思维训练",
+                label: "17 张思维卡 →",
+                text: "借助图和教具，为你的解释找证据。",
+                icon: "bulb",
+              },
+              {
+                kind: "detective",
+                title: "数学侦探",
+                label: "数学侦探 V2 四层训练",
+                text: "判断、找第一错、换个问题，再检查自己。",
+                icon: "search",
+              },
+              {
+                kind: "legacy",
+                title: "专题探索",
+                label: "四至六年级 · 54 旧版课 →",
+                text: "数、图形和关系，沿主题去探索。",
+                icon: "shapes",
+              },
+              {
+                kind: "review",
+                title: "复习站",
+                label: "自由复习站 →",
+                text: "回到原题，试着用另一种方法说明。",
+                icon: "repeat",
+              },
+              {
+                kind: "methods",
+                title: "方法工具箱",
+                label: "方法工具箱 →",
+                text: "画图、分类、逆推……选一件趁手的工具。",
+                icon: "tools",
+              },
+            ].map((x) => (
+              <a
+                key={x.kind}
+                aria-label={x.label}
+                className={"pathway-entry pathway-" + x.kind}
+                href={
+                  x.kind === "detective"
+                    ? "/subjects/math/detective"
+                    : "/subjects/math/library?kind=" + x.kind
+                }
+              >
+                <MathIcon name={x.icon} size={28} />
+                <div>
+                  <h3>{x.title}</h3>
+                  <p>{x.text}</p>
+                </div>
+                <MathIcon name="arrow" size={20} />
+              </a>
+            ))}
+          </nav>
+        </section>
+      )}
+
       {term && (
         <p className="map-home-link">
           <a href="/subjects/math">返回上下册与基础衔接目录</a>

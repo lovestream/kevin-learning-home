@@ -22,7 +22,7 @@ permissions:
 jobs:
   foundation:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -91,6 +91,8 @@ jobs:
           node tests/math-full-01/browser.mjs
           node --test tests/math-full-02/practice.test.mjs
           node tests/math-full-02/browser.mjs
+          node --test tests/math-full-remainder/library.test.mjs
+          node tests/math-full-remainder/browser.mjs
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1
@@ -112,4 +114,58 @@ jobs:
             .evidence
             !.evidence/math-full-nas-r2/preview-amd64.tar.gz
           retention-days: 14
+          include-hidden-files: true
+
+  math-onepass:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: { node-version: "24.15.0", cache: npm }
+      - run: npm install --global npm@11.12.1
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Fixed Chinese font (CI only)
+        run: |
+          curl --fail --location --silent --show-error --connect-timeout 15 --max-time 120 --retry 2 https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf -o /tmp/klh-ci-noto.otf
+          echo '2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b  /tmp/klh-ci-noto.otf' | sha256sum -c -
+          mkdir -p ~/.local/share/fonts/klh-ci
+          cp /tmp/klh-ci-noto.otf ~/.local/share/fonts/klh-ci/NotoSansCJKsc-Regular.otf
+          fc-cache -f ~/.local/share/fonts/klh-ci
+      - name: PDF inspection tools (ephemeral CI runner only)
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install --yes --no-install-recommends poppler-utils
+          fi
+      - name: Build all sealed teaching resources
+        run: npm run build:math-preview
+      - name: Synthetic domain, authorization, process crash and exact models
+        run: |
+          mkdir -p .evidence/math-onepass
+          node --test --test-concurrency=1 --test-reporter=junit --test-reporter-destination=.evidence/math-onepass/node.xml tests/math-onepass/*.test.*
+      - name: All 1298 original tasks through the shared business HTTP domain
+        run: node tests/math-onepass/business-http.mjs
+      - name: Actual non-secure HTTP without secure-origin exceptions
+        run: node tests/math-onepass/http-browser.mjs
+      - name: All 63 staged cases and 18 contrasting collections
+        run: node tests/math-onepass/cases-browser.mjs
+      - name: Four-layer self-check at all five widths
+        run: node tests/math-onepass/training-browser.mjs
+      - name: All 54 semantic models at all five widths
+        run: node tests/math-onepass/legacy-browser.mjs
+      - name: All full articles, checkpoints, methods, page memory and print
+        run: node tests/math-onepass/experience-browser.mjs
+      - name: Native print lifecycle and complete teaching PDFs
+        run: node tests/math-onepass/print-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: math-onepass-evidence
+          path: .evidence/math-onepass
+          retention-days: 90
           include-hidden-files: true

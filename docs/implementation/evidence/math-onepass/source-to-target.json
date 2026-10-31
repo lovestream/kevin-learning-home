@@ -1,0 +1,4700 @@
+{
+  "issue": 23,
+  "status": "PASS_ANONYMOUS_NAS_AND_SYNTHETIC_PRIVATE_GATES",
+  "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+  "oldFrozenRef": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "sourceMain": "1e8199dd2963c70f539b23300a86e7e645350798",
+  "privateSourceFilesRead": false,
+  "oldProjectsModified": false,
+  "rows": [
+    {
+      "id": "today-001",
+      "module": "today",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/",
+      "action": "start next foundation",
+      "targetRoute": "/subjects/math; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "tests/math-onepass/study.test.mjs; source selectors: next/resume/objective mistakes/actual due dates + logical recovery tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "today-002",
+      "module": "today",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/",
+      "action": "choose thinking extension",
+      "targetRoute": "/subjects/math; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "tests/math-onepass/study.test.mjs; source selectors: next/resume/objective mistakes/actual due dates + logical recovery tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "today-003",
+      "module": "today",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/",
+      "action": "resume unfinished group/task",
+      "targetRoute": "/subjects/math; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "tests/math-onepass/study.test.mjs; source selectors: next/resume/objective mistakes/actual due dates + logical recovery tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "today-004",
+      "module": "today",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/",
+      "action": "select due review",
+      "targetRoute": "/subjects/math; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "tests/math-onepass/study.test.mjs; source selectors: next/resume/objective mistakes/actual due dates + logical recovery tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "today-005",
+      "module": "today",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/",
+      "action": "route to mistakes",
+      "targetRoute": "/subjects/math; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "tests/math-onepass/study.test.mjs; source selectors: next/resume/objective mistakes/actual due dates + logical recovery tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "today-006",
+      "module": "today",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/",
+      "action": "route to detective",
+      "targetRoute": "/subjects/math; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "tests/math-onepass/study.test.mjs; source selectors: next/resume/objective mistakes/actual due dates + logical recovery tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "map-007",
+      "module": "map",
+      "sourcePath": "src/LearningMapView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "896a5845ce5835c948b62606dda5d1ec9c576267",
+      "sourceSha256": "cc68e4ae8661de07c1bf826953baf3ddfbb7d741ddb64c64498032fbf6032793",
+      "oldRoute": "/?view=map",
+      "action": "select grade",
+      "targetRoute": "/subjects/math; /subjects/math/library?kind=legacy",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "map-008",
+      "module": "map",
+      "sourcePath": "src/LearningMapView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "896a5845ce5835c948b62606dda5d1ec9c576267",
+      "sourceSha256": "cc68e4ae8661de07c1bf826953baf3ddfbb7d741ddb64c64498032fbf6032793",
+      "oldRoute": "/?view=map",
+      "action": "select subject world",
+      "targetRoute": "/subjects/math; /subjects/math/library?kind=legacy",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "map-009",
+      "module": "map",
+      "sourcePath": "src/LearningMapView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "896a5845ce5835c948b62606dda5d1ec9c576267",
+      "sourceSha256": "cc68e4ae8661de07c1bf826953baf3ddfbb7d741ddb64c64498032fbf6032793",
+      "oldRoute": "/?view=map",
+      "action": "foundation/thinking distinction",
+      "targetRoute": "/subjects/math; /subjects/math/library?kind=legacy",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "map-010",
+      "module": "map",
+      "sourcePath": "src/LearningMapView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "896a5845ce5835c948b62606dda5d1ec9c576267",
+      "sourceSha256": "cc68e4ae8661de07c1bf826953baf3ddfbb7d741ddb64c64498032fbf6032793",
+      "oldRoute": "/?view=map",
+      "action": "show installed courses",
+      "targetRoute": "/subjects/math; /subjects/math/library?kind=legacy",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "map-011",
+      "module": "map",
+      "sourcePath": "src/LearningMapView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "896a5845ce5835c948b62606dda5d1ec9c576267",
+      "sourceSha256": "cc68e4ae8661de07c1bf826953baf3ddfbb7d741ddb64c64498032fbf6032793",
+      "oldRoute": "/?view=map",
+      "action": "hide replaced duplicate grade-3 legacy content",
+      "targetRoute": "/subjects/math; /subjects/math/library?kind=legacy",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "textbook-012",
+      "module": "textbook",
+      "sourcePath": "src/UnitLearningMap.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sourceSha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "oldRoute": "/?view=map",
+      "action": "select upper/lower/bridge",
+      "targetRoute": "/subjects/math?term=upper; /subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "existing 210 classroom + navigation tests; five-width responsive navigation and final full baseline regression passed on actual NAS",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "classrooms-nas.json"
+      ]
+    },
+    {
+      "id": "textbook-013",
+      "module": "textbook",
+      "sourcePath": "src/UnitLearningMap.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sourceSha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "oldRoute": "/?view=map",
+      "action": "select 17 actual textbook units",
+      "targetRoute": "/subjects/math?term=upper; /subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "existing 210 classroom + navigation tests; five-width responsive navigation and final full baseline regression passed on actual NAS",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "classrooms-nas.json"
+      ]
+    },
+    {
+      "id": "textbook-014",
+      "module": "textbook",
+      "sourcePath": "src/UnitLearningMap.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sourceSha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "oldRoute": "/?view=map",
+      "action": "select knowledge topic",
+      "targetRoute": "/subjects/math?term=upper; /subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "existing 210 classroom + navigation tests; five-width responsive navigation and final full baseline regression passed on actual NAS",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "classrooms-nas.json"
+      ]
+    },
+    {
+      "id": "textbook-015",
+      "module": "textbook",
+      "sourcePath": "src/UnitLearningMap.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sourceSha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "oldRoute": "/?view=map",
+      "action": "ordered B/E/O/R lesson",
+      "targetRoute": "/subjects/math?term=upper; /subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "existing 210 classroom + navigation tests; five-width responsive navigation and final full baseline regression passed on actual NAS",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "classrooms-nas.json"
+      ]
+    },
+    {
+      "id": "textbook-016",
+      "module": "textbook",
+      "sourcePath": "src/UnitLearningMap.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sourceSha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "oldRoute": "/?view=map",
+      "action": "search topic/title",
+      "targetRoute": "/subjects/math?term=upper; /subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "existing 210 classroom + navigation tests; five-width responsive navigation and final full baseline regression passed on actual NAS",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "classrooms-nas.json"
+      ]
+    },
+    {
+      "id": "textbook-017",
+      "module": "textbook",
+      "sourcePath": "src/UnitLearningMap.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sourceSha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "oldRoute": "/?view=map",
+      "action": "search empty result",
+      "targetRoute": "/subjects/math?term=upper; /subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "existing 210 classroom + navigation tests; five-width responsive navigation and final full baseline regression passed on actual NAS",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "classrooms-nas.json"
+      ]
+    },
+    {
+      "id": "textbook-018",
+      "module": "textbook",
+      "sourcePath": "src/UnitLearningMap.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sourceSha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "oldRoute": "/?view=map",
+      "action": "return previous unit",
+      "targetRoute": "/subjects/math?term=upper; /subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "existing 210 classroom + navigation tests; five-width responsive navigation and final full baseline regression passed on actual NAS",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "classrooms-nas.json"
+      ]
+    },
+    {
+      "id": "textbook-019",
+      "module": "textbook",
+      "sourcePath": "src/UnitLearningMap.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "40033f294db845b878e3458eecb7cc4ff7e5e81f",
+      "sourceSha256": "06bc92986eb2cb1875fd8bedf65ea8db3e5b900f6c2095db484ed53353299763",
+      "oldRoute": "/?view=map",
+      "action": "adjacent lesson navigation",
+      "targetRoute": "/subjects/math?term=upper; /subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "existing 210 classroom + navigation tests; five-width responsive navigation and final full baseline regression passed on actual NAS",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "navigation-nas.json",
+        "classrooms-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-020",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "read story",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-021",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "predict without feedback",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-022",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "move real model",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-023",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "undo/reset where original model supports",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-024",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "observe changed quantities",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-025",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "explain discovery",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-026",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "symbolize model",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-027",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "validate independently",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "short-classroom-028",
+      "module": "short-classroom",
+      "sourcePath": "src/studio/ChildClassroom.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "aa784edc53fc081e0762b9262c1da0524568746c",
+      "sourceSha256": "55a10d03c65045606eaf7f4eebd86ba971965529660a6ad43c7987873d37e6cd",
+      "oldRoute": "/?lesson=:id",
+      "action": "static-six disclosure",
+      "targetRoute": "/subjects/math/lessons/:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 original lessons / 210 baseline flows retained",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "classrooms-nas.json",
+        "checkpoint-nas.json"
+      ]
+    },
+    {
+      "id": "article-029",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "switch short/full teaching",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-030",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "jump to section",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-031",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "read original lead/paragraphs",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-032",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "operate article model",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-033",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "expand worked example",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-034",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "compare correct/incorrect teaching cases",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-035",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "answer choice checkpoint",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-036",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "write explanation before reference",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-037",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "open method bridge",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-038",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "go to practice",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-039",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "retell note",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-040",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "mark read",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-041",
+      "module": "article",
+      "sourcePath": "src/studio/LessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e071b37b70e206ed92298f54690f273abd8d4fca",
+      "sourceSha256": "3523d44640a02caa6047e3e2cc7d6e34394ce96e63700fda4199d6d3f66e9fc4",
+      "oldRoute": "/?lesson=:id",
+      "action": "print full teaching",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "70 article /18 choice /52 explanation projection tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "print-nas.json"
+      ]
+    },
+    {
+      "id": "article-private-042",
+      "module": "article-private",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/api/studio/reading",
+      "action": "save widget journal and reading block",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "source-domain tests; private actual HTTP + learner-scoped WAL/SIGKILL recovery tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "article-private-043",
+      "module": "article-private",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/api/studio/reading",
+      "action": "reject stale reading revision",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "source-domain tests; private actual HTTP + learner-scoped WAL/SIGKILL recovery tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "article-private-044",
+      "module": "article-private",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/api/studio/reading",
+      "action": "restore saved draft",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "source-domain tests; private actual HTTP + learner-scoped WAL/SIGKILL recovery tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "article-private-045",
+      "module": "article-private",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/api/studio/reading",
+      "action": "save ungraded note",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "source-domain tests; private actual HTTP + learner-scoped WAL/SIGKILL recovery tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "article-private-046",
+      "module": "article-private",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/api/studio/reading",
+      "action": "reject conflicting note ID",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "source-domain tests; private actual HTTP + learner-scoped WAL/SIGKILL recovery tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "practice-047",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "choose five groups",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-048",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "select task",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-049",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "five answer types",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-050",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "seal first answer",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-051",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "three self-check items",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-052",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "submit final answer",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-053",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "unit/fraction/expression equivalent grading",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-054",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "invalid answer retention",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-055",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "retry wrong response",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-056",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "hint assistance",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-057",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "article reference assistance",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-058",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "solution after first answer",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-059",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "human review of 335 explanations",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-060",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "reset current view",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "practice-061",
+      "module": "practice",
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "oldRoute": "/?lesson=:id&practice=1",
+      "action": "no rewards",
+      "targetRoute": "/subjects/math/lessons/:id?practice=:group",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "849 original task HTTP/golden +84 browser baseline; source-domain gates added",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "practice-nas.json",
+        "business-http.json"
+      ]
+    },
+    {
+      "id": "withdrawn-062",
+      "module": "withdrawn",
+      "sourcePath": "shared/withdrawn-checks.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4",
+      "sourceSha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "oldRoute": "/?lesson=:id&assessment=withdrawn-v1",
+      "action": "select original five task IDs",
+      "targetRoute": "/subjects/math/lessons/:id?practice=core&assessment=withdrawn-v1",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "11×5 original IDs; 11×5 exact-ID/diagram-withdrawal real browser checks passed",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "withdrawn-063",
+      "module": "withdrawn",
+      "sourcePath": "shared/withdrawn-checks.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4",
+      "sourceSha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "oldRoute": "/?lesson=:id&assessment=withdrawn-v1",
+      "action": "remove automatic teaching diagram",
+      "targetRoute": "/subjects/math/lessons/:id?practice=core&assessment=withdrawn-v1",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "11×5 original IDs; 11×5 exact-ID/diagram-withdrawal real browser checks passed",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "withdrawn-064",
+      "module": "withdrawn",
+      "sourcePath": "shared/withdrawn-checks.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4",
+      "sourceSha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "oldRoute": "/?lesson=:id&assessment=withdrawn-v1",
+      "action": "keep first/self-check/final gates",
+      "targetRoute": "/subjects/math/lessons/:id?practice=core&assessment=withdrawn-v1",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "11×5 original IDs; 11×5 exact-ID/diagram-withdrawal real browser checks passed",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "withdrawn-065",
+      "module": "withdrawn",
+      "sourcePath": "shared/withdrawn-checks.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4",
+      "sourceSha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "oldRoute": "/?lesson=:id&assessment=withdrawn-v1",
+      "action": "mark requested help",
+      "targetRoute": "/subjects/math/lessons/:id?practice=core&assessment=withdrawn-v1",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "11×5 original IDs; 11×5 exact-ID/diagram-withdrawal real browser checks passed",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "withdrawn-066",
+      "module": "withdrawn",
+      "sourcePath": "shared/withdrawn-checks.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4",
+      "sourceSha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "oldRoute": "/?lesson=:id&assessment=withdrawn-v1",
+      "action": "human explanation review",
+      "targetRoute": "/subjects/math/lessons/:id?practice=core&assessment=withdrawn-v1",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "11×5 original IDs; 11×5 exact-ID/diagram-withdrawal real browser checks passed",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "legacy-067",
+      "module": "legacy",
+      "sourcePath": "src/studio/LegacyLessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sourceSha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "oldRoute": "/?lesson=:legacy-id",
+      "action": "choose real grade 4/5/6",
+      "targetRoute": "/subjects/math/library?kind=legacy&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "54×3 baseline retained; 54 independent models +270 real five-width views; 54 manual768 model images archived",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "models-results.json",
+        "compatibility-nas.json",
+        "business-http.json",
+        "legacy-quality.json"
+      ]
+    },
+    {
+      "id": "legacy-068",
+      "module": "legacy",
+      "sourcePath": "src/studio/LegacyLessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sourceSha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "oldRoute": "/?lesson=:legacy-id",
+      "action": "read underlying need",
+      "targetRoute": "/subjects/math/library?kind=legacy&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "54×3 baseline retained; 54 independent models +270 real five-width views; 54 manual768 model images archived",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "models-results.json",
+        "compatibility-nas.json",
+        "business-http.json",
+        "legacy-quality.json"
+      ]
+    },
+    {
+      "id": "legacy-069",
+      "module": "legacy",
+      "sourcePath": "src/studio/LegacyLessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sourceSha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "oldRoute": "/?lesson=:legacy-id",
+      "action": "read concept and extension",
+      "targetRoute": "/subjects/math/library?kind=legacy&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "54×3 baseline retained; 54 independent models +270 real five-width views; 54 manual768 model images archived",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "models-results.json",
+        "compatibility-nas.json",
+        "business-http.json",
+        "legacy-quality.json"
+      ]
+    },
+    {
+      "id": "legacy-070",
+      "module": "legacy",
+      "sourcePath": "src/studio/LegacyLessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sourceSha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "oldRoute": "/?lesson=:legacy-id",
+      "action": "operate course-specific semantic model",
+      "targetRoute": "/subjects/math/library?kind=legacy&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "54×3 baseline retained; 54 independent models +270 real five-width views; 54 manual768 model images archived",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "models-results.json",
+        "compatibility-nas.json",
+        "business-http.json",
+        "legacy-quality.json"
+      ]
+    },
+    {
+      "id": "legacy-071",
+      "module": "legacy",
+      "sourcePath": "src/studio/LegacyLessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sourceSha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "oldRoute": "/?lesson=:legacy-id",
+      "action": "connect diagram to equation",
+      "targetRoute": "/subjects/math/library?kind=legacy&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "54×3 baseline retained; 54 independent models +270 real five-width views; 54 manual768 model images archived",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "models-results.json",
+        "compatibility-nas.json",
+        "business-http.json",
+        "legacy-quality.json"
+      ]
+    },
+    {
+      "id": "legacy-072",
+      "module": "legacy",
+      "sourcePath": "src/studio/LegacyLessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sourceSha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "oldRoute": "/?lesson=:legacy-id",
+      "action": "check inverse relation",
+      "targetRoute": "/subjects/math/library?kind=legacy&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "54×3 baseline retained; 54 independent models +270 real five-width views; 54 manual768 model images archived",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "models-results.json",
+        "compatibility-nas.json",
+        "business-http.json",
+        "legacy-quality.json"
+      ]
+    },
+    {
+      "id": "legacy-073",
+      "module": "legacy",
+      "sourcePath": "src/studio/LegacyLessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sourceSha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "oldRoute": "/?lesson=:legacy-id",
+      "action": "answer original eight tasks",
+      "targetRoute": "/subjects/math/library?kind=legacy&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "54×3 baseline retained; 54 independent models +270 real five-width views; 54 manual768 model images archived",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "models-results.json",
+        "compatibility-nas.json",
+        "business-http.json",
+        "legacy-quality.json"
+      ]
+    },
+    {
+      "id": "legacy-074",
+      "module": "legacy",
+      "sourcePath": "src/studio/LegacyLessonArticle.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1d35897cceb2a4cab2e5cde254da2113e4b0f0eb",
+      "sourceSha256": "8a77d84607705271fbdbddfcfa8af4b4941c4df1086219e3b929a0984661a690",
+      "oldRoute": "/?lesson=:legacy-id",
+      "action": "retell reasoning",
+      "targetRoute": "/subjects/math/library?kind=legacy&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "54×3 baseline retained; 54 independent models +270 real five-width views; 54 manual768 model images archived",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "models-results.json",
+        "compatibility-nas.json",
+        "business-http.json",
+        "legacy-quality.json"
+      ]
+    },
+    {
+      "id": "thinking-075",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "read published card/diagram",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-076",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "operate specialized model",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-077",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "undo/reset model",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-078",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "cumulative scaffold evidence",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-079",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "seal original first answer",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-080",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "three self-checks",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-081",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "final explanation pending human review",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-082",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "three hint tiers",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-083",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "reference after first answer",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-084",
+      "module": "thinking",
+      "sourcePath": "src/thinking/ThinkingPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "242e5073b7166f77a70657d9c6325b8d85623301",
+      "sourceSha256": "88fbed21654441f968207afa59da165c37a0123bd593ef708d22114c7449b50e",
+      "oldRoute": "/?thinking=:id",
+      "action": "return base lesson",
+      "targetRoute": "/subjects/math/library?kind=thinking&id=:id",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "17 cards; 12 authored variants per card; source immutable/assistance tests",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "compatibility-nas.json",
+        "business-http.json",
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "thinking-private-085",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "reject unpublished card",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-086",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "idempotent event replay",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-087",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "409 stale revision",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-088",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "parent verdict with explanation",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-089",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "reject independent after scaffold/help",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-090",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "1/3/7/21 day schedule",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-091",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "new unseen challenge variant",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-092",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "withhold automatic check in challenge",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-093",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "archive immutable prior attempts",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "thinking-private-094",
+      "module": "thinking-private",
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "oldRoute": "/api/studio/thinking",
+      "action": "mark delayed strong evidence only after complete chain",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/study/thinking; parent-thinking",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "17 source-domain tests + complete four-delay chain; private HTTP/SQLite/process tests passed",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-095",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "neutral public titles and opaque IDs",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-096",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "choose reviewed case",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-097",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "judge wrong/correct/insufficient",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-098",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "keep first verdict",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-099",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "locate first wrong line",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-100",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "choose evidence/reason",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-101",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "record error category",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-102",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "repair result",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-103",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "keyboard up/down ordering",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-104",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "drag ordering",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-105",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "confirm current complete ordering",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-106",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "reverse verification",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-107",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "help tracked",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-108",
+      "module": "detective",
+      "sourcePath": "src/detective/DetectivePanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dfad17385daa0066443f3e01644bd1fb13bdc900",
+      "sourceSha256": "6a3d56dfbd43a198cc8e438280259bd233c74386b3ed5249be44da9224eed090",
+      "oldRoute": "/?view=detective",
+      "action": "oral verification stays pending parent",
+      "targetRoute": "/subjects/math/detective → L1/L2/L3",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "63 catalog /14+30+3+16; 63 staged browser cases +18 contrasting collections + actual lost-response retry tested",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "cases-browser.json",
+        "compatibility-nas.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-109",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "select eight families",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-110",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "new parameter practice",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-111",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "reverse/changed unknown transfer",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-112",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "answered/blank/uncertain first response",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-113",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "seal first reasoning",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-114",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "pre-feedback check expression",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-115",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "compute actual check value",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-116",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "pre-feedback correction",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-117",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "symbolic equivalent reverse relation",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-118",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "reject answer/constant coincidence",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-119",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "track hint/visual/parent help",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-120",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "honest evidence denominator",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-121",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "retain changed-wrong outcome",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-122",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "page-only history",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-self-123",
+      "module": "detective-self",
+      "sourcePath": "src/detective/SelfTraining.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "11750ea50f450852a60671fb12e36b988e701163",
+      "sourceSha256": "bcf4f8b8706ff703800aa47e5c1639cdd3eb492e67f4aafab925220cc069ec66",
+      "oldRoute": "/?view=detective",
+      "action": "reopen sealed current-page attempt",
+      "targetRoute": "/subjects/math/detective → L4",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "2048 independent arithmetic cases; five-width real first/check/feedback/refresh flows",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "training-results.json",
+        "cases-browser.json",
+        "node-ci.xml"
+      ]
+    },
+    {
+      "id": "detective-private-124",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "1/3/7/14 local-day review",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-125",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "reject same-day/early review",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-126",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "unseen question pool exhaustion",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-127",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "clock rollback/jump guard",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-128",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "parent-confirm sealed pre-feedback evidence",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-129",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "reject assisted independent confirmation",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-130",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "pause/postpone with revision",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-131",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "atomic event/409 replay",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-132",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "bounded no-silent-deletion capacity",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-133",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "scoped backup/restore",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-134",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "same-day fixed plan survives restart",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "detective-private-135",
+      "module": "detective-private",
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "oldRoute": "/api/detective/self",
+      "action": "private case draft/replay/resume",
+      "targetRoute": "/api/v1/learners/:id/subjects/math/training/:action",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "private authenticated HTTP, 1/3/7/14 schedule, WAL/flock/SIGKILL/scoped restore tested",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "methods-136",
+      "module": "methods",
+      "sourcePath": "src/MethodsView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "a70bfec5ef059a9b0212a86a93d590a34fac25bc",
+      "sourceSha256": "404c126d262520d5e245edc5f436dc1e223ca9678cfc79e76bcec8d6183500b1",
+      "oldRoute": "/?view=methods",
+      "action": "search 28 method titles/actions",
+      "targetRoute": "/subjects/math/library?kind=methods",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "28 complete teaching rows /all links installed; 28 full content/installed-link real browser checks passed; final NAS screenshots pending",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "methods-137",
+      "module": "methods",
+      "sourcePath": "src/MethodsView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "a70bfec5ef059a9b0212a86a93d590a34fac25bc",
+      "sourceSha256": "404c126d262520d5e245edc5f436dc1e223ca9678cfc79e76bcec8d6183500b1",
+      "oldRoute": "/?view=methods",
+      "action": "search empty state",
+      "targetRoute": "/subjects/math/library?kind=methods",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "28 complete teaching rows /all links installed; 28 full content/installed-link real browser checks passed; final NAS screenshots pending",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "methods-138",
+      "module": "methods",
+      "sourcePath": "src/MethodsView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "a70bfec5ef059a9b0212a86a93d590a34fac25bc",
+      "sourceSha256": "404c126d262520d5e245edc5f436dc1e223ca9678cfc79e76bcec8d6183500b1",
+      "oldRoute": "/?view=methods",
+      "action": "filter six original reviewed guides",
+      "targetRoute": "/subjects/math/library?kind=methods",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "28 complete teaching rows /all links installed; 28 full content/installed-link real browser checks passed; final NAS screenshots pending",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "methods-139",
+      "module": "methods",
+      "sourcePath": "src/MethodsView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "a70bfec5ef059a9b0212a86a93d590a34fac25bc",
+      "sourceSha256": "404c126d262520d5e245edc5f436dc1e223ca9678cfc79e76bcec8d6183500b1",
+      "oldRoute": "/?view=methods",
+      "action": "read condition/why/example/counterexample",
+      "targetRoute": "/subjects/math/library?kind=methods",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "28 complete teaching rows /all links installed; 28 full content/installed-link real browser checks passed; final NAS screenshots pending",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "methods-140",
+      "module": "methods",
+      "sourcePath": "src/MethodsView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "a70bfec5ef059a9b0212a86a93d590a34fac25bc",
+      "sourceSha256": "404c126d262520d5e245edc5f436dc1e223ca9678cfc79e76bcec8d6183500b1",
+      "oldRoute": "/?view=methods",
+      "action": "open installed demonstration",
+      "targetRoute": "/subjects/math/library?kind=methods",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "28 complete teaching rows /all links installed; 28 full content/installed-link real browser checks passed; final NAS screenshots pending",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "methods-141",
+      "module": "methods",
+      "sourcePath": "src/MethodsView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "a70bfec5ef059a9b0212a86a93d590a34fac25bc",
+      "sourceSha256": "404c126d262520d5e245edc5f436dc1e223ca9678cfc79e76bcec8d6183500b1",
+      "oldRoute": "/?view=methods",
+      "action": "distinguish 22 new teaching adaptations",
+      "targetRoute": "/subjects/math/library?kind=methods",
+      "dataDependency": "authored-content",
+      "interaction": "Real anonymous teaching/control, page-scoped memory only",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_ACTUAL_ANONYMOUS_NAS",
+      "evidence": "28 complete teaching rows /all links installed; 28 full content/installed-link real browser checks passed; final NAS screenshots pending",
+      "nasVerified": true,
+      "remaining": "",
+      "evidenceArtifacts": [
+        "experience-results.json"
+      ]
+    },
+    {
+      "id": "review-142",
+      "module": "review",
+      "sourcePath": "src/LearningReviewView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "7c5e1536a31709cfe5ec8668f33cac1d2ad60b1e",
+      "sourceSha256": "129b1b203ea1392ba2000cf75e7ccfce4e9b449cd2f9ad0bbeef0e0db9475e2d",
+      "oldRoute": "/?view=review",
+      "action": "choose 244 original review tasks",
+      "targetRoute": "/subjects/math/library?kind=review; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "free review and inverse existing baseline; source schedule/evidence tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "review-143",
+      "module": "review",
+      "sourcePath": "src/LearningReviewView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "7c5e1536a31709cfe5ec8668f33cac1d2ad60b1e",
+      "sourceSha256": "129b1b203ea1392ba2000cf75e7ccfce4e9b449cd2f9ad0bbeef0e0db9475e2d",
+      "oldRoute": "/?view=review",
+      "action": "open 11 inverse task links",
+      "targetRoute": "/subjects/math/library?kind=review; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "free review and inverse existing baseline; source schedule/evidence tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "review-144",
+      "module": "review",
+      "sourcePath": "src/LearningReviewView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "7c5e1536a31709cfe5ec8668f33cac1d2ad60b1e",
+      "sourceSha256": "129b1b203ea1392ba2000cf75e7ccfce4e9b449cd2f9ad0bbeef0e0db9475e2d",
+      "oldRoute": "/?view=review",
+      "action": "start due review",
+      "targetRoute": "/subjects/math/library?kind=review; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "free review and inverse existing baseline; source schedule/evidence tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "review-145",
+      "module": "review",
+      "sourcePath": "src/LearningReviewView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "7c5e1536a31709cfe5ec8668f33cac1d2ad60b1e",
+      "sourceSha256": "129b1b203ea1392ba2000cf75e7ccfce4e9b449cd2f9ad0bbeef0e0db9475e2d",
+      "oldRoute": "/?view=review",
+      "action": "select future practice without fake success",
+      "targetRoute": "/subjects/math/library?kind=review; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "free review and inverse existing baseline; source schedule/evidence tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "review-146",
+      "module": "review",
+      "sourcePath": "src/LearningReviewView.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "7c5e1536a31709cfe5ec8668f33cac1d2ad60b1e",
+      "sourceSha256": "129b1b203ea1392ba2000cf75e7ccfce4e9b449cd2f9ad0bbeef0e0db9475e2d",
+      "oldRoute": "/?view=review",
+      "action": "show due thinking challenge",
+      "targetRoute": "/subjects/math/library?kind=review; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "free review and inverse existing baseline; source schedule/evidence tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "mistakes-147",
+      "module": "mistakes",
+      "sourcePath": "src/ArticleMistakesPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "02e56265570da23ec10c9f94f686060dc84a2e60",
+      "sourceSha256": "6b10a28bc781e5fd1ab8b778d0d937c80092281d21e3713590853b30ace84390",
+      "oldRoute": "/?view=mistakes",
+      "action": "group actual wrong attempts by objective",
+      "targetRoute": "/subjects/math/library?kind=review → 本页手记; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "page notebook and imported source selectors; real wrong→exact task→correction browser check passed; first choice kept as readable text",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "mistakes-148",
+      "module": "mistakes",
+      "sourcePath": "src/ArticleMistakesPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "02e56265570da23ec10c9f94f686060dc84a2e60",
+      "sourceSha256": "6b10a28bc781e5fd1ab8b778d0d937c80092281d21e3713590853b30ace84390",
+      "oldRoute": "/?view=mistakes",
+      "action": "show unresolved first",
+      "targetRoute": "/subjects/math/library?kind=review → 本页手记; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "page notebook and imported source selectors; real wrong→exact task→correction browser check passed; first choice kept as readable text",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "mistakes-149",
+      "module": "mistakes",
+      "sourcePath": "src/ArticleMistakesPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "02e56265570da23ec10c9f94f686060dc84a2e60",
+      "sourceSha256": "6b10a28bc781e5fd1ab8b778d0d937c80092281d21e3713590853b30ace84390",
+      "oldRoute": "/?view=mistakes",
+      "action": "return exact original question",
+      "targetRoute": "/subjects/math/library?kind=review → 本页手记; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "page notebook and imported source selectors; real wrong→exact task→correction browser check passed; first choice kept as readable text",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "mistakes-150",
+      "module": "mistakes",
+      "sourcePath": "src/ArticleMistakesPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "02e56265570da23ec10c9f94f686060dc84a2e60",
+      "sourceSha256": "6b10a28bc781e5fd1ab8b778d0d937c80092281d21e3713590853b30ace84390",
+      "oldRoute": "/?view=mistakes",
+      "action": "keep historical wrong after correction",
+      "targetRoute": "/subjects/math/library?kind=review → 本页手记; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "page notebook and imported source selectors; real wrong→exact task→correction browser check passed; first choice kept as readable text",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "mistakes-151",
+      "module": "mistakes",
+      "sourcePath": "src/ArticleMistakesPanel.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "02e56265570da23ec10c9f94f686060dc84a2e60",
+      "sourceSha256": "6b10a28bc781e5fd1ab8b778d0d937c80092281d21e3713590853b30ace84390",
+      "oldRoute": "/?view=mistakes",
+      "action": "avoid unsupported diagnosis",
+      "targetRoute": "/subjects/math/library?kind=review → 本页手记; private synthetic study/state",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "page notebook and imported source selectors; real wrong→exact task→correction browser check passed; first choice kept as readable text",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "parent-152",
+      "module": "parent",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=parent",
+      "action": "static teaching explanation",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案; private synthetic study/training APIs",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "auth CI baseline retained; private actual HTTP tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "parent-153",
+      "module": "parent",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=parent",
+      "action": "print authored guide",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案; private synthetic study/training APIs",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "auth CI baseline retained; private actual HTTP tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "parent-154",
+      "module": "parent",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=parent",
+      "action": "authenticated history evidence",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案; private synthetic study/training APIs",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "auth CI baseline retained; private actual HTTP tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "parent-155",
+      "module": "parent",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=parent",
+      "action": "export isolated synthetic backup",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案; private synthetic study/training APIs",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "auth CI baseline retained; private actual HTTP tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "parent-156",
+      "module": "parent",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=parent",
+      "action": "restore with digest/scope validation",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案; private synthetic study/training APIs",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "auth CI baseline retained; private actual HTTP tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "parent-157",
+      "module": "parent",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=parent",
+      "action": "reject cross-learner/grant-revoked/unlocked parent",
+      "targetRoute": "/subjects/math/lessons/:id → 完整教案; private synthetic study/training APIs",
+      "dataDependency": "personal-history",
+      "interaction": "Implemented shared source rules and isolated authenticated synthetic APIs; not enabled on anonymous NAS",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "PASS_SYNTHETIC_PRIVATE_GATED",
+      "evidence": "auth CI baseline retained; private actual HTTP tests",
+      "nasVerified": false,
+      "remaining": "Real identities/history/parent activation intentionally excluded; no real data imported.",
+      "evidenceArtifacts": [
+        "node-ci.xml",
+        "foundation-ci.json",
+        "recovery-ci-summary.json"
+      ]
+    },
+    {
+      "id": "excluded-158",
+      "module": "excluded",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=pets; /?view=parent",
+      "action": "real learner/profile import",
+      "targetRoute": "none",
+      "dataDependency": "excluded",
+      "interaction": "excluded",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "EXPLICITLY_EXCLUDED",
+      "evidence": "",
+      "nasVerified": false,
+      "remaining": "Intentionally excluded by Issue23; not counted as implemented."
+    },
+    {
+      "id": "excluded-159",
+      "module": "excluded",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=pets; /?view=parent",
+      "action": "formal PIN/identity activation",
+      "targetRoute": "none",
+      "dataDependency": "excluded",
+      "interaction": "excluded",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "EXPLICITLY_EXCLUDED",
+      "evidence": "",
+      "nasVerified": false,
+      "remaining": "Intentionally excluded by Issue23; not counted as implemented."
+    },
+    {
+      "id": "excluded-160",
+      "module": "excluded",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=pets; /?view=parent",
+      "action": "wallet/pet/reward transfer",
+      "targetRoute": "none",
+      "dataDependency": "excluded",
+      "interaction": "excluded",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "EXPLICITLY_EXCLUDED",
+      "evidence": "",
+      "nasVerified": false,
+      "remaining": "Intentionally excluded by Issue23; not counted as implemented."
+    },
+    {
+      "id": "excluded-161",
+      "module": "excluded",
+      "sourcePath": "src/App.tsx",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962",
+      "sourceSha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "oldRoute": "/?view=pets; /?view=parent",
+      "action": "system/DSM/Tailscale/certificate changes",
+      "targetRoute": "none",
+      "dataDependency": "excluded",
+      "interaction": "excluded",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "EXPLICITLY_EXCLUDED",
+      "evidence": "",
+      "nasVerified": false,
+      "remaining": "Intentionally excluded by Issue23; not counted as implemented."
+    },
+    {
+      "id": "deferred-162",
+      "module": "deferred",
+      "sourcePath": "content/pilot/thinking-publication.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "9ed5e01359f414eeee4aea54d6f8d35da0da3d68",
+      "sourceSha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+      "oldRoute": "/?view=map",
+      "action": "43 unpublished thinking cards",
+      "targetRoute": "not published",
+      "dataDependency": "excluded",
+      "interaction": "excluded",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "EXPLICITLY_EXCLUDED",
+      "evidence": "",
+      "nasVerified": false,
+      "remaining": "Intentionally excluded by Issue23; not counted as implemented."
+    },
+    {
+      "id": "deferred-163",
+      "module": "deferred",
+      "sourcePath": "content/pilot/thinking-publication.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "9ed5e01359f414eeee4aea54d6f8d35da0da3d68",
+      "sourceSha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+      "oldRoute": "/?view=map",
+      "action": "168 blueprint containers",
+      "targetRoute": "not published",
+      "dataDependency": "excluded",
+      "interaction": "excluded",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "EXPLICITLY_EXCLUDED",
+      "evidence": "",
+      "nasVerified": false,
+      "remaining": "Intentionally excluded by Issue23; not counted as implemented."
+    },
+    {
+      "id": "deferred-164",
+      "module": "deferred",
+      "sourcePath": "content/pilot/thinking-publication.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "9ed5e01359f414eeee4aea54d6f8d35da0da3d68",
+      "sourceSha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+      "oldRoute": "/?view=map",
+      "action": "duplicate old grade-3 50 lessons replaced by70",
+      "targetRoute": "not published",
+      "dataDependency": "excluded",
+      "interaction": "excluded",
+      "viewports": [
+        1440,
+        1280,
+        768,
+        390,
+        360
+      ],
+      "status": "EXPLICITLY_EXCLUDED",
+      "evidence": "",
+      "nasVerified": false,
+      "remaining": "Intentionally excluded by Issue23; not counted as implemented."
+    }
+  ],
+  "deployedSource": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "origin": "http://192.168.2.100:38444",
+  "coverage": {
+    "anonymousNasControls": 108,
+    "syntheticPrivateControls": 49,
+    "explicitExclusions": 7,
+    "allClassroomsViewports": [
+      1280,
+      768,
+      390
+    ],
+    "allLegacyModelsViewports": [
+      1440,
+      1280,
+      768,
+      390,
+      360
+    ],
+    "allModuleRepresentativeViewports": [
+      1440,
+      1280,
+      768,
+      390,
+      360
+    ],
+    "physicalDevices": "NEEDS_USER_ACTION"
+  }
+}

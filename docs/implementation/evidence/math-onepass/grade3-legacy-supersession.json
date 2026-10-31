@@ -1,0 +1,952 @@
+{
+  "status": "PASS_50_EXPLICIT_SUPERSESSION_CROSS_REFERENCES",
+  "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+  "sourcePath": "content/grade-3/legacy-seed.json",
+  "sourceBlob": "0f27dc05a7053511edf18c265d3244f66f9cf593",
+  "sourceSha256": "9397cdcb9733f520922008406b87ce82cd3838f02e4617389bc28473455e956c",
+  "originalRule": "src/learningMap.ts hasCompleteGrade3 detects G3-L07-B01 then excludes every grade3 legacy entry from the map.",
+  "targetHasTrigger": true,
+  "count": 50,
+  "rows": [
+    {
+      "sourceId": "place-value",
+      "sourceTitle": "数位小仓库",
+      "sourceItemSha256": "c76e8ba6d1b7112bc99599324d3d340e6bef623ef5422c1da97be774a903f056",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U04-B01",
+          "title": "把几十、几百和零散个数分别乘",
+          "route": "/subjects/math/lessons/G3-U04-B01"
+        },
+        {
+          "id": "g4-place-value",
+          "title": "大数不是一串长数字",
+          "route": "/subjects/math/library?kind=legacy&id=g4-place-value"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "number-line",
+      "sourceTitle": "数轴上的跳跃",
+      "sourceItemSha256": "6d2973ba3dc433e83753105ad8eafe12b6ccca9df5130176109aac3e433cd31a",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "numbers.addition.meaning",
+          "title": "两篮苹果，合起来有几个？",
+          "route": "/subjects/math/lessons/numbers.addition.meaning"
+        },
+        {
+          "id": "g6-negative-number",
+          "title": "负数记录方向相反的一边",
+          "route": "/subjects/math/library?kind=legacy&id=g6-negative-number"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "arrays",
+      "sourceTitle": "乘法小花田",
+      "sourceItemSha256": "44caa9536aadf9ec8c967ad1592480b62a008f24c58a31490879e96dd9779f53",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U02-E05",
+          "title": "一块点阵分两块：为什么每部分都要乘",
+          "route": "/subjects/math/lessons/G3-U02-E05"
+        },
+        {
+          "id": "G3-U04-B01",
+          "title": "把几十、几百和零散个数分别乘",
+          "route": "/subjects/math/lessons/G3-U04-B01"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "division",
+      "sourceTitle": "分装与余数",
+      "sourceItemSha256": "4640e4c74488b63008f2c7ec085f9dc9a2a07f217bf94d069602633f625a891e",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L02-B01",
+          "title": "把几十、几百平均分，先看计数单位",
+          "route": "/subjects/math/lessons/G3-L02-B01"
+        },
+        {
+          "id": "G3-L02-B03",
+          "title": "有剩余时，怎样判断答案真的分完了",
+          "route": "/subjects/math/lessons/G3-L02-B03"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "equality",
+      "sourceTitle": "等号天平",
+      "sourceItemSha256": "7720a93afe8dcf031c6a4bb3320be34c4f163add1d9b1d0f8bb16e49f5d10bef",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "algebra.balance.intro",
+          "title": "不打开袋子，也能知道有几颗糖",
+          "route": "/subjects/math/lessons/algebra.balance.intro"
+        },
+        {
+          "id": "G3-UP01-TH1",
+          "title": "天平两边都有盒子怎么办",
+          "route": "/subjects/math/library?kind=thinking&id=G3-UP01-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "sum-difference",
+      "sourceTitle": "和差双宝箱",
+      "sourceItemSha256": "e3a66504ef8cfda4f4067332b0df59ce6b0fde443f1e42ec08f25fdb4c0b2b50",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g5-equation-balance",
+          "title": "方程是有未知数的平衡",
+          "route": "/subjects/math/library?kind=legacy&id=g5-equation-balance"
+        },
+        {
+          "id": "algebra.substitution.intro",
+          "title": "打开三盒点心，多出的糖有几颗？",
+          "route": "/subjects/math/lessons/algebra.substitution.intro"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "sum-multiple",
+      "sourceTitle": "和倍分一分",
+      "sourceItemSha256": "683180aab60cfc155f05bde965c90bf3ce75fe683d99e85b5071cf17548e1459",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U06-B05",
+          "title": "先求一小份，再求几小份",
+          "route": "/subjects/math/lessons/G3-U06-B05"
+        },
+        {
+          "id": "g6-ratio",
+          "title": "比是两个量的同尺度比较",
+          "route": "/subjects/math/library?kind=legacy&id=g6-ratio"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "difference-multiple",
+      "sourceTitle": "差倍找一份",
+      "sourceItemSha256": "748072a6a1abe242540e86f25fcb90a5df83449b53a8961cbdff63c196fda4f4",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g5-equation-balance",
+          "title": "方程是有未知数的平衡",
+          "route": "/subjects/math/library?kind=legacy&id=g5-equation-balance"
+        },
+        {
+          "id": "g6-ratio",
+          "title": "比是两个量的同尺度比较",
+          "route": "/subjects/math/library?kind=legacy&id=g6-ratio"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "perimeter",
+      "sourceTitle": "给花园围一圈",
+      "sourceItemSha256": "46232fa19e8352ce3346008be3d5691a4e0c5629043469eff746701e342c3cb0",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L03-B02",
+          "title": "围一圈需要多长：周长的意义",
+          "route": "/subjects/math/lessons/G3-L03-B02"
+        },
+        {
+          "id": "G3-L03-TH1",
+          "title": "同一根绳能围成几种长方形",
+          "route": "/subjects/math/library?kind=thinking&id=G3-L03-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "area",
+      "sourceTitle": "用小方格铺满",
+      "sourceItemSha256": "841b22a387305a412b6e587dd3c1b7732a427f3daf398c99b6f73dc151b072e0",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L04-B01",
+          "title": "铺满里面，需要多少个小方块",
+          "route": "/subjects/math/lessons/G3-L04-B01"
+        },
+        {
+          "id": "G3-L04-B02",
+          "title": "长乘宽为什么得到面积",
+          "route": "/subjects/math/lessons/G3-L04-B02"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "planting",
+      "sourceTitle": "路灯与间隔",
+      "sourceItemSha256": "1df631493f2e8a05e0aa2d757e3cea4d700d46eddc74c3b9d9ababa7b349e211",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U03-O01",
+          "title": "点与间隔：6段直路为什么有7个端点",
+          "route": "/subjects/math/lessons/G3-U03-O01"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "matchstick",
+      "sourceTitle": "火柴棒方阵",
+      "sourceItemSha256": "a2b2c366c2f6e1ee9fc45f4b40fb8f1d90b0a13cb828468869c3fc4f4667cf0a",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g4-matchstick-pattern",
+          "title": "火柴棒里的线性规律",
+          "route": "/subjects/math/library?kind=legacy&id=g4-matchstick-pattern"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "patterns-parity",
+      "sourceTitle": "奇偶配对站",
+      "sourceItemSha256": "7c27d18d846e8e3e66830eabb89ab085f3eb839db8063b856268c8866f081dd5",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g6-parity-invariant",
+          "title": "奇偶性是一条不变量",
+          "route": "/subjects/math/library?kind=legacy&id=g6-parity-invariant"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "periods",
+      "sourceTitle": "循环星轨",
+      "sourceItemSha256": "c61991248b22912e104ec5756a14ad47cd8857c412d1b32b65fa4b9d8d09fe2c",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-LP01-E01",
+          "title": "星期循环与制作月历",
+          "route": "/subjects/math/lessons/G3-LP01-E01"
+        },
+        {
+          "id": "g4-period-remainder",
+          "title": "周期和余数会一起出现",
+          "route": "/subjects/math/library?kind=legacy&id=g4-period-remainder"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "pairing-sums",
+      "sourceTitle": "首尾牵手求和",
+      "sourceItemSha256": "c7cfe9446c7bcf2af8adf22abcdad4f4bffb4747360614d13a0f9058197570f0",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g4-pairing-sums",
+          "title": "首尾配对，长清单也能快算",
+          "route": "/subjects/math/library?kind=legacy&id=g4-pairing-sums"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "age-invariant",
+      "sourceTitle": "年龄差不会跑",
+      "sourceItemSha256": "3af1ab93a6b79d6622a704c9a3fd8ce25c1fbb6ed705e93c9afa197af876d19b",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g4-age-invariant",
+          "title": "年龄在变，差却不变",
+          "route": "/subjects/math/library?kind=legacy&id=g4-age-invariant"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "enumeration",
+      "sourceTitle": "不漏不重的清单",
+      "sourceItemSha256": "928e5dbe94f943cf81aaed003474d6cf06f6d2fc9de3bdfd47b2a106a4e37020",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U07-B01",
+          "title": "每种选择都配一遍，怎样不重复不遗漏",
+          "route": "/subjects/math/lessons/G3-U07-B01"
+        },
+        {
+          "id": "g4-route-enumeration",
+          "title": "路线要有系统地数",
+          "route": "/subjects/math/library?kind=legacy&id=g4-route-enumeration"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "chicken-rabbit",
+      "sourceTitle": "脚印侦探案",
+      "sourceItemSha256": "8c7399d154ba2b08ce8d432c916c510233af8be81373ab71c3ce9541b868bbad",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g4-chicken-rabbit",
+          "title": "鸡兔同笼：从假设开始",
+          "route": "/subjects/math/library?kind=legacy&id=g4-chicken-rabbit"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "reverse",
+      "sourceTitle": "时间倒带机",
+      "sourceItemSha256": "7adc6b7b9d140ddab0157d012df7681139a13cb3380deb23b34332e6289afa1d",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U02-O01",
+          "title": "从算错的结果倒着找回去",
+          "route": "/subjects/math/lessons/G3-U02-O01"
+        },
+        {
+          "id": "g4-working-backward",
+          "title": "知道结果，也能找回起点",
+          "route": "/subjects/math/library?kind=legacy&id=g4-working-backward"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "pigeonhole",
+      "sourceTitle": "一定会相遇",
+      "sourceItemSha256": "191a138fc0e1b98f2f4938bb4170c6458534f91426313dc9b3f8465b0d586bc7",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g4-pigeonhole",
+          "title": "不用试完，也能保证发生",
+          "route": "/subjects/math/library?kind=legacy&id=g4-pigeonhole"
+        },
+        {
+          "id": "g5-pigeonhole",
+          "title": "类别有限，重复一定出现",
+          "route": "/subjects/math/library?kind=legacy&id=g5-pigeonhole"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "fraction-meaning",
+      "sourceTitle": "把一个整体公平分",
+      "sourceItemSha256": "95962cb0d4ef9b6886aca3ef73c07b8ac0d5c522c239d0a9d229ebf538f540e5",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U06-B01",
+          "title": "一份不到一个，怎样说清楚",
+          "route": "/subjects/math/lessons/G3-U06-B01"
+        },
+        {
+          "id": "numbers.fractions.meaning",
+          "title": "一条彩带，分给朋友两小段",
+          "route": "/subjects/math/lessons/numbers.fractions.meaning"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "fraction-compare",
+      "sourceTitle": "分数条上的大小",
+      "sourceItemSha256": "b9d990f9fcb1f713ca7ffc5b2d8212e43f2e7862c517fa0a7418aec33155a3b9",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U06-B01",
+          "title": "一份不到一个，怎样说清楚",
+          "route": "/subjects/math/lessons/G3-U06-B01"
+        },
+        {
+          "id": "G3-U06-TH1",
+          "title": "分数不同，取出的长度能相同吗",
+          "route": "/subjects/math/library?kind=thinking&id=G3-U06-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "equivalent-fractions",
+      "sourceTitle": "分数的变装术",
+      "sourceItemSha256": "dd05ec68308022c46b2ad5aa1deecb6f46c36bc3f1e8b101fd7c91b4b07972f2",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U06-E01",
+          "title": "合并格子，已经涂色的长度会变吗",
+          "route": "/subjects/math/lessons/G3-U06-E01"
+        },
+        {
+          "id": "g5-fraction-equivalence",
+          "title": "同一个量可以有多种分数写法",
+          "route": "/subjects/math/library?kind=legacy&id=g5-fraction-equivalence"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "time-scale",
+      "sourceTitle": "时钟跨刻度",
+      "sourceItemSha256": "25493575c898b33cb4e258c2df20d7b945d5db92d3979234ebe8035f19d84343",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-LP01-B02",
+          "title": "时刻是一个点，时长是一段路",
+          "route": "/subjects/math/lessons/G3-LP01-B02"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "viewpoint-models",
+      "sourceTitle": "同一个物体，为什么长得不一样",
+      "sourceItemSha256": "cce0e181ddf57359f6c8601a2d37096d48de5d0cd8bbd9e94dcb8029771fb7f1",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U01-B01",
+          "title": "换一个位置，看到的样子为什么变了",
+          "route": "/subjects/math/lessons/G3-U01-B01"
+        },
+        {
+          "id": "G3-U01-B02",
+          "title": "看见一个面，能猜出整个物体吗",
+          "route": "/subjects/math/lessons/G3-U01-B02"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "symmetry-fold",
+      "sourceTitle": "对折以后，另一半去哪儿了",
+      "sourceItemSha256": "ef2f4ca7aa0add72fde31fa4fce256e9384264a5ce1c79c1e2e703c212c38f22",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L01-B01",
+          "title": "对折后能重合，才是轴对称",
+          "route": "/subjects/math/lessons/G3-L01-B01"
+        },
+        {
+          "id": "G3-L01-TH1",
+          "title": "折两次后打一个孔",
+          "route": "/subjects/math/library?kind=thinking&id=G3-L01-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "operation-meaning",
+      "sourceTitle": "运算符号是在说什么",
+      "sourceItemSha256": "8b5c32a5144bc2ec2ab0a7e80251f978265c8664cb8e6b1f1f63e24a03044fff",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "numbers.addition.meaning",
+          "title": "两篮苹果，合起来有几个？",
+          "route": "/subjects/math/lessons/numbers.addition.meaning"
+        },
+        {
+          "id": "numbers.subtraction.meaning",
+          "title": "9张贴纸，送出5张还剩多少？",
+          "route": "/subjects/math/lessons/numbers.subtraction.meaning"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "mixed-operation",
+      "sourceTitle": "一串算式，先做哪一步",
+      "sourceItemSha256": "fbf222b2457f56bb50583feafe84ac1fe79c2b4770f2bc30864c903ff86a5024",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U02-B01",
+          "title": "同级运算：为什么从左往右",
+          "route": "/subjects/math/lessons/G3-U02-B01"
+        },
+        {
+          "id": "G3-U02-B02",
+          "title": "先乘除：为什么4支不能和3盒相加",
+          "route": "/subjects/math/lessons/G3-U02-B02"
+        },
+        {
+          "id": "G3-U02-B03",
+          "title": "括号：把必须先完成的事圈起来",
+          "route": "/subjects/math/lessons/G3-U02-B03"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "length-measure",
+      "sourceTitle": "给长度找到合适的尺子",
+      "sourceItemSha256": "9b000cabe581e5d2ff1ef452302636e065318bbdf9b7aa8527e52bcf04eae5e4",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U03-B01",
+          "title": "毫米、厘米、米：尺子量到的到底是什么",
+          "route": "/subjects/math/lessons/G3-U03-B01"
+        },
+        {
+          "id": "G3-U03-B02",
+          "title": "千米与估测：不是猜，而是拿已知长度去比较",
+          "route": "/subjects/math/lessons/G3-U03-B02"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "mass-equivalence",
+      "sourceTitle": "曹冲为什么能称象",
+      "sourceItemSha256": "ebd833b8c8543f655fbd2989da196d370a1776d102bd0fea0d63c5c53a3e3ae8",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-UP01-B01",
+          "title": "用什么尺度记录轻重",
+          "route": "/subjects/math/lessons/G3-UP01-B01"
+        },
+        {
+          "id": "G3-UP01-B02",
+          "title": "称不了大物体，怎样换成小物体",
+          "route": "/subjects/math/lessons/G3-UP01-B02"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "multi-digit-multiply",
+      "sourceTitle": "把大阵列拆成小阵列",
+      "sourceItemSha256": "eacb339adb905fdce552adfac0cf1cdc449350e44a47ae3d188acc844445a265",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U04-B01",
+          "title": "把几十、几百和零散个数分别乘",
+          "route": "/subjects/math/lessons/G3-U04-B01"
+        },
+        {
+          "id": "G3-U04-B02",
+          "title": "竖式是把拆分过程排整齐",
+          "route": "/subjects/math/lessons/G3-U04-B02"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "multiply-distributive",
+      "sourceTitle": "乘法的捷径从哪里来",
+      "sourceItemSha256": "f6d5b29947c7db414a3b6910fd4d87d2203329eba27b234ed3808cb41b94997e",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U02-E05",
+          "title": "一块点阵分两块：为什么每部分都要乘",
+          "route": "/subjects/math/lessons/G3-U02-E05"
+        },
+        {
+          "id": "g4-operation-laws",
+          "title": "运算律来自重新分组",
+          "route": "/subjects/math/library?kind=legacy&id=g4-operation-laws"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "coding-information",
+      "sourceTitle": "数字也能当作地址",
+      "sourceItemSha256": "7f5ee1194457b51b0dc25db43893a000df0ad0a6dcb6514e19b83f900161ddf9",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-UP02-B01",
+          "title": "数字有时表示身份，而不是多少",
+          "route": "/subjects/math/lessons/G3-UP02-B01"
+        },
+        {
+          "id": "G3-UP02-TH1",
+          "title": "把编号连起来会发生什么",
+          "route": "/subjects/math/library?kind=thinking&id=G3-UP02-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "lines-angles",
+      "sourceTitle": "线把世界切出方向",
+      "sourceItemSha256": "8a55358aa615bce64f9723a8434e0d8fab5f29c4ef58678f3b516e077110a39c",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U05-B01",
+          "title": "线的端点和长度告诉我们什么",
+          "route": "/subjects/math/lessons/G3-U05-B01"
+        },
+        {
+          "id": "G3-U05-B02",
+          "title": "角的大小看张口，不看边画多长",
+          "route": "/subjects/math/lessons/G3-U05-B02"
+        },
+        {
+          "id": "G3-U05-B03",
+          "title": "用一个直角作标准来分类",
+          "route": "/subjects/math/lessons/G3-U05-B03"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "fraction-quantity",
+      "sourceTitle": "分数可以去量一堆东西",
+      "sourceItemSha256": "bdc31a130088a2e82a8ae3dfe9b74a13505c6b17e7ff31e81749e5ba4e9e0511",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U06-B04",
+          "title": "一个整体，也可以是一盒东西",
+          "route": "/subjects/math/lessons/G3-U06-B04"
+        },
+        {
+          "id": "G3-U06-B05",
+          "title": "先求一小份，再求几小份",
+          "route": "/subjects/math/lessons/G3-U06-B05"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "division-algorithm",
+      "sourceTitle": "把大数公平分组",
+      "sourceItemSha256": "b943ae4b12e720c9218eedfaf9083de0669a747e568c04af700fe470bac75e2e",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L02-B01",
+          "title": "把几十、几百平均分，先看计数单位",
+          "route": "/subjects/math/lessons/G3-L02-B01"
+        },
+        {
+          "id": "G3-L02-B02",
+          "title": "除法竖式为什么从高位开始",
+          "route": "/subjects/math/lessons/G3-L02-B02"
+        },
+        {
+          "id": "G3-L02-B04",
+          "title": "商里有0，也不能漏掉位置",
+          "route": "/subjects/math/lessons/G3-L02-B04"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "division-remainder",
+      "sourceTitle": "余数在告诉我们什么",
+      "sourceItemSha256": "367c6cd4833dfe48a5eadb3f9d640debb807f462015f6ec709b8b443d5da83cd",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L02-B03",
+          "title": "有剩余时，怎样判断答案真的分完了",
+          "route": "/subjects/math/lessons/G3-L02-B03"
+        },
+        {
+          "id": "G3-L02-TH1",
+          "title": "有余数时，总数不只有一个答案",
+          "route": "/subjects/math/library?kind=thinking&id=G3-L02-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "perimeter-area-bridge",
+      "sourceTitle": "围一圈和铺满地是两种量",
+      "sourceItemSha256": "26759e52df6f49ba3edefdeb47c1bb79bcab8ab7f59c12f57d78d3118c309b1a",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "geometry.area.perimeter",
+          "title": "给阅读角铺地垫，再围一圈绳子",
+          "route": "/subjects/math/lessons/geometry.area.perimeter"
+        },
+        {
+          "id": "G3-L03-B02",
+          "title": "围一圈需要多长：周长的意义",
+          "route": "/subjects/math/lessons/G3-L03-B02"
+        },
+        {
+          "id": "G3-L04-B01",
+          "title": "铺满里面，需要多少个小方块",
+          "route": "/subjects/math/lessons/G3-L04-B01"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "area-decomposition",
+      "sourceTitle": "剪开、拼回，面积不会消失",
+      "sourceItemSha256": "5e28cfe8d39dea179fffd616358334ac24cdeef31ba6324b924668ce1501b867",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L04-B03",
+          "title": "分割、拼补和换单位，面积怎样保持一致",
+          "route": "/subjects/math/lessons/G3-L04-B03"
+        },
+        {
+          "id": "G3-L04-TH1",
+          "title": "沿对角线剪开，面积怎么办",
+          "route": "/subjects/math/library?kind=thinking&id=G3-L04-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "data-table",
+      "sourceTitle": "先收集，再让数据说话",
+      "sourceItemSha256": "709c2105ccc4c78406ef9830da21c6456d3c9d5c1b6a3e169018f064be5ecddc",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L05-B01",
+          "title": "先问清问题，再收集能回答它的数据",
+          "route": "/subjects/math/lessons/G3-L05-B01"
+        },
+        {
+          "id": "G3-L05-B02",
+          "title": "按范围分组，边界上的数据放哪里",
+          "route": "/subjects/math/lessons/G3-L05-B02"
+        },
+        {
+          "id": "G3-L05-TH1",
+          "title": "统计表空着的格子怎样补",
+          "route": "/subjects/math/library?kind=thinking&id=G3-L05-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "calendar-cycles",
+      "sourceTitle": "日历上藏着周期",
+      "sourceItemSha256": "2e2417ccd509959bc2fa93e234de12a1437f4f499f9c2f5decefddf4042fb9be",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-LP01-B01",
+          "title": "日历为什么不能每月都排30天",
+          "route": "/subjects/math/lessons/G3-LP01-B01"
+        },
+        {
+          "id": "G3-LP01-E01",
+          "title": "星期循环与制作月历",
+          "route": "/subjects/math/lessons/G3-LP01-E01"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "decimal-money",
+      "sourceTitle": "小数把一元钱继续分下去",
+      "sourceItemSha256": "6851d64c98a77eee2d008b8f5f0898621ff3b8c57caf903b3b46ad6b39c676bd",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L06-B01",
+          "title": "不足一米的部分，仍用十进制记录",
+          "route": "/subjects/math/lessons/G3-L06-B01"
+        },
+        {
+          "id": "G3-L06-TH1",
+          "title": "正好花完4元，有不止一种买法",
+          "route": "/subjects/math/library?kind=thinking&id=G3-L06-TH1"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "motion-transformations",
+      "sourceTitle": "图形会平移、旋转和翻折",
+      "sourceItemSha256": "ded13bdd68af101157afeb011c0bb8040f5b2ad59e4c42d625c2938b7bfa9f5a",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L01-B02",
+          "title": "平移和旋转，移动方式哪里不同",
+          "route": "/subjects/math/lessons/G3-L01-B02"
+        },
+        {
+          "id": "g5-figure-motion",
+          "title": "图形运动保持了什么",
+          "route": "/subjects/math/library?kind=legacy&id=g5-figure-motion"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "factors-multiples",
+      "sourceTitle": "数可以被怎样整齐分组",
+      "sourceItemSha256": "d26a2a3305d1de180a17389d7dcdcb3d79d370f769b77c6f86f996130ff7f384",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g5-factors-primes",
+          "title": "因数把数的骨架露出来",
+          "route": "/subjects/math/library?kind=legacy&id=g5-factors-primes"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "estimation-check",
+      "sourceTitle": "先估一估，答案才有方向",
+      "sourceItemSha256": "0cd6c9002fa1258d6265b3181f40f679f1b78f298595b29fda0eba4621b46fcd",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U04-B05",
+          "title": "先估一估，才知道答案靠不靠谱",
+          "route": "/subjects/math/lessons/G3-U04-B05"
+        },
+        {
+          "id": "g4-round-estimate",
+          "title": "估算先告诉你答案像不像",
+          "route": "/subjects/math/library?kind=legacy&id=g4-round-estimate"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "counting-combinations",
+      "sourceTitle": "选择可以画成树",
+      "sourceItemSha256": "1832f4d933e9e4cc4a5189dcba81a71275e0b3d9eed4987cbd4ddf9c8b2a8cd4",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U07-B01",
+          "title": "每种选择都配一遍，怎样不重复不遗漏",
+          "route": "/subjects/math/lessons/G3-U07-B01"
+        },
+        {
+          "id": "g5-counting-tree",
+          "title": "组合计数要把选择展开",
+          "route": "/subjects/math/library?kind=legacy&id=g5-counting-tree"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "reverse-thinking",
+      "sourceTitle": "把过程倒放",
+      "sourceItemSha256": "be94d3af7270644597925df1fdbc677fad8b4147990d3280e88a0b4e593a4b51",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U02-O01",
+          "title": "从算错的结果倒着找回去",
+          "route": "/subjects/math/lessons/G3-U02-O01"
+        },
+        {
+          "id": "g6-working-backward",
+          "title": "从最后一步倒着还原",
+          "route": "/subjects/math/library?kind=legacy&id=g6-working-backward"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "invariant-relations",
+      "sourceTitle": "有些关系不会变",
+      "sourceItemSha256": "a50f1ec2af50ba9c36d41a428e4c68bae8d735cc755e5c6d3592b1660302acf7",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "g4-age-invariant",
+          "title": "年龄在变，差却不变",
+          "route": "/subjects/math/library?kind=legacy&id=g4-age-invariant"
+        },
+        {
+          "id": "g6-parity-invariant",
+          "title": "奇偶性是一条不变量",
+          "route": "/subjects/math/library?kind=legacy&id=g6-parity-invariant"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "optimization-modeling",
+      "sourceTitle": "同样的材料，怎样安排更合适",
+      "sourceItemSha256": "2b675ee27948fc54dc65411b9da953451f558a761b501248ba2d42d74c1a604b",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-L03-TH1",
+          "title": "同一根绳能围成几种长方形",
+          "route": "/subjects/math/library?kind=thinking&id=G3-L03-TH1"
+        },
+        {
+          "id": "g5-average-optimization",
+          "title": "平均数会被每个数据拉动",
+          "route": "/subjects/math/library?kind=legacy&id=g5-average-optimization"
+        },
+        {
+          "id": "g6-extreme-principle",
+          "title": "最值问题先盯住极端",
+          "route": "/subjects/math/library?kind=legacy&id=g6-extreme-principle"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    },
+    {
+      "sourceId": "multi-step-modeling",
+      "sourceTitle": "把真实问题拆成几步",
+      "sourceItemSha256": "9135457a50eff98eec9c18dd1bc532423bc01e7ed0ce91dd7f45f0bc1a8470bc",
+      "originalSuppressedByCompleteGrade3": true,
+      "targetConcepts": [
+        {
+          "id": "G3-U02-B05",
+          "title": "两步问题：先找到没直接告诉你的量",
+          "route": "/subjects/math/lessons/G3-U02-B05"
+        },
+        {
+          "id": "G3-L07-R01",
+          "title": "给一次班级活动做完整计划",
+          "route": "/subjects/math/lessons/G3-L07-R01"
+        }
+      ],
+      "relationship": "Conceptual continuation at the stated grade; not a claim of identical questions, teaching sequence or grade level. The old50 hidden quest objects are intentionally not copied."
+    }
+  ]
+}

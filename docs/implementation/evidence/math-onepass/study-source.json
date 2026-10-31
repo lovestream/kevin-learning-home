@@ -1,0 +1,206 @@
+{
+  "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+  "privateFilesRead": false,
+  "rewardsEnabled": false,
+  "thinkingCards": 17,
+  "deferredImported": 0,
+  "sources": [
+    {
+      "sourcePath": "shared/withdrawn-checks.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4",
+      "sourceSha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "target": "packages/math-training/source/shared/withdrawn-checks.mjs",
+      "targetSha256": "1c1793a1c196b73799432eafa237a2880ce8cb635d0aeef28b9da9ff261bb1e8",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/widget-state.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "d8073d21b1c7ef6be3b001bebd431b5344bbc9ab",
+      "sourceSha256": "51b59cbf8a7ae23e3973c7191d2b030a3aba8fea1a3339ffa940e09c3e0010ab",
+      "target": "packages/math-training/source/shared/widget-state.mjs",
+      "targetSha256": "51b59cbf8a7ae23e3973c7191d2b030a3aba8fea1a3339ffa940e09c3e0010ab",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/operation-models.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "a711e5ed609b581a6fdecd5ce9b7192ec59a1029",
+      "sourceSha256": "f51539a15a8be0deeadb2c357f1563c0278bf5f694148adb29fa6cfc277154f9",
+      "target": "packages/math-training/source/shared/operation-models.mjs",
+      "targetSha256": "f51539a15a8be0deeadb2c357f1563c0278bf5f694148adb29fa6cfc277154f9",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/hands-on-models.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "3bd12df8718c0dcc9ef9e4f4ad517f1ae2bd2e37",
+      "sourceSha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1",
+      "target": "packages/math-training/source/shared/hands-on-models.mjs",
+      "targetSha256": "44133c75402f420ac1f504ee100fbc62889c26503fa8b2a200f805e7f471cef1",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/textbook-models.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "252842f51207dec7442e0db88bdc89a0fc4f1a06",
+      "sourceSha256": "e76b8d85e58dfe0fff18991af9953f10cf3af89198d8566e985b4e3afa23f6cf",
+      "target": "packages/math-training/source/shared/textbook-models.mjs",
+      "targetSha256": "e76b8d85e58dfe0fff18991af9953f10cf3af89198d8566e985b4e3afa23f6cf",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/core-models.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "35333a65f6bd5f7f08862e71646e09049de9902e",
+      "sourceSha256": "e5ec016e741dc4bef74b85d71e4a5bfd905010ae96fea99ea5a7d79f16b9f636",
+      "target": "packages/math-training/source/shared/core-models.mjs",
+      "targetSha256": "e5ec016e741dc4bef74b85d71e4a5bfd905010ae96fea99ea5a7d79f16b9f636",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/length-model.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1c01ece619f0dc8801aca5ed2d6147bfbb9db680",
+      "sourceSha256": "c4a737d13c68f8ec4a420823a556301c5b4abc0d62e077f515ba70c399feb492",
+      "target": "packages/math-training/source/shared/length-model.mjs",
+      "targetSha256": "c4a737d13c68f8ec4a420823a556301c5b4abc0d62e077f515ba70c399feb492",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/thinking-tools.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e5851e6033ea406410e94ad1f37bacb751bfb2ee",
+      "sourceSha256": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+      "target": "packages/math-training/source/shared/thinking-tools.mjs",
+      "targetSha256": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/learning-evidence.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "3f94246029db195a86187e1f1dc1cd35dd42c77c",
+      "sourceSha256": "0a5ffa4b2406a8d7e90248f5620b054a6309de85cf00cbd94d632dc68390a79d",
+      "target": "packages/math-training/source/shared/learning-evidence.mjs",
+      "targetSha256": "0a5ffa4b2406a8d7e90248f5620b054a6309de85cf00cbd94d632dc68390a79d",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "server/review-schedule.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "288434f8de97c55d7fc5b8098625e26c0f452ff6",
+      "sourceSha256": "e6126fd5a57f07de74756a325a8c375e25deed34d67f4662a416d3326ba1902d",
+      "target": "packages/math-training/source/server/review-schedule.mjs",
+      "targetSha256": "e6126fd5a57f07de74756a325a8c375e25deed34d67f4662a416d3326ba1902d",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "server/thinking-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e",
+      "sourceSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "target": "packages/math-training/source/server/thinking-store.mjs",
+      "targetSha256": "28cbf2abe887a0ef24d16cf1327113afb21e70278f1bb26d6a76b6d6f3d5eb42",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "content/pilot/clarity-errata.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "78b2e06af753daa17bbf950331dec321b6e28c60",
+      "sourceSha256": "00ee4d10bef32906ed5db3325fd21584546b51b12cbebbf585768ad8dcdf2beb",
+      "target": "packages/math-training/source/content/pilot/clarity-errata.mjs",
+      "targetSha256": "00ee4d10bef32906ed5db3325fd21584546b51b12cbebbf585768ad8dcdf2beb",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "content/pilot/inverse-revisions.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "1bb5e356531d191844c0688f93094bccde9d84b9",
+      "sourceSha256": "e05a0bc4d48a03253f5b894b1c0629224ba820a74de68165795ddcb7a21f90d4",
+      "target": "packages/math-training/source/content/pilot/inverse-revisions.mjs",
+      "targetSha256": "e05a0bc4d48a03253f5b894b1c0629224ba820a74de68165795ddcb7a21f90d4",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "content/pilot/thinking-deeper-variants.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "a84bea714ff96c294e081a582ff8096b04f502b9",
+      "sourceSha256": "0da0f513b7535138154b0ed8c29bc186509fe3f94e23589d6cc0244f31867d9b",
+      "target": "packages/math-training/source/content/pilot/thinking-deeper-variants.mjs",
+      "targetSha256": "0da0f513b7535138154b0ed8c29bc186509fe3f94e23589d6cc0244f31867d9b",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "server/pilot-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b3cf83a76904479c9fca3d3c2b917035e075afee",
+      "sourceSha256": "853c14ba1092a92d41074d483730c4968dfa7855bc8a0f55cf6f3e877b331b9c",
+      "target": "packages/math-training/source/server/pilot-store.mjs",
+      "targetSha256": "8eed334d1d2d0400b3a6a8c2694e67e38b9a2c1c9fe12af8f2c5040b9fba639c",
+      "adaptations": [
+        "Remove wallet credit, entitlement/daily reward accounting, pet growth and completion bonus. Preserve reading revisions, notes, sessions, immutable first answers, self-check gates, mathematical grading, human explanation review and review scheduling. paid/completionPaid remain zero for source response compatibility; use the original 1/3/7/21-day schedule without a personal settings dependency."
+      ]
+    },
+    {
+      "sourcePath": "src/learningMap.ts",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81d322ad0a5c4a96e0919798d44d528c0cce54fa",
+      "sourceSha256": "dd7220e876b6441f4b5054bb18a99876356c171ea23bc44b10fa3d4c916c3445",
+      "target": "packages/math-training/source/src/learningMap.mjs",
+      "targetSha256": "02c44a68661599e7268a0a08351697773684d3b5ebc3fb8cdcf7f8e40a254ff8",
+      "adaptations": [
+        "Erase TypeScript types only; original learning entry, due review, resume and mistake/evidence selectors retained. Data adapter supplies only installed synthetic course state."
+      ]
+    },
+    {
+      "sourcePath": "content/pilot/thinking-source.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "5c4595fd6c303b3f57f214938c90bf8bb5cfde68",
+      "sourceSha256": "844655d8993e657663ec2d90c5e5f0d2bccce4e181cad6859ad45b1102579437",
+      "target": "packages/math-training/source/content/pilot/thinking-source.mjs",
+      "targetSha256": "a29682e3339dedf6f447f049aada88d17b48a10532540377daa2bf1e2b13468b",
+      "adaptations": [
+        "Resolve authored course plan/hints/editorial publication into exactly the 17 existing published cards; 43 deferred cards are absent. No learner state."
+      ]
+    },
+    {
+      "sourcePath": "content/pilot/thinking-hints.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "3af5f1373cce1afd1bcd87d3c3885d728edbd0da",
+      "sourceSha256": "f73500b4109896babcfd8a0bbe302737b3562fcf25c986c2839d20cf71f6fbde",
+      "target": "packages/math-training/source/content/pilot/thinking-hints.mjs",
+      "targetSha256": "c54a304ea478eb016e43762c28d268e773fc5c73926aafebc65794a0279e836e",
+      "adaptations": [
+        "Hints restricted to the same 17 published cards."
+      ]
+    },
+    {
+      "sourcePath": "content/pilot/thinking-variants.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "18c08631c4d73555a50b76642b89d1a99b729854",
+      "sourceSha256": "8bdc93f8ab0a9d6bf96735f48e5713e6a739759009cd76bd7a34c12ba8ec8f0f",
+      "target": "packages/math-training/source/content/pilot/thinking-variants.mjs",
+      "targetSha256": "0cf7de32317480559e04c79791ff932d311a5014ed7deb77a9d3e6e47db989e0",
+      "adaptations": [
+        "Existing authored variant factories and arithmetic retained; entry rejects every unpublished card ID."
+      ]
+    }
+  ],
+  "contentDependencies": [
+    {
+      "path": "content/pilot/thinking-publication.mjs",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "9ed5e01359f414eeee4aea54d6f8d35da0da3d68",
+      "sha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+      "bytes": 3453
+    },
+    {
+      "path": "content/course-plan-v2/grade-3-thinking.json",
+      "gitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "gitBlob": "2c0b0b01e43adc79345620ce3e193987f7d85c92",
+      "sha256": "457b794d9b418d20550be510b598a469af972dcd559c6c797b9f7851c398b7ad",
+      "bytes": 234715
+    }
+  ]
+}

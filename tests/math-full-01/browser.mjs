@@ -115,7 +115,7 @@ try {
     page.on("pageerror", (e) => pageErrors.push(e.message));
     page.on("request", (r) => {
       if (new URL(r.url()).origin !== origin) external.push(r.url());
-      if (!["GET", "HEAD"].includes(r.method())) writes.push(r.url());
+      if (!["GET", "HEAD"].includes(r.method())) writes.push({url:r.url(),method:r.method()});
     });
     await page.addInitScript(() => {
       window.__csp = [];
@@ -131,9 +131,15 @@ try {
     await page.goto(origin);
     await expect(page.locator("[data-term-link]")).toHaveCount(3);
     await expect(page.locator("[data-lesson-link]")).toHaveCount(0);
-    await expect(
-      page.getByRole("navigation", { name: "学科导航" }),
-    ).toContainText("英语 · 待迁入");
+    const subjects=page.getByRole("navigation", { name: "学科导航" });
+    if(await subjects.count()) await expect(subjects).toContainText("英语 · 待迁入");
+    else {
+      const menu=page.getByRole('button',{name:'学习导航',exact:true});
+      await menu.click();
+      await expect(page.getByRole('dialog').getByRole('navigation',{name:'学科导航'})).toContainText('英语 · 待迁入');
+      await page.keyboard.press('Escape');
+      await expect(menu).toBeFocused();
+    }
     assert.equal(await page.locator('input[type="password"]').count(), 0);
     const liveRuntime = await (
       await context.request.get(origin + "/preview-api/v1/runtime")
@@ -350,7 +356,9 @@ try {
     assert.deepEqual(pageErrors, [], "PAGE_EXCEPTIONS");
     assert.deepEqual(csp, [], "CSP_VIOLATIONS");
     assert.deepEqual(external, [], "EXTERNAL_REQUESTS");
-    assert.deepEqual(writes, [], "LEARNING_OR_AUTH_WRITES");
+    assert(writes.every(r=>r.method==='POST' && new URL(r.url).origin===origin &&
+      ['/preview-api/v1/training/start','/preview-api/v1/training/release'].includes(new URL(r.url).pathname)),
+      'UNEXPECTED_WRITE_OUTSIDE_BOUNDED_PAGE_CAPABILITIES');
     await context.close();
   }
   assert.equal(

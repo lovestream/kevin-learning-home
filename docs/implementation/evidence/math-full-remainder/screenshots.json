@@ -1,0 +1,174 @@
+{
+  "source": "Actual NAS LAN HTTP",
+  "physicalDevices": "NEEDS_USER_ACTION",
+  "screenshots": [
+    {
+      "name": "case-det-g3-001-1280.png",
+      "sha256": "08be4a16b12e986dcb0f26e563188d0f8b4c02ee02b59a2947f98d55d3981e63"
+    },
+    {
+      "name": "case-det-g3-001-390.png",
+      "sha256": "fb9a9e62133b201e47e330080aeb87417722007c7f946388b12a12c945daf6f9"
+    },
+    {
+      "name": "case-det-g3-001-768.png",
+      "sha256": "6a8b6f6cd8006ec3e65cb631ceea73a285a5f69720c59ffc1a42acf447e07511"
+    },
+    {
+      "name": "case-det-g3-002-1280.png",
+      "sha256": "6ac5f0e56cbe2f8a948c23e131b2c413b212339f859788a9906ee7b483278051"
+    },
+    {
+      "name": "case-det-g3-002-390.png",
+      "sha256": "6dc02e2ddc2af4d3bb31d37dcd23701d8e096146b87c11bec107956e292138e1"
+    },
+    {
+      "name": "case-det-g3-002-768.png",
+      "sha256": "a3a1d1f76423782bc72ee61fe7b13564d3bdb8df72d9e80cd0d98bfe3bd0edae"
+    },
+    {
+      "name": "home-1280.png",
+      "sha256": "5568fa99c7fbc35d12ae230d53d96b706c80628afac840cc47d343a88fd92fef"
+    },
+    {
+      "name": "home-390.png",
+      "sha256": "833a2f2f2625c4cb4dc86da18baf71f7a00c4761f2bf08d1cbba999cc2b676af"
+    },
+    {
+      "name": "home-768.png",
+      "sha256": "95cc91acb6997856b55fc4e0fffce9c99d1d564b58d789d8566dbbbd90bc568b"
+    },
+    {
+      "name": "methods-1280.png",
+      "sha256": "2e33d11fab8d7ffcb3f49ccebd3e51b5df71305c82078974ca32f29fec5e3daa"
+    },
+    {
+      "name": "methods-390.png",
+      "sha256": "bde8971ae03b5076b2bb76a73b235ddfa8521afdfb54bc03ef81e124e6f304cd"
+    },
+    {
+      "name": "methods-768.png",
+      "sha256": "57a65538e0b3227a65a3dbbf17b5d51d7e838e635682ceb2c8eeeeff33e793be"
+    },
+    {
+      "name": "model-array-1280.png",
+      "sha256": "ad5deded255ce86122f896442f683e840929bcf455b6b053dabb9452cb2aa2c8"
+    },
+    {
+      "name": "model-array-390.png",
+      "sha256": "31ab3754e1df36eec47c7ccc3bb45c05cf8400ce711fb42e0b047db3979d2da5"
+    },
+    {
+      "name": "model-array-768.png",
+      "sha256": "6c4070ade1bd347523072e7503d611a33868783ec6b80c7e025d61caf50f6742"
+    },
+    {
+      "name": "model-balance-1280.png",
+      "sha256": "4e87fd8f84e9de72d75d39e824758c261771d179242305fe5436d7f858b36ef7"
+    },
+    {
+      "name": "model-balance-390.png",
+      "sha256": "543a7ef5b947826b130e9d76c8790b2f32b61783f439b6bd300f707557e1b38a"
+    },
+    {
+      "name": "model-balance-768.png",
+      "sha256": "5ee0bc970c663b615374e95131c21f54d6d384183202c71f607cb6568dc622bf"
+    },
+    {
+      "name": "model-bar-1280.png",
+      "sha256": "646cf13efa7bd6fcde5c7b587f841eebac3561e0de6b3ed876c64abff10dbc8e"
+    },
+    {
+      "name": "model-bar-390.png",
+      "sha256": "5cda39b0b206a00011be3df1fdf7a50400daedfd73dde891872815b275f25e75"
+    },
+    {
+      "name": "model-bar-768.png",
+      "sha256": "692d4e841169f17c7420cad49ac2ef733a00c75861460771448b84235dc25d46"
+    },
+    {
+      "name": "model-fraction-1280.png",
+      "sha256": "1d1f2ac948869198680385c622162662ce464bc4a515a3b3c20b45ebcd55b338"
+    },
+    {
+      "name": "model-fraction-390.png",
+      "sha256": "6e64ee9acd4862292db059bc855be646f1266ecdc8bdd8567e2d362871ddf4f7"
+    },
+    {
+      "name": "model-fraction-768.png",
+      "sha256": "6b44327df3b94a06d954f4b296708669ef4835cba3ab33040ff0e4841bfde8cb"
+    },
+    {
+      "name": "model-geometry-1280.png",
+      "sha256": "f28c9096a0197ceab6cbcef02b39d83dc650179f1c49cef6fcb1c75979dff0c8"
+    },
+    {
+      "name": "model-geometry-390.png",
+      "sha256": "d2cbebbcbe93176ced86a1c39496b25177dbb7cf54b5bd15a1d65d036045e94a"
+    },
+    {
+      "name": "model-geometry-768.png",
+      "sha256": "75dd1a7fb4e5a35390ac32bb170525e8f610509bb2fe6afe86510db4ba9b2ad8"
+    },
+    {
+      "name": "model-numberline-1280.png",
+      "sha256": "1865bd944bd93242af66e3ff6bf220b33b91042bb2bc4c0011e676d60ba946f2"
+    },
+    {
+      "name": "model-numberline-390.png",
+      "sha256": "d43fee2fcb4240d8583e6a5d4165d18c9898be14d632edd1dc87c744ff07ced9"
+    },
+    {
+      "name": "model-numberline-768.png",
+      "sha256": "8e1df233f6d5bde9c7e90a6c35998bbc69c73006d6b46374e05473d2571e24cf"
+    },
+    {
+      "name": "model-table-1280.png",
+      "sha256": "d2b9c2e707f255254009a595cc6efc0d02d02b95683f66e63c263fabfb3fa8a6"
+    },
+    {
+      "name": "model-table-390.png",
+      "sha256": "3a817098e54577ba6898313fc947de7ee9955fbf6118a38f6acabd3e57943fd5"
+    },
+    {
+      "name": "model-table-768.png",
+      "sha256": "388711903fc27ea4f658b2d929a40cbfcb9424eaafa69902b4e6c001e090b1be"
+    },
+    {
+      "name": "thinking-g3-l07-th1-1280.png",
+      "sha256": "c0d6c70d21fdff1a245dfe15df8ee6a65337712f0db00621e8b8241ed1143ac5"
+    },
+    {
+      "name": "thinking-g3-l07-th1-390.png",
+      "sha256": "d8a4bcab39f428a33ceac2cc20f779e48c9d4ca5dd3de71ccdc43e09abe28cf1"
+    },
+    {
+      "name": "thinking-g3-l07-th1-768.png",
+      "sha256": "471d626715a72368301dfa8432f01ea1c6956fbe432371a72a082006ad785f6d"
+    },
+    {
+      "name": "thinking-g3-u01-th1-1280.png",
+      "sha256": "8306e59bd9b6002eb16df2e3c302229883d16728f481fc339d528455866ea374"
+    },
+    {
+      "name": "thinking-g3-u01-th1-390.png",
+      "sha256": "19f5f42fdabbff5552b9e3a371cadb7aca4beaa64ca46e9023fa67aadca05d18"
+    },
+    {
+      "name": "thinking-g3-u01-th1-768.png",
+      "sha256": "179d000e30f066762c4b8e0bc80a3533600eca722198cede01ef3adc36b46182"
+    },
+    {
+      "name": "thinking-g3-up01-th1-1280.png",
+      "sha256": "570d918484f7b17c627bf0ce00a66bdf0732a1f2394598b629d5976ad85c6b93"
+    },
+    {
+      "name": "thinking-g3-up01-th1-390.png",
+      "sha256": "3c15f88c67a9848b4c31808ac000f993080265d2207c09b56eb60118435d753d"
+    },
+    {
+      "name": "thinking-g3-up01-th1-768.png",
+      "sha256": "d23d0f35a2542ea525c1b6ac8cc303658510188bd4998efeee7df0572f0e71f1"
+    }
+  ]
+}

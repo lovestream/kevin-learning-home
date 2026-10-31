@@ -1,0 +1,16 @@
+{
+  "buildSha": "52e781440b21a406286ac55bbfefdb6e06d119fe",
+  "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+  "contentOnly": true,
+  "database": false,
+  "lessons": 70,
+  "practiceTasks": 849,
+  "practicePublicSha256": "306dc7ec07a5b7f6f2a6aa31628e8e0147b357c46ade8403ae29e4b6643b495f",
+  "libraryPublicSha256": "52ae6d22b03e7b026ddbdbe0aea1f7f28733d7c061f983252df7cc6a0cc0146b",
+  "library": {
+    "thinking": 17,
+    "legacy": 54,
+    "legacyQuestions": 432,
+    "detective": 14
+  }
+}
