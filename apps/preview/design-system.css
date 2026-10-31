@@ -1430,6 +1430,13 @@ body:has(.preview-app) {
 .pathways a[aria-current="page"] small {
   color: #527275;
 }
+.pathways a[aria-current="page"]:hover {
+  background: #f4fbf8;
+  color: #103e43;
+}
+.learning-sidebar :is(a, button):focus-visible {
+  outline-color: var(--sun);
+}
 .side-note > svg {
   color: var(--sun);
   flex: 0 0 auto;
@@ -1755,10 +1762,11 @@ body:has(.preview-app) {
   }
   .sketch-views {
     gap: 2px;
+    width: 136px;
   }
   .preview-app .sketch-views button {
     padding: 5px;
-    min-width: 40px;
+    min-width: 44px;
     font-size: 12px;
   }
   .preview-app .map-search {
