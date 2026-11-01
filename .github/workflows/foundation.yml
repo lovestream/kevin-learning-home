@@ -148,6 +148,8 @@ jobs:
         run: |
           mkdir -p .evidence/math-onepass
           node --test --test-concurrency=1 --test-reporter=junit --test-reporter-destination=.evidence/math-onepass/node.xml tests/math-onepass/*.test.*
+      - name: Versioned coding lesson, all four topics and twelve revised tasks at five widths
+        run: node tests/math-onepass/coding-browser.mjs
       - name: All 1298 original tasks through the shared business HTTP domain
         run: node tests/math-onepass/business-http.mjs
       - name: Actual non-secure HTTP without secure-origin exceptions

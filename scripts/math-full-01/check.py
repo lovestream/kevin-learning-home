@@ -14,12 +14,24 @@ assert sum(x['interactionStatus']=='verified' for x in rows)==64
 assert sum(x['interactionStatus']=='static-visual' for x in rows)==6
 assert all(x['status']=='draft' for x in rows)
 origin=read('docs/implementation/evidence/math-full-01/origins.json')
+AMEND_SHA='d409a021dd8905154d572b53c9802a8c3b2d14d9'
+amend=read('docs/implementation/evidence/coding-20261101/source.json')
+assert amend['sourceCommit']==AMEND_SHA and amend['lessonId']=='G3-UP02-B01' and amend['contentVersion']=='2026-11-01.2'
+assert amend['sourceWorktreeUnchanged'] and amend['sourceStatusBeforeSha256']==amend['sourceStatusAfterSha256']
+source_lesson=read('docs/implementation/evidence/coding-20261101/source-lesson.json')
+assert digest(canonical(source_lesson))==amend['sourceLessonSha256']
+amended={f['target']:f for f in amend['files']}
+assert len(amended)==9
 old={x['path']:x for x in read('docs/implementation/evidence/math-00/source-inventory.json')['files']}
 targets=set()
 for f in origin['files']:
- assert f['commit']==SHA and re.fullmatch('[a-f0-9]{40}',f['gitBlob'])
+ assert f['commit'] in [SHA,AMEND_SHA] and re.fullmatch('[a-f0-9]{40}',f['gitBlob'])
+ if f['commit']==AMEND_SHA:
+  if f['target']=='apps/preview/content/lessons/G3-UP02-B01.json':assert f['path']==amend['sourceFile'] and f['sha256']==amend['sourceSha256'] and f['gitBlob']==amend['sourceBlob']
+  else:assert f==amended[f['target']]
+ else:assert f['target'] not in amended and f['target']!='apps/preview/content/lessons/G3-UP02-B01.json'
  assert re.match(r'^(src/studio/|shared/|public/math-paper-folding/|content/pilot/lessons.json$)',f['path'])
- if f['path'] in old:assert f['sha256']==old[f['path']]['sha256']
+ if f['commit']==SHA and f['path'] in old:assert f['sha256']==old[f['path']]['sha256']
  assert re.match(r'^apps/preview/(adapters/source/|public/math-paper-folding/|content/lessons/)',f['target'])
  p=ROOT/f['target'];assert p.resolve().is_relative_to(ROOT/'apps/preview')
  assert digest(p.read_bytes())==f['targetSha256'],f['target']
@@ -34,6 +46,10 @@ for m in mappings:
   for key in f['target'].split('/')[1:]:value=value[int(key)] if isinstance(value,list) else value[key]
   assert digest(canonical(value))==f['valueSha256']
   assert re.match(r'^/\d+/',f['source'])
+  if m['lessonId']=='G3-UP02-B01':
+   parts=f['source'].split('/')[1:];assert int(parts[0])==amend['sourceLessonIndex'];original=source_lesson
+   for key in parts[1:]:original=original[int(key)] if isinstance(original,list) else original[key]
+   assert digest(canonical(original))==f['valueSha256']
  assert next(x for x in rows if x['lessonId']==m['lessonId'])['dtoSha256']==m['dtoSha256']
 for p in (ROOT/'apps/preview/adapters/source').rglob('*'):
  if p.is_file() and p.suffix in ['.mjs','.tsx','.ts']:

@@ -1,7 +1,7 @@
 {
   "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
   "sourceArtifactSha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
-  "runtimeSourceFiles": 57,
+  "runtimeSourceFiles": 61,
   "files": [
     {
       "path": "src/studio/TeachingDiagrams.tsx",
@@ -10,16 +10,6 @@
       "sha256": "8fc91b61a090c2e5f57d7f3c19cf74c510eaef872768834ede1b86b4ba4afbd4",
       "target": "apps/preview/adapters/source/src/studio/TeachingDiagrams.tsx",
       "targetSha256": "a3cfd9285ebe72c57e842dbd1cc86ff47b12f3e6dea0172de6b51ac16bace872",
-      "adaptation": "Teaching-only dependency closure. Extension resolution; memory-only notices; remove task validator and hidden answer reads.",
-      "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
-    },
-    {
-      "path": "src/studio/IntroVisual.tsx",
-      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
-      "gitBlob": "24c621d8222cffd99033020910533e3abfcd2153",
-      "sha256": "dac2d08e72210b1a25ccc2b888cb716bcdbcfc7caf620db6f6af1fe67e116d16",
-      "target": "apps/preview/adapters/source/src/studio/IntroVisual.tsx",
-      "targetSha256": "138b8689b93233097dca7f1b9e8543790c30c464395bbc7b8f6780b85d6c6597",
       "adaptation": "Teaching-only dependency closure. Extension resolution; memory-only notices; remove task validator and hidden answer reads.",
       "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
     },
@@ -130,26 +120,6 @@
       "sha256": "cf2170d5b8460fa91cccfc610807fd0ce454e2f0a98b8a97596a2ef6ca318cd6",
       "target": "apps/preview/adapters/source/shared/pilot-math.d.mts",
       "targetSha256": "05d8c231d668a050f1441480aabe0a4916eb4ecf5df9875997d70731e0d65bfe",
-      "adaptation": "Pure teaching model types; task validator declaration excluded.",
-      "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
-    },
-    {
-      "path": "shared/intro-visuals.mjs",
-      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
-      "gitBlob": "be96774c189f1625e2b5db15f26ebbe38eb5e339",
-      "sha256": "9b0b52853a6439e63644d79e9240958f59805727e83901105dee51042e4af2d6",
-      "target": "apps/preview/adapters/source/shared/intro-visuals.mjs",
-      "targetSha256": "9b0b52853a6439e63644d79e9240958f59805727e83901105dee51042e4af2d6",
-      "adaptation": "Teaching-only dependency closure. Extension resolution; memory-only notices; remove task validator and hidden answer reads.",
-      "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
-    },
-    {
-      "path": "shared/intro-visuals.d.mts",
-      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
-      "gitBlob": "5a0fda850f0e29ea4a95c1fb45452a1bfe69948b",
-      "sha256": "a2a272f857bcc60aa0ec3f77714bf878fd50c1cd71c8a1fe6e43050d8b8d1714",
-      "target": "apps/preview/adapters/source/shared/intro-visuals.d.mts",
-      "targetSha256": "a2a272f857bcc60aa0ec3f77714bf878fd50c1cd71c8a1fe6e43050d8b8d1714",
       "adaptation": "Pure teaching model types; task validator declaration excluded.",
       "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
     },
@@ -550,16 +520,6 @@
       "sha256": "0136f1135e6e5799acc5e7a75e000430ae098d1637bd11090a807ac21165ab84",
       "target": "apps/preview/adapters/source/src/studio/textbook/DataWorkbench.tsx",
       "targetSha256": "ec333725138a5f1976b9ae9543c799f33bc908dbd2a6277e780f763f9cb38598",
-      "adaptation": "Teaching-only dependency closure. Extension resolution; memory-only notices; remove task validator and hidden answer reads.",
-      "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
-    },
-    {
-      "path": "src/studio/textbook/SymbolWorkbench.tsx",
-      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
-      "gitBlob": "5b11610cab9d0ce0c54878a085da864c64bc749c",
-      "sha256": "a8b6b4982468260e568a0c25abb8f258f6a529d0b40245b35c901c5dfa042d3c",
-      "target": "apps/preview/adapters/source/src/studio/textbook/SymbolWorkbench.tsx",
-      "targetSha256": "4243f59cfd5d246a137346ebf1b8f383e9b826b1c0f916844900d88414f8b1e6",
       "adaptation": "Teaching-only dependency closure. Extension resolution; memory-only notices; remove task validator and hidden answer reads.",
       "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
     },
@@ -995,13 +955,13 @@
     },
     {
       "path": "content/pilot/lessons.json",
-      "commit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
-      "gitBlob": "5fa95a64b2f8c7d7ebbf907ef640106c09661c66",
-      "sha256": "0a1c23b8904eb328a029a1d4dec0fda480defb1596325121b9cb7cb19ff70afa",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "4d5498c60721ac34380394c5e9714471ec7028a7",
+      "sha256": "f4157d60a768657b5e79d1fa3a2e24642d8d499457949e9501b1268f1babbf05",
       "target": "apps/preview/content/lessons/G3-UP02-B01.json",
-      "targetSha256": "0cc07aaa6b10e6948f07155c85f9ea4f9433d4dc400707118f3800e4c7c48cdd",
-      "adaptation": "Explicit field-by-field public teaching projection; taskSets/article answer blocks and grading fields excluded.",
-      "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
+      "targetSha256": "6164ae68fd8e9379cb5108552221a972892501d4d3b20bf10d2d44c0450a4eca",
+      "adaptation": "Only G3-UP02-B01 versioned amendment; field allowlist, 69 other DTOs unchanged.",
+      "license": "User-authorized authored teaching content only."
     },
     {
       "path": "content/pilot/lessons.json",
@@ -1452,6 +1412,103 @@
       "targetSha256": "54a16da4aee36e20f169979394697cdb3b4da482ff9e88d1d06931224ea18c0f",
       "adaptation": "Explicit field-by-field public teaching projection; taskSets/article answer blocks and grading fields excluded.",
       "license": "User-authorized reuse of own project; no root LICENSE; third-party notices retained. No game/textbook assets."
+    },
+    {
+      "path": "shared/coding-model.mjs",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "36e6d10e93447319c9f2feb63917025dfffba45d",
+      "sha256": "3ba282cd5a4b37bb30ee58bc994a3b6247968c537d63d6a794209d06837c5c92",
+      "target": "apps/preview/adapters/source/shared/coding-model.mjs",
+      "targetSha256": "3ba282cd5a4b37bb30ee58bc994a3b6247968c537d63d6a794209d06837c5c92",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    },
+    {
+      "path": "shared/coding-model.d.mts",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "040d888810ac85dc135aa424fe973a54b417e567",
+      "sha256": "131e056fa2498b6c280164097b1c46b4743d9e20b130a33e1c0263092623ec7e",
+      "target": "apps/preview/adapters/source/shared/coding-model.d.mts",
+      "targetSha256": "131e056fa2498b6c280164097b1c46b4743d9e20b130a33e1c0263092623ec7e",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    },
+    {
+      "path": "shared/intro-visuals.mjs",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "90e1cec174ef95f916f24d6267858b671846d600",
+      "sha256": "6c46a5c65cfbf86e59aa0b99210e66ae2f3480bdfc123509b51b862cf7e1b672",
+      "target": "apps/preview/adapters/source/shared/intro-visuals.mjs",
+      "targetSha256": "6c46a5c65cfbf86e59aa0b99210e66ae2f3480bdfc123509b51b862cf7e1b672",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    },
+    {
+      "path": "shared/intro-visuals.d.mts",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "992f6dea8c0314a52a677c34b3c6056f812ac00d",
+      "sha256": "0e97d770249bf7f5b9cc79e249a32d39ed5fa728dd494c6c5a3a9505b4cff581",
+      "target": "apps/preview/adapters/source/shared/intro-visuals.d.mts",
+      "targetSha256": "0e97d770249bf7f5b9cc79e249a32d39ed5fa728dd494c6c5a3a9505b4cff581",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    },
+    {
+      "path": "src/studio/IntroVisual.tsx",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "800806e72eb35fde2c4f12b3ba01c7e4b2859f66",
+      "sha256": "f5dffbd967b121aeefbe01dce1ef31b5207514c5f97ff64b21f07263902bf433",
+      "target": "apps/preview/adapters/source/src/studio/IntroVisual.tsx",
+      "targetSha256": "34f56974863029fac500661f592205bddc5483e17534c5d2f48e7a03fc5e05c9",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    },
+    {
+      "path": "src/studio/textbook/SymbolWorkbench.tsx",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "f272ad7b830c173d3b0abb8b0c0b5b0252c58142",
+      "sha256": "cc75e8cbd587b254f88b777cc8300bf7e0b0adac6c8e6ecaf5fd59f3262370d8",
+      "target": "apps/preview/adapters/source/src/studio/textbook/SymbolWorkbench.tsx",
+      "targetSha256": "e2e58ee5d27396277c12c828627fb4669e87b7ca298bf6127c5529a6161b898b",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    },
+    {
+      "path": "src/studio/textbook/CodingExploration.tsx",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "4c2509892fe7dfe419b2ecb1c60cf54cb46fb127",
+      "sha256": "ac2c82e5db754688696d778f6b49e92514e800f7874391510a1cdf3c4009f965",
+      "target": "apps/preview/adapters/source/src/studio/textbook/CodingExploration.tsx",
+      "targetSha256": "ac2c82e5db754688696d778f6b49e92514e800f7874391510a1cdf3c4009f965",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    },
+    {
+      "path": "src/studio/textbook/CodingOverview.tsx",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "11d836e567732867c2369f38a88cb63afabff251",
+      "sha256": "c60252cfef9cf06734bd20148bec813072de0870117b25b817372c5f1199b289",
+      "target": "apps/preview/adapters/source/src/studio/textbook/CodingOverview.tsx",
+      "targetSha256": "c60252cfef9cf06734bd20148bec813072de0870117b25b817372c5f1199b289",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    },
+    {
+      "path": "src/studio/textbook/coding-exploration.css",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "gitBlob": "114c11360ad6a75928850e7aaa25c042248a3b2c",
+      "sha256": "f3669078f2e7feed709eaf4a51f56a4ce20916e31ffa70730a35f068f0abe758",
+      "target": "apps/preview/adapters/source/src/studio/textbook/coding-exploration.css",
+      "targetSha256": "f3669078f2e7feed709eaf4a51f56a4ce20916e31ffa70730a35f068f0abe758",
+      "adaptation": "Only explicit local import extensions; original coding rules, HTML condition cards and memory-only React interactions retained. No storage/network/identity input.",
+      "license": "User-authorized reuse of own authored source; no learner data or third-party media."
+    }
+  ],
+  "amendments": [
+    {
+      "lessonId": "G3-UP02-B01",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "contentVersion": "2026-11-01.2"
     }
   ]
 }

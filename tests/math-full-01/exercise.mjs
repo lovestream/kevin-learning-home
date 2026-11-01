@@ -116,6 +116,13 @@ export async function exercise(lab, article, lesson) {
     }
     return "classify-record-once:" + textbook.type;
   }
+  if (textbook?.type === "coding") {
+    const output = lab.locator(".textbook-code"), before = await output.textContent();
+    await lab.getByLabel("架号", { exact: true }).selectOption("1");
+    await expect(output).not.toHaveText(before);
+    assert(Number(await article.getAttribute("data-state-revision")) > 0);
+    return "coding-shelf-address-field-changed";
+  }
   if (scene?.handsOnSpec?.mode === "fold") {
     await lab
       .getByRole("button", { name: "播放折盒过程", exact: true })

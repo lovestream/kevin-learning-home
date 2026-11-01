@@ -12,11 +12,20 @@
   "files": [
     {
       "target": "apps/preview/reading/articles.json",
-      "targetSha256": "8215910f39a5ef0e04b2647698eea822aeac6eb9c4d0c2db384cf4160d4381fa"
+      "targetSha256": "0937e73e5340f5b717ff0d76101480a253a4d90d20e648d6a77c9c239ffd5a92"
     },
     {
       "target": "apps/preview/reading/private/checkpoints.json",
       "targetSha256": "f5d92ab2d19a89dedfc75851dc277c3248194c687c5c7a2de94f9e0fe9d008a7"
+    }
+  ],
+  "amendments": [
+    {
+      "lessonId": "G3-UP02-B01",
+      "commit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+      "sourceBlob": "4d5498c60721ac34380394c5e9714471ec7028a7",
+      "sourceSha256": "f4157d60a768657b5e79d1fa3a2e24642d8d499457949e9501b1268f1babbf05",
+      "contentVersion": "2026-11-01.2"
     }
   ]
 }

@@ -7,16 +7,16 @@
   "static": 6,
   "browserScenarios": 210,
   "execution": {
-    "head": "53b318625dbcbd143673d5fccd7aca7de281c090",
+    "head": "314afa7803cc43dc2e814bfba5bb256c975ed94f",
     "dirty": true,
     "files": {
       "tests/math-full-01/browser.mjs": "c68dd513f1e011517d1fa5e722509b28d1c08b9513431b9b7d775e35c18bdc8c",
-      "tests/math-full-01/exercise.mjs": "e3fafe3d02ccf165417e3b50e9ba34c7e9e532a33a6bf0c89c1c0e0614c60ab0",
+      "tests/math-full-01/exercise.mjs": "ff780924c3ff7cec35d46e6b0d91059ebaf1a158336e69c27f271f6e0239ed5e",
       "apps/preview/main.tsx": "604bcc860c4030a4c434f6c908f08d0bbe9a77a2ac29bacb5f161f4af3bc2f2e",
       "apps/preview/practice/Practice.tsx": "ec6caa7c59f142543c7eeda344a46e4099c89ffb89f253206d6aee2cd064dcad",
       "apps/preview/practice/service.ts": "f88b88f2e341f3fae357ddbd7363543d756ef30e69311beb9bdc8d74d8571377",
       "apps/preview/practice/contract.ts": "db00544d3cbccfe99128713de8237630491fa6be25d7ce419505fbbce3d23786",
-      "apps/preview/practice/private/bank.json": "1008208c4afcd310bfe5e9440649123691d8b18abb77129404625794dfc1c0b7",
+      "apps/preview/practice/private/bank.json": "235728c615c2ff8ee8ab4595572191c6aaa0d7e1feeeb43297445e07cc21a25a",
       "apps/preview/practice/private/pilot-math.mjs": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
       "apps/preview/MapNavigation.tsx": "14906533dcfbed202a139f20ffa2d44015b44c5389ecd21ce487763060b20019",
       "apps/preview/learning-map.ts": "1a232e67502ae9e3db48b1d9a9adb7193ab62e39c4b727dc4a8bea465d2aa07f",
@@ -1045,8 +1045,8 @@
       "textbookUnit": "G3-UP02",
       "sourceStatus": "draft",
       "interactionStatus": "verified",
-      "sourceHash": "1abb8135f05ce3a1456b2c255dfc89e5b589fc32c17a7ccb999bdad30424e641",
-      "targetDTOHash": "d1c2c980a954eabc10e45bc2d7a91cae5990a68d8340e47d0af47aa655cf612a",
+      "sourceHash": "4ce414c816dc3c171fcececcc0077a768f4ba6909268802cd03f9b1c9bc87c47",
+      "targetDTOHash": "69776acad0fe2cd79205bbc4fbc96e8feebe349a7a3615a1db35f5950bd110d7",
       "renderer": "textbook:coding",
       "visualComponents": [
         "TextbookWorkbench"
@@ -1057,17 +1057,17 @@
       "operatedModels": [
         {
           "viewport": 390,
-          "action": "试试去掉分隔符",
+          "action": "coding-shelf-address-field-changed",
           "interactive": true
         },
         {
           "viewport": 768,
-          "action": "试试去掉分隔符",
+          "action": "coding-shelf-address-field-changed",
           "interactive": true
         },
         {
           "viewport": 1280,
-          "action": "试试去掉分隔符",
+          "action": "coding-shelf-address-field-changed",
           "interactive": true
         }
       ],

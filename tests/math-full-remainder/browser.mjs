@@ -205,10 +205,25 @@ try {
         await expect(
           tool.getByRole("button", { name: "撤销教具操作" }),
         ).toBeEnabled();
-        await tool.getByRole("button", { name: "撤销教具操作" }).click();
-        await expect(
-          tool.getByRole("button", { name: "撤销教具操作" }),
-        ).toBeDisabled();
+        // Opening the tool is itself retained evidence. Undo one action leaves
+        // that opening entry; undoing opening too exhausts only UI history,
+        // while cumulative assistance evidence is preserved by the domain.
+        const undo = async () => {
+          const response = page.waitForResponse(r => {
+            if (!r.url().endsWith("/training/study-event")) return false;
+            try { return r.request().postDataJSON().event?.command === "undo"; } catch { return false; }
+          });
+          await tool.getByRole("button", { name: "撤销教具操作" }).click();
+          const r = await response; assert.equal(r.status(),200);
+          return (await r.json()).record;
+        };
+        const restored = await undo();
+        assert.equal(restored.toolHistory.length,1);
+        assert.equal(restored.toolHistory[0].command,"open-model");
+        const cleared = await undo();
+        assert.equal(cleared.toolHistory.length,0);
+        assert(cleared.scaffold.usedManipulative);
+        await expect(tool.getByRole("button", { name: "撤销教具操作" })).toBeDisabled();
         await page.screenshot({
           path:
             dir + "/thinking-" + entry.id.toLowerCase() + "-" + width + ".png",

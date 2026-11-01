@@ -1,8 +1,8 @@
 {
   "status": "PASS",
   "total": 849,
-  "human": 335,
-  "deterministic": 514,
+  "human": 329,
+  "deterministic": 520,
   "results": [
     {
       "negative": "incorrect",
@@ -2309,20 +2309,20 @@
       "sourceTaskSha256": "787d300f2278d99f6b061dcda805daa24d4769c826580e3d3aaa60a135126d75"
     },
     {
-      "negative": "pendingReview",
+      "negative": "incorrect",
       "taskId": "G3-UP02-B01-P01",
-      "kind": "explanation",
-      "status": "pendingReview",
+      "kind": "choice",
+      "status": "correct",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "037cc1e433647c02cec53c7942e50230f87cc4fa9e48962543ca3c3be7a8e097"
+      "sourceTaskSha256": "1e763523f35efddafbbab51fb9018a41605ea311a6188d0ae68830232b9073f3"
     },
     {
-      "negative": "pendingReview",
+      "negative": "incorrect",
       "taskId": "G3-UP02-B01-P02",
-      "kind": "explanation",
-      "status": "pendingReview",
+      "kind": "choice",
+      "status": "correct",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "16c1fbe0ef6d1f0806ff63ba4c10c9440226485958d079f1c36e1a171c85e646"
+      "sourceTaskSha256": "4e0ceeca04091631cb591a0bc3ea2a14411e8cfc9f3c8ab0575efcf203fc0d3a"
     },
     {
       "negative": "pendingReview",
@@ -2330,15 +2330,15 @@
       "kind": "explanation",
       "status": "pendingReview",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "9277a75cc44a37bc957ef7937d05616b8837e0c095364a37086c3df589d0df25"
+      "sourceTaskSha256": "c088810b2dfa65814fb999e82ed678b2cc370f699b10bf949c8affaaed834266"
     },
     {
-      "negative": "pendingReview",
+      "negative": "incorrect",
       "taskId": "G3-UP02-B01-P04",
-      "kind": "explanation",
-      "status": "pendingReview",
+      "kind": "choice",
+      "status": "correct",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "789bbc52f2e4ef82fc1dfbb919f82600f99936cb2487f180ee6a0d131b0ca488"
+      "sourceTaskSha256": "78eff0dcafa4a1b2fe8c5960b9b355c140ec58a6c2920c92579915d910e570d9"
     },
     {
       "negative": "pendingReview",
@@ -2346,15 +2346,15 @@
       "kind": "explanation",
       "status": "pendingReview",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "2891acb7dde0177342c84e0881194aa4e7a3d4fdb5635058cc4a416cddafe11b"
+      "sourceTaskSha256": "3d0f82d82b8071a8bbe369839ba861fe48c551f842056a3f31959e0f3fda13f7"
     },
     {
       "negative": "incorrect",
       "taskId": "G3-UP02-B01-P05",
-      "kind": "number",
+      "kind": "choice",
       "status": "correct",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "d3280c38b688c9831a6dac9a57888fbc5e71b1b60a4f8c59f28838ffe49c1de2"
+      "sourceTaskSha256": "01d8f91c837bece99b259a572fa0da2c0c35d0a5ea401950a3871a13771f1c82"
     },
     {
       "negative": "pendingReview",
@@ -2362,7 +2362,7 @@
       "kind": "explanation",
       "status": "pendingReview",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "064b0e5d9f548287b55e0d199a047f6ea4e662eb989c97564b8b83e3884cc5d9"
+      "sourceTaskSha256": "6c0a3729ae28ab443369dadaba5ace5b09f70ceebecbfef6f3c402e0dc3dc8a4"
     },
     {
       "negative": "pendingReview",
@@ -2370,31 +2370,31 @@
       "kind": "explanation",
       "status": "pendingReview",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "78b9013ef62dea9ef676209e25d0326d9a94f08da9809d4e56a401d2f2d49568"
+      "sourceTaskSha256": "df829fb6395924668d64d48871e446785f4ca00dc5ec2e7ed736e13f52754eea"
     },
     {
-      "negative": "pendingReview",
+      "negative": "incorrect",
       "taskId": "G3-UP02-B01-P09",
-      "kind": "explanation",
-      "status": "pendingReview",
+      "kind": "number",
+      "status": "correct",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "2729650d852d7334e2110ea55b19151458ecd51b974e3a6e80ce9c06f1ffaf41"
+      "sourceTaskSha256": "b2d10e181be0f5c4cd72849ff875be3a362a2d35dbcfe9865965b1b53fc5a2ff"
     },
     {
-      "negative": "pendingReview",
+      "negative": "incorrect",
       "taskId": "G3-UP02-B01-P10",
-      "kind": "explanation",
-      "status": "pendingReview",
+      "kind": "choice",
+      "status": "correct",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "73e6a037100d953c9bf1646f080d84779bd7b0833634b1846fdedd0f1a89b027"
+      "sourceTaskSha256": "81cf9a6221f4aabe9363332b4387f21e46e84ef6b98bdc7e9d5394680d6d15b8"
     },
     {
-      "negative": "pendingReview",
+      "negative": "incorrect",
       "taskId": "G3-UP02-B01-P11",
-      "kind": "explanation",
-      "status": "pendingReview",
+      "kind": "choice",
+      "status": "correct",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "136f3787c5ae2db5266cfcdfcf30b2766ee4c21295ce28a783fb53d71eb7da93"
+      "sourceTaskSha256": "4d52df493236cff3fe865f7a7deea8227fb74616ad3c0646549f46b57d834f99"
     },
     {
       "negative": "pendingReview",
@@ -2402,7 +2402,7 @@
       "kind": "explanation",
       "status": "pendingReview",
       "invalidInput": "PASS",
-      "sourceTaskSha256": "1f7035f6bc76c8467799d5cd06a7feadee213b6e7a62c50327fe8097300b029d"
+      "sourceTaskSha256": "9573d75cb7f7c367bc048c18ea5a900773478b8336fe5b2a394412d2a4da0428"
     },
     {
       "negative": "pendingReview",

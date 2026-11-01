@@ -8882,9 +8882,9 @@
   },
   {
     "lessonId": "G3-UP02-B01",
-    "sourceItemSha256": "1abb8135f05ce3a1456b2c255dfc89e5b589fc32c17a7ccb999bdad30424e641",
-    "dtoSha256": "d1c2c980a954eabc10e45bc2d7a91cae5990a68d8340e47d0af47aa655cf612a",
-    "fileSha256": "0cc07aaa6b10e6948f07155c85f9ea4f9433d4dc400707118f3800e4c7c48cdd",
+    "sourceItemSha256": "4ce414c816dc3c171fcececcc0077a768f4ba6909268802cd03f9b1c9bc87c47",
+    "dtoSha256": "69776acad0fe2cd79205bbc4fbc96e8feebe349a7a3615a1db35f5950bd110d7",
+    "fileSha256": "6164ae68fd8e9379cb5108552221a972892501d4d3b20bf10d2d44c0450a4eca",
     "renderer": "textbook:coding",
     "fieldMappings": [
       {
@@ -8895,12 +8895,12 @@
       {
         "source": "/24/contentVersion",
         "target": "/contentVersion",
-        "valueSha256": "474be40b5120a62c30d4bb246a0a8b2ebf8fd403c01d4ccd8ca082a618ccedfe"
+        "valueSha256": "077eed4bd087d82166fafd742d2cae4719c1f24525d909b8eeb19ddf3b833728"
       },
       {
         "source": "/24/editorialRevision",
         "target": "/editorialRevision",
-        "valueSha256": "474be40b5120a62c30d4bb246a0a8b2ebf8fd403c01d4ccd8ca082a618ccedfe"
+        "valueSha256": "077eed4bd087d82166fafd742d2cae4719c1f24525d909b8eeb19ddf3b833728"
       },
       {
         "source": "/24/status",
@@ -8910,22 +8910,22 @@
       {
         "source": "/24/title",
         "target": "/title",
-        "valueSha256": "84203142b3779ac01ecc254beba53ad7b3057dbd4e60abcf86f187e4da6885f1"
+        "valueSha256": "f49d3d49b0f7e623cdb16f5b5569d38d4355ca5c7ae5c799b6f5e866d4cf2718"
       },
       {
         "source": "/24/shortTitle",
         "target": "/shortTitle",
-        "valueSha256": "84203142b3779ac01ecc254beba53ad7b3057dbd4e60abcf86f187e4da6885f1"
+        "valueSha256": "3a96311e9b2e13819830118aac62376b8d44913180e8c4b6f6ffbd69f8981025"
       },
       {
         "source": "/24/question",
         "target": "/question",
-        "valueSha256": "addc6084f93e8148962eac882833ad29b36a3bf011d4bd7d90121459264de1d6"
+        "valueSha256": "c25f08604a20cdca9b41961ebe2d9da28cdf25005d83919b4a719081524045f9"
       },
       {
         "source": "/24/subtitle",
         "target": "/subtitle",
-        "valueSha256": "0d1ecfee3ae606903dbd0d103d1926434a909e31c71dee7884e1642e2940d70a"
+        "valueSha256": "5a493a767c2e7bce3d5a6bdb3586a8eb4930d3846d2f19893575c236fb21e8b3"
       },
       {
         "source": "/24/grade",
@@ -8976,176 +8976,6 @@
         "source": "/24/interactionStatus",
         "target": "/interactionStatus",
         "valueSha256": "3d50e8dfbd6e9d98d503dbdd371f0896b67b6f98884de6b1bbc711bff2508994"
-      },
-      {
-        "source": "/24/childClassroom/story",
-        "target": "/classroom/story",
-        "valueSha256": "addc6084f93e8148962eac882833ad29b36a3bf011d4bd7d90121459264de1d6"
-      },
-      {
-        "source": "/24/childClassroom/predictQuestion",
-        "target": "/classroom/predictQuestion",
-        "valueSha256": "0c055b1ba358ae05cf8ea38a753233b1f435ae04f5d3de6c97a5dffd3031d3ee"
-      },
-      {
-        "source": "/24/childClassroom/predictionOptions",
-        "target": "/classroom/predictionOptions",
-        "valueSha256": "3c33942378a49edcb6fad90f7e3224a41545a920d4d0a8bc1a2bc837a78e177a"
-      },
-      {
-        "source": "/24/childClassroom/discovery",
-        "target": "/classroom/discovery",
-        "valueSha256": "d843dc53568bdcb3c67d6121c4c927afdcbf5ed2aaff86515a2cf705219bbc17"
-      },
-      {
-        "source": "/24/childClassroom/symbols",
-        "target": "/classroom/symbols",
-        "valueSha256": "97308b93eada74968e804f15a96031766aee0154edffb640c2201b452b714ff3"
-      },
-      {
-        "source": "/24/childClassroom/mission",
-        "target": "/classroom/mission",
-        "valueSha256": "3ebc37e5241cb3ada9c5f3f760ecdd58431d9431fa73beb65e34159a0af77ddb"
-      },
-      {
-        "source": "/24/childClassroom/retell",
-        "target": "/classroom/retell",
-        "valueSha256": "b6ec7c2d2d4613f52890e4f073076dbb034ef03f8c2cc62798a6c17e84263671"
-      },
-      {
-        "source": "/24/childClassroom/observedEvidence",
-        "target": "/classroom/observedEvidence",
-        "valueSha256": "a25e4e496e0dcd665ba1a639bd55949b73010ddbc6af54ba729893c2b111341c"
-      },
-      {
-        "source": "/24/childClassroom/whyQuestion",
-        "target": "/classroom/whyQuestion",
-        "valueSha256": "b6ec7c2d2d4613f52890e4f073076dbb034ef03f8c2cc62798a6c17e84263671"
-      },
-      {
-        "source": "/24/childClassroom/counterexamplePrompt",
-        "target": "/classroom/counterexamplePrompt",
-        "valueSha256": "ffb60304d3153c2bc379c14f44bfec4008159d65f2a22d1d937ca404527c5907"
-      },
-      {
-        "source": "/24/childClassroom/predictionFocus",
-        "target": "/classroom/predictionFocus",
-        "valueSha256": "0c055b1ba358ae05cf8ea38a753233b1f435ae04f5d3de6c97a5dffd3031d3ee"
-      },
-      {
-        "source": "/24/childClassroom/storyVisual/type",
-        "target": "/storyVisual/type",
-        "valueSha256": "3aa5ff77e751288535a3ed0d68c1d5aa86f203534f6ad5a99deabff8f3993a1e"
-      },
-      {
-        "source": "/24/childClassroom/storyVisual/title",
-        "target": "/storyVisual/title",
-        "valueSha256": "570f777fd14cec4d30cd7acceba27bd84cfba3a65a4ba97e6f06f00fac9a59e8"
-      },
-      {
-        "source": "/24/childClassroom/storyVisual/caption",
-        "target": "/storyVisual/caption",
-        "valueSha256": "80bd8be26d203d9455c4867f7673ccf4b68ab80ec477210d99872fb69ebedf1e"
-      },
-      {
-        "source": "/24/childClassroom/storyVisual/values",
-        "target": "/storyVisual/values",
-        "valueSha256": "a61cfc0f6797b1c6af8f81870d9420982b0e13ce705798012f2b75bddbf8fa3b"
-      },
-      {
-        "source": "/24/childClassroom/storyVisual/labels",
-        "target": "/storyVisual/labels",
-        "valueSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-      },
-      {
-        "source": "/24/childClassroom/predictionVisual/type",
-        "target": "/predictionVisual/type",
-        "valueSha256": "3aa5ff77e751288535a3ed0d68c1d5aa86f203534f6ad5a99deabff8f3993a1e"
-      },
-      {
-        "source": "/24/childClassroom/predictionVisual/title",
-        "target": "/predictionVisual/title",
-        "valueSha256": "570f777fd14cec4d30cd7acceba27bd84cfba3a65a4ba97e6f06f00fac9a59e8"
-      },
-      {
-        "source": "/24/childClassroom/predictionVisual/caption",
-        "target": "/predictionVisual/caption",
-        "valueSha256": "80bd8be26d203d9455c4867f7673ccf4b68ab80ec477210d99872fb69ebedf1e"
-      },
-      {
-        "source": "/24/childClassroom/predictionVisual/values",
-        "target": "/predictionVisual/values",
-        "valueSha256": "a61cfc0f6797b1c6af8f81870d9420982b0e13ce705798012f2b75bddbf8fa3b"
-      },
-      {
-        "source": "/24/childClassroom/predictionVisual/labels",
-        "target": "/predictionVisual/labels",
-        "valueSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/title",
-        "target": "/workedExamples/0/title",
-        "valueSha256": "9ca3d23c30b53086b41afc7fb11bbd566291c46ab927ed682f5e00acc5b88a89"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/0/math",
-        "target": "/workedExamples/0/steps/0/math",
-        "valueSha256": "29ff4beb036a2408cb6de579c527d1dd798d9c78a6e086cc7a631f1ab1d9225b"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/0/why",
-        "target": "/workedExamples/0/steps/0/why",
-        "valueSha256": "4d196a5416d3a3c5dfcfcce3155250feab76cae9d40ac58b48ec03f6d0f0aa6c"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/0/expressionBefore",
-        "target": "/workedExamples/0/steps/0/expressionBefore",
-        "valueSha256": "ed2ae1b9e08a68f83ba802a150c34545a52bd8af61b4e65bafa14e83f950423f"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/0/operation",
-        "target": "/workedExamples/0/steps/0/operation",
-        "valueSha256": "90fb9068eda6f2d68bb61c33525f4b5dd4eed6a611b6ead0dda5839815de3091"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/0/expressionAfter",
-        "target": "/workedExamples/0/steps/0/expressionAfter",
-        "valueSha256": "ca30de1c42bd3e0fdbeb7fb612cbf42e8e757b6948b7a51a67827df28b65107b"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/1/math",
-        "target": "/workedExamples/0/steps/1/math",
-        "valueSha256": "3a7c2dba48d313d020eaebf8ce294b72d3de1410e8f5fcbdf2dcc73f78d149e1"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/1/why",
-        "target": "/workedExamples/0/steps/1/why",
-        "valueSha256": "55e680de32b31772c03bf0206130b5d9300444dddbae0adb76128017b925fdc9"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/1/expressionBefore",
-        "target": "/workedExamples/0/steps/1/expressionBefore",
-        "valueSha256": "8f67bd1f45a11a4150c4a11c863841def63d8ea88923d68c9cfaf1138c15413a"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/1/operation",
-        "target": "/workedExamples/0/steps/1/operation",
-        "valueSha256": "90fb9068eda6f2d68bb61c33525f4b5dd4eed6a611b6ead0dda5839815de3091"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/1/expressionAfter",
-        "target": "/workedExamples/0/steps/1/expressionAfter",
-        "valueSha256": "c063de344945456b7ab96a1b865c8ba07c2465a10d86316fcd6c1d4ad632cd26"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/2/math",
-        "target": "/workedExamples/0/steps/2/math",
-        "valueSha256": "d5650675f3335a1fd93c15a19753e7839abdc5a5e665fd4ec95428317c08adba"
-      },
-      {
-        "source": "/24/articleBlocks/3/examples/0/steps/2/why",
-        "target": "/workedExamples/0/steps/2/why",
-        "valueSha256": "22009c3f0f2b4b2cb22ddd40bcb6d909514d773e510f71805dc1f4a780a54f36"
       },
       {
         "source": "/24/objectives/0/id",
@@ -9286,8 +9116,169 @@
         "source": "/24/conceptScenes/0/textbookSpec/limits",
         "target": "/conceptScenes/0/textbookSpec/limits",
         "valueSha256": "bf1b4ed8222bc26df04ee149060cb62247691fd011e100560a85ba0707ec29d9"
+      },
+      {
+        "source": "/24/childClassroom/story",
+        "target": "/classroom/story",
+        "valueSha256": "76014ddf9af5cb3dc4205ebd7f3bdb32af8b2872f559fa15fd2b890f1965540f"
+      },
+      {
+        "source": "/24/childClassroom/predictQuestion",
+        "target": "/classroom/predictQuestion",
+        "valueSha256": "c5c93349560e35b5fd9f59c6b9c3c387d940a0e57dd624ce8dceda3b9bbaa84b"
+      },
+      {
+        "source": "/24/childClassroom/predictionOptions",
+        "target": "/classroom/predictionOptions",
+        "valueSha256": "0268c4e07c517c15af972da0aa01b2141f85897ecc1570adc81cdd8db0594bf8"
+      },
+      {
+        "source": "/24/childClassroom/discovery",
+        "target": "/classroom/discovery",
+        "valueSha256": "8aae54ee6a191aafcf8af4136dbc12f5c029cf05cee29f440387e237727c4c47"
+      },
+      {
+        "source": "/24/childClassroom/symbols",
+        "target": "/classroom/symbols",
+        "valueSha256": "8314ce417aab1754aef06021a31b616f42bee536ef28370b5951c0e4bb4398b3"
+      },
+      {
+        "source": "/24/childClassroom/mission",
+        "target": "/classroom/mission",
+        "valueSha256": "c1675d5cdac917e00f395febf300a88af84a99610df91bce21e28f29db60e0ad"
+      },
+      {
+        "source": "/24/childClassroom/retell",
+        "target": "/classroom/retell",
+        "valueSha256": "8a176b008756221bb5794f0ee095848d564cdf8d78bc56ae1ccc2a0c4d481b4b"
+      },
+      {
+        "source": "/24/childClassroom/observedEvidence",
+        "target": "/classroom/observedEvidence",
+        "valueSha256": "fc4132b993424b20365213cc300a7c5f1d325e46a04645b32b6fa021d67fdcf4"
+      },
+      {
+        "source": "/24/childClassroom/whyQuestion",
+        "target": "/classroom/whyQuestion",
+        "valueSha256": "8a176b008756221bb5794f0ee095848d564cdf8d78bc56ae1ccc2a0c4d481b4b"
+      },
+      {
+        "source": "/24/childClassroom/counterexamplePrompt",
+        "target": "/classroom/counterexamplePrompt",
+        "valueSha256": "f2b6b835cf8388daa66ee539a07417b92346841d5adb46463d7725782d644bc3"
+      },
+      {
+        "source": "/24/childClassroom/predictionFocus",
+        "target": "/classroom/predictionFocus",
+        "valueSha256": "01ecedc21f1ab0cd0a94b7eab9639578a472d876b04fd27a7306e33a52ac0f1b"
+      },
+      {
+        "source": "/24/childClassroom/storyVisual/type",
+        "target": "/storyVisual/type",
+        "valueSha256": "bd26a9333eddd7d7234986406ae5b2c40b885f1ed6a48e2d8272f339dd3a655a"
+      },
+      {
+        "source": "/24/childClassroom/storyVisual/title",
+        "target": "/storyVisual/title",
+        "valueSha256": "9013f87a453f418cda5bfbbabe4718c16f51671aeae226301f8f29beea2a4252"
+      },
+      {
+        "source": "/24/childClassroom/storyVisual/caption",
+        "target": "/storyVisual/caption",
+        "valueSha256": "a8321efd518d3bea2347d3c5539aade3a8975c8740a5482dc4a23d9cb760c25c"
+      },
+      {
+        "source": "/24/childClassroom/storyVisual/values",
+        "target": "/storyVisual/values",
+        "valueSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "source": "/24/childClassroom/predictionVisual/type",
+        "target": "/predictionVisual/type",
+        "valueSha256": "bd26a9333eddd7d7234986406ae5b2c40b885f1ed6a48e2d8272f339dd3a655a"
+      },
+      {
+        "source": "/24/childClassroom/predictionVisual/title",
+        "target": "/predictionVisual/title",
+        "valueSha256": "9013f87a453f418cda5bfbbabe4718c16f51671aeae226301f8f29beea2a4252"
+      },
+      {
+        "source": "/24/childClassroom/predictionVisual/caption",
+        "target": "/predictionVisual/caption",
+        "valueSha256": "a8321efd518d3bea2347d3c5539aade3a8975c8740a5482dc4a23d9cb760c25c"
+      },
+      {
+        "source": "/24/childClassroom/predictionVisual/values",
+        "target": "/predictionVisual/values",
+        "valueSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/0/title",
+        "target": "/workedExamples/0/title",
+        "valueSha256": "a4c224b7618fab4cdd10d88f3d834ccc30ffe6c50f83bc569018d93a69c5b1a0"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/0/steps/0/math",
+        "target": "/workedExamples/0/steps/0/math",
+        "valueSha256": "5cd2b9f8092d342a8a1a1728c90bfee8fbbb97b1d7903f7db929fe198cb5247a"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/0/steps/0/why",
+        "target": "/workedExamples/0/steps/0/why",
+        "valueSha256": "1abe63d84048467f9ae846d961951776acbaac6f11a8eab58161f2496bc8503a"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/0/steps/1/math",
+        "target": "/workedExamples/0/steps/1/math",
+        "valueSha256": "e4699a09d71a155c61c327f5f3d7994a916f10d8d397954b23595ee49bc8e53c"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/0/steps/1/why",
+        "target": "/workedExamples/0/steps/1/why",
+        "valueSha256": "42e1266919e964fbdf36def6bcb388f0be8240c0dd710218032d549c98d9e093"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/1/title",
+        "target": "/workedExamples/1/title",
+        "valueSha256": "7884581a58780e114b38abb676b79d846fc6b242c05e32f6c5b60522f36e2bc5"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/1/steps/0/math",
+        "target": "/workedExamples/1/steps/0/math",
+        "valueSha256": "5d8bfb8fc13b2cd4793f9147c4d1d6ef44d6e34b1df756485676d44d3ab0ac06"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/1/steps/0/why",
+        "target": "/workedExamples/1/steps/0/why",
+        "valueSha256": "f97915b7d40ef51125abe2d13a751b7e55a7e40969668aaea589885b8828985a"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/2/title",
+        "target": "/workedExamples/2/title",
+        "valueSha256": "1ea6f0946308ec5b719232ef4739d857b60efe5edba88fd9999e7cdd6ab6d371"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/2/steps/0/math",
+        "target": "/workedExamples/2/steps/0/math",
+        "valueSha256": "937aaa2229f12a40f3bea97acca1c3fa95ef7c8a430bb084f7054fae0751f7a4"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/2/steps/0/why",
+        "target": "/workedExamples/2/steps/0/why",
+        "valueSha256": "ba1dbedae09f99c00ea11b1939d98daecb1111ceb1b1ef8bf0946026b7365c65"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/2/steps/1/math",
+        "target": "/workedExamples/2/steps/1/math",
+        "valueSha256": "721aea88ffe1d63d61130c82957252134f2d9a19b872067d18db65c63e337ed1"
+      },
+      {
+        "source": "/24/articleBlocks/3/examples/2/steps/1/why",
+        "target": "/workedExamples/2/steps/1/why",
+        "valueSha256": "dd93582557cc401aab4d1ddfbdfa5f5a21d143b0caeb0c89819f9d6c401a93c1"
       }
-    ]
+    ],
+    "sourceCommit": "d409a021dd8905154d572b53c9802a8c3b2d14d9"
   },
   {
     "lessonId": "G3-U05-B01",
