@@ -1,11 +1,17 @@
-# 当前交接 · 数学内容交付与记录准备（2026-11-02）
+# 当前交接：数学界面R3及数字编码更新
 
-NAS入口 **http://192.168.2.100:38444/**，HTTP、免登录。原分支codex/math-full-03-capabilities、Draft PR22、base PR21，均不合并。
+入口 **http://192.168.2.100:38444/**，局域网HTTP、免登录；刷新获取新版。
 
-当前运行82424753230f6d1ed46d669bc22bf83d90194fc6，源码完整双CI和14组NAS真实业务/回退通过。新补丁修复编码选中按钮hover浅底白字；五宽度悬停检查、30+210课堂、849题84流程和255兼容流程已重新实测，待新HEAD双CI与NAS受控更新。保留旧版回退，11受保护服务不改。
+- 原分支`codex/math-full-03-capabilities`、Draft PR22、base PR21；堆叠PR18→21→22均不合并，无新项目或worktree。
+- 当前运行源码`d0dfd026a238a328743468cb5fba924ecde67526`、镜像`sha256:f85abefc6e5984f3fd416c3d9fc03882a043b170ecca7e835423b71ed3accd41`、容器`3ac7bc5f2c5735c75e9a64c5d9e5fe4895cc868c36ddbdde49582cb0db0ebf72`。已回退8242475并恢复当前版本；原52e也保留，不删其他资源。
+- 源码push CI 41448504055、PR CI 41448510870完整成功；14组NAS回归成功、19静态资源核对成功、11受保护服务及旧文件hash不变。旧数学/英语与真实数据未改。
+- 21项视觉/编码运行或来源输入变化，260项不变；69课/837题指纹不变。最终文档/证据HEAD与完整双CI链接以PR22正文为准；归档不再改变运行源。
 
-70课堂/849题、54专题/432题、17思维卡、63宗训练、28方法已接入；43暂缓卡/168蓝图不冒充发布课。真实长期记录/家长管理与积分蛋仔仍未NAS启用。
+[本轮报告](../implementation/MATH-VISUAL-R3.md) · [当前NAS回执](../implementation/evidence/math-onepass/ui-r3/delivery.json) · [截图](../implementation/evidence/math-onepass/ui-r3/screenshots.json) · [回归](../implementation/evidence/math-onepass/ui-r3/nas-suite.json)。旧e7证据是历史记录，不能当作当前用户审美认可。
 
-用户已提出迁移数学学习记录，明确指定原math-learning目录。已找到data/progress.sqlite及WAL/SHM，完成只读一致性备份、完整性检查、逐字节恢复和私有字段清单。含studio会话/阅读/思维，不能按旧attempts为空判断无记录。不要再让用户寻找其他副本或重复询问来源。真数据仅留已有Git外私有区域，不上传GitHub、不覆盖旧站、未导入新站。
+保留70课堂/849题、54模型/432题、17卡、63案/18对照/8题族、28方法与复习索引。NAS无AuthService/SQLite/真实挂载，匿名RAM刷新清空；合成私有机制不启用正式账号、不迁真实历史、不并钱包或蛋仔。
 
-[记录准备方案](../plans/MATH-RECORDS-01-PREPARATION.md)说明正式存储与现有合成闸门/身份/HTTP的差异。不能删除MATH_TRAINING_SYNTHETIC_ONLY或用NODE_ENV=test装真实数据，不擅自改变现有正式鉴权、证书、网络或权限。数学内容PR完整归档后集中审查；后续记录阶段使用已确认来源，先完成可审查正式持久化实现、合成测试与私有dry-run，再按用户NAS权限要求处理具体上线变更。
+用户视觉认可与实体手机/iPad仍待实际反馈。完整最终双CI成功后暂停，交ChatGPT集中独立复审，不自行合并，不进入下一阶段。
+
+
+用户2026-11-02要求迁移真实数学记录，并已明确原math-learning目录。正确SQLite/WAL已找到；只读一致性备份、恢复逐字节核对和私有逐字段清单已通过，真实记录尚未导入匿名入口。不要再让用户查副本。详见[迁移准备方案](../plans/MATH-RECORDS-01-PREPARATION.md)。当前仅测试的存储闸门不得移除，正式存储/访问模式需作为记录阶段明确实现并审查，不擅自改证书或系统权限。

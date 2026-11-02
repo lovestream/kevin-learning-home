@@ -1,0 +1,625 @@
+{
+  "status": "PASS_ACTUAL_R3_NAS_CAPTURES",
+  "sourceSha": "d0dfd026a238a328743468cb5fba924ecde67526",
+  "origin": "http://192.168.2.100:38444",
+  "physicalDevices": "NEEDS_USER_ACTION",
+  "count": 154,
+  "images": [
+    {
+      "file": "screenshots/experience/article-1280.png",
+      "sha256": "f58a29b763bc192fef616d7dea9be109d4719d1cc064289a9f1032368ab207a2"
+    },
+    {
+      "file": "screenshots/experience/article-1440.png",
+      "sha256": "742f3617dda0b652ea804daf9f90fb654fff3257753e7e79115697405daa5d33"
+    },
+    {
+      "file": "screenshots/experience/article-360.png",
+      "sha256": "e383b7c76074e6ff05e612bda75e7b50a3c367bc3c17bd458c822b48ca8e5892"
+    },
+    {
+      "file": "screenshots/experience/article-390.png",
+      "sha256": "e66cde2277d1d595ba24e6e1ce19985a539575a36cb5a152d0df92d8a954a242"
+    },
+    {
+      "file": "screenshots/experience/article-768.png",
+      "sha256": "efd41a1daa2c2f5aac03011718e4633b61d28c0a850cf9b1a5d37f1fc923732c"
+    },
+    {
+      "file": "screenshots/experience/home-1280.png",
+      "sha256": "dd9790914ac1c2a48ac3c32d6da2d2f99a668320a56384a176979a59616cff0b"
+    },
+    {
+      "file": "screenshots/experience/home-1440.png",
+      "sha256": "0c4a1eca379d19aee0d3130aecca6ff91ec4f8aca913ab88e405c0d389cd2fb7"
+    },
+    {
+      "file": "screenshots/experience/home-360.png",
+      "sha256": "d520e776b34b3856665488a42ca4e81412f0f91298f18459606aa75ca8ded3a9"
+    },
+    {
+      "file": "screenshots/experience/home-390.png",
+      "sha256": "945c1fd081281bd959a5bcf09197cd2f8679c153eb198a73fb08b999441b7254"
+    },
+    {
+      "file": "screenshots/experience/home-768.png",
+      "sha256": "d57cdf4e7b9cc9f632de822eb84c4bf31ea37ed9ba5f6c96bcfd805d1eb521b7"
+    },
+    {
+      "file": "screenshots/experience/lower-1280.png",
+      "sha256": "15607358fd1bb2575322405f65fc7abdb33488f2ad543d83264b16650cb0bbd4"
+    },
+    {
+      "file": "screenshots/experience/lower-1440.png",
+      "sha256": "307270bc0ba016729e59a2c0517c78aee9e206ff318130adefd7c311a99678ef"
+    },
+    {
+      "file": "screenshots/experience/lower-360.png",
+      "sha256": "ef67cc0f1214fe9547eaff566a0d834b3ce6b3562d9de81f3cc933fbabfe2352"
+    },
+    {
+      "file": "screenshots/experience/lower-390.png",
+      "sha256": "e0aa2a795eee64b5cf0a1b5584ddfaab6c01e41d76f3a352305ecbb5e58d02f8"
+    },
+    {
+      "file": "screenshots/experience/lower-768.png",
+      "sha256": "3af445877566ea6d3859f17e973540d8392a371ace9e7c986475117b99294038"
+    },
+    {
+      "file": "screenshots/experience/methods-1280.png",
+      "sha256": "09939b2f9a3fe7d5c78628138bc5dec51ee63e40b625b198b1a48587f27b4343"
+    },
+    {
+      "file": "screenshots/experience/methods-1440.png",
+      "sha256": "82369a4a05cc7e26eb1218bd22d2c5984981aa89f056fbbecc7d1b3d02753823"
+    },
+    {
+      "file": "screenshots/experience/methods-360.png",
+      "sha256": "c2d8db41b48d1948f700964534660d0acc62ae95ba2c07c76706f622424fe3d3"
+    },
+    {
+      "file": "screenshots/experience/methods-390.png",
+      "sha256": "f5573386741eee7ab25eee8a78ace28aa48a5e7632cec2f01c64a03afa016114"
+    },
+    {
+      "file": "screenshots/experience/methods-768.png",
+      "sha256": "27e2513886661614610ac8bac818298684e9efbd657bb97fe938bcf7d8f99925"
+    },
+    {
+      "file": "screenshots/experience/practice-1280.png",
+      "sha256": "bd53481de9eaa5c0ea2fb80497e586693136428f47cf737b2efec30ae4ee7cea"
+    },
+    {
+      "file": "screenshots/experience/practice-1440.png",
+      "sha256": "bde6dd5132891b2455a273a5eb257e558a2419f4f3bde422abfd5f1580ca011c"
+    },
+    {
+      "file": "screenshots/experience/practice-360.png",
+      "sha256": "3968155a67b2a95fd512fbfced6daf91054557d12c0fc4444d36a341a767ad7e"
+    },
+    {
+      "file": "screenshots/experience/practice-390.png",
+      "sha256": "041e14218e5515420fbf162588b2f02d883c669e31e572291b143dfaeaddfb4f"
+    },
+    {
+      "file": "screenshots/experience/practice-768.png",
+      "sha256": "ffd7f45604da1793b5cc0a5d38e93ccdab3bf27b2057dd951f92ac3b01310aae"
+    },
+    {
+      "file": "screenshots/experience/review-1280.png",
+      "sha256": "80b8ed18a666ba27552584ccc64046329ef926e867feba1532de698377943d0d"
+    },
+    {
+      "file": "screenshots/experience/review-1440.png",
+      "sha256": "ad475a0afa8a4f0b0313e2b48045efc14b11e0bd18b85605249915f64bb3ef43"
+    },
+    {
+      "file": "screenshots/experience/review-360.png",
+      "sha256": "1947baf92a8a674e7167d807aae70cf7f4152a055f530a8fe06699734594bbf8"
+    },
+    {
+      "file": "screenshots/experience/review-390.png",
+      "sha256": "709b48cc093862bca3a1a34d54ba11cd97bdd0c1fe7a60b25553ca58eb8c1e1a"
+    },
+    {
+      "file": "screenshots/experience/review-768.png",
+      "sha256": "23d8ef0f472c0f20801e3574f37e32ece3b583af13a40ec89846413d37a5e538"
+    },
+    {
+      "file": "screenshots/experience/thinking-1280.png",
+      "sha256": "4a01ea3df16bbfd8b6b5d8ddf5bcda997bc7f9ed5849cd8dc0cd3b91ecf27ab9"
+    },
+    {
+      "file": "screenshots/experience/thinking-1440.png",
+      "sha256": "85d595ec712bb78f564c35671b6f251908936eec8522041a16493747246396df"
+    },
+    {
+      "file": "screenshots/experience/thinking-360.png",
+      "sha256": "48e2da531d981e898c011bff19d7ecbfa05e46d978175c41476f213fbca9d23f"
+    },
+    {
+      "file": "screenshots/experience/thinking-390.png",
+      "sha256": "cbb6e693fb869ad53b5104e8b38403f98ff139e228af25ab069393e538738cc7"
+    },
+    {
+      "file": "screenshots/experience/thinking-768.png",
+      "sha256": "f32dd8372d3654909830c5bcd2846f3d42c85d13306541c0eb066b403d1a7de7"
+    },
+    {
+      "file": "screenshots/experience/upper-1280.png",
+      "sha256": "6a92cdd47ca81e87d1fcdd3b7ff62befa5463aa7dce6d0486e458337296a954e"
+    },
+    {
+      "file": "screenshots/experience/upper-1440.png",
+      "sha256": "60046d2304d7082b49af5b73a12be63184380293382b080b4bea0da72af0118c"
+    },
+    {
+      "file": "screenshots/experience/upper-360.png",
+      "sha256": "bd6a891ce745bf35fe38d7af217fabf2adecc1cfb6502a949e0b02a597c08d6c"
+    },
+    {
+      "file": "screenshots/experience/upper-390.png",
+      "sha256": "8ead71cb8aa5efac0dc6f729c85af4914c9943acc4881b38349c5d09089e3aa5"
+    },
+    {
+      "file": "screenshots/experience/upper-768.png",
+      "sha256": "bd1f39f15e4325f46aa398e15ca4b9649f211bae001cb67bbe7159b1f57e3ef5"
+    },
+    {
+      "file": "screenshots/training/case-1280.png",
+      "sha256": "6059048807975c11c5cebad1e832c10c3099e7fdee045fe5f791c9947f662dd0"
+    },
+    {
+      "file": "screenshots/training/case-1440.png",
+      "sha256": "7d92a84abbe0674ce9968cae6ba70eb14ad0fff145a2a9a2daaa38302e7076fb"
+    },
+    {
+      "file": "screenshots/training/case-360.png",
+      "sha256": "aec6aafcb1003635935043964d5030b76286c8497f0f8e89746f7a4c12851608"
+    },
+    {
+      "file": "screenshots/training/case-390.png",
+      "sha256": "4008ff1db6fb2276daae72513aa17c98a09fc5e1078fee2224e7a477792f787d"
+    },
+    {
+      "file": "screenshots/training/case-768.png",
+      "sha256": "a83effaa9a34711b3e5be4c1d068e2fc12492325c0088fb03c796f4bf5cac8e2"
+    },
+    {
+      "file": "screenshots/training/feedback-1280.png",
+      "sha256": "b59451906b941c605a381d8e8522d5bac6871aa60412c9492b21e69eea6ce56d"
+    },
+    {
+      "file": "screenshots/training/feedback-1440.png",
+      "sha256": "e5e6e7cd8a79e0fc14345619ee7bf332fa444bca1982997b3b910e366f51a13f"
+    },
+    {
+      "file": "screenshots/training/feedback-360.png",
+      "sha256": "1459f5e3083bc87af640039be46444f92fd344c28f198b22ed844d7ce0d8d280"
+    },
+    {
+      "file": "screenshots/training/feedback-390.png",
+      "sha256": "98b4a8abd1dbe3ff0b89b3d728e90d4e1b78d5fbd8ac7a08b587157fd522cda7"
+    },
+    {
+      "file": "screenshots/training/feedback-768.png",
+      "sha256": "78de6743e7338d2c37effbbe42f275f3fec0547f28608602729abc36f6db5dd3"
+    },
+    {
+      "file": "screenshots/training/self-check-1280.png",
+      "sha256": "fe59e23c3159386a577fccf1f41e6d03743ceda79bd91fc60a23cc082847310a"
+    },
+    {
+      "file": "screenshots/training/self-check-1440.png",
+      "sha256": "3007b0a85f52db59ddc04f7a40e9c4b4b96a6422f118c195c8ff63a6632c3b53"
+    },
+    {
+      "file": "screenshots/training/self-check-360.png",
+      "sha256": "db0d001d22392d9d30cef7840349c0725f36b16b130a4231cbecaa8a6c703e7c"
+    },
+    {
+      "file": "screenshots/training/self-check-390.png",
+      "sha256": "c9f108cf4dcae086ef49f55fea6098261d8eab618392d06fedaa5fef147b4bf9"
+    },
+    {
+      "file": "screenshots/training/self-check-768.png",
+      "sha256": "86ebf0f62fdb1bc59c2743e7de20cd185cd3f69c752e2f7a10cfa30b4ef82c99"
+    },
+    {
+      "file": "screenshots/models/g4-age-invariant-model-768.png",
+      "sha256": "6c437bee202105b86305729c729f10ae9e73dcd6ec7003c48471a46e7166f239"
+    },
+    {
+      "file": "screenshots/models/g4-angle-measure-model-768.png",
+      "sha256": "c0c3f8cbc8d7dbc9b95f14556c78eee241e5abd163277a2ffb168dcfabadb4cb"
+    },
+    {
+      "file": "screenshots/models/g4-area-unit-model-768.png",
+      "sha256": "00ade2cd91b7a479ca8683534b061f1d12a4a01713cac4ba2c5dcaebed43290d"
+    },
+    {
+      "file": "screenshots/models/g4-bar-chart-model-768.png",
+      "sha256": "17eaf30747601581fe402ad3ea0bffa778f01d052649d1f8ac6420d61c22f20d"
+    },
+    {
+      "file": "screenshots/models/g4-chicken-rabbit-model-768.png",
+      "sha256": "12be15dc981553d24a4870403d663a7d3594692a212e76e974aebe07914bdae0"
+    },
+    {
+      "file": "screenshots/models/g4-matchstick-pattern-model-768.png",
+      "sha256": "eeea8872feda54fbc6df20eabe7e535477b3b340d52f7f6b08dc412bae66e3c2"
+    },
+    {
+      "file": "screenshots/models/g4-measurement-conversion-model-768.png",
+      "sha256": "eb9438bdee259a827295fff4f60ce32298fc95579317607a5bff8a3c8fcf7de1"
+    },
+    {
+      "file": "screenshots/models/g4-multi-multiply-model-768.png",
+      "sha256": "f5efba6a61d33a582cd013792c2ee5b06052a928dcdccbfcbc1b582efc923c12"
+    },
+    {
+      "file": "screenshots/models/g4-operation-laws-model-768.png",
+      "sha256": "214cf5f15cf64c25d0b878f8c19ff23ea57b678bf4eedae59adffcaca7974b68"
+    },
+    {
+      "file": "screenshots/models/g4-pairing-sums-model-768.png",
+      "sha256": "f61843ba5a519bbe1f16dd85bcf1860dad727430bccd5beeabba5c09bd8d1ed6"
+    },
+    {
+      "file": "screenshots/models/g4-period-remainder-model-768.png",
+      "sha256": "f12e530febc98730ba80c8b37547127445b7fe1984a89577ba95e2be8a04268f"
+    },
+    {
+      "file": "screenshots/models/g4-pigeonhole-model-768.png",
+      "sha256": "83c3ea842387983e7f2d429555630f1e2703425bef4706abbe75e2766b083dbc"
+    },
+    {
+      "file": "screenshots/models/g4-place-value-model-768.png",
+      "sha256": "9d3875b3e0928d2b2881f735e1c7a08cab69692779b635856e64c38d519525f8"
+    },
+    {
+      "file": "screenshots/models/g4-quad-area-model-768.png",
+      "sha256": "b867cc3f67f3f36d0059c1f995bea07c9ac7944f4ec506984b6a8d573d5170c6"
+    },
+    {
+      "file": "screenshots/models/g4-round-estimate-model-768.png",
+      "sha256": "327e5dbb52f9f6e898ddb7a8ff00c235f62c5f30a7cc98ca9c1e8445589d553e"
+    },
+    {
+      "file": "screenshots/models/g4-route-enumeration-model-768.png",
+      "sha256": "bb5f9eb2af6a4fa99d1413dd597333d4a01dcb4cab9f80b13e2381ef287951d6"
+    },
+    {
+      "file": "screenshots/models/g4-two-digit-divide-model-768.png",
+      "sha256": "2362b301910e27f8ad98a10ec8ef87ea741f775eeab1d8270982e954ed3ecb7a"
+    },
+    {
+      "file": "screenshots/models/g4-working-backward-model-768.png",
+      "sha256": "939b85cded39467ea15048c6d86243d6f8531fb4b8752c02459a4c4f1d675074"
+    },
+    {
+      "file": "screenshots/models/g5-area-invariant-model-768.png",
+      "sha256": "d8d7f9fb5874e89779cfc6f50521ff119c112d2716586a90568bb55f4241ea13"
+    },
+    {
+      "file": "screenshots/models/g5-average-optimization-model-768.png",
+      "sha256": "7804e60e4ff6639a1be9de569f05171108b2a69558762a8fd4ae67f82b1c4051"
+    },
+    {
+      "file": "screenshots/models/g5-composite-area-model-768.png",
+      "sha256": "eb4c44389f6635269f07877cbe00d853887aaf7d18e3b7b4c412bafb9b17563a"
+    },
+    {
+      "file": "screenshots/models/g5-coordinate-model-768.png",
+      "sha256": "38570ec59c91d147f96cefd60b37d015b3e0d362ff44febade2fa25a5b76fe73"
+    },
+    {
+      "file": "screenshots/models/g5-counting-tree-model-768.png",
+      "sha256": "b810c0c3b68707c8d246ac2d93c1f1a385a8616e96755f1c3327644a73f2ee1f"
+    },
+    {
+      "file": "screenshots/models/g5-cuboid-volume-model-768.png",
+      "sha256": "338fc1eea7fbea649b341292903c428b33bf1bede08079727f7d208401cc0cf2"
+    },
+    {
+      "file": "screenshots/models/g5-decimal-divide-model-768.png",
+      "sha256": "edc3cb27ccae176810782581cec777310870866297b1f7607efdefc53e495276"
+    },
+    {
+      "file": "screenshots/models/g5-decimal-multiply-model-768.png",
+      "sha256": "5a221b133d4bdfe63d734c33b3db457fbcf4a8670204f74e41137b144924e95e"
+    },
+    {
+      "file": "screenshots/models/g5-digit-pattern-model-768.png",
+      "sha256": "1b1da4dba4edba1a08dd03a2e062091118294e79baebe4d65d3949707a48e422"
+    },
+    {
+      "file": "screenshots/models/g5-equation-balance-model-768.png",
+      "sha256": "21fe4bef5ced15a796128a8ae34f3695667540fc3a22645220ffe12049c74aa9"
+    },
+    {
+      "file": "screenshots/models/g5-factors-primes-model-768.png",
+      "sha256": "3d904b5ff3d213760b6b03f67780fb8762b7e37ba285592ee37290295e8e15d2"
+    },
+    {
+      "file": "screenshots/models/g5-figure-motion-model-768.png",
+      "sha256": "b514c8a7be39c2899b1972ce302346fba177ba9d5c87fd680ceb8307646fce36"
+    },
+    {
+      "file": "screenshots/models/g5-fraction-equivalence-model-768.png",
+      "sha256": "634c0776ae030e5b6dd89db114df0cf615a52801a3b65772bf176577cc9e318d"
+    },
+    {
+      "file": "screenshots/models/g5-pigeonhole-model-768.png",
+      "sha256": "f7eb8d7e51e764d333d616b33994bb0014aad5a91173111fb98aec0ea10fd62b"
+    },
+    {
+      "file": "screenshots/models/g5-probability-model-768.png",
+      "sha256": "751edb7d673e791caa752a24d4b7af0a98786b56a164fb2e4842dfe86f033377"
+    },
+    {
+      "file": "screenshots/models/g5-remainder-digit-model-768.png",
+      "sha256": "6a87fea2f47513c2e8819bc54d7a3a749c4961e03db67aecf25cd1446e5ecf74"
+    },
+    {
+      "file": "screenshots/models/g5-reverse-equation-model-768.png",
+      "sha256": "9b3fe65f397d7ffa91a62b0f5147f1d75fdd3e9c5e10f78a98d15d1755f15529"
+    },
+    {
+      "file": "screenshots/models/g5-work-rate-model-768.png",
+      "sha256": "889df68bdec5292e61d9bc133e7010666f45daaeebf38e7254121f134800fa6d"
+    },
+    {
+      "file": "screenshots/models/g6-algebra-model-model-768.png",
+      "sha256": "be4bdfd81aba3902b47d01caddfbc968ff831649eb97460c01e360ddd5e256b5"
+    },
+    {
+      "file": "screenshots/models/g6-circle-model-768.png",
+      "sha256": "562506c18e223c8d651a5c79d482854c2e44754402d6de2d07086a233a1c9d4a"
+    },
+    {
+      "file": "screenshots/models/g6-combinatorics-model-768.png",
+      "sha256": "9741a66901fa67e32873b4842a5d8eaceead634ac1cd329d8357c3a922955cf1"
+    },
+    {
+      "file": "screenshots/models/g6-cylinder-volume-model-768.png",
+      "sha256": "872992943fc6e80514e25d9fab57ec333f192ed015b8f539792b206a7d2308df"
+    },
+    {
+      "file": "screenshots/models/g6-extreme-principle-model-768.png",
+      "sha256": "a020308b766b02d947639dac56a04e2d77fa37afbd58d77a96f11978488ea3c2"
+    },
+    {
+      "file": "screenshots/models/g6-fraction-divide-model-768.png",
+      "sha256": "77c469ecff2dee3d97e476d67e6ee583968beba7cc06b8c5be685f8914f6cb07"
+    },
+    {
+      "file": "screenshots/models/g6-fraction-multiply-model-768.png",
+      "sha256": "b5b99056effc69f8d9cf03f5502718ba6b8e7df7dee77f4345d868ae96bf88a7"
+    },
+    {
+      "file": "screenshots/models/g6-geometry-transform-model-768.png",
+      "sha256": "d9425e4c2a84ff01a054cea7f6c17b2983a04cb3fcad1f2f2862feb35927b679"
+    },
+    {
+      "file": "screenshots/models/g6-negative-number-model-768.png",
+      "sha256": "bbd676dd2669a8a9030eda23d3f1fa3b579b35e7f302c2906524e50fd9c4ee6f"
+    },
+    {
+      "file": "screenshots/models/g6-parity-invariant-model-768.png",
+      "sha256": "2ca2ef1727e2c0ec02ebf24c4156a513411ee75acdff6cbe8b46e666c995c8c0"
+    },
+    {
+      "file": "screenshots/models/g6-percent-model-768.png",
+      "sha256": "c21638818ae4522597f0363be0f20a1dbfd53f792873015efb22f3182334873a"
+    },
+    {
+      "file": "screenshots/models/g6-pigeonhole-model-768.png",
+      "sha256": "130499676a890aed470b756ab6d389dc5e8a9bc3a72af46205d3497bab33f52f"
+    },
+    {
+      "file": "screenshots/models/g6-probability-strategy-model-768.png",
+      "sha256": "60c28e8c3036ff590464c8e41243b6c318488f25cfdbd218a2704a01a056a91f"
+    },
+    {
+      "file": "screenshots/models/g6-proportion-model-768.png",
+      "sha256": "9be6d49eddb34ea5c32b206f0defd8cd295d33957d4d6feedd4330a85fe218e0"
+    },
+    {
+      "file": "screenshots/models/g6-ratio-model-768.png",
+      "sha256": "9bfa217344c2f7763e31296ac2ed5543451bbf5704754078237241a2885a412d"
+    },
+    {
+      "file": "screenshots/models/g6-sector-data-model-768.png",
+      "sha256": "a33b9715ff796a0ab08da582003b0f2c7a40758c5f7c58a71ab6e5f5f1ec9f93"
+    },
+    {
+      "file": "screenshots/models/g6-speed-ratio-model-768.png",
+      "sha256": "f3eaad0b57aa0a4c6a0c56de799f311a8c8ceb5d705a7940ee5decc62d11a5f3"
+    },
+    {
+      "file": "screenshots/models/g6-working-backward-model-768.png",
+      "sha256": "6c6b6a289ea07e11f0a5868542d91b25a470bd95eecbd097bab466d01a27f57f"
+    },
+    {
+      "file": "screenshots/legacy/g4-angle-measure-1440.png",
+      "sha256": "cc33778a9e6deb4801567ab6e757704a59702328061b6830c96fc7d0e4d512ec"
+    },
+    {
+      "file": "screenshots/legacy/g4-angle-measure-1280.png",
+      "sha256": "3ceb891ca6f51423fc0a8abd2fc52a87ae3f1d7e9c18da9edf83ad241a583f03"
+    },
+    {
+      "file": "screenshots/legacy/g4-angle-measure-768.png",
+      "sha256": "d85eb0ed59331ccc25a932da07cef34cd3cc202de8ad0ad6dcdb2d6845f2b856"
+    },
+    {
+      "file": "screenshots/legacy/g4-angle-measure-390.png",
+      "sha256": "44776ae2ed56128e9bf2eb13483ae2a373b42130580df4e924ee12caa8511329"
+    },
+    {
+      "file": "screenshots/legacy/g4-angle-measure-360.png",
+      "sha256": "21f758b7fbf3011782441d04a435c02c83ca423c8a0a21b077067c2031953624"
+    },
+    {
+      "file": "screenshots/legacy/g5-cuboid-volume-1440.png",
+      "sha256": "2a0b3abb3200521a7deaaf0e54dd505fb182dc69a82059977ecc06f4b72b832d"
+    },
+    {
+      "file": "screenshots/legacy/g5-cuboid-volume-1280.png",
+      "sha256": "11c3b2ea7e9022d5c9d9b6c87bc50813f3492a449c370a238c8f5027d8adffd9"
+    },
+    {
+      "file": "screenshots/legacy/g5-cuboid-volume-768.png",
+      "sha256": "75f4f81bb6c1b64ffcb08960b3937a8d04aa2665ebb0eb404ca8f64a28da1188"
+    },
+    {
+      "file": "screenshots/legacy/g5-cuboid-volume-390.png",
+      "sha256": "aa71328fee76672cd0c16887f2e48ac5ce4a6b30ad218bd12f702c2ac87987d6"
+    },
+    {
+      "file": "screenshots/legacy/g5-cuboid-volume-360.png",
+      "sha256": "cc5498ba4bcd9d126f7484daa31f2e36a15dd73bfb1d3b07b14dcbb92837dc79"
+    },
+    {
+      "file": "screenshots/legacy/g5-probability-1440.png",
+      "sha256": "e297d385bdabff6cc01d022a2cbe9349fc436e3521a0372bf3143f15cf1431bd"
+    },
+    {
+      "file": "screenshots/legacy/g5-probability-1280.png",
+      "sha256": "8d001b400e93dde9a61b6f421bdcf50ca0516cdbbce0604d1441d366aa6cb4f0"
+    },
+    {
+      "file": "screenshots/legacy/g5-probability-768.png",
+      "sha256": "83f4f5ffb763e61ef2f0ce6476ebc7c89912cbea2182a1390c1f0cd061049019"
+    },
+    {
+      "file": "screenshots/legacy/g5-probability-390.png",
+      "sha256": "9a4c9412046faae9e552dc15f0f35d8c200d382f0a452db3760faf41b44e74e4"
+    },
+    {
+      "file": "screenshots/legacy/g5-probability-360.png",
+      "sha256": "4b61bc37a1f484aba1de358f83f6d69752e7543318ff2551938d4735e1d988ae"
+    },
+    {
+      "file": "screenshots/coding/coding-identity-768.png",
+      "sha256": "0fd6a4143ab4ff02caadd7dc4eec30c6f006f92238cce51b5d9f8046c90f1928"
+    },
+    {
+      "file": "screenshots/coding/coding-student-1440.png",
+      "sha256": "16b3dfe170be2ea1dda67073c3fb3be939f21e49ed9f9cc134e70530b18bead9"
+    },
+    {
+      "file": "screenshots/coding/coding-identity-390.png",
+      "sha256": "93e9bbb27a4e4fb5f1c212327fd9de69f777ef803c7328203848d5606b1e1dbe"
+    },
+    {
+      "file": "screenshots/coding/coding-postal-1440.png",
+      "sha256": "abbda0c010db3e2b955e211c8d1a57e8c4979d2eab877461e68abf33db18bcea"
+    },
+    {
+      "file": "screenshots/coding/coding-postal-360.png",
+      "sha256": "05b6cd8bbe27ac468c9362e143a21a6789cd45623bb79791c1e483b9f8eae670"
+    },
+    {
+      "file": "screenshots/coding/coding-student-1280.png",
+      "sha256": "cc0cf030b6d42aa22fc90de10a7973f4e56c67134dc518515fc86a5bb087af68"
+    },
+    {
+      "file": "screenshots/coding/coding-postal-1280.png",
+      "sha256": "2c7bf6312ec10057f09b9587a67d3f25b99420e32b30fa3f79d92398d207ea5c"
+    },
+    {
+      "file": "screenshots/coding/coding-quiz-1440.png",
+      "sha256": "444c84a9781820f7c9f198e0f80c10a8179c569574125481d6aeedb51a3a1a23"
+    },
+    {
+      "file": "screenshots/coding/coding-quiz-390.png",
+      "sha256": "ef115d892582f66d8b5ea84e157c88dace71ca9dd3224c9749082d016a015ac5"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-0-768.png",
+      "sha256": "0ce2f484656cb0424548f5408053e3d1906348ce55b869387f22485d948c6cd2"
+    },
+    {
+      "file": "screenshots/coding/coding-quiz-768.png",
+      "sha256": "49de650e87aae36c43184a1294e79cfc62ca7f1ffa27bad80797543f20d66b0f"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-0-390.png",
+      "sha256": "a9fb0d2e968a97c4df6db09e3b836cb9099bfaba1675ece4580becffe90ef1f7"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-1-390.png",
+      "sha256": "d0125ce1672a2d06815629101b1d3354016fb509dcbc73576a4008200f387925"
+    },
+    {
+      "file": "screenshots/coding/coding-student-768.png",
+      "sha256": "97b1be73bd6ee0fe9ea18b9138d2276ea276041acc80cf0d3a7471c8189202ee"
+    },
+    {
+      "file": "screenshots/coding/coding-quiz-1280.png",
+      "sha256": "bd0faa282841b7b99fdbc30288905033b9d0a12b47cb349f092771abf91f60e7"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-1-768.png",
+      "sha256": "b321d9f7cf4592583eac53ab295a3b96ec5a65df1a2749b44c5b8456cd97f68b"
+    },
+    {
+      "file": "screenshots/coding/coding-student-390.png",
+      "sha256": "9eecef339b2a907e52a3b02b3ef5bbfd87273623231373fa33315ec3befc0854"
+    },
+    {
+      "file": "screenshots/coding/coding-identity-1280.png",
+      "sha256": "66878d6398536a437fef7eba9ef2c0f6a6c0d010719f861c6f6634739cdc23e7"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-1-360.png",
+      "sha256": "9dd115a415c3cf4cab5a07790b1df43d74eacbc892a875a983054ebb1695a037"
+    },
+    {
+      "file": "screenshots/coding/coding-student-360.png",
+      "sha256": "9854d6c010a0b53ba0017cdee4f2b643ef0b8458726f565200e892aa1855bd07"
+    },
+    {
+      "file": "screenshots/coding/coding-quiz-360.png",
+      "sha256": "61043170921fa9c13746ebe148f8c67fcac1fbc41d1b9f4165dfe38776395cad"
+    },
+    {
+      "file": "screenshots/coding/coding-identity-1440.png",
+      "sha256": "eb47d3d41eeb00c5fe2d573125c6670aebe87aa3fb4d1efa147164b86cae95b8"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-0-360.png",
+      "sha256": "b99da5e22f9f8aeccd74924ba507dd9ba4d00f47bdf23a025a744f3bffd66aa0"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-1-1280.png",
+      "sha256": "65961309cc1490ce672717405bd18efd79df51e399bd13ff6a20b9dbd7a11c9a"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-0-1280.png",
+      "sha256": "c8c05f479297687c8e8bf49110386fd92ae5233bd866cafa704f370c3d12b25b"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-0-1440.png",
+      "sha256": "0ef650baac6fa5f8e93eb36231bbcfa71886a100e34fcb64ef6aa56baef26c91"
+    },
+    {
+      "file": "screenshots/coding/coding-conditions-1-1440.png",
+      "sha256": "3e1fe16c79805e3286b5a84f73ccf044baddb81dcd89c4efe467eb17b2539245"
+    },
+    {
+      "file": "screenshots/coding/coding-postal-768.png",
+      "sha256": "333297340bcd25d727041c1b960c42a2db9f324668274e95200efe80c188a942"
+    },
+    {
+      "file": "screenshots/coding/coding-identity-360.png",
+      "sha256": "cd3464dccf6e0c93e0c7e8a8a8a1234ea0de52cc9196e9cd107d6034e52796d3"
+    },
+    {
+      "file": "screenshots/coding/coding-postal-390.png",
+      "sha256": "c9f564da4cf8e58f186d8021c196d2843148b8e6b21162242a920a8737198a7e"
+    }
+  ]
+}

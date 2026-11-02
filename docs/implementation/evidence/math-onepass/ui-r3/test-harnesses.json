@@ -1,0 +1,18 @@
+{
+  "sourceSha": "d0dfd026a238a328743468cb5fba924ecde67526",
+  "status": "PASS_TRACKED_NAS_HARNESSES_PINNED_TO_DEPLOYED_SOURCE",
+  "files": {
+    "tests/math-full-01/browser.mjs": "c68dd513f1e011517d1fa5e722509b28d1c08b9513431b9b7d775e35c18bdc8c",
+    "tests/math-onepass/coding-browser.mjs": "36ece29bb9ce4be244c1efc17bb3b20187e88a09a4d2490f3dffb79f88f263ed",
+    "tests/math-onepass/business-http.mjs": "07e186fb35aaa236fde187dfd7a237adde66e3193c86e018cf12fb9a73ac9a0c",
+    "tests/math-full-01/navigation.mjs": "6ef751e13a573f699b6c2f6c5ab7ed79c286395682ef80ac7c22f8a31970cd81",
+    "tests/math-full-02/browser.mjs": "59ee0606c4de271d43bcb5f07f7a3b9e7b37dc6755bc17261a9eb8ad875e7727",
+    "tests/math-full-remainder/browser.mjs": "b67034e8ed7cd992b489323a7f43ded3a83177bab79466c8dae50a323ff8edad",
+    "tests/math-onepass/cases-browser.mjs": "89134efe1ae858e987518db24dff7b1bf053b01dc805b4e97ba9980c18de11a5",
+    "tests/math-onepass/training-browser.mjs": "18f084569c05366faa7eb5ed89bef00c5ed0e99960097fd36b7cd5849ac790f8",
+    "tests/math-onepass/legacy-browser.mjs": "c879f6e0f5f434ce9fc5ddfee01703a521417e33dbfbd358a73619a1640769a2",
+    "tests/math-onepass/experience-browser.mjs": "ea0e3aa07567d1d5c6729f9600fb0366329c78c04b05e24772d896b183f55ba9",
+    "tests/math-onepass/print-browser.mjs": "55d3a96ca98fa18c1d42764da67e908378ac2ab31a692f77293916aa3423ab6a"
+  },
+  "untrackedAuthoredHTTPProbes": "Results and bounded logs retained; sourceCI business HTTP separately verifies1298 authored tasks."
+}

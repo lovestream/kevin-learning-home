@@ -1,0 +1,20 @@
+{
+  "sha": "d0dfd026a238a328743468cb5fba924ecde67526",
+  "runs": [
+    {
+      "conclusion": "success",
+      "headSha": "d0dfd026a238a328743468cb5fba924ecde67526",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "headSha": "d0dfd026a238a328743468cb5fba924ecde67526",
+      "status": "completed"
+    }
+  ],
+  "ids": {
+    "sha": "d0dfd026a238a328743468cb5fba924ecde67526",
+    "push": 41448504055,
+    "pull_request": 41448510870
+  }
+}

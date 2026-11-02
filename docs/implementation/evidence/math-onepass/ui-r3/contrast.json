@@ -1,0 +1,47 @@
+{
+  "scope": "Six shared text token pairs, not a claim of full WCAG conformance",
+  "rows": [
+    {
+      "pair": "正文/背景",
+      "foreground": "#173d43",
+      "background": "#edf7f5",
+      "contrast": 10.77,
+      "AA_normal_text": true
+    },
+    {
+      "pair": "辅助文字/背景",
+      "foreground": "#527275",
+      "background": "#edf7f5",
+      "contrast": 4.78,
+      "AA_normal_text": true
+    },
+    {
+      "pair": "按钮文字/主色",
+      "foreground": "#ffffff",
+      "background": "#167d7f",
+      "contrast": 4.91,
+      "AA_normal_text": true
+    },
+    {
+      "pair": "导航文字/深色背景",
+      "foreground": "#d8eeea",
+      "background": "#103e43",
+      "contrast": 9.67,
+      "AA_normal_text": true
+    },
+    {
+      "pair": "导航说明/深色背景",
+      "foreground": "#afd6cf",
+      "background": "#103e43",
+      "contrast": 7.45,
+      "AA_normal_text": true
+    },
+    {
+      "pair": "黄色按钮文字",
+      "foreground": "#173d43",
+      "background": "#f6c848",
+      "contrast": 7.44,
+      "AA_normal_text": true
+    }
+  ]
+}
