@@ -21,5 +21,6 @@
     "status": "FAILURE",
     "run": 41272129841,
     "reason": "Original template browser gate expects an SVG for the new HTML coding overview. New project must independently verify the four visible authored condition cards; never add a fake SVG or bypass checks."
-  }
+  },
+  "selectedHoverContrastRegression": "PASS_ALL_FIVE_WIDTHS"
 }

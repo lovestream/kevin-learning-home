@@ -64,7 +64,7 @@ body:has(.preview-app) {
   line-height: 1.5;
   box-shadow: none;
 }
-.preview-app button:hover:not(:disabled) {
+.preview-app button:hover:not(:disabled):not([aria-pressed="true"]) {
   border-color: var(--accent);
   background: var(--accent-soft);
 }
