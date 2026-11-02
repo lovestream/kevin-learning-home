@@ -1,0 +1,109 @@
+/* Frozen model declarations, scoped to library-page; original source not modified. */
+.library-page .lab-demo{margin:27px auto 20px;max-width:750px;background:#f3f8f6;border:1px solid #deebe8;border-radius:23px;padding:25px;text-align:center;min-height:275px}
+.library-page .live-equation{display:flex;justify-content:center;align-items:center;gap:14px;margin-bottom:14px}
+.library-page .live-equation span,.library-page .live-equation strong{min-width:55px;padding:9px 13px;border-radius:12px;background:white;font-size:20px}
+.library-page .live-equation strong{background:var(--sun)}
+.library-page .live-equation b{font-size:20px}
+.library-page .live-equation.compact{margin-top:18px}
+.library-page .number-line{width:100%;height:150px;overflow:visible}
+.library-page .number-line .axis,.library-page .number-line .tick line{stroke:#789895;stroke-width:3}
+.library-page .number-line .tick{cursor:pointer}
+.library-page .number-line .tick text{font-size:18px;fill:#54736f;text-anchor:middle}
+.library-page .number-ship circle{fill:var(--sun);stroke:#d6a51e;stroke-width:3}
+.library-page .number-ship text{font-weight:900;fill:var(--ink)}
+.library-page .jump{fill:none;stroke:var(--coral);stroke-width:4;stroke-dasharray:8 7}
+.library-page .lab-controls{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:13px}
+.library-page .tool-button,.library-page .range-tool{display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border-radius:11px;background:white;border:1px solid var(--line);font-size:11px;font-weight:700}
+.library-page .primary-tool{background:#dff1ec;color:var(--teal)}
+.library-page .range-tool input{width:110px;accent-color:var(--teal)}
+.library-page .array-board{display:grid;gap:5px;max-width:480px;margin:13px auto;padding:10px;background:white;border-radius:16px}
+.library-page .model-caption{font-size:12px;color:var(--muted);margin:10px 0}
+.library-page .balance{width:min(100%,580px);height:205px}
+.library-page .balance line,.library-page .balance path{stroke:#436865;stroke-width:8;stroke-linecap:round;fill:#bddbd5}
+.library-page .balance text{font-size:25px;font-weight:900;fill:var(--ink);text-anchor:middle}
+.library-page .bar-stage{background:white;border-radius:17px;padding:20px;text-align:left}
+.library-page .bar-stage>div{display:flex;align-items:center;gap:9px;margin:10px 0}
+.library-page .bar-stage span{width:25px;font-weight:900}
+.library-page .bar-stage button{height:47px;min-width:70px;border-radius:5px 13px 13px 5px;background:var(--sun);font-weight:900;color:var(--ink)}
+.library-page .bar-stage button.bar-alt{background:#66bdb0}
+.library-page .bar-stage .difference{margin-left:34px;font-size:11px;color:var(--muted)}
+.library-page .difference i{border-top:3px solid var(--coral)}
+.library-page .geometry-grid{display:grid;gap:3px;width:min(100%,490px);margin:4px auto 20px;background:#d4e3e0;border:3px solid var(--ink);padding:3px}
+.library-page .geometry-grid span{background:white;min-height:25px}
+.library-page .geometry-grid span.selected{background:#8dd1c4}
+.library-page .geometry-values{display:flex;justify-content:center;gap:9px}
+.library-page .geometry-values span{background:white;padding:8px 12px;border-radius:10px;font-size:12px;font-weight:800}
+.library-page .fraction-strip{display:flex;max-width:600px;margin:55px auto 25px;border:4px solid var(--ink);border-radius:8px;overflow:hidden}
+.library-page .fraction-strip button{flex:1;height:95px;background:white;border-right:2px solid var(--ink);font-size:10px;color:var(--muted)}
+.library-page .fraction-strip button:last-child{border:0}
+.library-page .fraction-strip button.selected{background:var(--sun)}
+.library-page .table-lab{display:grid;gap:6px;max-width:600px;margin:10px auto}
+.library-page .table-lab button{height:43px;background:white;border:1px solid var(--line);border-radius:9px}
+.library-page .table-lab button.marked{background:var(--sun);border-color:#d5a31b;font-weight:900}
+.library-page .practice-model .lab-demo{padding:15px;width:100%;background:rgba(255,255,255,.55)}
+.library-page .practice-model .lab-controls{display:none}
+.library-page .practice-model .number-line{height:120px}
+.library-page .practice-model .balance{height:175px}
+.library-page .division-groups{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;min-height:105px;align-items:center}
+.library-page .division-groups>div{min-width:76px;background:white;border:2px solid #91c9be;border-radius:16px;padding:8px}
+.library-page .division-groups>div.remainder-group{border-style:dashed;border-color:var(--coral);background:#fff4ef}
+.library-page .division-groups small{display:block;font-size:9px;color:var(--muted);margin-bottom:7px}
+.library-page .division-groups div>span{display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+.library-page .division-groups i{display:block;width:15px;height:15px;border-radius:50%;background:var(--sun);border:2px solid #d5a31c}
+.library-page .mystery-box{display:inline-grid;place-items:center;min-width:34px;height:34px;padding:0 6px;border-radius:8px;background:#fff0bd;color:#805d09;font-style:normal}
+.library-page .bar-stage button.equalized{background:#cbe4df;border-right:3px dashed var(--coral)}
+.library-page .planting-demo{padding-top:54px}
+.library-page .planting-line{display:flex;justify-content:center;width:min(92%,650px);margin:35px auto 55px}
+.library-page .planting-line>span{position:relative;flex:1;border-top:5px solid #77b9af}
+.library-page .planting-line>span:last-child{flex:0;border:0}
+.library-page .planting-line i{position:absolute;width:21px;height:32px;border-radius:50% 50% 10px 10px;background:var(--sun);border:3px solid #bf8a0b;left:-10px;top:-18px}
+.library-page .planting-line b{position:absolute;left:-6px;top:23px;font-size:11px}
+.library-page .planting-line em{position:absolute;top:-32px;left:42%;font-size:9px;font-style:normal;color:var(--muted);white-space:nowrap}
+.library-page .matchstick-chain{display:flex;justify-content:center;margin:45px auto 55px;height:75px}
+.library-page .matchstick-chain>span{position:relative;width:74px;height:74px}
+.library-page .matchstick-chain i{position:absolute;background:linear-gradient(90deg,#e8b954,#c77f25);border-radius:999px;box-shadow:0 2px 2px rgba(80,52,18,.2)}
+.library-page .matchstick-chain .top,.library-page .matchstick-chain .bottom{width:78px;height:7px;left:-2px}
+.library-page .matchstick-chain .top{top:0}
+.library-page .matchstick-chain .bottom{bottom:0}
+.library-page .matchstick-chain .left,.library-page .matchstick-chain .right{height:78px;width:7px;top:-2px}
+.library-page .matchstick-chain .left{left:0}
+.library-page .matchstick-chain .right{right:-3px}
+.library-page .enumeration-list,.library-page .pair-list{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.library-page .enumeration-list button,.library-page .pair-list button{background:white;border:1px solid var(--line);border-radius:12px;padding:10px;display:flex;justify-content:center;align-items:center;gap:7px}
+.library-page .enumeration-list button.marked,.library-page .pair-list button.marked{background:#fff2bd;border-color:#e4b72b}
+.library-page .enumeration-list span,.library-page .pair-list span{font-size:17px;font-weight:900}
+.library-page .enumeration-list em,.library-page .pair-list em{font-size:10px;color:var(--muted);font-style:normal}
+.library-page .period-row{display:grid;grid-template-columns:repeat(8,1fr);gap:5px}
+.library-page .period-row button{background:white;border:2px solid transparent;border-radius:11px;padding:6px 2px}
+.library-page .period-row button.focus{border-color:var(--coral);transform:translateY(-3px)}
+.library-page .period-row i{display:grid;place-items:center;height:30px;border-radius:7px;background:var(--period);font-size:9px;font-style:normal;color:white;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.library-page .period-row b{font-size:9px;color:var(--muted)}
+.library-page .period-row button{--period-0:#ec6b55;--period-1:#e6b732;--period-2:#3973b5;--period-3:#2f9a78;--period-4:#8a65b7}
+.library-page .animal-counts{display:flex;justify-content:center;gap:13px}
+.library-page .animal-counts span{background:white;padding:14px 18px;border-radius:14px;font-size:19px;font-weight:900}
+.library-page .live-equation.solved strong{background:#81cdb3}
+.library-page .drawer-row{display:flex;justify-content:center;gap:11px;margin:20px 0}
+.library-page .drawer-row section{width:130px;background:white;border:2px solid #a6cec7;border-radius:15px 15px 22px 22px;padding:12px}
+.library-page .drawer-row b,.library-page .drawer-row span{display:block;font-size:10px;color:var(--muted)}
+.library-page .drawer-row section>div{display:flex;gap:5px;justify-content:center;min-height:48px;align-items:center}
+.library-page .drawer-row i{width:17px;height:17px;border-radius:50%;background:var(--sun);border:2px solid #d09a13}
+@media(max-width:780px){.library-page .enumeration-list,.library-page .pair-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:780px){.library-page .period-row{grid-template-columns:repeat(5,1fr)}}
+@media(max-width:780px){.library-page .drawer-row section{width:auto;flex:1}}
+@media(max-width:780px){.library-page .planting-line em{display:none}}
+.library-page .thinking-help{display:flex;flex-wrap:wrap;gap:8px}
+.library-page .thinking-tool svg{display:block;width:100%;max-height:360px;background:#f0f3e8;border-radius:16px}
+.library-page .thinking-tool svg text{font-size:17px;fill:#354c46}
+.library-page .thinking-heights{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.library-page .thinking-heights label{flex:1;min-width:100px}
+.library-page .thinking-heights select{display:block;width:100%;font:inherit;padding:8px;border:1px solid #ccd8c6;border-radius:10px}
+.library-page .thinking-name-bank{display:flex;flex-wrap:wrap;gap:6px;padding:14px;background:#f6ecd4;border-radius:14px}
+.library-page .thinking-name-bank button{padding:7px 10px}
+.library-page .thinking-venn-zones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.library-page .thinking-venn-zones article{min-height:125px;border:2px solid #88a390;padding:12px;border-radius:18px;background:#e8eee2}
+.library-page .thinking-venn-zones article:nth-child(2){background:#e1ebf1;border-color:#6388a4}
+.library-page .thinking-venn-zones article:nth-child(4){background:#f1e8d3;border-style:dashed}
+.library-page .thinking-venn-zones article button{padding:6px;margin:3px;font-size:12px}
+.library-page .thinking-tool [aria-pressed=true]{border-color:#43755e;background:#d9e8d6}
+@media(max-width:450px){.library-page .thinking-venn-zones{grid-template-columns:1fr}}
+.library-page .thinking-panel button,.library-page .thinking-tool button,.library-page .parent-formal-review button {min-height:44px;white-space:normal}

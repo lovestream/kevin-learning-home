@@ -1,0 +1,31 @@
+@import './source/model-styles.css';
+.library-page { color:#17384c; }
+.library-nav { display:flex; flex-wrap:wrap; gap:.6rem 1rem; margin-block:1rem 2rem; }
+.library-nav a { display:inline-flex; align-items:center; min-height:44px; }
+.library-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:1rem; }
+.library-grid>a,.library-grid>details { border:1px solid #c2d5de; border-radius:14px; padding:1rem; background:white; color:inherit; text-decoration:none; }
+.library-grid h2 { font-size:1.15rem; line-height:1.6; }
+.library-grid>a:hover { border-color:#2f6985; }
+.library-study p,.library-study li,.library-page dd { line-height:1.8; overflow-wrap:anywhere; white-space:pre-wrap; }
+.library-study textarea,.library-page input:not([type=checkbox]):not([type=radio]),.library-page select { max-width:100%; min-width:0; padding:.65rem; font:inherit; }
+.library-study textarea { display:block; width:100%; min-height:140px; }
+.library-study>fieldset { min-width:0; padding:1rem; border:1px solid #c2d5de; border-radius:12px; }
+.library-study>fieldset label { display:block; margin-block:1rem; }
+.library-study select { display:block; width:100%; }
+.library-page button { min-width:44px; min-height:44px; }
+.library-response { display:flex; gap:.5rem; align-items:center; }
+.library-response input { width:100%; }
+.library-review-unit { border-top:1px solid #c2d5de; padding:1rem; }
+.library-review-unit summary { cursor:pointer; min-height:44px; }
+.library-page svg { max-width:100%; height:auto; }
+.library-page .legacy-lab { overflow:hidden; }
+.library-page .thinking-figure,.library-page .det-figure { margin:1rem 0; background:white; padding:.6rem; border-radius:12px; }
+.library-page .thinking-tool { border:1px solid #c2d5de; padding:1rem; border-radius:12px; }
+.library-page .det-lengths,.library-page .det-condition-cards { display:flex; flex-wrap:wrap; gap:.7rem; }
+.library-page .det-lengths span,.library-page .det-condition-cards span { padding:.7rem; background:#f4f8fc; }
+.library-page .det-baseblocks>div>div { display:flex; flex-wrap:wrap; gap:.5rem; }
+.library-page .det-baseblocks i { padding:.5rem; background:#c2d5de; }
+.library-page .place-columns { display:flex; flex-wrap:wrap; gap:.7rem; }
+.library-page .place-columns section { min-width:70px; flex:1; }
+.library-page .place-columns .one { display:inline-block; width:10px; height:10px; margin:2px; background:#2f6985; }
+.library-page .place-value-demo .live-equation { display:flex; flex-wrap:wrap; gap:.3rem; }

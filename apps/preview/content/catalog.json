@@ -841,10 +841,10 @@
     },
     {
       "lessonId": "G3-UP02-B01",
-      "title": "数字有时表示身份，而不是多少",
-      "shortTitle": "数字有时表示身份，而不是多少",
-      "contentVersion": "2026-10-09.4",
-      "editorialRevision": "2026-10-09.4",
+      "title": "数字编码：身份证、邮编与我的学号",
+      "shortTitle": "数字编码与设计",
+      "contentVersion": "2026-11-01.2",
+      "editorialRevision": "2026-11-01.2",
       "status": "draft",
       "track": "foundation",
       "parentUnitId": "G3-UP02",
@@ -864,7 +864,7 @@
       "recommendedPrerequisites": [
         "乘法和系统记录。"
       ],
-      "dtoSha256": "d1c2c980a954eabc10e45bc2d7a91cae5990a68d8340e47d0af47aa655cf612a",
+      "dtoSha256": "69776acad0fe2cd79205bbc4fbc96e8feebe349a7a3615a1db35f5950bd110d7",
       "renderer": "textbook:coding"
     },
     {

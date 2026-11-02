@@ -1,0 +1,460 @@
+[
+  {
+    "event": "push",
+    "run": 40977114435,
+    "sourceSha": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+    "jobs": [
+      {
+        "name": "foundation",
+        "conclusion": "success",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Run npm install --global npm@11.12.1",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Run npm ci",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Run npx playwright install --with-deps chromium",
+            "conclusion": "success"
+          },
+          {
+            "number": 7,
+            "name": "Chinese system font for reproducible UI evidence (CI only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 8,
+            "name": "NAS gate controller syntax only (no NAS connection)",
+            "conclusion": "success"
+          },
+          {
+            "number": 9,
+            "name": "Trial tooling offline checks (no NAS access)",
+            "conclusion": "success"
+          },
+          {
+            "number": 10,
+            "name": "Math trial offline safety checks (no NAS access)",
+            "conclusion": "success"
+          },
+          {
+            "number": 11,
+            "name": "MATH-00 source evidence checks (offline; no old repo or NAS)",
+            "conclusion": "success"
+          },
+          {
+            "number": 12,
+            "name": "NAS R2 preview-only image, LAN HTTP boundary and all 70 APIs (CI only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 13,
+            "name": "Archive validated preview image for NAS transfer (push only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 14,
+            "name": "Run node scripts/verify.ts",
+            "conclusion": "success"
+          },
+          {
+            "number": 15,
+            "name": "MATH-FULL-01 content-only preview and all 70 classrooms (no NAS access)",
+            "conclusion": "success"
+          },
+          {
+            "number": 16,
+            "name": "Compose 1.28.5 parser compatibility (no daemon or service start)",
+            "conclusion": "success"
+          },
+          {
+            "number": 17,
+            "name": "Container isolation and restored-host verification",
+            "conclusion": "success"
+          },
+          {
+            "number": 18,
+            "name": "Run actions/upload-artifact@v4",
+            "conclusion": "success"
+          },
+          {
+            "number": 35,
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "number": 36,
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "number": 37,
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "name": "math-onepass",
+        "conclusion": "success",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Run npm install --global npm@11.12.1",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Run npm ci",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Run npx playwright install --with-deps chromium",
+            "conclusion": "success"
+          },
+          {
+            "number": 7,
+            "name": "Fixed Chinese font (CI only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 8,
+            "name": "PDF inspection tools (ephemeral CI runner only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 9,
+            "name": "Build all sealed teaching resources",
+            "conclusion": "success"
+          },
+          {
+            "number": 10,
+            "name": "Synthetic domain, authorization, process crash and exact models",
+            "conclusion": "success"
+          },
+          {
+            "number": 11,
+            "name": "All 1298 original tasks through the shared business HTTP domain",
+            "conclusion": "success"
+          },
+          {
+            "number": 12,
+            "name": "Actual non-secure HTTP without secure-origin exceptions",
+            "conclusion": "success"
+          },
+          {
+            "number": 13,
+            "name": "All 63 staged cases and 18 contrasting collections",
+            "conclusion": "success"
+          },
+          {
+            "number": 14,
+            "name": "Four-layer self-check at all five widths",
+            "conclusion": "success"
+          },
+          {
+            "number": 15,
+            "name": "All 54 semantic models at all five widths",
+            "conclusion": "success"
+          },
+          {
+            "number": 16,
+            "name": "All full articles, checkpoints, methods, page memory and print",
+            "conclusion": "success"
+          },
+          {
+            "number": 17,
+            "name": "Native print lifecycle and complete teaching PDFs",
+            "conclusion": "success"
+          },
+          {
+            "number": 18,
+            "name": "Run actions/upload-artifact@v4",
+            "conclusion": "success"
+          },
+          {
+            "number": 35,
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "number": 36,
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "number": 37,
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "event": "pull_request",
+    "run": 40977118591,
+    "sourceSha": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+    "jobs": [
+      {
+        "name": "foundation",
+        "conclusion": "success",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Run npm install --global npm@11.12.1",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Run npm ci",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Run npx playwright install --with-deps chromium",
+            "conclusion": "success"
+          },
+          {
+            "number": 7,
+            "name": "Chinese system font for reproducible UI evidence (CI only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 8,
+            "name": "NAS gate controller syntax only (no NAS connection)",
+            "conclusion": "success"
+          },
+          {
+            "number": 9,
+            "name": "Trial tooling offline checks (no NAS access)",
+            "conclusion": "success"
+          },
+          {
+            "number": 10,
+            "name": "Math trial offline safety checks (no NAS access)",
+            "conclusion": "success"
+          },
+          {
+            "number": 11,
+            "name": "MATH-00 source evidence checks (offline; no old repo or NAS)",
+            "conclusion": "success"
+          },
+          {
+            "number": 12,
+            "name": "NAS R2 preview-only image, LAN HTTP boundary and all 70 APIs (CI only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 13,
+            "name": "Archive validated preview image for NAS transfer (push only)",
+            "conclusion": "skipped"
+          },
+          {
+            "number": 14,
+            "name": "Run node scripts/verify.ts",
+            "conclusion": "success"
+          },
+          {
+            "number": 15,
+            "name": "MATH-FULL-01 content-only preview and all 70 classrooms (no NAS access)",
+            "conclusion": "success"
+          },
+          {
+            "number": 16,
+            "name": "Compose 1.28.5 parser compatibility (no daemon or service start)",
+            "conclusion": "success"
+          },
+          {
+            "number": 17,
+            "name": "Container isolation and restored-host verification",
+            "conclusion": "success"
+          },
+          {
+            "number": 18,
+            "name": "Run actions/upload-artifact@v4",
+            "conclusion": "success"
+          },
+          {
+            "number": 35,
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "number": 36,
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "number": 37,
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "name": "math-onepass",
+        "conclusion": "success",
+        "steps": [
+          {
+            "number": 1,
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "number": 2,
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "number": 3,
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "number": 4,
+            "name": "Run npm install --global npm@11.12.1",
+            "conclusion": "success"
+          },
+          {
+            "number": 5,
+            "name": "Run npm ci",
+            "conclusion": "success"
+          },
+          {
+            "number": 6,
+            "name": "Run npx playwright install --with-deps chromium",
+            "conclusion": "success"
+          },
+          {
+            "number": 7,
+            "name": "Fixed Chinese font (CI only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 8,
+            "name": "PDF inspection tools (ephemeral CI runner only)",
+            "conclusion": "success"
+          },
+          {
+            "number": 9,
+            "name": "Build all sealed teaching resources",
+            "conclusion": "success"
+          },
+          {
+            "number": 10,
+            "name": "Synthetic domain, authorization, process crash and exact models",
+            "conclusion": "success"
+          },
+          {
+            "number": 11,
+            "name": "All 1298 original tasks through the shared business HTTP domain",
+            "conclusion": "success"
+          },
+          {
+            "number": 12,
+            "name": "Actual non-secure HTTP without secure-origin exceptions",
+            "conclusion": "success"
+          },
+          {
+            "number": 13,
+            "name": "All 63 staged cases and 18 contrasting collections",
+            "conclusion": "success"
+          },
+          {
+            "number": 14,
+            "name": "Four-layer self-check at all five widths",
+            "conclusion": "success"
+          },
+          {
+            "number": 15,
+            "name": "All 54 semantic models at all five widths",
+            "conclusion": "success"
+          },
+          {
+            "number": 16,
+            "name": "All full articles, checkpoints, methods, page memory and print",
+            "conclusion": "success"
+          },
+          {
+            "number": 17,
+            "name": "Native print lifecycle and complete teaching PDFs",
+            "conclusion": "success"
+          },
+          {
+            "number": 18,
+            "name": "Run actions/upload-artifact@v4",
+            "conclusion": "success"
+          },
+          {
+            "number": 35,
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "conclusion": "success"
+          },
+          {
+            "number": 36,
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "conclusion": "success"
+          },
+          {
+            "number": 37,
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  }
+]

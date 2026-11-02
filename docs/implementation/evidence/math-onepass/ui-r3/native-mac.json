@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ACTUAL_MAC_IAB_AX_AND_VISUAL",
+  "sourceSha": "d0dfd026a238a328743468cb5fba924ecde67526",
+  "origin": "http://192.168.2.100:38444/",
+  "checkedAt": "2026-11-02T13:18:23.969208+00:00",
+  "clientReportDate": "2026-11-02",
+  "browser": "Codex In-app Browser on user Mac, native AX controls",
+  "actions": [
+    "Open actual NAS home without login or security bypass",
+    "Search 数字编码 and follow the one current lesson result",
+    "Open step3 and select 自己设计学号",
+    "Observe selected button dark teal with readable white text while mouse remains at clicked button",
+    "Observe current code03-02-07 and class/long-term choices",
+    "Return to NAS home and mark tab as deliverable"
+  ],
+  "physicalPhoneIPad": "NEEDS_USER_ACTION",
+  "ordinaryChrome": "NOT_RETESTED_IN_THIS_R3_NATIVE_CHECK",
+  "userAestheticApproval": false,
+  "images": "Current NAS automated captures archived separately; native screenshot was directly viewed in tool output, not relabelled as an archived Chromium image."
+}

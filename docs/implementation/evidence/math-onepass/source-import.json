@@ -1,0 +1,239 @@
+{
+  "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+  "oldSourceRef": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "sources": [
+    {
+      "sourcePath": "shared/detective-model.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "3a23eb9090d6c877a365bde7d0dc405b8721bb14",
+      "sourceSha256": "23d959a846d26a4db3c6834e6d4259018a9de9ec32ff1fc51a20b44ae18a7f91",
+      "target": "packages/math-training/source/shared/detective-model.mjs",
+      "targetSha256": "23d959a846d26a4db3c6834e6d4259018a9de9ec32ff1fc51a20b44ae18a7f91",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/detective-mass-spring.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "ce9bc475589995094de23fab0d7eca7aec233c5a",
+      "sourceSha256": "0be656cbf3ebedd95b2d58dbbaf99d2f0520a7978317edbb2792a9d6735f81e0",
+      "target": "packages/math-training/source/shared/detective-mass-spring.mjs",
+      "targetSha256": "0be656cbf3ebedd95b2d58dbbaf99d2f0520a7978317edbb2792a9d6735f81e0",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/detective-self-validation.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "5f3108787b737f6b560c3ee9152583fe6aadc12a",
+      "sourceSha256": "2def59e770d98a41603b36e849198c844982460c117e8e4249c1e591b48326f2",
+      "target": "packages/math-training/source/shared/detective-self-validation.mjs",
+      "targetSha256": "2def59e770d98a41603b36e849198c844982460c117e8e4249c1e591b48326f2",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "server/detective-self-questions.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "06c74ff29d3d189ac6a2563fd0745acad2de587e",
+      "sourceSha256": "dffa181159c9f2cc21265ba2b54e7e6cecca6e5fdc1f5cefe0fd5d9ad8715743",
+      "target": "packages/math-training/source/server/detective-self-questions.mjs",
+      "targetSha256": "dffa181159c9f2cc21265ba2b54e7e6cecca6e5fdc1f5cefe0fd5d9ad8715743",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "server/detective-self-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "81128977513ccd22b58de0e89941093eace85c1a",
+      "sourceSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "target": "packages/math-training/source/server/detective-self-store.mjs",
+      "targetSha256": "8a083a2ed150f39b8803173f6545b3aa714d06874d8565bf66c549c2a565b9a0",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "server/detective-self-integrity.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "83f6beeb97b7ca5a163f77c2cf40b8850f619fcf",
+      "sourceSha256": "94af24f4bf8d1f3fa2ef11c1a1e8aba57ac35acedd8f349570a76cc41b5f9c02",
+      "target": "packages/math-training/source/server/detective-self-integrity.mjs",
+      "targetSha256": "94af24f4bf8d1f3fa2ef11c1a1e8aba57ac35acedd8f349570a76cc41b5f9c02",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "server/detective-check-evidence.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "745302798c1d89a042e0e538ace2cc2de1d7c019",
+      "sourceSha256": "b981ef3a27cd7671fe84aa4f88474a6a47f2f0b7925a5fbb11cf5b72b8a7e495",
+      "target": "packages/math-training/source/server/detective-check-evidence.mjs",
+      "targetSha256": "b981ef3a27cd7671fe84aa4f88474a6a47f2f0b7925a5fbb11cf5b72b8a7e495",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "content/detective/process-cases.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "dcee8a4ba0f9894831a83c50f96ea0c3be1fac53",
+      "sourceSha256": "15f875df5ef38f3ac367a22c57c36c83300ce8b241251f8f8ff85b95d285a91e",
+      "target": "packages/math-training/source/content/detective/process-cases.mjs",
+      "targetSha256": "15f875df5ef38f3ac367a22c57c36c83300ce8b241251f8f8ff85b95d285a91e",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "shared/task-audit-oracle.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "3c54a68b54ba167869f2b6173f068c94c43c166a",
+      "sourceSha256": "5fdeb04e708eda514a1c4493fd0295137bd9c311e6fb805a66a409bfce738454",
+      "target": "packages/math-training/source/shared/task-audit-oracle.mjs",
+      "targetSha256": "5fdeb04e708eda514a1c4493fd0295137bd9c311e6fb805a66a409bfce738454",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "scripts/lib/detective-delivery-audit.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "bee9a86f6d305e4e542da4c68234ca1871f915ab",
+      "sourceSha256": "aee6dc2b081a87bd5d5ce912d9d7269b4bcd7760dc81e35af868b3e4bf60c4c0",
+      "target": "packages/math-training/source/scripts/lib/detective-delivery-audit.mjs",
+      "targetSha256": "aee6dc2b081a87bd5d5ce912d9d7269b4bcd7760dc81e35af868b3e4bf60c4c0",
+      "adaptations": []
+    },
+    {
+      "sourcePath": "content/detective/seed-cases.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "430f532d361e8734be797a74ebc4675357a4e375",
+      "sourceSha256": "e3dd33b4507e491c1ee5c1ad5a1365823777c7c73990cebcaf05beaa06ef4990",
+      "target": "packages/math-training/source/content/detective/seed-cases.mjs",
+      "targetSha256": "99a03470735e4633514dfa4e999155c7384a17525aaa727a8e969bcaece6a78c",
+      "adaptations": [
+        "Only 14 authored approved seeds; unpublished pending draft excluded."
+      ]
+    },
+    {
+      "sourcePath": "server/detective-store.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "76368cb0efbc68ea2e14f0631f8c8963a3f22497",
+      "sourceSha256": "f1a880fa2889899bb444ccbeb22eb35c9a337ad7a300ed2db3cb84fd0e62d5e2",
+      "target": "packages/math-training/source/server/detective-store.mjs",
+      "targetSha256": "4c879b492f5ae0ed0b5e7367fcba56e306c276eaba26be2c8dfd13cfb5aee95c",
+      "adaptations": [
+        "No unpublished pending draft/migration; no badge grant; other math, gate and state-machine logic preserved."
+      ]
+    },
+    {
+      "sourcePath": "shared/detective-inbox.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "5af42ef74bcc8af7813023902eaf0237459b0c52",
+      "sourceSha256": "b1b20237794b38e6b5878ff9f41f5acbfe3fa9cfc0a6e21e0f16e86552c8de0f",
+      "target": "packages/math-training/source/shared/detective-inbox.mjs",
+      "targetSha256": "704ce435b45ea54a05f5bf917457839948f2a795d5dc7c9a995c95835ba585f5",
+      "adaptations": [
+        "Editorial exceptions restricted to the 12 exact authored anonymous fixed-blob cases in this import, not the original private registry. No inbox sync/store is copied."
+      ]
+    },
+    {
+      "sourcePath": "shared/pilot-math.mjs",
+      "sourceGitRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e33aca3ce40eed3a05f3e2505cddcf9d74cac933",
+      "sourceSha256": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
+      "target": "packages/math-training/source/shared/pilot-math.mjs",
+      "targetSha256": "6fea43026c4169acb6f29c3aff46f0116759660d07ec9d1fe07791d44c8d8300",
+      "adaptations": []
+    }
+  ],
+  "generatedTargets": [
+    {
+      "target": "packages/math-training/source/content/detective/approved-bundles.json",
+      "targetSha256": "c012731c857af4bc97c8c7d0394de85fceddaef227027874ccfdd82d54d4277b"
+    },
+    {
+      "target": "packages/math-training/source/content/detective/approved-editions.json",
+      "targetSha256": "c679e88046c6a806717cbbf96d4a892e4995560e52b21fb11a23e40a569664af"
+    }
+  ],
+  "anonymousBundles": [
+    {
+      "bundleId": "DT-20261015-ARITH-A",
+      "sourceBlob": "487495c16239bf991d4d8ae2900aa84b1e113a1b",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "33ef3e1193a4dc5498d17b234148cb3edc019a4b6dd6b8a2b9ce45f49ff864f0",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261015-CARD-A",
+      "sourceBlob": "7d8afd779c25606d97f338399a753269458b088a",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "6f5af58fc0e4817f4e52449f00ec507a7642df0afd6497903ecee1194f6f4af6",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261015-EQUAL-A",
+      "sourceBlob": "0e431dc831a0130c9c1d8ba2a9d9da57b515da43",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "f5385d4c31de11c8abda974542bbf2197d4475a2baabc6ba9ad791d26e658608",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261015-ORDER-A",
+      "sourceBlob": "4762400997021be1d635ac89fb654e6fb1a3349f",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "88797a839bdfc89c103d93bafe3f44924339659c83606aa76087c55ec28f6cbd",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261015-UNIT-A",
+      "sourceBlob": "bbb424436eef7438c307c551bd3da97c1fc20934",
+      "sourceRef": "c6e6eaedca53c0976af3ab6e187e2980e4e94430",
+      "sourceReportBlob": "8297afac660f1c03cd26f529c353c089e03a3188",
+      "sha256": "c3a2a96d56c3a0e4e3684500539d461c590a7c5974ff053e7ccd420775a4e25e",
+      "cases": 3,
+      "source": "Fixed blobs explicitly verified anonymous in the source delivery audit; semantic regeneration required before target use."
+    },
+    {
+      "bundleId": "DT-20261026-AVG-REVERSE-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "b430c15bb733f278135629dd586503551b524574",
+      "sha256": "f54086f5d4306de32a44207fd9b52b58c4a0a1f0d05814e63dd5056956c4146f",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    },
+    {
+      "bundleId": "DT-20261026-SPR-FORWARD-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "01f67fa1c42b0c76bfd4256e9d0455faca6cc6a0",
+      "sha256": "329f924ad9f7fa9b863a1f65015835888a6af1c0b49d1730a5302a44b86bc9b7",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    },
+    {
+      "bundleId": "DT-20261026-AVG-FOUNDATION-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "974a4eb717c8720a01388eb73cf7607199801b0a",
+      "sha256": "afecec0987f74de321ecfb4403b7a1f0227fb809ca5a22083fb79bc8194959cf",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    },
+    {
+      "bundleId": "DT-20261026-SPR-REVERSE-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "f8b32e2bf424ebe2c5fe0ad7948069a1cd246c4e",
+      "sha256": "62823d20052feea32cf388b7ff11c0fd892564f729395e781cb362a45f4d4345",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    },
+    {
+      "bundleId": "DT-20261016-WIRE-A",
+      "sourceRef": "8292de85b40d6b2b5fba0f8b2dca359f5b2f821d",
+      "sourceBlob": "e00e2ac22b5d7a263c389a92866a44630e5b442c",
+      "sha256": "4f75fd56e09fec0c9cde5a693652b9870d6689e1aad9f92700bb63545c2afe7d",
+      "cases": 3,
+      "source": "Selected authored anonymous fixture, not general reviewed/private cases."
+    }
+  ],
+  "privateUploadsRead": false,
+  "originalRepositoriesModified": false,
+  "rewardsEnabled": false,
+  "pendingDraftsImported": false
+}

@@ -1,0 +1,15 @@
+import sys,pathlib,json,urllib.request
+sys.path.insert(0,str(pathlib.Path('infra/math-preview').resolve()))
+from release import Release
+base=pathlib.Path('.evidence/math-full-remainder');sha='52e781440b21a406286ac55bbfefdb6e06d119fe';previous='d835f8c7fbd5a341cc30cf44dea5c6dc62f65d12'
+b=json.loads((base/'nas/browser.json').read_text());assert b['status']=='PASS' and len(b['flows'])==255 and b['execution']['head']==sha and b['execution']['dirty'] is False
+r=Release();assert r.c.state['activeRelease']==sha and r.c.state['rollbackRelease']==previous
+before=r.verify(sha,public=True);assert before['library']['thinking']==17
+try:
+ rolled=r.rollback();old=r.verify(previous,public=True);assert old['practiceTasks']==849 and 'library' not in old
+ opener=urllib.request.build_opener(urllib.request.ProxyHandler({}))
+ with opener.open(r.c.state['origin']+'/subjects/math',timeout=10) as page:assert page.status==200 and '<div id="root">' in page.read().decode()
+finally:restored=r.activate(sha,remember=False)
+now=r.verify(sha,public=True);assert now['library']['legacy']==54;r.c.invariance()
+out={'status':'PASS_CAPABILITIES_TO_PRACTICE_TO_CAPABILITIES_HTTP','before':before,'rollback':rolled,'oldRuntime':old,'restored':restored,'finalRuntime':now,'protectedContainersUnchanged':11,'oldSyntheticFilesUnchanged':True,'previousContainerRetained':True,'noRealDataWrites':True}
+(base/'rollback.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps({'status':out['status'],'activeSource':now['buildSha']}))

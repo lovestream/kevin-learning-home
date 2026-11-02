@@ -1,0 +1,23 @@
+{
+  "status": "PASS_ORDINARY_MAC_CHROME_ACTUAL_NAS",
+  "origin": "http://192.168.2.100:38444",
+  "sourceCommit": "52e781440b21a406286ac55bbfefdb6e06d119fe",
+  "browser": "Ordinary Chrome via connected extension, no viewport override",
+  "flow": [
+    "Existing NAS textbook unit opened normally",
+    "Clicked subject navigation to updated three-book home",
+    "Clicked 17 thought cards and opened G3-UP01-TH1",
+    "Clicked both sides remove one box; DOM 3/2 boxes became 2/1",
+    "Undo restored initial state and disabled undo button",
+    "Returned to updated home, left user tab open"
+  ],
+  "warningsBypassed": false,
+  "browserSettingsChanged": false,
+  "authenticationRequired": false,
+  "realDataSubmitted": false,
+  "physicalIPhoneIPad": "NEEDS_USER_ACTION",
+  "screenshots": {
+    "native-thinking.jpg": "b60f43b12f0a4a25fcc2b51edd6e582f081e741aaf48b77586eee1b9146e5cc5",
+    "native-home.jpg": "b3931241d8697fa7a0dc778d08d15b36a127aed31611e3c8927df461a7784173"
+  }
+}

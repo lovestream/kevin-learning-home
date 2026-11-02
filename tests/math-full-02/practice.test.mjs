@@ -13,17 +13,17 @@ import {firstAnswer,submission} from './helpers.mjs';
 const root=process.cwd(),bank=loadPractice(root),source=JSON.parse(fs.readFileSync('docs/implementation/evidence/math-full-02/source.json'));
 const sha=v=>createHash('sha256').update(v).digest('hex');
 const counts=(key,values)=>Object.fromEntries(values.map(v=>[v,source.tasks.filter(t=>t[key]===v).length]));
-test('849 exact frozen tasks, five groups/kinds, 70 lessons, source hashes and strict projection',()=>{
+test('849 versioned authored tasks, five groups/kinds, 70 lessons, source hashes and strict projection',()=>{
  const coverage=JSON.parse(fs.readFileSync('docs/implementation/evidence/math-full-02/tasks-coverage.json'));assert.equal(coverage.status,'PASS');assert.equal(coverage.total,849);assert.equal(coverage.bankSha256,bank.bankSha256);assert.equal(coverage.publicSha256,bank.publicSha256);for(const [p,h]of Object.entries(coverage.execution.files))assert.equal(sha(fs.readFileSync(p)),h,'STALE_PRACTICE_EVIDENCE '+p);
  assert.equal(bank.tasks.size,849);assert.equal(bank.lessons.size,70);assert(source.worktreeUnchanged);
  assert.equal(source.privateBankSha256,bank.bankSha256);assert.equal(source.statusBeforeSha256,source.statusAfterSha256);
  assert.deepEqual(counts('group',groups),{warmup:140,core:249,transfer:143,challenge:73,review:244});
- assert.deepEqual(counts('kind',['number','choice','explanation','expression','fields']),{number:357,choice:93,explanation:335,expression:25,fields:39});
+ assert.deepEqual(counts('kind',['number','choice','explanation','expression','fields']),{number:357,choice:99,explanation:329,expression:25,fields:39});
  for(const r of source.tasks){const t=bank.tasks.get(r.taskId);assert(t);assert.equal(sha(canonical(t.task)),r.sourceTaskSha256);assert.equal(t.lessonId,r.lessonId);assert.equal(t.contentVersion,r.contentVersion);const p=bank.lessons.get(r.lessonId).taskSets[r.group][r.index];assert.equal(p.id,r.taskId);assert.equal(p.prompt,t.task.prompt);assert.equal(p.kind,t.task.kind);assert.deepEqual(p.options,t.task.options);assert.deepEqual(p.diagram,t.task.diagram);assert(!('expected'in p));assert(!('solution'in p));assert(!('hint'in p));assert(!('expectedEvidence'in p.responseSpec));for(const f of p.fields??[])assert(!('expected'in f));assert.throws(()=>publicTaskSchema.parse({...p,expected:'private'}));}
  for(const l of bank.lessons.values())assert.deepEqual(publicLessonSchema.parse(l),l);
  for(const f of source.files)assert.equal(sha(fs.readFileSync(f.target)),f.targetSha256??f.sha256);
 });
-test('all 849 authored golden answers match original pure grader; 335 explanations stay human review',()=>{
+test('all 849 authored golden answers match original pure grader; 329 explanations stay human review',()=>{
  let human=0,deterministic=0;const results=[];
  for(const row of bank.tasks.values()){
   const answer=firstAnswer(row.task),raw=validateTask(row.task,answer),out=gradePractice(bank,submission(row));
@@ -39,7 +39,7 @@ test('all 849 authored golden answers match original pure grader; 335 explanatio
   }
   results.push({negative,taskId:row.task.id,kind:row.task.kind,status:out.status,invalidInput:'PASS',sourceTaskSha256:sha(canonical(row.task))});
  }
- assert.equal(human,335);assert.equal(deterministic,514);fs.mkdirSync('.evidence/math-full-02',{recursive:true});fs.writeFileSync('.evidence/math-full-02/golden.json',JSON.stringify({status:'PASS',total:849,human,deterministic,results},null,2)+'\n');
+ assert.equal(human,329);assert.equal(deterministic,520);fs.mkdirSync('.evidence/math-full-02',{recursive:true});fs.writeFileSync('.evidence/math-full-02/golden.json',JSON.stringify({status:'PASS',total:849,human,deterministic,results},null,2)+'\n');
 });
 test('independent arithmetic fixtures: fractions, Unicode, complete expressions, claim/evidence and units',()=>{
  const number={kind:'number',expected:'1/2'};

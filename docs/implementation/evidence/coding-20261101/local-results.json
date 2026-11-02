@@ -1,0 +1,26 @@
+{
+  "status": "PASS_LOCAL_REAL_FRONTEND_BACKEND",
+  "contentVersion": "2026-11-01.2",
+  "sourceCommit": "d409a021dd8905154d572b53c9802a8c3b2d14d9",
+  "nodeTests": 5,
+  "browserWidths": [
+    1440,
+    1280,
+    768,
+    390,
+    360
+  ],
+  "formalFirstSelfFinalFlows": 60,
+  "unchangedLessons": 69,
+  "unchangedOtherTasks": 837,
+  "allTasks": 849,
+  "openHumanReview": 329,
+  "deterministic": 520,
+  "runtime": "Anonymous memory only; formal auth boundary unchanged.",
+  "sourceCILimitation": {
+    "status": "FAILURE",
+    "run": 41272129841,
+    "reason": "Original template browser gate expects an SVG for the new HTML coding overview. New project must independently verify the four visible authored condition cards; never add a fake SVG or bypass checks."
+  },
+  "selectedHoverContrastRegression": "PASS_ALL_FIVE_WIDTHS"
+}

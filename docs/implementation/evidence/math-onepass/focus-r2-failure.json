@@ -1,0 +1,8 @@
+{
+  "deployedSource": "4fc8ad70457e437fe44c05a7395c2236c3cea87f",
+  "hasFocus": true,
+  "activeElementTag": "<body>",
+  "heading": "<h2 tabindex=\"-1\">四个长度的排列</h2>",
+  "busy": "false",
+  "cause": "requestAnimationFrame ran before React committed the keyed replacement desk; the old focused node was subsequently removed."
+}

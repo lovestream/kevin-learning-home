@@ -1,0 +1,2252 @@
+{
+  "status": "PASS",
+  "deterministic": 432,
+  "human": 17,
+  "rows": [
+    {
+      "taskId": "g4-pv-1",
+      "lessonId": "g4-place-value",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-place-value-why",
+      "lessonId": "g4-place-value",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pv-2",
+      "lessonId": "g4-place-value",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-place-value-model",
+      "lessonId": "g4-place-value",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pv-3",
+      "lessonId": "g4-place-value",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-place-value-reason",
+      "lessonId": "g4-place-value",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pv-4",
+      "lessonId": "g4-place-value",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-place-value-transfer-idea",
+      "lessonId": "g4-place-value",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-re-1",
+      "lessonId": "g4-round-estimate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-round-estimate-why",
+      "lessonId": "g4-round-estimate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-re-2",
+      "lessonId": "g4-round-estimate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-round-estimate-model",
+      "lessonId": "g4-round-estimate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-re-3",
+      "lessonId": "g4-round-estimate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-round-estimate-reason",
+      "lessonId": "g4-round-estimate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-re-4",
+      "lessonId": "g4-round-estimate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-round-estimate-transfer-idea",
+      "lessonId": "g4-round-estimate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-an-1",
+      "lessonId": "g4-angle-measure",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-angle-measure-why",
+      "lessonId": "g4-angle-measure",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-an-2",
+      "lessonId": "g4-angle-measure",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-angle-measure-model",
+      "lessonId": "g4-angle-measure",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-an-3",
+      "lessonId": "g4-angle-measure",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-angle-measure-reason",
+      "lessonId": "g4-angle-measure",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-an-4",
+      "lessonId": "g4-angle-measure",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-angle-measure-transfer-idea",
+      "lessonId": "g4-angle-measure",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mm-1",
+      "lessonId": "g4-multi-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-multi-multiply-why",
+      "lessonId": "g4-multi-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mm-2",
+      "lessonId": "g4-multi-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-multi-multiply-model",
+      "lessonId": "g4-multi-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mm-3",
+      "lessonId": "g4-multi-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-multi-multiply-reason",
+      "lessonId": "g4-multi-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mm-4",
+      "lessonId": "g4-multi-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-multi-multiply-transfer-idea",
+      "lessonId": "g4-multi-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-dv-1",
+      "lessonId": "g4-two-digit-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-two-digit-divide-why",
+      "lessonId": "g4-two-digit-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-dv-2",
+      "lessonId": "g4-two-digit-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-two-digit-divide-model",
+      "lessonId": "g4-two-digit-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-dv-3",
+      "lessonId": "g4-two-digit-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-two-digit-divide-reason",
+      "lessonId": "g4-two-digit-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-dv-4",
+      "lessonId": "g4-two-digit-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-two-digit-divide-transfer-idea",
+      "lessonId": "g4-two-digit-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ol-1",
+      "lessonId": "g4-operation-laws",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-operation-laws-why",
+      "lessonId": "g4-operation-laws",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ol-2",
+      "lessonId": "g4-operation-laws",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-operation-laws-model",
+      "lessonId": "g4-operation-laws",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ol-3",
+      "lessonId": "g4-operation-laws",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-operation-laws-reason",
+      "lessonId": "g4-operation-laws",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ol-4",
+      "lessonId": "g4-operation-laws",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-operation-laws-transfer-idea",
+      "lessonId": "g4-operation-laws",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-qa-1",
+      "lessonId": "g4-quad-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-quad-area-why",
+      "lessonId": "g4-quad-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-qa-2",
+      "lessonId": "g4-quad-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-quad-area-model",
+      "lessonId": "g4-quad-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-qa-3",
+      "lessonId": "g4-quad-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-quad-area-reason",
+      "lessonId": "g4-quad-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-qa-4",
+      "lessonId": "g4-quad-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-quad-area-transfer-idea",
+      "lessonId": "g4-quad-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-au-1",
+      "lessonId": "g4-area-unit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-area-unit-why",
+      "lessonId": "g4-area-unit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-au-2",
+      "lessonId": "g4-area-unit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-area-unit-model",
+      "lessonId": "g4-area-unit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-au-3",
+      "lessonId": "g4-area-unit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-area-unit-reason",
+      "lessonId": "g4-area-unit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-au-4",
+      "lessonId": "g4-area-unit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-area-unit-transfer-idea",
+      "lessonId": "g4-area-unit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-bc-1",
+      "lessonId": "g4-bar-chart",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-bar-chart-why",
+      "lessonId": "g4-bar-chart",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-bc-2",
+      "lessonId": "g4-bar-chart",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-bar-chart-model",
+      "lessonId": "g4-bar-chart",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-bc-3",
+      "lessonId": "g4-bar-chart",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-bar-chart-reason",
+      "lessonId": "g4-bar-chart",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-bc-4",
+      "lessonId": "g4-bar-chart",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-bar-chart-transfer-idea",
+      "lessonId": "g4-bar-chart",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mc-1",
+      "lessonId": "g4-measurement-conversion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-measurement-conversion-why",
+      "lessonId": "g4-measurement-conversion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mc-2",
+      "lessonId": "g4-measurement-conversion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-measurement-conversion-model",
+      "lessonId": "g4-measurement-conversion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mc-3",
+      "lessonId": "g4-measurement-conversion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-measurement-conversion-reason",
+      "lessonId": "g4-measurement-conversion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mc-4",
+      "lessonId": "g4-measurement-conversion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-measurement-conversion-transfer-idea",
+      "lessonId": "g4-measurement-conversion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-cr-1",
+      "lessonId": "g4-chicken-rabbit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-chicken-rabbit-why",
+      "lessonId": "g4-chicken-rabbit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-cr-2",
+      "lessonId": "g4-chicken-rabbit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-chicken-rabbit-model",
+      "lessonId": "g4-chicken-rabbit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-cr-3",
+      "lessonId": "g4-chicken-rabbit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-chicken-rabbit-reason",
+      "lessonId": "g4-chicken-rabbit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-cr-4",
+      "lessonId": "g4-chicken-rabbit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-chicken-rabbit-transfer-idea",
+      "lessonId": "g4-chicken-rabbit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ro-1",
+      "lessonId": "g4-route-enumeration",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-route-enumeration-why",
+      "lessonId": "g4-route-enumeration",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ro-2",
+      "lessonId": "g4-route-enumeration",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-route-enumeration-model",
+      "lessonId": "g4-route-enumeration",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ro-3",
+      "lessonId": "g4-route-enumeration",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-route-enumeration-reason",
+      "lessonId": "g4-route-enumeration",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ro-4",
+      "lessonId": "g4-route-enumeration",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-route-enumeration-transfer-idea",
+      "lessonId": "g4-route-enumeration",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pe-1",
+      "lessonId": "g4-period-remainder",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-period-remainder-why",
+      "lessonId": "g4-period-remainder",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pe-2",
+      "lessonId": "g4-period-remainder",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-period-remainder-model",
+      "lessonId": "g4-period-remainder",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pe-3",
+      "lessonId": "g4-period-remainder",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-period-remainder-reason",
+      "lessonId": "g4-period-remainder",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pe-4",
+      "lessonId": "g4-period-remainder",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-period-remainder-transfer-idea",
+      "lessonId": "g4-period-remainder",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-wb-1",
+      "lessonId": "g4-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-working-backward-why",
+      "lessonId": "g4-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-wb-2",
+      "lessonId": "g4-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-working-backward-model",
+      "lessonId": "g4-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-wb-3",
+      "lessonId": "g4-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-working-backward-reason",
+      "lessonId": "g4-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-wb-4",
+      "lessonId": "g4-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-working-backward-transfer-idea",
+      "lessonId": "g4-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ph-1",
+      "lessonId": "g4-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pigeonhole-why",
+      "lessonId": "g4-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ph-2",
+      "lessonId": "g4-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pigeonhole-model",
+      "lessonId": "g4-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ph-3",
+      "lessonId": "g4-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pigeonhole-reason",
+      "lessonId": "g4-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ph-4",
+      "lessonId": "g4-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pigeonhole-transfer-idea",
+      "lessonId": "g4-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ag-1",
+      "lessonId": "g4-age-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-age-invariant-why",
+      "lessonId": "g4-age-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ag-2",
+      "lessonId": "g4-age-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-age-invariant-model",
+      "lessonId": "g4-age-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ag-3",
+      "lessonId": "g4-age-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-age-invariant-reason",
+      "lessonId": "g4-age-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ag-4",
+      "lessonId": "g4-age-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-age-invariant-transfer-idea",
+      "lessonId": "g4-age-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ps-1",
+      "lessonId": "g4-pairing-sums",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pairing-sums-why",
+      "lessonId": "g4-pairing-sums",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ps-2",
+      "lessonId": "g4-pairing-sums",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pairing-sums-model",
+      "lessonId": "g4-pairing-sums",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ps-3",
+      "lessonId": "g4-pairing-sums",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pairing-sums-reason",
+      "lessonId": "g4-pairing-sums",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-ps-4",
+      "lessonId": "g4-pairing-sums",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-pairing-sums-transfer-idea",
+      "lessonId": "g4-pairing-sums",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mp-1",
+      "lessonId": "g4-matchstick-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-matchstick-pattern-why",
+      "lessonId": "g4-matchstick-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mp-2",
+      "lessonId": "g4-matchstick-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-matchstick-pattern-model",
+      "lessonId": "g4-matchstick-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mp-3",
+      "lessonId": "g4-matchstick-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-matchstick-pattern-reason",
+      "lessonId": "g4-matchstick-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-mp-4",
+      "lessonId": "g4-matchstick-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g4-matchstick-pattern-transfer-idea",
+      "lessonId": "g4-matchstick-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dm-1",
+      "lessonId": "g5-decimal-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-decimal-multiply-why",
+      "lessonId": "g5-decimal-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dm-2",
+      "lessonId": "g5-decimal-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-decimal-multiply-model",
+      "lessonId": "g5-decimal-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dm-3",
+      "lessonId": "g5-decimal-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-decimal-multiply-reason",
+      "lessonId": "g5-decimal-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dm-4",
+      "lessonId": "g5-decimal-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-decimal-multiply-transfer-idea",
+      "lessonId": "g5-decimal-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dd-1",
+      "lessonId": "g5-decimal-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-decimal-divide-why",
+      "lessonId": "g5-decimal-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dd-2",
+      "lessonId": "g5-decimal-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-decimal-divide-model",
+      "lessonId": "g5-decimal-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dd-3",
+      "lessonId": "g5-decimal-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-decimal-divide-reason",
+      "lessonId": "g5-decimal-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dd-4",
+      "lessonId": "g5-decimal-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-decimal-divide-transfer-idea",
+      "lessonId": "g5-decimal-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fe-1",
+      "lessonId": "g5-fraction-equivalence",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fraction-equivalence-why",
+      "lessonId": "g5-fraction-equivalence",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fe-2",
+      "lessonId": "g5-fraction-equivalence",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fraction-equivalence-model",
+      "lessonId": "g5-fraction-equivalence",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fe-3",
+      "lessonId": "g5-fraction-equivalence",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fraction-equivalence-reason",
+      "lessonId": "g5-fraction-equivalence",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fe-4",
+      "lessonId": "g5-fraction-equivalence",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fraction-equivalence-transfer-idea",
+      "lessonId": "g5-fraction-equivalence",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ca-1",
+      "lessonId": "g5-composite-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-composite-area-why",
+      "lessonId": "g5-composite-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ca-2",
+      "lessonId": "g5-composite-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-composite-area-model",
+      "lessonId": "g5-composite-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ca-3",
+      "lessonId": "g5-composite-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-composite-area-reason",
+      "lessonId": "g5-composite-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ca-4",
+      "lessonId": "g5-composite-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-composite-area-transfer-idea",
+      "lessonId": "g5-composite-area",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-cv-1",
+      "lessonId": "g5-cuboid-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-cuboid-volume-why",
+      "lessonId": "g5-cuboid-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-cv-2",
+      "lessonId": "g5-cuboid-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-cuboid-volume-model",
+      "lessonId": "g5-cuboid-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-cv-3",
+      "lessonId": "g5-cuboid-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-cuboid-volume-reason",
+      "lessonId": "g5-cuboid-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-cv-4",
+      "lessonId": "g5-cuboid-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-cuboid-volume-transfer-idea",
+      "lessonId": "g5-cuboid-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-eq-1",
+      "lessonId": "g5-equation-balance",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-equation-balance-why",
+      "lessonId": "g5-equation-balance",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-eq-2",
+      "lessonId": "g5-equation-balance",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-equation-balance-model",
+      "lessonId": "g5-equation-balance",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-eq-3",
+      "lessonId": "g5-equation-balance",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-equation-balance-reason",
+      "lessonId": "g5-equation-balance",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-eq-4",
+      "lessonId": "g5-equation-balance",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-equation-balance-transfer-idea",
+      "lessonId": "g5-equation-balance",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-coo-1",
+      "lessonId": "g5-coordinate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-coordinate-why",
+      "lessonId": "g5-coordinate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-coo-2",
+      "lessonId": "g5-coordinate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-coordinate-model",
+      "lessonId": "g5-coordinate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-coo-3",
+      "lessonId": "g5-coordinate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-coordinate-reason",
+      "lessonId": "g5-coordinate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-coo-4",
+      "lessonId": "g5-coordinate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-coordinate-transfer-idea",
+      "lessonId": "g5-coordinate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-pr-1",
+      "lessonId": "g5-probability",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-probability-why",
+      "lessonId": "g5-probability",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-pr-2",
+      "lessonId": "g5-probability",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-probability-model",
+      "lessonId": "g5-probability",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-pr-3",
+      "lessonId": "g5-probability",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-probability-reason",
+      "lessonId": "g5-probability",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-pr-4",
+      "lessonId": "g5-probability",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-probability-transfer-idea",
+      "lessonId": "g5-probability",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fp-1",
+      "lessonId": "g5-factors-primes",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-factors-primes-why",
+      "lessonId": "g5-factors-primes",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fp-2",
+      "lessonId": "g5-factors-primes",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-factors-primes-model",
+      "lessonId": "g5-factors-primes",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fp-3",
+      "lessonId": "g5-factors-primes",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-factors-primes-reason",
+      "lessonId": "g5-factors-primes",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fp-4",
+      "lessonId": "g5-factors-primes",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-factors-primes-transfer-idea",
+      "lessonId": "g5-factors-primes",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fm-1",
+      "lessonId": "g5-figure-motion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-figure-motion-why",
+      "lessonId": "g5-figure-motion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fm-2",
+      "lessonId": "g5-figure-motion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-figure-motion-model",
+      "lessonId": "g5-figure-motion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fm-3",
+      "lessonId": "g5-figure-motion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-figure-motion-reason",
+      "lessonId": "g5-figure-motion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-fm-4",
+      "lessonId": "g5-figure-motion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-figure-motion-transfer-idea",
+      "lessonId": "g5-figure-motion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-rd-1",
+      "lessonId": "g5-remainder-digit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-remainder-digit-why",
+      "lessonId": "g5-remainder-digit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-rd-2",
+      "lessonId": "g5-remainder-digit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-remainder-digit-model",
+      "lessonId": "g5-remainder-digit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-rd-3",
+      "lessonId": "g5-remainder-digit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-remainder-digit-reason",
+      "lessonId": "g5-remainder-digit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-rd-4",
+      "lessonId": "g5-remainder-digit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-remainder-digit-transfer-idea",
+      "lessonId": "g5-remainder-digit",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ct-1",
+      "lessonId": "g5-counting-tree",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-counting-tree-why",
+      "lessonId": "g5-counting-tree",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ct-2",
+      "lessonId": "g5-counting-tree",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-counting-tree-model",
+      "lessonId": "g5-counting-tree",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ct-3",
+      "lessonId": "g5-counting-tree",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-counting-tree-reason",
+      "lessonId": "g5-counting-tree",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ct-4",
+      "lessonId": "g5-counting-tree",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-counting-tree-transfer-idea",
+      "lessonId": "g5-counting-tree",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-av-1",
+      "lessonId": "g5-average-optimization",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-average-optimization-why",
+      "lessonId": "g5-average-optimization",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-av-2",
+      "lessonId": "g5-average-optimization",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-average-optimization-model",
+      "lessonId": "g5-average-optimization",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-av-3",
+      "lessonId": "g5-average-optimization",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-average-optimization-reason",
+      "lessonId": "g5-average-optimization",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-av-4",
+      "lessonId": "g5-average-optimization",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-average-optimization-transfer-idea",
+      "lessonId": "g5-average-optimization",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ai-1",
+      "lessonId": "g5-area-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-area-invariant-why",
+      "lessonId": "g5-area-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ai-2",
+      "lessonId": "g5-area-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-area-invariant-model",
+      "lessonId": "g5-area-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ai-3",
+      "lessonId": "g5-area-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-area-invariant-reason",
+      "lessonId": "g5-area-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ai-4",
+      "lessonId": "g5-area-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-area-invariant-transfer-idea",
+      "lessonId": "g5-area-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-wr-1",
+      "lessonId": "g5-work-rate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-work-rate-why",
+      "lessonId": "g5-work-rate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-wr-2",
+      "lessonId": "g5-work-rate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-work-rate-model",
+      "lessonId": "g5-work-rate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-wr-3",
+      "lessonId": "g5-work-rate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-work-rate-reason",
+      "lessonId": "g5-work-rate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-wr-4",
+      "lessonId": "g5-work-rate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-work-rate-transfer-idea",
+      "lessonId": "g5-work-rate",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ph-1",
+      "lessonId": "g5-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-pigeonhole-why",
+      "lessonId": "g5-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ph-2",
+      "lessonId": "g5-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-pigeonhole-model",
+      "lessonId": "g5-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ph-3",
+      "lessonId": "g5-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-pigeonhole-reason",
+      "lessonId": "g5-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-ph-4",
+      "lessonId": "g5-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-pigeonhole-transfer-idea",
+      "lessonId": "g5-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-rv-1",
+      "lessonId": "g5-reverse-equation",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-reverse-equation-why",
+      "lessonId": "g5-reverse-equation",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-rv-2",
+      "lessonId": "g5-reverse-equation",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-reverse-equation-model",
+      "lessonId": "g5-reverse-equation",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-rv-3",
+      "lessonId": "g5-reverse-equation",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-reverse-equation-reason",
+      "lessonId": "g5-reverse-equation",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-rv-4",
+      "lessonId": "g5-reverse-equation",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-reverse-equation-transfer-idea",
+      "lessonId": "g5-reverse-equation",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dp-1",
+      "lessonId": "g5-digit-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-digit-pattern-why",
+      "lessonId": "g5-digit-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dp-2",
+      "lessonId": "g5-digit-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-digit-pattern-model",
+      "lessonId": "g5-digit-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dp-3",
+      "lessonId": "g5-digit-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-digit-pattern-reason",
+      "lessonId": "g5-digit-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-dp-4",
+      "lessonId": "g5-digit-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g5-digit-pattern-transfer-idea",
+      "lessonId": "g5-digit-pattern",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fm-1",
+      "lessonId": "g6-fraction-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fraction-multiply-why",
+      "lessonId": "g6-fraction-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fm-2",
+      "lessonId": "g6-fraction-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fraction-multiply-model",
+      "lessonId": "g6-fraction-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fm-3",
+      "lessonId": "g6-fraction-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fraction-multiply-reason",
+      "lessonId": "g6-fraction-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fm-4",
+      "lessonId": "g6-fraction-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fraction-multiply-transfer-idea",
+      "lessonId": "g6-fraction-multiply",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fd-1",
+      "lessonId": "g6-fraction-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fraction-divide-why",
+      "lessonId": "g6-fraction-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fd-2",
+      "lessonId": "g6-fraction-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fraction-divide-model",
+      "lessonId": "g6-fraction-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fd-3",
+      "lessonId": "g6-fraction-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fraction-divide-reason",
+      "lessonId": "g6-fraction-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fd-4",
+      "lessonId": "g6-fraction-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-fraction-divide-transfer-idea",
+      "lessonId": "g6-fraction-divide",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ra-1",
+      "lessonId": "g6-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ratio-why",
+      "lessonId": "g6-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ra-2",
+      "lessonId": "g6-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ratio-model",
+      "lessonId": "g6-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ra-3",
+      "lessonId": "g6-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ratio-reason",
+      "lessonId": "g6-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ra-4",
+      "lessonId": "g6-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ratio-transfer-idea",
+      "lessonId": "g6-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pc-1",
+      "lessonId": "g6-percent",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-percent-why",
+      "lessonId": "g6-percent",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pc-2",
+      "lessonId": "g6-percent",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-percent-model",
+      "lessonId": "g6-percent",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pc-3",
+      "lessonId": "g6-percent",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-percent-reason",
+      "lessonId": "g6-percent",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pc-4",
+      "lessonId": "g6-percent",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-percent-transfer-idea",
+      "lessonId": "g6-percent",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ci-1",
+      "lessonId": "g6-circle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-circle-why",
+      "lessonId": "g6-circle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ci-2",
+      "lessonId": "g6-circle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-circle-model",
+      "lessonId": "g6-circle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ci-3",
+      "lessonId": "g6-circle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-circle-reason",
+      "lessonId": "g6-circle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ci-4",
+      "lessonId": "g6-circle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-circle-transfer-idea",
+      "lessonId": "g6-circle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sd-1",
+      "lessonId": "g6-sector-data",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sector-data-why",
+      "lessonId": "g6-sector-data",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sd-2",
+      "lessonId": "g6-sector-data",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sector-data-model",
+      "lessonId": "g6-sector-data",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sd-3",
+      "lessonId": "g6-sector-data",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sector-data-reason",
+      "lessonId": "g6-sector-data",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sd-4",
+      "lessonId": "g6-sector-data",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sector-data-transfer-idea",
+      "lessonId": "g6-sector-data",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-nn-1",
+      "lessonId": "g6-negative-number",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-negative-number-why",
+      "lessonId": "g6-negative-number",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-nn-2",
+      "lessonId": "g6-negative-number",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-negative-number-model",
+      "lessonId": "g6-negative-number",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-nn-3",
+      "lessonId": "g6-negative-number",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-negative-number-reason",
+      "lessonId": "g6-negative-number",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-nn-4",
+      "lessonId": "g6-negative-number",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-negative-number-transfer-idea",
+      "lessonId": "g6-negative-number",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-cy-1",
+      "lessonId": "g6-cylinder-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-cylinder-volume-why",
+      "lessonId": "g6-cylinder-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-cy-2",
+      "lessonId": "g6-cylinder-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-cylinder-volume-model",
+      "lessonId": "g6-cylinder-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-cy-3",
+      "lessonId": "g6-cylinder-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-cylinder-volume-reason",
+      "lessonId": "g6-cylinder-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-cy-4",
+      "lessonId": "g6-cylinder-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-cylinder-volume-transfer-idea",
+      "lessonId": "g6-cylinder-volume",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-po-1",
+      "lessonId": "g6-proportion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-proportion-why",
+      "lessonId": "g6-proportion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-po-2",
+      "lessonId": "g6-proportion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-proportion-model",
+      "lessonId": "g6-proportion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-po-3",
+      "lessonId": "g6-proportion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-proportion-reason",
+      "lessonId": "g6-proportion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-po-4",
+      "lessonId": "g6-proportion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-proportion-transfer-idea",
+      "lessonId": "g6-proportion",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-am-1",
+      "lessonId": "g6-algebra-model",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-algebra-model-why",
+      "lessonId": "g6-algebra-model",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-am-2",
+      "lessonId": "g6-algebra-model",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-algebra-model-model",
+      "lessonId": "g6-algebra-model",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-am-3",
+      "lessonId": "g6-algebra-model",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-algebra-model-reason",
+      "lessonId": "g6-algebra-model",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-am-4",
+      "lessonId": "g6-algebra-model",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-algebra-model-transfer-idea",
+      "lessonId": "g6-algebra-model",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-co-1",
+      "lessonId": "g6-combinatorics",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-combinatorics-why",
+      "lessonId": "g6-combinatorics",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-co-2",
+      "lessonId": "g6-combinatorics",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-combinatorics-model",
+      "lessonId": "g6-combinatorics",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-co-3",
+      "lessonId": "g6-combinatorics",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-combinatorics-reason",
+      "lessonId": "g6-combinatorics",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-co-4",
+      "lessonId": "g6-combinatorics",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-combinatorics-transfer-idea",
+      "lessonId": "g6-combinatorics",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ep-1",
+      "lessonId": "g6-extreme-principle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-extreme-principle-why",
+      "lessonId": "g6-extreme-principle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ep-2",
+      "lessonId": "g6-extreme-principle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-extreme-principle-model",
+      "lessonId": "g6-extreme-principle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ep-3",
+      "lessonId": "g6-extreme-principle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-extreme-principle-reason",
+      "lessonId": "g6-extreme-principle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-ep-4",
+      "lessonId": "g6-extreme-principle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-extreme-principle-transfer-idea",
+      "lessonId": "g6-extreme-principle",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pi-1",
+      "lessonId": "g6-parity-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-parity-invariant-why",
+      "lessonId": "g6-parity-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pi-2",
+      "lessonId": "g6-parity-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-parity-invariant-model",
+      "lessonId": "g6-parity-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pi-3",
+      "lessonId": "g6-parity-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-parity-invariant-reason",
+      "lessonId": "g6-parity-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pi-4",
+      "lessonId": "g6-parity-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-parity-invariant-transfer-idea",
+      "lessonId": "g6-parity-invariant",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sr-1",
+      "lessonId": "g6-speed-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-speed-ratio-why",
+      "lessonId": "g6-speed-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sr-2",
+      "lessonId": "g6-speed-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-speed-ratio-model",
+      "lessonId": "g6-speed-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sr-3",
+      "lessonId": "g6-speed-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-speed-ratio-reason",
+      "lessonId": "g6-speed-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-sr-4",
+      "lessonId": "g6-speed-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-speed-ratio-transfer-idea",
+      "lessonId": "g6-speed-ratio",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-gt-1",
+      "lessonId": "g6-geometry-transform",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-geometry-transform-why",
+      "lessonId": "g6-geometry-transform",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-gt-2",
+      "lessonId": "g6-geometry-transform",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-geometry-transform-model",
+      "lessonId": "g6-geometry-transform",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-gt-3",
+      "lessonId": "g6-geometry-transform",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-geometry-transform-reason",
+      "lessonId": "g6-geometry-transform",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-gt-4",
+      "lessonId": "g6-geometry-transform",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-geometry-transform-transfer-idea",
+      "lessonId": "g6-geometry-transform",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-bw-1",
+      "lessonId": "g6-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-working-backward-why",
+      "lessonId": "g6-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-bw-2",
+      "lessonId": "g6-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-working-backward-model",
+      "lessonId": "g6-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-bw-3",
+      "lessonId": "g6-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-working-backward-reason",
+      "lessonId": "g6-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-bw-4",
+      "lessonId": "g6-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-working-backward-transfer-idea",
+      "lessonId": "g6-working-backward",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pg-1",
+      "lessonId": "g6-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pigeonhole-why",
+      "lessonId": "g6-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pg-2",
+      "lessonId": "g6-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pigeonhole-model",
+      "lessonId": "g6-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pg-3",
+      "lessonId": "g6-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pigeonhole-reason",
+      "lessonId": "g6-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pg-4",
+      "lessonId": "g6-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pigeonhole-transfer-idea",
+      "lessonId": "g6-pigeonhole",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pr-1",
+      "lessonId": "g6-probability-strategy",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-probability-strategy-why",
+      "lessonId": "g6-probability-strategy",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pr-2",
+      "lessonId": "g6-probability-strategy",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-probability-strategy-model",
+      "lessonId": "g6-probability-strategy",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pr-3",
+      "lessonId": "g6-probability-strategy",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-probability-strategy-reason",
+      "lessonId": "g6-probability-strategy",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-pr-4",
+      "lessonId": "g6-probability-strategy",
+      "status": "correct"
+    },
+    {
+      "taskId": "g6-probability-strategy-transfer-idea",
+      "lessonId": "g6-probability-strategy",
+      "status": "correct"
+    },
+    {
+      "taskId": "G3-U01-TH1-explain",
+      "lessonId": "G3-U01-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-U02-TH1-explain",
+      "lessonId": "G3-U02-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-U03-TH1-explain",
+      "lessonId": "G3-U03-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-UP01-TH1-explain",
+      "lessonId": "G3-UP01-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-U04-TH1-explain",
+      "lessonId": "G3-U04-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-UP02-TH1-explain",
+      "lessonId": "G3-UP02-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-U05-TH1-explain",
+      "lessonId": "G3-U05-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-U06-TH1-explain",
+      "lessonId": "G3-U06-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-U07-TH1-explain",
+      "lessonId": "G3-U07-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-L01-TH1-explain",
+      "lessonId": "G3-L01-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-L02-TH1-explain",
+      "lessonId": "G3-L02-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-L03-TH1-explain",
+      "lessonId": "G3-L03-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-L04-TH1-explain",
+      "lessonId": "G3-L04-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-L05-TH1-explain",
+      "lessonId": "G3-L05-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-LP01-TH1-explain",
+      "lessonId": "G3-LP01-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-L06-TH1-explain",
+      "lessonId": "G3-L06-TH1",
+      "status": "pendingReview"
+    },
+    {
+      "taskId": "G3-L07-TH1-explain",
+      "lessonId": "G3-L07-TH1",
+      "status": "pendingReview"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "nas": false,
+  "origin": "http://127.0.0.1:36175",
+  "expectedSha": null,
+  "rows": [
+    {
+      "id": "G3-U01-B01",
+      "kind": "primary",
+      "pages": 4,
+      "requiredTexts": 20,
+      "bytes": 637413,
+      "closedTeachingIncluded": true,
+      "screenStateRestored": true
+    },
+    {
+      "id": "G3-U04-B01",
+      "kind": "primary",
+      "pages": 4,
+      "requiredTexts": 20,
+      "bytes": 526618,
+      "closedTeachingIncluded": true,
+      "screenStateRestored": true
+    },
+    {
+      "id": "G3-U06-B01",
+      "kind": "primary",
+      "pages": 3,
+      "requiredTexts": 20,
+      "bytes": 491515,
+      "closedTeachingIncluded": true,
+      "screenStateRestored": true
+    },
+    {
+      "id": "g4-angle-measure",
+      "kind": "legacy",
+      "pages": 3,
+      "requiredTexts": 6,
+      "bytes": 488924,
+      "explicitPrintLoadsAuthoredExample": true
+    },
+    {
+      "id": "g5-cuboid-volume",
+      "kind": "legacy",
+      "pages": 3,
+      "requiredTexts": 6,
+      "bytes": 503960,
+      "explicitPrintLoadsAuthoredExample": true
+    },
+    {
+      "id": "g6-proportion",
+      "kind": "legacy",
+      "pages": 3,
+      "requiredTexts": 6,
+      "bytes": 508209,
+      "explicitPrintLoadsAuthoredExample": true
+    }
+  ],
+  "physicalPrinter": "NOT_TESTED"
+}

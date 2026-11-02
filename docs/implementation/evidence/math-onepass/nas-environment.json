@@ -1,0 +1,12 @@
+{
+  "architecture": "x86_64",
+  "model": "DS918+",
+  "DSM": {
+    "majorversion": "7",
+    "minorversion": "1",
+    "productversion": "7.1.1",
+    "buildnumber": "42962",
+    "smallfixnumber": "6"
+  },
+  "docker": "20.10.3"
+}

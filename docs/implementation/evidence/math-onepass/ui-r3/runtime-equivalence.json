@@ -1,0 +1,7 @@
+{
+  "status": "PASS_EVIDENCE_ONLY_COMMIT_RUNTIME_EQUIVALENCE",
+  "deployedSource": "d0dfd026a238a328743468cb5fba924ecde67526",
+  "comparisonTarget": "Final archive HEAD and both CI links in PR22 body",
+  "comparedFiles": 281,
+  "changedRuntimeOrValidationSource": []
+}

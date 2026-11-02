@@ -1,0 +1,3666 @@
+{
+  "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "privateBankSha256": "8019913ea0756db1351363475ace2d72c53e9ed982d418092779456f6479ad8d",
+  "worktreeUnchanged": true,
+  "statusBeforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "statusAfterSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "files": [
+    {
+      "path": "scripts/course-framework.mjs",
+      "sha256": "a2636123db19fc46d6d72948d391b62c18dd64aa0cc84fcee550b0787b5ea67e",
+      "gitBlob": "5a88d5536e948df89c3ffe9415599e6622f6e197"
+    },
+    {
+      "path": "scripts/build-upper-primary-catalog.mjs",
+      "sha256": "cfebd44896d669e0ec7267e62e103f0fa85276e7fa43afe4fbcc638837c70e02",
+      "gitBlob": "08b386c1c0805dd5d1923ae53b779f747f462166"
+    },
+    {
+      "path": "content/pilot/thinking-hints.mjs",
+      "sha256": "f73500b4109896babcfd8a0bbe302737b3562fcf25c986c2839d20cf71f6fbde",
+      "gitBlob": "3af5f1373cce1afd1bcd87d3c3885d728edbd0da"
+    },
+    {
+      "path": "content/pilot/thinking-publication.mjs",
+      "sha256": "ce45088c0a3acc22dfebddf59fd4f252d0432c83cf26d83f00c16eb027e66102",
+      "gitBlob": "9ed5e01359f414eeee4aea54d6f8d35da0da3d68"
+    },
+    {
+      "path": "content/pilot/thinking-source.mjs",
+      "sha256": "844655d8993e657663ec2d90c5e5f0d2bccce4e181cad6859ad45b1102579437",
+      "gitBlob": "5c4595fd6c303b3f57f214938c90bf8bb5cfde68"
+    },
+    {
+      "path": "content/course-plan-v2/grade-3-thinking.json",
+      "sha256": "457b794d9b418d20550be510b598a469af972dcd559c6c797b9f7851c398b7ad",
+      "gitBlob": "2c0b0b01e43adc79345620ce3e193987f7d85c92"
+    },
+    {
+      "path": "content/pilot/methods.json",
+      "sha256": "f91720f95a0de52583579f0300ccc952adc37eb137464912a93bd0986151025c",
+      "gitBlob": "6195041aea454215121ba7069a2e5de5b80a4842"
+    },
+    {
+      "path": "shared/inverse-index.mjs",
+      "sha256": "a33e81a9c440b1efaef4f151f0699dd6a2a5dc50c8987df27e3dde511e4d7306",
+      "gitBlob": "3e050ba3ec23451720576ead3636ee9b0d81bf0d"
+    },
+    {
+      "path": "content/detective/seed-cases.mjs",
+      "sha256": "e3dd33b4507e491c1ee5c1ad5a1365823777c7c73990cebcaf05beaa06ef4990",
+      "gitBlob": "430f532d361e8734be797a74ebc4675357a4e375"
+    },
+    {
+      "path": "src/MathLab.tsx",
+      "sha256": "4634d9d88af25f2369aea87daf576e9c29516c4d7c879f9dc84baeb47104d6d4",
+      "gitBlob": "e4a7899a8b7c61a0068a2f20879790ca113dc1ab"
+    },
+    {
+      "path": "src/thinking/ThinkingFigure.tsx",
+      "sha256": "d20026952c99cd2a915efb83976c798240d1b21b92190342147447db4be23418",
+      "gitBlob": "0d0f40ca4f3ae9696122946ca63f4863ac562102"
+    },
+    {
+      "path": "src/thinking/ThinkingTools.tsx",
+      "sha256": "e263f07f2a5e29822eccc9cfa0ff205c82ee04a726b2bf2fc4729a0927359e80",
+      "gitBlob": "6cac76bbb2986e1e6e1eb1717d2f9d12f6ed2de0"
+    },
+    {
+      "path": "shared/thinking-tools.mjs",
+      "sha256": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+      "gitBlob": "e5851e6033ea406410e94ad1f37bacb751bfb2ee"
+    },
+    {
+      "path": "shared/thinking-tools.d.mts",
+      "sha256": "120839c5f59b91befccb9e8262464f55c518cc642ec27861d14a5152dd02b02d",
+      "gitBlob": "efc96d0ab1b998cd097a3087bdf088498a6962b9"
+    },
+    {
+      "path": "src/detective/DetectiveFigure.tsx",
+      "sha256": "7187166b18b460f59c2b835184dffccabaff4c399871ce6b475d6c72b28f3289",
+      "gitBlob": "0f7aaea0b5068f215e85e9c1b670ef40923c73b3"
+    },
+    {
+      "path": "shared/detective-presentation.mjs",
+      "sha256": "da671a625a6ff5421a28fa2a0277dc996df69249e222a0eb0f6f72f8bb237d55",
+      "gitBlob": "a96a86f683f99b9b7de14dfa4b0f74ed333a9324"
+    },
+    {
+      "path": "shared/detective-presentation.d.mts",
+      "sha256": "f78f1324a837fbc73397b24cf32d3d5b0e5b17087adc882e319689cd1e38218f",
+      "gitBlob": "505ddb9c7ae93466d6121854895453b581d96012"
+    },
+    {
+      "path": "shared/detective-model.mjs",
+      "sha256": "45f47afc66deadb294a46aa9b78e121c1eabb0d3c43fd508d2d187996643bf67",
+      "gitBlob": "38b59cef4a2c4f799fbe3aaf077de20362c0ab69"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "695c59b5b91f1f3ff9e5f88c4643f5e8694670a7b2cf635eb1d42ffd55de1e9b",
+      "gitBlob": "fa96ae9a27e40d2838946376615b0e7ff32ab7be"
+    },
+    {
+      "path": "src/thinking/thinking.css",
+      "sha256": "b76adedbf66900fa060ce8ad7dbca8d98a7271941afdc18999fc423764e075be",
+      "gitBlob": "84eb2748c6ec7dc3694289a089007fb17fe70540"
+    },
+    {
+      "path": "content/grade-3/legacy-seed.json",
+      "sha256": "9397cdcb9733f520922008406b87ce82cd3838f02e4617389bc28473455e956c",
+      "gitBlob": "0f27dc05a7053511edf18c265d3244f66f9cf593"
+    },
+    {
+      "path": "content/Kevin_数学课程结构清单.json",
+      "sha256": "3da1bda062fc7b813c5cc3ddd12f67a4947568620521be4690853e8961f0be37",
+      "gitBlob": "6c8d02e97eb09ed4d546b3ba52198082007944c4"
+    },
+    {
+      "path": "server/index.mjs",
+      "sha256": "d92c4d20d219925f7a615f75b0123ed6f197e95fd5c1859044d42dba3036934d",
+      "gitBlob": "6481d9d16356cb47d2783b83ea89eae3959a6899"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "c10e8a8edbb5e60212205c0ad1c1a508e098ca1d947ddc835961281afc13fcea",
+      "gitBlob": "4dbc11fc4e317d738cb25837814cefab08ea7962"
+    },
+    {
+      "path": "src/learningMap.ts",
+      "sha256": "dd7220e876b6441f4b5054bb18a99876356c171ea23bc44b10fa3d4c916c3445",
+      "gitBlob": "81d322ad0a5c4a96e0919798d44d528c0cce54fa"
+    },
+    {
+      "path": "src/MethodsView.tsx",
+      "sha256": "404c126d262520d5e245edc5f436dc1e223ca9678cfc79e76bcec8d6183500b1",
+      "gitBlob": "a70bfec5ef059a9b0212a86a93d590a34fac25bc"
+    },
+    {
+      "path": "src/LearningReviewView.tsx",
+      "sha256": "129b1b203ea1392ba2000cf75e7ccfce4e9b449cd2f9ad0bbeef0e0db9475e2d",
+      "gitBlob": "7c5e1536a31709cfe5ec8668f33cac1d2ad60b1e"
+    },
+    {
+      "path": "src/InversePracticeIndex.tsx",
+      "sha256": "1aad5d622940cfa71e59004997b4664a1ec86f197c59a74653b66bb6b6a55f90",
+      "gitBlob": "cac5084eeb2a233041928a9b5df0f92bcf1c90c3"
+    }
+  ],
+  "targets": [
+    {
+      "source": "src/MathLab.tsx",
+      "target": "apps/preview/library/source/MathLab.tsx",
+      "sha256": "7698632bd75fa7cc3d17fd3c7f4acfef35dc336d0a83a07150382deb39dbc09e",
+      "adaptation": "legacy three-digit place-value branch replaced by audited multi-digit PlaceValueLab; other models unchanged"
+    },
+    {
+      "source": "src/thinking/ThinkingFigure.tsx",
+      "target": "apps/preview/library/source/ThinkingFigure.tsx",
+      "sha256": "a03163737c92732d2996a7a10573ec7468ee23fd4fc2a374c268bc48ee93ee7c",
+      "adaptation": "type/import paths; temporary-mode copy; exclude unused inbox helper; math/figure algorithms unchanged"
+    },
+    {
+      "source": "src/thinking/ThinkingTools.tsx",
+      "target": "apps/preview/library/source/ThinkingTools.tsx",
+      "sha256": "1f3874eb9ec84616dac17c4bbc462a8df023beb320a49764b4eaa3d75dd3173e",
+      "adaptation": "type/import paths; temporary-mode copy; exclude unused inbox helper; math/figure algorithms unchanged"
+    },
+    {
+      "source": "shared/thinking-tools.mjs",
+      "target": "apps/preview/library/source/thinking-tools.mjs",
+      "sha256": "7f554f16d08abd060aef71fe93560fdf3610e1cbe8ee23e67f382661ce4f8f6e",
+      "adaptation": "type/import paths; temporary-mode copy; exclude unused inbox helper; math/figure algorithms unchanged"
+    },
+    {
+      "source": "shared/thinking-tools.d.mts",
+      "target": "apps/preview/library/source/thinking-tools.d.mts",
+      "sha256": "120839c5f59b91befccb9e8262464f55c518cc642ec27861d14a5152dd02b02d",
+      "adaptation": "type/import paths; temporary-mode copy; exclude unused inbox helper; math/figure algorithms unchanged"
+    },
+    {
+      "source": "src/detective/DetectiveFigure.tsx",
+      "target": "apps/preview/library/source/DetectiveFigure.tsx",
+      "sha256": "9555812729d566ed446d3d04be34b6db4b920c208083a311a8f9c9ffb24e6fe3",
+      "adaptation": "type/import paths; temporary-mode copy; exclude unused inbox helper; math/figure algorithms unchanged"
+    },
+    {
+      "source": "shared/detective-presentation.mjs",
+      "target": "apps/preview/library/source/detective-presentation.mjs",
+      "sha256": "73dc0882a3fddf971879a32fb581bef94b397d78c9acd8da281be3577c2794a8",
+      "adaptation": "type/import paths; temporary-mode copy; exclude unused inbox helper; math/figure algorithms unchanged"
+    },
+    {
+      "source": "shared/detective-presentation.d.mts",
+      "target": "apps/preview/library/source/detective-presentation.d.mts",
+      "sha256": "321103a13fec853eae4fdfdc79f556295b6921e4fdf8de532a4f097669e975f6",
+      "adaptation": "type/import paths; temporary-mode copy; exclude unused inbox helper; math/figure algorithms unchanged"
+    },
+    {
+      "source": "shared/detective-model.mjs",
+      "target": "apps/preview/library/private/detective-grading.mjs",
+      "sha256": "8cf6221d119f0425c80c7fa9df8fb1aadc613ec59c3a273fd3b5ad32230e78d0",
+      "adaptation": "only matchesResponse / orderedReasons / matchesReason and pure dependencies; no inbox/record validators"
+    },
+    {
+      "source": "src/styles.css + src/thinking/thinking.css",
+      "target": "apps/preview/library/source/model-styles.css",
+      "sha256": "b63d82773f56a4e4a82a2978ae433c2c9a9a445be65f773617db877b7f787430",
+      "adaptation": "matching model rules only; prefix selectors with .library-page"
+    }
+  ],
+  "approvedCards": [
+    {
+      "id": "G3-U01-TH1",
+      "contentHash": "ad55e925921a12793f72975fb9739c172bd21650efbcdebad9e3d7a1272662e6",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-U02-TH1",
+      "contentHash": "1baafa667488563ff26905fb06f21c8a794bb6018e6a24e10faf5610a3c48a2a",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-U03-TH1",
+      "contentHash": "0a1010f2af1c6864cfb86813a6011bf565e49c2d0e098ebb5e0219d33082c05c",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-UP01-TH1",
+      "contentHash": "1fcf81f14c91ae9b48cf3d479fe2d38ab087c7896836098134a6ee64b21701a1",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-U04-TH1",
+      "contentHash": "ed47b9e975c473fb80715c6824a0cf3a2b34bba6885d689180030d544627a827",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-UP02-TH1",
+      "contentHash": "80c634bd5a6c066295fcbc8212bae37784cf48e691709eb5aaadbdb0f7a3be65",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-U05-TH1",
+      "contentHash": "4c3d1cd3383e0ea41b65ea1063647c9d4b1bb1c83a92feb3c3e1f474c37a21c4",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-U06-TH1",
+      "contentHash": "cb5c7d18e5f5b12ed9f9f8e5f1c75faf4d51edcb308dc6101d80991adbd616a3",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-U07-TH1",
+      "contentHash": "0a784e44569c5289489d2a082e960f7d25cac9ed209e5773e0bbd93b3b8d4462",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-L01-TH1",
+      "contentHash": "8450707a64761d3fb93f39b46a9d9e1c1523ffe53924aefa1b7b30677c9e413f",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-L02-TH1",
+      "contentHash": "889a03547a50c2cae9ddc651e2f5aeb5d0c1c708bedf0ccdbc0a6716e1e9137a",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-L03-TH1",
+      "contentHash": "eab7e03d0ba5fa3c745be94758b9a84e504152f8fec7e53df0b4184116372789",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-L04-TH1",
+      "contentHash": "b108f5317cc98af31f19a7cf1bdada51ce9fe73985d2e3346c0a39344ae82d19",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-L05-TH1",
+      "contentHash": "e32207aa339f474577f2659217b9dd765c027bc1d156b45e3c0d1f3b570d5652",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-LP01-TH1",
+      "contentHash": "64e0a8dbcb9480aff5dd67b1306996ff5b4c6aa13eb7e4b72951112b2db615b1",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-L06-TH1",
+      "contentHash": "2486c2bc79efb72362e38f8ebd72b17a1cf52de4e8f6dded883995fdb76bdfac",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    },
+    {
+      "id": "G3-L07-TH1",
+      "contentHash": "6dbaa02a8262a6817eba47c99c24b32ad5e675ae18f56de01e2a0414a1e803b3",
+      "teachingReview": "editorial-reviewed-awaiting-parent-trial",
+      "mathReview": "checked",
+      "figureReview": "condition-figure-checked",
+      "figureVersion": "condition-figure.v1",
+      "version": "thinking.2026-10-08.1",
+      "batch": "grade3-transfer-01",
+      "publishedAt": "2026-10-08",
+      "reviewSource": "repository-editorial-review",
+      "studentMastery": "not-assessed"
+    }
+  ],
+  "deferredIDs": [
+    "G3-U01-TH2",
+    "G3-U02-TH2",
+    "G3-U03-TH2",
+    "G3-UP01-TH2",
+    "G3-U04-TH2",
+    "G3-UP02-TH2",
+    "G3-U05-TH2",
+    "G3-U06-TH2",
+    "G3-U07-TH2",
+    "G3-L01-TH2",
+    "G3-L02-TH2",
+    "G3-L03-TH2",
+    "G3-L04-TH2",
+    "G3-L05-TH2",
+    "G3-LP01-TH2",
+    "G3-L06-TH2",
+    "G3-L07-TH2",
+    "G3-U03-TH3",
+    "G3-U03-TH4",
+    "G3-U03-TH5",
+    "G3-U03-TH6",
+    "G3-U03-TH7",
+    "G3-U03-TH8",
+    "G3-U04-S01",
+    "G3-U02-S02",
+    "G3-U04-S03",
+    "G3-U04-S04",
+    "G3-U02-S05",
+    "G3-U02-S06",
+    "G3-U02-S07",
+    "G3-L02-S08",
+    "G3-UP01-S09",
+    "G3-U04-S10",
+    "G3-L02-S11",
+    "G3-LP01-S12",
+    "G3-L02-S13",
+    "G3-L02-S14",
+    "G3-U04-S15",
+    "G3-L02-S16",
+    "G3-U02-S17",
+    "G3-U02-S18",
+    "G3-U06-S19",
+    "G3-UP01-S20"
+  ],
+  "caseIDs": [
+    "DET-G3-001",
+    "DET-G3-002",
+    "DET-G3-003",
+    "DET-G3-004",
+    "DET-G3-005",
+    "DET-G3-006",
+    "DET-G3-007",
+    "DET-G3-008",
+    "DET-G3-009",
+    "DET-G3-010",
+    "DET-G3-011",
+    "DET-G3-012",
+    "DET-G3-013",
+    "DET-G3-014"
+  ],
+  "caseHashes": {
+    "DET-G3-001": "3d105e7d7feda9a824d0d6bd1a823ed84d3bac48ea3d7d09766f8e804bf923c9",
+    "DET-G3-002": "7cd94a6ac401842244b5a939bfb1e0627637fde247d87bc5b15996d9c8dc76bb",
+    "DET-G3-003": "917104a823f8fe0d24f5441858176ddffbbb5726d272a5318212e356e87ca05b",
+    "DET-G3-004": "6540ef8a8dbda3e7917dd33fdcfd831e1f3eb1ae61dfd5eda027408026322cc3",
+    "DET-G3-005": "9476757d02a31ea7c447462f97b3ffe3282700b8eeac2909eca0a609c6a6954f",
+    "DET-G3-006": "1549735a994e2fe801abda0b53e04fa61569c7ef9a7b58ba9fc79554a8efcff8",
+    "DET-G3-007": "b2269a519e8de8df34cb23ebbe5bcf518f736a76309e393a8159bb9891375765",
+    "DET-G3-008": "cdfb7e6036efc702ee8a8efcce4176e135c79992e68cb7c511a1f0555791fa81",
+    "DET-G3-009": "0bb670ec042bd3089d6f1a149e4e56499d8f049e84f7b5da70d496a14918f0ad",
+    "DET-G3-010": "8ff426f54dfb37c93b4a85865fafc3485bfc5dc8d590b3087727058e53c624d0",
+    "DET-G3-011": "cb5658c18b4a286412e701411d10f4bd62af1de693e2676da4d4cc28dbeec7b0",
+    "DET-G3-012": "593c541e799a49fc4edf4c400d5f05594905ba83fb1e752111de9752047ae9f1",
+    "DET-G3-013": "b59eebedf5d280259bb8ab3dc7e5fd42c2096a150154f24f4b3e2a650c2fb71b",
+    "DET-G3-014": "39d496efadffb44a88bcbdac629c1dd5c315e4be6525d22b6ddb85e39e3e82d9"
+  },
+  "legacyCounts": {
+    "4": 18,
+    "5": 18,
+    "6": 18
+  },
+  "legacyQuestions": 432,
+  "supersededGrade3Legacy": 50,
+  "blueprintContainers": 168,
+  "taskMappings": [
+    {
+      "capabilityId": "g4-place-value",
+      "taskId": "g4-pv-1",
+      "sourceObjectSha256": "7182989bf9cdebaff5504d9f5d6d10a8e1f36fc0e2f5657ba58a1bc3e051f6e9",
+      "targetTaskSha256": "8c106be66e7b0bb7c9684642c37675878405d2653fa806b32834587b72235ee2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-place-value",
+      "taskId": "g4-place-value-why",
+      "sourceObjectSha256": "cddd3bd3e77145f7a717698cc357765718b6973bb8b7f8801dd3706f21cc2037",
+      "targetTaskSha256": "c42f61a30c95bd95e1051b3b2f33be7c4bfce85782e52246bc5bc77fbb9dcf27",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-place-value",
+      "taskId": "g4-pv-2",
+      "sourceObjectSha256": "4890377e40130227fe32750d7952b2309af131f23b8ac09bd8fe87a0c7a66d5a",
+      "targetTaskSha256": "b357563ffc1df8fb5c5e92341ee6e156494d30097b6adabab118f70029d70b1d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-place-value",
+      "taskId": "g4-place-value-model",
+      "sourceObjectSha256": "80eccc8c1b3be1457dfa5c10e09e495a6708f17f9883c99c5034c95392c2f6a4",
+      "targetTaskSha256": "3753c432bc24a6e56ae2d4da0d4081b890eb523394706b0bc9a29b604bba237e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-place-value",
+      "taskId": "g4-pv-3",
+      "sourceObjectSha256": "ee9d38aef9900ce0aeb76525cbe52e68915a45522007a4f3d6198c34744abfd6",
+      "targetTaskSha256": "1a4afdf59a818978599002e4c15d22147db18a790a582ea9c3830d0e917d639d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-place-value",
+      "taskId": "g4-place-value-reason",
+      "sourceObjectSha256": "743ba02ce7a12e935a23251febac8ba2cbc9d78ee15d3e22d170899c139cd5a7",
+      "targetTaskSha256": "77a48f5e7063732aeffa0c85d1795d903f3dc090089d1fc415d0d9991374fe35",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-place-value",
+      "taskId": "g4-pv-4",
+      "sourceObjectSha256": "8fd15c640f27433e51a4db9c9ac20b8670ed1b465f00e112b2ddcfede9d55f28",
+      "targetTaskSha256": "f64434ffa439fe5f24fde625e9e0879cf66c7791c67389b612d86c785ad965ad",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-place-value",
+      "taskId": "g4-place-value-transfer-idea",
+      "sourceObjectSha256": "1b9ef8570f16accf9d648bdf4a10ddac50f0a8706871a9dd202c15cce91b0dda",
+      "targetTaskSha256": "d0c446994b9c3050893813a0465b3b79ac806afb8fba93c9241ad6bcfbbdc4b3",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-round-estimate",
+      "taskId": "g4-re-1",
+      "sourceObjectSha256": "2d44094420137624b047d89e4b6d7d27468a049a2fee35b2825d22dec899130b",
+      "targetTaskSha256": "1bb20507cdd524c4691d94196f5074b6fda5068d417e9c9913c8a5f979d32661",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-round-estimate",
+      "taskId": "g4-round-estimate-why",
+      "sourceObjectSha256": "9e1244314fb628fa6e9f9ae67f985e6dbbdd6f4aa1409c3847818eabb92ec62e",
+      "targetTaskSha256": "67f4bce9cc6caf40bdc6c9c94b21d7b33354c2c76acc48a6ab95db2ddf98c549",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-round-estimate",
+      "taskId": "g4-re-2",
+      "sourceObjectSha256": "ffd2ca6919528332f75c911090fc9b7d92ff9f0950330b0649fcc4f616b50b02",
+      "targetTaskSha256": "4c4bf00cc419751a1f74b5a69ad6ba9de590589ca7aa19371d92163fe5ede050",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-round-estimate",
+      "taskId": "g4-round-estimate-model",
+      "sourceObjectSha256": "4487827a60b91b2d534ef9618f10fafc5f3e7f6f95e1db364f7e3540640b89e5",
+      "targetTaskSha256": "aecd7bea51e45039756edb7d0aedb7646270a2bb0229c73118d95ec2bbb0a1e4",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-round-estimate",
+      "taskId": "g4-re-3",
+      "sourceObjectSha256": "42be60dc73526ad8826d995a20870edf55745a3c37556d41ee16ae90776ff195",
+      "targetTaskSha256": "50bb3935a9c650f7a6594243b5e30bddb26235fdc05fe83deb6deff2c0917d63",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-round-estimate",
+      "taskId": "g4-round-estimate-reason",
+      "sourceObjectSha256": "006de593461160e029ac2ef30de9fa6a72dda30674289dfef087a01e4937aab8",
+      "targetTaskSha256": "0369766d04ef54e9e357168715eef12d8a2741f1178bcb04dbc0e400db98a930",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-round-estimate",
+      "taskId": "g4-re-4",
+      "sourceObjectSha256": "0d10941e55dc75d593ae787bb892fb81141abdae319a7f5311cd432ee34d2209",
+      "targetTaskSha256": "4d332df695b3c26b5d700223054304c7e308b1cd7181942a234e27542cf90b84",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-round-estimate",
+      "taskId": "g4-round-estimate-transfer-idea",
+      "sourceObjectSha256": "2986b06a09c06000476601d36b77268a8736cb04c7acadeec4bb673e27c2a72d",
+      "targetTaskSha256": "f6c92485c194061d56d19fcc175b7cb5db3dbfcf011241f8bb59aca5c3e6a9df",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-angle-measure",
+      "taskId": "g4-an-1",
+      "sourceObjectSha256": "afcb43ae94338ea70284a613a3d3830a15419b9ffce954d3c3f0d7f640162dd4",
+      "targetTaskSha256": "b1562337bc2769250ecbd288151500c30131c019499ab437319eef4abc0ba256",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-angle-measure",
+      "taskId": "g4-angle-measure-why",
+      "sourceObjectSha256": "281ad0a39adbf033c1d9791bc33aa19b5503b3409c3194f3ab2eb04841a8d80d",
+      "targetTaskSha256": "5b047b18c53acc863037c4c59c7bd4ef405202f04e19c0bcc47bd050868a8c3d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-angle-measure",
+      "taskId": "g4-an-2",
+      "sourceObjectSha256": "bb35a5287d5d39c06638d32b4dc1366004e4914e86c2d706f24e2d845eeca907",
+      "targetTaskSha256": "9d0da603c9bc77c85ac44da2c98904fdc988eb0b93e43ad824ee74d6b510cdb2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-angle-measure",
+      "taskId": "g4-angle-measure-model",
+      "sourceObjectSha256": "866fd790248fdda8a61d0b7bbdb53e899deb04abfe949a267fa50500f64b33c1",
+      "targetTaskSha256": "e107fd61e608cb61f4921c714201cbdf6edad6e6d71206b4ad8593cb8625c402",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-angle-measure",
+      "taskId": "g4-an-3",
+      "sourceObjectSha256": "d66526dfc42e840617fbb3fd1314aa64827e2e6d9422425c1bd1e74bdf727d97",
+      "targetTaskSha256": "08b099d5e441cbf2a0624a1ca7d09194926661c03470f5cbcde18e50cafd33c2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-angle-measure",
+      "taskId": "g4-angle-measure-reason",
+      "sourceObjectSha256": "0a7873e5f386f3b8963df45011f39a6bdf17c06ed51990284b68fb8ddb0471c7",
+      "targetTaskSha256": "bec41844d2109a98544f351f8dbc43b35cf48913518847862e1ba82f64bdea09",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-angle-measure",
+      "taskId": "g4-an-4",
+      "sourceObjectSha256": "53f5438466a0960b74633e0e03c1f03aebafc921124f254f4e8b02b83a43b1e3",
+      "targetTaskSha256": "9b4d82571c69852776a52e4c4835840e57d4393a9c142e4dc6316395916fc6ab",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-angle-measure",
+      "taskId": "g4-angle-measure-transfer-idea",
+      "sourceObjectSha256": "f28d3d19a8293a3a1ca052fe022125683f6884217c6e5ad867f6454cb003a16a",
+      "targetTaskSha256": "3c36890778f7776db38bf00cd1e7e2aa8ff2db9c10aabf41522ddc4773b2352e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-multi-multiply",
+      "taskId": "g4-mm-1",
+      "sourceObjectSha256": "375055d08637e951f92ae1431b870ea68bcfb76dcb20ab9379069cc53735b742",
+      "targetTaskSha256": "df5999635e46271fda5fa8210b1218b7851d0681b0e77bf519e1a5cbcb13aaff",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-multi-multiply",
+      "taskId": "g4-multi-multiply-why",
+      "sourceObjectSha256": "1bfe634e40b4ef7ab04e9427cefe82e7ecb840a46b2c3f1246575be2f86ab031",
+      "targetTaskSha256": "8e010953c3644341d5184883e0111f392266e41baec7aa952efb923330dd6c98",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-multi-multiply",
+      "taskId": "g4-mm-2",
+      "sourceObjectSha256": "95fbb78c9595926a615220e110643121325f492582fbbae700dc5ececc7de494",
+      "targetTaskSha256": "4f6531894c6bc84c87f93aa39835e61a805ec5729eeac5b13e74d17ccdf65323",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-multi-multiply",
+      "taskId": "g4-multi-multiply-model",
+      "sourceObjectSha256": "30133790f9cfa5708f07384311a1c0e798e26148a5dfc2e54574d5720f5c83c4",
+      "targetTaskSha256": "fcb5e406baa801fa878afb7639da9a5ed3170ea49ed969faf035af1d723076ca",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-multi-multiply",
+      "taskId": "g4-mm-3",
+      "sourceObjectSha256": "e280df23eac1b30ea6e615db7c745cc7d82b681f4378378352e41716274defd9",
+      "targetTaskSha256": "708433cbf16eb4e2a20f432828cf761c822944b0bcb9758378999be74b96a435",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-multi-multiply",
+      "taskId": "g4-multi-multiply-reason",
+      "sourceObjectSha256": "e3425c204ef104d4decad1ee2bb603e1fe1d9ca9da31f9cc04f75fe8b55bfdee",
+      "targetTaskSha256": "dcb075a577e3363710bb406167d7ad4c853c3efb868ea62d28f41adeb2811dfd",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-multi-multiply",
+      "taskId": "g4-mm-4",
+      "sourceObjectSha256": "9a675785f8d5f58d3036d3bbcf4504edcb772591acc58b2f2c394aadc47a7e53",
+      "targetTaskSha256": "64d5bce588cd25ff59c3e702bca85b02ef2d28892a33064a9856aac1833baa68",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-multi-multiply",
+      "taskId": "g4-multi-multiply-transfer-idea",
+      "sourceObjectSha256": "9aa366975c11b99d2b59a5d351b70607e5a4cade0a6fd651d8596bb435f884f7",
+      "targetTaskSha256": "8ee20a5a50105fa03c81bd7585fd2a1239ca96460a25f65f10dbbfc2ca6cda2e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-two-digit-divide",
+      "taskId": "g4-dv-1",
+      "sourceObjectSha256": "39146a3b59a2eea54d882c073198553cd992f852ad91509315eb5c0f1181e842",
+      "targetTaskSha256": "f448a8fe2ec7976d4b90f0633098b0c7f5b869dcaff7a868dfacd638def3e10f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-two-digit-divide",
+      "taskId": "g4-two-digit-divide-why",
+      "sourceObjectSha256": "cab4e16cf489a29f4c4ee142c092d43654ddfbb2461f3b4c8fb2f54b4440f27c",
+      "targetTaskSha256": "6c474b96c3fac783b413ad3d34fefd48fc496a369e0849deac75108391955802",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-two-digit-divide",
+      "taskId": "g4-dv-2",
+      "sourceObjectSha256": "e99408a3c440f1fd6aee0502d8c19f0700efa4b0ca233fac9b94f1300b4f1ab7",
+      "targetTaskSha256": "d103b813da63c1b40c0a01bacb9fc7f402528dfcc4071234e1f31b507d19ee87",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-two-digit-divide",
+      "taskId": "g4-two-digit-divide-model",
+      "sourceObjectSha256": "9f0d2d08e4c3429e6d0ddb6c24e7389ee7271cddeadca2480c03f07c90d1fe36",
+      "targetTaskSha256": "6fe258f5dc94dbc257b94ed613ad0ca5ab261fae04b746ea4848074d5b77fd66",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-two-digit-divide",
+      "taskId": "g4-dv-3",
+      "sourceObjectSha256": "f24d17ef2637c87d1619e5aad665b63fa7e9a4193f5783690968defe6e4900bb",
+      "targetTaskSha256": "3133255d0ebc5e8d57b342fa33e4f6fca1fc815b5fe36b659c574040a99725e2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-two-digit-divide",
+      "taskId": "g4-two-digit-divide-reason",
+      "sourceObjectSha256": "c28404b191013f7511d6ee86a16e043cdb6e910e6c81719d34318b27b5d6b28b",
+      "targetTaskSha256": "0b8d610690b1065a2ca963ad0648cdda44714d170df99fcab06566864944d54d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-two-digit-divide",
+      "taskId": "g4-dv-4",
+      "sourceObjectSha256": "e8bed87cdccd96dcb6f1cb4cf001fb882ef86de2d3f93dd42fad18f53a0587ad",
+      "targetTaskSha256": "5186209db5612e54d93823bcfa948987608f90b43c9ccf52bf44236e479a7117",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-two-digit-divide",
+      "taskId": "g4-two-digit-divide-transfer-idea",
+      "sourceObjectSha256": "01ef7aef9ad498ff5fe27c350c199e3706ead8502e0e625d510ca69905b9e32f",
+      "targetTaskSha256": "bf89a1e6bbaf793b13f4c22468c6b9017a0b879ef4f1fd2b8bc8212d2776133f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-operation-laws",
+      "taskId": "g4-ol-1",
+      "sourceObjectSha256": "89b67eefedbcff8b1367700e1908a5a31a9f9713e8f7192d0b4982a1393727f5",
+      "targetTaskSha256": "e1162572d35b6dd7e2128feb65d71edc510831b4e186315164b47d5f8ca16630",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-operation-laws",
+      "taskId": "g4-operation-laws-why",
+      "sourceObjectSha256": "915697f9b7d826564d4bcff817dd0a206cd3b11f80f1ff3c1cb4d1713a156821",
+      "targetTaskSha256": "a27fc608f899a7dc9a2abd9a101065344a746325b16555d5b65c0ac50486de20",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-operation-laws",
+      "taskId": "g4-ol-2",
+      "sourceObjectSha256": "3076acb79dce8f345b8fb7ffd98f1a2bf77405db0aeb6e525394d4891dedf68b",
+      "targetTaskSha256": "6e8e28309150b676d7aa67cfa68b3eb56f22c55996fdc616e5dd30dfaeaf6177",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-operation-laws",
+      "taskId": "g4-operation-laws-model",
+      "sourceObjectSha256": "b8dde30a7abedf7eecd8fb4028c88a3330bfc9b8800e2ffa786483950e0b8754",
+      "targetTaskSha256": "cc75bdf41b76d9c56803116be7c39a538a7a3fe1f0bf659c94cd592586523499",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-operation-laws",
+      "taskId": "g4-ol-3",
+      "sourceObjectSha256": "3d140e61a393586045b3b42530624e5b558e4966abc13b794534f2370aaca073",
+      "targetTaskSha256": "e566bd0bdcf3c853c9c096af91aa423f580e0681678b659836794e339fee56b0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-operation-laws",
+      "taskId": "g4-operation-laws-reason",
+      "sourceObjectSha256": "beb709d043f3ab0c380faff18d25fd11ef530a47c3a3b3b9ada1b679dcb20a59",
+      "targetTaskSha256": "da3bce9a093e1966a1bd81aa34884438dfb067262b643c3147418e6a6d56e79c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-operation-laws",
+      "taskId": "g4-ol-4",
+      "sourceObjectSha256": "ad2eebe5c83adeed522d1a9e5e832e27aa5970a48fd9edfb7e6417fe9da680b0",
+      "targetTaskSha256": "2a6b91709d85f6d63c36b1cceaa047c655d92e3ff4adda8bc7e14edc9822fb93",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-operation-laws",
+      "taskId": "g4-operation-laws-transfer-idea",
+      "sourceObjectSha256": "76b36d8574cdca5bed95c15add1b21bf581ba0e0004bfc3c508b51a9d03c39bf",
+      "targetTaskSha256": "6f532002e60844b794e6a65fab8e6ac818603c1a49216568eda48854deda9a51",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-quad-area",
+      "taskId": "g4-qa-1",
+      "sourceObjectSha256": "8d3e89c12e98886ea6f1f39579b598da070f80dcfb479806db3b62a6df7b6ac3",
+      "targetTaskSha256": "0216a8528a26e6a40c5f96f37d6690aa602a7b018a7f5adeef5c4c5127272338",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-quad-area",
+      "taskId": "g4-quad-area-why",
+      "sourceObjectSha256": "1abe6087776aa6b2f1d634608a8c219f789cf2732b6ba04a22ae42e779dd8b90",
+      "targetTaskSha256": "ba221f4e0b5b9303d58fa686745077e8d80f78bd723fe8d9fba143e1286e78ed",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-quad-area",
+      "taskId": "g4-qa-2",
+      "sourceObjectSha256": "b0ecb47364dc5591b8bb7ddfb11425955e4167b347f91296eeacde7e091107d9",
+      "targetTaskSha256": "a20a96b11783e6dcffb723072dfa155e552d1b5a19071e3dabc585f3e3f6d6cb",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-quad-area",
+      "taskId": "g4-quad-area-model",
+      "sourceObjectSha256": "3961f414915450a5c8b1f664502f2888d488f3e0a8c35a4f53b7404c47de79db",
+      "targetTaskSha256": "f0a364b743a4bb62f7db43a663f0b2abf4056c8c5c73fd8d9e6d949dba1377c0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-quad-area",
+      "taskId": "g4-qa-3",
+      "sourceObjectSha256": "bfc3b5d466df350f9c16286fd15d25fb2d6b95b58283af6d722cc304fb787602",
+      "targetTaskSha256": "8860d838e6a35091da5d2e85eeb2633b9ffc8138e01e83066fbbb0492899f548",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-quad-area",
+      "taskId": "g4-quad-area-reason",
+      "sourceObjectSha256": "fef3cfe18784822e5ab77282c1b7470d8f13737c791964586ece74902932e114",
+      "targetTaskSha256": "6f3d81de5cbad2e4170498841e6350e00347364cbe7130de732c99ed38528c04",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-quad-area",
+      "taskId": "g4-qa-4",
+      "sourceObjectSha256": "a917828125babcaf3ff7df161ccffe1ccb4b1a1fe3041aa0295fd4b02690780a",
+      "targetTaskSha256": "92f3b6891934da6d3790d8737c2fd467be47273112997ce494006c681d7868f3",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-quad-area",
+      "taskId": "g4-quad-area-transfer-idea",
+      "sourceObjectSha256": "14e98e6610ca8c5c95a7974b685868dde9a6542e6af974efd7f1bc636eab6e50",
+      "targetTaskSha256": "74848342aa7acce0b1f74326828c482bb8e7baad0d8a78f145b1ab7938c80004",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-area-unit",
+      "taskId": "g4-au-1",
+      "sourceObjectSha256": "51f181325479e5af48d4bfa97855711317dd7116173087fec020acb500dfbd66",
+      "targetTaskSha256": "77175419a09d62961efc79689859a75a090e319b61246e843853999d839a51f2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-area-unit",
+      "taskId": "g4-area-unit-why",
+      "sourceObjectSha256": "9c99037ddc370da7cd4e5c79cfe4f37d67d541591c70d92f205734b4aa36d590",
+      "targetTaskSha256": "f6e2402a924a75bff1faaa174475ea8bea7e1976e1844c3fed4d9a3ed84dffdc",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-area-unit",
+      "taskId": "g4-au-2",
+      "sourceObjectSha256": "0918f8fd3c5032d333a7a0d5f31ff2f9c257b81db18faef37d5400b5d55d7f35",
+      "targetTaskSha256": "4b04959b4d2f233be939f9c5f3901466f4a9193f465a7ede2235bd58dcfaafd3",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-area-unit",
+      "taskId": "g4-area-unit-model",
+      "sourceObjectSha256": "8662adab207e281d5b3ec47903132b697c4f64ef63c5101f03fed753c457c22a",
+      "targetTaskSha256": "d0dc8c0328d32d0bff90b16d8c472acd43ad2787009649ca6b058c3d676d8f1f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-area-unit",
+      "taskId": "g4-au-3",
+      "sourceObjectSha256": "ee9e1c3baf113a26e03721a8fe6d9b278974947f8f70134e0b011976d18b0a0c",
+      "targetTaskSha256": "7ebbfec3e15f91dc78a1dfb30a7b154f3737a8f51ec155fc6d876c04188fe459",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-area-unit",
+      "taskId": "g4-area-unit-reason",
+      "sourceObjectSha256": "9693d36e422560e99423694acca8e0c689c3e397219d85b246fc9931bead31de",
+      "targetTaskSha256": "579b2e89b8488533b70c833f7a06761b8f3128ee9e18a3d79ff09c1b00f77080",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-area-unit",
+      "taskId": "g4-au-4",
+      "sourceObjectSha256": "9d276284122db9535902f096e6e13c2714fbc1e92ed51962656f2b328bc44f5b",
+      "targetTaskSha256": "6c77736537071761ff08d58338d90d4949884ac9d2c7f92d28e890c450b2bb4b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-area-unit",
+      "taskId": "g4-area-unit-transfer-idea",
+      "sourceObjectSha256": "9b85848ec8d09537a3c112eb76667aa5a953d95d069260c8084379de8a3e3ada",
+      "targetTaskSha256": "46d69e8a6caa570c9afb2461b1fad5adb8aa5d4392c750db2cff1637e54caa8c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-bar-chart",
+      "taskId": "g4-bc-1",
+      "sourceObjectSha256": "59982a89618cc06ecd9ac18b21f60d4f807de1271f5a38a27be73b4960b4e652",
+      "targetTaskSha256": "34237a368e2babbf3bb760b53a697fe70f07670057b886ca1018678b4818a70c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-bar-chart",
+      "taskId": "g4-bar-chart-why",
+      "sourceObjectSha256": "30b9859518ef3cf615dd382d35bd5c3e46f29d01ecd6ee5b29c6c06bcf6970e3",
+      "targetTaskSha256": "44a717bd13328689043e6e505eda6638e596f3f66d6166589bf4891e2a0a0a43",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-bar-chart",
+      "taskId": "g4-bc-2",
+      "sourceObjectSha256": "f07b5928431e86f235c09b8bcc155e7948194066dc5997d227430ef779822692",
+      "targetTaskSha256": "fa11c5238dcd4baae753bcd4178e3e88f68137b66e03663ad6e1f6b6fbfce6ba",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-bar-chart",
+      "taskId": "g4-bar-chart-model",
+      "sourceObjectSha256": "e3f577cbdbf74882f3d8568ba7601ed8b6e0de3b6b4aed3f8e867042e62d8494",
+      "targetTaskSha256": "30848619c4e1afd7d66e02953c8920fcce295cd3c7a1881f4b0193076817bb01",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-bar-chart",
+      "taskId": "g4-bc-3",
+      "sourceObjectSha256": "c8e0069be8e4319a7d5e873d9e3b7b643cf618ccc2c5da82d2d5e779ef64915b",
+      "targetTaskSha256": "017bf71415450e8a7cf8b595e12299bb887615d1dab032971a6bf7c8174c6fc5",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-bar-chart",
+      "taskId": "g4-bar-chart-reason",
+      "sourceObjectSha256": "5e61acb1b77b4b2fddf77096076e1abebe115073f7c06a6f3b71b313db96d58d",
+      "targetTaskSha256": "39c44034441e89b7c11ce228b03659b5f2428ebdaa628804e333d7f60dc36190",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-bar-chart",
+      "taskId": "g4-bc-4",
+      "sourceObjectSha256": "1fcb28be181f66dd50ad6dbdb8036561f62ef17347087ec284f52bffe8c73baa",
+      "targetTaskSha256": "f582fd414cc0a2ebc58563714da1b0dc5538f5e6aed1b092a03ff07339599f24",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-bar-chart",
+      "taskId": "g4-bar-chart-transfer-idea",
+      "sourceObjectSha256": "1753fa1525b8098d49f0b1ab1ccab4ce724e4b1cc9d4e82ce7e74940c8fa7e7f",
+      "targetTaskSha256": "df5145c2c56c6a7edf7ec1c8ac40e9c08b3eb5f9228e98efec136f78fc7f379c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-measurement-conversion",
+      "taskId": "g4-mc-1",
+      "sourceObjectSha256": "21694e6f1604c66b142f1cbf3624bbc70215ccb06be1af67fde06022171be016",
+      "targetTaskSha256": "43499219f5e47c5a492e22247dca707b7713eb7b6c1a7f0c3de6f48f47174416",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-measurement-conversion",
+      "taskId": "g4-measurement-conversion-why",
+      "sourceObjectSha256": "4ccc13fc8ebebad566c8be1e02c2bd1065b9d550dcf52d975e0d7eb1c47d5150",
+      "targetTaskSha256": "54c191c38291c7fabb29cc80cc44c34d7f4085bad7ec0b2582c9639645d55229",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-measurement-conversion",
+      "taskId": "g4-mc-2",
+      "sourceObjectSha256": "4a5f83943c3a1eb09ff3e1724f0f008900da3a35c24dac92f2a787eba2ae2148",
+      "targetTaskSha256": "793aed701178e86ed94870f0eaca20e77fc490dfe5897ea511bb48be62cda06d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-measurement-conversion",
+      "taskId": "g4-measurement-conversion-model",
+      "sourceObjectSha256": "6f0c69344355bed6f5edf464cba4049cc33b8e6ed0111a2826753fd9ebde6a80",
+      "targetTaskSha256": "248231dc511b134bc86251b6e8684aff785c00a6cd0057b11d7eb0e717614075",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-measurement-conversion",
+      "taskId": "g4-mc-3",
+      "sourceObjectSha256": "25d2fe324662b6aa02108b0cd1011597d5f3d7f533da23295f01343a5ab68f0b",
+      "targetTaskSha256": "e6e725e677ad6010aceb09dba434d80be965d0b14889dce4e61da66983f31394",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-measurement-conversion",
+      "taskId": "g4-measurement-conversion-reason",
+      "sourceObjectSha256": "34dc60e7f1bda7179584b67bb68c00166550dd9fa4812aac67e4538fee6021eb",
+      "targetTaskSha256": "16cadeb6e35a57b8d52ff5458ed00ed531d452381a6147ee7f9382d0bf764839",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-measurement-conversion",
+      "taskId": "g4-mc-4",
+      "sourceObjectSha256": "f8a62203877273fcb48b0011934f0e14edd69f2f8239da28260ed2346bd733ec",
+      "targetTaskSha256": "75f05ac778f6fa8cc41a4618eef7d217801e183d0e959d5dedcec156a4ce3878",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-measurement-conversion",
+      "taskId": "g4-measurement-conversion-transfer-idea",
+      "sourceObjectSha256": "00e8f0a262fd819a3d9f9b68fab4cc3c2adb8e9da4f2172d7f1a2bb5f21f3012",
+      "targetTaskSha256": "28f2d480857c53bcbc0e565d54b2d8ea2725113a8ea09b19381e5cdb0829f805",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-chicken-rabbit",
+      "taskId": "g4-cr-1",
+      "sourceObjectSha256": "c65b7bc8c193eb48bc0b526e136cee90dac2562a1f4eca21207db06f91909223",
+      "targetTaskSha256": "8c7e7e1e850f586c9cbe60c3502e6bcd019c5f44d680896bd9f7f5e88769154a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-chicken-rabbit",
+      "taskId": "g4-chicken-rabbit-why",
+      "sourceObjectSha256": "1f82cb1f9b9c85ee062edd3337b701390f603bcce7ef2fd3026d47f4477200a4",
+      "targetTaskSha256": "23fcfae58e96162fb093c6b0c194ad734b84b2701b6a4673e1570e727b91f56d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-chicken-rabbit",
+      "taskId": "g4-cr-2",
+      "sourceObjectSha256": "372a866e5966a5eae7bdf8a8d8028c536fd50cf3ce7f7d6c94b3860a3a9e36ac",
+      "targetTaskSha256": "31c26c93d8a96855dcb640afa6e419e906c1fc5349753e20e0d23c9f8b5b85b7",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-chicken-rabbit",
+      "taskId": "g4-chicken-rabbit-model",
+      "sourceObjectSha256": "5e8c2e784f3a8d82fd574ec84aa178981ea94f2941e8c588b01d73943a6170ce",
+      "targetTaskSha256": "3968270529646057446c853a64921820f50a04811412da24c8406fb998884dc4",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-chicken-rabbit",
+      "taskId": "g4-cr-3",
+      "sourceObjectSha256": "48c8c6d06fefaf9ff2caacafa8bc0b08c39444d7d3c4e0ff0479b7db1b211b5e",
+      "targetTaskSha256": "94898a98f3eeae1f9efe854d4b998b74ad15f2d16a6a97a7620087036e84b3bd",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-chicken-rabbit",
+      "taskId": "g4-chicken-rabbit-reason",
+      "sourceObjectSha256": "f2446e91aba442a4dcada082762a994cdfe122cf334ee00a63cbddca97f9aa9e",
+      "targetTaskSha256": "83bcee874096253581a2b0d9442c7eb20221fb8c394fbb8b8d7ed4740e53707e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-chicken-rabbit",
+      "taskId": "g4-cr-4",
+      "sourceObjectSha256": "4d7259ae845d63c677a247920de83333f141925cf4be6a3c81ba13cf9c1d914b",
+      "targetTaskSha256": "664717ec3a2edffb7667e45094bea1f0fb56d475ee7633870a6a3da22d575290",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-chicken-rabbit",
+      "taskId": "g4-chicken-rabbit-transfer-idea",
+      "sourceObjectSha256": "ce2720871972db6646850cdd76ed393c3001813148038ccac921b58dff4422d9",
+      "targetTaskSha256": "77e44ba8614210601b29b7ecf41cf9218059a716639c8a639b87ed29a5a4e2e8",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-route-enumeration",
+      "taskId": "g4-ro-1",
+      "sourceObjectSha256": "831ca12517bb4869c6190f465e3db5c52a17b9bff60918e153d69d3f408e4cb9",
+      "targetTaskSha256": "5ce5506491e0baa90043100899294582492d7dfa6f7251a1372388bb57bc7eee",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-route-enumeration",
+      "taskId": "g4-route-enumeration-why",
+      "sourceObjectSha256": "87bbe375ba88834644152f664d37e560e88bef4a0369dc5059d8dbffcc4b66bd",
+      "targetTaskSha256": "b288790dbd7967e65d328c04f9f698a1e6507a6ad332ab55a034a8699e8ede71",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-route-enumeration",
+      "taskId": "g4-ro-2",
+      "sourceObjectSha256": "da9f507afea08f0fb37e000892a8e9b5a613fbb588a9a09f578df3bb54127927",
+      "targetTaskSha256": "795286f6d71dfcf3a8691735cf62c0e48b97dd1dea792d31733523af253a6ae6",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-route-enumeration",
+      "taskId": "g4-route-enumeration-model",
+      "sourceObjectSha256": "7cfd6d360fafee85257c31aff025cd63876d79c64235f96b0dba0be320e32548",
+      "targetTaskSha256": "d4d915249a9577303245f8785694849259dac1fa6cbcd6d2f584af7359f12a59",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-route-enumeration",
+      "taskId": "g4-ro-3",
+      "sourceObjectSha256": "4365437495b213a5c5b14f56b9a1c4bcd7dc0699c1e010c3dc4837130cd405af",
+      "targetTaskSha256": "ad2b196b739f44cc1d7b96d32a6d6e60942beb2718d6d5a156879f9fc2c1094f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-route-enumeration",
+      "taskId": "g4-route-enumeration-reason",
+      "sourceObjectSha256": "5d406ab096bef05d0037b447f408e5de0dd53372685738acab34cf9e32a244e3",
+      "targetTaskSha256": "7c6f143464e250693f2275cc122ca2cd723f3acea7540ca51b19c33d3e6b2e4d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-route-enumeration",
+      "taskId": "g4-ro-4",
+      "sourceObjectSha256": "8bb85f592685cbde5641f9ad43a1b23e426900ae31ea7387053db0be45a21aa9",
+      "targetTaskSha256": "947d7735ae5ec6155f8661ea6ebc22638d33f69252b468bf077d9e3dc91e4cf1",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-route-enumeration",
+      "taskId": "g4-route-enumeration-transfer-idea",
+      "sourceObjectSha256": "fe7e6fe1d8354031017cb2d181e47d2c831be47c0456b3cccd0f928b503e6e77",
+      "targetTaskSha256": "f6638389b28fd01c625ef922ce9ba4488a0dbedfe14f3765265bb19a3d6e67f2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-period-remainder",
+      "taskId": "g4-pe-1",
+      "sourceObjectSha256": "cfe9666c89122c62824c9fbeac4e9c4a8964061ed7d7e98f80fe20dc04261a70",
+      "targetTaskSha256": "ff5f8055595d07d2a87440ac5df053ae5b11fb90d65fc26b73487c17484051dd",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-period-remainder",
+      "taskId": "g4-period-remainder-why",
+      "sourceObjectSha256": "4de847df2df5ede7b17d8e4c0f0d4a5afdd03d9ed0c979e160881d44dc4608db",
+      "targetTaskSha256": "84bd8f00b1c40014a60abb30f5e9b4029619e55152ad20e658b59d875a93775a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-period-remainder",
+      "taskId": "g4-pe-2",
+      "sourceObjectSha256": "07b0509ea2bc8c5d9b6a597505131c261ff00456bbb1e18c552d4456d09b5077",
+      "targetTaskSha256": "b964d81f7b0750961923e50e42202f2aec7354d09b0e3da727d39d3234c4a8be",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-period-remainder",
+      "taskId": "g4-period-remainder-model",
+      "sourceObjectSha256": "870e676ee661ae27f1a6daedb89a80cf38c9521b41838e18189cc1277ac3b340",
+      "targetTaskSha256": "56dfa55046ed7c7320a907234bef5a664d1c517c06ec98b96a270d1f1dc20d5b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-period-remainder",
+      "taskId": "g4-pe-3",
+      "sourceObjectSha256": "ff90d3c24a8b1cd034c9db62a1abba9fefcea9c91ea2f1a6b4309500ee2e57e2",
+      "targetTaskSha256": "9ddd7b3c5ad09c390354d1613e11a8409b966d8f92ee7f16a9c4a7a2715be12d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-period-remainder",
+      "taskId": "g4-period-remainder-reason",
+      "sourceObjectSha256": "a4383100d673f1245bb604ad7405eacae7482e24e09714357ea2cce79d5a5800",
+      "targetTaskSha256": "c8f661b48e2af88e006adfb8d6dae983ef6f1e7bca3a1c585dbc33186b406908",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-period-remainder",
+      "taskId": "g4-pe-4",
+      "sourceObjectSha256": "06be219628de857c1f1292d19aa53d55f822b475301d95d47c4649e78f4b68bf",
+      "targetTaskSha256": "bae83678b21cc422dd7df543ea2cd17c858fe680c0e341f91cbbb30f5049d16c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-period-remainder",
+      "taskId": "g4-period-remainder-transfer-idea",
+      "sourceObjectSha256": "fdf1a98471878e6579cbd4608366c106d1ab6c1605a35d04fda06b888132cf06",
+      "targetTaskSha256": "36fba3a87dc36a60ab830bca889b225854786e5adf3430a87f185ff17373bebf",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-working-backward",
+      "taskId": "g4-wb-1",
+      "sourceObjectSha256": "23264b8d2b8d9451eb65e009011308b135db3d25fd4f0dd3b8118e141e6b603c",
+      "targetTaskSha256": "c311eca24ddff953031fcc1dcf8c09f41ff9d002e89a7fb38d39b28b0cbcf779",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-working-backward",
+      "taskId": "g4-working-backward-why",
+      "sourceObjectSha256": "8a053ce2317e2373f4c028340e489e93d389e5eddf6d50e8707618e115cded3e",
+      "targetTaskSha256": "4e5774a07d0e59ba34dd5f0306f130089993f3f4254bb0b23a4608d3b68f2a7e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-working-backward",
+      "taskId": "g4-wb-2",
+      "sourceObjectSha256": "70e4fba2dd7bf1649ff89a3d22a359b07add055c3899f4f11982f9c85594e195",
+      "targetTaskSha256": "85563881983909f6ffe3b14acd2d5ddded10013487759c06810e07bb6c487b2b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-working-backward",
+      "taskId": "g4-working-backward-model",
+      "sourceObjectSha256": "38b47e25090de6a57529110b2f94f87aa75735983cc56d014f997ede1c5ee44b",
+      "targetTaskSha256": "d365877e87193fa8f4414a86391ce7cc2072fc8b5d1dc0bc76a50882b4c8b98f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-working-backward",
+      "taskId": "g4-wb-3",
+      "sourceObjectSha256": "5ea84bc49e887ad2edf5f4ee88a8413f0c6451720dcad4780576d06d1640b5a4",
+      "targetTaskSha256": "903988a89d9ed9b1608023526068bda96eca9298b0d3078833ecf08c6fccb30f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-working-backward",
+      "taskId": "g4-working-backward-reason",
+      "sourceObjectSha256": "d3b4d3679de4de6469e7faf262b6ec9b2d784db5801e0bfaa1a8042d618cb91a",
+      "targetTaskSha256": "3c82e1bff5627851f024b594eaa969a059593535c03b372c00645461b8375fc5",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-working-backward",
+      "taskId": "g4-wb-4",
+      "sourceObjectSha256": "8c963778b85d80064c1488123609a777c17a91c29f037c46ac7a2f7488d3e522",
+      "targetTaskSha256": "3a54eefdb1c9cd33f36e10fccb1ea312f5cd8ca0714b6eecc168f0ea16f1a5b5",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-working-backward",
+      "taskId": "g4-working-backward-transfer-idea",
+      "sourceObjectSha256": "826486c1706989d034a210bdf264cc2ca3b2453669cc65ddc30d0f663e15a9f1",
+      "targetTaskSha256": "f0880035202ee4677b5bd50e6d189763e35dc7c648c6f7faf27b2b3c232dc9ef",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pigeonhole",
+      "taskId": "g4-ph-1",
+      "sourceObjectSha256": "bc7661b81f8837a355554218ecb07c3af8bd75e0242974ab07e4366dd767bddb",
+      "targetTaskSha256": "6ab739405365a17ff0c5749b7de0d324d94ce4ae45943a1437b4a8bdeb624fce",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pigeonhole",
+      "taskId": "g4-pigeonhole-why",
+      "sourceObjectSha256": "73945db42232cefbb3c23e2efea67f72de6979836c7a5e7885ab8f0d1a5123ad",
+      "targetTaskSha256": "bcc1fad0884406f51900fb3d6ccf6b6bfc38acc36c0b6f40b78c4f4803e811ad",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pigeonhole",
+      "taskId": "g4-ph-2",
+      "sourceObjectSha256": "c256e3e9c7413c0f8216b1f7c62a5caa8c43a377d915a54dcddbcbc0acf723c1",
+      "targetTaskSha256": "ef27a089be1aa9003ebebe2d4a50fcc2d9bc4684cf60af04e5b9c4d1607ca08d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pigeonhole",
+      "taskId": "g4-pigeonhole-model",
+      "sourceObjectSha256": "ddcfd89405c52f25702f94f76f1581fd12704451dab4c28d1b1959eaf4b7a624",
+      "targetTaskSha256": "5a81c474e9eec2a5453f9c9f5f5a6410117aeb50ffb3d8f0485eb8a8adaaaf4b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pigeonhole",
+      "taskId": "g4-ph-3",
+      "sourceObjectSha256": "4f82a8996740d9f9814a91fb7f9cec6456c03c286642eba05f097be4d146c8ee",
+      "targetTaskSha256": "ad5ebe1c6fb184e13d66306f7a0b12565bff46b954ebe3a2084cef0a7104881b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pigeonhole",
+      "taskId": "g4-pigeonhole-reason",
+      "sourceObjectSha256": "2c20fd72c558ee8de68167a058e78da7c226f6861c5d125677913101b5cddfd3",
+      "targetTaskSha256": "b3e00ebb6ba4e07071eca64db644283fbea23d0b4450b76752b2586342226681",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pigeonhole",
+      "taskId": "g4-ph-4",
+      "sourceObjectSha256": "606a384ca6989721174281a7f5c8e0c6fe7aaa574a68512fc58a1a8b1fbb07a2",
+      "targetTaskSha256": "a0b2f59ae3306aeb3383f2ed269a26a266bc68b7bfc64529448f86f43472cb45",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pigeonhole",
+      "taskId": "g4-pigeonhole-transfer-idea",
+      "sourceObjectSha256": "468f527723fbbf528fcf548b6d8deee17603042422f72dfc5ea9c22a2c3f0de5",
+      "targetTaskSha256": "308823d4de7ec16d63a941fd7e751ad20bc1d1a4f62b88d0f9ea8147ec83549a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-age-invariant",
+      "taskId": "g4-ag-1",
+      "sourceObjectSha256": "671125ffa8076edb76a6be2223c49d0cf5adf0c6ef081537255cb5899bbb43df",
+      "targetTaskSha256": "9ecc5236886c032b524d50a4a0b602df0497fa67b9d610c25900d61910e143f0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-age-invariant",
+      "taskId": "g4-age-invariant-why",
+      "sourceObjectSha256": "13c6bda96f481afb55811d96ef0a705d5ab54c8a6feecea4a472e6f5b36a7617",
+      "targetTaskSha256": "c9c51d949b0d0bc81101b403bf0bd89161c35ec896a961f4d2c3d2229e6c25bb",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-age-invariant",
+      "taskId": "g4-ag-2",
+      "sourceObjectSha256": "555780933b88dedbda4192d3b8b991901e426dd4c819bcf9790dd45a5cd75dec",
+      "targetTaskSha256": "0c3388d3b30769a726f7c5b5b098ea1bd64029b374cc04ab42bd10361a92a7a1",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-age-invariant",
+      "taskId": "g4-age-invariant-model",
+      "sourceObjectSha256": "53b5c9df454ba9208ab9c147e2faeb230730702c712af7942d54a50ec2bd6ce9",
+      "targetTaskSha256": "5c330cffa27a46ec429cf7730d8f055751e1a86b6a04649d54772ca19b6441ee",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-age-invariant",
+      "taskId": "g4-ag-3",
+      "sourceObjectSha256": "0ec9b8a16df337bb42fcd996efbc79fe8d9da2abc22546ec38c35357e7c3aa72",
+      "targetTaskSha256": "fff71c81ae62b6a954822ab4957f987a66beda6d7af18468448040ca580e5439",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-age-invariant",
+      "taskId": "g4-age-invariant-reason",
+      "sourceObjectSha256": "d14525a263c9d3d9334f0e4f2c13fb6d835c7c162a1999807d0ea42158a20527",
+      "targetTaskSha256": "3ea2b687423fefbda552afeb0b76ef5d81082736d96b25a4fe0c1f85c3ca1857",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-age-invariant",
+      "taskId": "g4-ag-4",
+      "sourceObjectSha256": "c49557947ed3ccc415609b9fd36455c158351914c2a0a6a57fa948f47bfa2e0b",
+      "targetTaskSha256": "2e45b965fefeed213ab015029a9fb0cb9a3ce04e93b7597b27241743eb9c036d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-age-invariant",
+      "taskId": "g4-age-invariant-transfer-idea",
+      "sourceObjectSha256": "1e52c0de69f099f177a34cd65188c563f4b0ef88a93c482ce11b148c2b045dbe",
+      "targetTaskSha256": "f92c3e9d96ce31ec9f2ce26e6ad5b4781dd1055d9924ddc6ea15a136a673eaef",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pairing-sums",
+      "taskId": "g4-ps-1",
+      "sourceObjectSha256": "bde3d2b87ea54afc2a36c51ccd43c9a283beaaf580a241c9727502956832eb75",
+      "targetTaskSha256": "30a532f1e7dbb7135eb3994dbe40156e7fd18cae5dad5d54721fb643048ba45f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pairing-sums",
+      "taskId": "g4-pairing-sums-why",
+      "sourceObjectSha256": "5c1758f9aa0ae321ed392dbb227a62a0178ac928dbb4aaf62da648048f62bd67",
+      "targetTaskSha256": "034c4fc77226e095c070dd72ecf50f8c7590746ab141635b99d69af6b7553370",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pairing-sums",
+      "taskId": "g4-ps-2",
+      "sourceObjectSha256": "844c8c77777b4e2bcd995f5308bdfbe7b4b268ca610232da824a3e9b0547869d",
+      "targetTaskSha256": "acf7220b8dff1f64197b74ddbbc0a34d323a6979150f7e4905f531d2f8d8e2e9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pairing-sums",
+      "taskId": "g4-pairing-sums-model",
+      "sourceObjectSha256": "344a040c555859ad3eb7f5ff2c4da6a923cb876628d155c3fa68435a993bfd4f",
+      "targetTaskSha256": "388ababe4b8920431f024f64da7ca87dbccf73c011b66f717c5fd31409ec4504",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pairing-sums",
+      "taskId": "g4-ps-3",
+      "sourceObjectSha256": "fc438b9903a242d6252ebb6b792485f1d968a2b099869b2f4064256cad865008",
+      "targetTaskSha256": "89fb3ba36b980daaec95c3cbbb7e02e6ccd1d61e5de2e1d0f560d60ee53d5e37",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pairing-sums",
+      "taskId": "g4-pairing-sums-reason",
+      "sourceObjectSha256": "7172fe2ca1ac262dd53b05b8122bdb7cf930ad98d932e64d58d0ef82843efa78",
+      "targetTaskSha256": "546f4335bdcc7b2e543eba85ebc3dc34fb7fa272ab4a2f76a32da3791a02eb6b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pairing-sums",
+      "taskId": "g4-ps-4",
+      "sourceObjectSha256": "4bc853d61e40ea1e4a40348715bfc1c6a911cd081cee6b1211bde3193e593e35",
+      "targetTaskSha256": "b77015ce35dcb4d37677bc46bfbeaa3f67c14fd69d4e1a7ede23fbb23732f0aa",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-pairing-sums",
+      "taskId": "g4-pairing-sums-transfer-idea",
+      "sourceObjectSha256": "e1cc0857c387ebda2311ccfe69c4e5a93810195cdc319ee2c6b44d74f12a386e",
+      "targetTaskSha256": "72856d86122139b114796498c88c2cc3e0245d62134ca05e4818d049a150c911",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-matchstick-pattern",
+      "taskId": "g4-mp-1",
+      "sourceObjectSha256": "ab87942c15d01bec606a4af7860f1cb6a41beb754fccca84fe2f7e841d54c16c",
+      "targetTaskSha256": "c0aad34013d912af4befbfe5dce5c14e9e17d05acbaed0b7fb931938f1b8847b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-matchstick-pattern",
+      "taskId": "g4-matchstick-pattern-why",
+      "sourceObjectSha256": "cb817be308ca5a89f24652febdf7cbc15911471201852d48d27726bed121d940",
+      "targetTaskSha256": "b958a3d313d87ce20af16896e92dfcaa40c1190c338eebea1d43bcfc03f98400",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-matchstick-pattern",
+      "taskId": "g4-mp-2",
+      "sourceObjectSha256": "84c75b27bc4fc250a7a325171e04a5fc2852146740b0e58c082df41ad8762ced",
+      "targetTaskSha256": "236c097fa118be41204c81747203d3307cee0ea43e4c0bba3286b2e622f2bb37",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-matchstick-pattern",
+      "taskId": "g4-matchstick-pattern-model",
+      "sourceObjectSha256": "669dc1ca944622ebe60ce2ec40c9d281c7e390631de12f1a31643864a79be33a",
+      "targetTaskSha256": "193572c25b7f14f6f3ccf81baac86930234e04eaa9d4641f82c2fe5a092b56a0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-matchstick-pattern",
+      "taskId": "g4-mp-3",
+      "sourceObjectSha256": "bcc7aa156a9459b5d2f3b4ec7b82ae8327d8298f1e55de9779c8ea6b51471f5b",
+      "targetTaskSha256": "a61b8f672486cbb28fbf42fb7da0d0b32db67e560d6d08478e61a0cd29e79836",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-matchstick-pattern",
+      "taskId": "g4-matchstick-pattern-reason",
+      "sourceObjectSha256": "f7e0f6e607d1577eba657f5852e117a28cce9d7ec01ed07e9d21b7867737b824",
+      "targetTaskSha256": "2a1a8ad10c0bc9f95e9a86456ae7612bccfeac3d48f14cf88b4f8821ad2493a0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-matchstick-pattern",
+      "taskId": "g4-mp-4",
+      "sourceObjectSha256": "e054f7b411eb177e8739a37ba1c12e111cda3e89a8b5bb1856e8495a79c066e3",
+      "targetTaskSha256": "1633e9ed1cfdfec0812a12a2526dc75297f3ae0cd6bfa2561276d5684bf6dc2c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g4-matchstick-pattern",
+      "taskId": "g4-matchstick-pattern-transfer-idea",
+      "sourceObjectSha256": "47e11aff923410c9dd64946cb36e03a0a08c265b6803999035a87d273c5c5a8c",
+      "targetTaskSha256": "28bf571830601ddf504b2aeca5841a39014654740cabd84e0c59e786d2744514",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-multiply",
+      "taskId": "g5-dm-1",
+      "sourceObjectSha256": "12f0ff211cd71dc21bbf705b10aa2364e062ce33b52980ab92fa3d567a6c3ac5",
+      "targetTaskSha256": "c36660d4c4a276ddb7304fe8f544879170a9001e9839c13ec12225f31d72b62b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-multiply",
+      "taskId": "g5-decimal-multiply-why",
+      "sourceObjectSha256": "a5d3c8cfa5a8dd66dc1e59fb2926e70ad9cd9bd9f751c0a70022e472d52e9ef7",
+      "targetTaskSha256": "475ec90e10c1f66992a86a1d9ac3737709b188a0497b51f28aecbcfb6fbac196",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-multiply",
+      "taskId": "g5-dm-2",
+      "sourceObjectSha256": "c7383da06ac0d931c3e3820ed9dc60b355e55d9cdd9d43817807f31b701121e3",
+      "targetTaskSha256": "509aa829cc5a0c578f50e7ede0ba19f30cdad093ae8c7bb741366ef207cde356",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-multiply",
+      "taskId": "g5-decimal-multiply-model",
+      "sourceObjectSha256": "67c16758645d88a54e4a95774d6ef76c05f5f0002d4bf8faaaaf9f1e3fcfbb0c",
+      "targetTaskSha256": "141f329a2b249fc0c098dbc6e490a620422cdf912df9c82bdeecaecf99696c16",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-multiply",
+      "taskId": "g5-dm-3",
+      "sourceObjectSha256": "92d2fa76ee97e5eaf208315bacf5bf74c6e923c5ff09f6c32e8cf4338d71aada",
+      "targetTaskSha256": "a19538bf766a6a50d2cdd71521fe1a94dc7f2f60c2123f44a6b3f2c54494476d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-multiply",
+      "taskId": "g5-decimal-multiply-reason",
+      "sourceObjectSha256": "d2f3b868d62ee6b0cae4cff7a636a7d0d101e3e84dcd6343b674b533ef886641",
+      "targetTaskSha256": "a426b993a821839cfafd5fe1dcf22ff5c4ed81774ebe5ffbd6c23b834dd84210",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-multiply",
+      "taskId": "g5-dm-4",
+      "sourceObjectSha256": "685c50db3f5e648c98310a55c0425c448d2a94f5ec96fa7cc00386f3f6bc0871",
+      "targetTaskSha256": "3b50b9e6ed19ad25ac70a579b46b3548367eddba7bf811c5037524732d73bd64",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-multiply",
+      "taskId": "g5-decimal-multiply-transfer-idea",
+      "sourceObjectSha256": "3c1afdc601dab86438838ddc19713a7d754ef2d8779147c57fff2992df7e3ecd",
+      "targetTaskSha256": "b381cbe5eb82d47f5a8075ecdbb382fa681e7b9396ba1e4e0270487ef2df4b6e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-divide",
+      "taskId": "g5-dd-1",
+      "sourceObjectSha256": "f4ce7f7eeda8ae34f36933778af00efd765a54583fcb119a2276ee9f200dd3d8",
+      "targetTaskSha256": "f594a188c3052f33c1e5e9b66e63c9eea35f85b9cc5e2af1d7d5d5ef0d9c74d1",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-divide",
+      "taskId": "g5-decimal-divide-why",
+      "sourceObjectSha256": "a99606ec68783341bce76f60ff764f83674de8aa90d9a94e0a2fdc51814131e1",
+      "targetTaskSha256": "f2d9abcb12b0f9ee863c1afa3d17faefcc8e3488871bdd594bfedfb4b4c9e933",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-divide",
+      "taskId": "g5-dd-2",
+      "sourceObjectSha256": "b8e4372711aee81073f27efb5d91789cda5b6b29573159ff0010a965d593ed12",
+      "targetTaskSha256": "3bbc24e73f105da28d674ad190e863232c8a023f6a83cdf894025fd809e00d65",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-divide",
+      "taskId": "g5-decimal-divide-model",
+      "sourceObjectSha256": "a1c1cc0a34086da6e1bb03d2c55aa3ce958355b6d91a87f9c00cac974b4409e2",
+      "targetTaskSha256": "5168c9e52ed5f309b55d02941dcccf692cd1f1c19d86ddf572458f8ae6c336d9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-divide",
+      "taskId": "g5-dd-3",
+      "sourceObjectSha256": "d09bc2e946af3e8f822292ff491f3964bda1208fec597048aeef25e588c55e6f",
+      "targetTaskSha256": "da2ee84d0190bc6b2e6644c8fe9a669c881e134fb36177295c6911b979157e16",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-divide",
+      "taskId": "g5-decimal-divide-reason",
+      "sourceObjectSha256": "7f38435fdd8fe845215f8eb144474c5a5f0b25b2c6e9ce06572c4004546d712b",
+      "targetTaskSha256": "4eb5b44554d97caaa5898863e58fb7393a76d205823461e726115079c2cfe1de",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-divide",
+      "taskId": "g5-dd-4",
+      "sourceObjectSha256": "ccb9f2bf712f3a31a96d179a754e444f04b297d9dfc0cf2a738b6df487c69752",
+      "targetTaskSha256": "7b01fa930e744627470574bf190b33b631e62a484d331d38858f42d8cc6f96a2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-decimal-divide",
+      "taskId": "g5-decimal-divide-transfer-idea",
+      "sourceObjectSha256": "5e8cb3c89b040fcfe42211eb377aa724f3545d7148553fe930abc08d2cb00217",
+      "targetTaskSha256": "64f74c6b3ab0afe14e8089d3d35f0e09503b07897f182ce623122be2a698f1ad",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-fraction-equivalence",
+      "taskId": "g5-fe-1",
+      "sourceObjectSha256": "decd0ad950f7c553daa0d0b205cdd0fb77438d4b1f9c40df4d1d7dcdad63c66c",
+      "targetTaskSha256": "eb46995a2a6eba0899784770bdad2c9875cd2f0eba946d89b755603f75bd2aff",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-fraction-equivalence",
+      "taskId": "g5-fraction-equivalence-why",
+      "sourceObjectSha256": "f27859ec0ca6766b9774eeaecc3d94bef3a70531695aa9436d9c863631675af2",
+      "targetTaskSha256": "5488016efe2878744c0e400e44d483ca3b791ae7c5788e6776958884893deaf6",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-fraction-equivalence",
+      "taskId": "g5-fe-2",
+      "sourceObjectSha256": "5945f011d79b00a3ecc86ccc919f7b62b6474bccc7d44c2915a09597302b8313",
+      "targetTaskSha256": "5e654b13d8600c4caaec5495fde27858c22e0c9b6f1bb11097d76cf7ec3aadeb",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-fraction-equivalence",
+      "taskId": "g5-fraction-equivalence-model",
+      "sourceObjectSha256": "afad890042d8bed98b40e2f911accf7a98fca61cfc49e394072f622f71daf1f1",
+      "targetTaskSha256": "1849a1490e7cc393213762f2887528a51bd297aa38d7bde5227d1559e5eba9de",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-fraction-equivalence",
+      "taskId": "g5-fe-3",
+      "sourceObjectSha256": "0c18f8713cb4901493bbd09a97aa1841020a02c0577c17396d9caee77eb2afd0",
+      "targetTaskSha256": "96552bff033717d75949388bf9f43889ebd879ddf04ff02552ac28a1075fcf39",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-fraction-equivalence",
+      "taskId": "g5-fraction-equivalence-reason",
+      "sourceObjectSha256": "414715538be7f46e14f55cfc45480943c672b97397ede25002b6b6a45eee5119",
+      "targetTaskSha256": "76a09e4a7adfc561c6dac97cf843a70c4e7adbb83ec7c25a44135ec1a124b6fe",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-fraction-equivalence",
+      "taskId": "g5-fe-4",
+      "sourceObjectSha256": "4280e1c594b321db7a8dba11867c81c958df9f95bc9a3474101c43e59e3df9c4",
+      "targetTaskSha256": "ab27c1d4f471cb007d19802e988f4b76ae9a631e5e8fd60466070d7a412eca22",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-fraction-equivalence",
+      "taskId": "g5-fraction-equivalence-transfer-idea",
+      "sourceObjectSha256": "345462acc972cdb708ea8b6a2a8308c4ac83764bb5c5232a35318ef127d88af6",
+      "targetTaskSha256": "abf259dee99832f6bd8b1cbd40f6603dfe3339eb85c6412d29e057ffcd59e2f1",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-composite-area",
+      "taskId": "g5-ca-1",
+      "sourceObjectSha256": "24e8533dc942d5870fdaf9373c139c39e55bd4f69b4e61af2b402bda0fbe4d63",
+      "targetTaskSha256": "69dd6b75b9b8c9b5733c40a848e0318eae153990701eae7dd290c672b9695630",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-composite-area",
+      "taskId": "g5-composite-area-why",
+      "sourceObjectSha256": "b486ed5a0e881944c1944fcb0633e3149a92de858027cac5f10cf91e3bd176ac",
+      "targetTaskSha256": "d7d611935331317e59cd0a0591a32baab431f979129274e6cd3d91df98029847",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-composite-area",
+      "taskId": "g5-ca-2",
+      "sourceObjectSha256": "00ba4fdfae341025c2fa87d4c6f545d39a8e6b5577a71e143b574e9228dae3c7",
+      "targetTaskSha256": "733fa5dcb63103d955feaa53efa6ff221c8be55e29742ed2f31258e30ad7e872",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-composite-area",
+      "taskId": "g5-composite-area-model",
+      "sourceObjectSha256": "ce373be7cdcf4db0110c99ef86ea1c1ea4d561497567579f3320c48e27fcdd94",
+      "targetTaskSha256": "2a58a324b6064bf71a7d0b9a620c3feb180c23b66a858ac5616953351a56e899",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-composite-area",
+      "taskId": "g5-ca-3",
+      "sourceObjectSha256": "62dfce5c51eabbcddf33edabc9a530fe6a7ec8a7ce80eb5b043d684554c6c7fe",
+      "targetTaskSha256": "a3b71aea908437b475f000d53f63eab1f37f8c6949080b2b6b94491c1348610b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-composite-area",
+      "taskId": "g5-composite-area-reason",
+      "sourceObjectSha256": "7a0bb8136360841288fe7364e61219e5f8a40b283dd1e48c023fbe4515feb30d",
+      "targetTaskSha256": "1763cdad0cdbd6896da07e657bcbf132a4f928185386accc6d23b05a26477d52",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-composite-area",
+      "taskId": "g5-ca-4",
+      "sourceObjectSha256": "cc13be2222edeeaeccb7b0931acd9881d4bc871376ca62b2b89088fa8e06210d",
+      "targetTaskSha256": "a791a611351856c347d0e6854bf8a28b6b5da3e8df922f55452d0bac7a43436c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-composite-area",
+      "taskId": "g5-composite-area-transfer-idea",
+      "sourceObjectSha256": "cedbd827cb957685fde2d360782c562a10363a07849cb0a7899e2135d42e4b5b",
+      "targetTaskSha256": "4d9f3acb7fa797cd1098768d92b97569537346ed586fc5b2ecb1f68c51a046cf",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-cuboid-volume",
+      "taskId": "g5-cv-1",
+      "sourceObjectSha256": "4b07b9753ca22c7173afcca2803dde82d0d5063a152375cdb1f62e6d05c3d117",
+      "targetTaskSha256": "8fb13ef6464d803d3ee6893910588139939504f9fde90eaaf93a316f0b4e35ae",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-cuboid-volume",
+      "taskId": "g5-cuboid-volume-why",
+      "sourceObjectSha256": "676d8dc14245f1e0d98934d9d09bbc39a281033b342cb88216998bf3cf0c4816",
+      "targetTaskSha256": "1af4092d62d304136c681eb44ff89b4576fcf3bf297cb6dd371074e259f2f868",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-cuboid-volume",
+      "taskId": "g5-cv-2",
+      "sourceObjectSha256": "87a04d3c87e294af2a1e84cb9c4c52af62d753753be64f33d474008909cf117e",
+      "targetTaskSha256": "24677445043d763ad92fe7f6d57c1d19ebccfb1b5cc757a06f6875b100bdd05b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-cuboid-volume",
+      "taskId": "g5-cuboid-volume-model",
+      "sourceObjectSha256": "b846069520997f617042c1acdee248319f4fdf212386e88849d2386fdc003141",
+      "targetTaskSha256": "5cc0ff8acee779991c29b7739ab040195ea40c553505e3330589b8b51c168ac1",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-cuboid-volume",
+      "taskId": "g5-cv-3",
+      "sourceObjectSha256": "bcea7e2e289b091ad98862597d2269a075333c99e32d9b748cccd9c7e3b767c2",
+      "targetTaskSha256": "355dda9f237918c546c4ce7a38b4ae5b7b1f30ca5a13011c9d244269a50130a1",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-cuboid-volume",
+      "taskId": "g5-cuboid-volume-reason",
+      "sourceObjectSha256": "f97dcfd348841845443c5bd1cb737e4ebfa85c951874804c6f3b2d1855533216",
+      "targetTaskSha256": "03fd2873de1769f00b39d07a609087c62f1d13058af7bb9c481a0075cd9b9eb3",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-cuboid-volume",
+      "taskId": "g5-cv-4",
+      "sourceObjectSha256": "40f2c555dc7ff0bab9665f8b0238c8ed9b31084db8494d09e531a85159cd0537",
+      "targetTaskSha256": "fded28199acee910ba608152196ba90d56a4561ad394fe87cab31d18e85a7c84",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-cuboid-volume",
+      "taskId": "g5-cuboid-volume-transfer-idea",
+      "sourceObjectSha256": "23514e01aa85da1a320f1212e8cac9cbdb0ed88813c500d98fc526119bba831a",
+      "targetTaskSha256": "a44daeed66571aecb4e7535fc3ac62d1dcf35d62c8120c821169734986e135e0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-equation-balance",
+      "taskId": "g5-eq-1",
+      "sourceObjectSha256": "1eb79cf7b3979ac5b77dc45e7846cb34a81843ec6f923cb8dda05dc58ba41e0e",
+      "targetTaskSha256": "c0c04fe5d31b87096fc1ef915acee0b602a587234447248ff693f0c791a14d7b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-equation-balance",
+      "taskId": "g5-equation-balance-why",
+      "sourceObjectSha256": "85db433bde62e349c1ad2f3d0083be521bd694f509da960b589e8bf602cac2e8",
+      "targetTaskSha256": "eea987bfe2a23bbe3b24638a49c014ff005a44243f6af0ebbd6aea9b109bd5d4",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-equation-balance",
+      "taskId": "g5-eq-2",
+      "sourceObjectSha256": "67c6b10f7b0da95ed2ed1035c59422586d638e95787b730ffa0c2dd625748802",
+      "targetTaskSha256": "bdf82900b15d6be1dc5f9a286c418a65f66fcea74317dcd1ac148b34fbd58023",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-equation-balance",
+      "taskId": "g5-equation-balance-model",
+      "sourceObjectSha256": "a83cd3da627efd14cf9551c0da1fa4ac5a7aaffcb990b70d95255a71482e769d",
+      "targetTaskSha256": "bc69ef47f47b51186d855353382ad26790435ea99296509687862f5a033c5016",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-equation-balance",
+      "taskId": "g5-eq-3",
+      "sourceObjectSha256": "9dca6150f5d2581068579ed13547e2dd18948a74fc3b875227ed3945be2659dd",
+      "targetTaskSha256": "a6295e8949adf14626303a97c21a375c3d393a4a094a89670d9b737c735547f9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-equation-balance",
+      "taskId": "g5-equation-balance-reason",
+      "sourceObjectSha256": "3268c3aeb9737f48550eab9a8cc2c3861c9a0d0422b2d8b617ba83422dbd2cfa",
+      "targetTaskSha256": "3bae5abcaf99ef76aca8c53a83b1bfc6861732905602f5a5894e21a1de7401e2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-equation-balance",
+      "taskId": "g5-eq-4",
+      "sourceObjectSha256": "65f37b92e64e9ba28823f62a9a2c036a806656e0a279018ef00d6f6052915996",
+      "targetTaskSha256": "00d9aceba53e4ee873887bc9affa092848e958742d4b87bc702d99107759f87a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-equation-balance",
+      "taskId": "g5-equation-balance-transfer-idea",
+      "sourceObjectSha256": "e5f77efb74086f4fd7588141711990bb6899983549e715a6b2671549efc2722b",
+      "targetTaskSha256": "4c671128b014da65f35ecf5ebbb582de48818014eff67e8c0ca9fb2ad4e7cd6a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-coordinate",
+      "taskId": "g5-coo-1",
+      "sourceObjectSha256": "bd74558e72845cb200d961bea9f55c40b074ca4b977cae04c20361b2927f0184",
+      "targetTaskSha256": "6611f286532b3fc2da826fd2db737556f484891fb78de5a41d33617244454efb",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-coordinate",
+      "taskId": "g5-coordinate-why",
+      "sourceObjectSha256": "bfac4e80c20eb9b8ee8a7dfa7bfcc7a61ec568bea2eeb5d938c606800943f7af",
+      "targetTaskSha256": "d73b4bbbc9b880147ba75cfc6fbfb458f48f1a64884b980ca52d051f57bcc66f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-coordinate",
+      "taskId": "g5-coo-2",
+      "sourceObjectSha256": "0d55ab6ee2752abe83828068e8284d02667d8a8bf0da5b67dbca322f01cf13a3",
+      "targetTaskSha256": "b5e1f71632d8d72c6fb6208c12f89309db9ac47301d669f438a96c3ee2d69fcc",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-coordinate",
+      "taskId": "g5-coordinate-model",
+      "sourceObjectSha256": "74ca519010fa6e82861d915f248ace2c23d190bfac20867ab44ac6f72ac61ad0",
+      "targetTaskSha256": "93ee402f7e0a0ee2ec45be398c0c0e65a7d17f51c3b8e07adbf4b8aa0777bd85",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-coordinate",
+      "taskId": "g5-coo-3",
+      "sourceObjectSha256": "589ca909084a9bcd2602bc34ea23be196c8198ac94a03bb0fdb3dbaf996e0bdc",
+      "targetTaskSha256": "e4295c610ef2bcea50f93ef210cadef4ca7463664722540798f300fe4a71eb79",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-coordinate",
+      "taskId": "g5-coordinate-reason",
+      "sourceObjectSha256": "be2836232a03c74da3c126db2589115596108e66ee3b9f9f16f1971ccfaa1413",
+      "targetTaskSha256": "703cc4ddad4435432184f8a83a012e108a48665006f7e3d9faae91d109c559ea",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-coordinate",
+      "taskId": "g5-coo-4",
+      "sourceObjectSha256": "40e18f604a1144f9e037b7b4690f3689840db1a31e17d361145398a6ca0ad51c",
+      "targetTaskSha256": "6ceac7d3c84d7ef54e932d8953de3f06cf58a4962bac0cf62789adf8f9070b19",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-coordinate",
+      "taskId": "g5-coordinate-transfer-idea",
+      "sourceObjectSha256": "539bfde15c10001a51aa6b03257e8f787d8ac685cd747eb15438eeb7d049a3f3",
+      "targetTaskSha256": "5990f606d3ce0b00da2f1fd86683ca8f9ca997069aefaa0d913c513ad8c47554",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-probability",
+      "taskId": "g5-pr-1",
+      "sourceObjectSha256": "26e361c392b5e00de697fbf497e1a1289374907cff0ac8bcd0c1c6a2a0877031",
+      "targetTaskSha256": "a1e84b9f52bbf58597fd9bc0775bf677881a5722e01423769da694b6a84dd584",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-probability",
+      "taskId": "g5-probability-why",
+      "sourceObjectSha256": "887b598f46ca574cc45f81b1917da13d40802ed91f2f3dd4cfbe83e368be5ed5",
+      "targetTaskSha256": "64ab0f752501242b05d12ad081228d587fd32bb99dd293c2800dbb36b6e0f6f2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-probability",
+      "taskId": "g5-pr-2",
+      "sourceObjectSha256": "5e5f7353637fcf4f91165a276dc51dbebaaccda5d0aaacff3ee58ced357b11e2",
+      "targetTaskSha256": "e956beeced813bbcf543ebc8a6c829d6ab54a876c41e27c5c18a89438e79eeb0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-probability",
+      "taskId": "g5-probability-model",
+      "sourceObjectSha256": "5d4fd0af92aedb427a8535a6e052f94248c968c722779ab591d48a5820170158",
+      "targetTaskSha256": "da5718089c023f2a07a4473e1efed2178ad6449a499c89e7c6d0d0c238ada6aa",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-probability",
+      "taskId": "g5-pr-3",
+      "sourceObjectSha256": "a485e3ec3d186571cc176d9a45cc2932d834d074229575fde9e634fd6da34653",
+      "targetTaskSha256": "30f63f7a635fa26b1ffcd6ee357d236db92d2bf6831ccf292ffa8f7ffb087729",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-probability",
+      "taskId": "g5-probability-reason",
+      "sourceObjectSha256": "16906763b4fabf2e90c738029c3efe5fa2227bf6b95e5c1835a4d7410d101872",
+      "targetTaskSha256": "62a48f746a19c3016f67994f09caba4548c5139a3e12ab36c587231c256b21ee",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-probability",
+      "taskId": "g5-pr-4",
+      "sourceObjectSha256": "de41c2defd2a374913f568b4443cde23f1248c9c16d847dfafff8077db56c109",
+      "targetTaskSha256": "52c9cc0de6336e88149f54884c07eba45e86d412c51d5999d6dc50301db57473",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-probability",
+      "taskId": "g5-probability-transfer-idea",
+      "sourceObjectSha256": "3f0f3753ff7f7e7d3eb3642ad301acb1c261a079a212f097e48b329c005066d3",
+      "targetTaskSha256": "fce1406eac5f7bc2a08d8d944b6ba36c8ded55c328f21e6fe89b34260af2df82",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-factors-primes",
+      "taskId": "g5-fp-1",
+      "sourceObjectSha256": "66101605d13d6b4cb18703bd137058f8f8eeb3a6cfec6f03bf5366bdd313cafc",
+      "targetTaskSha256": "b6fa6c34c61abe297284dce4f71b5f12fbb853b9a40cef8b409c9e6489315ec7",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-factors-primes",
+      "taskId": "g5-factors-primes-why",
+      "sourceObjectSha256": "b121cfcafd29b57cbbd5f6956f9a65065add6c5437741e3b7a874b1720431df2",
+      "targetTaskSha256": "c0e629efb9633a901a917395b0b5f815d88f03b6de9c7655599ab177e1b0e3db",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-factors-primes",
+      "taskId": "g5-fp-2",
+      "sourceObjectSha256": "b2d0b09c20e2e668fb4ebbe388b823309f3f04bf23aebfcacdfe15d31595110e",
+      "targetTaskSha256": "fb99d6c546ca0113cd096acd4cdeb72b4cfa6ea2fb598b5592407972623f3023",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-factors-primes",
+      "taskId": "g5-factors-primes-model",
+      "sourceObjectSha256": "65af7d509923ef30fb1cc7aa6e36a0c719875dcbf3517a6cc3e1c6914143914b",
+      "targetTaskSha256": "3d21d9ea84d91fc448e5222f3c161dd8f95c422333a653eb2335ca33d48f5636",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-factors-primes",
+      "taskId": "g5-fp-3",
+      "sourceObjectSha256": "869b9c69f753d85362cf58975a94951b424ac9862c04dcb4b20a446f5da78d1f",
+      "targetTaskSha256": "810f85a0073abdb3bbffb6b45391d1ae29f4793bb55857bc872a0af8720f484f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-factors-primes",
+      "taskId": "g5-factors-primes-reason",
+      "sourceObjectSha256": "07b04f4945aa42e1cce551d350b47fa03061b27a74b4e9540e33e12c2efb6347",
+      "targetTaskSha256": "10616904ae0ba16737868b3273befeef85676f1b7c9debb8e019ba30d706de4e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-factors-primes",
+      "taskId": "g5-fp-4",
+      "sourceObjectSha256": "ad6c14aaf75b16f11dc9351d2261206c05b3e5a436a84faf1ddea6072bca4feb",
+      "targetTaskSha256": "670fc41568847e42f0449a472a4ca7b061a73c21dda7b724429cbb38f2bbed39",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-factors-primes",
+      "taskId": "g5-factors-primes-transfer-idea",
+      "sourceObjectSha256": "54eaebbd879bfdac9c657482db8ffb40b733511004e7fcada3b3f517899d51a5",
+      "targetTaskSha256": "b1fc004c7ad3cf6b1c3e2da140bb1c7eebe581ab60a5809b2394fc0ee964675b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-figure-motion",
+      "taskId": "g5-fm-1",
+      "sourceObjectSha256": "1b4babad962bc0a9cbc9b2ecd92aa5e90714d80c6cba107cceacaf360491f39d",
+      "targetTaskSha256": "60791c8622b7c2018602610080f9411f4d212879123b4c3e76ce47a9c956ed8e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-figure-motion",
+      "taskId": "g5-figure-motion-why",
+      "sourceObjectSha256": "3f28badeee1da7d58bcee0afb0e3173608ec3205823baa19f945798946405ad2",
+      "targetTaskSha256": "52ac4c79aaf3ab6c7355d7c8a37741af0ce37fe7229feb8d606db28820b45ea9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-figure-motion",
+      "taskId": "g5-fm-2",
+      "sourceObjectSha256": "e0fffea3d0783fd7581adc22d147de1bb22e9045785e7186e39f26cd0971ceb2",
+      "targetTaskSha256": "47fc5338cfd01d1fcefc107063d5b5f46fc8150c9571765bd3806f6ff469bb1e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-figure-motion",
+      "taskId": "g5-figure-motion-model",
+      "sourceObjectSha256": "3eef23886bf91fc53704132c96fe458df0fda2f72d83e38b93d4333b10e9fdd9",
+      "targetTaskSha256": "3aabc22a9b0782e094a6d42eff3701e2c3d26fae7f716309a45b1206adca7436",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-figure-motion",
+      "taskId": "g5-fm-3",
+      "sourceObjectSha256": "d7c52350e27ceacc123151d19dbe8f84a8fcf5b71410929c75c1ac6810490f6f",
+      "targetTaskSha256": "cbd9d9b41ae537ba15475c2abc78d7c849521b0fcd82b3b85ee09e721560f043",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-figure-motion",
+      "taskId": "g5-figure-motion-reason",
+      "sourceObjectSha256": "7f9e8970e656637685ecd14a668382f6194e80f0cd8a8c218596c5d1f57b9e43",
+      "targetTaskSha256": "418f2cf8fbf8695851abcfab8faf516654f3e00db60d163a78b053c2de18bc0d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-figure-motion",
+      "taskId": "g5-fm-4",
+      "sourceObjectSha256": "291dde675e65c3af7440c0098f9ca82389e87391de2dd1f00fb0e512fc73037c",
+      "targetTaskSha256": "99bfc67c31614ffe8eabf14ee61a722406b9b000fc383f533114b4307b18625f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-figure-motion",
+      "taskId": "g5-figure-motion-transfer-idea",
+      "sourceObjectSha256": "1bc89ad920ed6d3842dc02f05ae300ef99f6ac70a4311ca01edfa726ae7a2bc0",
+      "targetTaskSha256": "c9103bd6df5bb8e884c19eb4818fef4ff1a8b20a95964d1b554fad36d45985af",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-remainder-digit",
+      "taskId": "g5-rd-1",
+      "sourceObjectSha256": "5006aa8cb9533f9bff808f717a72b288dfbfaf013b8a714e9a5b2f546b9421a0",
+      "targetTaskSha256": "d9dea213fa517aec56d2e4543fa1ee389c1b3de36ea6a07f83b12093fccf8f7e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-remainder-digit",
+      "taskId": "g5-remainder-digit-why",
+      "sourceObjectSha256": "eb5a186b1eb0aefc76bef00f8e2be2bb826ed2134235c98e190d67412f92688b",
+      "targetTaskSha256": "a4f0b7a773c92eace17b12c21739d1dd8ec67ae7b69e4faa71246dac7922529c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-remainder-digit",
+      "taskId": "g5-rd-2",
+      "sourceObjectSha256": "9f0397884ef8f46202717d708590427169fcc702853a8f5df29b33a138eb2d1a",
+      "targetTaskSha256": "253da50507c2a80b760fb43633ba0fb2346e26abec9bdfdb2e94d43451724a6c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-remainder-digit",
+      "taskId": "g5-remainder-digit-model",
+      "sourceObjectSha256": "2b665ad2fee733d2dfada554249ecb30fdd76329763794a5fbd19acf2bddc362",
+      "targetTaskSha256": "4760ac38ff5b3aa31fe98b40253032ae572464ad1f17a13b98f0b922b556b244",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-remainder-digit",
+      "taskId": "g5-rd-3",
+      "sourceObjectSha256": "c56e2b8e9d65a3a686c0b39d0d92072f4e3afd8b19215a5248fc9007c6cb5d51",
+      "targetTaskSha256": "96b1fc7fd7a302fba5d49d9ba84d4cc2c7c4cae9125dfb9963786b2442482521",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-remainder-digit",
+      "taskId": "g5-remainder-digit-reason",
+      "sourceObjectSha256": "5b515d10b18d5ac51a21e9e9a09e6477fd406da7d5d931e52b7343c5f850ba44",
+      "targetTaskSha256": "e555a8743a5b794919e5875124706ae309cfaac6d85448b717e8f1b42d8fa1ce",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-remainder-digit",
+      "taskId": "g5-rd-4",
+      "sourceObjectSha256": "aadfbb4bb701cba9d901d5362b4d0c3caa3110bc1598709148a9046d94227c73",
+      "targetTaskSha256": "efa9abaf293be7f992a935348ac362dbf7777308f2aba6bc44c82278301c9248",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-remainder-digit",
+      "taskId": "g5-remainder-digit-transfer-idea",
+      "sourceObjectSha256": "cc1f45260e5141299d5f8b3ae79aedb4488715aa21a644d098146e426f991dfd",
+      "targetTaskSha256": "1c0123d6ff6928d068545b231005c10bca06eae0722a59ac5090639152cc7a3e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-counting-tree",
+      "taskId": "g5-ct-1",
+      "sourceObjectSha256": "48df4d238ce6c65dfa97ec5b0ab32318f96c1e707d970a96c7b0742ad391d11a",
+      "targetTaskSha256": "994186b10146fc6b5217d99c4fdc8cc1726f3e8f6e8747484998d35612918f5f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-counting-tree",
+      "taskId": "g5-counting-tree-why",
+      "sourceObjectSha256": "88478d4017e1aa0e0272fce44ded4fe7f667e9d7adf601939cd0454e3e3fc7f6",
+      "targetTaskSha256": "2cb2f826013f86af04a4d8f9df206e6d4c2e0b5f6f9ee0abe7e8eec2b1ec9d04",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-counting-tree",
+      "taskId": "g5-ct-2",
+      "sourceObjectSha256": "7c1178f761df49dc3872c3dc0c4a10b05824d06fd057a4800bf8680c4e3013ea",
+      "targetTaskSha256": "1a488a75132eebef8ce41f4867253ac69510cebe46c1d7a053d66f9ef2b1d491",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-counting-tree",
+      "taskId": "g5-counting-tree-model",
+      "sourceObjectSha256": "438e18c5c406d16b8e6f9f03d2ee412c7b6c8be5be087417cc0d25dea0649980",
+      "targetTaskSha256": "a78494859ed217baf7b259b5e5381ca627533c0329a76d5df35f71446cdc703c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-counting-tree",
+      "taskId": "g5-ct-3",
+      "sourceObjectSha256": "576ee162f920997bafc2660155ef90880677230f7cd45149974d1d21053acfe1",
+      "targetTaskSha256": "e686c326c1e566b3bc4d9342ebdbb28dec8d8aa4c04dd8aa915a467910585438",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-counting-tree",
+      "taskId": "g5-counting-tree-reason",
+      "sourceObjectSha256": "3c1cc36914985bf9ed5609b58297e36169a2d3e15ee043484b6e08a43a772443",
+      "targetTaskSha256": "b58ee45f8e75852722420a0456b68eb123496caefcd757b47ba27eea105c8f12",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-counting-tree",
+      "taskId": "g5-ct-4",
+      "sourceObjectSha256": "486507b9af55d94e9e4a0a73319788390d847ef694de4f404e6623799f6c5184",
+      "targetTaskSha256": "540d3a4cb08c78c294f50cdad3d764b5d0eeef4f353150b9ac73a4a9a8c8ca8d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-counting-tree",
+      "taskId": "g5-counting-tree-transfer-idea",
+      "sourceObjectSha256": "48b6eed5b2e4aab260e2abc6819c7c856b61458b307206ef9472415006dc03b5",
+      "targetTaskSha256": "1c7d969e343f511b90bd2e0416ff2aa60c9f51c7a7ce68360547536873f68bfb",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-average-optimization",
+      "taskId": "g5-av-1",
+      "sourceObjectSha256": "9cd546b59f7f77901ed3879ba7c5ce030fafb22fa83ae63055c1f0948406259a",
+      "targetTaskSha256": "421c7f3a858bda6c296f0baa8f20dee82ce083f8f561c04627095d41540630ee",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-average-optimization",
+      "taskId": "g5-average-optimization-why",
+      "sourceObjectSha256": "d4a8e517a2c2683e8d0b0a4f028bc0f958692f1866e37268330a6a578c438bc4",
+      "targetTaskSha256": "50bbf7dffd9816566b59392df609ca793aa75ad0684920691ded2e1f6f0ae524",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-average-optimization",
+      "taskId": "g5-av-2",
+      "sourceObjectSha256": "a3547b945dda1aff4030e312a44e0190af7bdc97e4c2d1c2a5e9cfd996ffb93f",
+      "targetTaskSha256": "f7f0cce64a56005dff9dc7e7c7fdfceb956d5b2030eb97792d61e3273fdc6669",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-average-optimization",
+      "taskId": "g5-average-optimization-model",
+      "sourceObjectSha256": "201e1f79d76f0881dc0e9c23badcefeac4d8394f430fdfa263b0fabe6ff00d2f",
+      "targetTaskSha256": "1e5ba3015ae3fd1122cd55701dad3fb379f05c111064d7cf860d703d5384256a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-average-optimization",
+      "taskId": "g5-av-3",
+      "sourceObjectSha256": "e0599f834c8d7bffaacf4d5939d8c98285896727922cecb46407685cff7b032d",
+      "targetTaskSha256": "566305be112fc30d2c7e608dd115a2fa31649d41cb6899ee99005121daca3929",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-average-optimization",
+      "taskId": "g5-average-optimization-reason",
+      "sourceObjectSha256": "b8efd1c4d67d5387c7b2abe0ba082674e4ae88afc52dcc8a37c3bf8818c64657",
+      "targetTaskSha256": "e3d36ab81fab665047abb9a68b2a3835abe4e005a5a27ca9b13f380aba23ce12",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-average-optimization",
+      "taskId": "g5-av-4",
+      "sourceObjectSha256": "068dfeb918b302a936e32183c8732140c749c506dabce1c8a84310d77456eb87",
+      "targetTaskSha256": "763bcefd0129bf1431ec89c4d946397b58d42bdc7c80ceb39041575625e218b0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-average-optimization",
+      "taskId": "g5-average-optimization-transfer-idea",
+      "sourceObjectSha256": "769469f1ff4d0399c00982f72b32ad821687b1b4294d1264af378b9c812e9dca",
+      "targetTaskSha256": "15df3c6dcf0d7adb934144ca6dba0d740aaccda047bfe229b1faf64e74d7c810",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-area-invariant",
+      "taskId": "g5-ai-1",
+      "sourceObjectSha256": "b44e23950d6c6774b93afbfd7e2dc78af2c457d0b81a9824c693fe9fced69eda",
+      "targetTaskSha256": "c00144ad080a76e1907380bfd0d54b4e1db4362b89c051f9267e4508cc34235b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-area-invariant",
+      "taskId": "g5-area-invariant-why",
+      "sourceObjectSha256": "ddbab90c48d26ab2e4175789a5775c8f64b37c5df967a3bbfbabb468bcaac2d4",
+      "targetTaskSha256": "044ddf5afc737f0c6f9a80eb5a314fd0525bbd85108d3228428e491a047d93b2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-area-invariant",
+      "taskId": "g5-ai-2",
+      "sourceObjectSha256": "c676ceb6c64090bfd6afd571c13374f6e0140dba561559b148edcb5850ecb5e0",
+      "targetTaskSha256": "4e3600d19bba15c022db97b91bd62ecf9a9ba08ed3da393e4ab30ebc745115bb",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-area-invariant",
+      "taskId": "g5-area-invariant-model",
+      "sourceObjectSha256": "c5837882c0c8a145ed9b35c85ad8d2b15c53d16adc6e950fdfeb33436e698dc2",
+      "targetTaskSha256": "075ac8175a5859c3fa93ab594abeb7abca3b13240b240e4597469ea771d4f141",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-area-invariant",
+      "taskId": "g5-ai-3",
+      "sourceObjectSha256": "88ea3429994f8fc8b673b152f8eb6563cc23ed88119d3b1f4440eefed0a756ee",
+      "targetTaskSha256": "cff8f9321e69420cae14418c4d9d108726c1cb6f9cdb61204a9ac00b3e97e1ce",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-area-invariant",
+      "taskId": "g5-area-invariant-reason",
+      "sourceObjectSha256": "8f0896f6d69e32388a6dd832e027a734473cda2df4da3be4d584bc3b96e2c771",
+      "targetTaskSha256": "aa2036798536d75339143573cfd487a640a998c34de3ffbc7b43f0b3b569928c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-area-invariant",
+      "taskId": "g5-ai-4",
+      "sourceObjectSha256": "628ecd42861f4685d1c582ee0811898d87cb7d339bedc221fc7d34d5ecb1cb2d",
+      "targetTaskSha256": "36b5ec602cbe969df922fda17f43a3b02c046356e5266ed59ac52247b8913235",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-area-invariant",
+      "taskId": "g5-area-invariant-transfer-idea",
+      "sourceObjectSha256": "1e00681e054c8b36f6a24883edf581bad99c517c592da8b67d1392b933737026",
+      "targetTaskSha256": "38284f0e1342dfbfa67651453311f8ad93af0b6c5c0d3e19c81cb601dc0be350",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-work-rate",
+      "taskId": "g5-wr-1",
+      "sourceObjectSha256": "f7c18f2406f92b543ee42e10df4c0ec2f782630c50a45353fa54f3faf31ac18b",
+      "targetTaskSha256": "1f8ed5d763068faf53d0e65141c31de93cf4dc079f07ea0f99205a832c233f85",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-work-rate",
+      "taskId": "g5-work-rate-why",
+      "sourceObjectSha256": "e327a27808dc61afc0711e974b4fa7b1f5a9101bb00b7516be4d2db5f74c138a",
+      "targetTaskSha256": "5a7f2eb6fd849d546259ce601bfb75090e2330767b7c51f1847b5eee636179c0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-work-rate",
+      "taskId": "g5-wr-2",
+      "sourceObjectSha256": "91adc01804cd9bce7092aa904b8003790d3dd3b5c0d6cc18affcdfcd3470a131",
+      "targetTaskSha256": "1699676307984620991811738ed7d40757ba00e543ffbc4fc14c4ca516ae91c7",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-work-rate",
+      "taskId": "g5-work-rate-model",
+      "sourceObjectSha256": "44c355a2a894c961ca7b5b1054b47d60622b1b7aef110642b247f67ede4d8d1b",
+      "targetTaskSha256": "8968b65b0d086303b61099da9937777cc31921fa6fe065437e0c4eae5a574da2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-work-rate",
+      "taskId": "g5-wr-3",
+      "sourceObjectSha256": "50a143d9376db5b46be020d08f8931aaaca84796e3954dca3dbe31cdcada2394",
+      "targetTaskSha256": "b02c244babaddaa3811fb3bdbe41a65a06dde17095d58e71f0ee5040822a6b5b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-work-rate",
+      "taskId": "g5-work-rate-reason",
+      "sourceObjectSha256": "226e4e99c8d7f10ac644d1e37c137c663583a5fb839d6ec6eac973294b569134",
+      "targetTaskSha256": "309514bde123bb67a09f156c55df29e5b5cf463c9b990b8fe55cd67ab6fa9b02",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-work-rate",
+      "taskId": "g5-wr-4",
+      "sourceObjectSha256": "162c51b6444aa622faea07ec53f90d24d1eb7e9ceb53a43d6ab5edb587e6f290",
+      "targetTaskSha256": "d8c108d070d1bcc61db72df7e35af33a344d61c10cd6daba197c55625836b20a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-work-rate",
+      "taskId": "g5-work-rate-transfer-idea",
+      "sourceObjectSha256": "c223f8efda8c0827584734b2cae397d034ddcc36e5b5c8f145b51cc68d5f3bb6",
+      "targetTaskSha256": "5727cab9fda2a3b8f5613acecca7dda4e6d55d38b57a5ee956d07c509780e564",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-pigeonhole",
+      "taskId": "g5-ph-1",
+      "sourceObjectSha256": "1b5f83c2b848fc7011aabd334bee238d2c3ac8e13f2678bda3fd24c1c3c3b6da",
+      "targetTaskSha256": "d17c1402b86c84cd932aa0f1ed1cad676bae3a91c8b8cf4903ff40711b1f18ea",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-pigeonhole",
+      "taskId": "g5-pigeonhole-why",
+      "sourceObjectSha256": "1ff1ee522fd23f84c22b9ac23bbcd43084b7a3eb59343cad4b07cab371df7096",
+      "targetTaskSha256": "605585272f58c0aa5fc92818df332aac0756151d528494cd3f2a98e6edc859cc",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-pigeonhole",
+      "taskId": "g5-ph-2",
+      "sourceObjectSha256": "e4d09ad368547ccf16423cfc890d0a96b65d9c5f2fd03ee400f6a14152570144",
+      "targetTaskSha256": "58d9fd15b254d041a20fc9e742d904950d93f3fb89de0f937379b58d069252be",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-pigeonhole",
+      "taskId": "g5-pigeonhole-model",
+      "sourceObjectSha256": "2d205972fd40110653446b136adb4382d06d8a2248b81a57d33ed72ac948ed80",
+      "targetTaskSha256": "527e579d42293f48eaa160bfba18c9b4a86d66fbe635a071be3ff5bfd1325aa7",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-pigeonhole",
+      "taskId": "g5-ph-3",
+      "sourceObjectSha256": "15255173844939be9446e6503ebc3092295988e1f23a1e6cf897d1a18656fa4e",
+      "targetTaskSha256": "b9ef85c1ebe4fbf378afb54d87b44312265546439acfff5d248afdbe46ff72f4",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-pigeonhole",
+      "taskId": "g5-pigeonhole-reason",
+      "sourceObjectSha256": "2c1c50ccd6264d6c8b9847ae7ffe3e202a30d4d440a5c05cea809a85c8ccc0b6",
+      "targetTaskSha256": "b7b0cf8903f4695fa10233c4fbe3fba5f45496f2d57f3b5a471c4e31eb35ffe9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-pigeonhole",
+      "taskId": "g5-ph-4",
+      "sourceObjectSha256": "ca7b2c6b98683493cc4883970dc410f3012c7a8d64603e2f4794341d1e35fe3b",
+      "targetTaskSha256": "16eb1ffe5eda88a4249049459d85279d0bc2d1ace83e9e24328da224a02aca9c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-pigeonhole",
+      "taskId": "g5-pigeonhole-transfer-idea",
+      "sourceObjectSha256": "0ce09575d306a1621197be79a16aab74ebcecf35177af84e085ec5e0177baddd",
+      "targetTaskSha256": "1abfbac263e71c85a8171e27ebf1ac8fab5be539bb75d4e3b12fdf75d6d062de",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-reverse-equation",
+      "taskId": "g5-rv-1",
+      "sourceObjectSha256": "cbd8d525dca9417b924ed6ac1d384131a465a1f738df45942f5667f8cbdecb96",
+      "targetTaskSha256": "8cb1a57eaa425b8d0cdba3209f3cb7f3bfd8e8b4f6064bec00bba9a2f0362286",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-reverse-equation",
+      "taskId": "g5-reverse-equation-why",
+      "sourceObjectSha256": "da29d43fb1d99d36b6ca96e09514ac84fc430bb2cd8c58487c684fd2ff024f79",
+      "targetTaskSha256": "c00dff416fceafe098611260023b4d0ed6e11b7019d794ec2d91935d9ea00f53",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-reverse-equation",
+      "taskId": "g5-rv-2",
+      "sourceObjectSha256": "1ea1c2567833bfb832d8fdddc15466c92b163996ede4015817a34642b1352011",
+      "targetTaskSha256": "f569f508b15d8e2461b92b2943b60ab4642bef8e9082b44904ffc99f9903266b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-reverse-equation",
+      "taskId": "g5-reverse-equation-model",
+      "sourceObjectSha256": "2369410a436415b8a9d78579b0368d62a4ac63e52588557e536ca906ada4fa24",
+      "targetTaskSha256": "9ea75bfbf20d774a6acd4208686558bb65f7889e74415e99982083e8156def13",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-reverse-equation",
+      "taskId": "g5-rv-3",
+      "sourceObjectSha256": "9804ad1eccec9a608ad7daa571c2b2e8e6feb3bfdb1250958effa1ad9e5149b4",
+      "targetTaskSha256": "44a99359a7c4d6c39de5890d55df217921a2c27a602463cb82d8264ab3f52e4d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-reverse-equation",
+      "taskId": "g5-reverse-equation-reason",
+      "sourceObjectSha256": "06bf66096a849a6887b4060ec79513a2f98afe08957e012638545c923dddbe6c",
+      "targetTaskSha256": "06264517b56a842617983bce8135a8cb20b8340f966f13a8d42d17fd6e0857ca",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-reverse-equation",
+      "taskId": "g5-rv-4",
+      "sourceObjectSha256": "43bf5ac4258b309b67e8406b6dd5786f21db12483c17ffb886bffc3a300fd7e6",
+      "targetTaskSha256": "3fed06986df2171dc593248c3751ed99235a45c62021d151cb25e6fc3712e002",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-reverse-equation",
+      "taskId": "g5-reverse-equation-transfer-idea",
+      "sourceObjectSha256": "5860e0d6463ccc8f5d06f609f286bf65e7c6ec9bbd90f4fc9b2376df03cdf24d",
+      "targetTaskSha256": "4a9e0b3245f70ca0c111bdd4bf53b0ed598bac5103a6610ab830a9a92c12a379",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-digit-pattern",
+      "taskId": "g5-dp-1",
+      "sourceObjectSha256": "038b5de8eeb1d65ce2193f861e9218113285ab8132c5ca2c6c1df0cb288875a2",
+      "targetTaskSha256": "57671c44112428cd04ada4fbbcd5fbe8370bb44cbf1459883ff0df0e0083201e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-digit-pattern",
+      "taskId": "g5-digit-pattern-why",
+      "sourceObjectSha256": "cc59b80b0a8ae16a3e36c595b753036302b893c607a267acc327adcf1adf5a31",
+      "targetTaskSha256": "161afbb38a16a37b9555451b5ea0de967b068e119f4d7630f35aadc93688f971",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-digit-pattern",
+      "taskId": "g5-dp-2",
+      "sourceObjectSha256": "1c822095916d78a4885719b413f1b45968a79df471213ef8d1a447f6a7d5fb0a",
+      "targetTaskSha256": "6aaaad29deeb32d32f1b0e891b66a952c7dab825a5db7504c8c1407e5c590b11",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-digit-pattern",
+      "taskId": "g5-digit-pattern-model",
+      "sourceObjectSha256": "3adce3173f8f86e6d7287c0243d8f49b0928f719fd38da804133fa0c8e527122",
+      "targetTaskSha256": "255ea330e744cd5de6686bb252afd20774b5ea3bb58a06c9bd5da7be8db48ad9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-digit-pattern",
+      "taskId": "g5-dp-3",
+      "sourceObjectSha256": "be5c179170b282f0ef9785910db612437e58e589fad3dd0079cdef40eb7593d2",
+      "targetTaskSha256": "04dca3b0cb1aa9c196d5e936781fe01cede14a41371b2fa6abde85875cdc0d9b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-digit-pattern",
+      "taskId": "g5-digit-pattern-reason",
+      "sourceObjectSha256": "26147944356762af84fd2124a40cc66888b8dce2327d1d4168df25c6a164dd4a",
+      "targetTaskSha256": "c10cd3672f9a978714d179a4db36330e42ee620e700a9775ffc232b49a67ee5c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-digit-pattern",
+      "taskId": "g5-dp-4",
+      "sourceObjectSha256": "f0ea326770e2a2d8b95037de51b9929ccb7fcd3634a7b5ceb703657ed433361c",
+      "targetTaskSha256": "95b58d1c13f04e78eeb2a73bc7040a1065e1c7be92dc558d15973d9ceb11545a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g5-digit-pattern",
+      "taskId": "g5-digit-pattern-transfer-idea",
+      "sourceObjectSha256": "70c197f0ec28f349303ef45af655ad08ca29c63b95c5417174082677890347d6",
+      "targetTaskSha256": "5661c720e3250a75c2d43c99e86cb54a3b28dc4c4067665d8c4f157a60968327",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-multiply",
+      "taskId": "g6-fm-1",
+      "sourceObjectSha256": "6d1abe3ab3ae00bb89d0a07aa186d8c6d84924b33955034c76457d03c2062c73",
+      "targetTaskSha256": "28b18b4139a51bba588c7e2b4c57b559f846c01a9f6fdba39ee61ea230658082",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-multiply",
+      "taskId": "g6-fraction-multiply-why",
+      "sourceObjectSha256": "d2d20d3c82f4764d505576dd58158f89a1d81a6defd33549306b0e6408448b0f",
+      "targetTaskSha256": "1cdafa646dc69a4676e4705cf4a84dab447e74ad3047cbc9b7bf885d28c1b193",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-multiply",
+      "taskId": "g6-fm-2",
+      "sourceObjectSha256": "e927c8fa12a6541002f1bd9851a2ab2a66f8b3e561859d22b872c7ecf449d594",
+      "targetTaskSha256": "fabe87ca75a80bbf89017c240f4a4917ea892c969c6cd38127aa53b0d9e83df7",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-multiply",
+      "taskId": "g6-fraction-multiply-model",
+      "sourceObjectSha256": "de6691be33ed39c5cdac9412af70ffbb0309ecdf6eb2dfc64a1ffac359a698c8",
+      "targetTaskSha256": "2b3aa8a450bdd2ec775ddf1de41ff2efd594ed1b54ffde581676846975f1ec9e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-multiply",
+      "taskId": "g6-fm-3",
+      "sourceObjectSha256": "88df215275b4d5d6773d67b4957b0de476697b6cd51877cc4e6dc4d1efdd0f00",
+      "targetTaskSha256": "39f92e308ff34645bc7d8cc764a2ed3fff9bdd022238cfd1bd6db6660cea728b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-multiply",
+      "taskId": "g6-fraction-multiply-reason",
+      "sourceObjectSha256": "0616991b61d6facdde7965fd06f9677e7ac6160baa1d61391007f916334daf23",
+      "targetTaskSha256": "c96c2887581f8e73e5e2185661e213f071207364ac5603f855976f3513609e2c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-multiply",
+      "taskId": "g6-fm-4",
+      "sourceObjectSha256": "3077b38985d183c46eed70b1e10fdb82b2416bb1266188ad6b104894da282249",
+      "targetTaskSha256": "a7d06371781b6b819134827dd63fdfaebfa0b7b6a468e65efd4da31f3240d043",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-multiply",
+      "taskId": "g6-fraction-multiply-transfer-idea",
+      "sourceObjectSha256": "040d94510a68e591c70e369855382e331050dcbd86296697b79f2eb3a9033372",
+      "targetTaskSha256": "0c3c9871f080419e05d97f01a38962ef228d660bb1d01eae5e5770df9b327f4c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-divide",
+      "taskId": "g6-fd-1",
+      "sourceObjectSha256": "03ff2ce115239a47b03218b2f7860d56f9820c1627762413675453fb86dd9b01",
+      "targetTaskSha256": "9077147bdfa3d4c2a900018fc6238f30e98c30885157033c4fd158d22204baa9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-divide",
+      "taskId": "g6-fraction-divide-why",
+      "sourceObjectSha256": "3defa8eb5ea29b0b1b31c754c20d845a493e325f311b145b12ddfe91f0de0467",
+      "targetTaskSha256": "3a5dffb0de85d16a4388f17fc2bd222ad6f7ef0ed11fa2222d5f7744df3ac132",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-divide",
+      "taskId": "g6-fd-2",
+      "sourceObjectSha256": "5cd778cee7d8d8297d8c6d9b8458bbc49e3588ca68708a78aedcc42606719b9c",
+      "targetTaskSha256": "99990d121777f11682d8db29bc828370810735228152bfb65a3f7e05013aeaeb",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-divide",
+      "taskId": "g6-fraction-divide-model",
+      "sourceObjectSha256": "8f9ce5b4f5e1de3ef905e767e1656465bca778577009fcd885f8f6428bc60877",
+      "targetTaskSha256": "e5a2c7cb291ea6f9a806e777d8f95904ccafae75444ef0f7e03260b94dfbeaa7",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-divide",
+      "taskId": "g6-fd-3",
+      "sourceObjectSha256": "a219180410c6d30b17335e8ca0bc3017564c60d8b3d25e0b819a9bf51208c2ce",
+      "targetTaskSha256": "8ebe535f881726ce38c1345316c3d159cb457d21573e944208c61b39fad77e75",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-divide",
+      "taskId": "g6-fraction-divide-reason",
+      "sourceObjectSha256": "d2ef8738ce37fa5e6cb6d391cc54469359c0bb8dee2e1f727fa3d50d122d0cf7",
+      "targetTaskSha256": "4bd2b556f6822add58fd9c9a259d42caa13f1478d5947a71ce54536f195a3592",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-divide",
+      "taskId": "g6-fd-4",
+      "sourceObjectSha256": "8106d401e386db5d595b7634e119c03ce8936e77cb74190ebdfa50176b74eddc",
+      "targetTaskSha256": "064836ad6e75611e1f204488447340671d6e7d5a33ce7d8f5002aa517d14de90",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-fraction-divide",
+      "taskId": "g6-fraction-divide-transfer-idea",
+      "sourceObjectSha256": "012bb0568e672b017ac510dc3e2b99c02fb81a6f4898f0a4849f2b82dafef018",
+      "targetTaskSha256": "0c07a55c0372f9f1cfe88311d8619871049379a539d25715fc52109a63d5f776",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-ratio",
+      "taskId": "g6-ra-1",
+      "sourceObjectSha256": "06d0c6c55c5df1c2c1d1478713a5832b6d3768ac740c87a6e48b6786a8cc39d4",
+      "targetTaskSha256": "40a6684b5fc9f939dc2998f43c6c34d08bf1ec8d53a18b370d25a71ec3718a94",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-ratio",
+      "taskId": "g6-ratio-why",
+      "sourceObjectSha256": "61d8ad0602dea7437b3e29f383fb42c3765605a854d646cd60ad05c3a98b7474",
+      "targetTaskSha256": "eafe027471e6483869f1a752ba5cdf50221e7b3e29587921760baa2bf73c975c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-ratio",
+      "taskId": "g6-ra-2",
+      "sourceObjectSha256": "cadfdc9c4ad1d8419ba07fcc16917aff9c0d798ae8983938ea8d0ad7046e6031",
+      "targetTaskSha256": "5e3fe25af436743ff029cd2b62472be5e93b4250d9ea81837def3b0ee829dc96",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-ratio",
+      "taskId": "g6-ratio-model",
+      "sourceObjectSha256": "a6f2ef3fc167cef6f794dba51b077eb3800f2b848443e26a774bf9e57772aa2d",
+      "targetTaskSha256": "b048140c1fa4973835140e27cba087e88b185c8fb08f1873c80a26e335ef0ce7",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-ratio",
+      "taskId": "g6-ra-3",
+      "sourceObjectSha256": "4915f10fa280b6e9a59008752882f9bd59570fe822455c9c97afd8e9c386f5cc",
+      "targetTaskSha256": "8adda90dc123789b2b500b19e1ad05f5c59ffa5305f2fa4c951f0450deab6e4b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-ratio",
+      "taskId": "g6-ratio-reason",
+      "sourceObjectSha256": "59a330065694505032c1fd73103c2c2f3a860409500ce8c47cc7248dc3123b20",
+      "targetTaskSha256": "b49172061073f14cc210e59f796a406227f06bba2e014c842cad837c1e4987da",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-ratio",
+      "taskId": "g6-ra-4",
+      "sourceObjectSha256": "466cd61bcbe2d2de58cdf8b1a96bf6a8384c3de733d6f4e067c706a90136e841",
+      "targetTaskSha256": "638588594ea761f18c24c12fb2f551eda2b31fe1637f8299e1f29e046db40267",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-ratio",
+      "taskId": "g6-ratio-transfer-idea",
+      "sourceObjectSha256": "f880c26b336c97e8d0758e7ab7adbeb12fd5fe958e0e8bf9fa15ad86de8c2d47",
+      "targetTaskSha256": "d86f16f467045760326ec41c084a9a442b97c6ad951a0bd3b419dbe656c4876c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-percent",
+      "taskId": "g6-pc-1",
+      "sourceObjectSha256": "b50977a4648a3cafd0cd5142ee9b8795a4948b298af65147a6f1d5fe869789fc",
+      "targetTaskSha256": "35bfe7a005b793333edf841283d6dfd38030e2a86ca1b74d1ebaaa96941f2310",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-percent",
+      "taskId": "g6-percent-why",
+      "sourceObjectSha256": "039d842c0f6f2e224f71edbc0d17e19740c58d95009d41e1fe4b914d2e83c834",
+      "targetTaskSha256": "603348356886605993d34c1b7b63017a04c4e9daac64ca44405ab4832e72b684",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-percent",
+      "taskId": "g6-pc-2",
+      "sourceObjectSha256": "fb30b501d13b89f0471d705e2fb2ce142a49e6d1c0924d244cbefab8b062db13",
+      "targetTaskSha256": "4c7f87078fc1d28220eedb740f6bcff8159f96d0f2f4a05fbf76f6e0be0729e3",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-percent",
+      "taskId": "g6-percent-model",
+      "sourceObjectSha256": "766b31cfc84d4ead401a66eb4d5143428cca8c0be7f1334293740d82705e091a",
+      "targetTaskSha256": "5a36eb93f0e37ee18cde8bb14f1c1795dce8c34a50198bee19dca53a58fec34d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-percent",
+      "taskId": "g6-pc-3",
+      "sourceObjectSha256": "34f9fed17fc9b0a77d68dd12c33c798ba131097f9b438a0df9af3a1aac0f7571",
+      "targetTaskSha256": "a0b6bb6f03fcc83e3ede0eeea29aa56713117fe28a6db5d42718669055e31ad5",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-percent",
+      "taskId": "g6-percent-reason",
+      "sourceObjectSha256": "5345e2d29b545e997ab024059c9f1d8ed5232a6a344eec82fbf95667e3999201",
+      "targetTaskSha256": "a27afd3bc5d3ded2c84262d293a5881885581c412ba0c99af2f288a7fa1f16f8",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-percent",
+      "taskId": "g6-pc-4",
+      "sourceObjectSha256": "6c0a725d12e4b21f97b041bad98e31086adb38b1fce3a46e034fe5bae4a1703a",
+      "targetTaskSha256": "34681a19d09656ba32b0cf32915eaa466a879007eb5e8b0cfa74fd561716b893",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-percent",
+      "taskId": "g6-percent-transfer-idea",
+      "sourceObjectSha256": "f698fab774e0d9212aa7373bec75c7b49119ead17194b50bcc1417cc0479bf9c",
+      "targetTaskSha256": "93542b031bc60f682847231e180c55d6cb47cd57642cbb771594451428456a29",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-circle",
+      "taskId": "g6-ci-1",
+      "sourceObjectSha256": "c3877cfdd98163f877a76333ca3aeb0003fac827088e51e113e236a1c17f81bd",
+      "targetTaskSha256": "ee0627f0254683a29753ce287f50844bf9b921103d6a51e209ba2ec7aaeb8d1c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-circle",
+      "taskId": "g6-circle-why",
+      "sourceObjectSha256": "b39b9bfc9ca3f2fda029d1d20c535363acbee24519650d6d033134975174f7a4",
+      "targetTaskSha256": "4f10bf7238b1e0c464246fe2bb5d81ffbfadab651249039e9bdd2a9279eface6",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-circle",
+      "taskId": "g6-ci-2",
+      "sourceObjectSha256": "ebe02f8cd2a92f73f9f10048f2f7e4086dfe1ff62ccde25f758c1a72ac7b9252",
+      "targetTaskSha256": "d1836e09851da4d521b9c2719987d39f37c8c8d57cf160fd6fee69c79808abbf",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-circle",
+      "taskId": "g6-circle-model",
+      "sourceObjectSha256": "4b64dfcdea92a7debd58e0f962397d5acb81560acadf93f1533289ca699eb34f",
+      "targetTaskSha256": "d0f3eba049ad60b8b5d86d854b7d31499491605b0260283b92403a0a7ea3013e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-circle",
+      "taskId": "g6-ci-3",
+      "sourceObjectSha256": "fdbaf77229b28d5d87882c071e923b18c5f4dfba910f7eb645c63ab1cdfc7c9a",
+      "targetTaskSha256": "2a82e0d4393221a3b49d6c09b146afaa2deafcca1c3b19cc2f7abb3e38fbe990",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-circle",
+      "taskId": "g6-circle-reason",
+      "sourceObjectSha256": "63c5ce7450f18133a07cf8d33eee27f779fd8a55c93c2e80feb308e654378aad",
+      "targetTaskSha256": "f7a0ffdfeb1bcfffabe506a0f96f378a6605cb947ae6c5a351b6ff6205a99339",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-circle",
+      "taskId": "g6-ci-4",
+      "sourceObjectSha256": "003add1d928f26d2fd699c770e6678cc30dd37f7ea739509bf8cf37c9bb01be6",
+      "targetTaskSha256": "2b9217389c032e8dab9f7e3a28b3b00e4d7128d15e9c20acfe91cfec52f82ed2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-circle",
+      "taskId": "g6-circle-transfer-idea",
+      "sourceObjectSha256": "28220c39070f7e7114ff988dc657eb6c9d7a7031044897b37ac9ca5dc4a74548",
+      "targetTaskSha256": "610b0ecf451c8b1effe52732fde07811abd195fb95f93dd5078b92df67332fe6",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-sector-data",
+      "taskId": "g6-sd-1",
+      "sourceObjectSha256": "f069d2362f9fc6bbb69e316984a7003be1455d6ad8f20cc1f1fa07ad107219bf",
+      "targetTaskSha256": "00ab4b15d5f6158847d2c1add658d443f7619423dd2b855b9e319d544a5b0385",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-sector-data",
+      "taskId": "g6-sector-data-why",
+      "sourceObjectSha256": "a85f320315eeb0ab4807f42d9e9b06cb662050c991f592d28ca944103f01a2e0",
+      "targetTaskSha256": "f8c07910f64e1bc6b538f69efee9720ccb430cb88ca1cdbec8a0ca1dd14f1fdd",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-sector-data",
+      "taskId": "g6-sd-2",
+      "sourceObjectSha256": "b0812c6d975b0368ff1d85d3a8c2ae9c888824894e167c8eaef945e19ffc6dfd",
+      "targetTaskSha256": "f16b84c3cf748323a3db8dd8178e73d32576a91cc2fa82cd06f4bbfbef5ac4aa",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-sector-data",
+      "taskId": "g6-sector-data-model",
+      "sourceObjectSha256": "a0599d849f0957ff4bad1a1dc379cc2ce86e6cd632aa7f5f4e642efdf5628d83",
+      "targetTaskSha256": "f9ef5be2f46c729658cc73697a1a73ec29d80743589f56d121d7a2af7a956f04",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-sector-data",
+      "taskId": "g6-sd-3",
+      "sourceObjectSha256": "bd2e3f8b8dbca20a09cc7ae90e8e5923afe70aaea39f363bad6b4a070750375c",
+      "targetTaskSha256": "30202efe8892210a5cb75f4bbea54c9bffdc31592f8a6893622216e5611e43f8",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-sector-data",
+      "taskId": "g6-sector-data-reason",
+      "sourceObjectSha256": "ac08312c4ec27e292354190508713361cf32b099b22f3383cae065357504627c",
+      "targetTaskSha256": "4c603d60c6610d968a67696e1dd068a6bc20e3a64983ab5bebc2b454de716287",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-sector-data",
+      "taskId": "g6-sd-4",
+      "sourceObjectSha256": "c383dc29eae0b960f1832befc0850eb4dbf18972fda5a0075ab344462669d29f",
+      "targetTaskSha256": "38a7b589a6d17e700e43668cdd9a959fa8e535931a36bb3f91d9cf0fd4ff3d57",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-sector-data",
+      "taskId": "g6-sector-data-transfer-idea",
+      "sourceObjectSha256": "3a26e349c9915c1fcf423c12215ab337a1f34e8cdfdb20dca47bb7384d198612",
+      "targetTaskSha256": "255b444c8054852e877af0e1bf6bb67ba6fbb7c03e1607995333ff14caa41def",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-negative-number",
+      "taskId": "g6-nn-1",
+      "sourceObjectSha256": "a8d1a31c9c89d9056c30905d839d0d9add93716e5c1c981cadd3d813b91ce809",
+      "targetTaskSha256": "cba2d71732a03972d96f6f83165e826ff5e3d980e3b9269a7bf376c3575713b0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-negative-number",
+      "taskId": "g6-negative-number-why",
+      "sourceObjectSha256": "63674c895c7b3f639b1b584c8da59a1904e8acc19332fed59ad2adda66f17996",
+      "targetTaskSha256": "b2c4d955749818f2596534df55e638d863538279dd769af17095b2b22e815693",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-negative-number",
+      "taskId": "g6-nn-2",
+      "sourceObjectSha256": "cfa90236dd7b3c883d4128275c1d787f56b4485d7dec3e80b76c8fd770477300",
+      "targetTaskSha256": "80ba488d3a26ec64a6bd6e230be5efddbaafc3d6f709a1e22f750e4b63b55623",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-negative-number",
+      "taskId": "g6-negative-number-model",
+      "sourceObjectSha256": "a24ec379c48a9e85561fa945aed26a573a610ef242d1f3fc7730cb44004841d3",
+      "targetTaskSha256": "ec91ba400e80f0caed284819de4524311aa3922d7e13b58d65dae74da5f0631e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-negative-number",
+      "taskId": "g6-nn-3",
+      "sourceObjectSha256": "5ec781221f04c22eab98b8a774c8b338718685c55ad74b2c55162c6c73c2987a",
+      "targetTaskSha256": "1ffd696e3eaf4c02966af39d3d1a4e88a876f616e895732a69c4298baca3e4f8",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-negative-number",
+      "taskId": "g6-negative-number-reason",
+      "sourceObjectSha256": "839ae6d09c9f16076abd98d87c2d7f2aa81544046fbac26b42a874a35bfab31d",
+      "targetTaskSha256": "26b85f83af7bc4a65a203d60920adbd4c691fda4cfb632e6398af3234d923c48",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-negative-number",
+      "taskId": "g6-nn-4",
+      "sourceObjectSha256": "55a3c10d63d1787e5a4e0fce399fb7db131b19c2686d56ed0e46a1eeed1f5758",
+      "targetTaskSha256": "a0003b56daf3843ed132a8aae68262dd508e047daad870a092ca7ddcf94d52ce",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-negative-number",
+      "taskId": "g6-negative-number-transfer-idea",
+      "sourceObjectSha256": "23fb0e853bf13cc7e8f2bbd65477549c210c5b2ad94e4bd2c7b468f3e71da865",
+      "targetTaskSha256": "944af8311d95463da706a2b6aa63cfdd72e4413425a1ab85f50f08b4e3fb4c05",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-cylinder-volume",
+      "taskId": "g6-cy-1",
+      "sourceObjectSha256": "1670db7adda0714765c18a7cd162e9275dc9da6e041501fdab1de74ea74492ad",
+      "targetTaskSha256": "b96ee7eb3b8c73c3b2ddefdd2f6525ef66c598a97585dceb6a63a761a62962f3",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-cylinder-volume",
+      "taskId": "g6-cylinder-volume-why",
+      "sourceObjectSha256": "be11323dbe3788f75a01b3fbfe067a7731643e21728a881229f44120543a15a3",
+      "targetTaskSha256": "d8540b41e966e937d73b0980fee65b72e3b0b865860b16393174f9450b664ed7",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-cylinder-volume",
+      "taskId": "g6-cy-2",
+      "sourceObjectSha256": "72397e1aff46714146cf5473fd9bbff6abc23bef4853b5731137633a2f30457f",
+      "targetTaskSha256": "f54b6b8995cd7a7f886cdfae43cdd9c716eabad9697b33162809b0828aaeb892",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-cylinder-volume",
+      "taskId": "g6-cylinder-volume-model",
+      "sourceObjectSha256": "d9aaf88c98387a09ba5cd3e99b681b95f81f87a043a1b1198ee187ba9e912cd5",
+      "targetTaskSha256": "7cea7469570083dfd033224b513e9ce6aa1c0de7fc6096f1141b92f498be80a0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-cylinder-volume",
+      "taskId": "g6-cy-3",
+      "sourceObjectSha256": "a6e941ee9baa7eb37886f24c1f2b65d97ffe73942335738eff463d0313860bb8",
+      "targetTaskSha256": "e25b1cf719af95f21093876fd5dbb34bf5eb2f38e193b55fd819a19285936211",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-cylinder-volume",
+      "taskId": "g6-cylinder-volume-reason",
+      "sourceObjectSha256": "887db3e3e3178b060c710fcb86bf6a60528dd48127a4ae430f3d1d7261ed83f0",
+      "targetTaskSha256": "0c8ac66f4f1fd2785238880586465380bfefa535e5808362744b12cfe8f93f3f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-cylinder-volume",
+      "taskId": "g6-cy-4",
+      "sourceObjectSha256": "b1ec4e0ceb4e44e0105aa2e7f68b279c5df0e5ad82caa6a1107b711c3d379d2c",
+      "targetTaskSha256": "2fbe146c751e3c77cf11b7d71f4528fa9f2c3f6168768d031a9971df05411696",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-cylinder-volume",
+      "taskId": "g6-cylinder-volume-transfer-idea",
+      "sourceObjectSha256": "02a28a1348c7f9521d7de68c9243c51b5039403a844aeff28c5a228c181c8f13",
+      "targetTaskSha256": "516bc585651a4d3f35a44b4ea9d5e1c92cc523574554348ec928616593d13b32",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-proportion",
+      "taskId": "g6-po-1",
+      "sourceObjectSha256": "5e0e5b8eb659dddf659e347e82700b06399c61ef99c6e85fc17ee2c8fda53d8d",
+      "targetTaskSha256": "cc03c4ac0da33dd4021ef662ade8196d52228bb1737506519d036b2f10d03c9f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-proportion",
+      "taskId": "g6-proportion-why",
+      "sourceObjectSha256": "216d932d62e77bb21ca4c66f7ba91425d0f69ce4ab39e2fd6804e965dd07a9a0",
+      "targetTaskSha256": "7db48ff168871507628b0cfcddc33559e533952bb03f0e7e8eefda711142599d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-proportion",
+      "taskId": "g6-po-2",
+      "sourceObjectSha256": "e328ec39cbfc8e83821b6b56bbc983937e34d0de07811b5f138cdc8d6cafe37b",
+      "targetTaskSha256": "6d1b2f4935c7e7dbe06d81890e16318059cd1c32f48ae0e15e92183de28444d9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-proportion",
+      "taskId": "g6-proportion-model",
+      "sourceObjectSha256": "4918fb42bd5336ed1fa8480a22d27d658481d4fe94aea6073a4d31cf9b9e7595",
+      "targetTaskSha256": "ffd5c29c53ab3a7989c0b7c48f5350957d299ebaa66af1d71df7c6ede836e33e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-proportion",
+      "taskId": "g6-po-3",
+      "sourceObjectSha256": "fec5681d1d4af584b20d21828a72a1308853cdf316509e214cb4eee90f701cca",
+      "targetTaskSha256": "57e879ef6dcaed935b622520878fb1356bbdf7e491a41b9bed1cb2cbe8845844",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-proportion",
+      "taskId": "g6-proportion-reason",
+      "sourceObjectSha256": "7f4dbc2e3810196e3eeead5cfa7677420b741652cafd23a78775813233371961",
+      "targetTaskSha256": "092c1c89b46c687e474831c751a34ae2b30bf97dac47f3901e20a98aa65ae893",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-proportion",
+      "taskId": "g6-po-4",
+      "sourceObjectSha256": "68cbeab29e79402e46d280a49674126d494f0180eb5b7aec3f6041d0a15dc061",
+      "targetTaskSha256": "cc34e49190f54a1572f6263327569a7ce5417f49eab64a1ceb213f297e5b0f48",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-proportion",
+      "taskId": "g6-proportion-transfer-idea",
+      "sourceObjectSha256": "0bb58b3df1224342e7a8d68deeddbb991819e92a1ee4ec62b4c5f1a6982ca6d6",
+      "targetTaskSha256": "1155c6894924401eb824a4265273fba26980f0edc71c1ed5f23241787cf0ed63",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-algebra-model",
+      "taskId": "g6-am-1",
+      "sourceObjectSha256": "769c3b95f6df29d22b944f345bb5bb8a056c8636923b2e1bb062b33605f0752a",
+      "targetTaskSha256": "03948d155adcce992a5ad60ff61022297c1dfa77a4d54e8c479e4693b1cf311b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-algebra-model",
+      "taskId": "g6-algebra-model-why",
+      "sourceObjectSha256": "488fa8f9996a9fa0a5b97f295839ca9bcb35c0e996bc9d22df3d5c1a09178683",
+      "targetTaskSha256": "322f79dce99368768b27cd3b3e42b48f60c863efc8db0f54ed0fc8606e11cca3",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-algebra-model",
+      "taskId": "g6-am-2",
+      "sourceObjectSha256": "45765a7e6dcb5b06d24d0b01eae48a3a75f62b3bff7c94adbf375d53da4025da",
+      "targetTaskSha256": "1d04a16a44253ab266c54b80f4d224ee2e6dff215aa629c255692a8698d9fb9b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-algebra-model",
+      "taskId": "g6-algebra-model-model",
+      "sourceObjectSha256": "fae9ae7a10b4c8b5ba3f6163f83855db3efca31ce3ebb325bebb3d276e765bc4",
+      "targetTaskSha256": "a8dd056985d65bba062ee27a10f9220851f72b2a670d0fa91dba38d2d6425982",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-algebra-model",
+      "taskId": "g6-am-3",
+      "sourceObjectSha256": "39f15306105026988136016cd62995cf6794e791391c24934b324009c6b09fdd",
+      "targetTaskSha256": "8b4c1911e5014af9d86e50da7169f9959dcb76cb2bc4219f6ed3de1ce6772d14",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-algebra-model",
+      "taskId": "g6-algebra-model-reason",
+      "sourceObjectSha256": "d969855de80fd50466455f9d0736cbdc73cf9f19e0241926f45a3e571f1607c8",
+      "targetTaskSha256": "06b6a2d3457252f223e13fd5d45361a85406f40e48c2206e6613c238b4c8e3a8",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-algebra-model",
+      "taskId": "g6-am-4",
+      "sourceObjectSha256": "80eb37ea9217c9fa1ac580e5ce1334503c27b1bab6ad19b0cfd391f1e5421717",
+      "targetTaskSha256": "3097c5fa5db9318476973b251ef1f8df9fe0aaa097e4652915955a67f1ade90c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-algebra-model",
+      "taskId": "g6-algebra-model-transfer-idea",
+      "sourceObjectSha256": "e313fcb1664030d744f305f970b1c0e0a6500916c4e8949def202af470bdb54c",
+      "targetTaskSha256": "9e9b9d9c32ab2efe071607e8454cf27019dcb7253d08a1de114f58c7baed7efe",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-combinatorics",
+      "taskId": "g6-co-1",
+      "sourceObjectSha256": "ea44f4811fed70773944c1fa2329656bcd530b85c38ecf0edfb2d95b0b5cf9d2",
+      "targetTaskSha256": "3826587f19ab923bdcdabbf2ed95e3312c1c896667f4fdba71d05f3384eddec5",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-combinatorics",
+      "taskId": "g6-combinatorics-why",
+      "sourceObjectSha256": "2aa7b9c78feafdf781255766378118f1700d057abc476bff57b9aee1c03d395c",
+      "targetTaskSha256": "9e0b8816d0dc8503b052d57909ce5dbad3a27f59839ed8f56980dfd8ee67f10a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-combinatorics",
+      "taskId": "g6-co-2",
+      "sourceObjectSha256": "acc52d1049e767b6b871aa6d1ac5c13b4eff691aa9a6ca0b448542bdfde73a12",
+      "targetTaskSha256": "34b418770081a9d3d3976cd5c2f0e2cb3fbd669ab4a0234f0dd7f009bb275b46",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-combinatorics",
+      "taskId": "g6-combinatorics-model",
+      "sourceObjectSha256": "918a8f34e76479cccdce6c081137ebbd938ee0edc349b79666c2219cdba6c907",
+      "targetTaskSha256": "3d222b30bbbac2b4160beb37e485cfba20034eb9447f4994440f29008f30eb06",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-combinatorics",
+      "taskId": "g6-co-3",
+      "sourceObjectSha256": "28427906024b448f1d53d89984432a11faf32b31db116ca4e1455c9b6812be25",
+      "targetTaskSha256": "25bc35b7f8b8cbf455f0fde0523114fa3915da631a8e88c9b73bfd3f0d544917",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-combinatorics",
+      "taskId": "g6-combinatorics-reason",
+      "sourceObjectSha256": "b6d26da592941c66ccb183c2f0f8815485f0cc0693b47b71caa51d4f16970540",
+      "targetTaskSha256": "f20488f9f38448355fd77d88eed94448ae10ece7561429f301838a218b3b7561",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-combinatorics",
+      "taskId": "g6-co-4",
+      "sourceObjectSha256": "15a52867837b2233c2c732521701f4923b00ea698fea471ebb7a33d305b05124",
+      "targetTaskSha256": "29f5e7db9e2ef853dc5f7a7de146eaca35345e5a73a6ff570a64a15ebf00e3ab",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-combinatorics",
+      "taskId": "g6-combinatorics-transfer-idea",
+      "sourceObjectSha256": "4a999b8b954db09c9a2d2b900d6a1a531dc08cfceccd4cc63789f29208e3ddfc",
+      "targetTaskSha256": "1c5bc83c7c310188a2e0c98d2bdb0f3b64056b721dd08a06e04c8102c98943b1",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-extreme-principle",
+      "taskId": "g6-ep-1",
+      "sourceObjectSha256": "5807912b471122ca1e1a58d01d6affb1056ff028dead266cb23150d97c8fd406",
+      "targetTaskSha256": "0dbfd72084d3c399a3d6af5cd78a2195196952ad37aa013c44419f2da58fd631",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-extreme-principle",
+      "taskId": "g6-extreme-principle-why",
+      "sourceObjectSha256": "14f84175ad78b8dac3dc94279a6b1fd5ee4fe9a81333b64e59d922fb48b0eb6d",
+      "targetTaskSha256": "fbd5e19972a73725355e314a9276623f614cd5f0158121398d6f77901dc1121d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-extreme-principle",
+      "taskId": "g6-ep-2",
+      "sourceObjectSha256": "e8dd131aef56956cfe67e801462b023ef6192086142002631d88db4017f5eb92",
+      "targetTaskSha256": "141350e4b405a540d30e8e78c9c8ad20a9c5f9861a7eeb14f1ef0aa001b25a2a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-extreme-principle",
+      "taskId": "g6-extreme-principle-model",
+      "sourceObjectSha256": "d1e6373c5adec435cf191b5ee18518f2cd938ee2a38f31f434b84cea10d2a4d5",
+      "targetTaskSha256": "793c3dc675d93c461a174882905dccd501ef0009b4f56b18fcdb0ad84b744c40",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-extreme-principle",
+      "taskId": "g6-ep-3",
+      "sourceObjectSha256": "99050ea47edc865f7d088c058f934134bafc12dd1743e15151949595f76e2df2",
+      "targetTaskSha256": "3fac786538a794c86a0555a94934a41bc2f8e35c75a1c757004b9c9828f045fa",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-extreme-principle",
+      "taskId": "g6-extreme-principle-reason",
+      "sourceObjectSha256": "ee239b92be989fd6f30f1f31900fa22f764c109c824c86e01d32d41f084ff2de",
+      "targetTaskSha256": "6633b9aea5a512189f0f81c89ef6436673bb2ece0f7623106dc563cb1ea82db4",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-extreme-principle",
+      "taskId": "g6-ep-4",
+      "sourceObjectSha256": "1d3b2abb27ceecf8f6deafaa8cd3ae4a179dbfd30ca6dfd56b39a39a2230aaff",
+      "targetTaskSha256": "d93e526fcf8668dd1781788cef8cc7529cef9de0d920994e1b3cbc592b6529d0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-extreme-principle",
+      "taskId": "g6-extreme-principle-transfer-idea",
+      "sourceObjectSha256": "89f18281de55582b18f565558ba72a9800c6da260b7aae5641c4ca699e456895",
+      "targetTaskSha256": "2d85340e26b19cd2cb327659a492866592d5f5f246adc1787873d9a19c2fc367",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-parity-invariant",
+      "taskId": "g6-pi-1",
+      "sourceObjectSha256": "2f903b56a591ecb4611cf4d0bba076fd5c5ff98bb43da16afecf7858d3519a5d",
+      "targetTaskSha256": "4be8c42874fc348786aad6a11eb3924afbf20f4cc538ed1718a5718192280403",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-parity-invariant",
+      "taskId": "g6-parity-invariant-why",
+      "sourceObjectSha256": "d06910d30f17014022bbb10d3b4d1230651b818c2f27f06eeeaf61d33b734fb4",
+      "targetTaskSha256": "ceb8411408f22d73aedfc7d69aeb232404512a9a2d09dd5eaab0c3a3e046f139",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-parity-invariant",
+      "taskId": "g6-pi-2",
+      "sourceObjectSha256": "faa66aff9b1adcc9670944d906dc150b0750e40a5b74dd7c85f598ff4148fc1f",
+      "targetTaskSha256": "88f4ca89785d82979adab0ac0f6f90a351d198dcd7b8dca03147549192608a3a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-parity-invariant",
+      "taskId": "g6-parity-invariant-model",
+      "sourceObjectSha256": "90aba7f290090a729ddca3893512b35a1b0a2f33ee69b54425cb79bda97dc35a",
+      "targetTaskSha256": "30fe30bcc8580beb577c80941e9a0b097dc90e9effdeeea49359a36563f7dd1f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-parity-invariant",
+      "taskId": "g6-pi-3",
+      "sourceObjectSha256": "c021a9b5f3192bd78ac8cba4e92036a7ee339a3e90076b4bc925dace7311d191",
+      "targetTaskSha256": "2e7a555d5f8a705cf7e546ceead12e5de49df27fa8308a19ab0d2307ae90e1d4",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-parity-invariant",
+      "taskId": "g6-parity-invariant-reason",
+      "sourceObjectSha256": "13a6190597b65bb80f551d6c4a3707ed1db6e18e34e683854ce1927a815ddc10",
+      "targetTaskSha256": "b8ad70cef88f6d212ee6a13165fec0e5f8d1d28ded0e907a7abbe36360f26ac4",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-parity-invariant",
+      "taskId": "g6-pi-4",
+      "sourceObjectSha256": "8f2adbb17121563d212072e9c972d4b2410b7f623072119ae0c3d7d72dbb9ef2",
+      "targetTaskSha256": "291c5ac28ce6ca0588a88260c79fcd89a08064361cc66da510b207a7c395063e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-parity-invariant",
+      "taskId": "g6-parity-invariant-transfer-idea",
+      "sourceObjectSha256": "03ef4e9ce2796e1cd61f27ea97fc446f728f221feac37057114b77c465a58457",
+      "targetTaskSha256": "631e4d7442fada8db93cb0fd7e56c4c435bda3eb00a0eabede77bbaaeb7b3557",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-speed-ratio",
+      "taskId": "g6-sr-1",
+      "sourceObjectSha256": "60adb8a7e542b5f5d18426857b40e75ed8e3b960a2905c3ef52946f953213f73",
+      "targetTaskSha256": "be9e54b6c7d881f88a7335482040a1cf426844783a59a31ff1787883ca559c2e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-speed-ratio",
+      "taskId": "g6-speed-ratio-why",
+      "sourceObjectSha256": "9ba585e18588c073b13cf6f1000d21495aea88119d053e16de1405947ed0832a",
+      "targetTaskSha256": "6a71f5a65d404425220010793dd44f0730a02961162eb0f4c4deef3c1f3f0625",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-speed-ratio",
+      "taskId": "g6-sr-2",
+      "sourceObjectSha256": "376a60aa0ed8626bca852d5d2ca612d457f63e0356365d4f8835eda203816d5b",
+      "targetTaskSha256": "40b0b0febc37f40546713c6a29df89bcdbc701e89d292144fd7db9dee022fe3f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-speed-ratio",
+      "taskId": "g6-speed-ratio-model",
+      "sourceObjectSha256": "50bda127e396f3ce57272431cda60551b4afc8c39b876e27cc385b05e4eb968e",
+      "targetTaskSha256": "9dca9de23e16ac132238666bcf4c576a709cde1c796a33a2938f77cfb9b87ab0",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-speed-ratio",
+      "taskId": "g6-sr-3",
+      "sourceObjectSha256": "65747ed40967605996bc3806ed851e3b599bc3c24b01f333eae5fae775c20a48",
+      "targetTaskSha256": "4a5a89b8528e9ea8b0d918626cf3e80bc77604922302a7751c9aa1b200c8cce9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-speed-ratio",
+      "taskId": "g6-speed-ratio-reason",
+      "sourceObjectSha256": "efb1470f428d1cb795513299f23698d6b4984cf5510caa7f1fc36e46186b3c8d",
+      "targetTaskSha256": "88f0fddc471f52edff36dd0f6a0541eda76a688344b0d85c371980d2e1824262",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-speed-ratio",
+      "taskId": "g6-sr-4",
+      "sourceObjectSha256": "554f590a69f6ea0d12ac10e751ac092598b198592fc04dcdc5213a547d375e5b",
+      "targetTaskSha256": "ecff0fe6a0d0f38b67558fe13419d8c9164fa928b0938210b54b970e942c4452",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-speed-ratio",
+      "taskId": "g6-speed-ratio-transfer-idea",
+      "sourceObjectSha256": "8f44e24df752dedbcd90ecabdb190409d1056cc397f9128e10b5e70718fe93bf",
+      "targetTaskSha256": "bee9f4f6fcb6d688cb9a5aa143bccbac8f498f12920a2f0bc699654e35d3c5d2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-geometry-transform",
+      "taskId": "g6-gt-1",
+      "sourceObjectSha256": "c1824ba6681c368bf3b7a5db6e657b603590f6c12c128700192a44a2654f0c4e",
+      "targetTaskSha256": "2b2a854cc1ddcc2de469e14a9798659b7c40cba543b0b6c0233a18f337047ca9",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-geometry-transform",
+      "taskId": "g6-geometry-transform-why",
+      "sourceObjectSha256": "816952dc06d79eed3dfc65fac542a87f259a44083b7aa02531a3d8acbe87a3bf",
+      "targetTaskSha256": "73168e0fba3714c4befca67f453fa65a3010a9551e408a39c45ce5c5fa30be64",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-geometry-transform",
+      "taskId": "g6-gt-2",
+      "sourceObjectSha256": "eb1db2b1b2db0667ca5cfc86fe9eee1be47b860c78640d8a2b441c206e9d2aa4",
+      "targetTaskSha256": "d98dcdda3f8f0695e15b11ad0e8b53979a5d936f3d2d8340c9f63d0ea564a86e",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-geometry-transform",
+      "taskId": "g6-geometry-transform-model",
+      "sourceObjectSha256": "dacda8a3e4af9ccd2e59711b7fe3ca4a1b9bd619355384488518e09da120b9e1",
+      "targetTaskSha256": "870a708eee84514db594aaf4b14b911fc3ead2d64323e4a268b7524a8ca3d11d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-geometry-transform",
+      "taskId": "g6-gt-3",
+      "sourceObjectSha256": "5d07313dff109eed049c173ac723030cd626d24705e417841ea02d84c50b5c4f",
+      "targetTaskSha256": "6f799a71ef1e5c9af845500227e46762a03340003ce1ac88c0dbe13bb3780d42",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-geometry-transform",
+      "taskId": "g6-geometry-transform-reason",
+      "sourceObjectSha256": "6d631a7bc829f03da2cfead3ab4aa8d622fed49e40449c999170a8fdddb9b0c9",
+      "targetTaskSha256": "8b30b60364d509b3f7b2a0ec7158c507e82760a933ad11c857a6bff58ed8e4c2",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-geometry-transform",
+      "taskId": "g6-gt-4",
+      "sourceObjectSha256": "051bd32c5976ee8fda574c8fbc056a57843a64bae46bd6ffb027286a06399ae9",
+      "targetTaskSha256": "9eecbb331b91ef9d3dd1b1843c89858c2d1fa7f5977db0046533c572ed19af46",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-geometry-transform",
+      "taskId": "g6-geometry-transform-transfer-idea",
+      "sourceObjectSha256": "16d05350f395a5dfc7810daf6478be8a764bcb3e0e619d76815521ff4cd73e6d",
+      "targetTaskSha256": "15cef9529d448ce2dfe74e56e1ca8a590d86a660b37b273c7f49fc985bbab927",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-working-backward",
+      "taskId": "g6-bw-1",
+      "sourceObjectSha256": "15d574bd82918078b9a14972769672a1b365df4313adb9a2469a08bfe62c3492",
+      "targetTaskSha256": "676b6caa242ac0f0b4a7a3a71316ebb3f8b2a9d3b51120f90ee9138406f8276a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-working-backward",
+      "taskId": "g6-working-backward-why",
+      "sourceObjectSha256": "43230e0238fe3fb4d7a92c17baf0aad97aa5fd6d0fb59e1ec928597a1918b42a",
+      "targetTaskSha256": "c164021a13c1e28d2b2218f52db60d589e7a22fbb2f57b28faf65e1a5e4570d8",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-working-backward",
+      "taskId": "g6-bw-2",
+      "sourceObjectSha256": "d588b49b3937c4bfdeb95e0efb9be0e25a247c0696e039e07c883c61233fd8ea",
+      "targetTaskSha256": "8b16f98cfd99bd141f98cd8cf86e9f5388dae72f2c31d0c802f4f95a982bf64f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-working-backward",
+      "taskId": "g6-working-backward-model",
+      "sourceObjectSha256": "f7a7ab2190e382089a04026e8451a43617768b31bd59d582c7acacfa4182817a",
+      "targetTaskSha256": "dfab0a24d44e1aa393f88ccaaf9968757dfe2db5af9bc24f433fa92f0ca79f11",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-working-backward",
+      "taskId": "g6-bw-3",
+      "sourceObjectSha256": "1e0db98cd9e8e085ccd86b475d8dd5ab2aed50b9ab233ea6f6e635161a096ea9",
+      "targetTaskSha256": "8462285976f38e5e427be39f13c71e59d414d02ea13e6697d20023722afb3ed3",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-working-backward",
+      "taskId": "g6-working-backward-reason",
+      "sourceObjectSha256": "c8231811a56e030016128b36ce72ffb74ba1e05bffd95ebb954fa9e00aff75f1",
+      "targetTaskSha256": "352e0047e2d51a84a7a6bb18184239792c256b80dd0cd8ea79fba37c2a1e037c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-working-backward",
+      "taskId": "g6-bw-4",
+      "sourceObjectSha256": "860c6071f347875a73edd4bf6e44b42c85ae0cb02bc11cdb2db862ff5c4a633a",
+      "targetTaskSha256": "fa73e7c6d6df1ba13de78642e4843d25a6bfaceb020e2b2981bbbc76f314d041",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-working-backward",
+      "taskId": "g6-working-backward-transfer-idea",
+      "sourceObjectSha256": "dddf65e829bd5e8924909650170eba9d9ceddff94479b0edd53844698277d662",
+      "targetTaskSha256": "f16831069b4e3ec6e1f1f10dd40d8aaa64cd067fb24f1903a9cae3f5e9c063f5",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-pigeonhole",
+      "taskId": "g6-pg-1",
+      "sourceObjectSha256": "0d0050ac3b62b27f74079cd207758baf50d9f5701e34e19f5f0d7d930a154453",
+      "targetTaskSha256": "fd890479f447f90fda32c7fe5f103d3138b2284e1da74cc07acf431d3e4fe79f",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-pigeonhole",
+      "taskId": "g6-pigeonhole-why",
+      "sourceObjectSha256": "16474fc6537b8a95afdc297e9a105d4dd3d9146d36eaa97566f702a33a0c7e59",
+      "targetTaskSha256": "9d27d271c23d4b17e10e07559f03ba692b7682f1ce7c917a3b6690571b881f5d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-pigeonhole",
+      "taskId": "g6-pg-2",
+      "sourceObjectSha256": "5a2d9d4a3db453f4fbc1344c204d900fe299d175c0c0fd283289d2b484b524bb",
+      "targetTaskSha256": "8ebcbee5f5312eff04a6b6e041e92aaaec8b147371efd443b089723db8c3834c",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-pigeonhole",
+      "taskId": "g6-pigeonhole-model",
+      "sourceObjectSha256": "dddd1723cb2f15bd674e5f5f92a00d78564e5bee39f213dab4b96925c9919a92",
+      "targetTaskSha256": "35d3ff15ea967ad56d5a9350e0ffd3acb0c3e15134ee29ebf61392d81a1b11b8",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-pigeonhole",
+      "taskId": "g6-pg-3",
+      "sourceObjectSha256": "4ee1b558bbdf3784dc49dfa9be9415b183f904f322de7f61ab0533614498de0e",
+      "targetTaskSha256": "cdab9d7ddf91b26a7dda5361f1f827aa4f3758fb6cb67ad9d78e0ad58d003e0b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-pigeonhole",
+      "taskId": "g6-pigeonhole-reason",
+      "sourceObjectSha256": "fc9a1dddc7e440ec10dedb846cbf6ca192179215b436de87e99647c38dda036e",
+      "targetTaskSha256": "fe7cdb062d50beae96733b0dd96cb37e4aa0f09003b5383c9b6aac0aaaae57ce",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-pigeonhole",
+      "taskId": "g6-pg-4",
+      "sourceObjectSha256": "e74b3d8f770fde820e9764aeac01daf57c7f4da9693bf7835476c3c8390a260a",
+      "targetTaskSha256": "a54f63d7d9e1b1e95b75143342d218a5f4a1b4c7abb65001dc921c6966a30edc",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-pigeonhole",
+      "taskId": "g6-pigeonhole-transfer-idea",
+      "sourceObjectSha256": "65dcb0028102c714840be944145717fde83a8982c4dcd88170dfb0385c5e38ca",
+      "targetTaskSha256": "3fa890474eb20cbf1fa01de82b82685ed2c390ffb47adb35093b71d84face647",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-probability-strategy",
+      "taskId": "g6-pr-1",
+      "sourceObjectSha256": "3ad37378491de2846dccf25a4b753853d7fcdfd0245b1f735c5c8720367e37ea",
+      "targetTaskSha256": "87c85aede443809d77c142d5b006da9e7060a4d53d65453e2c2d2708398ff656",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-probability-strategy",
+      "taskId": "g6-probability-strategy-why",
+      "sourceObjectSha256": "cf4b7fbb0b71356fd05ae6fcc069e6d0f1bde1d31d2d9acea38219a0b34b2776",
+      "targetTaskSha256": "c1ecc38fa3259fdfea1ac736bb053a8aa1ece6ccc0cfeff60b450810c55ee738",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-probability-strategy",
+      "taskId": "g6-pr-2",
+      "sourceObjectSha256": "fcf85399c6ee8851e75d543dbf179a68c949de8ec97248c727ab2afcb1c7a1e7",
+      "targetTaskSha256": "5a02f194bf18af9182e9d18e210c2b1abbdd4cf5b9c5fba5e06376ccb724fc0b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-probability-strategy",
+      "taskId": "g6-probability-strategy-model",
+      "sourceObjectSha256": "615d95e91a6d908afca0ce3328ffbc53e164f01842eeeb0b2a83c190a9187bf3",
+      "targetTaskSha256": "219820d6e88a0da175ad98faf6222cb0d49b4b2480b628fc6b9b2c9ca865ee49",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-probability-strategy",
+      "taskId": "g6-pr-3",
+      "sourceObjectSha256": "cd51fa53b5b15386efa7f4cf9ae6e2c6f8b6040d0b94c828458f1dbb5e576fc5",
+      "targetTaskSha256": "6227a4865dc5b866c850e28fcbb622cc8cfd47047286873a5736ef221660f28d",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-probability-strategy",
+      "taskId": "g6-probability-strategy-reason",
+      "sourceObjectSha256": "36a6c53d698ae54348ac702c1c57218d08e08a16885eeb13de4b5d48b048ffc3",
+      "targetTaskSha256": "27f1527cb6047381d99023334cad7177802c72af33679875f8c7c00a24361f0a",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-probability-strategy",
+      "taskId": "g6-pr-4",
+      "sourceObjectSha256": "8592293dc84910679f615f4e3713e25bb252094721ea537679cbfbc1d6bd8292",
+      "targetTaskSha256": "4578ebdde732a77f80540a0ac67e90e117932f507072da680882d6187569554b",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "g6-probability-strategy",
+      "taskId": "g6-probability-strategy-transfer-idea",
+      "sourceObjectSha256": "f912b343f2cf83af2c852bd448cffdcbe13ca219fd2f0791cc74426a73857fb6",
+      "targetTaskSha256": "b4da9052a3e076d11fddf887ac04f29516ee1d37f8af9997cc60be9602f06736",
+      "sourceType": "original-legacy-question"
+    },
+    {
+      "capabilityId": "G3-U01-TH1",
+      "taskId": "G3-U01-TH1-explain",
+      "sourceObjectSha256": "5e674f92ead3430c4ba47061c529e2862c34374c6b31950788081b5871a4844b",
+      "targetTaskSha256": "00a23b8c56ad5dc2905190aa3ab2ca2f88316a8b87990a2be4f85d3294188c1e",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-U02-TH1",
+      "taskId": "G3-U02-TH1-explain",
+      "sourceObjectSha256": "6224b79935e52095457873f905af9f4cae90a92ff45d776ddc8ee8a135f83b55",
+      "targetTaskSha256": "86f3889f3684db743b03353a2d7b020fb79ada8ea71d12d99b076b386b7c3a88",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-U03-TH1",
+      "taskId": "G3-U03-TH1-explain",
+      "sourceObjectSha256": "96d6082caa920f924fa9f7a5ee9e81a701e19311fb27c3a70f089531457b4446",
+      "targetTaskSha256": "a24616aa4a22fbac72ca69cbf128347c9852259e12274d13210baa96e704aef9",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-UP01-TH1",
+      "taskId": "G3-UP01-TH1-explain",
+      "sourceObjectSha256": "593e036bff1422dbc41788fce10d5cbdbb751c25c05b5b1dc89f5bab1c3ffaeb",
+      "targetTaskSha256": "8e7916b3977aa742870c310de1e16b87f226eb3cacbd160b4a939ff30a3542d9",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-U04-TH1",
+      "taskId": "G3-U04-TH1-explain",
+      "sourceObjectSha256": "420b543c7d625aeaea26870fcf222e7dff4c14e50975b11337bf728c89879537",
+      "targetTaskSha256": "82a5e88a7857984df6c7e698b94e4cbe62793930fc45bfc90f00ddeffb6a151b",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-UP02-TH1",
+      "taskId": "G3-UP02-TH1-explain",
+      "sourceObjectSha256": "1c95c3f102b39a70eb293b67721af3006d029c5bef0e677b6673ff24bfb3efe3",
+      "targetTaskSha256": "ca1a3de315d591160e914b8c9f469fa3b9d2e800465f8e4c27f1ec48bf3bac67",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-U05-TH1",
+      "taskId": "G3-U05-TH1-explain",
+      "sourceObjectSha256": "95a9dc860ed4ec8fb76054663057d6484e332d234f1ac1e5df724d13eb8f393b",
+      "targetTaskSha256": "d0f86ad753fb1dd1f5439a54ab3fae0cc81fff47541b8c2840016de1a1fdd182",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-U06-TH1",
+      "taskId": "G3-U06-TH1-explain",
+      "sourceObjectSha256": "1efe76317b24c69d9a7389cd9cc253b4b11f573dee5eef49e31e90d519b4feaf",
+      "targetTaskSha256": "a1bda4341c0bfdd1bf25e12ba8f189c07fb889bdd5b22ac67f65f9414877e136",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-U07-TH1",
+      "taskId": "G3-U07-TH1-explain",
+      "sourceObjectSha256": "2c5f7ff41bce71739126172ec446bf63b680bd16a53f4e227b41c69d8f209cb7",
+      "targetTaskSha256": "a896f06b21f596a13cfbcab5561d13b3f500dc5d10fbc52eee6f0f1594b70021",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-L01-TH1",
+      "taskId": "G3-L01-TH1-explain",
+      "sourceObjectSha256": "f67ae4c4b8c2317bba3bef58b69be18a9af71e497a4cc7de7f7608e75ab7e435",
+      "targetTaskSha256": "4a33abbeaeb0f1bb638d4bf54e5dfe5de461a0c9271695e876c2409d829aa126",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-L02-TH1",
+      "taskId": "G3-L02-TH1-explain",
+      "sourceObjectSha256": "1c8bf7f5f3c2959f425a6f83f5ae2d886da5907bc4badb508be458f136d8c9c5",
+      "targetTaskSha256": "74e8316589f080979538dd583844fb52392b860a2ccdbb12cc028b5bd297031e",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-L03-TH1",
+      "taskId": "G3-L03-TH1-explain",
+      "sourceObjectSha256": "643bb0012c3d085acb972dfb6674d7d3cdaaf4290398d3ac4dd6101c64553250",
+      "targetTaskSha256": "43d4999be67eb8de14b3e9b36189822f14203f219c5b3797752db9e5e83c4b68",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-L04-TH1",
+      "taskId": "G3-L04-TH1-explain",
+      "sourceObjectSha256": "8e72bec75e81855a5efcc232cd568d005d04df0f22d9b5ed841053808c1a0e89",
+      "targetTaskSha256": "f35dfd09ddaf5fcbf0bd7f2e18ae21f7b0b4a6a1d412b2c7525fae4f045ee1b6",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-L05-TH1",
+      "taskId": "G3-L05-TH1-explain",
+      "sourceObjectSha256": "e11a510775bd7ede8ab209e59c8d40b29e6fd45cdb6dc6e90ff60da2e4dfc4ab",
+      "targetTaskSha256": "18f2fc0fca4fac68b35a1f1aa2f2bb9c398b42d61b24d006f8c326afc7f279d8",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-LP01-TH1",
+      "taskId": "G3-LP01-TH1-explain",
+      "sourceObjectSha256": "d0478323bb3e82070186a86a75fb711008d92fdd3755bafa0277e9799731b6c0",
+      "targetTaskSha256": "56941742439fe770586c3224c7014db7b737a84665ab4f7dd4125c3980b856f3",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-L06-TH1",
+      "taskId": "G3-L06-TH1-explain",
+      "sourceObjectSha256": "8b54c877e22d81ebc0ba9aafb6e14c52cd290ea2be8fcced36fdb20accff733c",
+      "targetTaskSha256": "5ef1369077639b6dd01045d7cf84692c44b0f05a83cd5f552a5357b29d9008c6",
+      "sourceType": "approved-thinking-card"
+    },
+    {
+      "capabilityId": "G3-L07-TH1",
+      "taskId": "G3-L07-TH1-explain",
+      "sourceObjectSha256": "eeb9134a2cdc551dadfed9b45e59f4388b1e7d6d61f1578743247e909ab865db",
+      "targetTaskSha256": "fd1eaf7a88fec5235bb56d099151b034c878a1dbf3f5e1cc153e902fe035294c",
+      "sourceType": "approved-thinking-card"
+    }
+  ],
+  "privateFilesRead": false,
+  "originalSideEffectScriptsExecuted": false
+}

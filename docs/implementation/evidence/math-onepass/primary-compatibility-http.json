@@ -1,0 +1,5963 @@
+{
+  "status": "PASS_ACTUAL_NAS_HTTP_849",
+  "origin": "http://192.168.2.100:38444",
+  "sourceCommit": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "publicLessons": 70,
+  "tasks": 849,
+  "deterministic": 514,
+  "humanReview": 335,
+  "database": false,
+  "learningWrites": 0,
+  "cookies": 0,
+  "elapsedMs": 7727,
+  "gradeLatencyMs": {
+    "p50": 7.289708000000246,
+    "p95": 14.225083999999697,
+    "max": 66.1943339999998
+  },
+  "rows": [
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P01",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P02",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P03",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P04",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P07",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P05",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P08",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P09",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P10",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P11",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B01",
+      "taskId": "G3-U01-B01-P12",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P01",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P02",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P03",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P04",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P07",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P05",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P08",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P09",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P10",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P11",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B02",
+      "taskId": "G3-U01-B02-P12",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P02",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P03",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P04",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P07",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P05",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P08",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P09",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P10",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P11",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U01-B03",
+      "taskId": "G3-U01-B03-P12",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.h1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-D01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B01",
+      "taskId": "G3-U02-B01.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.w1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.h1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-D02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B02",
+      "taskId": "G3-U02-B02.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.w1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.h1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-D03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B03",
+      "taskId": "G3-U02-B03.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.c2",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.h1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-D04",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B04",
+      "taskId": "G3-U02-B04.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.h1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-D05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-B05",
+      "taskId": "G3-U02-B05.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.c2",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.c4",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.h1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E01",
+      "taskId": "G3-U02-E01.r2",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P01",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P02",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P03",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P04",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P05",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P08",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P06",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P09",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P10",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P11",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E03",
+      "taskId": "G3-U02-E03-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P02",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P04",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P07",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P05",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P08",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P06",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P10",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P11",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E02",
+      "taskId": "G3-U02-E02-P12",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P02",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P03",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P07",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P06",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P10",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P11",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E04",
+      "taskId": "G3-U02-E04-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P01",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P02",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P03",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P04",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P07",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P05",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P06",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P09",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P10",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P11",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-E05",
+      "taskId": "G3-U02-E05-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P04",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P08",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P06",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P10",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P11",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O01",
+      "taskId": "G3-U02-O01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P01",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P03",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P04",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P07",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P05",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P08",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P06",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P10",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P11",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U02-O02",
+      "taskId": "G3-U02-O02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.c2",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.c5",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.h1",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B01",
+      "taskId": "G3-U03-B01.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.w2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.c3",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.c5",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.h1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-B02",
+      "taskId": "G3-U03-B02.r2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P03",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P04",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P08",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P10",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P11",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B01",
+      "taskId": "G3-UP01-B01-P12",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P03",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P04",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P07",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P08",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P10",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP01-B02",
+      "taskId": "G3-UP01-B02-P12",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B01",
+      "taskId": "G3-U04-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B02",
+      "taskId": "G3-U04-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B03",
+      "taskId": "G3-U04-B03-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B04",
+      "taskId": "G3-U04-B04-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P02",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U04-B05",
+      "taskId": "G3-U04-B05-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P02",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-UP02-B01",
+      "taskId": "G3-UP02-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P06",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B01",
+      "taskId": "G3-U05-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P02",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B02",
+      "taskId": "G3-U05-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P02",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P06",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U05-B03",
+      "taskId": "G3-U05-B03-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P02",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B01",
+      "taskId": "G3-U06-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P04",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P08",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B02",
+      "taskId": "G3-U06-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B03",
+      "taskId": "G3-U06-B03-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B04",
+      "taskId": "G3-U06-B04-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P06",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-B05",
+      "taskId": "G3-U06-B05-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U06-E01",
+      "taskId": "G3-U06-E01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P04",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-R01",
+      "taskId": "G3-U07-R01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U07-B01",
+      "taskId": "G3-U07-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B01",
+      "taskId": "G3-L01-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P02",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L01-B02",
+      "taskId": "G3-L01-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B01",
+      "taskId": "G3-L02-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B02",
+      "taskId": "G3-L02-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P06",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B03",
+      "taskId": "G3-L02-B03-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B04",
+      "taskId": "G3-L02-B04-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B05",
+      "taskId": "G3-L02-B05-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P04",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L02-B06",
+      "taskId": "G3-L02-B06-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P02",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B01",
+      "taskId": "G3-L03-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P04",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P06",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-B02",
+      "taskId": "G3-L03-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L03-E01",
+      "taskId": "G3-L03-E01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B01",
+      "taskId": "G3-L04-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P04",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B02",
+      "taskId": "G3-L04-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L04-B03",
+      "taskId": "G3-L04-B03-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B01",
+      "taskId": "G3-L05-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P04",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L05-B02",
+      "taskId": "G3-L05-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B01",
+      "taskId": "G3-LP01-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-B02",
+      "taskId": "G3-LP01-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P01",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P02",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-LP01-E01",
+      "taskId": "G3-LP01-E01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B01",
+      "taskId": "G3-L06-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P05",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B02",
+      "taskId": "G3-L06-B02-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P03",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L06-B03",
+      "taskId": "G3-L06-B03-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P04",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P07",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P09",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P11",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-R01",
+      "taskId": "G3-L07-R01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P01",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P02",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P03",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P04",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P07",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P05",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P08",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P06",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P09",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P10",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P11",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-L07-B01",
+      "taskId": "G3-L07-B01-P12",
+      "kind": "explanation",
+      "status": "pendingReview",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.c5",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.h1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E01",
+      "taskId": "G3-U03-E01.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.h1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-E02",
+      "taskId": "G3-U03-E02.r2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.c5",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.h1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "G3-U03-O01",
+      "taskId": "G3-U03-O01.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.w2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.c2",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.c4",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.c5",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.t2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.h1",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.fractions.meaning",
+      "taskId": "numbers.fractions.meaning.r2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.w2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.c1",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.c2",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.c4",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.c5",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.h1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.r1",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "geometry.area.perimeter",
+      "taskId": "geometry.area.perimeter.r2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.w1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.c1",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.c2",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.c3",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.c4",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.c5",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.t1",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.t2",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.h1",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.r1",
+      "kind": "expression",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.substitution.intro",
+      "taskId": "algebra.substitution.intro.r2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.w2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.c3",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.t2",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.h1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "algebra.balance.intro",
+      "taskId": "algebra.balance.intro.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.c1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.c3",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.c4",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.c6",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.t2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.t3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.h1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.h2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.r1",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.quantity.intro",
+      "taskId": "numbers.quantity.intro.r2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.c3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.c5",
+      "kind": "fields",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.c6",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.t3",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.h1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.h2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.addition.meaning",
+      "taskId": "numbers.addition.meaning.r2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.w1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.w2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.c1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.c2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.c3",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.c4",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.c5",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.c6",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.t1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.t2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.t3",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.h1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.h2",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.r1",
+      "kind": "number",
+      "status": "correct",
+      "persisted": false
+    },
+    {
+      "lessonId": "numbers.subtraction.meaning",
+      "taskId": "numbers.subtraction.meaning.r2",
+      "kind": "choice",
+      "status": "correct",
+      "persisted": false
+    }
+  ]
+}

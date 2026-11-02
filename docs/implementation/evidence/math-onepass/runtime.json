@@ -1,0 +1,38 @@
+{
+  "buildSha": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+  "contentOnly": true,
+  "database": false,
+  "lessons": 70,
+  "practiceTasks": 849,
+  "practicePublicSha256": "306dc7ec07a5b7f6f2a6aa31628e8e0147b357c46ade8403ae29e4b6643b495f",
+  "libraryPublicSha256": "52ae6d22b03e7b026ddbdbe0aea1f7f28733d7c061f983252df7cc6a0cc0146b",
+  "training": {
+    "legacyCases": 14,
+    "anonymousBundles": 10,
+    "anonymousCases": 30,
+    "processCases": 3,
+    "familyExamples": 16,
+    "cases": 63,
+    "families": 8,
+    "templates": 10,
+    "reviewDays": [
+      1,
+      3,
+      7,
+      14
+    ]
+  },
+  "trainingCatalogSha256": "97bc16ac3a34928f0c0bc251acc6a09602ff1ba9f806a47f226a746e3f9c7ebf",
+  "fullArticles": 70,
+  "semanticModels": 54,
+  "adaptedMethodGuides": 22,
+  "readingSha256": "f4055c3226f1a4fad0b639c3f5f31c90656adaa4786d462cbc74210dc790f9f9",
+  "storage": "page-memory-only",
+  "library": {
+    "thinking": 17,
+    "legacy": 54,
+    "legacyQuestions": 432,
+    "detective": 14
+  }
+}

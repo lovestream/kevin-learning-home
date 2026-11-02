@@ -1,0 +1,17 @@
+{
+  "status": "PASS_ORDINARY_MAC_CHROME_ACTUAL_NAS",
+  "recordedAt": "2026-10-30T11:08:24.072981+00:00",
+  "origin": "http://192.168.2.100:38444",
+  "sourceSha": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "browser": "Ordinary Mac Chrome, existing tab, native accessibility controls",
+  "securityExceptions": false,
+  "loginRequired": false,
+  "observed": [
+    "Reload cleared the earlier anonymous answer",
+    "Filtered to 四个长度, selected 四个长度的排列; after actual backend response and index collapse the focused AX element was the new heading",
+    "Opened G3-U01-B01, selected step3, changed observer to right, pressed photograph; right-face temporary photo appeared",
+    "Returned to the root URL; book-first homepage and all six learning paths visible; tab kept open for the user"
+  ],
+  "priorSource4fcJourney": "Native independent-answer 9g -> checked0.5g and inverse12.5g succeeded; current source five-width settled-rate browser retest independently confirms0/1,1/1,1/1,none.",
+  "physicalPhoneIPad": "NEEDS_USER_ACTION"
+}

@@ -1,0 +1,30 @@
+{
+  "previousDeployedSource": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "comparedRuntimeAndValidationInputs": 281,
+  "changedFiles": [
+    "apps/preview/DesignShell.tsx",
+    "apps/preview/HomeSketch.tsx",
+    "apps/preview/MapNavigation.tsx",
+    "apps/preview/adapters/source/shared/coding-model.d.mts",
+    "apps/preview/adapters/source/shared/coding-model.mjs",
+    "apps/preview/adapters/source/shared/intro-visuals.d.mts",
+    "apps/preview/adapters/source/shared/intro-visuals.mjs",
+    "apps/preview/adapters/source/src/studio/IntroVisual.tsx",
+    "apps/preview/adapters/source/src/studio/textbook/CodingExploration.tsx",
+    "apps/preview/adapters/source/src/studio/textbook/CodingOverview.tsx",
+    "apps/preview/adapters/source/src/studio/textbook/SymbolWorkbench.tsx",
+    "apps/preview/adapters/source/src/studio/textbook/coding-exploration.css",
+    "apps/preview/content/catalog.json",
+    "apps/preview/content/lessons/G3-UP02-B01.json",
+    "apps/preview/design-system.css",
+    "apps/preview/main.tsx",
+    "apps/preview/practice/private/bank.json",
+    "apps/preview/reading/articles.json",
+    "docs/implementation/evidence/math-full-01/origins.json",
+    "docs/implementation/evidence/math-full-02/source.json",
+    "docs/implementation/evidence/math-onepass/reading-source.json"
+  ],
+  "unchangedInputs": 260,
+  "scope": "Five visual files plus pinned coding amendment; 69 DTO byte/837 task canonical fingerprints unchanged; auth/grader/repository unchanged. Final hover-only follow-up relative to 8242475 is CSS and browser regression.",
+  "source": "d0dfd026a238a328743468cb5fba924ecde67526"
+}

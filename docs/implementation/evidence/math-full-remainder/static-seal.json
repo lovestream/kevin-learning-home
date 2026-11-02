@@ -1,0 +1,28 @@
+{
+  "status": "PASS_ACTUAL_NAS_STATIC_FILES_IDENTICAL",
+  "fileCount": 13,
+  "seal": {
+    "schemaVersion": 1,
+    "libraryBankSha256": "8019913ea0756db1351363475ace2d72c53e9ed982d418092779456f6479ad8d",
+    "libraryPublicSha256": "52ae6d22b03e7b026ddbdbe0aea1f7f28733d7c061f983252df7cc6a0cc0146b",
+    "practiceBankSha256": "1008208c4afcd310bfe5e9440649123691d8b18abb77129404625794dfc1c0b7",
+    "practicePublicSha256": "306dc7ec07a5b7f6f2a6aa31628e8e0147b357c46ade8403ae29e4b6643b495f",
+    "buildSha": "52e781440b21a406286ac55bbfefdb6e06d119fe",
+    "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+    "files": {
+      "/.vite/manifest.json": "9c17802d00e8a96ec0e1d438d4618e2663a4a5c11a3f1e407ead579bbdd05086",
+      "/THIRD-PARTY-NOTICES.txt": "ccf7b2dd8f5e7175c7653c6fad3eb7459f27e97f3e04b190daa5d9cd050e050f",
+      "/assets/CoreWorkbench-BhX3VX24.css": "01f26493bc8f2163ab74db850d02951f9fdaf3b851bdf3f13261be0485978876",
+      "/assets/CoreWorkbench-d1qM7c9w.js": "448f530ca691f5bfe30b65d1ff0944e13077ed50567e88e14aa58be299370d13",
+      "/assets/Library-CgW6vjFO.js": "5cf2f2940e18759d391a2238a50cfbdb4b2ac878a0c0dddb299c409e2a60b186",
+      "/assets/Library-WY_g6DWh.css": "f239e085fbb0de313ebb3dc26d93172b2566607df7a531b9f84e13101e5b72b7",
+      "/assets/index-B9Hb26hM.js": "d849713f13284a6eac19c8c2950ad519f4230409e1ed5dbe05a5556d2e2f35c6",
+      "/assets/index-jCi3PCEe.css": "ed88dc37df1178038ce4645853d1b7d5418726be5af016ef32172429af5de666",
+      "/index.html": "685371203f2d4da6eba02e9a32abc36d46893ad11d2fffdf6dedabad65604d87",
+      "/math-paper-folding/template-cube-1.svg": "e66f2602fa4ce4b19c66cfe696b516a787be3a345d86f128a30bbb153fbb598d",
+      "/math-paper-folding/template-cube-2.svg": "a044ac55cef35eb8c879178cbaa501632db18f226ad174efc9cf08518c58f364",
+      "/math-paper-folding/template-cube-3.svg": "8c19c8ee451fca20c7c762367f93b79ff216ad1cccfc7991e9918967a97e09a7",
+      "/math-paper-folding/template-rectangular-box.svg": "f470fcc5f42c5cee6af80b7ba4a2dcc5cfc6936bda61f81073acb2ea04c98585"
+    }
+  }
+}

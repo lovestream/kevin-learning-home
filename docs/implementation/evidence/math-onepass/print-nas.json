@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "nas": true,
+  "origin": "http://192.168.2.100:38444",
+  "expectedSha": "e7b4302889da7b07fc081ae68447cba404a76ad3",
+  "rows": [
+    {
+      "id": "G3-U01-B01",
+      "kind": "primary",
+      "pages": 4,
+      "requiredTexts": 20,
+      "bytes": 650558,
+      "closedTeachingIncluded": true,
+      "screenStateRestored": true
+    },
+    {
+      "id": "G3-U04-B01",
+      "kind": "primary",
+      "pages": 4,
+      "requiredTexts": 20,
+      "bytes": 469738,
+      "closedTeachingIncluded": true,
+      "screenStateRestored": true
+    },
+    {
+      "id": "G3-U06-B01",
+      "kind": "primary",
+      "pages": 3,
+      "requiredTexts": 20,
+      "bytes": 421039,
+      "closedTeachingIncluded": true,
+      "screenStateRestored": true
+    },
+    {
+      "id": "g4-angle-measure",
+      "kind": "legacy",
+      "pages": 3,
+      "requiredTexts": 6,
+      "bytes": 350313,
+      "explicitPrintLoadsAuthoredExample": true
+    },
+    {
+      "id": "g5-cuboid-volume",
+      "kind": "legacy",
+      "pages": 3,
+      "requiredTexts": 6,
+      "bytes": 369415,
+      "explicitPrintLoadsAuthoredExample": true
+    },
+    {
+      "id": "g6-proportion",
+      "kind": "legacy",
+      "pages": 3,
+      "requiredTexts": 6,
+      "bytes": 382706,
+      "explicitPrintLoadsAuthoredExample": true
+    }
+  ],
+  "physicalPrinter": "NOT_TESTED"
+}
