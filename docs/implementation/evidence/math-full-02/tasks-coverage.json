@@ -6,12 +6,12 @@
   "lessons": 70,
   "bankSha256": "235728c615c2ff8ee8ab4595572191c6aaa0d7e1feeeb43297445e07cc21a25a",
   "publicSha256": "6510e51694629f02ecf877050bcbda944bc16c1d9f5dcf21825ec0b21f8ab016",
-  "browserOrigin": "http://127.0.0.1:55870",
+  "browserOrigin": "http://127.0.0.1:56210",
   "execution": {
-    "head": "2207fcbde35da34842559b97a3f05f90167d460c",
+    "head": "34cd25fc4a1777d2c6df2894a9808253f9f8aea6",
     "dirty": true,
     "files": {
-      "apps/preview/DesignShell.tsx": "5a353c36e00717b087d9abf3d248ff82027bc5c4150595894422ea8afc516de4",
+      "apps/preview/DesignShell.tsx": "698f5dd9211a9f0c5f6f63f999bbfd94dfbe1411f2c94f799c54d76bcddca516",
       "apps/preview/DetectiveTraining.tsx": "1040786519ab3a04936554e21b5939fcfebb0b8c363a31e0b60a3ece524029ab",
       "apps/preview/HomeSketch.tsx": "19ac52f1fe0fd0e51b1e86d1fc87412badee73222dc5ab9351d337f895edaa6a",
       "apps/preview/MapNavigation.tsx": "14906533dcfbed202a139f20ffa2d44015b44c5389ecd21ce487763060b20019",

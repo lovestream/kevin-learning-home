@@ -589,6 +589,14 @@ function Workspace({
           </span>
           <h2>我先想一想</h2>
           <p>需要时再打开一点提示。这里是离线引导，不是AI替你回答。</p>
+          <button
+            onClick={() => {
+              setPrompt("");
+              document.getElementById("explore-work-text")?.focus();
+            }}
+          >
+            我先自己想
+          </button>
           <button onClick={() => help("ask-back")}>问我一个问题</button>
           <button disabled={!first} onClick={() => help("idea")}>
             给一个方法提示

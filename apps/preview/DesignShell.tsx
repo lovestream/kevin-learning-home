@@ -113,6 +113,7 @@ function SubjectNavigation({ dialog = false }: { dialog?: boolean }) {
       <a href="/explore" aria-current={explore ? "page" : undefined}>
         探索与创造
       </a>
+      <span aria-disabled="true">成长家园 · 待接入</span>
     </nav>
   );
 }

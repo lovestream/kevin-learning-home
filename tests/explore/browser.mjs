@@ -107,6 +107,9 @@ try {
       .getByRole("button", { name: "问我一个问题", exact: true })
       .click();
     await expect(page.locator(".coach-prompt")).toContainText("先猜");
+    await page.getByRole("button", { name: "我先自己想", exact: true }).click();
+    await expect(page.locator(".coach-prompt")).toHaveCount(0);
+
     await page
       .getByLabel("我的第一种想法", { exact: true })
       .fill("我猜折成波浪的纸桥更稳。");
@@ -269,6 +272,9 @@ try {
         page.getByRole("heading", { name: "今天，你好奇什么？" }),
       ).toBeVisible();
       assert.equal(await page.locator("dialog[open]").count(), 0);
+      await expect(page.locator("dialog .dialog-subjects")).toContainText(
+        "成长家园 · 待接入",
+      );
     } else await page.locator('.preview-subjects a[href="/explore"]').click();
     await page.getByLabel("我想弄明白的问题", { exact: true }).focus();
     assert.equal(
