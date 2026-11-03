@@ -7,6 +7,8 @@ import {
   firstHypothesis,
   mediaReferenceSchema,
   projectSchema,
+  projectView,
+  questionCreatedFact,
   recognitionCandidate,
   subjectRefSchema,
   type ExploreEvent,
@@ -69,7 +71,13 @@ function observe(p: ExploreProject) {
 test("five public scenarios are valid, including question-only, failed, revised, math and English", () => {
   const rows = examples();
   assert.equal(rows.length, 5);
-  for (const p of rows) assert(projectSchema.safeParse(p).success);
+  for (const p of rows) {
+    assert(projectSchema.safeParse(p).success);
+    assert.equal(projectView(p).project.revision, p.revision);
+    const fact = questionCreatedFact(p, "create-" + p.projectId);
+    assert.equal(fact.kind, "exploration.question_created");
+    assert(!("question" in fact));
+  }
   assert.equal(rows[0].events.length, 0);
   assert(rows.some((p) => p.status === "paused"));
   assert(rows.some((p) => p.status === "uncertain"));
@@ -85,6 +93,7 @@ test("no AI, no attachment, no conclusion required to create a question", () => 
   const p = project();
   assert.equal(p.revision, 0);
   assert.equal(firstHypothesis(p), undefined);
+  assert.equal(projectView(p).stage, "question");
 });
 test("first thought is preserved byte for byte after revisions, input is not mutated", () => {
   const p = project(),
@@ -100,6 +109,7 @@ test("first thought is preserved byte for byte after revisions, input is not mut
     }),
   );
   assert.equal(firstHypothesis(revised)?.detail.kind, "hypothesis_submitted");
+  assert.equal(projectView(revised).stage, "revise");
   assert.deepEqual(firstHypothesis(revised), firstHypothesis(withFirst));
   assert.equal(p.events.length, 0);
   assert.throws(

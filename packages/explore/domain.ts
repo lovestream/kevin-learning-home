@@ -216,6 +216,81 @@ export function appendEvent(
 export const eventFactName = (event: ExploreEvent) =>
   "exploration." + event.detail.kind;
 
+// Stage is a projection of saved facts, independent of lifecycle (a paused
+// investigation can still be in observation). Do not store a second cursor
+// that can disagree with the append-only history.
+export const exploreStageSchema = z.enum([
+  "question",
+  "first-hypothesis",
+  "plan",
+  "observe",
+  "revise",
+  "claim",
+  "creation",
+  "reflect",
+]);
+type ExploreStage = z.infer<typeof exploreStageSchema>;
+export const projectViewSchema = z.strictObject({
+  project: projectSchema,
+  stage: exploreStageSchema,
+  firstHypothesis: eventSchema.nullable(),
+});
+export function projectView(input: ExploreProject) {
+  const project = projectSchema.parse(input);
+  const stages: Partial<Record<ExploreEvent["detail"]["kind"], ExploreStage>> =
+    {
+      hypothesis_submitted: "first-hypothesis",
+      plan_written: "plan",
+      evidence_added: "observe",
+      hypothesis_revised: "revise",
+      claim_written: "claim",
+      artifact_created: "creation",
+      reflection_written: "reflect",
+    };
+  const last = project.events.findLast(
+    (e) => stages[e.detail.kind] !== undefined,
+  );
+  return projectViewSchema.parse({
+    project,
+    stage: last ? stages[last.detail.kind] : "question",
+    firstHypothesis: firstHypothesis(project) ?? null,
+  });
+}
+export const questionFactSchema = z.strictObject({
+  recordVersion: z.literal(1),
+  activityModule: z.literal("explore"),
+  kind: z.literal("exploration.question_created"),
+  eventId: idSchema,
+  learnerId: idSchema,
+  projectId: idSchema,
+  questionId: idSchema,
+  sourceRevision: z.literal(0),
+  createdAt: z.iso.datetime(),
+  origin: originSchema,
+  subjectRefs: z.array(subjectRefSchema).max(12),
+});
+// A private adapter supplies its stable creation-receipt event ID. This fact
+// contains references/provenance, never the child's question text for logs.
+export function questionCreatedFact(
+  input: ExploreProject,
+  receiptEventId: string,
+) {
+  const p = projectSchema.parse(input);
+  return questionFactSchema.parse({
+    recordVersion: 1,
+    activityModule: "explore",
+    kind: "exploration.question_created",
+    eventId: receiptEventId,
+    learnerId: p.learnerId,
+    projectId: p.projectId,
+    questionId: p.questionId,
+    sourceRevision: 0,
+    createdAt: p.createdAt,
+    origin: p.origin,
+    subjectRefs: p.subjectRefs,
+  });
+}
+
 // No reward writer exists here. A future reviewed ledger alone may consume
 // one candidate keyed by learner/project/milestone/policy, not click counts.
 export function recognitionCandidate(project: ExploreProject) {

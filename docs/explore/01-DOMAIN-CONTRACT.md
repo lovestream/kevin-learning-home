@@ -4,6 +4,8 @@
 
 ## 对象与事件
 
+`projectViewSchema`提供`stage`与不可变首猜投影：stage由最后一条已保存内容事件派生（question/first-hypothesis/plan/observe/revise/claim/creation/reflect），与暂停/归档生命周期分开，状态或家长反馈不改变认知阶段。避免存两份相互矛盾的阶段游标；UI未提交的标签选择仅属临时草稿。`questionFactSchema/questionCreatedFact`为创建receipt产生严格校验的question_created事实（sourceRevision=0），不将私人题文放进日志事件。
+
 项目：schemaVersion=1、activityModule=explore、projectId、learnerId、questionId、question、origin、status、revision、createdAt/updatedAt、subjectRefs[]、events[]。origin 为 child/parent-suggestion/lesson/ai-suggestion；状态 pending/active/paused/uncertain/finished/archived 可自由切换。归档不是删除，暂停/失败没有扣分或过期机制。
 
 SubjectRef：subjectId/contentId/contentVersion/optionalTaskId/relationship。一对多；版本不随课程更新漂移，缺失链接保留来源，不自动跳别课。英语 CORE 示例仅是合同样例，**不是已上线真词条**。数学实际 `G3-U01-B01@2026-10-07.2`，UI从当前目录读取实际版本，拒绝任意from路径。

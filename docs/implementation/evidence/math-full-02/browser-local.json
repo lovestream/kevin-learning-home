@@ -1,9 +1,9 @@
 {
   "status": "PASS",
-  "origin": "http://127.0.0.1:56429",
+  "origin": "http://127.0.0.1:56706",
   "nas": false,
   "execution": {
-    "head": "8ae80edadae9be15ef992fb34d73df6e8ec2ccae",
+    "head": "1831527b86cf1662da33a432cd4bd6bd648f3d01",
     "dirty": true,
     "files": {
       "apps/preview/DesignShell.tsx": "698f5dd9211a9f0c5f6f63f999bbfd94dfbe1411f2c94f799c54d76bcddca516",
@@ -242,7 +242,7 @@
       "packages/contracts/package.json": "39857216e91bc205bd92015f7859647cefbb0fe0224efbb1966c13f72b92d62c",
       "packages/contracts/routes.ts": "4c44ffa91f5c38f5f11b4431570805613719a9c257c564422735726f064a6265",
       "packages/explore/coach.ts": "bf53350cd2e9cb6893843138300c51ff92592088d92f68cbffb86194cca68fda",
-      "packages/explore/domain.ts": "d7169bfba99b48778f57f24181ab304295c1c0c8099e2d3dceb074d84279b41e",
+      "packages/explore/domain.ts": "271f47c299fef36b5db610edb005185cd83d952b12a04de070cf0684328e4240",
       "packages/explore/examples.ts": "073e67ce29c674c423df346e2fc2d95fba84d3a4acb9d69b469108839b0f5562",
       "packages/math-training/engine.d.mts": "8012e433211f247fa0e7669b48d523159dcb30ad3436105cd09d4e227f8539c8",
       "packages/math-training/engine.mjs": "ceefec201f35b7cc172d0a050b11a6903c7d8be42e59a28bd8f35ed167d8b758",
@@ -293,7 +293,7 @@
       "tests/math-full-02/browser.mjs": "59ee0606c4de271d43bcb5f07f7a3b9e7b37dc6755bc17261a9eb8ad875e7727"
     }
   },
-  "elapsedMs": 123971,
+  "elapsedMs": 123922,
   "results": [
     {
       "width": 390,
