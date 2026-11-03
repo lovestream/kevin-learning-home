@@ -6,9 +6,9 @@
   "lessons": 70,
   "bankSha256": "235728c615c2ff8ee8ab4595572191c6aaa0d7e1feeeb43297445e07cc21a25a",
   "publicSha256": "6510e51694629f02ecf877050bcbda944bc16c1d9f5dcf21825ec0b21f8ab016",
-  "browserOrigin": "http://127.0.0.1:56210",
+  "browserOrigin": "http://127.0.0.1:56429",
   "execution": {
-    "head": "34cd25fc4a1777d2c6df2894a9808253f9f8aea6",
+    "head": "8ae80edadae9be15ef992fb34d73df6e8ec2ccae",
     "dirty": true,
     "files": {
       "apps/preview/DesignShell.tsx": "698f5dd9211a9f0c5f6f63f999bbfd94dfbe1411f2c94f799c54d76bcddca516",
@@ -169,7 +169,7 @@
       "apps/preview/contract.ts": "bdbf0af562ca4401eddf2afd0427a22e229c9c62897878f20d9e14fd168df1f7",
       "apps/preview/design-system.css": "173fc36e4939a9f4a0699d0ea3e58282d06df3e0e1a658106e0976ae8c78d665",
       "apps/preview/event-id.ts": "d52b01cc8dbd07bae87eb6e78cf70500d5b1bfa1a91a2b54e9bd8def1a420c99",
-      "apps/preview/explore/Explore.tsx": "1b5d96ea82c8f99a9b505827f192a2d11861e4103366bc00bd602275d471f705",
+      "apps/preview/explore/Explore.tsx": "8f07ebd8351ecb6f48604748caf9e3d0ad7275153586e02de5f92b9330a4bd37",
       "apps/preview/explore/explore.css": "782b454d7cb46b64dd4d07bc1288f9ae3c1b56001c111a22e79066d7c384c49f",
       "apps/preview/explore/memory.tsx": "820657d0d21df534d36a3723d262e10e5d54f7e64350248c9ed1290a3c3778ac",
       "apps/preview/integrity.ts": "758441b686ecb550c9048b05cc705004563af0999b63c06491ed4a48490c0eb8",

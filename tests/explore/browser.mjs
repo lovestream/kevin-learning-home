@@ -124,6 +124,16 @@ try {
     await page
       .getByLabel("我的验证计划", { exact: true })
       .fill("还没有提交的计划草稿");
+    await page.getByLabel("现在的节奏", { exact: true }).selectOption("paused");
+    await expect(page.getByLabel("我的验证计划", { exact: true })).toHaveValue(
+      "还没有提交的计划草稿",
+    );
+    await page
+      .getByRole("button", { name: "本周想多想想这个", exact: true })
+      .click();
+    await expect(page.getByLabel("我的验证计划", { exact: true })).toHaveValue(
+      "还没有提交的计划草稿",
+    );
     await page.getByRole("button", { name: "观察与证据", exact: true }).click();
     await page.getByRole("button", { name: "我的想法", exact: true }).click();
     await expect(page.getByLabel("我的验证计划", { exact: true })).toHaveValue(

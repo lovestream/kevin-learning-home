@@ -267,9 +267,12 @@ function Workspace({
   function commit(detail: ExploreEvent["detail"]) {
     try {
       append(project.projectId, detail);
-      setValue("");
-      setInference("");
-      setCitation("");
+      // Changing pace/weekly choice must not erase an unfinished paragraph.
+      if ("text" in detail) setValue("");
+      if (detail.kind === "evidence_added") {
+        setInference("");
+        setCitation("");
+      }
       setMessage("已留在本页，刷新后不保留。");
     } catch {
       setMessage("这一步还不能留下，请检查首猜、证据和资料出处，再试一次。");
