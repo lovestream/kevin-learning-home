@@ -1,5 +1,19 @@
 # Kevin 学习家园：数学课本目录 → 全量数学 → 英语 → 统一积分与蛋仔
 
+## 2026-11-03：新增独立「探索与创造」——AI时代核心能力，而不是第三套课本
+
+用户最新教育目标增加**主动发问/好奇心、独立判断、想象力、创造力**。已在[总任务#25](https://github.com/lovestream/kevin-learning-home/issues/25)和[完整实施文件](EXPLORE-AND-CREATE-ROADMAP.md)建立九个按依赖先后执行的子Issue[#26—#34](https://github.com/lovestream/kevin-learning-home/issues/26)。**这是跨学科活动模块**，不是数学课本的另一个名字或英语的另一种评分器；探索项目可以引用数学课程和英语词条，也可以来自生活与自然，不应为了增加积分强制每日打卡。
+
+**与原先顺序的整合**：
+1. 正在进行的数学PR18→21→22仍Draft，已有NAS数学功能继续保留；真正的数学学习历史仍待[Issue24](https://github.com/lovestream/kevin-learning-home/issues/24)私有保真迁入。
+2. 可以立即执行[#26探索契约](https://github.com/lovestream/kevin-learning-home/issues/26)与[#27安全匿名视觉](https://github.com/lovestream/kevin-learning-home/issues/27)，和[Issue19英语迁入](https://github.com/lovestream/kevin-learning-home/issues/19)、[Issue24安全学习记录](https://github.com/lovestream/kevin-learning-home/issues/24)并行；不会阻断数学/英语。
+3. 真实探索项目、首猜修订、照片、绘画、音频的长期保存[#28/29](https://github.com/lovestream/kevin-learning-home/issues/28) **只能依赖Issue24受信私有身份与存储**，禁止接入目前免登录HTTP38444匿名内容进程。AI教练[#30](https://github.com/lovestream/kevin-learning-home/issues/30)先无外部AI也能用的引导式追问；第三方模型和上传私人资料须单独授权。
+4. 数学英语双向深链[#31](https://github.com/lovestream/kevin-learning-home/issues/31)、每周自选问题/家长回顾[#32](https://github.com/lovestream/kevin-learning-home/issues/32)有清晰计划，探索不因结果失败受罚。
+5. 探索积分/蛋仔[#33](https://github.com/lovestream/kevin-learning-home/issues/33)只在[Issue20统一账本](https://github.com/lovestream/kevin-learning-home/issues/20)安全启用后按有证据里程碑计算，不能按提问数/AI次数发币；最终[#34](https://github.com/lovestream/kevin-learning-home/issues/34)整站验收。保留原旧数据/旧NAS服务和真实安全权限。
+6. Codex以总Issue#25和分步Issue#26-34作为**完整任务清单**，按依赖执行并在各阶段自行测试修正，避免反复小步审批；涉及真实个人数据/证书/外部AI等安全切换仍必须另行授权。
+
+**本次只更新GitHub任务和设计路线；未开发/部署新的探索栏目、未操作原数学/英语数据库或NAS。**
+
 更新时间：2026-10-26。**本文件为当前产品路线与验收口径；所有真正实现仍以相应Draft PR、CI、NAS实测与用户验收为准**。
 
 ## 用户确定的长期目标
