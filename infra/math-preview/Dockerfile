@@ -3,6 +3,7 @@ FROM --platform=linux/amd64 node:24.15.0-bookworm-slim@sha256:152aceace5c03e2597
 WORKDIR /app
 COPY package.json package-lock.json ./
 COPY apps/preview ./apps/preview
+COPY packages/explore ./packages/explore
 COPY packages/math-training/source ./packages/math-training/source
 COPY apps/web/src/style.css ./apps/web/src/style.css
 COPY apps/web/src/math/math.css ./apps/web/src/math/math.css

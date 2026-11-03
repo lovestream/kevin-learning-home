@@ -377,6 +377,13 @@ export async function startPreview({
       return;
     }
     if (
+      [
+        "/explore",
+        "/explore/questions",
+        "/explore/projects",
+        "/explore/creations",
+        "/explore/archive",
+      ].includes(pathname) ||
       pathname === "/" ||
       pathname === "/subjects/math" ||
       pathname === "/subjects/math/library" ||

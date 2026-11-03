@@ -1,4 +1,6 @@
 import { lazy, Suspense } from "react";
+const ExplorePage = lazy(() => import("./explore/Explore.tsx"));
+import { ExploreProvider } from "./explore/memory.tsx";
 const ReadingArticle = lazy(() => import("./reading/Article.tsx"));
 const DetectiveTraining = lazy(() => import("./DetectiveTraining.tsx"));
 const LibraryPage = lazy(() => import("./library/Library.tsx"));
@@ -170,6 +172,12 @@ function Lesson({
         </p>
       </header>
       <div className="lesson-tools">
+        <a
+          className="explore-entry"
+          href={"/explore/questions?from=" + lesson.lessonId}
+        >
+          从这节课问一个为什么
+        </a>
         {withdrawnLessons.includes(lesson.lessonId) && (
           <a
             className="reading-mode-toggle"
@@ -407,7 +415,12 @@ function App() {
       const u = new URL(a.href, location.href);
       if (
         u.origin !== location.origin ||
-        !(u.pathname === "/" || u.pathname.startsWith("/subjects/math")) ||
+        !(
+          u.pathname === "/" ||
+          u.pathname.startsWith("/subjects/math") ||
+          u.pathname === "/explore" ||
+          u.pathname.startsWith("/explore/")
+        ) ||
         u.hash
       )
         return;
@@ -491,7 +504,7 @@ function App() {
   return (
     <DesignShell>
       <main id="main-content" className="reading-area" tabIndex={-1}>
-        {learningMap && (
+        {learningMap && !location.pathname.startsWith("/explore") && (
           <MapBreadcrumb
             map={learningMap}
             id={requested ?? undefined}
@@ -506,6 +519,11 @@ function App() {
           </section>
         ) : !catalog || !learningMap ? (
           <p role="status">正在摆好课堂…</p>
+        ) : location.pathname === "/explore" ||
+          location.pathname.startsWith("/explore/") ? (
+          <Suspense fallback={<p role="status">正在翻开探索本…</p>}>
+            <ExplorePage catalog={catalog} />
+          </Suspense>
         ) : print ? (
           <section>
             <h1>等比例折纸模板</h1>
@@ -550,6 +568,8 @@ function App() {
 }
 createRoot(document.getElementById("root")!).render(
   <PageLearning>
-    <App />
+    <ExploreProvider>
+      <App />
+    </ExploreProvider>
   </PageLearning>,
 );

@@ -27,12 +27,18 @@ test("R1-02 main push and development push/PR share the unconditional complete v
       "codex/math-full-01-70-lessons",
       "codex/math-full-02-practice",
       "codex/math-full-03-capabilities",
+      "codex/explore-01-preview",
       "codex/implement-01-foundation",
       "codex/implement-02a-auth",
       "codex/implement-02b-shell",
     ].sort(),
   );
-  assert.deepEqual(branches("pull_request"), ["main", "codex/math-full-01-70-lessons", "codex/math-full-02-practice"]);
+  assert.deepEqual(branches("pull_request"), [
+    "main",
+    "codex/math-full-01-70-lessons",
+    "codex/math-full-02-practice",
+    "codex/math-full-03-capabilities",
+  ]);
   assert(
     !/^    (?:if|continue-on-error):/m.test(workflow),
     "FULL_JOB_MUST_NOT_SKIP_MAIN",
