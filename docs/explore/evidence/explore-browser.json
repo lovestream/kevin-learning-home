@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "mode": "NAS_PREVIEW",
+  "origin": "http://192.168.2.100:38444",
+  "buildSha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+  "rows": [
+    {
+      "width": 360,
+      "pass": true,
+      "flows": [
+        "four-sections",
+        "question-first-thought-evidence-revision-creation-history",
+        "uncertainty-pause-voluntary-selection",
+        "first-thought-immutable",
+        "no-content-egress",
+        "no-browser-storage",
+        "refresh-discards",
+        "xss-escaped",
+        "lesson-roundtrip",
+        "menu-keyboard",
+        "reset"
+      ]
+    },
+    {
+      "width": 390,
+      "pass": true,
+      "flows": [
+        "four-sections",
+        "question-first-thought-evidence-revision-creation-history",
+        "uncertainty-pause-voluntary-selection",
+        "first-thought-immutable",
+        "no-content-egress",
+        "no-browser-storage",
+        "refresh-discards",
+        "xss-escaped",
+        "lesson-roundtrip",
+        "menu-keyboard",
+        "reset"
+      ]
+    },
+    {
+      "width": 768,
+      "pass": true,
+      "flows": [
+        "four-sections",
+        "question-first-thought-evidence-revision-creation-history",
+        "uncertainty-pause-voluntary-selection",
+        "first-thought-immutable",
+        "no-content-egress",
+        "no-browser-storage",
+        "refresh-discards",
+        "xss-escaped",
+        "lesson-roundtrip",
+        "menu-keyboard",
+        "reset"
+      ]
+    },
+    {
+      "width": 1280,
+      "pass": true,
+      "flows": [
+        "four-sections",
+        "question-first-thought-evidence-revision-creation-history",
+        "uncertainty-pause-voluntary-selection",
+        "first-thought-immutable",
+        "no-content-egress",
+        "no-browser-storage",
+        "refresh-discards",
+        "xss-escaped",
+        "lesson-roundtrip",
+        "menu-keyboard",
+        "reset"
+      ]
+    },
+    {
+      "width": 1440,
+      "pass": true,
+      "flows": [
+        "four-sections",
+        "question-first-thought-evidence-revision-creation-history",
+        "uncertainty-pause-voluntary-selection",
+        "first-thought-immutable",
+        "no-content-egress",
+        "no-browser-storage",
+        "refresh-discards",
+        "xss-escaped",
+        "lesson-roundtrip",
+        "menu-keyboard",
+        "reset"
+      ]
+    }
+  ],
+  "errors": [],
+  "physicalIPad": "NEEDS_USER_ACTION",
+  "privatePersistence": "NOT_ENABLED",
+  "parentLogin": "PLANNED_USER_SET_PASSWORD_ONLY"
+}

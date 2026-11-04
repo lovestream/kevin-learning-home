@@ -14,23 +14,23 @@
 
 ## 当前追踪表（不是九项全部完成）
 
-| Issue      | 状态                            | 证据/剩余工作                                                                |
-| ---------- | ------------------------------- | ---------------------------------------------------------------------------- |
-| #26 EXP-00 | CODE_READY                      | `00-PRODUCT-AND-ARCHITECTURE.md`、`01-DOMAIN-CONTRACT.md`；18领域测试        |
-| #27 EXP-01 | CODE_READY，NAS发布待验证       | 同壳五路由、四栏目、内存编辑与明确丢弃、五视口真实前后端；NAS回执归档后更新  |
-| #28 EXP-02 | NOT_STARTED（正式适配器未启用） | #24正式存储/设备会话未交付，不关闭现有合成仓库闸门；不把内存演示当跨设备保存 |
-| #29 EXP-03 | NOT_STARTED                     | 仅媒体引用schema及拒绝闸门；无上传/摄像/录音，不冒充图文音完成               |
-| #30 EXP-04 | CODE_READY（仅离线子集）        | 纯规则教练、首猜门控、危险实验安全提示；外部模型默认禁用，正式私有审计未做   |
-| #31 EXP-05 | CODE_READY（70课堂子集）        | 当前目录版本引用/精确往返；侦探、专题、真英语词库及永久事件待后续            |
-| #32 EXP-06 | NOT_STARTED（有内存UI）         | 临时自主选择和历史只是#27体验；长期回顾/家长密码报告依赖#28                  |
-| #33 EXP-07 | CODE_READY（候选合同子集）      | 独立首猜/观察/反思候选、稳定key、实际发币恒0；正式账本/限额/撤销尚未做       |
-| #34 EXP-08 | NOT_STARTED（仅当前阶段验收）   | 本次覆盖公开预览，不能据此宣布私有媒体/恢复/真实英语终验完成                 |
+| Issue      | 状态                            | 证据/剩余工作                                                                     |
+| ---------- | ------------------------------- | --------------------------------------------------------------------------------- |
+| #26 EXP-00 | CODE_READY                      | `00-PRODUCT-AND-ARCHITECTURE.md`、`01-DOMAIN-CONTRACT.md`；18领域测试             |
+| #27 EXP-01 | NAS_PREVIEW                     | 同壳五路由、四栏目、内存编辑与明确丢弃，真实NAS五视口、14组数学回归及实际回退通过 |
+| #28 EXP-02 | NOT_STARTED（正式适配器未启用） | #24正式存储/设备会话未交付，不关闭现有合成仓库闸门；不把内存演示当跨设备保存      |
+| #29 EXP-03 | NOT_STARTED                     | 仅媒体引用schema及拒绝闸门；无上传/摄像/录音，不冒充图文音完成                    |
+| #30 EXP-04 | CODE_READY（仅离线子集）        | 纯规则教练、首猜门控、危险实验安全提示；外部模型默认禁用，正式私有审计未做        |
+| #31 EXP-05 | CODE_READY（70课堂子集）        | 当前目录版本引用/精确往返；侦探、专题、真英语词库及永久事件待后续                 |
+| #32 EXP-06 | NOT_STARTED（有内存UI）         | 临时自主选择和历史只是#27体验；长期回顾/家长密码报告依赖#28                       |
+| #33 EXP-07 | CODE_READY（候选合同子集）      | 独立首猜/观察/反思候选、稳定key、实际发币恒0；正式账本/限额/撤销尚未做            |
+| #34 EXP-08 | NOT_STARTED（仅当前阶段验收）   | 本次覆盖公开预览，不能据此宣布私有媒体/恢复/真实英语终验完成                      |
 
 “CODE_READY（子集）”不能用来关闭整个子Issue；没有项目被标PRIVATE_READY或USER_ACCEPTED。
 
 ## 本地测试与界面复核
 
-- 发布前两个中间提交的CI在发布前由执行者主动取消：逐项核对补齐成长导航预留后，重跑真实UI回归并以完整的新提交为唯一发布来源；这些中间提交均未部署NAS。
+- 发布前的中间提交CI在发布前由执行者主动取消：逐项核对补齐成长导航预留后，重跑真实UI回归并以完整的新提交为唯一发布来源；这些中间提交均未部署NAS。
 - 工作流分支白名单新增本开发分支和PR22基准，原auth工作流回归的精确白名单断言同步更新，测试条数和必跑完整CI约束不变。
 - 原工程完整本地验证`node scripts/verify.ts`通过：60 Node、18 UI、12 MATH-01 Node、9 MATH-01浏览器及构建/typecheck；全部70课堂30代表+210完整浏览器通过，150源目标/5001字段投影hash通过。
 - TypeScript检查与密封预览构建通过（21构建资源，无数据库）。
@@ -42,12 +42,28 @@
 - 数学全课堂回归曾发现探索合同早于数学合同加载时Zod动态编译触发严格CSP。已在探索合同入口设置jitless，保留原CSP；新浏览器测试直接监听securitypolicyviolation，并重新运行全部70课验证，不隐藏失败。
 - 849题浏览器三视口全可达、84条首答/自查/修改/重做完整流程通过；刷新了绑定当前共享导航hash的真实验收归档，没有只改hash冒充重测。
 - 第一轮联调失败为测试把课程标题误假定包含“观察”；已核对课程真实标题改为精确断言，不改教材内容。后续重复检查是为验证实际修复，不隐去失败。
-- 实体Mac可信浏览器、NAS、最终精确HEAD push/PR CI及回退证据待本批发布后补入；实体手机/iPad/Safari未操作，明确NEEDS_USER_ACTION。
+- NAS、源码双完整CI及回退证据见下文；Mac桌面浏览器观察单独列在证据中；实体手机/iPad/Safari未操作，明确NEEDS_USER_ACTION。
 
 ## NAS计划与保护边界
 
-已只读验证SSH别名及Docker可用；现NAS仍为d0dfd026版本，11受保护容器与旧文件hash检查通过。仅复用已授权的math-preview专用release控制器/网络与38444端口；候选镜像来自本次精确源码完整CI构建，非root/只读根/无卷/256MiB/CPU0/能力全删/不提权。保留当前d0d回退。没有AuthService/SQLite，不挂真实源，不修改DSM/Tailscale/证书/端口/其他容器。
+发布前已只读验证SSH别名及Docker可用，基线为d0dfd026版本，11受保护容器与旧文件hash检查通过。仅复用已授权的math-preview专用release控制器/网络与38444端口；候选镜像来自本次精确源码完整CI构建，非root/只读根/无卷/256MiB/CPU0/能力全删/不提权。保留d0d作为回退目标。没有AuthService/SQLite，不挂真实源，不修改DSM/Tailscale/证书/端口/其他容器。
 
 ## 停止边界
 
 本批完成#26/#27并归档真实NAS公开预览证据后，下一依赖是#24正式记录底座；真实记录、媒体、外部AI/收费、正式私有部署需各自明确授权与安全审查。原数学记录路径已确认，不再要求用户指路。家长密码由用户在正式设置界面自己设置，不能写入GitHub或聊天。后续代码可按依赖连续实现，不以“等待每个字段审批”打断开发。
+
+## 本批实际NAS交付（2026-11-04补验，以此更新前文发布计划）
+
+访问 **http://192.168.2.100:38444/explore**，数学保持 http://192.168.2.100:38444/。运行源码`b7a2d23e25027b59e9a64cadfd41f5e9931db9b1`，镜像`sha256:d107cd3023dec01147b006bbc39c2fc5a045b46da77340a5463dffd12f7707b8`。不是本地Mac演示，不开启真实保存。
+
+源码[push CI](https://github.com/lovestream/kevin-learning-home/actions/runs/41646484533)与[PR CI](https://github.com/lovestream/kevin-learning-home/actions/runs/41646494584)完整成功后才发布。最终归档提交的双完整CI见[PR35](https://github.com/lovestream/kevin-learning-home/pull/35)正文和该HEAD的checks；只有成功后才交付，不将源码CI冒充最终文档HEAD CI。
+
+- 首轮发布中，NAS探索五视口已通过，但数学代表G3-U02-E03的浏览器滚动点击等待30秒超时，系统自动恢复d0d。原始[失败记录](evidence/first-failure/checkpoint.log)与[错误上下文](evidence/first-failure/checkpoint.json)保留。2026-11-04同一镜像、同一测试动作连续[3次定点复验](evidence/target-checkpoint.json)、完整30代表及后续14组全部通过；未修改代码、未强制点击、未放宽超时或跳过步骤。暂未稳定复现，不宣称已定位或修复其根因。
+- [本机Mac浏览器实际操作](evidence/native-mac.json)：页面/项目/输入/首猜保留与时间线均确认，无安全警告绕过；不冒充实体iPad/Safari验收。
+- [NAS回执](evidence/delivery.json)、[五视口完整探索操作](evidence/explore-browser.json)、[35张真实NAS合成截图](evidence/screenshots.json)、[14组数学回归](evidence/math-nas-suite.json)、[实际新版→d0dfd026→新版回退](evidence/rollback.json)。
+- [源码两套CI及完整job/step状态](evidence/source-ci.json)、[原站代码/状态未变](evidence/old-projects-readonly.json)、[实际NAS容器隔离](evidence/isolation.json)、[静态资源逐项HTTP hash](evidence/static-assets.json)、[运行输入hash](evidence/release-inputs.json)、[测试代码hash](evidence/test-harnesses.json)。
+- 14组包含数字编码、849原题HTTP、449专题/卡HTTP、1298共享业务、70课导航/课堂/代表、三视口练习、旧专题兼容、63案/18对照、四层训练、54模型五视口、全部教案/方法体验、6教案PDF。日志见[evidence/logs](evidence/logs)。不同组有交集，不相加冒充独立题量。
+- 原11个受保护容器及旧合成/TLS文件hash不变；原数学/英语仓库不改，真实源数据不读写，原d0d完整镜像/停止容器保留回退。零卷、非root、只读root、256MiB、CPU0、capDropALL/no-new-privileges保留；不调整DSM/Tailscale/证书/权限。
+- 当前只验证公开示例及内存编辑，私人项目/图片音频/家长报告/正式备份恢复均**未开启**。跨设备长期恢复和真实学习历史不属于已通过验收。用户尚未设置家长密码，无需把密码发给Codex。
+
+下一技术依赖是#24正式记录/自动学习者设备会话及单一家长登录底座，再实现#28–#32；#19英语词库和#20奖励账本各自保持门禁。不能从这个公开预览直接接真实记录。

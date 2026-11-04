@@ -2,9 +2,9 @@
 
 本轮按总任务#25和路线图推进。用户最新决定：**Kevin日常学习不需要账号密码；家长查看学习情况时才登录，唯一家长密码由用户亲设**。数学/英语/探索共用内部学习者与未来家庭设备会话，不分科设账号、不另加家长PIN。
 
-分支`codex/explore-01-preview`基于现有PR22，而非从滞后main覆盖数学；没有新增Mac项目/worktree。第一批交付#26合同、#27同壳四栏目/内存工作台，附离线引导与70课堂往返；真实项目保存、媒体、家长报告尚未开启。当前代码/本地测试与NAS发布、精确HEAD双CI进度分开记录，见[实施报告](docs/explore/IMPLEMENTATION-REPORT.md)、[产品与账号修订](docs/explore/00-PRODUCT-AND-ARCHITECTURE.md)、[领域合同](docs/explore/01-DOMAIN-CONTRACT.md)。
+分支`codex/explore-01-preview`基于现有PR22，而非从滞后main覆盖数学；没有新增Mac项目/worktree。第一批已交付#26合同、#27同壳四栏目/内存工作台至NAS，附离线引导与70课堂往返；真实项目保存、媒体、家长报告尚未开启。当前代码/本地测试与NAS发布、精确HEAD双CI进度分开记录，见[实施报告](docs/explore/IMPLEMENTATION-REPORT.md)、[产品与账号修订](docs/explore/00-PRODUCT-AND-ARCHITECTURE.md)、[领域合同](docs/explore/01-DOMAIN-CONTRACT.md)。
 
-访问仍为 **http://192.168.2.100:38444/**，正式发布前不声称`/explore`已在NAS运行。旧数学/英语与真实数据不改，不申请证书、不修改DSM/Tailscale、不启用外部AI或钱包。后续依赖和九项实际状态见实施报告；不能将本批当整个工程完成。
+访问 **[探索与创造](http://192.168.2.100:38444/explore)**；数学原入口 **http://192.168.2.100:38444/**。运行源码`b7a2d23e25027b59e9a64cadfd41f5e9931db9b1`，同一NAS入口已实际验证探索五视口和14组数学回归，新旧实际回退成功，11个受保护容器不变。源码双完整CI通过；最终归档HEAD双CI以[Draft PR35](https://github.com/lovestream/kevin-learning-home/pull/35)为准。旧数学/英语与真实数据不改，不申请证书、不修改DSM/Tailscale、不启用外部AI或钱包。后续依赖和九项实际状态见实施报告；不能将本批当整个工程完成。
 
 ## 之前的数学交付（历史，运行版本以本轮最新回执为准）
 
