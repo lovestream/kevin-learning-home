@@ -2,63 +2,63 @@
   "screenshots": [
     {
       "name": "G3-U01-B03-390.png",
-      "sha256": "eb8a2fa44bd766568fb724e02726fd4ccd725b4ba50f5c91b6047fa8998951d2"
+      "sha256": "fa2def5bbfaf6b884f07954dedcdbcab0243b7a9084466788c1b690a54588721"
     },
     {
       "name": "G3-U01-B03-1280.png",
-      "sha256": "6b391a71c98938d8b17b00618f0fe356baa5a0ad9375fea967ef221b24f06acf"
+      "sha256": "f395f8ce3ff0229ffcffdf1e71b69bbd121bb7d275ee06fe0eff125f72c03097"
     },
     {
       "name": "G3-UP01-B01-390.png",
-      "sha256": "f49eb0ad97fffacbe0f951c70e0321cc2a7008e77baaaee1a23a7145dd2669f2"
+      "sha256": "9684eaa068278bb514f0af27dde3eb4d19a3746d0192d5d91295e109318837b6"
     },
     {
       "name": "G3-UP01-B01-1280.png",
-      "sha256": "d1e6fdf868535d5a6a4a1680345d9b836c6063de17730b61a2d404faf284a0e7"
+      "sha256": "00fb6fa5dcd259fb3416f526d796af193183a20fb4a6383580bdb45a098cb4de"
     },
     {
       "name": "G3-U04-B01-390.png",
-      "sha256": "65772718619ba6053610cebeb0b63e1e6cae7ec5865a77dd0ca48a7cf6a80533"
+      "sha256": "1c7fe18e59f1d2ee2c0ddd359533677ae393f123da9c901130d5d022c5cddb60"
     },
     {
       "name": "G3-U04-B01-1280.png",
-      "sha256": "6bd38a68683d789801f919396e0f4b33a425257f719c1ec3a80332519e48cb99"
+      "sha256": "4628b2878b1d221297d803b514c422efa4b168cc10e07ba511a790ce55ec0c5c"
     },
     {
       "name": "G3-U06-B01-390.png",
-      "sha256": "a2650cf5122810dde89ac7ecc4782b63b6fab613888459b2bf5159d6e7a94b83"
+      "sha256": "c2941e00098dbae467eb70cffa7b5a03c3261b76d0bbe1649a2a45725ef2495d"
     },
     {
       "name": "G3-U06-B01-1280.png",
-      "sha256": "c5c214c7ed46229a9fe10ba10a7dbaa5f5d460ebe6453ef339c4a46ef3eefed4"
+      "sha256": "b042e2affe3e6857e120e9a4a3faf75fd758bbcf5f03adb72a05018a3a64c1f2"
     },
     {
       "name": "G3-LP01-B02-390.png",
-      "sha256": "b06fa72509bcdf2b8ca1de94918a3669efcf3f09c61b2c1240bd3c10180ffae3"
+      "sha256": "f3a46e0e11f6ce8ad67e3798d0a7b11319ecdc9c1d1fefc4dfcc6a89e01c548b"
     },
     {
       "name": "G3-LP01-B02-1280.png",
-      "sha256": "2e39ddb22e52284a1ec6d67201df51bcef03a9019ca270b1a8b5ed0a56cfad19"
+      "sha256": "a06f428194904cc67e7d09d665ba1925f985e64faa48f7cd8e49e16905aef3e6"
     },
     {
       "name": "G3-U05-B01-390.png",
-      "sha256": "ec05bb23a621cb1b58b2b2d5c6f2560703d6aaf8f16a4d6b9958ffaac811842a"
+      "sha256": "a40d6ac0abf0df22884ca976be094b94b9f7dce1f068232a5d47f36b2734f32d"
     },
     {
       "name": "G3-U05-B01-1280.png",
-      "sha256": "6b225f918f58b8a4281ee25133563e0cc67837c81639fd99ea4fa58caad7582e"
+      "sha256": "1db24788de6b96a1f9063fcd0d53c07966d8fa29af1795b0158ca49441cb751a"
     },
     {
       "name": "G3-U01-B03-768.png",
-      "sha256": "7273d6ba3240c2da965bc47e2641ad32fcc7e171fa8cfe4c75461acd22c7a816"
+      "sha256": "9e9026870d71ad382caeca6f178a2b7b6bb522b9aabe060bd2cddd03d9bfc96d"
     },
     {
       "name": "G3-U04-B01-768.png",
-      "sha256": "2a65d82ed59704c225fcaaab46610e12ce170759390a3846c1dc12e5464e688a"
+      "sha256": "ae8adc0424ffd1735e6f6190a0b9964656fd45271f16cfc91431fdda36cd1612"
     },
     {
       "name": "G3-LP01-B02-768.png",
-      "sha256": "8c05d62839e8454070d40a521e785de01f54aec038d402c4938bdd0508783822"
+      "sha256": "7e5499e938317a04a72340976096cc8c8d1fb72b3186bb0779ecee7fa5764b24"
     }
   ],
   "source": "Real production preview build in local Chromium at 390/768/1280 widths; NAS/native evidence is separately identified",

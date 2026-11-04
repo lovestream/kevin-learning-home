@@ -1,0 +1,25 @@
+{
+  "buildSha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+  "imageId": "sha256:d107cd3023dec01147b006bbc39c2fc5a045b46da77340a5463dffd12f7707b8",
+  "user": "1024:100",
+  "mounts": 0,
+  "readonlyRoot": true,
+  "memoryBytes": 268435456,
+  "cpuset": "0",
+  "capDrop": [
+    "ALL"
+  ],
+  "securityOpt": [
+    "no-new-privileges:true"
+  ],
+  "ports": {
+    "4179/tcp": [
+      {
+        "HostIp": "192.168.2.100",
+        "HostPort": "38444"
+      }
+    ]
+  },
+  "protectedContainersUnchanged": 11,
+  "realDataReadOrWritten": false
+}

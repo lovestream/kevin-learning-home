@@ -1,0 +1,21 @@
+{
+  "status": "PASS_NEW_OLD_NEW",
+  "rollback": {
+    "status": "ACTIVE_VERSIONED_HTTP_RELEASE",
+    "origin": "http://192.168.2.100:38444",
+    "buildSha": "d0dfd026a238a328743468cb5fba924ecde67526",
+    "imageId": "sha256:f85abefc6e5984f3fd416c3d9fc03882a043b170ecca7e835423b71ed3accd41",
+    "appId": "3ac7bc5f2c5735c75e9a64c5d9e5fe4895cc868c36ddbdde49582cb0db0ebf72",
+    "previousReleaseRetained": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+    "protectedContainersUnchanged": 11
+  },
+  "restored": {
+    "status": "ACTIVE_VERSIONED_HTTP_RELEASE",
+    "origin": "http://192.168.2.100:38444",
+    "buildSha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+    "imageId": "sha256:d107cd3023dec01147b006bbc39c2fc5a045b46da77340a5463dffd12f7707b8",
+    "appId": "439da499108a7315ad932e5fe8604a3b82700a34c79b7654804239d0733f9de9",
+    "previousReleaseRetained": "d0dfd026a238a328743468cb5fba924ecde67526",
+    "protectedContainersUnchanged": 11
+  }
+}

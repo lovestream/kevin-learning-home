@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "sourceSha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+  "lessonId": "G3-U02-E03",
+  "results": [
+    {
+      "run": 1,
+      "before": {
+        "x": 754.765625,
+        "y": -686.109375,
+        "width": 157.078125,
+        "height": 44
+      },
+      "clickMs": 111,
+      "pass": true
+    },
+    {
+      "run": 2,
+      "before": {
+        "x": 754.765625,
+        "y": -686.109375,
+        "width": 157.078125,
+        "height": 44
+      },
+      "clickMs": 110,
+      "pass": true
+    },
+    {
+      "run": 3,
+      "before": {
+        "x": 754.765625,
+        "y": -686.109375,
+        "width": 157.078125,
+        "height": 44
+      },
+      "clickMs": 95,
+      "pass": true
+    }
+  ]
+}

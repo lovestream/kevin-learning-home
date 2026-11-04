@@ -1,0 +1,1 @@
+{"status":"PASS_ACTUAL_NAS_HTTP_849","origin":"http://192.168.2.100:38444","sourceCommit":"b7a2d23e25027b59e9a64cadfd41f5e9931db9b1","publicLessons":70,"tasks":849,"deterministic":514,"humanReview":335,"database":false,"learningWrites":0,"cookies":0,"elapsedMs":6955,"gradeLatencyMs":{"p50":5.224541000000045,"p95":20.006083000000217,"max":113.1128749999998}}

@@ -1,0 +1,771 @@
+{
+  "sha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+  "runs": [
+    {
+      "conclusion": "success",
+      "event": "push",
+      "headSha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+      "jobs": [
+        {
+          "completedAt": "2026-11-03T13:51:15Z",
+          "conclusion": "success",
+          "databaseId": 125953063207,
+          "name": "math-onepass",
+          "startedAt": "2026-11-03T13:40:50Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T13:40:53Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T13:40:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:40:57Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "number": 2,
+              "startedAt": "2026-11-03T13:40:53Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:01Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "number": 3,
+              "startedAt": "2026-11-03T13:40:57Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:04Z",
+              "conclusion": "success",
+              "name": "Run npm install --global npm@11.12.1",
+              "number": 4,
+              "startedAt": "2026-11-03T13:41:01Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:12Z",
+              "conclusion": "success",
+              "name": "Run npm ci",
+              "number": 5,
+              "startedAt": "2026-11-03T13:41:04Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:50Z",
+              "conclusion": "success",
+              "name": "Run npx playwright install --with-deps chromium",
+              "number": 6,
+              "startedAt": "2026-11-03T13:41:12Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:52Z",
+              "conclusion": "success",
+              "name": "Fixed Chinese font (CI only)",
+              "number": 7,
+              "startedAt": "2026-11-03T13:41:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:55Z",
+              "conclusion": "success",
+              "name": "PDF inspection tools (ephemeral CI runner only)",
+              "number": 8,
+              "startedAt": "2026-11-03T13:41:52Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:56Z",
+              "conclusion": "success",
+              "name": "Build all sealed teaching resources",
+              "number": 9,
+              "startedAt": "2026-11-03T13:41:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:05Z",
+              "conclusion": "success",
+              "name": "Synthetic domain, authorization, process crash and exact models",
+              "number": 10,
+              "startedAt": "2026-11-03T13:41:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:37Z",
+              "conclusion": "success",
+              "name": "Versioned coding lesson, all four topics and twelve revised tasks at five widths",
+              "number": 11,
+              "startedAt": "2026-11-03T13:42:05Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:46Z",
+              "conclusion": "success",
+              "name": "All 1298 original tasks through the shared business HTTP domain",
+              "number": 12,
+              "startedAt": "2026-11-03T13:42:38Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:49Z",
+              "conclusion": "success",
+              "name": "Actual non-secure HTTP without secure-origin exceptions",
+              "number": 13,
+              "startedAt": "2026-11-03T13:42:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:43:20Z",
+              "conclusion": "success",
+              "name": "All 63 staged cases and 18 contrasting collections",
+              "number": 14,
+              "startedAt": "2026-11-03T13:42:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:43:33Z",
+              "conclusion": "success",
+              "name": "Four-layer self-check at all five widths",
+              "number": 15,
+              "startedAt": "2026-11-03T13:43:20Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:48:30Z",
+              "conclusion": "success",
+              "name": "All 54 semantic models at all five widths",
+              "number": 16,
+              "startedAt": "2026-11-03T13:43:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:01Z",
+              "conclusion": "success",
+              "name": "All full articles, checkpoints, methods, page memory and print",
+              "number": 17,
+              "startedAt": "2026-11-03T13:48:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:09Z",
+              "conclusion": "success",
+              "name": "Native print lifecycle and complete teaching PDFs",
+              "number": 18,
+              "startedAt": "2026-11-03T13:51:01Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:12Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@v4",
+              "number": 19,
+              "startedAt": "2026-11-03T13:51:09Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:13Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "number": 37,
+              "startedAt": "2026-11-03T13:51:12Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:13Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "number": 38,
+              "startedAt": "2026-11-03T13:51:13Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:13Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 39,
+              "startedAt": "2026-11-03T13:51:13Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/41646484533/job/125953063207"
+        },
+        {
+          "completedAt": "2026-11-03T13:56:46Z",
+          "conclusion": "success",
+          "databaseId": 125953064004,
+          "name": "foundation",
+          "startedAt": "2026-11-03T13:40:50Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T13:40:51Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T13:40:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:40:56Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "number": 2,
+              "startedAt": "2026-11-03T13:40:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:00Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "number": 3,
+              "startedAt": "2026-11-03T13:40:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:03Z",
+              "conclusion": "success",
+              "name": "Run npm install --global npm@11.12.1",
+              "number": 4,
+              "startedAt": "2026-11-03T13:41:00Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:08Z",
+              "conclusion": "success",
+              "name": "Run npm ci",
+              "number": 5,
+              "startedAt": "2026-11-03T13:41:03Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:24Z",
+              "conclusion": "success",
+              "name": "Run npx playwright install --with-deps chromium",
+              "number": 6,
+              "startedAt": "2026-11-03T13:41:08Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:26Z",
+              "conclusion": "success",
+              "name": "Chinese system font for reproducible UI evidence (CI only)",
+              "number": 7,
+              "startedAt": "2026-11-03T13:41:24Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:27Z",
+              "conclusion": "success",
+              "name": "NAS gate controller syntax only (no NAS connection)",
+              "number": 8,
+              "startedAt": "2026-11-03T13:41:26Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:27Z",
+              "conclusion": "success",
+              "name": "Trial tooling offline checks (no NAS access)",
+              "number": 9,
+              "startedAt": "2026-11-03T13:41:27Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:31Z",
+              "conclusion": "success",
+              "name": "Math trial offline safety checks (no NAS access)",
+              "number": 10,
+              "startedAt": "2026-11-03T13:41:27Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:31Z",
+              "conclusion": "success",
+              "name": "MATH-00 source evidence checks (offline; no old repo or NAS)",
+              "number": 11,
+              "startedAt": "2026-11-03T13:41:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:56Z",
+              "conclusion": "success",
+              "name": "NAS R2 preview-only image, LAN HTTP boundary and all 70 APIs (CI only)",
+              "number": 12,
+              "startedAt": "2026-11-03T13:41:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:58Z",
+              "conclusion": "success",
+              "name": "Archive validated preview image for NAS transfer (push only)",
+              "number": 13,
+              "startedAt": "2026-11-03T13:41:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:43:54Z",
+              "conclusion": "success",
+              "name": "Run node scripts/verify.ts",
+              "number": 14,
+              "startedAt": "2026-11-03T13:41:58Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:55:31Z",
+              "conclusion": "success",
+              "name": "MATH-FULL-01 content-only preview and all 70 classrooms (no NAS access)",
+              "number": 15,
+              "startedAt": "2026-11-03T13:43:54Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:55:49Z",
+              "conclusion": "success",
+              "name": "Explore contracts and real browser privacy/flow checks",
+              "number": 16,
+              "startedAt": "2026-11-03T13:55:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:55:50Z",
+              "conclusion": "success",
+              "name": "Compose 1.28.5 parser compatibility (no daemon or service start)",
+              "number": 17,
+              "startedAt": "2026-11-03T13:55:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:56:42Z",
+              "conclusion": "success",
+              "name": "Container isolation and restored-host verification",
+              "number": 18,
+              "startedAt": "2026-11-03T13:55:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:56:44Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@v4",
+              "number": 19,
+              "startedAt": "2026-11-03T13:56:42Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:56:44Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "number": 37,
+              "startedAt": "2026-11-03T13:56:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:56:44Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "number": 38,
+              "startedAt": "2026-11-03T13:56:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:56:44Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 39,
+              "startedAt": "2026-11-03T13:56:44Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/41646484533/job/125953064004"
+        }
+      ],
+      "status": "completed",
+      "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/41646484533"
+    },
+    {
+      "conclusion": "success",
+      "event": "pull_request",
+      "headSha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+      "jobs": [
+        {
+          "completedAt": "2026-11-03T13:58:20Z",
+          "conclusion": "success",
+          "databaseId": 125953095902,
+          "name": "foundation",
+          "startedAt": "2026-11-03T13:40:54Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T13:40:55Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T13:40:54Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:40:59Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "number": 2,
+              "startedAt": "2026-11-03T13:40:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:04Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "number": 3,
+              "startedAt": "2026-11-03T13:40:59Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:06Z",
+              "conclusion": "success",
+              "name": "Run npm install --global npm@11.12.1",
+              "number": 4,
+              "startedAt": "2026-11-03T13:41:04Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:14Z",
+              "conclusion": "success",
+              "name": "Run npm ci",
+              "number": 5,
+              "startedAt": "2026-11-03T13:41:06Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:33Z",
+              "conclusion": "success",
+              "name": "Run npx playwright install --with-deps chromium",
+              "number": 6,
+              "startedAt": "2026-11-03T13:41:14Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:35Z",
+              "conclusion": "success",
+              "name": "Chinese system font for reproducible UI evidence (CI only)",
+              "number": 7,
+              "startedAt": "2026-11-03T13:41:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:35Z",
+              "conclusion": "success",
+              "name": "NAS gate controller syntax only (no NAS connection)",
+              "number": 8,
+              "startedAt": "2026-11-03T13:41:35Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:36Z",
+              "conclusion": "success",
+              "name": "Trial tooling offline checks (no NAS access)",
+              "number": 9,
+              "startedAt": "2026-11-03T13:41:35Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:41Z",
+              "conclusion": "success",
+              "name": "Math trial offline safety checks (no NAS access)",
+              "number": 10,
+              "startedAt": "2026-11-03T13:41:36Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:41Z",
+              "conclusion": "success",
+              "name": "MATH-00 source evidence checks (offline; no old repo or NAS)",
+              "number": 11,
+              "startedAt": "2026-11-03T13:41:41Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:02Z",
+              "conclusion": "success",
+              "name": "NAS R2 preview-only image, LAN HTTP boundary and all 70 APIs (CI only)",
+              "number": 12,
+              "startedAt": "2026-11-03T13:41:41Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:02Z",
+              "conclusion": "skipped",
+              "name": "Archive validated preview image for NAS transfer (push only)",
+              "number": 13,
+              "startedAt": "2026-11-03T13:42:02Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:44:25Z",
+              "conclusion": "success",
+              "name": "Run node scripts/verify.ts",
+              "number": 14,
+              "startedAt": "2026-11-03T13:42:02Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:56:50Z",
+              "conclusion": "success",
+              "name": "MATH-FULL-01 content-only preview and all 70 classrooms (no NAS access)",
+              "number": 15,
+              "startedAt": "2026-11-03T13:44:25Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:57:11Z",
+              "conclusion": "success",
+              "name": "Explore contracts and real browser privacy/flow checks",
+              "number": 16,
+              "startedAt": "2026-11-03T13:56:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:57:12Z",
+              "conclusion": "success",
+              "name": "Compose 1.28.5 parser compatibility (no daemon or service start)",
+              "number": 17,
+              "startedAt": "2026-11-03T13:57:11Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:58:14Z",
+              "conclusion": "success",
+              "name": "Container isolation and restored-host verification",
+              "number": 18,
+              "startedAt": "2026-11-03T13:57:12Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:58:17Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@v4",
+              "number": 19,
+              "startedAt": "2026-11-03T13:58:14Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:58:17Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "number": 37,
+              "startedAt": "2026-11-03T13:58:17Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:58:18Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "number": 38,
+              "startedAt": "2026-11-03T13:58:17Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:58:18Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 39,
+              "startedAt": "2026-11-03T13:58:18Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/41646494584/job/125953095902"
+        },
+        {
+          "completedAt": "2026-11-03T13:51:35Z",
+          "conclusion": "success",
+          "databaseId": 125953096409,
+          "name": "math-onepass",
+          "startedAt": "2026-11-03T13:40:54Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T13:40:56Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T13:40:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:00Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "number": 2,
+              "startedAt": "2026-11-03T13:40:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:05Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "number": 3,
+              "startedAt": "2026-11-03T13:41:00Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:07Z",
+              "conclusion": "success",
+              "name": "Run npm install --global npm@11.12.1",
+              "number": 4,
+              "startedAt": "2026-11-03T13:41:06Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:16Z",
+              "conclusion": "success",
+              "name": "Run npm ci",
+              "number": 5,
+              "startedAt": "2026-11-03T13:41:07Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:36Z",
+              "conclusion": "success",
+              "name": "Run npx playwright install --with-deps chromium",
+              "number": 6,
+              "startedAt": "2026-11-03T13:41:16Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:38Z",
+              "conclusion": "success",
+              "name": "Fixed Chinese font (CI only)",
+              "number": 7,
+              "startedAt": "2026-11-03T13:41:36Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:43Z",
+              "conclusion": "success",
+              "name": "PDF inspection tools (ephemeral CI runner only)",
+              "number": 8,
+              "startedAt": "2026-11-03T13:41:38Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:44Z",
+              "conclusion": "success",
+              "name": "Build all sealed teaching resources",
+              "number": 9,
+              "startedAt": "2026-11-03T13:41:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:41:56Z",
+              "conclusion": "success",
+              "name": "Synthetic domain, authorization, process crash and exact models",
+              "number": 10,
+              "startedAt": "2026-11-03T13:41:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:30Z",
+              "conclusion": "success",
+              "name": "Versioned coding lesson, all four topics and twelve revised tasks at five widths",
+              "number": 11,
+              "startedAt": "2026-11-03T13:41:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:41Z",
+              "conclusion": "success",
+              "name": "All 1298 original tasks through the shared business HTTP domain",
+              "number": 12,
+              "startedAt": "2026-11-03T13:42:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:42:44Z",
+              "conclusion": "success",
+              "name": "Actual non-secure HTTP without secure-origin exceptions",
+              "number": 13,
+              "startedAt": "2026-11-03T13:42:41Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:43:16Z",
+              "conclusion": "success",
+              "name": "All 63 staged cases and 18 contrasting collections",
+              "number": 14,
+              "startedAt": "2026-11-03T13:42:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:43:30Z",
+              "conclusion": "success",
+              "name": "Four-layer self-check at all five widths",
+              "number": 15,
+              "startedAt": "2026-11-03T13:43:16Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:48:42Z",
+              "conclusion": "success",
+              "name": "All 54 semantic models at all five widths",
+              "number": 16,
+              "startedAt": "2026-11-03T13:43:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:21Z",
+              "conclusion": "success",
+              "name": "All full articles, checkpoints, methods, page memory and print",
+              "number": 17,
+              "startedAt": "2026-11-03T13:48:42Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:29Z",
+              "conclusion": "success",
+              "name": "Native print lifecycle and complete teaching PDFs",
+              "number": 18,
+              "startedAt": "2026-11-03T13:51:21Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:33Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@v4",
+              "number": 19,
+              "startedAt": "2026-11-03T13:51:29Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:33Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+              "number": 37,
+              "startedAt": "2026-11-03T13:51:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:33Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "number": 38,
+              "startedAt": "2026-11-03T13:51:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T13:51:33Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 39,
+              "startedAt": "2026-11-03T13:51:33Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/41646494584/job/125953096409"
+        }
+      ],
+      "status": "completed",
+      "url": "https://github.com/lovestream/kevin-learning-home/actions/runs/41646494584"
+    }
+  ]
+}

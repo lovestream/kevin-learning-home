@@ -1,0 +1,7 @@
+{
+  "status": "PASS_RUNTIME_INPUTS_UNCHANGED",
+  "runtimeSourceSha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+  "filesChecked": 284,
+  "changeScope": "Documentation and whitelisted synthetic NAS evidence only; final commit/checks linked in PR35",
+  "privateDataPublished": false
+}

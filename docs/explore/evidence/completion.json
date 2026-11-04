@@ -1,0 +1,10 @@
+{
+  "status": "PASS_NAS_AND_SOURCE_CI",
+  "sourceSha": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+  "protectedContainers": 11,
+  "exploreBrowser": "PASS_FIVE_WIDTHS",
+  "mathGroups": 14,
+  "rollback": "PASS",
+  "privateRecordsEnabled": false,
+  "firstAttempt": "Rolled back after browser scroll timeout; retained in first-failure"
+}

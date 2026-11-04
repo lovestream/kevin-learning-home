@@ -22,6 +22,7 @@ export function runtimeInputs() {
     "apps/server",
     "packages/math-training",
     "packages/contracts",
+    "packages/explore",
   ])
     visit(dir);
   files.push(

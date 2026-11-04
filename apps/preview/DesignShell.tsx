@@ -99,6 +99,24 @@ export function MathIcon({ name, size = 24 }: { name: string; size?: number }) {
     </svg>
   );
 }
+function SubjectNavigation({ dialog = false }: { dialog?: boolean }) {
+  const explore = location.pathname.startsWith("/explore");
+  return (
+    <nav
+      className={dialog ? "dialog-subjects" : "preview-subjects"}
+      aria-label="学科导航"
+    >
+      <a href="/subjects/math" aria-current={!explore ? "page" : undefined}>
+        数学 · 课程与探索
+      </a>
+      <span aria-disabled="true">英语 · 待迁入</span>
+      <a href="/explore" aria-current={explore ? "page" : undefined}>
+        探索与创造
+      </a>
+      <span aria-disabled="true">成长家园 · 待接入</span>
+    </nav>
+  );
+}
 function Pathways() {
   const kind = new URLSearchParams(location.search).get("kind"),
     active = location.pathname.includes("/detective")
@@ -132,7 +150,8 @@ function Pathways() {
 }
 export default function DesignShell({ children }: { children: ReactNode }) {
   const dialog = useRef<HTMLDialogElement>(null),
-    menu = useRef<HTMLButtonElement>(null);
+    menu = useRef<HTMLButtonElement>(null),
+    restoreMenuFocus = useRef(true);
   return (
     <div className="site-shell preview-shell preview-app">
       <a className="skip-link" href="#main-content">
@@ -144,11 +163,38 @@ export default function DesignShell({ children }: { children: ReactNode }) {
             K
           </span>
           <div>
-            Kevin 学习家园<small>数学实验室</small>
+            Kevin 学习家园
+            <small>
+              {location.pathname.startsWith("/explore")
+                ? "探索与创造"
+                : "数学实验室"}
+            </small>
           </div>
         </div>
         <p className="side-caption">今天想去哪里？</p>
-        <Pathways />
+        {location.pathname.startsWith("/explore") ? (
+          <nav className="pathways" aria-label="探索路径">
+            {[
+              ["questions", "问题库"],
+              ["projects", "正在探索"],
+              ["creations", "我的创造"],
+              ["archive", "发现档案"],
+            ].map(([id, title]) => (
+              <a
+                key={id}
+                href={"/explore/" + id}
+                aria-current={
+                  location.pathname.endsWith("/" + id) ? "page" : undefined
+                }
+              >
+                <MathIcon name="bulb" />
+                <span>{title}</span>
+              </a>
+            ))}
+          </nav>
+        ) : (
+          <Pathways />
+        )}
         <div className="side-note">
           <MathIcon name="bulb" size={28} />
           <p>
@@ -164,17 +210,15 @@ export default function DesignShell({ children }: { children: ReactNode }) {
           <a className="brand" href="/">
             Kevin 学习家园
           </a>
-          <nav className="preview-subjects" aria-label="学科导航">
-            <a href="/subjects/math" aria-current="page">
-              数学 · 课程与探索
-            </a>
-            <span aria-disabled="true">英语 · 待迁入</span>
-          </nav>
+          <SubjectNavigation />
           <button
             ref={menu}
             className="menu-toggle"
             aria-controls="learning-dialog"
-            onClick={() => dialog.current?.showModal()}
+            onClick={() => {
+              restoreMenuFocus.current = true;
+              dialog.current?.showModal();
+            }}
           >
             <MathIcon name="menu" />
             <span>学习导航</span>
@@ -185,8 +229,12 @@ export default function DesignShell({ children }: { children: ReactNode }) {
           id="learning-dialog"
           ref={dialog}
           className="learning-dialog"
-          onClose={() => menu.current?.focus()}
+          onClose={() => {
+            if (restoreMenuFocus.current) menu.current?.focus();
+          }}
           onClick={(e) => {
+            if (e.target instanceof Element && e.target.closest("a"))
+              restoreMenuFocus.current = false;
             if (
               e.target === e.currentTarget ||
               (e.target instanceof Element && e.target.closest("a"))
@@ -204,12 +252,7 @@ export default function DesignShell({ children }: { children: ReactNode }) {
               <MathIcon name="close" />
             </button>
           </div>
-          <nav className="dialog-subjects" aria-label="学科导航">
-            <a href="/subjects/math" aria-current="page">
-              数学 · 课程与探索
-            </a>
-            <span aria-disabled="true">英语 · 待迁入</span>
-          </nav>
+          <SubjectNavigation dialog />
           <Pathways />
         </dialog>
         <details className="preview-banner">
@@ -220,7 +263,7 @@ export default function DesignShell({ children }: { children: ReactNode }) {
         </details>
         {children}
         <footer className="preview-footer">
-          <span>Kevin 学习家园 · 数学实验室</span>
+          <span>Kevin 学习家园 · 探索、表达、验证</span>
           <span>认真想一想，也允许再试一次。</span>
           <details>
             <summary>关于本次体验</summary>

@@ -1,0 +1,25 @@
+{"phase": "SOURCE_CI", "rows": [["push", "in_progress", [["math-onepass", "in_progress", ""], ["foundation", "in_progress", ""]]], ["pull_request", "in_progress", [["foundation", "in_progress", ""], ["math-onepass", "in_progress", ""]]]]}
+{"phase": "SOURCE_CI", "rows": [["push", "in_progress", [["math-onepass", "completed", "success"], ["foundation", "in_progress", ""]]], ["pull_request", "in_progress", [["foundation", "in_progress", ""], ["math-onepass", "in_progress", ""]]]]}
+{"phase": "SOURCE_CI", "rows": [["push", "in_progress", [["math-onepass", "completed", "success"], ["foundation", "in_progress", ""]]], ["pull_request", "in_progress", [["foundation", "in_progress", ""], ["math-onepass", "completed", "success"]]]]}
+{"phase": "SOURCE_CI", "rows": [["push", "completed", [["math-onepass", "completed", "success"], ["foundation", "completed", "success"]]], ["pull_request", "in_progress", [["foundation", "in_progress", ""], ["math-onepass", "completed", "success"]]]]}
+{"phase": "SOURCE_CI", "rows": [["push", "completed", [["math-onepass", "completed", "success"], ["foundation", "completed", "success"]]], ["pull_request", "completed", [["foundation", "completed", "success"], ["math-onepass", "completed", "success"]]]]}
+SOURCE_CI_PASS_IMAGE_VERIFIED
+CANDIDATE_STAGED
+NAS_EXPLORE_ACTIVE
+NAS_EXPLORE_FIVE_WIDTHS_PASS
+START checkpoint
+END checkpoint exit=1
+Traceback (most recent call last):
+  File "/Users/yako/Downloads/codex/kevin-learning-home-math-trial/.evidence/explore/nas-math-regression.py", line 17, in <module>
+    assert rows[0]['exit']==0,'NAS_CHECKPOINT_FAILED'
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: NAS_CHECKPOINT_FAILED
+FAIL_RESTORED_PREVIOUS_VERSION
+Traceback (most recent call last):
+  File "/Users/yako/Downloads/codex/kevin-learning-home-math-trial/.evidence/explore/after-source-ci.py", line 31, in <module>
+    subprocess.run(['python3',str(root/'nas-math-regression.py'),sha],check=True,timeout=3000)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['python3', '.evidence/explore/nas-math-regression.py', 'b7a2d23e25027b59e9a64cadfd41f5e9931db9b1']' returned non-zero exit status 1.
