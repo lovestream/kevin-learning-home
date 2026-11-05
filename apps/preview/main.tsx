@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 const ExplorePage = lazy(() => import("./explore/Explore.tsx"));
+const HomePage = lazy(() => import("./home/Home.tsx"));
 import { ExploreProvider } from "./explore/memory.tsx";
 const ReadingArticle = lazy(() => import("./reading/Article.tsx"));
 const DetectiveTraining = lazy(() => import("./DetectiveTraining.tsx"));
@@ -504,13 +505,15 @@ function App() {
   return (
     <DesignShell>
       <main id="main-content" className="reading-area" tabIndex={-1}>
-        {learningMap && !location.pathname.startsWith("/explore") && (
-          <MapBreadcrumb
-            map={learningMap}
-            id={requested ?? undefined}
-            title={lesson?.title}
-          />
-        )}
+        {learningMap &&
+          location.pathname !== "/" &&
+          !location.pathname.startsWith("/explore") && (
+            <MapBreadcrumb
+              map={learningMap}
+              id={requested ?? undefined}
+              title={lesson?.title}
+            />
+          )}
         {error ? (
           <section role="alert">
             <h1>课堂暂时无法确认</h1>
@@ -519,6 +522,10 @@ function App() {
           </section>
         ) : !catalog || !learningMap ? (
           <p role="status">正在摆好课堂…</p>
+        ) : location.pathname === "/" ? (
+          <Suspense fallback={<p role="status">正在打开家园…</p>}>
+            <HomePage catalog={catalog} map={learningMap} />
+          </Suspense>
         ) : location.pathname === "/explore" ||
           location.pathname.startsWith("/explore/") ? (
           <Suspense fallback={<p role="status">正在翻开探索本…</p>}>

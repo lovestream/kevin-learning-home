@@ -1,4 +1,6 @@
 import { useRef, type ReactNode } from "react";
+import { learningSpaces, pinnedSpaces } from "./home/spaces.ts";
+import "./home/navigation.css";
 export const pathwayLinks = [
   {
     key: "book",
@@ -82,6 +84,7 @@ export function MathIcon({ name, size = 24 }: { name: string; size?: number }) {
     menu: <path d="M3 5h18 M3 12h18 M3 19h18" />,
     arrow: <path d="M4 12h16 M14 6l6 6-6 6" />,
     close: <path d="m5 5 14 14 M5 19 19 5" />,
+    home: <path d="m3 12 10-9 10 9 M6 10v13h5v-7h4v7h5V10" />,
   };
   return (
     <svg
@@ -100,20 +103,34 @@ export function MathIcon({ name, size = 24 }: { name: string; size?: number }) {
   );
 }
 function SubjectNavigation({ dialog = false }: { dialog?: boolean }) {
-  const explore = location.pathname.startsWith("/explore");
+  const active = location.pathname.startsWith("/explore")
+    ? "explore"
+    : location.pathname.startsWith("/subjects/math") ||
+        location.pathname.startsWith("/lesson/")
+      ? "math"
+      : null;
   return (
     <nav
       className={dialog ? "dialog-subjects" : "preview-subjects"}
       aria-label="学科导航"
     >
-      <a href="/subjects/math" aria-current={!explore ? "page" : undefined}>
-        数学 · 课程与探索
-      </a>
-      <span aria-disabled="true">英语 · 待迁入</span>
-      <a href="/explore" aria-current={explore ? "page" : undefined}>
-        探索与创造
-      </a>
-      <span aria-disabled="true">成长家园 · 待接入</span>
+      {pinnedSpaces().map((space) => (
+        <a
+          key={space.id}
+          href={space.href!}
+          aria-current={active === space.id ? "page" : undefined}
+        >
+          <MathIcon name={space.id === "math" ? "book" : "bulb"} size={21} />
+          {space.title}
+        </a>
+      ))}
+      {learningSpaces
+        .filter((s) => !s.available)
+        .map((s) => (
+          <span key={s.id} aria-disabled="true">
+            {s.id === "english" ? "英语 · 待迁入" : "成长家园 · 待接入"}
+          </span>
+        ))}
     </nav>
   );
 }
@@ -151,7 +168,9 @@ function Pathways() {
 export default function DesignShell({ children }: { children: ReactNode }) {
   const dialog = useRef<HTMLDialogElement>(null),
     menu = useRef<HTMLButtonElement>(null),
-    restoreMenuFocus = useRef(true);
+    restoreMenuFocus = useRef(true),
+    home = location.pathname === "/",
+    explore = location.pathname.startsWith("/explore");
   return (
     <div className="site-shell preview-shell preview-app">
       <a className="skip-link" href="#main-content">
@@ -165,14 +184,27 @@ export default function DesignShell({ children }: { children: ReactNode }) {
           <div>
             Kevin 学习家园
             <small>
-              {location.pathname.startsWith("/explore")
-                ? "探索与创造"
-                : "数学实验室"}
+              {home ? "在这里，慢慢发现" : explore ? "探索与创造" : "数学书房"}
             </small>
           </div>
         </div>
+        <a
+          className="side-home-link"
+          href="/"
+          aria-current={home ? "page" : undefined}
+        >
+          <MathIcon name="home" size={21} />
+          家园首页
+        </a>
+        <SubjectNavigation />
         <p className="side-caption">今天想去哪里？</p>
-        {location.pathname.startsWith("/explore") ? (
+        {home ? (
+          <p className="side-home-hint">
+            从学习空间进入，
+            <br />
+            再找到你想学的那一课。
+          </p>
+        ) : explore ? (
           <nav className="pathways" aria-label="探索路径">
             {[
               ["questions", "问题库"],
@@ -210,7 +242,9 @@ export default function DesignShell({ children }: { children: ReactNode }) {
           <a className="brand" href="/">
             Kevin 学习家园
           </a>
-          <SubjectNavigation />
+          <span className="topbar-context">
+            {home ? "家园首页" : explore ? "探索与创造" : "数学书房"}
+          </span>
           <button
             ref={menu}
             className="menu-toggle"
@@ -252,8 +286,11 @@ export default function DesignShell({ children }: { children: ReactNode }) {
               <MathIcon name="close" />
             </button>
           </div>
+          <a className="dialog-home" href="/">
+            返回家园首页
+          </a>
           <SubjectNavigation dialog />
-          <Pathways />
+          {!home && !explore && <Pathways />}
         </dialog>
         <details className="preview-banner">
           <summary>仅本页体验，不保存学习记录</summary>
