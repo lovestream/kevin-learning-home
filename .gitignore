@@ -1,6 +1,7 @@
 node_modules/
 apps/web/dist/
 apps/preview/dist/
+apps/family/dist/
 .foundation-work/
 .evidence/
 *.sqlite*

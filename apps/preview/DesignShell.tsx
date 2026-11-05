@@ -148,7 +148,7 @@ function Pathways() {
     </nav>
   );
 }
-export default function DesignShell({ children }: { children: ReactNode }) {
+export default function DesignShell({ children, recordMode="preview" }: { children: ReactNode;recordMode?:"preview"|"synthetic-private"|"private" }) {
   const dialog = useRef<HTMLDialogElement>(null),
     menu = useRef<HTMLButtonElement>(null),
     restoreMenuFocus = useRef(true);
@@ -223,7 +223,7 @@ export default function DesignShell({ children }: { children: ReactNode }) {
             <MathIcon name="menu" />
             <span>学习导航</span>
           </button>
-          <span className="experience-chip">免登录体验</span>
+          <span className="experience-chip">{recordMode==="preview"?"免登录体验":recordMode==="synthetic-private"?"合成隔离测试":"家庭学习"}</span>
         </header>
         <dialog
           id="learning-dialog"
@@ -256,9 +256,9 @@ export default function DesignShell({ children }: { children: ReactNode }) {
           <Pathways />
         </dialog>
         <details className="preview-banner">
-          <summary>仅本页体验，不保存学习记录</summary>
+          <summary>{recordMode==="preview"?"仅本页体验，不保存学习记录":recordMode==="synthetic-private"?"仅合成资料：探索项目会保存，原站数据不接入":"探索项目保存在家园，不发送给外部 AI"}</summary>
           <p>
-            无需账号，无真实学习资料。刷新或离开页面会清空本次作答、操作和自查；正确反馈不代表长期掌握，解释请与家长核对。
+            {recordMode==="preview"?"无需账号，无真实学习资料。刷新或离开页面会清空本次作答、操作和自查；正确反馈不代表长期掌握，解释请与家长核对。":"孩子使用家长授权过的设备自动进入；家长查看时才登录，不设孩子密码或第二个 PIN。保存失败会保留输入并提示重试；图片和语音不会发送给外部 AI。"}
           </p>
         </details>
         {children}

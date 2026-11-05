@@ -114,16 +114,17 @@ function Composer({
   onCreated: (id: string) => void;
 }) {
   const [question, setQuestion] = useState(""),
-    { create } = useExplore();
+    { create, busy } = useExplore(), [error,setError]=useState("");
   return (
     <form
       className="question-composer"
-      onSubmit={(e) => {
+      onSubmit={async(e) => {
         e.preventDefault();
-        if (question.trim()) onCreated(create(question, refs));
+        if (question.trim())try {setError("");onCreated(await create(question, refs));}catch{setError("还没有保存成功，文字仍在这里。请检查连接后重试。");}
       }}
     >
       <label htmlFor="curiosity-question">我想弄明白的问题</label>
+      {error&&<p role="alert">{error}</p>}
       <textarea
         id="curiosity-question"
         value={question}
@@ -138,7 +139,7 @@ function Composer({
         <button
           className="explore-primary"
           type="submit"
-          disabled={!question.trim()}
+          disabled={busy||!question.trim()}
         >
           先留下这个问题
         </button>
@@ -147,6 +148,7 @@ function Composer({
   );
 }
 function ProjectRow({ project }: { project: ExploreProject }) {
+  const {persistent}=useExplore();
   return (
     <article className="question-row" data-project={project.projectId}>
       <span className={"question-mark " + project.status} aria-hidden="true">
@@ -157,7 +159,7 @@ function ProjectRow({ project }: { project: ExploreProject }) {
           {statusNames[project.status]} ·{" "}
           {project.projectId.startsWith("example-")
             ? "公开示例"
-            : "本页临时问题"}
+            : persistent?"我的问题":"本页临时问题"}
         </span>
         <a
           className="question-title"
@@ -242,7 +244,7 @@ function Workspace({
   project: ExploreProject;
   catalog: Catalog;
 }) {
-  const { append } = useExplore(),
+  const { append, persistent, busy, attachments, attachmentPanel, deleteProject } = useExplore(),
     [stage, setStage] = useState<string>("thought"),
     [value, setValue] = useState(""),
     [inference, setInference] = useState(""),
@@ -264,18 +266,18 @@ function Workspace({
     drafts = useRef<Record<string, string>>({}),
     first = firstHypothesis(project),
     evidence = project.events.filter((e) => e.detail.kind === "evidence_added");
-  function commit(detail: ExploreEvent["detail"]) {
+  async function commit(detail: ExploreEvent["detail"]) {
     try {
-      append(project.projectId, detail);
+      await append(project.projectId, detail);
       // Changing pace/weekly choice must not erase an unfinished paragraph.
-      if ("text" in detail) setValue("");
+      if ("text" in detail) setValue(current=>current===detail.text?"":current);
       if (detail.kind === "evidence_added") {
         setInference("");
         setCitation("");
       }
-      setMessage("已留在本页，刷新后不保留。");
+      setMessage(persistent?"已保存在家园，刷新后可以继续。":"已留在本页，刷新后不保留。");
     } catch {
-      setMessage("这一步还不能留下，请检查首猜、证据和资料出处，再试一次。");
+      setMessage(persistent?"保存没有完成，文字仍在这里。若其他设备已更新，请核对最新过程后重试。":"这一步还不能留下，请检查首猜、证据和资料出处，再试一次。");
     }
   }
   function changeStage(id: string) {
@@ -285,11 +287,11 @@ function Workspace({
     setMessage("");
     requestAnimationFrame(() => heading.current?.focus());
   }
-  function help(level: CoachLevel) {
+  async function help(level: CoachLevel) {
     setPrompt(deterministicCoach.respond(project, level).text);
     if (first) {
       try {
-        append(project.projectId, { kind: "help_requested", level });
+        await append(project.projectId, { kind: "help_requested", level });
       } catch {
         setMessage(
           "本页临时记录已到上限，先在过程回看里查看已有内容；也可以清空后重新试用。",
@@ -307,7 +309,7 @@ function Workspace({
         <span>
           {project.projectId.startsWith("example-")
             ? "公开示例，可以在本页试着改"
-            : "你的临时问题，仅留在本页"}
+            : persistent?"你的探索，已经保存在家园":"你的临时问题，仅留在本页"}
         </span>
         <h1>{project.question}</h1>
         <p>
@@ -503,7 +505,7 @@ function Workspace({
                 <button
                   className="explore-primary"
                   disabled={
-                    !value.trim() ||
+                    busy || !value.trim() ||
                     (stage === "evidence" &&
                       source !== "observed" &&
                       !citation.trim())
@@ -522,7 +524,7 @@ function Workspace({
                         source,
                         citation,
                         inference,
-                        artifactIds: [],
+                        artifactIds: attachments?.[project.projectId]??[],
                         assistance,
                       });
                     if (stage === "revise")
@@ -540,12 +542,12 @@ function Workspace({
                         text: value,
                         category,
                         fictional,
-                        artifactIds: [],
+                        artifactIds: attachments?.[project.projectId]??[],
                         assistance,
                       });
                   }}
                 >
-                  留在本页
+                  {persistent?"保存在家园":"留在本页"}
                 </button>
                 {stage === "revise" && (
                   <button
@@ -624,6 +626,8 @@ function Workspace({
           </details>
         </aside>
       </div>
+      {attachmentPanel?.(project)}
+      {deleteProject&&<button className="project-delete" onClick={async()=>{if(window.confirm("移到已删除？家长可以恢复，第一版想法和过程不会被改写。")){try{await deleteProject(project.projectId);location.assign("/explore/questions");}catch{setMessage("删除未完成，请重试。");}}}}>移到已删除</button>}
       {project.subjectRefs.length > 0 && (
         <section className="explore-references">
           <h2>从哪里开始的？</h2>
@@ -661,7 +665,7 @@ function Workspace({
   );
 }
 export default function Explore({ catalog }: { catalog: Catalog }) {
-  const { projects, discard } = useExplore(),
+  const { projects, discard, persistent } = useExplore(),
     [search, setSearch] = useState(""),
     [confirm, setConfirm] = useState(false);
   const route = location.pathname.split("/")[2] ?? "",
@@ -712,9 +716,9 @@ export default function Explore({ catalog }: { catalog: Catalog }) {
           <Workspace key={id} project={active} catalog={catalog} />
         ) : (
           <section role="alert">
-            <h1>这个临时问题已经不在本页了</h1>
+            <h1>{persistent?"暂时找不到这个问题":"这个临时问题已经不在本页了"}</h1>
             <p>
-              刷新后会清空临时内容。你可以重新留下一个问题，或继续看公开示例。
+              {persistent?"它可能已移到已删除，或当前设备没有权限查看。请返回问题库。":"刷新后会清空临时内容。你可以重新留下一个问题，或继续看公开示例。"}
             </p>
             <a href="/explore/questions">回到问题库</a>
           </section>
@@ -740,7 +744,7 @@ export default function Explore({ catalog }: { catalog: Catalog }) {
               <h1>{tabs.find((t) => t[0] === route)?.[1]}</h1>
               <p>
                 {tabs.find((t) => t[0] === route)?.[2]}
-                。下面均为公开示例或本页临时操作。
+                {persistent?"。每一个问题都可以慢慢想，不必急着完成。":"。下面均为公开示例或本页临时操作。"}
               </p>
             </header>
           )}
@@ -759,7 +763,7 @@ export default function Explore({ catalog }: { catalog: Catalog }) {
           )}
           <section className="question-collection">
             <div className="collection-heading">
-              <h2>{!route ? "别人的示例，也可以启发你" : "留下的线索"}</h2>
+              <h2>{!route ? persistent?"从你自己的问题开始":"别人的示例，也可以启发你" : "留下的线索"}</h2>
               <label>
                 找一个问题
                 <input
@@ -770,9 +774,9 @@ export default function Explore({ catalog }: { catalog: Catalog }) {
                 />
               </label>
             </div>
-            <p className="example-disclaimer">
+            {!persistent&&<p className="example-disclaimer">
               示例是为了说明怎么探索，不是 Kevin 的真实提问、实验或作品。
-            </p>
+            </p>}
             {filtered.length ? (
               filtered.map((p) => <ProjectRow key={p.projectId} project={p} />)
             ) : (
@@ -793,7 +797,7 @@ export default function Explore({ catalog }: { catalog: Catalog }) {
           )}
         </>
       )}
-      <div className="explore-demo-control">
+      {persistent?<p className="explore-demo-control">项目保存在家园，不发送给外部 AI。<a href="/parent">家长查看与管理</a></p>:<div className="explore-demo-control">
         <p>
           预览不保存：本页文字只在内存中，刷新或关闭即清空；不发送给外部 AI。
         </p>
@@ -814,7 +818,7 @@ export default function Explore({ catalog }: { catalog: Catalog }) {
             <button onClick={() => setConfirm(false)}>继续保留在本页</button>
           </div>
         )}
-      </div>
+      </div>}
     </div>
   );
 }

@@ -1,0 +1,22 @@
+-- Independent private domain. Foundation v2 and synthetic repositories are unchanged.
+CREATE TABLE metadata(id INTEGER PRIMARY KEY CHECK(id=1), version INTEGER NOT NULL CHECK(version=1), schema_hash TEXT NOT NULL, synthetic INTEGER NOT NULL CHECK(synthetic IN (0,1)), epoch INTEGER NOT NULL CHECK(epoch>0)) STRICT;
+CREATE TABLE households(id TEXT PRIMARY KEY, login TEXT NOT NULL UNIQUE, password TEXT NOT NULL CHECK(json_valid(password)), credential_version INTEGER NOT NULL, created_at INTEGER NOT NULL) STRICT;
+CREATE TABLE private_learners(id TEXT PRIMARY KEY, household_id TEXT NOT NULL REFERENCES households(id), label TEXT NOT NULL) STRICT;
+CREATE TABLE private_sessions(digest TEXT PRIMARY KEY, household_id TEXT NOT NULL REFERENCES households(id), learner_id TEXT REFERENCES private_learners(id), role TEXT NOT NULL CHECK(role IN ('parent','child')), csrf TEXT NOT NULL, epoch INTEGER NOT NULL, credential_version INTEGER NOT NULL, issued_at INTEGER NOT NULL, expires_at INTEGER NOT NULL, idle_expires_at INTEGER NOT NULL, revoked INTEGER NOT NULL DEFAULT 0 CHECK(revoked IN (0,1)), CHECK((role='parent' AND learner_id IS NULL) OR (role='child' AND learner_id IS NOT NULL))) STRICT;
+CREATE TABLE private_limits(bucket TEXT PRIMARY KEY, attempts INTEGER NOT NULL, until_at INTEGER NOT NULL) STRICT;
+CREATE TABLE source_snapshots(id TEXT PRIMARY KEY, learner_id TEXT NOT NULL REFERENCES private_learners(id), subject_id TEXT NOT NULL, source_version TEXT NOT NULL, format TEXT NOT NULL, sha256 TEXT NOT NULL, bytes BLOB NOT NULL, created_at INTEGER NOT NULL, UNIQUE(learner_id,subject_id,sha256)) STRICT;
+CREATE TRIGGER snapshots_no_update BEFORE UPDATE ON source_snapshots BEGIN SELECT RAISE(ABORT,'IMMUTABLE_SNAPSHOT'); END;
+CREATE TRIGGER snapshots_no_delete BEFORE DELETE ON source_snapshots BEGIN SELECT RAISE(ABORT,'IMMUTABLE_SNAPSHOT'); END;
+CREATE TABLE private_subject_state(learner_id TEXT NOT NULL REFERENCES private_learners(id), subject_id TEXT NOT NULL, revision INTEGER NOT NULL, schema_version TEXT NOT NULL, content_version TEXT NOT NULL, payload TEXT NOT NULL CHECK(json_valid(payload)), snapshot_id TEXT REFERENCES source_snapshots(id), PRIMARY KEY(learner_id,subject_id)) STRICT;
+CREATE TABLE private_review_index(learner_id TEXT NOT NULL REFERENCES private_learners(id), subject_id TEXT NOT NULL, namespace TEXT NOT NULL, content_id TEXT NOT NULL, source_revision INTEGER NOT NULL, due_raw TEXT NOT NULL CHECK(json_valid(due_raw)), PRIMARY KEY(learner_id,subject_id,namespace,content_id)) STRICT;
+CREATE TABLE private_receipts(learner_id TEXT NOT NULL REFERENCES private_learners(id), request_id TEXT NOT NULL, request_hash TEXT NOT NULL, response TEXT NOT NULL CHECK(json_valid(response)), PRIMARY KEY(learner_id,request_id)) STRICT;
+CREATE TRIGGER receipts_no_update BEFORE UPDATE ON private_receipts BEGIN SELECT RAISE(ABORT,'IMMUTABLE_RECEIPT'); END;
+CREATE TRIGGER receipts_no_delete BEFORE DELETE ON private_receipts BEGIN SELECT RAISE(ABORT,'IMMUTABLE_RECEIPT'); END;
+CREATE TABLE private_events(event_id TEXT PRIMARY KEY, learner_id TEXT NOT NULL REFERENCES private_learners(id), module_id TEXT NOT NULL, entity_id TEXT NOT NULL, source_revision INTEGER NOT NULL, fact TEXT NOT NULL CHECK(json_valid(fact)), at TEXT NOT NULL) STRICT;
+CREATE INDEX private_events_learner ON private_events(learner_id,module_id,entity_id);
+CREATE TRIGGER facts_no_update BEFORE UPDATE ON private_events BEGIN SELECT RAISE(ABORT,'IMMUTABLE_FACT'); END;
+CREATE TRIGGER facts_no_delete BEFORE DELETE ON private_events BEGIN SELECT RAISE(ABORT,'IMMUTABLE_FACT'); END;
+CREATE TABLE private_projects(id TEXT PRIMARY KEY, learner_id TEXT NOT NULL REFERENCES private_learners(id), revision INTEGER NOT NULL, projection TEXT NOT NULL CHECK(json_valid(projection)), deleted_at TEXT) STRICT;
+CREATE INDEX private_projects_learner ON private_projects(learner_id,deleted_at);
+CREATE TABLE private_media(id TEXT PRIMARY KEY, learner_id TEXT NOT NULL REFERENCES private_learners(id), project_id TEXT NOT NULL REFERENCES private_projects(id), kind TEXT NOT NULL, mime TEXT NOT NULL, source_hash TEXT NOT NULL, sha256 TEXT NOT NULL, bytes BLOB NOT NULL, thumb BLOB, metadata TEXT NOT NULL CHECK(json_valid(metadata)), request_id TEXT NOT NULL, deleted_at TEXT, UNIQUE(learner_id,request_id)) STRICT;
+CREATE TABLE private_audit(id INTEGER PRIMARY KEY, action TEXT NOT NULL, household_id TEXT, at INTEGER NOT NULL) STRICT;
