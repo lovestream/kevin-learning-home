@@ -1,5 +1,5 @@
 import { DatabaseSync } from "node:sqlite";
-import { readFileSync, existsSync, lstatSync, chmodSync } from "node:fs";
+import { readFileSync, existsSync, lstatSync, openSync, closeSync, constants } from "node:fs";
 import { join } from "node:path";
 import { AppError, sha256 } from "../contracts/index.ts";
 import { ownedDirectory } from "../platform/store.ts";
@@ -26,7 +26,9 @@ export class RecordsDatabase {
     try {
       if (existsSync(this.file) && lstatSync(this.file).isSymbolicLink())
         throw new AppError("SYMLINK_DATABASE", 503);
-      db = new DatabaseSync(this.file); this.db = db;chmodSync(this.file,0o600);
+      if(!existsSync(this.file)){const fd=openSync(this.file,constants.O_CREAT|constants.O_EXCL|constants.O_RDWR|constants.O_NOFOLLOW,0o600);closeSync(fd);}
+      if(lstatSync(this.file).mode&0o077)throw new AppError("PRIVATE_DATABASE_PERMISSIONS",503);
+      db = new DatabaseSync(this.file); this.db = db;
       const version = Number(db.prepare("PRAGMA user_version").get()!.user_version);
       if (!version) {
         if (db.prepare("SELECT name FROM sqlite_schema WHERE name NOT LIKE 'sqlite_%'").all().length)
@@ -48,7 +50,6 @@ export class RecordsDatabase {
           throw new AppError("PRIVATE_SCHEMA_SHAPE_MISMATCH", 503);
       } finally { expected.close(); }
       db.exec("PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=3000;");
-      chmodSync(this.file, 0o600);
       this.verify(); this.identity = lstatSync(this.file);
     } catch(e) { db?.close(); this.lease.close(); throw e; }
   }
@@ -60,6 +61,8 @@ export class RecordsDatabase {
   verify() {
     if (this.db.prepare("PRAGMA quick_check").get()!.quick_check !== "ok" || this.db.prepare("PRAGMA foreign_key_check").all().length)
       throw new AppError("PRIVATE_DATABASE_INTEGRITY", 503);
+    for(const row of this.db.prepare("SELECT sha256,bytes FROM source_snapshots").iterate())if(sha256(row.bytes as Uint8Array)!==row.sha256)throw new AppError("SOURCE_SNAPSHOT_HASH",503);
+    for(const row of this.db.prepare("SELECT sha256,bytes FROM private_media").iterate())if(sha256(row.bytes as Uint8Array)!==row.sha256)throw new AppError("PRIVATE_MEDIA_HASH",503);
   }
   ready() {
     if(this.closed) return false;

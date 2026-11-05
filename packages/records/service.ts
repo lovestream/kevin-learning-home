@@ -10,7 +10,7 @@ export class PrivateRecords {
   readonly access:FamilyAccess;
   readonly store:RecordsDatabase;
   constructor(store:RecordsDatabase) {this.store=store;this.access=new FamilyAccess(store);}
-  private receipt<T>(learner:string,id:string,command:unknown,operation:()=>T):T {
+  receipt<T>(learner:string,id:string,command:unknown,operation:()=>T):T {
     return this.store.transaction(()=>{
       const hash=sha256(canonical(command)),r=this.store.db.prepare("SELECT * FROM private_receipts WHERE learner_id=? AND request_id=?").get(learner,id);
       if(r){if(r.request_hash!==hash)throw new AppError("IDEMPOTENCY_CONFLICT",409);return JSON.parse(String(r.response)) as T;}

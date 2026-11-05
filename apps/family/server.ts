@@ -10,6 +10,7 @@ import { PrivateRecords } from "../../packages/records/service.ts";
 import { PrivateMedia } from "../../packages/records/media.ts";
 import { snapshotArchive } from "../../packages/records/checkpoint.ts";
 import { verifyPassword } from "../../packages/auth/password.ts";
+import { PrivateMath } from "../../packages/records/math.ts";
 import { startPreview } from "../preview/server.ts";
 
 const ROOT=new URL("../..",import.meta.url).pathname;
@@ -34,7 +35,7 @@ export async function startFamily(options:{root?:string;directory:string;synthet
   if(mode==="production"&&(!options.origin||!options.trustedLocalTLSProxy))throw new AppError("EXPLICIT_TRUSTED_TLS_PROXY_REQUIRED",503);
   let config:AuthConfig|undefined=options.origin?authConfig(options.origin,mode):undefined;
   if(!config&&mode!=="loopback-development")throw new AppError("AUTH_ORIGIN_CONFIG",503);
-  const root=options.root??ROOT,store=new RecordsDatabase(options.directory,options.synthetic),records=new PrivateRecords(store),media=new PrivateMedia(records);
+  const root=options.root??ROOT,store=new RecordsDatabase(options.directory,options.synthetic),records=new PrivateRecords(store),media=new PrivateMedia(records),math=new PrivateMath(records);
   let preview:Awaited<ReturnType<typeof startPreview>>;
   try {preview=await startPreview({root,enabled:true,port:0});}catch(e){store.close();throw e;}
   const previewPort=(preview.address() as {port:number}).port;
@@ -89,6 +90,9 @@ export async function startFamily(options:{root?:string;directory:string;synthet
         }
         const removed=/^\/parent\/learners\/([a-f0-9-]{36})\/deleted$/.exec(api);
         if(removed&&req.method==="GET"){records.access.authorize(p,removed[1],"parent");send(200,{projects:records.list(p,removed[1],true)});return;}
+        const mathMatch=/^\/learners\/([a-f0-9-]{36})\/math\/(state|commands)$/.exec(api);
+        if(mathMatch&&req.method==="GET"&&mathMatch[2]==="state"){send(200,math.view(p,mathMatch[1]));return;}
+        if(mathMatch&&req.method==="POST"&&mathMatch[2]==="commands"){send(200,math.dispatch(p,mathMatch[1],await body(req,65536)));return;}
         const match=/^\/learners\/([a-f0-9-]{36})\/(projects|subjects|media)(?:\/([A-Za-z0-9._-]{1,96}))?(?:\/(events|visibility|assets|thumbnail))?$/.exec(api.replace(/^\/parent(?=\/learners\/)/,""));
         if(!match)throw new AppError("NOT_FOUND",404);
         const [,learner,kind,id,action]=match;
@@ -108,7 +112,7 @@ export async function startFamily(options:{root?:string;directory:string;synthet
         if(kind==="media"&&id&&req.method==="GET"&&(!action||action==="thumbnail")) {
           const value=media.read(p,learner,id,action==="thumbnail");res.writeHead(200,{"Content-Type":value.mime,"Content-Length":value.bytes.length,"Content-Disposition":"inline"});res.end(value.bytes);return;
         }
-        if(kind==="subjects"&&id&&req.method==="GET"&&!action){send(200,records.subject(p,learner,id));return;}
+        if(kind==="subjects"&&id&&req.method==="GET"&&!action){records.access.authorize(p,learner,"parent");send(200,records.subject(p,learner,id));return;}
         // Whole-payload replacement is an offline adapter API, not a child HTTP
         // command: browser writes must use subject-specific validation/grading.
         if(kind==="subjects"&&!id&&req.method==="POST")throw new AppError("SUBJECT_DOMAIN_COMMAND_REQUIRED",403);

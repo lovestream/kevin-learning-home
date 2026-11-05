@@ -21,7 +21,7 @@ async function image(bytes:Buffer):Promise<{bytes:Buffer;thumb:Buffer;width:numb
 }
 async function audio(bytes:Buffer):Promise<{bytes:Buffer;duration:number}> {
   return await new Promise((resolve,reject)=>{
-    const child=spawn("ffmpeg",["-nostdin","-hide_banner","-loglevel","error","-protocol_whitelist","file,pipe","-threads","1","-i","pipe:0","-map_metadata","-1","-vn","-ac","1","-ar","16000","-t","61","-f","wav","pipe:1"],{stdio:["pipe","pipe","ignore"],env:{PATH:process.env.PATH}});
+    const child=spawn("ffmpeg",["-nostdin","-hide_banner","-loglevel","error","-protocol_whitelist","pipe","-threads","1","-i","pipe:0","-map_metadata","-1","-vn","-ac","1","-ar","16000","-t","61","-f","wav","pipe:1"],{stdio:["pipe","pipe","ignore"],env:{PATH:process.env.PATH}});
     const chunks:Buffer[]=[];let size=0,done=false;
     const end=(err?:Error)=>{if(done)return;done=true;clearTimeout(timer);if(err){child.kill("SIGKILL");reject(err);return;}
       const out=Buffer.concat(chunks);let p=12,data:Buffer|undefined;
