@@ -285,7 +285,10 @@ try {
       await expect(page.locator("dialog .dialog-subjects")).toContainText(
         "成长家园 · 待接入",
       );
-    } else await page.locator('.preview-subjects a[href="/explore"]').click();
+    } else
+      await page
+        .locator('.learning-sidebar .preview-subjects a[href="/explore"]')
+        .click();
     await page.getByLabel("我想弄明白的问题", { exact: true }).focus();
     assert.equal(
       await page

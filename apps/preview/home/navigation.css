@@ -1,0 +1,140 @@
+/* A fixed global spine plus optional within-space paths. No top subject tabs. */
+.preview-app .learning-sidebar {
+  gap: 17px;
+  overflow-y: auto;
+}
+.preview-app .side-home-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #d8eeea;
+  text-decoration: none;
+  font-weight: 600;
+}
+.preview-app .side-home-link[aria-current="page"] {
+  background: white;
+  color: #103e43;
+}
+.preview-app .learning-sidebar .preview-subjects {
+  display: grid;
+  gap: 5px;
+  align-items: stretch;
+  font-size: 15px;
+}
+.preview-app .learning-sidebar .preview-subjects a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 8px 12px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #d8eeea;
+}
+.preview-app .learning-sidebar .preview-subjects a[aria-current="page"] {
+  background: #2b6464;
+  color: white;
+}
+.preview-app .learning-sidebar .preview-subjects > span {
+  font-size: 12px;
+  color: #a6c6c0;
+  padding: 4px 12px;
+}
+.preview-app .learning-sidebar .pathways {
+  padding-top: 14px;
+  border-top: 1px solid #ffffff24;
+  gap: 3px;
+}
+.preview-app .learning-sidebar .pathways a {
+  min-height: 49px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 9px;
+}
+.preview-app .learning-sidebar .pathways a small {
+  font-size: 11px;
+}
+.preview-app .learning-sidebar .pathways a svg {
+  width: 20px;
+  height: 20px;
+}
+.preview-app .side-caption {
+  margin: 0 12px -10px;
+}
+.preview-app .topbar > .menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  min-height: 44px;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+.preview-app .topbar .experience-chip {
+  font-size: 12px;
+}
+.preview-app .topbar-context {
+  font-size: 14px;
+  color: var(--muted);
+  margin-right: auto;
+  white-space: nowrap;
+}
+.preview-app .reading-area:has(.home-page) {
+  max-width: 1260px;
+}
+.preview-app:has(.home-page) .preview-banner {
+  margin-bottom: 0;
+}
+.preview-app:has(.home-page) .preview-breadcrumb {
+  display: none;
+}
+.preview-app .dialog-home {
+  display: block;
+  min-height: 44px;
+  padding: 8px 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.preview-app .side-home-hint {
+  font-size: 13px;
+  color: #afd6cf;
+  margin: 0 12px;
+  line-height: 1.9;
+}
+.preview-app .dialog-subjects a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.preview-app .dialog-subjects a svg {
+  flex-shrink: 0;
+}
+@media (max-width: 900px) {
+  .preview-app .topbar-context {
+    display: none;
+  }
+  .preview-app .learning-sidebar {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .preview-app .topbar {
+    padding: 10px 16px;
+    gap: 8px;
+  }
+  .preview-app .topbar > .menu-toggle {
+    padding: 6px 9px;
+    font-size: 13px;
+  }
+  .preview-app .topbar .experience-chip {
+    display: none;
+  }
+  .preview-app .brand {
+    font-size: 15px;
+  }
+}
