@@ -50,5 +50,5 @@ try {
     await other.close();await context.close();
   }
   assert.deepEqual(errors,[]);fs.writeFileSync(out+"/result.json",JSON.stringify({status:"PASS_FIVE_WIDTHS_PRIVATE_SYNTHETIC",rows,realData:false,physicalDevices:"NOT_RUN"},null,2)+"\n");console.log("PASS: five widths, actual SQLite persistence, media, two devices, >10s parent focus and revocation masking");
-}catch(e){fs.writeFileSync(out+"/failure.txt",String(e));throw e;}
+}catch(e){fs.writeFileSync(out+"/failure.txt",String(e));for(const [i,c]of browser.contexts().entries())for(const [j,p]of c.pages().entries()){await p.screenshot({path:out+`/failure-${i}-${j}.png`,fullPage:true}).catch(()=>{});fs.writeFileSync(out+`/failure-${i}-${j}.txt`,await p.locator("body").innerText());}throw e;}
 finally{await browser.close();await app.close();fs.rmSync(root,{recursive:true,force:true});}

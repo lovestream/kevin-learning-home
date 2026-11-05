@@ -26,7 +26,7 @@ export class RecordsDatabase {
     try {
       if (existsSync(this.file) && lstatSync(this.file).isSymbolicLink())
         throw new AppError("SYMLINK_DATABASE", 503);
-      db = new DatabaseSync(this.file); this.db = db;
+      db = new DatabaseSync(this.file); this.db = db;chmodSync(this.file,0o600);
       const version = Number(db.prepare("PRAGMA user_version").get()!.user_version);
       if (!version) {
         if (db.prepare("SELECT name FROM sqlite_schema WHERE name NOT LIKE 'sqlite_%'").all().length)

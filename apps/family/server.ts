@@ -109,7 +109,9 @@ export async function startFamily(options:{root?:string;directory:string;synthet
           const value=media.read(p,learner,id,action==="thumbnail");res.writeHead(200,{"Content-Type":value.mime,"Content-Length":value.bytes.length,"Content-Disposition":"inline"});res.end(value.bytes);return;
         }
         if(kind==="subjects"&&id&&req.method==="GET"&&!action){send(200,records.subject(p,learner,id));return;}
-        if(kind==="subjects"&&!id&&req.method==="POST"){send(200,records.writeSubject(p,learner,await body(req,17*1024*1024)));return;}
+        // Whole-payload replacement is an offline adapter API, not a child HTTP
+        // command: browser writes must use subject-specific validation/grading.
+        if(kind==="subjects"&&!id&&req.method==="POST")throw new AppError("SUBJECT_DOMAIN_COMMAND_REQUIRED",403);
         throw new AppError("NOT_FOUND",404);
       }
       if(["GET","HEAD"].includes(req.method??"")&&(path==="/parent"||path.startsWith("/explore")||path.startsWith("/family-assets/"))) {

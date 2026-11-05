@@ -85,8 +85,8 @@ export class FamilyAccess {
     return this.store.db.prepare("SELECT id,label FROM private_learners WHERE household_id=?"+(live.role==="child"?" AND id=?":"")).all(...(live.role==="child"?[live.householdId,live.learnerId!]:[live.householdId]));
   }
   enroll(p:Principal,learnerId:string) {
-    this.authorize(p,learnerId,"parent");
-    return this.store.transaction(()=>{this.store.audit("device_authorized",p.householdId);return this.issue(p.householdId,learnerId,"child");});
+    const live=this.authorize(p,learnerId,"parent");
+    return this.store.transaction(()=>{this.store.audit("device_authorized",live.householdId);return this.issue(live.householdId,learnerId,"child");});
   }
   revokeDevices(p:Principal) {
     const live=this.live(p.digest);if(live.role!=="parent")throw new AppError("ROLE_FORBIDDEN",403);
