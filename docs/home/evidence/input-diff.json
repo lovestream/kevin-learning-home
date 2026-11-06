@@ -1,0 +1,17 @@
+{
+  "status": "HOME_ONLY_RUNTIME_DELTA",
+  "baseSource": "b7a2d23e25027b59e9a64cadfd41f5e9931db9b1",
+  "filesChecked": 288,
+  "added": [
+    "apps/preview/home/Home.tsx",
+    "apps/preview/home/home.css",
+    "apps/preview/home/navigation.css",
+    "apps/preview/home/spaces.ts"
+  ],
+  "changed": [
+    "apps/preview/DesignShell.tsx",
+    "apps/preview/main.tsx"
+  ],
+  "unchangedCount": 282,
+  "oldCourseContentChanged": false
+}

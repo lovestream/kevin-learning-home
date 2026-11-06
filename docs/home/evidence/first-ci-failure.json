@@ -1,0 +1,10 @@
+{
+  "sourceSha": "f83ea8e588d99681b8f1ccba488788d1f72424cb",
+  "push": 42025973186,
+  "pull_request": 42026022232,
+  "failedStep": "MATH-FULL-01 offline source evidence check",
+  "error": "scripts/math-full-01/check.py:77 AssertionError: apps/preview/main.tsx",
+  "cause": "Old archived classroom receipt did not match the changed navigation entry source",
+  "nasChanged": false,
+  "response": "Retained check; reran all 30 representative and 210 complete classroom scenarios, archived real results/screenshots, then reran full CI"
+}

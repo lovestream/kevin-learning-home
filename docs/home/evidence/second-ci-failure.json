@@ -1,0 +1,10 @@
+{
+  "sourceSha": "f7755fe433eb5b24eda495b3281f614fab99c5ae",
+  "runs": [
+    42027501150,
+    42027508814
+  ],
+  "error": "STALE_PRACTICE_EVIDENCE apps/preview/DesignShell.tsx",
+  "deployed": false,
+  "resolution": "Actual three-width practice and library rerun; original archive scripts; no guard removed"
+}

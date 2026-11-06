@@ -1,0 +1,592 @@
+{
+  "sourceSha": "4a75d88c139cba5a216d553dc944c20d3a02a67d",
+  "scope": "Synthetic public content only; exact source CI and actual NAS delivery",
+  "physicalDevices": "NEEDS_USER_ACTION",
+  "files": [
+    {
+      "path": "harness/publish.py",
+      "bytes": 4294,
+      "sha256": "2621ae1a81340b1fdc32b9cb4dc0d1573e4d8b325308c74695329016e8eddc24"
+    },
+    {
+      "path": "harness/nas-math-regression.py",
+      "bytes": 2368,
+      "sha256": "1f910876beef16392a01b183b148711c08030f30d99db6bb52e846c6240e9d1b"
+    },
+    {
+      "path": "harness/probe-primary.mjs",
+      "bytes": 2435,
+      "sha256": "14ce4a4c4816632ea2f91d2b68fd895a859ec066b9d8853b5c0252ea13ffe27f"
+    },
+    {
+      "path": "harness/probe-library.mjs",
+      "bytes": 2977,
+      "sha256": "6a1669a42601a1a074d7b5641ed01944f4a8b16e1754cb904cf614ce7ee81ffb"
+    },
+    {
+      "path": "harness/download-release.py",
+      "bytes": 3496,
+      "sha256": "8628170d4d54067947c26238954a417a866f62432145861d7318f7bfb9b9fbc7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1864,
+      "sha256": "52054470f406707d2be51fee9f2f6ff33130d28090f2f60622842148a31b0edd"
+    },
+    {
+      "path": "source.json",
+      "bytes": 110,
+      "sha256": "55a9b955bcaf1e3e9560661c202bf9d1a68ac3732a557489a6237036f497a303"
+    },
+    {
+      "path": "source-ci.json",
+      "bytes": 30095,
+      "sha256": "e0b088fe4b6b798a712695e8059109915e4762928ab504fdbb85255efa2f7c3b"
+    },
+    {
+      "path": "completion.json",
+      "bytes": 242,
+      "sha256": "2e48b1763ca40f8e00b40a21bc62e8ccd2e2e6d4db84be1e071ebd526187aef8"
+    },
+    {
+      "path": "stage.json",
+      "bytes": 323,
+      "sha256": "93488f8ce410e6717de40588c95cd3dc4276c4673acd2388db1c55ab674bc662"
+    },
+    {
+      "path": "delivery.json",
+      "bytes": 426,
+      "sha256": "d6cc1e62c69d2336a2eadfd371eef3c0df396fc81fae076d467ab1c2ea307ead"
+    },
+    {
+      "path": "runtime.json",
+      "bytes": 1082,
+      "sha256": "3fbacf595e52cd5969d988233bdc07996c6780e8d420eb057812e20a94b6a491"
+    },
+    {
+      "path": "isolation.json",
+      "bytes": 381,
+      "sha256": "f82e78a08aea7926108ee7da673327b0247641cff5a6c3f3cc0dc2b660251e4c"
+    },
+    {
+      "path": "rollback.json",
+      "bytes": 949,
+      "sha256": "6864da58b8bd061565951308ac636c36d96c107f845e8df98c1cfcdfc51ccdb5"
+    },
+    {
+      "path": "static-assets.json",
+      "bytes": 4715,
+      "sha256": "15709790689da5a5b0f66774e9e84c14db4e223377e44d44461da90577eeaa1b"
+    },
+    {
+      "path": "release-inputs.json",
+      "bytes": 35025,
+      "sha256": "567ea388d811a303160ca28fd784ac2befe2b880160cae69869097e44b61d88c"
+    },
+    {
+      "path": "image.json",
+      "bytes": 895,
+      "sha256": "cf6ecb597477313ec72db2b794c8c7b77f3ac511e60feba1b40c5063594f58e5"
+    },
+    {
+      "path": "input-diff.json",
+      "bytes": 430,
+      "sha256": "ad706eeb10a7365867db39188e0effa1c665f6f3ede5caaf458331729ae37848"
+    },
+    {
+      "path": "old-projects-before.json",
+      "bytes": 528,
+      "sha256": "5f4501b66bd12b98e32782594d21ebb076d7780d06b92dd7b486e2d9c62b27d2"
+    },
+    {
+      "path": "old-projects-after.json",
+      "bytes": 528,
+      "sha256": "5f4501b66bd12b98e32782594d21ebb076d7780d06b92dd7b486e2d9c62b27d2"
+    },
+    {
+      "path": "first-ci-failure.json",
+      "bytes": 534,
+      "sha256": "fe1ab9305e2decfc9fbe354cbab60a67947a4b837dfdbb2110775daae5180362"
+    },
+    {
+      "path": "second-ci-failure.json",
+      "bytes": 309,
+      "sha256": "e057e65b888c705bb3008cb1b4ef77e4928af6d0be4542db754f985dfc3b517d"
+    },
+    {
+      "path": "superseded-ci.json",
+      "bytes": 211,
+      "sha256": "bbba1675acb413b146f59bd432b9ee0da22dd0f16a705e26bea629c5f9d0089c"
+    },
+    {
+      "path": "prepublish-readonly.json",
+      "bytes": 232,
+      "sha256": "8e2b638dc32bf00d51ea6276733f272d055951e1e44165b0b298855dff5c85f5"
+    },
+    {
+      "path": "in-app-browser.json",
+      "bytes": 499,
+      "sha256": "af0ae1159973522f82f34b7b6223c16a6baae936b3b5a2743af9c42c3f7405c2"
+    },
+    {
+      "path": "experience-local/results.json",
+      "bytes": 51321,
+      "sha256": "914ca907ba3619139d2898b0f38fef5ffe362f344c424738a0100486229e7dd7"
+    },
+    {
+      "path": "logs/verify.log",
+      "bytes": 1337,
+      "sha256": "9e1921070eed71ac0d4ef70bc9efb31671f143cbc2bf6d10b2d852a846a1062e"
+    },
+    {
+      "path": "logs/all-domain.log",
+      "bytes": 25777,
+      "sha256": "21443db19617447a2a398a8e9898cd1db627a6b2e9bc8bc10885eb99d4c9d71c"
+    },
+    {
+      "path": "logs/typecheck.log",
+      "bytes": 55,
+      "sha256": "0b10c5f62d019ba52f6fde1ff2e2170273dfa68a0a2d8dad1ca145be9a6c811e"
+    },
+    {
+      "path": "logs/gates-source.log",
+      "bytes": 203,
+      "sha256": "4d07b96d9ebed238f669fd6b0b138775a81463e9652fdebf6d11a9f00459e350"
+    },
+    {
+      "path": "logs/gates-node.log",
+      "bytes": 4225,
+      "sha256": "69a25d8b2fa63be7f552fe79493b1b7ca26441a5f192d78f9c1af1acfaee7075"
+    },
+    {
+      "path": "logs/checkpoint-local.log",
+      "bytes": 59,
+      "sha256": "956c7e7115223c9842a7ae1395ca3f00f3660a473dd04253e825009d29e1ddd3"
+    },
+    {
+      "path": "logs/classrooms-local.log",
+      "bytes": 61,
+      "sha256": "b194c35bfcc09c34d93ea8dd3c82efa664e5856f729cdbaa79cf5d9d69dc9bb6"
+    },
+    {
+      "path": "logs/practice-local.log",
+      "bytes": 105,
+      "sha256": "ac5dde0bfb971276d6d67568dd11244319a0bfb6351cd7bb4461afc8e4a7f920"
+    },
+    {
+      "path": "logs/practice-node.log",
+      "bytes": 756,
+      "sha256": "622907cd7dad9c292434f205b69ffdd35d6d612086b6da9b95cc70114b81cd66"
+    },
+    {
+      "path": "logs/library-local.log",
+      "bytes": 107,
+      "sha256": "16f3426441d1faef131fe366ce2e31e0d435b221447f0d395b6385df1a2871a6"
+    },
+    {
+      "path": "logs/library-node.log",
+      "bytes": 1063,
+      "sha256": "70283e4ac9bff82a460ba534c7b5832f88619984c2900171d2c2dc11715b0f4e"
+    },
+    {
+      "path": "logs/experience-local.log",
+      "bytes": 95,
+      "sha256": "7f7ef498ca72d701c2e81db8061147f5399fc7805985165d52c0daed66f8eb13"
+    },
+    {
+      "path": "logs/nas-home.log",
+      "bytes": 109,
+      "sha256": "a2e682161c0267e6b631f89619c964aa5c41e78d5207fad05af7abe60dcfcbb5"
+    },
+    {
+      "path": "logs/nas-explore.log",
+      "bytes": 94,
+      "sha256": "d84235f838427e0cfe69c7ee37e6b80132c20225505076a276fcb92580f907c7"
+    },
+    {
+      "path": "local/result.json",
+      "bytes": 1745,
+      "sha256": "34c2b899c8a98177ebf4791f8cdd2ce31c62a742d4a54a4ca4b2f3d249272779"
+    },
+    {
+      "path": "local/home-360.png",
+      "bytes": 270150,
+      "sha256": "f07ca6bef0db098b1da7d164ff18749e372762470c45a80423aa4f8bd1f50160"
+    },
+    {
+      "path": "local/home-390.png",
+      "bytes": 274487,
+      "sha256": "590a824398d7f1fed122f8c8524a8ad874ece950a6470d11cca14e8afb12b766"
+    },
+    {
+      "path": "local/home-768.png",
+      "bytes": 282956,
+      "sha256": "392ffdf194a5828ba8f6bf91f630ab31208ee26f57985186d2162c09df91ddbb"
+    },
+    {
+      "path": "local/home-1280.png",
+      "bytes": 360528,
+      "sha256": "29ed7431f51f82753d43d6435539834d8cce1ce22bb49fd3c8121c0ad3a09d5a"
+    },
+    {
+      "path": "local/home-1440.png",
+      "bytes": 365503,
+      "sha256": "21a738db5809b7ee5099f225c0a5c58a7834c0579696900ca0f5a29157196763"
+    },
+    {
+      "path": "nas/result.json",
+      "bytes": 1745,
+      "sha256": "400e3c96d0218b1ff143be6ea3f8b0d2ad9cb3ad2502730a7da59a26b6fae477"
+    },
+    {
+      "path": "nas/home-360.png",
+      "bytes": 270150,
+      "sha256": "f07ca6bef0db098b1da7d164ff18749e372762470c45a80423aa4f8bd1f50160"
+    },
+    {
+      "path": "nas/home-390.png",
+      "bytes": 274487,
+      "sha256": "590a824398d7f1fed122f8c8524a8ad874ece950a6470d11cca14e8afb12b766"
+    },
+    {
+      "path": "nas/home-768.png",
+      "bytes": 282956,
+      "sha256": "392ffdf194a5828ba8f6bf91f630ab31208ee26f57985186d2162c09df91ddbb"
+    },
+    {
+      "path": "nas/home-1280.png",
+      "bytes": 360528,
+      "sha256": "29ed7431f51f82753d43d6435539834d8cce1ce22bb49fd3c8121c0ad3a09d5a"
+    },
+    {
+      "path": "nas/home-1440.png",
+      "bytes": 365503,
+      "sha256": "21a738db5809b7ee5099f225c0a5c58a7834c0579696900ca0f5a29157196763"
+    },
+    {
+      "path": "math-nas/suite.json",
+      "bytes": 2938,
+      "sha256": "531a5c115b24f7d5fdd973450ad09f8515aa9ae70e10ff354d4baab1590ab975"
+    },
+    {
+      "path": "math-nas/details/checkpoint.json",
+      "bytes": 16171,
+      "sha256": "e1220c05a3aa02a608aa86fd66a8ecbe361548508c0ae755a6ac9f79b64e0f52"
+    },
+    {
+      "path": "math-nas/details/coding.json",
+      "bytes": 38295,
+      "sha256": "0e641e07a1dc36728c8461a6b4c879be031ca37c5cdd42e50ea2af31e1d942dd"
+    },
+    {
+      "path": "math-nas/details/original-primary-http.json",
+      "bytes": 138273,
+      "sha256": "ad4bedf2ea1eb2862c8f6708f0981d4fc37824f60fb3a9d7fe9cf609899525a5"
+    },
+    {
+      "path": "math-nas/details/original-library-http.json",
+      "bytes": 45264,
+      "sha256": "3e8da4cae45b2007613deac1e952970b5fb6b3c50c1969d39adae7f7711fcc38"
+    },
+    {
+      "path": "math-nas/details/business.json",
+      "bytes": 310427,
+      "sha256": "12c9d7f3f58fef8f8b3dd69a618f51cd0e3962cd2557d09166cd6a7b5d3943a7"
+    },
+    {
+      "path": "math-nas/details/navigation.json",
+      "bytes": 7786,
+      "sha256": "dc5d2e20e3267d6d91cd964b768a55acef12cf392f59bf09d96bbaf6b41a9bfc"
+    },
+    {
+      "path": "math-nas/details/classrooms.json",
+      "bytes": 95619,
+      "sha256": "c44dcd18f0e1c13111abdd5b5b7c008e93e562cb6eef08fb85de7bb22aaf2477"
+    },
+    {
+      "path": "math-nas/details/practice.json",
+      "bytes": 61418,
+      "sha256": "3b900ce455e56f54e1342fb7542beb89a9cc2550947bea68574bbe004185da0d"
+    },
+    {
+      "path": "math-nas/details/compatibility.json",
+      "bytes": 78858,
+      "sha256": "c2799afd3f1b892c1aad2c7ffd53c5f35759a59522f2e378c6c6852cdb67ab29"
+    },
+    {
+      "path": "math-nas/details/cases.json",
+      "bytes": 12911,
+      "sha256": "d499ab292f8ebcdf14ce5722a8d852087dd2fa114c97a44bc2174efe28e5e9c3"
+    },
+    {
+      "path": "math-nas/details/training.json",
+      "bytes": 1137,
+      "sha256": "ab314d7164d62c8bd865b640a2ea04d88f84308701ff83eb728bb8250e606b25"
+    },
+    {
+      "path": "math-nas/details/models.json",
+      "bytes": 344486,
+      "sha256": "005154712a0e36c0e737c570447ded0d00c425da8413b09248b24885235c2427"
+    },
+    {
+      "path": "math-nas/details/experience.json",
+      "bytes": 51362,
+      "sha256": "b194b399ddc1377c3229d5a61503073e2b16dbc240ff16cf8618b5d5ea0877f6"
+    },
+    {
+      "path": "math-nas/details/print.json",
+      "bytes": 1353,
+      "sha256": "2568ddc36ab2b0d7f454eab1b4b2713f6ddeeccf278ee4d61a4479d67afc7a62"
+    },
+    {
+      "path": "math-nas/checkpoint.log",
+      "bytes": 59,
+      "sha256": "4c81f9be53b1c0a289b3248de56207d642cf960f932bd7f3e917d2b9631d2f16"
+    },
+    {
+      "path": "math-nas/coding.log",
+      "bytes": 88,
+      "sha256": "b8423126772630289b439be75ebd1809f4c5efbc45f1fd107ecc8fc1262fc406"
+    },
+    {
+      "path": "math-nas/original-primary-http.log",
+      "bytes": 359,
+      "sha256": "10b4ab7a21994a555698c3a6ca00e956016e40bb3747db0a2994284832fa7f26"
+    },
+    {
+      "path": "math-nas/original-library-http.log",
+      "bytes": 354,
+      "sha256": "d4b2f2675db627e49437d4ccad159bcc1e3dd5b06d43bf71304be1541a05632f"
+    },
+    {
+      "path": "math-nas/business.log",
+      "bytes": 103,
+      "sha256": "9acf03fc98c769aea7ccd90fffd9b6496967e8d64ed8854af038ab03aa5378ae"
+    },
+    {
+      "path": "math-nas/navigation.log",
+      "bytes": 61,
+      "sha256": "38aaaa308ea01caab7dae4f6557d197b487d49add13040fa9fda772cea750ed1"
+    },
+    {
+      "path": "math-nas/classrooms.log",
+      "bytes": 61,
+      "sha256": "e05b42070714cad1ce55d477bfd0fa66716de3ffab4f2a276b0bff1d75242a18"
+    },
+    {
+      "path": "math-nas/practice.log",
+      "bytes": 104,
+      "sha256": "b452cfbc9d60fefe351e1df041040f89bd36fcfbb71a12e4524741d75fb08bea"
+    },
+    {
+      "path": "math-nas/compatibility.log",
+      "bytes": 106,
+      "sha256": "4c7ecf3cce5ad5cbc75bb0af10f4e0e91a30dbd658cedfbedd5152a287e02488"
+    },
+    {
+      "path": "math-nas/cases.log",
+      "bytes": 57,
+      "sha256": "ae198037f9a82c8b1c67cd9d6661a9245c3cd4f7114f42db64208dc1d977a2b1"
+    },
+    {
+      "path": "math-nas/training.log",
+      "bytes": 71,
+      "sha256": "a56d00a33435c99e5841b5da988edec8087fab69517106508ffba41a0602f85d"
+    },
+    {
+      "path": "math-nas/models.log",
+      "bytes": 59,
+      "sha256": "e511523da8cd756e008634297236840d027e5220111236aee356f153549006f1"
+    },
+    {
+      "path": "math-nas/experience.log",
+      "bytes": 94,
+      "sha256": "e60b3af068542fb88ea32e752aa240d6139ae319ccd7ea91201072076f566687"
+    },
+    {
+      "path": "math-nas/print.log",
+      "bytes": 85,
+      "sha256": "a67a94609e67b0812ecd6c5abdf0834073db0a2787d6100ab382901ba7ec7ce5"
+    },
+    {
+      "path": "explore-nas/report.json",
+      "bytes": 2486,
+      "sha256": "e9f191d4ad9ef593b3cbe2a6d699b8f54127c921e73d5d8e842ff83c96766a45"
+    },
+    {
+      "path": "explore-nas/home-360.png",
+      "bytes": 188787,
+      "sha256": "707808b21f4f2b2f1d632a486a4b5cce44a9490dc8cfe2ac90f44cedce08c702"
+    },
+    {
+      "path": "explore-nas/home-390.png",
+      "bytes": 190124,
+      "sha256": "b943a0cf311319bb1a4e07633e296815b0f0c05e8e6ade5ca5738758cfc54890"
+    },
+    {
+      "path": "explore-nas/home-768.png",
+      "bytes": 214992,
+      "sha256": "e2b4d5e051f397018d42e85eccb445e90e751ff54a0c993432fb6bea3a40c88e"
+    },
+    {
+      "path": "explore-nas/home-1280.png",
+      "bytes": 270646,
+      "sha256": "1a72d1b13c7e657f43e3ee9559dbdb6745748071d9d96cbb8cf1f8397d4dad79"
+    },
+    {
+      "path": "explore-nas/home-1440.png",
+      "bytes": 276509,
+      "sha256": "24aa909d58223a397c71fd505d3dc758b1fb21e9749df27f7718eb677cedfb7a"
+    },
+    {
+      "path": "explore-nas/questions-360.png",
+      "bytes": 148928,
+      "sha256": "4877a26f62c764397ebbfd029be32da2415754859cdde2d2b15d8e39ae10ba62"
+    },
+    {
+      "path": "explore-nas/questions-390.png",
+      "bytes": 149714,
+      "sha256": "3ae52fafd2d4b5d053c88bb110184af95fa7d80fcbe33820d68b0fb9d389be53"
+    },
+    {
+      "path": "explore-nas/questions-768.png",
+      "bytes": 162025,
+      "sha256": "ab41568e63cb09fd20362c2fbd315b48eedb7d2f13b9356aa12249deb3b62ace"
+    },
+    {
+      "path": "explore-nas/questions-1280.png",
+      "bytes": 211102,
+      "sha256": "440c36cf98a35d98a8f5a2257d0f5665acc7d1e0ea77f9d0dfa7c79b1ca53c11"
+    },
+    {
+      "path": "explore-nas/questions-1440.png",
+      "bytes": 215325,
+      "sha256": "855c713c82b5780e727a403e1d917047e9eff5222ffd6134ca221c43868afbec"
+    },
+    {
+      "path": "explore-nas/projects-360.png",
+      "bytes": 103389,
+      "sha256": "cdd8e7547b9154103b034febf0c0f7257bde9f2ba21b1281fb73e842503f83ae"
+    },
+    {
+      "path": "explore-nas/projects-390.png",
+      "bytes": 103904,
+      "sha256": "f0f2d7909aef129bebc72483e7691fc6fc3cf26b262e115c1aec5a64092c9886"
+    },
+    {
+      "path": "explore-nas/projects-768.png",
+      "bytes": 112979,
+      "sha256": "be9bae4bb1935f9da1ef70c009101d1c85a9b7bfd2e3166ad7ae4ee478b7f6a5"
+    },
+    {
+      "path": "explore-nas/projects-1280.png",
+      "bytes": 159933,
+      "sha256": "574ccbe26f9d2255149a5fe1a6a919af42d83fc7c322cd6dc20acb41c44ab7e3"
+    },
+    {
+      "path": "explore-nas/projects-1440.png",
+      "bytes": 162780,
+      "sha256": "48194d261fb50b518c2a61eb5be1c7c229d4548c490e3e59c148579ce0468afc"
+    },
+    {
+      "path": "explore-nas/creations-360.png",
+      "bytes": 79223,
+      "sha256": "3af2865861d2affc215a0b565c562f1196f063098a76060b732765982bc718e6"
+    },
+    {
+      "path": "explore-nas/creations-390.png",
+      "bytes": 79585,
+      "sha256": "9fb8f650a138faf56019e58250fb61e3a98bcff7167eed0cfc4e832e63479dd5"
+    },
+    {
+      "path": "explore-nas/creations-768.png",
+      "bytes": 84986,
+      "sha256": "1932182e9c074873896957d966565d595ff150bb65d4684c6a6dcc5e8a0d3e8c"
+    },
+    {
+      "path": "explore-nas/creations-1280.png",
+      "bytes": 131017,
+      "sha256": "67e3b24903916483afacd08d8a6189ae51f605ca569674339273baae75c511a4"
+    },
+    {
+      "path": "explore-nas/creations-1440.png",
+      "bytes": 133323,
+      "sha256": "d61bc0a8d2b7f91bd02be8a9a3d491db611cc43232e2c68629a38da9d6f034f6"
+    },
+    {
+      "path": "explore-nas/archive-360.png",
+      "bytes": 92959,
+      "sha256": "40b049bcc0fb255e9a60c7ea69f09bbf2dcffc4dd46a40695bfe18b690a2193c"
+    },
+    {
+      "path": "explore-nas/archive-390.png",
+      "bytes": 93334,
+      "sha256": "696be7861bf468d5699aedd471b97eeadd2b15fb80d367c705c15f0b28a2367b"
+    },
+    {
+      "path": "explore-nas/archive-768.png",
+      "bytes": 99739,
+      "sha256": "d718d75dc8fc263902d627a7dabab36259674b32fe81fdda0f3cf4ad4a994940"
+    },
+    {
+      "path": "explore-nas/archive-1280.png",
+      "bytes": 146211,
+      "sha256": "2d52f3bdd3b7de536e523830a4b566c01d907f51e380ebd7bdc6b42bc9efb62f"
+    },
+    {
+      "path": "explore-nas/archive-1440.png",
+      "bytes": 148806,
+      "sha256": "47396122cff7a86ebd69eae9ac91d78b1dd18c4326bc6513a02fec0ca022b97d"
+    },
+    {
+      "path": "explore-nas/history-360.png",
+      "bytes": 247226,
+      "sha256": "4539def4a71c8131851ecfd379c27295075dbe13211858f9a7321a12f6ea647a"
+    },
+    {
+      "path": "explore-nas/history-390.png",
+      "bytes": 247850,
+      "sha256": "9300cb242044e09ff45a661bca81cb88af85a52a075b2471ff9220eb88ad7ff6"
+    },
+    {
+      "path": "explore-nas/history-768.png",
+      "bytes": 255450,
+      "sha256": "a226a3a2287bffbec97ac743d3489bab581807787161ba744e63c28fde07eaf8"
+    },
+    {
+      "path": "explore-nas/history-1280.png",
+      "bytes": 314899,
+      "sha256": "4b0220b4fed41dfa7f8de12e43098b16ce985cd9ba107b6e8040ce02cab9a6af"
+    },
+    {
+      "path": "explore-nas/history-1440.png",
+      "bytes": 321147,
+      "sha256": "d088de8b0035bc65c43f504bddf76ec747d8de21b67a2469229557fa216deb8a"
+    },
+    {
+      "path": "explore-nas/workbench-360.png",
+      "bytes": 168896,
+      "sha256": "31d82e49da4d42c38604a0092d4890fc9cfa97a3df114568a45edd505ce3fb0d"
+    },
+    {
+      "path": "explore-nas/workbench-390.png",
+      "bytes": 168773,
+      "sha256": "81c1dbf1a05545976b76aec7bc4dd90e9b3e28b4c13106626b6f3f423a856b3a"
+    },
+    {
+      "path": "explore-nas/workbench-768.png",
+      "bytes": 172205,
+      "sha256": "fa0a70fa068cc1e5230b0e9a96a6ce70ed71fc001a98bf5167ad8eaa704988f9"
+    },
+    {
+      "path": "explore-nas/workbench-1280.png",
+      "bytes": 228402,
+      "sha256": "619ed05c85aece9e04afd7e8c84cb2a44e5f490a0f2dab6f7a0cc6feecb93eae"
+    },
+    {
+      "path": "explore-nas/workbench-1440.png",
+      "bytes": 232462,
+      "sha256": "6aaac2cc94ff5edd70acb304243c67dd33e0163da8793efa1850e41c6cc05971"
+    }
+  ]
+}
