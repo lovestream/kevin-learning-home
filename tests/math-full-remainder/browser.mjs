@@ -161,6 +161,11 @@ try {
       detective: 14,
     });
     await page.goto(origin + "/");
+    await page.locator("[data-home-page]").waitFor();
+    assert.equal(await page.locator("[data-term-link]").count(), 3);
+    await page.screenshot({path:dir+"/family-home-"+width+".png",fullPage:true});
+    await page.getByRole("link",{name:"进入数学书房",exact:true}).click();
+    assert.equal(new URL(page.url()).pathname,"/subjects/math");
     await page.locator("[data-map-home]").waitFor();
     assert.equal(await page.locator("[data-term-link]").count(), 3);
     assert.equal(
