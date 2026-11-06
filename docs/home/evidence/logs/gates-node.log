@@ -1,0 +1,46 @@
+✔ R1-02 main push and development push/PR share the unconditional complete verification job (1.19775ms)
+✔ 30 future spaces remain discoverable without increasing the fixed navigation (1.291291ms)
+✔ unavailable English/growth spaces have no actionable route or fake installed curriculum (0.513792ms)
+✔ 70 unique draft lessons retain 64 interactive / 6 static, metadata and supported model families (0.684125ms)
+✔ all field projections match recorded source value hashes; no answer / private field enters public lessons (17.956917ms)
+✔ unknown schemas, nested answer fields, renderer drift and duplicate IDs fail closed (3.10225ms)
+✔ changed teaching content is rejected by catalog hash, not silently displayed (19.281ms)
+✔ preview requires explicit enable; 70 real anonymous GETs have no cookies or write API (140.330125ms)
+✔ missing or changed build assets prevent startup; no partial healthy service (59.309209ms)
+✔ anonymous preview does not turn formal math / learner APIs anonymous or bypass parent grant (714.4875ms)
+✔ anonymous Mac delivery reuses one fixed folder and preserves the existing NAS credential guide (6.0375ms)
+✔ textbook map assigns 39 upper + 24 lower + 7 bridges exactly once in frozen order (1.0315ms)
+✔ every frozen curriculum metadata field matches a recorded source value hash, no source lessons exported (3.024291ms)
+✔ wrong units, duplicate or missing lessons, answer fields, and sequence drift fail closed (3.226041ms)
+✔ review lessons retain R label; neighbors never cross upper/lower/bridge boundaries (1.374625ms)
+✔ knowledge search matches unit, frozen topic, common keyword and context paths (1.728916ms)
+✔ all 11 core models × 6 authored contexts initialize and preserve finite parameter domains (3.136083ms)
+✔ 35 textbook models initialize; angle invariants, unit changes and unequal allocations remain mathematical (1.458083ms)
+✔ fractions regroup without changing length; areas and common edges are conserved correctly (0.405125ms)
+✔ calendar leap years and clock fields use the copied time model without persistence (0.13625ms)
+✔ continuous folding preserves six faces, edge lengths, and the final cube topology (1.448125ms)
+✔ observer projection, hidden cubes, weighing and equal waterline substitution match source goldens (0.60375ms)
+✔ ruler, intervals, overlapping boards and chain joints retain physical units (0.316625ms)
+✔ operation array cuts, inverse flow and substitution preserve original mathematical semantics (0.502792ms)
+✔ 849 versioned authored tasks, five groups/kinds, 70 lessons, source hashes and strict projection (46.698875ms)
+✔ all 849 authored golden answers match original pure grader; 329 explanations stay human review (31.930958ms)
+✔ independent arithmetic fixtures: fractions, Unicode, complete expressions, claim/evidence and units (0.38675ms)
+✔ submission schema rejects missing self-checks, stale/other lesson, unknown fields and oversized answers (0.54ms)
+✔ real HTTP reaches all 849 questions, final-only stateless feedback; private/formal APIs inaccessible (401.118208ms)
+✔ private bank tampering prevents startup (132.155084ms)
+✔ exact approved capabilities and frozen source mapping; no deferred card, private case or blueprint disguised as course (5.967ms)
+✔ all 432 legacy questions have source-compatible deterministic goldens; 17 thought explanations remain human review (10.315291ms)
+✔ 14 original anonymous cases: correct/wrong, reason shuffle, ordering, rational numeric comparison and no oral auto-correct (2.425ms)
+✔ library projection never sends task keys, case verdict, expected reason, solutions or private source notes initially (1.034208ms)
+✔ real library HTTP reaches all 71 entries/449 tasks/14 cases; same schema and boundary for stateless grades (289.062792ms)
+✔ library bank tampering prevents healthy startup (138.382709ms)
+✔ multi-digit legacy place value conserves 306040 and higher units instead of truncating at hundreds (0.343416ms)
+✔ frozen thought models conserve equal removals, view constraints and Venn counts (0.667417ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4382.375084

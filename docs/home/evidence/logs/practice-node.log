@@ -1,0 +1,14 @@
+✔ 849 versioned authored tasks, five groups/kinds, 70 lessons, source hashes and strict projection (40.103125ms)
+✔ all 849 authored golden answers match original pure grader; 329 explanations stay human review (29.512042ms)
+✔ independent arithmetic fixtures: fractions, Unicode, complete expressions, claim/evidence and units (0.38575ms)
+✔ submission schema rejects missing self-checks, stale/other lesson, unknown fields and oversized answers (0.528ms)
+✔ real HTTP reaches all 849 questions, final-only stateless feedback; private/formal APIs inaccessible (390.971041ms)
+✔ private bank tampering prevents startup (130.977375ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 975.457708

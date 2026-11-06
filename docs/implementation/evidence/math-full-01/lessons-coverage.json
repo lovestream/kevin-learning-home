@@ -7,12 +7,12 @@
   "static": 6,
   "browserScenarios": 210,
   "execution": {
-    "head": "34cd25fc4a1777d2c6df2894a9808253f9f8aea6",
-    "dirty": true,
+    "head": "f83ea8e588d99681b8f1ccba488788d1f72424cb",
+    "dirty": false,
     "files": {
       "tests/math-full-01/browser.mjs": "c68dd513f1e011517d1fa5e722509b28d1c08b9513431b9b7d775e35c18bdc8c",
       "tests/math-full-01/exercise.mjs": "ff780924c3ff7cec35d46e6b0d91059ebaf1a158336e69c27f271f6e0239ed5e",
-      "apps/preview/main.tsx": "a51b49a901867d139f9d64e1499bf26a4cdb1fb718e585a366bcff1dc49976da",
+      "apps/preview/main.tsx": "5028b3a9356cad5e4330387458b1077cfed85bdaa3365feedd4e299f9bf64a5f",
       "apps/preview/practice/Practice.tsx": "ec6caa7c59f142543c7eeda344a46e4099c89ffb89f253206d6aee2cd064dcad",
       "apps/preview/practice/service.ts": "f88b88f2e341f3fae357ddbd7363543d756ef30e69311beb9bdc8d74d8571377",
       "apps/preview/practice/contract.ts": "db00544d3cbccfe99128713de8237630491fa6be25d7ce419505fbbce3d23786",

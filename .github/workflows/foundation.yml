@@ -15,6 +15,7 @@ on:
         codex/math-full-02-practice,
         codex/math-full-03-capabilities,
         codex/explore-01-preview,
+        codex/home-navigation,
       ]
   pull_request:
     branches:
@@ -23,6 +24,7 @@ on:
         codex/math-full-01-70-lessons,
         codex/math-full-02-practice,
         codex/math-full-03-capabilities,
+        codex/explore-01-preview,
       ]
 permissions:
   contents: read
@@ -104,6 +106,10 @@ jobs:
         run: |
           node --test tests/explore/*.test.ts
           node tests/explore/browser.mjs
+      - name: Home directory and scalable navigation (real backend and browser)
+        run: |
+          node --test tests/home/*.test.ts
+          node tests/home/browser.mjs
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1

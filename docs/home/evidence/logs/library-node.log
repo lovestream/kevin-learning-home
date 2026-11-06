@@ -1,0 +1,16 @@
+✔ exact approved capabilities and frozen source mapping; no deferred card, private case or blueprint disguised as course (5.859542ms)
+✔ all 432 legacy questions have source-compatible deterministic goldens; 17 thought explanations remain human review (9.934959ms)
+✔ 14 original anonymous cases: correct/wrong, reason shuffle, ordering, rational numeric comparison and no oral auto-correct (2.528333ms)
+✔ library projection never sends task keys, case verdict, expected reason, solutions or private source notes initially (1.188917ms)
+✔ real library HTTP reaches all 71 entries/449 tasks/14 cases; same schema and boundary for stateless grades (276.685542ms)
+✔ library bank tampering prevents healthy startup (139.394833ms)
+✔ multi-digit legacy place value conserves 306040 and higher units instead of truncating at hundreds (0.374542ms)
+✔ frozen thought models conserve equal removals, view constraints and Venn counts (0.687291ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 866.289584

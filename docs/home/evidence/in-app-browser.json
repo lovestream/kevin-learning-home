@@ -1,0 +1,16 @@
+{
+  "status": "PASS_VISIBLE_HOME",
+  "browser": "Codex In-app Browser on Mac",
+  "origin": "http://192.168.2.100:38444/",
+  "visibleHeading": "今天，想发现 一点什么？",
+  "visibleBookLinks": 3,
+  "visibleLearningSpaces": [
+    "数学书房",
+    "探索与创造"
+  ],
+  "topSubjectTabs": false,
+  "securityWarningBypassed": false,
+  "loginRequired": false,
+  "physicalPhoneOrIPad": false,
+  "method": "CUA existing tab 5 navigation, accessibility tree and actual screenshot reviewed"
+}

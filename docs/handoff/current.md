@@ -1,12 +1,14 @@
-# 当前交接：探索与创造第一批
+# 当前交接：家园首页已交付至NAS
 
-用户授权按#25路线图执行，最新覆盖要求：孩子无需注册/登录/密码，家长查看学习情况才登录，密码用户亲设；不另设儿童或二次PIN。现有生产权限/HTTPS/CSRF回归不削弱，正式个人数据与家庭设备授权由#24实现。
+2026-11-06，`codex/home-navigation`，Draft PR36基于PR35，未合并任何PR。
 
-- 当前分支`codex/explore-01-preview`，base为PR22 `2207fcb`，原18→21→22仍Draft；本批也建独立Draft PR，不擅自合并。
-- #26领域合同CODE_READY，#27公开示例内存流程NAS_PREVIEW：五视口真实探索操作、14组数学回归、回退通过。#28/#29/#32/#34正式闭环未完成；#30规则/#31课堂/#33候选只是子集。
-- 原项目未修改，真实资料未读写；此前数学只读保全已完成，来源已确认，不再要求用户找路径。不得把合成仓库闸门删掉当正式存储。
-- 页面/契约/新测试见`apps/preview/explore`、`packages/explore`、`tests/explore`，具体证据与状态见[本批报告](../explore/IMPLEMENTATION-REPORT.md)。本次父母密码尚未设置，无默认真实凭据。
-- 探索入口 http://192.168.2.100:38444/explore，数学原入口不变；运行源码`b7a2d23e25027b59e9a64cadfd41f5e9931db9b1`，镜像`sha256:d107cd3023dec01147b006bbc39c2fc5a045b46da77340a5463dffd12f7707b8`，仅复用既有38444公开体验受控release；回退及11服务不变证据见本批报告。源码双完整CI通过，最终归档HEAD双CI见Draft PR35正文。手机/iPad/Safari实体设备未测保持NEEDS_USER_ACTION。
+- 实际访问 **http://192.168.2.100:38444/**；数学 `/subjects/math`，探索 `/explore`。运行源码 `4a75d88c139cba5a216d553dc944c20d3a02a67d`，镜像 `sha256:3d1e47269a19750ee045d4206ce0bf5fcf6295bdcf40022632d393093f98d14f`。原URL保留，没有另开Mac演示入口或新项目副本。
+- 真正首页、真实搜索、教材书架、固定导航与统一抽屉已交付，新增课程不增加顶部标签。英语/成长清楚标记准备中，无虚构进度。
+- 源码两套完整CI成功；NAS首页/探索各五视口、14组数学回归、回退、23资源hash和11受保护容器不变通过。最终归档HEAD双CI见[PR36正文](https://github.com/lovestream/kevin-learning-home/pull/36)。[报告](../home/IMPLEMENTATION-REPORT.md) · [证据](../home/evidence/manifest.json)。
+- 150来源文件/5001字段投影、210课堂、849题/84完整作答、255旧功能流程及完整综合体验均重测；真实重测修复旧证据拦截，没有删除安全断言。
+- 匿名38444无SQLite/AuthService、零挂载、非root只读根、1逻辑CPU/256MiB；操作刷新清空。旧站和真实记录未修改，无证书/DSM/Tailscale/权限调整。手机/iPad实体与用户视觉验收仍NEEDS_USER_ACTION。
+- 孩子无需账号密码；唯一家长密码由用户亲设，无额外PIN。私人保存实现仅保存在本地 `codex/explore-02-records@af7c92f`，未推送/部署，不冒称其完成。本轮没有迁入真实数据。
+- 总任务#25仍有保存、媒体、家长报告闭环未完成。保持堆叠PR为Draft，交集中独立审查，不擅自合并。无新checkout/worktree。
 
 ## 前一轮交接（历史背景）
 

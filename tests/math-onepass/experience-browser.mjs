@@ -296,6 +296,10 @@ try {
       p = await c.newPage();
     p.on("pageerror", (e) => errors.push(e.message));
     await p.goto(origin + "/");
+    await p.locator("[data-home-page]").waitFor();
+    await shot(p, "family-home-" + width);
+    await p.getByRole("link", { name: "进入数学书房", exact: true }).click();
+    assert.equal(new URL(p.url()).pathname, "/subjects/math");
     await p.locator("[data-map-home]").waitFor();
     await shot(p, "home-" + width);
     if (width <= 768) {

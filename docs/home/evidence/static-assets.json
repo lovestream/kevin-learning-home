@@ -1,0 +1,144 @@
+{
+  "status": "PASS_ALL_PUBLIC_ASSETS",
+  "sourceSha": "4a75d88c139cba5a216d553dc944c20d3a02a67d",
+  "files": [
+    {
+      "path": "/THIRD-PARTY-NOTICES.txt",
+      "sha256": "ccf7b2dd8f5e7175c7653c6fad3eb7459f27e97f3e04b190daa5d9cd050e050f",
+      "bytes": 4604,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/Article-BNHOJWRc.js",
+      "sha256": "08e310301390fb5855efaddfb239adffd079bdad05463cf4e1885f08057940bf",
+      "bytes": 7790,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/CoreWorkbench-BhX3VX24.css",
+      "sha256": "01f26493bc8f2163ab74db850d02951f9fdaf3b851bdf3f13261be0485978876",
+      "bytes": 3639,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/CoreWorkbench-T5Qbt2b_.js",
+      "sha256": "efccf3a3dcbb88c344ab5a2903da32329e78ebbf26136411f0380d7d5cb5c255",
+      "bytes": 18832,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/DetectiveFigure-CTcy7Blo.js",
+      "sha256": "ebc7b58ade1b3c80e4cc000099ef4e10823c6d45cf5d00b3899b592519ddaf78",
+      "bytes": 8833,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/DetectiveTraining-Bt4xE2gD.js",
+      "sha256": "7090b1ceca5e8db71374d17631488844f64547d3def10f1c5563fc2331684609",
+      "bytes": 18241,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/DetectiveTraining-C1T3lICt.css",
+      "sha256": "9200fdd950efa3af14ba8aae02aa47edc5f0cb734bf521bd41ac37928aa0ec6b",
+      "bytes": 10457,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/Explore-BEXdrpc5.js",
+      "sha256": "22e7156f23db404e92296a503f5d7e26b55cdec4f59330cf446f1d73ea775cf5",
+      "bytes": 19281,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/Explore-DMdACCrM.css",
+      "sha256": "07bfd898a362be62dbdbb8d3b8a405a0c852884be5b6df25541628f76506b0ff",
+      "bytes": 8453,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/Home-D31kNkMN.js",
+      "sha256": "a3599740e2853db62cdd69bbe198bfc54f4df083cd0de44cd4e6367e75fb857b",
+      "bytes": 11979,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/Home-ajugpxla.css",
+      "sha256": "930f9b1ff43fccf6a0f76702d88410b726db9ca48af3ee645badb69b889ef602",
+      "bytes": 14108,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/Library-B8pH6UXf.js",
+      "sha256": "f8a181b599b356c8d8e096d7cfba5edcf0a3a5963461b7bf5872d06e966762db",
+      "bytes": 86964,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/Library-WY_g6DWh.css",
+      "sha256": "f239e085fbb0de313ebb3dc26d93172b2566607df7a531b9f84e13101e5b72b7",
+      "bytes": 12744,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/index-CmdVd067.js",
+      "sha256": "2df65c0f53677d8c40216cedc223fb0478db8508afc3dd1fe839386303b9007c",
+      "bytes": 566421,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/index-fv_HrgTn.css",
+      "sha256": "0c5483e6bd0ab7d7d9f749f7be6b18e56801b62f1630df1a796c2f2bad4d1a65",
+      "bytes": 178462,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/jsx-runtime-Am8b9ysO.js",
+      "sha256": "9bd1e242e0169cc4dc70b19b33bcdae67118a8d2e564f794723fd15f0d4cab40",
+      "bytes": 8276,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/schemas-BogG19SQ.js",
+      "sha256": "0a7c515bde3e3041dc465d003583e3bf693df41a0de760c0cad7ebe7b3a4e62c",
+      "bytes": 95970,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/assets/usePrint-CIWg-6mg.js",
+      "sha256": "33b5c45f3c4cd9e91b215ed3ad8956e380055fa49882e35b2c285f5561f7b7b4",
+      "bytes": 480,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/index.html",
+      "sha256": "2a22e74dda32fa906d41098d18fa85bd5af60de50c59313ef59eb00b981dc745",
+      "bytes": 584,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/math-paper-folding/template-cube-1.svg",
+      "sha256": "e66f2602fa4ce4b19c66cfe696b516a787be3a345d86f128a30bbb153fbb598d",
+      "bytes": 4095,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/math-paper-folding/template-cube-2.svg",
+      "sha256": "a044ac55cef35eb8c879178cbaa501632db18f226ad174efc9cf08518c58f364",
+      "bytes": 4095,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/math-paper-folding/template-cube-3.svg",
+      "sha256": "8c19c8ee451fca20c7c762367f93b79ff216ad1cccfc7991e9918967a97e09a7",
+      "bytes": 4095,
+      "status": "PASS_HTTP_HASH"
+    },
+    {
+      "path": "/math-paper-folding/template-rectangular-box.svg",
+      "sha256": "f470fcc5f42c5cee6af80b7ba4a2dcc5cfc6936bda61f81073acb2ea04c98585",
+      "bytes": 4036,
+      "status": "PASS_HTTP_HASH"
+    }
+  ]
+}
