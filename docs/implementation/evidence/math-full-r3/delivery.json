@@ -1,0 +1,111 @@
+{
+  "status": "PASS_R3_NAS_TEXTBOOK_NAVIGATION_DELIVERED",
+  "recordedAt": "2026-10-26T05:09:07.038936+00:00",
+  "origin": "http://192.168.2.100:38444",
+  "deployedSourceCommit": "020ceb9a6792a18e8d020914ec4250b631ef13d0",
+  "imageId": "sha256:942c3001a5f703a38c8d90cd7ca2a21b0360f6b05f7c262d3c11c26641d31690",
+  "appId": "159ef39bdc11e872045dfb42e286eb7c7c59844c1cabf52939c16f67fe51642a",
+  "directory": "/volume2/homes/admin/klh-math-preview-20261025-c6ae9e7f",
+  "runtime": {
+    "buildSha": "020ceb9a6792a18e8d020914ec4250b631ef13d0",
+    "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+    "contentOnly": true,
+    "database": false,
+    "lessons": 70
+  },
+  "topology": {
+    "textbookUnits": 17,
+    "textbookLessons": 63,
+    "upperUnits": 9,
+    "upperLessons": 39,
+    "lowerUnits": 8,
+    "lowerLessons": 24,
+    "bridgeLessons": 7,
+    "totalUniqueLessons": 70
+  },
+  "limits": {
+    "user": "1024:100",
+    "readonlyRoot": true,
+    "mountCount": 0,
+    "memoryBytes": 268435456,
+    "cpuset": "0",
+    "capDrop": [
+      "ALL"
+    ],
+    "securityOpt": [
+      "no-new-privileges:true"
+    ],
+    "ports": {
+      "4179/tcp": [
+        {
+          "HostIp": "192.168.2.100",
+          "HostPort": "38444"
+        }
+      ]
+    },
+    "restartPolicy": {
+      "Name": "unless-stopped",
+      "MaximumRetryCount": 0
+    }
+  },
+  "protectedContainers": {
+    "count": 11,
+    "beforeSha256": "be40f79c8587326f2e693f32ad96866939008ab97685f249fe00de0dd20e48ee",
+    "afterSha256": "be40f79c8587326f2e693f32ad96866939008ab97685f249fe00de0dd20e48ee",
+    "unchanged": true
+  },
+  "oldSyntheticDataAndTLS": {
+    "beforeSha256": "d133d507ceade37422f1af20448ed292919a14337b4c34502f279f2fb44a220c",
+    "afterSha256": "d133d507ceade37422f1af20448ed292919a14337b4c34502f279f2fb44a220c",
+    "unchanged": true
+  },
+  "rollback": {
+    "status": "PASS_R3_TO_R2_TO_R3_HTTP",
+    "r2IdRetained": "ed08a3afdf924f1c349f4c0bcdd13e38f9b1bc55f87f6057a3ba4a7384ca79fc",
+    "r2ImageRetained": "sha256:03fc82b25c501c8e8f71ef92ea66c3e5d14e1f0cc2fee7be8b0c1cb90b60d521",
+    "r2FinallyRunning": false,
+    "r3FinallyRunning": true,
+    "legacyTLSIdRetained": "a1629cb9635ed627aa927b969e12cf37ec0a827b9c5469f9ad5d35c1c3173f85"
+  },
+  "browser": {
+    "runnerHead": "020ceb9a6792a18e8d020914ec4250b631ef13d0",
+    "runnerDirty": false,
+    "navigationViewports": 3,
+    "navigationElapsedMs": 13290,
+    "representativeLessons": 30,
+    "representativeElapsedMs": 18147,
+    "classroomScenarios": 210,
+    "classroomElapsedMs": 125314,
+    "physicalIPhoneIPad": "NEEDS_USER_ACTION"
+  },
+  "nativeChrome": {
+    "ordinaryBrowser": true,
+    "reloadedOldR2TabIntoR3": true,
+    "homeThreeTerms": true,
+    "flow": "upper -> G3-U02 -> topic for G3-U02-B02 -> six-step lesson -> return G3-U02",
+    "afterRollbackRefreshRetainsUnit": true,
+    "authenticationRequired": false,
+    "certificateWarningBypassed": false
+  },
+  "macDelivery": {
+    "existingFolder": "/Users/yako/Documents/Kevin-Learning-Home-Trial",
+    "shortcut": "打开NAS学习家园.webloc",
+    "guide": "NAS学习家园使用说明.md",
+    "existingFilesVerifiedPreserved": true
+  },
+  "ci": {
+    "sourceHead": "020ceb9a6792a18e8d020914ec4250b631ef13d0",
+    "push": {
+      "run": 40253781809,
+      "conclusion": "success"
+    },
+    "pull_request": {
+      "run": 40253785707,
+      "conclusion": "success"
+    }
+  },
+  "realDataImportedOrModified": false,
+  "oldProjectsModified": false,
+  "systemPermissionsDSMOrTailscaleChanged": false,
+  "practice849Integrated": false
+}

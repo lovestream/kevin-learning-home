@@ -1,0 +1,101 @@
+{
+  "lessonId": "numbers.addition.meaning",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "两篮苹果，合起来有几个？",
+  "shortTitle": "为什么需要加法",
+  "question": "Kevin 带3个，朋友带2个，一共可以分享几个？",
+  "subtitle": "从两部分合成一个总数，再发现“挪一挪，总数不变”。",
+  "grade": [
+    1,
+    2,
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "N03",
+  "recommendedPrerequisites": [
+    "会不漏不重地数物体"
+  ],
+  "relatedLessonIds": [
+    "numbers.quantity.intro",
+    "numbers.subtraction.meaning"
+  ],
+  "estimatedActiveMinutes": 18,
+  "widget": "addition",
+  "prerequisiteNote": "可以从这里开始；已经熟悉时也可以直接做练习。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "Kevin的篮子有3个苹果，朋友的篮子有2个，合起来有多少？从右篮挪1个到左篮，与从厨房新拿1个放进左篮，总数的变化一样吗？",
+    "predictQuestion": "从一篮挪1个到另一篮，总数增加了吗？",
+    "predictionOptions": [
+      "没有，只改变位置",
+      "增加1个",
+      "减少1个"
+    ],
+    "discovery": [
+      "加法记录两个部分合起来的总量。篮子之间挪动不添苹果，从外面新添才增加总数。"
+    ],
+    "symbols": [
+      "3＋2＝5",
+      "挪动不改总数；新添才增加总数"
+    ],
+    "mission": "区分合并、挪动与从外面新添一个。",
+    "retell": "同样往左篮放1个，为什么挪过来和新拿来对总数的影响不同？",
+    "observedEvidence": "合并两篮苹果，分别比较篮间挪动与从外面新添。",
+    "whyQuestion": "同样往左篮放1个，为什么挪过来和新拿来对总数的影响不同？",
+    "counterexamplePrompt": "只看左篮变多，就能断定两篮总数也变多吗？",
+    "predictionFocus": "从一篮挪1个到另一篮，总数增加了吗？"
+  },
+  "contextDiagram": "appleAddition",
+  "workedExamples": [
+    {
+      "title": "两盒彩笔合在一起",
+      "steps": [
+        {
+          "math": "7＋4＝11",
+          "why": "一盒7支，另一盒4支。把两部分合起来，共11支。"
+        }
+      ]
+    },
+    {
+      "title": "车上又上来乘客",
+      "steps": [
+        {
+          "math": "6＋3＝9",
+          "why": "车上原有6人，在这一站只上来3人、没有人下车。现在共有9人。"
+        }
+      ]
+    },
+    {
+      "title": "一共8个苹果，左篮3个",
+      "steps": [
+        {
+          "math": "3＋5＝8",
+          "why": "从3接着数4、5、6、7、8，还要5个，右篮就是5个。知道总数，也可以反过来找缺少的那一部分。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "addition.combine",
+      "action": "把合并和增加故事写成加法",
+      "scope": "20以内"
+    },
+    {
+      "id": "addition.parts",
+      "action": "根据总数和一部分寻找另一部分",
+      "scope": "实物和部分整体图"
+    },
+    {
+      "id": "addition.conserve",
+      "action": "解释一边增1另一边减1时总数不变",
+      "scope": "只在两组之间移动"
+    }
+  ],
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": []
+}

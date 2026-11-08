@@ -1,0 +1,158 @@
+{
+  "lessonId": "G3-L04-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "长乘宽为什么得到面积",
+  "shortTitle": "长乘宽为什么得到面积",
+  "question": "长6米宽4米的地面铺1平方米方砖，需要几块？",
+  "subtitle": "每行6块、共4行，乘法缩短的是重复计数；长宽必须使用相同长度单位。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-L04",
+  "recommendedPrerequisites": [
+    "G3-L04-B01；乘除。"
+  ],
+  "relatedLessonIds": [
+    "G3-L04-B01",
+    "G3-L04-B03"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "长6米宽4米的地面铺1平方米方砖，需要几块？",
+    "predictQuestion": "每行6块、4行，一共要数几份6？",
+    "predictionOptions": [
+      "6＋4",
+      "只数最外边的砖",
+      "4份6"
+    ],
+    "discovery": [
+      "每行6块、共4行，乘法缩短的是重复计数；长宽必须使用相同长度单位。"
+    ],
+    "symbols": [
+      "6×4＝24（平方米）",
+      "长×宽＝长方形面积（长度单位相同）"
+    ],
+    "mission": "把逐行计数写成乘法，解释两个数各指什么。",
+    "retell": "为什么6×4既能求总块数，又能得到覆盖面积的数值？",
+    "observedEvidence": "一行6块，共4行；每块覆盖1平方米。",
+    "whyQuestion": "为什么6×4既能求总块数，又能得到覆盖面积的数值？",
+    "counterexamplePrompt": "若每块不是1平方米，24块还能直接说成24平方米吗？",
+    "predictionFocus": "每行6块、4行，一共要数几份6？"
+  },
+  "storyVisual": {
+    "type": "area-grid",
+    "title": "长6米、宽4米的地面",
+    "caption": "每个方格表示1平方米的方砖，地面要铺满；砖的总数留给你求。",
+    "values": [
+      4,
+      6
+    ],
+    "labels": [
+      "每格1平方米"
+    ]
+  },
+  "predictionVisual": {
+    "type": "area-grid",
+    "title": "长6米、宽4米的地面",
+    "caption": "每个方格表示1平方米的方砖，地面要铺满；砖的总数留给你求。",
+    "values": [
+      4,
+      6
+    ],
+    "labels": [
+      "每格1平方米"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "6米×4米地面面积多少？",
+      "steps": [
+        {
+          "math": "每行6个1平方米方格。",
+          "why": "每行6个1平方米方格。"
+        },
+        {
+          "math": "6×4=24",
+          "why": "4行共6×4=24。",
+          "expressionBefore": "6×4",
+          "operation": "=",
+          "expressionAfter": "24"
+        },
+        {
+          "math": "结论：24平方米。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L04-B02-OBJ1",
+      "action": "把长方形面积公式连接到单位方格的行列计数。",
+      "scope": "把长方形面积公式连接到单位方格的行列计数。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L04",
+    "title": "图形的面积",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "52–64",
+    "notes": "面积与单位、长方正方面积、单位进率、分割补形、周长面积对照。",
+    "sequence": [
+      "G3-L04-B01",
+      "G3-L04-B02",
+      "G3-L04-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L04-B02-MODEL1",
+      "family": "areaGrid",
+      "variant": "G3-L04-B02",
+      "title": "长乘宽为什么得到面积",
+      "prompt": "把长方形面积公式连接到单位方格的行列计数。",
+      "initialState": "6米×4米长方形网格，每格1平方米。",
+      "learnerAction": "先填一行6格，再复制为4行，计全部单位格。",
+      "observableChange": "6×4=24平方米，行长与行数决定格数。",
+      "question": "长方形每行6块方砖，共4行，为什么用6×4求总块数？",
+      "wrongActionFeedback": "只数边界格或把6+4当面积时逐行核对遗漏的内部格。",
+      "guidance": [
+        {
+          "label": "边长1米的单位砖沿长铺6块",
+          "explanation": "边长1米的单位砖沿长铺6块。"
+        },
+        {
+          "label": "沿宽共有4行",
+          "explanation": "沿宽共有4行。"
+        },
+        {
+          "label": "6×4=24个1平方米",
+          "explanation": "6×4=24个1平方米；正方形长宽相同。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "长乘宽为什么得到面积",
+        "画6列4行格子，先数一行，再数行数；将6米、4米与格数对应。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "tiling",
+        "title": "一块一块铺满，再解释每行",
+        "version": "textbook.v1",
+        "rows": 4,
+        "cols": 6
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

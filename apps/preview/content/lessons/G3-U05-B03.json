@@ -1,0 +1,144 @@
+{
+  "lessonId": "G3-U05-B03",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "用一个直角作标准来分类",
+  "shortTitle": "用一个直角作标准来分类",
+  "question": "没有量角器，怎样判断墙角是否像书本角那样方正？",
+  "subtitle": "共同的直角标准使“大一些、小一些”变成可复核的分类。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-U05",
+  "recommendedPrerequisites": [
+    "G3-U05-B02。"
+  ],
+  "relatedLessonIds": [
+    "G3-U05-B01",
+    "G3-U05-B02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "没有量角器，怎样判断墙角是否像书本角那样方正？",
+    "predictQuestion": "怎样用书本角判断另一个角？",
+    "predictionOptions": [
+      "只比边长",
+      "看图形放得正不正",
+      "顶点和一条边对齐后比较"
+    ],
+    "discovery": [
+      "共同的直角标准使“大一些、小一些”变成可复核的分类。"
+    ],
+    "symbols": [
+      "直角作比较标准",
+      "比直角小是锐角，比直角大且小于平角是钝角"
+    ],
+    "mission": "把同一个直角当标准，比较大、小与相等。",
+    "retell": "为什么要先对齐，才能用同一个直角标准比较？",
+    "observedEvidence": "让书本角与待测角顶点、一条边对齐。",
+    "whyQuestion": "为什么要先对齐，才能用同一个直角标准比较？",
+    "counterexamplePrompt": "把图转个方向，原来的直角就变成锐角了吗？",
+    "predictionFocus": "怎样用书本角判断另一个角？"
+  },
+  "storyVisual": {
+    "type": "angle-reference",
+    "title": "把书本角贴到墙角",
+    "caption": "左边是书本的直角，右边是待比较的墙角。让两个顶点和一条边对齐，再判断。",
+    "values": [],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "angle-reference",
+    "title": "把书本角贴到墙角",
+    "caption": "左边是书本的直角，右边是待比较的墙角。让两个顶点和一条边对齐，再判断。",
+    "values": [],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "一个角比直角大，却还没张成一条直线，它是哪类角？",
+      "steps": [
+        {
+          "math": "先确认超过直角。",
+          "why": "先确认超过直角。"
+        },
+        {
+          "math": "再确认没有达到平角。",
+          "why": "再确认没有达到平角。"
+        },
+        {
+          "math": "结论：钝角。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U05-B03-OBJ1",
+      "action": "辨认直角、锐角、钝角，明确本课比较范围。",
+      "scope": "辨认直角、锐角、钝角，明确本课比较范围。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U05",
+    "title": "线和角",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "61–72",
+    "notes": "线段射线直线、比较和复制线段、角与直角锐角钝角、整理。",
+    "sequence": [
+      "G3-U05-B01",
+      "G3-U05-B02",
+      "G3-U05-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U05-B03-MODEL1",
+      "family": "angles",
+      "variant": "G3-U05-B03",
+      "title": "用一个直角作标准来分类",
+      "prompt": "辨认直角、锐角、钝角，明确本课比较范围。",
+      "initialState": "一个直角工具及三个非零角，分别小于、等于、大于直角且小于平角。",
+      "learnerAction": "拖动工具使顶点与一边对齐，比较另一边位置，再整体旋转图纸。",
+      "observableChange": "三角依次锐、直、钝；旋转整张图后类别不变。",
+      "question": "怎样说明分类取决于角本身，不取决于图画方向？",
+      "wrongActionFeedback": "只对齐顶点时补问还需哪条边对齐；明确钝角还须小于平角。",
+      "guidance": [
+        {
+          "label": "与直角一样大是直角",
+          "explanation": "与直角一样大是直角。"
+        },
+        {
+          "label": "小于直角是锐角",
+          "explanation": "小于直角是锐角；大于直角且小于平角是钝角。"
+        },
+        {
+          "label": "旋转三角尺不改变标准",
+          "explanation": "旋转三角尺不改变标准，不靠纸面朝向猜。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "用一个直角作标准来分类",
+        "把三角尺的直角顶点与待测角顶点重合，一边对齐，再看另一边。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "angle",
+        "title": "把直角工具和待测角对齐",
+        "version": "textbook.v1",
+        "angle": 65
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

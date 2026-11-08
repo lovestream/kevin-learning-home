@@ -6,3 +6,7 @@ apps/web/dist
 .evidence
 *.sqlite*
 .env*
+
+apps/preview/dist
+.math-preview-private
+.trial-private

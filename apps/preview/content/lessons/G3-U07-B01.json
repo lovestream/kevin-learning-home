@@ -1,0 +1,149 @@
+{
+  "lessonId": "G3-U07-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "每种选择都配一遍，怎样不重复不遗漏",
+  "shortTitle": "每种选择都配一遍，怎样不重复不…",
+  "question": "有2种上衣、3种裤子，每次各穿1件，可以组成几套？",
+  "subtitle": "逐个固定第一种选择，再把第二步走完，就能解释为什么用乘法。",
+  "grade": [
+    3
+  ],
+  "strand": "logic",
+  "track": "foundation",
+  "parentUnitId": "G3-U07",
+  "recommendedPrerequisites": [
+    "G3-U04乘法；本课虽属数学广角，来源为教材。"
+  ],
+  "relatedLessonIds": [
+    "G3-U07-R01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "有2种上衣、3种裤子，每次各穿1件，可以组成几套？",
+    "predictQuestion": "固定一件上衣，需要配几种裤子？",
+    "predictionOptions": [
+      "把3种裤子都配一次",
+      "只配1条",
+      "把上衣裤子各数一遍就结束"
+    ],
+    "discovery": [
+      "逐个固定第一种选择，再把第二步走完，就能解释为什么用乘法。"
+    ],
+    "symbols": [
+      "2×3＝6（套）",
+      "每件上衣都能配3种裤子"
+    ],
+    "mission": "逐件固定上衣，检查搭配不重复、不遗漏。",
+    "retell": "按这个顺序为什么每套只记一次，还不会漏？",
+    "observedEvidence": "固定一件上衣，配完三种裤子，再换另一件上衣。",
+    "whyQuestion": "按这个顺序为什么每套只记一次，还不会漏？",
+    "counterexamplePrompt": "只挑一件衣服，与上衣裤子各挑一件，为什么不是同一种问题？",
+    "predictionFocus": "固定一件上衣，需要配几种裤子？"
+  },
+  "storyVisual": {
+    "type": "outfits",
+    "title": "2种上衣、3种裤子",
+    "caption": "一次穿一件上衣和一条裤子。图中只列可选衣服，还没有替你配好所有套装。",
+    "values": [
+      2,
+      3
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "outfits",
+    "title": "2种上衣、3种裤子",
+    "caption": "一次穿一件上衣和一条裤子。图中只列可选衣服，还没有替你配好所有套装。",
+    "values": [
+      2,
+      3
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "2件上衣和3条裤子，每次各选1件，有几套？",
+      "steps": [
+        {
+          "math": "A1、A2、A3。",
+          "why": "A1、A2、A3。"
+        },
+        {
+          "math": "B1、B2、B3。",
+          "why": "B1、B2、B3。"
+        },
+        {
+          "math": "结论：6套。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U07-B01-OBJ1",
+      "action": "用表格或连线数完整搭配，区分任选一种与分两步组合。",
+      "scope": "用表格或连线数完整搭配，区分任选一种与分两步组合。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U07",
+    "title": "复习与关联（含搭配问题）",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "92–102",
+    "notes": "按知识关系诊断，不重新从数数教起；搭配为本册数学广角。",
+    "sequence": [
+      "G3-U07-R01",
+      "G3-U07-B01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U07-B01-MODEL1",
+      "family": "planning",
+      "variant": "G3-U07-B01",
+      "title": "每种选择都配一遍",
+      "prompt": "用表格或连线数完整搭配，区分任选一种与分两步组合。",
+      "initialState": "表格行上衣A/B，列裤1/2/3，六格空白；另有“只任选一样”卡。",
+      "learnerAction": "按行生成搭配，每套填唯一格；再比较只选上衣或裤的任务。",
+      "observableChange": "各选一样有6套，任选一件有5种；任务结构决定相乘或相加。",
+      "question": "为什么表格每一格只代表一种搭配？",
+      "wrongActionFeedback": "重复填同格高亮已有套装，遗漏显示空格；不只反馈数值对错。",
+      "guidance": [
+        {
+          "label": "先固定A配1、2、3",
+          "explanation": "先固定A配1、2、3。"
+        },
+        {
+          "label": "再固定B配1、2、3",
+          "explanation": "再固定B配1、2、3。"
+        },
+        {
+          "label": "检查每套恰好一个格",
+          "explanation": "检查每套恰好一个格，数量2×3；若飞机或高铁任选一种则是相加。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "每种选择都配一遍，怎样不重复不遗漏",
+        "用2行3列表格，行标上衣A/B，列标裤子1/2/3，每格一种套装。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "outfits",
+        "title": "亲手配一套，再检查遗漏",
+        "version": "textbook.v1",
+        "shirts": 2,
+        "pants": 3
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

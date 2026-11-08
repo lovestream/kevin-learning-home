@@ -1,0 +1,233 @@
+{
+  "lessonId": "G3-U04-B05",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "先估一估，才知道答案靠不靠谱",
+  "shortTitle": "先估一估，才知道答案靠不靠谱",
+  "question": "398名同学每人票价8元，准备3200元够不够？",
+  "subtitle": "有时只需判断足够与否，合适的上界就能回答，不必先精确计算。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U04",
+  "recommendedPrerequisites": [
+    "G3-U04-B01至B04。"
+  ],
+  "relatedLessonIds": [
+    "G3-U04-B01",
+    "G3-U04-B02",
+    "G3-U04-B03",
+    "G3-U04-B04"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "398名同学每人票价8元，准备3200元够不够？",
+    "predictQuestion": "把398人按400人估，估出的费用偏大还是偏小？",
+    "predictionOptions": [
+      "偏大，可以用来判断够不够",
+      "偏小",
+      "和准确费用一样"
+    ],
+    "discovery": [
+      "有时只需判断足够与否，合适的上界就能回答，不必先精确计算。"
+    ],
+    "symbols": [
+      "398＜400",
+      "398×8＜400×8＝3200"
+    ],
+    "mission": "先用合适的上界判断3200元够不够。",
+    "retell": "按400人估大后仍够，为什么398人一定也够？",
+    "observedEvidence": "把实际人数夹在估小和估大两种成本之间。",
+    "whyQuestion": "按400人估大后仍够，为什么398人一定也够？",
+    "counterexamplePrompt": "估小后够用，就能保证实际费用也够吗？",
+    "predictionFocus": "把398人按400人估，估出的费用偏大还是偏小？"
+  },
+  "storyVisual": {
+    "type": "estimate-bound",
+    "title": "398人与400人的票费对照",
+    "caption": "同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。",
+    "values": [
+      398,
+      8,
+      3200,
+      390,
+      400
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "estimate-bound",
+    "title": "398人与400人的票费对照",
+    "caption": "同样每人8元；多算2个人会怎样？先比较，再判断3200元够不够。",
+    "values": [
+      398,
+      8,
+      3200,
+      390,
+      400
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "398人每人8元，3200元够吗？还能剩多少？",
+      "steps": [
+        {
+          "math": "400人需3200元，实际少2人，肯定够。",
+          "why": "400人需3200元，实际少2人，肯定够。"
+        },
+        {
+          "math": "2×8=16",
+          "why": "少花2×8=16元。",
+          "expressionBefore": "2×8",
+          "operation": "=",
+          "expressionAfter": "16"
+        },
+        {
+          "math": "结论：够，剩16元。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U04-B05-OBJ1",
+      "action": "能按问题选用上界或下界估计，并处理多步费用。",
+      "scope": "能按问题选用上界或下界估计，并处理多步费用。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U04",
+    "title": "多位数乘一位数",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "39–56",
+    "notes": "口算、竖式、连续进位、零、估算与解决问题；分配律以拆分模型体验。",
+    "sequence": [
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-U04-B05"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U04-B05-MODEL1",
+      "family": "placeValue",
+      "variant": "G3-U04-B05",
+      "title": "先估一估",
+      "prompt": "能按问题选用上界或下界估计，并处理多步费用。",
+      "initialState": "398名同学每人票价8元，准备3200元够不够？",
+      "learnerAction": "先用合适的上界判断3200元够不够。",
+      "observableChange": "把实际人数夹在估小和估大两种成本之间。",
+      "question": "按400人估大后仍够，为什么398人一定也够？",
+      "wrongActionFeedback": "估大超预算不能直接说不够，展示可能落在预算上下的实际值，要求进一步算。",
+      "guidance": [
+        {
+          "label": "398<400",
+          "explanation": "398<400，所以总价<400×8=3200。"
+        },
+        {
+          "label": "若估小后已超预算",
+          "explanation": "若估小后已超预算，就一定不够；估大后超预算则还不能确定。"
+        },
+        {
+          "label": "需要精确余额时再算",
+          "explanation": "需要精确余额时再算。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "先估一估，才知道答案靠不靠谱",
+        "把398看作略小于400，在数线上比较两种总费用；用箭头注明估大还是估小。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "estimate-product",
+        "title": "估计能保证什么，什么时候还要精算",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            398,
+            8,
+            3200,
+            390,
+            400
+          ],
+          [
+            203,
+            4,
+            800,
+            200,
+            210
+          ],
+          [
+            296,
+            3,
+            900,
+            290,
+            300
+          ],
+          [
+            402,
+            6,
+            2400,
+            400,
+            410
+          ],
+          [
+            487,
+            5,
+            2450,
+            480,
+            490
+          ],
+          [
+            198,
+            7,
+            1400,
+            190,
+            200
+          ]
+        ],
+        "mode": "estimate",
+        "contexts": [
+          {
+            "story": "398名同学每人票价8元，准备3200元够不够？",
+            "unit": "元"
+          },
+          {
+            "story": "203名同学每人票价4元，准备800元够不够？",
+            "unit": "元"
+          },
+          {
+            "story": "296名同学每人票价3元，准备900元够不够？",
+            "unit": "元"
+          },
+          {
+            "story": "402名同学每人票价6元，准备2400元够不够？",
+            "unit": "元"
+          },
+          {
+            "story": "487名同学每人票价5元，准备2450元够不够？",
+            "unit": "元"
+          },
+          {
+            "story": "食堂买198千克米，每千克7元，预算1400元。选择费用上界或下界，说明它能保证什么。",
+            "unit": "元"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

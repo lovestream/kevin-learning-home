@@ -1,0 +1,27 @@
+{
+  "status": "PASS_OLD_SYNTHETIC_ROLLBACK",
+  "strictTLS": true,
+  "trustAnchor": "Existing synthetic trial public CA only; no OS trust changes",
+  "python314StrictProfileError": "Existing CA lacks key usage extension; Node 24 default TLS verification used, rejectUnauthorized=true",
+  "responses": [
+    {
+      "path": "/login",
+      "status": 200,
+      "bytes": 542,
+      "authorized": true
+    },
+    {
+      "path": "/health/ready",
+      "status": 200,
+      "bytes": 36,
+      "authorized": true,
+      "readiness": "ready"
+    },
+    {
+      "path": "/api/v1/learners/synthetic-no-session/subjects/math/lessons/G3-U01-B01",
+      "status": 401,
+      "bytes": 153,
+      "authorized": true
+    }
+  ]
+}

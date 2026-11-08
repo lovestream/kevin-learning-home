@@ -1,0 +1,145 @@
+{
+  "lessonId": "G3-U05-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "线的端点和长度告诉我们什么",
+  "shortTitle": "线的端点和长度告诉我们什么",
+  "question": "画一段5厘米的路线，与画一束继续照下去的光，符号应相同吗？",
+  "subtitle": "端点决定是否有限；几何用理想化的线表示物体或方向，纸上画不完的延伸用约定表达。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-U05",
+  "recommendedPrerequisites": [
+    "厘米测量与常见形状。"
+  ],
+  "relatedLessonIds": [
+    "G3-U05-B02",
+    "G3-U05-B03"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "static-visual",
+  "classroom": {
+    "story": "画一段5厘米的路线，与画一束继续照下去的光，符号应相同吗？",
+    "predictQuestion": "线段、射线、直线，端点数量一样吗？",
+    "predictionOptions": [
+      "都没有端点",
+      "不一样，分别2个、1个、0个",
+      "都有2个"
+    ],
+    "discovery": [
+      "端点决定是否有限；几何用理想化的线表示物体或方向，纸上画不完的延伸用约定表达。"
+    ],
+    "symbols": [
+      "线段：两个端点",
+      "射线：一个端点；直线：没有端点"
+    ],
+    "mission": "比较端点和延伸方向，指出哪种线能量长度。",
+    "retell": "射线在纸上只有一小段，为什么不能量它的总长度？",
+    "observedEvidence": "分别指认端点和箭头，画出的长短只是纸面示意。",
+    "whyQuestion": "射线在纸上只有一小段，为什么不能量它的总长度？",
+    "counterexamplePrompt": "把线段画长，但保留两个端点，它就变成直线了吗？",
+    "predictionFocus": "线段、射线、直线，端点数量一样吗？"
+  },
+  "storyVisual": {
+    "type": "lines",
+    "title": "路线、光线与向两边延伸的线",
+    "caption": "实心点表示端点，箭头表示还可以沿这个方向延伸。",
+    "values": [
+      5
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "lines",
+    "title": "路线、光线与向两边延伸的线",
+    "caption": "实心点表示端点，箭头表示还可以沿这个方向延伸。",
+    "values": [
+      5
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "一段折线先走3厘米，再走4厘米，折线长多少？一定等于两端直线距离吗？",
+      "steps": [
+        {
+          "math": "3+4=7",
+          "why": "折线长度3+4=7厘米。",
+          "expressionBefore": "3+4",
+          "operation": "=",
+          "expressionAfter": "7"
+        },
+        {
+          "math": "两段有转弯时，端点直连通常更短。",
+          "why": "两段有转弯时，端点直连通常更短。"
+        },
+        {
+          "math": "结论：折线7厘米；不能把端点间距离当作折线长。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U05-B01-OBJ1",
+      "action": "区分线段、射线、直线，会测量和复制线段。",
+      "scope": "区分线段、射线、直线，会测量和复制线段。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U05",
+    "title": "线和角",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "61–72",
+    "notes": "线段射线直线、比较和复制线段、角与直角锐角钝角、整理。",
+    "sequence": [
+      "G3-U05-B01",
+      "G3-U05-B02",
+      "G3-U05-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U05-B01-MODEL1",
+      "family": "angles",
+      "variant": "G3-U05-B01",
+      "title": "线的端点和长度告诉我们什么",
+      "prompt": "区分线段、射线、直线，会测量和复制线段。",
+      "initialState": "三图分别两端点AB、一端点向右箭头、两侧箭头；纸面长度看似相同。",
+      "learnerAction": "切换纸面窗口大小，标记端点是否仍是边界。",
+      "observableChange": "线段端点固定；射线/直线在窗口外仍继续，不由笔画长度分类。",
+      "question": "为什么线段能量长度，射线却不能报一个总长度？",
+      "wrongActionFeedback": "把纸边当端点时平移窗口，显示箭头只是延伸约定。",
+      "guidance": [
+        {
+          "label": "线段两端固定",
+          "explanation": "线段两端固定，可以量长度。"
+        },
+        {
+          "label": "射线一端固定",
+          "explanation": "射线一端固定，直线两端无终点；纸上短线只是表示。"
+        },
+        {
+          "label": "比较折线路程要逐段相加",
+          "explanation": "比较折线路程要逐段相加，不只量两端直线。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "线的端点和长度告诉我们什么",
+        "画有两端点的AB、有一端点向右延伸的射线、两端延伸的直线；用尺或圆规转移一段长度。"
+      ],
+      "modelStatus": "static-review"
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

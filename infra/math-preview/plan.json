@@ -1,0 +1,11 @@
+{
+  "runId": "20261025-c6ae9e7f",
+  "resourcePrefix": "klh-math-preview-20261025-c6ae9e7f",
+  "nasIP": "192.168.2.100",
+  "port": 38444,
+  "subnet": "172.30.244.0/29",
+  "appIP": "172.30.244.2",
+  "proxyIP": "172.30.244.3",
+  "proposedOrigin": "http://192.168.2.100:38444",
+  "originStatus": "HTTP_EXPLICIT_USER_OVERRIDE_2026_10_25"
+}

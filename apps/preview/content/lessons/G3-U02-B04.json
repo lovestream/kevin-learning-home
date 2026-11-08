@@ -1,0 +1,159 @@
+{
+  "lessonId": "G3-U02-B04",
+  "contentVersion": "2026-10-09.4",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "同一个剩余，可以列综合算式",
+  "shortTitle": "综合算式",
+  "question": "借走后又还回，为什么减法后面还能接加法？",
+  "subtitle": "综合算式把连续发生的变化写在同一行；每个中间数仍要有清楚的故事含义。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U02",
+  "recommendedPrerequisites": [
+    "会口算表内乘除和两位数加减"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 22,
+  "widget": "mixedOperations",
+  "prerequisiteNote": "每节都可以直接进入；先把故事里的量说清楚，再动算式。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "书架原有36本书，借走8本，又还回3本。现在有多少本？",
+    "predictQuestion": "借走8本又还回3本，要怎样记录？",
+    "predictionOptions": [
+      "先减8，再加3",
+      "把8和3都减掉",
+      "把8和3都加上"
+    ],
+    "discovery": [
+      "36−8先记录借出后的28本，再加回3本。36−8＋3把两次连续变化写在同一条算式里。"
+    ],
+    "symbols": [
+      "36−8＋3",
+      "中间的28表示借出后剩下的书"
+    ],
+    "mission": "指出每一步以后书架上的书有多少。",
+    "retell": "综合算式里的28为什么不用再写成一个新条件？",
+    "observedEvidence": "指着借出后的28本和还回后的31本。",
+    "whyQuestion": "综合算式里的28为什么不用再写成一个新条件？",
+    "counterexamplePrompt": "写成36−(8＋3)，就把还书当成了什么？",
+    "predictionFocus": "借走8本又还回3本，要怎样记录？"
+  },
+  "workedExamples": [
+    {
+      "title": "书架原有36本书，借走8本，又还回3本。现在有多少本？",
+      "steps": [
+        {
+          "math": "36－8＋3",
+          "why": "先记借走后的本数，再加还回的本数。"
+        },
+        {
+          "math": "结果：31本",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "combined",
+      "action": "把连续变化合成一条算式并解释中间量",
+      "scope": "连续加减"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U02",
+    "title": "混合运算",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "6–19",
+    "notes": "教材印刷6–19页为主线。先完成B01–B05；E01→E03解释去/添括号，E02比较除以积与除以商，E04/E05用具体数体验运算律，O01/O02为可选思想。ID稳定，顺序以本表为准；不要求连续做完所有提升。",
+    "sequence": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [
+    {
+      "sceneId": "G3-U02-B04-A",
+      "lessonId": "G3-U02-B04",
+      "story": {
+        "text": "书架原有36本书，借走8本，又还回3本。现在有多少本？",
+        "quantities": [
+          {
+            "id": "start",
+            "value": 36,
+            "unit": "本",
+            "role": "原有"
+          },
+          {
+            "id": "borrow",
+            "value": 8,
+            "unit": "本",
+            "role": "借走"
+          },
+          {
+            "id": "return",
+            "value": 3,
+            "unit": "本",
+            "role": "还回"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "add",
+        "left": {
+          "type": "operation",
+          "operator": "subtract",
+          "left": {
+            "type": "number",
+            "value": 36
+          },
+          "right": {
+            "type": "number",
+            "value": 8
+          },
+          "grouped": false
+        },
+        "right": {
+          "type": "number",
+          "value": 3
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "people-line",
+        "quantityRefs": [
+          "start",
+          "borrow",
+          "return"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "A_order_and_model",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "36－8＋3"
+      }
+    }
+  ],
+  "lengthScenes": []
+}

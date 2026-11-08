@@ -1,0 +1,234 @@
+{
+  "lessonId": "G3-L02-B05",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "连乘连除：每箱、每盒、每个怎样对应",
+  "shortTitle": "连乘连除：每箱、每盒、每个怎样…",
+  "question": "2箱杯子，每箱4盒，每盒6个，全部有几个？反过来48个分装怎样求每盒？",
+  "subtitle": "层层分组的总份数是乘积；同一结构可按不同层级计数。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-L02",
+  "recommendedPrerequisites": [
+    "G3-L02-B04；三上混合运算。"
+  ],
+  "relatedLessonIds": [
+    "G3-L02-B01",
+    "G3-L02-B02",
+    "G3-L02-B03",
+    "G3-L02-B04",
+    "G3-L02-B06"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "2箱杯子，每箱4盒，每盒6个，全部有几个？反过来48个分装怎样求每盒？",
+    "predictQuestion": "2箱、每箱4盒，共有几盒？",
+    "predictionOptions": [
+      "2＋4盒",
+      "4÷2盒",
+      "2×4盒"
+    ],
+    "discovery": [
+      "层层分组的总份数是乘积；同一结构可按不同层级计数。"
+    ],
+    "symbols": [
+      "2×4×6",
+      "总箱数×每箱盒数×每盒个数"
+    ],
+    "mission": "先选一层分组，再把杯子的总量连起来。",
+    "retell": "为什么先算每箱杯数，或先算总盒数，得到同一总量？",
+    "observedEvidence": "按箱数盒、按盒数杯，再把同一总量按层级分回。",
+    "whyQuestion": "为什么先算每箱杯数，或先算总盒数，得到同一总量？",
+    "counterexamplePrompt": "把每箱4盒当成所有箱总共4盒，漏掉了哪箱？",
+    "predictionFocus": "2箱、每箱4盒，共有几盒？"
+  },
+  "storyVisual": {
+    "type": "nested-boxes",
+    "title": "箱里面有盒，盒里面有杯子",
+    "caption": "图只展示已知的层级，每盒6个；总数由你求。",
+    "values": [
+      2,
+      4,
+      6
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "nested-boxes",
+    "title": "箱里面有盒，盒里面有杯子",
+    "caption": "图只展示已知的层级，每盒6个；总数由你求。",
+    "values": [
+      2,
+      4,
+      6
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "72支笔，平均装3箱，每箱4盒，每盒多少支？",
+      "steps": [
+        {
+          "math": "3×4=12",
+          "why": "3×4=12盒。",
+          "expressionBefore": "3×4",
+          "operation": "=",
+          "expressionAfter": "12"
+        },
+        {
+          "math": "72÷12=6",
+          "why": "72÷12=6，也可72÷3÷4。",
+          "expressionBefore": "72÷12",
+          "operation": "=",
+          "expressionAfter": "6"
+        },
+        {
+          "math": "结论：6支。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L02-B05-OBJ1",
+      "action": "在多层等量组情境中构造连乘连除，并解释合并分组。",
+      "scope": "在多层等量组情境中构造连乘连除，并解释合并分组。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L02",
+    "title": "除数是一位数的除法",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "10–38",
+    "notes": "口算估算、竖式与余数验算、商含0、连乘连除、归一归总、整理；和三上混合运算衔接。",
+    "sequence": [
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L02-B05",
+      "G3-L02-B06"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L02-B05-MODEL1",
+      "family": "division",
+      "variant": "G3-L02-B05",
+      "title": "连乘连除：每箱、每盒、每个怎样对应",
+      "prompt": "在多层等量组情境中构造连乘连除，并解释合并分组。",
+      "initialState": "2箱杯子，每箱4盒，每盒6个，一共多少个？",
+      "learnerAction": "先选一层分组，再把杯子的总量连起来。",
+      "observableChange": "按箱数盒、按盒数杯，再把同一总量按层级分回。",
+      "question": "为什么先算每箱杯数，或先算总盒数，得到同一总量？",
+      "wrongActionFeedback": "把4理解成乘回盒数时标明当前量是每箱支数，目标是每盒支数。",
+      "guidance": [
+        {
+          "label": "求总数可先每箱24个",
+          "explanation": "求总数可先每箱24个，再2箱48个。"
+        },
+        {
+          "label": "也可先共8盒",
+          "explanation": "也可先共8盒，再每盒6个。"
+        },
+        {
+          "label": "反过来48÷2÷4=6",
+          "explanation": "反过来48÷2÷4=6；与三上括号课同理，这里增加单位层级而非重教规则。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "连乘连除：每箱、每盒、每个怎样对应",
+        "画2个大框，每框4小框，每小框6点；标清箱、盒、个。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "nested-groups",
+        "title": "箱、盒、个：让分组层级看得见",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            3,
+            2,
+            5
+          ],
+          [
+            2,
+            3,
+            8
+          ],
+          [
+            4,
+            2,
+            4
+          ],
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            2,
+            5,
+            4
+          ]
+        ],
+        "mode": "nested",
+        "contexts": [
+          {
+            "story": "2箱杯子，每箱4盒，每盒6个，一共多少个？",
+            "unit": "个",
+            "outer": "箱",
+            "inner": "盒"
+          },
+          {
+            "story": "3箱杯子，每箱2盒，每盒5个，一共多少个？",
+            "unit": "个",
+            "outer": "箱",
+            "inner": "盒"
+          },
+          {
+            "story": "2箱杯子，每箱3盒，每盒8个，一共多少个？",
+            "unit": "个",
+            "outer": "箱",
+            "inner": "盒"
+          },
+          {
+            "story": "4箱杯子，每箱2盒，每盒4个，一共多少个？",
+            "unit": "个",
+            "outer": "箱",
+            "inner": "盒"
+          },
+          {
+            "story": "3箱杯子，每箱3盒，每盒3个，一共多少个？",
+            "unit": "个",
+            "outer": "箱",
+            "inner": "盒"
+          },
+          {
+            "story": "图书角有2个书架，每架5层，每层4本书。先登记各层，再把总数按架、层分回去。",
+            "unit": "本",
+            "outer": "架",
+            "inner": "层"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

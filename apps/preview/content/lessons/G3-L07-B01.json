@@ -1,0 +1,174 @@
+{
+  "lessonId": "G3-L07-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-17.1",
+  "status": "draft",
+  "title": "同一个人出现两次，怎样只数一次",
+  "shortTitle": "同一个人出现两次，怎样只数一次",
+  "question": "读书组8人、绘画组7人，其中3人两个组都参加。总共有多少不同的人？",
+  "subtitle": "两份名单相加时，重叠的人被数两遍；总人数只应该计每人一次。",
+  "grade": [
+    3
+  ],
+  "strand": "logic",
+  "track": "foundation",
+  "parentUnitId": "G3-L07",
+  "recommendedPrerequisites": [
+    "G3-L05-B01；加减与分类。"
+  ],
+  "relatedLessonIds": [
+    "G3-L07-R01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "读书组8人、绘画组7人，其中3人两个组都参加。总共有多少不同的人？",
+    "predictQuestion": "两个组都参加的人，相加时被数了几次？",
+    "predictionOptions": [
+      "2次，要减去多算的一次",
+      "1次，不用处理",
+      "2次，要把这个人全删掉"
+    ],
+    "discovery": [
+      "两份名单相加时，重叠的人被数两遍；总人数只应该计每人一次。"
+    ],
+    "symbols": [
+      "8＋7−3＝12（人）",
+      "只减掉重复计数，保留这个人一次"
+    ],
+    "mission": "用同一个人的卡片说明为什么只减一次。",
+    "retell": "为什么加两组人数后只减共同人数一次，不能两次都删掉？",
+    "observedEvidence": "跟踪共同3人的姓名卡，看看他们在两份名单各出现一次。",
+    "whyQuestion": "为什么加两组人数后只减共同人数一次，不能两次都删掉？",
+    "counterexamplePrompt": "如果减去两份共同人数，这3个人还被保留在总人数里吗？",
+    "predictionFocus": "两个组都参加的人，相加时被数了几次？"
+  },
+  "storyVisual": {
+    "type": "overlapping-sets",
+    "title": "两个小组里有相同的人",
+    "caption": "中间3个位置是两个组共有的人。读书组8人包含这3人，绘画组7人也包含这3人。",
+    "values": [
+      8,
+      7,
+      3
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "overlapping-sets",
+    "title": "两个小组里有相同的人",
+    "caption": "中间3个位置是两个组共有的人。读书组8人包含这3人，绘画组7人也包含这3人。",
+    "values": [
+      8,
+      7,
+      3
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "读书8人、绘画7人，两组都参加3人，至少参加一种的共有多少人？",
+      "steps": [
+        {
+          "math": "8+7=15",
+          "why": "8+7=15把3人重复了一次。",
+          "expressionBefore": "8+7",
+          "operation": "=",
+          "expressionAfter": "15"
+        },
+        {
+          "math": "15−3=12；(8−3)+3+(7−3)=12",
+          "why": "15−3=12，或(8−3)+3+(7−3)=12。",
+          "expressionBefore": "15−3",
+          "operation": "=",
+          "expressionAfter": "12；(8−3)+3+(7−3)"
+        },
+        {
+          "math": "结论：12人。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L07-B01-OBJ1",
+      "action": "解释两个集合的重叠与容斥，不将两类计数机械相加。",
+      "scope": "解释两个集合的重叠与容斥，不将两类计数机械相加。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L07",
+    "title": "复习与关联（含重叠问题）",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "95–104",
+    "notes": "综合诊断数与量、图形和统计；重叠问题是实际教材数学广角，单独学习但不另造重复思想课。",
+    "sequence": [
+      "G3-L07-R01",
+      "G3-L07-B01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L07-B01-MODEL1",
+      "family": "sets",
+      "variant": "G3-L07-B01",
+      "title": "同一个人出现两次",
+      "prompt": "解释两个集合的重叠与容斥，不将两类计数机械相加。",
+      "initialState": "两份姓名名单：读书8人、绘画7人，3个共同名字；同名用同一个ID。",
+      "learnerAction": "把名字拖入两圈，共同者只留交叠区一份，再数不同人。",
+      "observableChange": "独有5+共同3+独有4=12；8+7中共同者多算了一次。",
+      "question": "用同学名单解释为什么共同参加者不能被删光。",
+      "wrongActionFeedback": "减共同者两次时显示3人被完全删掉，提醒他们也参加了活动。",
+      "guidance": [
+        {
+          "label": "先找两边共同出现的名字",
+          "explanation": "先找两边共同出现的名字。"
+        },
+        {
+          "label": "两组人数相加15",
+          "explanation": "两组人数相加15，包括重叠部分两次。"
+        },
+        {
+          "label": "减掉多算的一次3",
+          "explanation": "减掉多算的一次3，得到12；也可5+3+4。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "同一个人出现两次，怎样只数一次",
+        "画相交两个圈：交叉区放3个名字，读书独有区5个、绘画独有区4个。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "sets",
+        "title": "同一个名字只放一次",
+        "version": "textbook.v1",
+        "left": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "right": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

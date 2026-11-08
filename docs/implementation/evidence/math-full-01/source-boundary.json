@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
+  "headMatches": true,
+  "gitStatusBeforeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "gitStatusAfterSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "worktreeUnchanged": true,
+  "trackedPinnedBlobsOnly": true,
+  "realDataRead": false,
+  "oldProjectExecuted": false
+}

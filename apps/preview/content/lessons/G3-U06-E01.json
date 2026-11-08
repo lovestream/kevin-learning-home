@@ -1,0 +1,164 @@
+{
+  "lessonId": "G3-U06-E01",
+  "contentVersion": "2026-10-18.1",
+  "editorialRevision": "2026-10-18.1",
+  "status": "draft",
+  "title": "合并格子，已经涂色的长度会变吗",
+  "shortTitle": "合并格子，已经涂色的长度会变吗",
+  "question": "同一条纸带从左到右平均分成6小格，前2小格涂蓝色。现在不剪纸带，也不改变蓝色部分，只把每相邻2小格看作1大格。改变分组前后，蓝色部分的实际长度一样吗？",
+  "subtitle": "分组方式改变了计数单位，实际纸带和涂色边界并未移动；份数名称可以不同而数量相同。",
+  "grade": [
+    3
+  ],
+  "strand": "fractions",
+  "track": "enhancement",
+  "parentUnitId": "G3-U06",
+  "recommendedPrerequisites": [
+    "G3-U06-B02；可选提升。"
+  ],
+  "relatedLessonIds": [
+    "G3-U06-B01",
+    "G3-U06-B02",
+    "G3-U06-B03",
+    "G3-U06-B04",
+    "G3-U06-B05"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "同一条纸带从左到右平均分成6小格，前2小格涂蓝色。现在不剪纸带，也不改变蓝色部分，只把每相邻2小格看作1大格。改变分组前后，蓝色部分的实际长度一样吗？",
+    "predictQuestion": "两小格合成一大格，原来的蓝色部分变长了吗？",
+    "predictionOptions": [
+      "变短了一半",
+      "变成原来的两倍",
+      "没有，涂色边界没动"
+    ],
+    "discovery": [
+      "分组方式改变了计数单位，实际纸带和涂色边界并未移动；份数名称可以不同而数量相同。"
+    ],
+    "symbols": [
+      "同一整体：2/6＝1/3",
+      "分组名称变了，实际长度没有变"
+    ],
+    "mission": "对比同一条纸带的2小份与1大份。",
+    "retell": "份数名字从2/6变成1/3，为什么蓝色长度没变？",
+    "observedEvidence": "比较细格和大格图的同一蓝色起点、终点。",
+    "whyQuestion": "份数名字从2/6变成1/3，为什么蓝色长度没变？",
+    "counterexamplePrompt": "用两条不同长的纸带比较1/3和2/6，还能只凭分数保证实际长度相同吗？",
+    "predictionFocus": "两小格合成一大格，原来的蓝色部分变长了吗？"
+  },
+  "storyVisual": {
+    "type": "fraction-strip",
+    "title": "同一条纸带：只改变看格子的方式",
+    "caption": "两幅图代表同一条纸带。细格与大格的线不同，蓝色部分的起点和终点没有移动。",
+    "values": [
+      6,
+      2,
+      0,
+      2
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "fraction-strip",
+    "title": "同一条纸带：只改变看格子的方式",
+    "caption": "两幅图代表同一条纸带。细格与大格的线不同，蓝色部分的起点和终点没有移动。",
+    "values": [
+      6,
+      2,
+      0,
+      2
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "一条纸带平均分成6小格，前2格涂蓝色。从左向右把每相邻2小格看作1大格，蓝色不变。现在蓝色部分占几大格？占整条纸带的几分之几？",
+      "steps": [
+        {
+          "math": "6÷2=3",
+          "why": "6÷2=3大份。",
+          "expressionBefore": "6÷2",
+          "operation": "=",
+          "expressionAfter": "3"
+        },
+        {
+          "math": "涂色2小份正好1大份。",
+          "why": "涂色2小份正好1大份。"
+        },
+        {
+          "math": "结论：1大份，占1/3；与原来的2/6同长。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U06-E01-OBJ1",
+      "action": "通过同一纸带重分组理解等值分数，为五年级分数性质铺垫。",
+      "scope": "通过同一纸带重分组理解等值分数，为五年级分数性质铺垫。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U06",
+    "title": "分数的初步认识",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "73–91",
+    "notes": "几分之一、几分之几、同分母比较与加减、一个整体及一组物品的分数。",
+    "sequence": [
+      "G3-U06-B01",
+      "G3-U06-B02",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05",
+      "G3-U06-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U06-E01-MODEL1",
+      "family": "fractions",
+      "variant": "G3-U06-E01",
+      "title": "合并格子",
+      "prompt": "通过同一纸带重分组理解等值分数，为五年级分数性质铺垫。",
+      "initialState": "同一条6等份纸带前2格已涂色，起终点与涂色端点固定。",
+      "learnerAction": "每相邻2小格包成一大格，仅换分组线不移动涂色边界。",
+      "observableChange": "总3大格、涂1大格；2/6和1/3表示同一段长度。",
+      "question": "完整说一遍：哪条纸带、原来怎样分、现在怎样分、什么变了、什么没变。",
+      "wrongActionFeedback": "只改分子时把新标记对应回图，指出单位与取份须一起改变。",
+      "guidance": [
+        {
+          "label": "原来涂2个小格",
+          "explanation": "原来涂2个小格，占2/6。"
+        },
+        {
+          "label": "现在每大格含2小格",
+          "explanation": "现在每大格含2小格，共3大格，涂了1大格，占1/3。"
+        },
+        {
+          "label": "比较的是重分组前后那段涂色的实际长度：它没有变",
+          "explanation": "比较的是重分组前后那段涂色的实际长度：它没有变。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "合并格子，已经涂色的长度会变吗",
+        "保留同一条纸带和同一段涂色，把6小格两两合成3大格；涂色恰好1大格。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "fraction",
+        "title": "移动分组线，蓝色长度不动",
+        "version": "textbook.v1",
+        "regroup": true,
+        "parts": 6
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

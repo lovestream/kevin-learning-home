@@ -1,0 +1,150 @@
+{
+  "lessonId": "G3-U05-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "角的大小看张口，不看边画多长",
+  "shortTitle": "角的大小看张口，不看边画多长",
+  "question": "剪刀张开一点和张开很多，哪次转得更多？",
+  "subtitle": "角记录两条射线的方向差，边的绘制长度只是为了看清方向。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-U05",
+  "recommendedPrerequisites": [
+    "G3-U05-B01。"
+  ],
+  "relatedLessonIds": [
+    "G3-U05-B01",
+    "G3-U05-B03"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "剪刀张开一点和张开很多，哪次转得更多？",
+    "predictQuestion": "把剪刀刀片画长，张口不变，角会变大吗？",
+    "predictionOptions": [
+      "不会，方向没有变",
+      "会，边长了",
+      "会，图占的地方多了"
+    ],
+    "discovery": [
+      "角记录两条射线的方向差，边的绘制长度只是为了看清方向。"
+    ],
+    "symbols": [
+      "角的大小看两边张开的程度",
+      "延长边不改变角"
+    ],
+    "mission": "只改变张口，比较转过的大小。",
+    "retell": "为什么边画长了，角却没有变大？",
+    "observedEvidence": "只延长一边，再只改变张口，分开比较。",
+    "whyQuestion": "为什么边画长了，角却没有变大？",
+    "counterexamplePrompt": "张口不动，拿更长的纸条替换一边，比较结果改变了吗？",
+    "predictionFocus": "把剪刀刀片画长，张口不变，角会变大吗？"
+  },
+  "storyVisual": {
+    "type": "angles",
+    "title": "剪刀的张口",
+    "caption": "两把剪刀的刀片画得一样长，只改变张口；图中不标角度答案。",
+    "values": [
+      25,
+      65
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "angles",
+    "title": "剪刀的张口",
+    "caption": "两把剪刀的刀片画得一样长，只改变张口；图中不标角度答案。",
+    "values": [
+      25,
+      65
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "一个角的两边各画2厘米，另一个与它张口相同、两边各画5厘米。哪个角大？",
+      "steps": [
+        {
+          "math": "让顶点与一边重合。",
+          "why": "让顶点与一边重合。"
+        },
+        {
+          "math": "另一边方向也重合，说明张口相同。",
+          "why": "另一边方向也重合，说明张口相同。"
+        },
+        {
+          "math": "结论：一样大。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U05-B02-OBJ1",
+      "action": "识别角的顶点和两边，用重叠比较角。",
+      "scope": "识别角的顶点和两边，用重叠比较角。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U05",
+    "title": "线和角",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "61–72",
+    "notes": "线段射线直线、比较和复制线段、角与直角锐角钝角、整理。",
+    "sequence": [
+      "G3-U05-B01",
+      "G3-U05-B02",
+      "G3-U05-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U05-B02-MODEL1",
+      "family": "angles",
+      "variant": "G3-U05-B02",
+      "title": "角的大小看张口",
+      "prompt": "识别角的顶点和两边，用重叠比较角。",
+      "initialState": "两纸条共顶点，张口固定；一条可伸长，另一控件可转方向。",
+      "learnerAction": "先只拉长边，再只旋转一边，与透明原角叠合。",
+      "observableChange": "拉长后方向重合角不变；转边后张口变大或变小。",
+      "question": "用活动纸条说明“边长没变，角能变化”。",
+      "wrongActionFeedback": "用涂色面积判断时暂隐藏填充，只对齐顶点与一边比较方向。",
+      "guidance": [
+        {
+          "label": "从同一点出发的两条射线组成角",
+          "explanation": "从同一点出发的两条射线组成角。"
+        },
+        {
+          "label": "比较时对齐顶点与一边",
+          "explanation": "比较时对齐顶点与一边。"
+        },
+        {
+          "label": "把边延长只让方向更明显",
+          "explanation": "把边延长只让方向更明显，不改变角的大小。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "角的大小看张口，不看边画多长",
+        "两根纸条用钉固定一端；边长不变而张口可变。把两个角顶点与一边重合比较另一边。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "angle",
+        "title": "张口、边长、整体朝向是三件事",
+        "version": "textbook.v1",
+        "angle": 45
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

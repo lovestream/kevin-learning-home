@@ -1,0 +1,148 @@
+{
+  "lessonId": "G3-L04-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "铺满里面，需要多少个小方块",
+  "shortTitle": "铺满里面，需要多少个小方块",
+  "question": "同一个花坛既要围栏又要铺地砖，为什么要算两个不同的数？",
+  "subtitle": "围栏量边界长度，地砖覆盖内部；使用同样大小的方块才能公平比较覆盖量。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-L04",
+  "recommendedPrerequisites": [
+    "G3-L03-B02。"
+  ],
+  "relatedLessonIds": [
+    "G3-L04-B02",
+    "G3-L04-B03"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "static-visual",
+  "classroom": {
+    "story": "同一个花坛既要围栏又要铺地砖，为什么要算两个不同的数？",
+    "predictQuestion": "铺地砖和装围栏，算的是同一种量吗？",
+    "predictionOptions": [
+      "不是，铺里面与围外圈不同",
+      "是，都算边长",
+      "是，都算方格数"
+    ],
+    "discovery": [
+      "围栏量边界长度，地砖覆盖内部；使用同样大小的方块才能公平比较覆盖量。"
+    ],
+    "symbols": [
+      "周长：外边界的长度",
+      "面积：内部覆盖的大小"
+    ],
+    "mission": "沿外圈走，再用同样的小方块铺满里面。",
+    "retell": "为什么同一幅花坛图，买围栏与买地砖要量不同地方？",
+    "observedEvidence": "用手沿红色外圈走，再指出绿色内部方格。",
+    "whyQuestion": "为什么同一幅花坛图，买围栏与买地砖要量不同地方？",
+    "counterexamplePrompt": "里面面积同样大的两个花坛，外圈长度一定一样吗？",
+    "predictionFocus": "铺地砖和装围栏，算的是同一种量吗？"
+  },
+  "storyVisual": {
+    "type": "area-grid",
+    "title": "花坛：外面围一圈，里面铺满",
+    "caption": "红线表示围栏位置，绿色方格表示要铺砖的位置；两件事要数不同的量。",
+    "values": [
+      3,
+      4
+    ],
+    "labels": [
+      "示意图，不代表题目另给了尺寸"
+    ]
+  },
+  "predictionVisual": {
+    "type": "area-grid",
+    "title": "花坛：外面围一圈，里面铺满",
+    "caption": "红线表示围栏位置，绿色方格表示要铺砖的位置；两件事要数不同的量。",
+    "values": [
+      3,
+      4
+    ],
+    "labels": [
+      "示意图，不代表题目另给了尺寸"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "一个图形铺满需12块1平方厘米方纸，另一个需9块同样方纸，哪个面积大？",
+      "steps": [
+        {
+          "math": "单位相同，比较所需块数。",
+          "why": "单位相同，比较所需块数。"
+        },
+        {
+          "math": "12>9。",
+          "why": "12>9。"
+        },
+        {
+          "math": "结论：第一个大3平方厘米。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L04-B01-OBJ1",
+      "action": "把面积理解为覆盖内部的大小，建立统一平方单位。",
+      "scope": "把面积理解为覆盖内部的大小，建立统一平方单位。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L04",
+    "title": "图形的面积",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "52–64",
+    "notes": "面积与单位、长方正方面积、单位进率、分割补形、周长面积对照。",
+    "sequence": [
+      "G3-L04-B01",
+      "G3-L04-B02",
+      "G3-L04-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L04-B01-MODEL1",
+      "family": "areaGrid",
+      "variant": "G3-L04-B01",
+      "title": "铺满里面",
+      "prompt": "把面积理解为覆盖内部的大小，建立统一平方单位。",
+      "initialState": "4列3行格图，每格1平方厘米；描边和铺内部为两种按钮。",
+      "learnerAction": "先描外圈再用单位方块无缝铺满内部，给两个量各命名。",
+      "observableChange": "面积12平方厘米，边界14厘米，单位和动作不同。",
+      "question": "用花坛解释买围栏与买地砖分别需要知道什么。",
+      "wrongActionFeedback": "把铺12格当周长时将光标从格内移到边上，问材料覆盖哪里。",
+      "guidance": [
+        {
+          "label": "先比较重叠或数格覆盖",
+          "explanation": "先比较重叠或数格覆盖。"
+        },
+        {
+          "label": "大小不同的方块数不能直接比较面积",
+          "explanation": "大小不同的方块数不能直接比较面积。"
+        },
+        {
+          "label": "规定边长1厘米的方形为1平方厘米",
+          "explanation": "规定边长1厘米的方形为1平方厘米，边长1米的方形为1平方米。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "铺满里面，需要多少个小方块",
+        "长4格宽3格的格图：用手沿边走一圈，再逐格涂满12格，明确两种动作。"
+      ],
+      "modelStatus": "static-review"
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

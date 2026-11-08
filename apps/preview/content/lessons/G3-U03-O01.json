@@ -1,0 +1,101 @@
+{
+  "lessonId": "G3-U03-O01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-17.1",
+  "status": "draft",
+  "title": "点与间隔：6段直路为什么有7个端点",
+  "shortTitle": "点、段与首尾关系",
+  "question": "24米绳每4米做一个标记，拉直与接成环，标记数为什么相差1？",
+  "subtitle": "除法先得到“几段”，点数还要看两端是否分开；这是植树、路灯和钟面问题的共同结构。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "olympiad",
+  "parentUnitId": "G3-U03",
+  "recommendedPrerequisites": [
+    "会做百以内加减",
+    "知道1厘米＝10毫米"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 24,
+  "widget": "lengthWorkbench",
+  "prerequisiteNote": "可以直接进入。单位写在题目和输入框旁，不需要另外选择单位。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "24米绳每4米一段。拉直时从起点开始标记，两端都做标记；接成环时，首尾是同一个标记。两种形状各有多少个不同标记？",
+    "predictQuestion": "6段直线间隔和6段闭环，标记数一样吗？",
+    "predictionOptions": [
+      "不一样，闭环末点回到起点",
+      "一样，都有7个",
+      "直线只有5个"
+    ],
+    "discovery": [
+      "24÷4＝6得到的是间隔数。直线有7个端点；圆环末点回到起点，只有6个不同标记。"
+    ],
+    "symbols": [
+      "24÷4＝6（段）",
+      "直线：6＋1个点；闭环：6个不同点"
+    ],
+    "mission": "先数间隔，再检查末点是不是新位置。",
+    "retell": "6段拉直有7点，接成环后为什么最后一点不能再算一个新点？",
+    "observedEvidence": "按间隔走一遍，比较最后一点是不是起点。",
+    "whyQuestion": "6段拉直有7点，接成环后为什么最后一点不能再算一个新点？",
+    "counterexamplePrompt": "如果直绳两端不做标记，还能直接说一定有7个标记吗？",
+    "predictionFocus": "6段直线间隔和6段闭环，标记数一样吗？"
+  },
+  "workedExamples": [
+    {
+      "title": "同样6段，为什么标记数不同",
+      "steps": [
+        {
+          "math": "一根24米绳每4米一段。把它拉直，再首尾接成环，比较不同标记的个数。",
+          "why": "先用除法求段数，再从起点逐段走；每到一个位置，都问“这是新位置，还是已经数过的起点”。"
+        },
+        {
+          "math": "24÷4＝6得到的是间隔数。直线有7个端点；圆环末点回到起点，只有6个不同标记。",
+          "why": "用2段画最小图：直线是3个点，闭环是2个不同点。小图讲得通，再推广到6段。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "interval.line",
+      "action": "区分直线上的间隔数和端点数",
+      "scope": "两端都计数"
+    },
+    {
+      "id": "interval.loop",
+      "action": "识别环上末点与起点重合",
+      "scope": "首尾闭合"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U03",
+    "title": "毫米、分米和千米",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "20–30",
+    "notes": "实际测量、单位关系、长距离估计与整理。",
+    "sequence": [
+      "G3-U03-B01",
+      "G3-U03-B02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": [
+    {
+      "sceneId": "G3-U03-O01-interval",
+      "mode": "interval",
+      "title": "同样6段，为什么标记数不同",
+      "prompt": "一根24米绳每4米一段。把它拉直，再首尾接成环，比较不同标记的个数。",
+      "startMm": 0,
+      "endMm": 24000,
+      "spacingMm": 4000,
+      "closed": false,
+      "explanation": "24÷4＝6得到的是间隔数。直线有7个端点；圆环末点回到起点，只有6个不同标记。"
+    }
+  ]
+}

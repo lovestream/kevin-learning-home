@@ -1,0 +1,160 @@
+{
+  "lessonId": "G3-L04-B03",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "分割、拼补和换单位，面积怎样保持一致",
+  "shortTitle": "分割、拼补和换单位，面积怎样保…",
+  "question": "边长1分米的方纸，为什么能铺100个平方厘米，而不是10个？",
+  "subtitle": "两条方向都细分为10格，所以总单位数是10×10；图形分割后总面积也要按覆盖部分相加减。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-L04",
+  "recommendedPrerequisites": [
+    "G3-L04-B02；本课分次完成单位与拼补两组任务。"
+  ],
+  "relatedLessonIds": [
+    "G3-L04-B01",
+    "G3-L04-B02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "边长1分米的方纸，为什么能铺100个平方厘米，而不是10个？",
+    "predictQuestion": "1分米方纸分成厘米小格，只有10格吗？",
+    "predictionOptions": [
+      "只看一条边就知道",
+      "不是，两个方向各分10格",
+      "是，1分米等于10厘米"
+    ],
+    "discovery": [
+      "两条方向都细分为10格，所以总单位数是10×10；图形分割后总面积也要按覆盖部分相加减。"
+    ],
+    "symbols": [
+      "1分米＝10厘米",
+      "1平方分米＝10×10＝100平方厘米"
+    ],
+    "mission": "沿两个方向细分，检查铺满的方格数。",
+    "retell": "为什么1分米等于10厘米，1平方分米却包含100个平方厘米？",
+    "observedEvidence": "先在1分米方纸的两个方向各数10厘米，再比较剪角前后覆盖量。",
+    "whyQuestion": "为什么1分米等于10厘米，1平方分米却包含100个平方厘米？",
+    "counterexamplePrompt": "只数第一排10格，其他9排的面积去哪了？",
+    "predictionFocus": "1分米方纸分成厘米小格，只有10格吗？"
+  },
+  "storyVisual": {
+    "type": "unit-square",
+    "title": "边长1分米的方纸",
+    "caption": "每一小段是1厘米，每个小格是1平方厘米。两个方向都分成10段。",
+    "values": [
+      10,
+      10
+    ],
+    "labels": [
+      "1分米＝10厘米"
+    ]
+  },
+  "predictionVisual": {
+    "type": "unit-square",
+    "title": "边长1分米的方纸",
+    "caption": "每一小段是1厘米，每个小格是1平方厘米。两个方向都分成10段。",
+    "values": [
+      10,
+      10
+    ],
+    "labels": [
+      "1分米＝10厘米"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "8×5厘米长方形角上剪去3×2厘米小长方形，剩余面积与周长多少？",
+      "steps": [
+        {
+          "math": "40−6=34",
+          "why": "面积40−6=34。",
+          "expressionBefore": "40−6",
+          "operation": "=",
+          "expressionAfter": "34"
+        },
+        {
+          "math": "角上移走外边3和2，同时新增内凹边3和2，周长仍26。",
+          "why": "角上移走外边3和2，同时新增内凹边3和2，周长仍26。"
+        },
+        {
+          "math": "结论：面积34平方厘米，周长26厘米。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L04-B03-OBJ1",
+      "action": "解释相邻常用面积单位进率100，比较同面积/同周长图形。",
+      "scope": "解释相邻常用面积单位进率100，比较同面积/同周长图形。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L04",
+    "title": "图形的面积",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "52–64",
+    "notes": "面积与单位、长方正方面积、单位进率、分割补形、周长面积对照。",
+    "sequence": [
+      "G3-L04-B01",
+      "G3-L04-B02",
+      "G3-L04-B03"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L04-B03-MODEL1",
+      "family": "areaGrid",
+      "variant": "G3-L04-B03",
+      "title": "分割、拼补和换单位",
+      "prompt": "解释相邻常用面积单位进率100，比较同面积/同周长图形。",
+      "initialState": "1分米正方形，长宽各10厘米；另有8×5角剪3×2的卡。",
+      "learnerAction": "先沿两个方向细分10×10格；第二小次在角部剪下小矩形并描新边界。",
+      "observableChange": "1平方分米为100平方厘米；剪角后面积34、周长26，两种量变化不同。",
+      "question": "用10×10格解释100，并指出这里为什么不能只算一排。",
+      "wrongActionFeedback": "只写10时显示还未数的9行；把周长没变当面积没变时对照被剪掉6格。",
+      "guidance": [
+        {
+          "label": "1平方分米=100平方厘米",
+          "explanation": "1平方分米=100平方厘米，同理1平方米=100平方分米。"
+        },
+        {
+          "label": "剪去6平方厘米",
+          "explanation": "剪去6平方厘米，大矩形40还剩34。"
+        },
+        {
+          "label": "周长应重新描外圈",
+          "explanation": "周长应重新描外圈，不能从面积变化推断周长变化。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "分割、拼补和换单位，面积怎样保持一致",
+        "1分米方纸画10列10行；另画长8宽5大矩形，角上剪去长3宽2矩形。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "cut-area",
+        "title": "移动剪下的一块，面积与周长一起看",
+        "version": "textbook.v1",
+        "rows": 5,
+        "cols": 8,
+        "cutRows": 2,
+        "cutCols": 3
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

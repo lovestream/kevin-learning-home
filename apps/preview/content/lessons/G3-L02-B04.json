@@ -1,0 +1,172 @@
+{
+  "lessonId": "G3-L02-B04",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "商里有0，也不能漏掉位置",
+  "shortTitle": "商里有0，也不能漏掉位置",
+  "question": "408本书平分4班，十位没有书可分，答案为何不能写12？",
+  "subtitle": "商的位值位置对应每人所得的百、十、个；没有十也必须记录。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-L02",
+  "recommendedPrerequisites": [
+    "G3-L02-B03。"
+  ],
+  "relatedLessonIds": [
+    "G3-L02-B01",
+    "G3-L02-B02",
+    "G3-L02-B03",
+    "G3-L02-B05",
+    "G3-L02-B06"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "408本书平分4班，十位没有书可分，答案为何不能写12？",
+    "predictQuestion": "408本分4班，十位没有书，可以漏写商的十位吗？",
+    "predictionOptions": [
+      "不可以，要用0占位",
+      "可以直接写12",
+      "可以把个位移到十位"
+    ],
+    "discovery": [
+      "商的位值位置对应每人所得的百、十、个；没有十也必须记录。"
+    ],
+    "symbols": [
+      "408÷4＝102",
+      "102表示1个百、0个十、2个一"
+    ],
+    "mission": "在每班的百、十、个位上记录所得数量。",
+    "retell": "没有十可分，为什么仍要把商的十位0写出来？",
+    "observedEvidence": "依次看每班的百、十、个位，十位留在原来的位置。",
+    "whyQuestion": "没有十可分，为什么仍要把商的十位0写出来？",
+    "counterexamplePrompt": "用12×4验回总数，能回到408本吗？",
+    "predictionFocus": "408本分4班，十位没有书，可以漏写商的十位吗？"
+  },
+  "storyVisual": {
+    "type": "groups",
+    "title": "408本书，准备平分给4班",
+    "caption": "这里用数位记录总数：4个百、0个十、8个一。四个班的分配框还空着。",
+    "values": [
+      4,
+      408
+    ],
+    "labels": [
+      "本书"
+    ]
+  },
+  "predictionVisual": {
+    "type": "groups",
+    "title": "408本书，准备平分给4班",
+    "caption": "这里用数位记录总数：4个百、0个十、8个一。四个班的分配框还空着。",
+    "values": [
+      4,
+      408
+    ],
+    "labels": [
+      "本书"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "408÷4是多少？用乘法检查102和12。",
+      "steps": [
+        {
+          "math": "4×102=408",
+          "why": "4×102=408。",
+          "expressionBefore": "4×102",
+          "operation": "=",
+          "expressionAfter": "408"
+        },
+        {
+          "math": "4×12=48",
+          "why": "4×12=48，与原总数不同。",
+          "expressionBefore": "4×12",
+          "operation": "=",
+          "expressionAfter": "48"
+        },
+        {
+          "math": "结论：102。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L02-B04-OBJ1",
+      "action": "掌握中间或末尾商0与0除以非零数，避免除以0。",
+      "scope": "掌握中间或末尾商0与0除以非零数，避免除以0。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L02",
+    "title": "除数是一位数的除法",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "10–38",
+    "notes": "口算估算、竖式与余数验算、商含0、连乘连除、归一归总、整理；和三上混合运算衔接。",
+    "sequence": [
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L02-B05",
+      "G3-L02-B06"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L02-B04-MODEL1",
+      "family": "division",
+      "variant": "G3-L02-B04",
+      "title": "商里有0",
+      "prompt": "掌握中间或末尾商0与0除以非零数，避免除以0。",
+      "initialState": "408个单位用4百0十8一表示，4人框，商数位百十个固定。",
+      "learnerAction": "依次分百、十、个，在十位显式放0，再乘回检查。",
+      "observableChange": "每人102；12×4=48不能回到408。",
+      "question": "102与12的区别，怎样用乘法验算立刻发现？",
+      "wrongActionFeedback": "跳过十位时不挤压位置，要求说明这一列分得几个十。",
+      "guidance": [
+        {
+          "label": "408÷4=102",
+          "explanation": "408÷4=102，0保留十位。"
+        },
+        {
+          "label": "420÷4=105",
+          "explanation": "420÷4=105，是剩余低位合并后再分。"
+        },
+        {
+          "label": "0÷非零数=0",
+          "explanation": "0÷非零数=0；不能把规则倒过来写成除以0。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "商里有0，也不能漏掉位置",
+        "位值表：4个百分4份各1百，0个十分4份各0十，8个一各2一。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "division",
+        "title": "408本书按百、十、个分给4班",
+        "version": "textbook.v1",
+        "total": 408,
+        "bank": [
+          4,
+          0,
+          8
+        ],
+        "groups": 4
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

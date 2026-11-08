@@ -1,0 +1,22 @@
+{
+  "status": "PASS_ACTUAL_NAS_STATIC_FILES_IDENTICAL",
+  "fileCount": 11,
+  "seal": {
+    "schemaVersion": 1,
+    "buildSha": "020ceb9a6792a18e8d020914ec4250b631ef13d0",
+    "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+    "files": {
+      "/.vite/manifest.json": "d062826bde49cabf35748051633065df375eb11e313954be494cab16c1907f3b",
+      "/THIRD-PARTY-NOTICES.txt": "ccf7b2dd8f5e7175c7653c6fad3eb7459f27e97f3e04b190daa5d9cd050e050f",
+      "/assets/CoreWorkbench-BhX3VX24.css": "01f26493bc8f2163ab74db850d02951f9fdaf3b851bdf3f13261be0485978876",
+      "/assets/CoreWorkbench-EBii3oju.js": "3800fbcf94df0f4b17e123daaa8b787a02e83af9272e764950e423259040468f",
+      "/assets/index-CoZJVK3W.js": "a651020980dbf61a4a185f2c2bc7bd7afd0f08e729c96d9309097603218b14fc",
+      "/assets/index-UtDNBjVc.css": "8666c90ee8aefb1f8d59044ada04b8992a7f9c40226ba20a6bf5e5787b22ceb7",
+      "/index.html": "1579c45476400169f4ea3e5634c581a309accc7fd88842cc7dafdc31dde97355",
+      "/math-paper-folding/template-cube-1.svg": "e66f2602fa4ce4b19c66cfe696b516a787be3a345d86f128a30bbb153fbb598d",
+      "/math-paper-folding/template-cube-2.svg": "a044ac55cef35eb8c879178cbaa501632db18f226ad174efc9cf08518c58f364",
+      "/math-paper-folding/template-cube-3.svg": "8c19c8ee451fca20c7c762367f93b79ff216ad1cccfc7991e9918967a97e09a7",
+      "/math-paper-folding/template-rectangular-box.svg": "f470fcc5f42c5cee6af80b7ba4a2dcc5cfc6936bda61f81073acb2ea04c98585"
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "lessonId": "G3-L01-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "对折后能重合，才是轴对称",
+  "shortTitle": "对折后能重合，才是轴对称",
+  "question": "剪一张左右两边相同的窗花，怎样少画一半又保证形状一致？",
+  "subtitle": "对折使对应两边重合，提供可操作的判定；看起来均衡不等于数学对称。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-L01",
+  "recommendedPrerequisites": [
+    "三上线和角、常见图形。"
+  ],
+  "relatedLessonIds": [
+    "G3-L01-B02"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "Kevin想剪左右相同的窗花。先用正方形、长方形纸试一试：沿选定的线对折，两边能完全重合吗？弄清后再用同样的方法检验窗花。",
+    "predictQuestion": "左右看着差不多，就一定对称吗？",
+    "predictionOptions": [
+      "一定对称",
+      "只比两边面积",
+      "要对折后对应部分重合"
+    ],
+    "discovery": [
+      "对折使对应两边重合，提供可操作的判定；看起来均衡不等于数学对称。"
+    ],
+    "symbols": [
+      "沿对称轴对折",
+      "对应点、对应边重合"
+    ],
+    "mission": "用对折检验窗花两边的对应关系。",
+    "retell": "为什么两边面积一样，还不能证明轴对称？",
+    "observedEvidence": "对照折痕两侧对应的点和边，观察对折后是否重合。",
+    "whyQuestion": "为什么两边面积一样，还不能证明轴对称？",
+    "counterexamplePrompt": "把长方形沿对角线折，面积平分了，所有边都重合了吗？",
+    "predictionFocus": "左右看着差不多，就一定对称吗？"
+  },
+  "storyVisual": {
+    "type": "symmetry",
+    "title": "沿中间折痕对折的窗花",
+    "caption": "虚线是准备对折的位置。两侧的图案是否能重合，要通过对折来检查。",
+    "values": [],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "symmetry",
+    "title": "沿中间折痕对折的窗花",
+    "caption": "虚线是准备对折的位置。两侧的图案是否能重合，要通过对折来检查。",
+    "values": [],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "一个非正方形的长方形，沿对角线折，两半会完全重合吗？",
+      "steps": [
+        {
+          "math": "长边与短边长度不同。",
+          "why": "长边与短边长度不同。"
+        },
+        {
+          "math": "对角线折后对应边不能全部重合。",
+          "why": "对角线折后对应边不能全部重合。"
+        },
+        {
+          "math": "结论：不能；它有横、竖中线两条对称轴。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L01-B01-OBJ1",
+      "action": "用折叠判断对称，并辨认常见图形对称轴。",
+      "scope": "用折叠判断对称，并辨认常见图形对称轴。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L01",
+    "title": "生活中的运动现象",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "1–9",
+    "notes": "轴对称、平移、旋转与剪纸实践；暂不要求坐标化精确作图。",
+    "sequence": [
+      "G3-L01-B01",
+      "G3-L01-B02"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L01-B01-MODEL1",
+      "family": "transform",
+      "variant": "G3-L01-B01",
+      "title": "对折后能重合",
+      "prompt": "用折叠判断对称，并辨认常见图形对称轴。",
+      "initialState": "正方形与长宽不等的长方形，候选折痕含中线和对角线。",
+      "learnerAction": "逐条折叠或开透明叠合，记录能否全图重合。",
+      "observableChange": "正方形4条、长方形2条；只面积相同的两半未必逐点重合。",
+      "question": "为什么面积各一半还不能证明轴对称？",
+      "wrongActionFeedback": "仅比较面积时标出不能重合的边角，提醒判断全图对应。",
+      "guidance": [
+        {
+          "label": "找一条候选折线",
+          "explanation": "找一条候选折线。"
+        },
+        {
+          "label": "折后检查整个图形",
+          "explanation": "折后检查整个图形，不只检查中心一点。"
+        },
+        {
+          "label": "一条成功不能说明只有一条",
+          "explanation": "一条成功不能说明只有一条，旋转纸继续寻找。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "对折后能重合，才是轴对称",
+        "沿候选直线折纸，检查边与角是否逐处重合；正方形与非正方形长方形对比。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "paper-fold",
+        "title": "折上、打孔、展开看对应位置",
+        "version": "textbook.v1"
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

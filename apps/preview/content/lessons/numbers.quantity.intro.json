@@ -1,0 +1,100 @@
+{
+  "lessonId": "numbers.quantity.intro",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "野餐前，要带几个苹果？",
+  "shortTitle": "为什么需要数",
+  "question": "7个饭盒，每盒放1个苹果，要拿几个才够？",
+  "subtitle": "一个对一个、不漏不重地数；摆开以后，数量会变吗？",
+  "grade": [
+    1,
+    2,
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "N01",
+  "recommendedPrerequisites": [],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 18,
+  "widget": "quantity",
+  "prerequisiteNote": "可以从这里开始；已经熟悉时也可以直接做练习。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "桌上有7个饭盒。每个饭盒都要放1个苹果。Kevin 要去厨房拿苹果，可是把整张桌子搬过去很不方便。",
+    "predictQuestion": "把7个苹果摆得更开，就有更多苹果吗？",
+    "predictionOptions": [
+      "没法知道",
+      "没有，苹果没添没减",
+      "有，排得更长"
+    ],
+    "discovery": [
+      "一个物体只数一次，最后数到的数记录总量；只挪动位置不会改变总量。"
+    ],
+    "symbols": [
+      "一个饭盒对应一个苹果",
+      "摆放位置改变，数量不变"
+    ],
+    "mission": "一一对应饭盒与苹果，记录最后的总数。",
+    "retell": "苹果排得更长，为什么数量仍然是7个？",
+    "observedEvidence": "每个饭盒对应一个苹果，再把苹果摆开看看。",
+    "whyQuestion": "苹果排得更长，为什么数量仍然是7个？",
+    "counterexamplePrompt": "同一个苹果数两次，会让记录的数与实际总数有什么差别？",
+    "predictionFocus": "把7个苹果摆得更开，就有更多苹果吗？"
+  },
+  "contextDiagram": "picnicCount",
+  "workedExamples": [
+    {
+      "title": "5个杯子，每杯配1根吸管",
+      "steps": [
+        {
+          "math": "需要5根吸管",
+          "why": "杯子和吸管一个对一个，正好配完。杯子大一点或小一点，都不改变杯子的个数。"
+        }
+      ]
+    },
+    {
+      "title": "3个苹果与第3个苹果",
+      "steps": [
+        {
+          "math": "3个：在问数量",
+          "why": "要拿出三个苹果，一共拿3个。"
+        },
+        {
+          "math": "第3个：在找位置",
+          "why": "从说好的起点开始数，只指出排在第三位置的那1个苹果。"
+        }
+      ]
+    },
+    {
+      "title": "3号柜子",
+      "steps": [
+        {
+          "math": "3是柜子的编号",
+          "why": "“3号”用来找到这个柜子，并没有告诉我们里面有3样东西。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "quantity.pair",
+      "action": "给7个饭盒逐一配苹果，不漏不重",
+      "scope": "1到10的一一对应"
+    },
+    {
+      "id": "quantity.conserve",
+      "action": "改变间距后用配对解释数量不变",
+      "scope": "物体没有增减"
+    },
+    {
+      "id": "quantity.role",
+      "action": "区分几个、第几个和编号",
+      "scope": "生活中的数"
+    }
+  ],
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": []
+}

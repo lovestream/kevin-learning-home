@@ -1,0 +1,229 @@
+{
+  "lessonId": "G3-U04-B03",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "连续进位也只是反复“满十换一”",
+  "shortTitle": "连续进位也只是反复“满十换一”",
+  "question": "仓库里有8箱饮料，每箱147瓶。一共有多少瓶？数小棒时，满10个一可以换成1个十；如果十位也满10，接着怎么办？",
+  "subtitle": "相同的十进制交换可以连续发生；一次进位不能替代所有数位的进位。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U04",
+  "recommendedPrerequisites": [
+    "G3-U04-B02。"
+  ],
+  "relatedLessonIds": [
+    "G3-U04-B01",
+    "G3-U04-B02",
+    "G3-U04-B04",
+    "G3-U04-B05"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "仓库里有8箱饮料，每箱147瓶。一共有多少瓶？数小棒时，满10个一可以换成1个十；如果十位也满10，接着怎么办？",
+    "predictQuestion": "个位换出的十放到十位，十位又满十怎么办？",
+    "predictionOptions": [
+      "只允许进位一次",
+      "忽略刚换来的十",
+      "继续换成百"
+    ],
+    "discovery": [
+      "相同的十进制交换可以连续发生；一次进位不能替代所有数位的进位。"
+    ],
+    "symbols": [
+      "147×8",
+      "10个一＝1个十；10个十＝1个百"
+    ],
+    "mission": "用8箱各147瓶，说明每次满十换一的来源。",
+    "retell": "10个十换1个百，为什么饮料总量没有变？",
+    "observedEvidence": "跟踪个位换出的十，再看十位换出的百。",
+    "whyQuestion": "10个十换1个百，为什么饮料总量没有变？",
+    "counterexamplePrompt": "只完成个位进位就停下，十位还有超过9个十吗？",
+    "predictionFocus": "个位换出的十放到十位，十位又满十怎么办？"
+  },
+  "storyVisual": {
+    "type": "groups",
+    "title": "8箱饮料，每箱147瓶",
+    "caption": "图是分组示意，每箱标的是瓶数，没有把147瓶缩成一个瓶子的数量。",
+    "values": [
+      8,
+      147
+    ],
+    "labels": [
+      "瓶"
+    ]
+  },
+  "predictionVisual": {
+    "type": "groups",
+    "title": "8箱饮料，每箱147瓶",
+    "caption": "图是分组示意，每箱标的是瓶数，没有把147瓶缩成一个瓶子的数量。",
+    "values": [
+      8,
+      147
+    ],
+    "labels": [
+      "瓶"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "147×8是多少？",
+      "steps": [
+        {
+          "math": "7×8=56",
+          "why": "7×8=56，写6进5。",
+          "expressionBefore": "7×8",
+          "operation": "=",
+          "expressionAfter": "56"
+        },
+        {
+          "math": "4×8+5=37",
+          "why": "4×8+5=37，写7进3。",
+          "expressionBefore": "4×8+5",
+          "operation": "=",
+          "expressionAfter": "37"
+        },
+        {
+          "math": "1×8+3=11",
+          "why": "1×8+3=11，写11。",
+          "expressionBefore": "1×8+3",
+          "operation": "=",
+          "expressionAfter": "11"
+        },
+        {
+          "math": "结论：1176。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U04-B03-OBJ1",
+      "action": "正确计算两三位数乘一位数的连续进位并核查。",
+      "scope": "正确计算两三位数乘一位数的连续进位并核查。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U04",
+    "title": "多位数乘一位数",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "39–56",
+    "notes": "口算、竖式、连续进位、零、估算与解决问题；分配律以拆分模型体验。",
+    "sequence": [
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-U04-B05"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U04-B03-MODEL1",
+      "family": "placeValue",
+      "variant": "G3-U04-B03",
+      "title": "连续进位也只是反复“满十换一”",
+      "prompt": "正确计算两三位数乘一位数的连续进位并核查。",
+      "initialState": "8箱饮料，每箱147瓶，一共多少瓶？",
+      "learnerAction": "用8箱各147瓶，说明每次满十换一的来源。",
+      "observableChange": "跟踪个位换出的十，再看十位换出的百。",
+      "question": "10个十换1个百，为什么饮料总量没有变？",
+      "wrongActionFeedback": "漏进位时只回放上一列交换，问这5个十/3个百去哪了。",
+      "guidance": [
+        {
+          "label": "先算个位并进位",
+          "explanation": "先算个位并进位。"
+        },
+        {
+          "label": "十位乘积加进位后",
+          "explanation": "十位乘积加进位后，再判断是否满十。"
+        },
+        {
+          "label": "百位同理",
+          "explanation": "百位同理，用接近的整百数检查结果大小。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "连续进位也只是反复“满十换一”",
+        "位值表列百、十、个；每列的总量包括乘积与从右边来的进位。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "product-place",
+        "title": "从个位开始，连续把十个换成一个",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            147,
+            8
+          ],
+          [
+            68,
+            7
+          ],
+          [
+            186,
+            6
+          ],
+          [
+            249,
+            4
+          ],
+          [
+            375,
+            3
+          ],
+          [
+            158,
+            6
+          ]
+        ],
+        "mode": "carry",
+        "contexts": [
+          {
+            "story": "8箱饮料，每箱147瓶，一共多少瓶？",
+            "unit": "瓶",
+            "group": "箱"
+          },
+          {
+            "story": "7箱饮料，每箱68瓶，一共多少瓶？",
+            "unit": "瓶",
+            "group": "箱"
+          },
+          {
+            "story": "6箱饮料，每箱186瓶，一共多少瓶？",
+            "unit": "瓶",
+            "group": "箱"
+          },
+          {
+            "story": "4箱饮料，每箱249瓶，一共多少瓶？",
+            "unit": "瓶",
+            "group": "箱"
+          },
+          {
+            "story": "3箱饮料，每箱375瓶，一共多少瓶？",
+            "unit": "瓶",
+            "group": "箱"
+          },
+          {
+            "story": "6条纸带各长158毫米，首尾相接，不重叠、不留缝。总长多少毫米？每次满十换一是什么意思？",
+            "unit": "毫米",
+            "group": "条"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

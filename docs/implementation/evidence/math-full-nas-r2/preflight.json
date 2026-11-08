@@ -1,0 +1,80 @@
+{
+  "status": "READ_ONLY_PREFLIGHT_PASS",
+  "userOverride": "2026-10-25 explicitly requested LAN HTTP; no HTTPS/certificate/Tailscale changes",
+  "oldTLS": {
+    "Id": "a1629cb9635ed627aa927b969e12cf37ec0a827b9c5469f9ad5d35c1c3173f85",
+    "Name": "/klh-math-trial-20261024-8f228391-tls",
+    "Image": "sha256:b7d952cb310aab5a52d7efadf1b38417df17f121e2a172140b84e2cda944fdd5",
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/volume2/homes/admin/klh-math-trial-20261024-8f228391/tls",
+        "Destination": "/tls",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/volume2/homes/admin/klh-math-trial-20261024-8f228391/code/tls-proxy.mjs",
+        "Destination": "/trial-proxy.mjs",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ],
+    "status": "running",
+    "startedAt": "2026-10-24T14:16:18.02772882Z",
+    "restartCount": 0,
+    "ports": {
+      "8443/tcp": [
+        {
+          "HostIp": "192.168.2.100",
+          "HostPort": "38444"
+        }
+      ]
+    }
+  },
+  "oldApp": {
+    "Id": "188bcd47bf4b8781376b5cccbf0c8c38752ea261ca34ed8385ba0ed2e813d49c",
+    "Name": "/klh-math-trial-20261024-8f228391-app",
+    "Image": "sha256:b7d952cb310aab5a52d7efadf1b38417df17f121e2a172140b84e2cda944fdd5",
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Source": "/volume2/homes/admin/klh-math-trial-20261024-8f228391/data",
+        "Destination": "/data",
+        "Mode": "rw",
+        "RW": true,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/volume2/homes/admin/klh-math-trial-20261024-8f228391/media",
+        "Destination": "/media",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      },
+      {
+        "Type": "bind",
+        "Source": "/volume2/homes/admin/klh-math-trial-20261024-8f228391/content",
+        "Destination": "/content",
+        "Mode": "ro",
+        "RW": false,
+        "Propagation": "rprivate"
+      }
+    ],
+    "status": "running",
+    "startedAt": "2026-10-24T14:17:38.238323971Z",
+    "restartCount": 0,
+    "ports": {}
+  },
+  "protectedContainers": 11,
+  "protectedSnapshotSha256": "20afc615bb3d60468ba9517237c873595c534879646fe7f7619e96e64f0285f8",
+  "oldSyntheticAndTLSFilesSha256": "082411153695e65a0d45d3ccae4f6eb8735880829ca7dd4cb52621715a0df04c",
+  "localFilesystem": "ext2/ext3",
+  "remoteWritesPerformed": false,
+  "canonicalProtectedContainersSha256": "be40f79c8587326f2e693f32ad96866939008ab97685f249fe00de0dd20e48ee",
+  "canonicalHashNote": "Canonicalized by mount destination; original recorded fingerprint retained. All metadata values preserved."
+}

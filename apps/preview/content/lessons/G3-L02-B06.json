@@ -1,0 +1,253 @@
+{
+  "lessonId": "G3-L02-B06",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-17.1",
+  "status": "draft",
+  "title": "归一与归总：先找哪个量没有变",
+  "shortTitle": "归一与归总：先找哪个量没有变",
+  "question": "4本同价本子24元，买7本要多少钱？另一问题：同一批书每箱6本装4箱，改每箱8本需几箱？",
+  "subtitle": "第一题保持每份量，第二题保持总量；中间量决定运算顺序。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-L02",
+  "recommendedPrerequisites": [
+    "G3-L02-B05。"
+  ],
+  "relatedLessonIds": [
+    "G3-L02-B01",
+    "G3-L02-B02",
+    "G3-L02-B03",
+    "G3-L02-B04",
+    "G3-L02-B05"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "4本同价本子24元，买7本要多少钱？另一问题：同一批书每箱6本装4箱，改每箱8本需几箱？",
+    "predictQuestion": "4本24元，要买7本，先找什么？",
+    "predictionOptions": [
+      "把24乘7",
+      "每本的价格",
+      "7本比4本多多少本就够了"
+    ],
+    "discovery": [
+      "第一题保持每份量，第二题保持总量；中间量决定运算顺序。"
+    ],
+    "symbols": [
+      "24÷4×7",
+      "同价买卖保持单价；重新装箱保持总数"
+    ],
+    "mission": "先求不变的单价；换分装方式时检查总量不变。",
+    "retell": "为什么两题第一步不同：一题求单价，另一题求总量？",
+    "observedEvidence": "买本子先看每本价格，换装箱先看全部本数。",
+    "whyQuestion": "为什么两题第一步不同：一题求单价，另一题求总量？",
+    "counterexamplePrompt": "改每箱本数时，总本数也跟着乘大，还是在装同一批书吗？",
+    "predictionFocus": "4本24元，要买7本，先找什么？"
+  },
+  "storyVisual": {
+    "type": "invariant-bars",
+    "title": "买本子和换箱子，分别什么不变？",
+    "caption": "上图同价买卖，单价相同；下图只换装法，书的总量不变。不要混成一件事。",
+    "values": [
+      4,
+      24,
+      7,
+      6,
+      8
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "invariant-bars",
+    "title": "买本子和换箱子，分别什么不变？",
+    "caption": "上图同价买卖，单价相同；下图只换装法，书的总量不变。不要混成一件事。",
+    "values": [
+      4,
+      24,
+      7,
+      6,
+      8
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "4本同价本子24元，7本多少钱？若买得越多越便宜，还能照此算吗？",
+      "steps": [
+        {
+          "math": "24÷4=6",
+          "why": "单价24÷4=6元。",
+          "expressionBefore": "24÷4",
+          "operation": "=",
+          "expressionAfter": "6"
+        },
+        {
+          "math": "同价条件下7本42元；打折规则改变则需新信息。",
+          "why": "同价条件下7本42元；打折规则改变则需新信息。"
+        },
+        {
+          "math": "结论：同价时42元；有额外折扣时不能直接推算。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-L02-B06-OBJ1",
+      "action": "区分单价不变和总量不变，选择先求每份还是总量。",
+      "scope": "区分单价不变和总量不变，选择先求每份还是总量。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-L02",
+    "title": "除数是一位数的除法",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "10–38",
+    "notes": "口算估算、竖式与余数验算、商含0、连乘连除、归一归总、整理；和三上混合运算衔接。",
+    "sequence": [
+      "G3-L02-B01",
+      "G3-L02-B02",
+      "G3-L02-B03",
+      "G3-L02-B04",
+      "G3-L02-B05",
+      "G3-L02-B06"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-L02-B06-MODEL1",
+      "family": "division",
+      "variant": "G3-L02-B06",
+      "title": "归一与归总：先找哪个量没有变",
+      "prompt": "区分单价不变和总量不变，选择先求每份还是总量。",
+      "initialState": "4本同价本子24元，买7本多少钱？",
+      "learnerAction": "先求不变的单价；换分装方式时检查总量不变。",
+      "observableChange": "买本子先看每本价格，换装箱先看全部本数。",
+      "question": "为什么两题第一步不同：一题求单价，另一题求总量？",
+      "wrongActionFeedback": "两题都先除任意数时要求指出保持哪一列，若折扣条件变则暂停直接比例推算。",
+      "guidance": [
+        {
+          "label": "同价：24÷4=6元一本",
+          "explanation": "同价：24÷4=6元一本，再6×7。"
+        },
+        {
+          "label": "总量不变：6×4=24本",
+          "explanation": "总量不变：6×4=24本，再24÷8。"
+        },
+        {
+          "label": "先判断条件",
+          "explanation": "先判断条件，不靠“照这样”三个字机械选择。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "归一与归总：先找哪个量没有变",
+        "表格列数量、每份、总量；把“本次不变的那一列”明确圈出。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "invariant-table",
+        "title": "数量变了，先找表里哪一项不变",
+        "version": "textbook.core.v1",
+        "cases": [
+          [
+            4,
+            24,
+            7,
+            6,
+            8
+          ],
+          [
+            3,
+            18,
+            5,
+            6,
+            9
+          ],
+          [
+            5,
+            40,
+            3,
+            8,
+            10
+          ],
+          [
+            6,
+            30,
+            9,
+            5,
+            10
+          ],
+          [
+            4,
+            28,
+            8,
+            7,
+            14
+          ],
+          [
+            3,
+            27,
+            5,
+            9,
+            3
+          ]
+        ],
+        "mode": "invariant",
+        "contexts": [
+          {
+            "story": "4本同价本子24元，买7本多少钱？",
+            "alternate": "同一批书每箱6本装4箱，改每箱8本，要几箱？",
+            "unit": "本",
+            "outer": "箱",
+            "quantity": "本"
+          },
+          {
+            "story": "3本同价本子18元，买5本多少钱？",
+            "alternate": "同一批书每箱6本装3箱，改每箱9本，要几箱？",
+            "unit": "本",
+            "outer": "箱",
+            "quantity": "本"
+          },
+          {
+            "story": "5本同价本子40元，买3本多少钱？",
+            "alternate": "同一批书每箱8本装5箱，改每箱10本，要几箱？",
+            "unit": "本",
+            "outer": "箱",
+            "quantity": "本"
+          },
+          {
+            "story": "6本同价本子30元，买9本多少钱？",
+            "alternate": "同一批书每箱5本装6箱，改每箱10本，要几箱？",
+            "unit": "本",
+            "outer": "箱",
+            "quantity": "本"
+          },
+          {
+            "story": "4本同价本子28元，买8本多少钱？",
+            "alternate": "同一批书每箱7本装4箱，改每箱14本，要几箱？",
+            "unit": "本",
+            "outer": "箱",
+            "quantity": "本"
+          },
+          {
+            "story": "3包同价饼干27元，买5包多少钱？先找不变的量。",
+            "alternate": "3桶米，每桶9千克，改每桶3千克，要几桶？与买饼干的“不变”一样吗？",
+            "unit": "包",
+            "outer": "桶",
+            "quantity": "千克"
+          }
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

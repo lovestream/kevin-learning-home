@@ -1,0 +1,104 @@
+{
+  "lessonId": "G3-U03-E01",
+  "contentVersion": "2026-10-18.1",
+  "editorialRevision": "2026-10-18.1",
+  "status": "draft",
+  "title": "木板搭接：相加以后，哪一段被算了两次",
+  "shortTitle": "搭接与重叠去重",
+  "question": "30厘米和25厘米两块木板搭在一起，为什么端到端不是55厘米？",
+  "subtitle": "从读单件长度提升到组合长度：拼接后的两端距离＝各段长度之和−重复计算的重叠长度。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "enhancement",
+  "parentUnitId": "G3-U03",
+  "recommendedPrerequisites": [
+    "会做百以内加减",
+    "知道1厘米＝10毫米"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 24,
+  "widget": "lengthWorkbench",
+  "prerequisiteNote": "可以直接进入。单位写在题目和输入框旁，不需要另外选择单位。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "甲木板30厘米、乙木板25厘米，开始重叠8厘米。两块搭接后，从最左端到最右端长多少？再拖动乙板，搭接变多或变少，总长怎样变化？",
+    "predictQuestion": "搭接部分在30＋25里面被算了几次？",
+    "predictionOptions": [
+      "1次，不用减",
+      "2次，要减掉两次",
+      "2次，要减掉多算的一次"
+    ],
+    "discovery": [
+      "先把材料相加，再把重复计算的搭接段减一次；搭得越多，伸出去的总长越短。"
+    ],
+    "symbols": [
+      "总长＝两块板长的和−搭接长度",
+      "材料没有变长，搭得越多，端到端越短"
+    ],
+    "mission": "指出两块板、搭接段与拼好后的两端。",
+    "retell": "材料30＋25没变，为什么搭得越多端到端越短？",
+    "observedEvidence": "指着重叠段，再找拼好后最左与最右的端点。",
+    "whyQuestion": "材料30＋25没变，为什么搭得越多端到端越短？",
+    "counterexamplePrompt": "把重叠8厘米减两次，会把已保留的一段也删掉吗？",
+    "predictionFocus": "搭接部分在30＋25里面被算了几次？"
+  },
+  "workedExamples": [
+    {
+      "title": "两块木板搭接实验",
+      "steps": [
+        {
+          "math": "甲板30厘米、乙板25厘米。拖动乙板，观察“材料总长”不变时，端到端长度怎样变化。",
+          "why": "先用两种颜色标出甲板、乙板和它们共同盖住的区域，再确认题目问木料合计还是最外两端的距离。"
+        },
+        {
+          "math": "先把材料相加，再把重复计算的搭接段减一次；搭得越多，伸出去的总长越短。",
+          "why": "拖动乙板：重叠每增加1厘米，端到端就减少1厘米；图形变化和“相加后减重叠”必须同步。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "overlap.direct",
+      "action": "从材料总长中减去重叠段",
+      "scope": "无三重重叠的直线搭接"
+    },
+    {
+      "id": "overlap.inverse",
+      "action": "由两端距离和已知条件倒求接头或单板长度",
+      "scope": "等长接头或等长木板，只有一个未知量"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U03",
+    "title": "毫米、分米和千米",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "20–30",
+    "notes": "实际测量、单位关系、长距离估计与整理。",
+    "sequence": [
+      "G3-U03-B01",
+      "G3-U03-B02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": [
+    {
+      "sceneId": "G3-U03-E01-board",
+      "mode": "boards",
+      "title": "两块木板搭接实验",
+      "prompt": "甲板30厘米、乙板25厘米。拖动乙板，观察“材料总长”不变时，端到端长度怎样变化。",
+      "pieceLengthsMm": [
+        300,
+        250
+      ],
+      "overlapsMm": [
+        80
+      ],
+      "explanation": "先把材料相加，再把重复计算的搭接段减一次；搭得越多，伸出去的总长越短。"
+    }
+  ]
+}

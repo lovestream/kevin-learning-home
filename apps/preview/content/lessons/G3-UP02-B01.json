@@ -1,0 +1,155 @@
+{
+  "lessonId": "G3-UP02-B01",
+  "contentVersion": "2026-10-09.4",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "数字有时表示身份，而不是多少",
+  "shortTitle": "数字有时表示身份，而不是多少",
+  "question": "给图书馆每个书架的书贴号码，怎样避免两本书同号？",
+  "subtitle": "编码把位置和顺序组织起来，目的在于查找与区分，不是做四则运算。",
+  "grade": [
+    3
+  ],
+  "strand": "logic",
+  "track": "foundation",
+  "parentUnitId": "G3-UP02",
+  "recommendedPrerequisites": [
+    "乘法和系统记录。"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "给图书馆每个书架的书贴号码，怎样避免两本书同号？",
+    "predictQuestion": "书的编号相邻，能把编号相加求书数吗？",
+    "predictionOptions": [
+      "能，编号就是本数",
+      "编号越大书越多",
+      "不能，编号表示位置或身份"
+    ],
+    "discovery": [
+      "编码把位置和顺序组织起来，目的在于查找与区分，不是做四则运算。"
+    ],
+    "symbols": [
+      "书架号—层号—格号",
+      "编号用于查找；数量用于计数"
+    ],
+    "mission": "给每个位置一个不重复、能找到的地址。",
+    "retell": "编号为什么能帮助找位置，却不能直接用来求图书本数？",
+    "observedEvidence": "改变架、层、格字段，看地址指向哪里。",
+    "whyQuestion": "编号为什么能帮助找位置，却不能直接用来求图书本数？",
+    "counterexamplePrompt": "两格用同一编号，还能只凭编号找到唯一位置吗？",
+    "predictionFocus": "书的编号相邻，能把编号相加求书数吗？"
+  },
+  "storyVisual": {
+    "type": "shelves",
+    "title": "书架的位置可以变成地址",
+    "caption": "示意一个书架的4层、每层8格。编号表示位置，不表示这里有多少本书。",
+    "values": [
+      4,
+      8
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "shelves",
+    "title": "书架的位置可以变成地址",
+    "caption": "示意一个书架的4层、每层8格。编号表示位置，不表示这里有多少本书。",
+    "values": [
+      4,
+      8
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "有3个架子，每架4层，每层最多8本。用架-层-本编号，最多能区分几本？",
+      "steps": [
+        {
+          "math": "4×8=32",
+          "why": "每架4×8=32本。",
+          "expressionBefore": "4×8",
+          "operation": "=",
+          "expressionAfter": "32"
+        },
+        {
+          "math": "3×32=96",
+          "why": "3×32=96本，三个字段联合区分身份。",
+          "expressionBefore": "3×32",
+          "operation": "=",
+          "expressionAfter": "96"
+        },
+        {
+          "math": "结论：96本；例如02-03-05定位第2架第3层第5本。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-UP02-B01-OBJ1",
+      "action": "设计不重复、可解释的编码，区分标识与数量。",
+      "scope": "设计不重复、可解释的编码，区分标识与数量。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-UP02",
+    "title": "数字编码",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "57–60",
+    "notes": "读编码、设计规则、检验唯一性。",
+    "sequence": [
+      "G3-UP02-B01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-UP02-B01-MODEL1",
+      "family": "coding",
+      "variant": "G3-UP02-B01",
+      "title": "数字有时表示身份",
+      "prompt": "设计不重复、可解释的编码，区分标识与数量。",
+      "initialState": "3架4层8格的虚拟书架，字段架-层-格，例02-03-05。",
+      "learnerAction": "按编号定位，再给另一格编号并检查冲突。",
+      "observableChange": "每个三字段组合唯一定位，最多96位置；相同格不得领两种身份。",
+      "question": "一个好编号为什么既要有规则，又要保证不重复？",
+      "wrongActionFeedback": "只写05时同时亮起多格，提示补充架和层，说明是信息不足。",
+      "guidance": [
+        {
+          "label": "先决定要记录哪些信息",
+          "explanation": "先决定要记录哪些信息。"
+        },
+        {
+          "label": "每一段约定范围与位数",
+          "explanation": "每一段约定范围与位数。"
+        },
+        {
+          "label": "检查同号冲突和新增容量",
+          "explanation": "检查同号冲突和新增容量，不使用孩子真实身份证或个人敏感号码。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "数字有时表示身份，而不是多少",
+        "用“架号-层号-本序号”，例如02-03-05；固定每段含义。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "coding",
+        "title": "给书架位置编一个地址",
+        "version": "textbook.v1",
+        "limits": [
+          3,
+          4,
+          8
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

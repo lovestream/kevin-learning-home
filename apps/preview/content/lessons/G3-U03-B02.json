@@ -1,0 +1,100 @@
+{
+  "lessonId": "G3-U03-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "千米与估测：不是猜，而是拿已知长度去比较",
+  "shortTitle": "千米与长度估测",
+  "question": "没有一把一千米长的尺，人们怎样知道学校到公园有多远？",
+  "subtitle": "用熟悉的1米、10米、100米作“身体标尺”，分段估计，再用路线和数据校准。",
+  "grade": [
+    3
+  ],
+  "strand": "geometry",
+  "track": "foundation",
+  "parentUnitId": "G3-U03",
+  "recommendedPrerequisites": [
+    "会做百以内加减",
+    "知道1厘米＝10毫米"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 24,
+  "widget": "lengthWorkbench",
+  "prerequisiteNote": "可以直接进入。单位写在题目和输入框旁，不需要另外选择单位。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "没有一把一千米长的尺，人们怎样知道学校到公园有多远？",
+    "predictQuestion": "估计一段路长1千米，怎样才有依据？",
+    "predictionOptions": [
+      "随便猜一个数",
+      "看地图上画了多长",
+      "和熟悉的100米路线比较"
+    ],
+    "discovery": [
+      "估计不是随便猜。100米作一份，10份是1000米；200米作一份，5份仍是1000米。"
+    ],
+    "symbols": [
+      "1千米＝1000米",
+      "10段100米与5段200米一样长"
+    ],
+    "mission": "选一段已知长度，估计它重复了几次。",
+    "retell": "参照段变长了，为什么段数变少却不改变总路程？",
+    "observedEvidence": "对照100米一段与200米一段的同一条路线。",
+    "whyQuestion": "参照段变长了，为什么段数变少却不改变总路程？",
+    "counterexamplePrompt": "只看地图画得长就说路更远，没有比例或参照靠谱吗？",
+    "predictionFocus": "估计一段路长1千米，怎样才有依据？"
+  },
+  "workedExamples": [
+    {
+      "title": "把1千米分成看得见的小段",
+      "steps": [
+        {
+          "math": "先准确感受100米，再用“走了多少个100米”估计学校到公园的路；也可以换成200米一份检查。",
+          "why": "先把1千米换成1000米，再选100米或200米作一份；沿路线逐份走，不跨过拐弯去量直线。"
+        },
+        {
+          "math": "估计不是随便猜。100米作一份，10份是1000米；200米作一份，5份仍是1000米。",
+          "why": "换一种每份长度重新分段。份数虽然改变，5×200和10×100都应回到同一条1000米路线。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "length.km",
+      "action": "换算千米和米",
+      "scope": "整数千米"
+    },
+    {
+      "id": "length.estimate",
+      "action": "选择合理标尺估计远距离",
+      "scope": "生活路线"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U03",
+    "title": "毫米、分米和千米",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "20–30",
+    "notes": "实际测量、单位关系、长距离估计与整理。",
+    "sequence": [
+      "G3-U03-B01",
+      "G3-U03-B02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": [
+    {
+      "sceneId": "G3-U03-B02-route",
+      "mode": "route",
+      "title": "把1千米分成看得见的小段",
+      "prompt": "先准确感受100米，再用“走了多少个100米”估计学校到公园的路；也可以换成200米一份检查。",
+      "startMm": 0,
+      "endMm": 1000000,
+      "spacingMm": 100000,
+      "explanation": "估计不是随便猜。100米作一份，10份是1000米；200米作一份，5份仍是1000米。"
+    }
+  ]
+}

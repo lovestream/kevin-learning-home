@@ -1,0 +1,156 @@
+{
+  "lessonId": "G3-U06-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "几个同样的小份，怎样合成一个分数",
+  "shortTitle": "几个同样的小份，怎样合成一个分…",
+  "question": "一张长条贴纸平均分8格，涂3格；怎样一句话记录涂色多少？",
+  "subtitle": "分数也在数：数的是1/8这样的单位，而不是整数个物品。",
+  "grade": [
+    3
+  ],
+  "strand": "fractions",
+  "track": "foundation",
+  "parentUnitId": "G3-U06",
+  "recommendedPrerequisites": [
+    "G3-U06-B01。"
+  ],
+  "relatedLessonIds": [
+    "G3-U06-B01",
+    "G3-U06-B03",
+    "G3-U06-B04",
+    "G3-U06-B05",
+    "G3-U06-E01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "一张长条贴纸平均分8格，涂3格；怎样一句话记录涂色多少？",
+    "predictQuestion": "8等份中涂3份，下面的8记录什么？",
+    "predictionOptions": [
+      "整体平均分成8份",
+      "涂色有8份",
+      "贴纸长8米"
+    ],
+    "discovery": [
+      "分数也在数：数的是1/8这样的单位，而不是整数个物品。"
+    ],
+    "symbols": [
+      "每小份是1/8",
+      "3个1/8记作3/8"
+    ],
+    "mission": "用总份数和涂色份数一起描述蓝色部分。",
+    "retell": "3/8中的3在数什么，8为什么不是涂色格数？",
+    "observedEvidence": "指着平均8格中的蓝色3格，再数同样的小份。",
+    "whyQuestion": "3/8中的3在数什么，8为什么不是涂色格数？",
+    "counterexamplePrompt": "涂到5格后，变的是小份大小还是小份个数？",
+    "predictionFocus": "8等份中涂3份，下面的8记录什么？"
+  },
+  "storyVisual": {
+    "type": "fraction-strip",
+    "title": "贴纸分8格，涂前3格",
+    "caption": "整条贴纸是一个整体；蓝色是已经涂好的部分。",
+    "values": [
+      8,
+      3
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "fraction-strip",
+    "title": "贴纸分8格，涂前3格",
+    "caption": "整条贴纸是一个整体；蓝色是已经涂好的部分。",
+    "values": [
+      8,
+      3
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "同一张纸的3/8与5/8，哪个大？相差几个1/8？",
+      "steps": [
+        {
+          "math": "单位都为1/8。",
+          "why": "单位都为1/8。"
+        },
+        {
+          "math": "5份比3份多2份。",
+          "why": "5份比3份多2份。"
+        },
+        {
+          "math": "结论：5/8更大，相差2个1/8。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U06-B02-OBJ1",
+      "action": "理解几分之几并比较同分母分数及简单同分子分数。",
+      "scope": "理解几分之几并比较同分母分数及简单同分子分数。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U06",
+    "title": "分数的初步认识",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "73–91",
+    "notes": "几分之一、几分之几、同分母比较与加减、一个整体及一组物品的分数。",
+    "sequence": [
+      "G3-U06-B01",
+      "G3-U06-B02",
+      "G3-U06-B03",
+      "G3-U06-B04",
+      "G3-U06-B05",
+      "G3-U06-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U06-B02-MODEL1",
+      "family": "fractions",
+      "variant": "G3-U06-B02",
+      "title": "几个同样的小份",
+      "prompt": "理解几分之几并比较同分母分数及简单同分子分数。",
+      "initialState": "同长8等份纸带各涂前3格和前5格。",
+      "learnerAction": "逐格指认每个1/8，并把涂色起点对齐。",
+      "observableChange": "5/8多2个1/8；8/8才到整条终点。",
+      "question": "说清楚5/8中的5在数什么。",
+      "wrongActionFeedback": "用5与1直接比较时同时摆整条8格参照，改为同一单位数份。",
+      "guidance": [
+        {
+          "label": "3个1/8就是3/8",
+          "explanation": "3个1/8就是3/8。"
+        },
+        {
+          "label": "同分母时单位相同",
+          "explanation": "同分母时单位相同，份数多的更大。"
+        },
+        {
+          "label": "比较1/3和1/5先保持整体相同",
+          "explanation": "比较1/3和1/5先保持整体相同，不能只比较数字3和5。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "几个同样的小份，怎样合成一个分数",
+        "同长纸带均分8格，分别涂3格和5格；同一条纸带表示8/8=1。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "fraction",
+        "title": "分八份，自己涂三份",
+        "version": "textbook.v1",
+        "parts": 8
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

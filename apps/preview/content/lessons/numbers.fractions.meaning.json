@@ -1,0 +1,101 @@
+{
+  "lessonId": "numbers.fractions.meaning",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "一条彩带，分给朋友两小段",
+  "shortTitle": "分数与整体",
+  "question": "不到一整条，该用什么数告诉朋友？",
+  "subtitle": "先看整条、再平均分，读懂“六分之二”。",
+  "grade": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "N07",
+  "recommendedPrerequisites": [
+    "平均分",
+    "数线上的0和1"
+  ],
+  "relatedLessonIds": [
+    "geometry.area.perimeter"
+  ],
+  "estimatedActiveMinutes": 18,
+  "widget": "fraction",
+  "prerequisiteNote": "会把物品平均分就能开始。数线还不熟悉时，可以先只看纸带。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "一条1米彩带平均分成6小份，其中2小份送给朋友。把原长对齐，再把每2小份看作1大份，送出的部分还是同一段。它的份额可以怎样换一种说法？",
+    "predictQuestion": "同一条彩带的2小份合成1大份，拿走的长度变了吗？",
+    "predictionOptions": [
+      "变短一半",
+      "变成两倍",
+      "没变，只改了分组"
+    ],
+    "discovery": [
+      "先确定同一个整体，再平均分。合并小份改变份数名称，不改变已经取出的长度。"
+    ],
+    "symbols": [
+      "同一条彩带：2/6＝1/3",
+      "分母记等分总份数，分子记取走份数"
+    ],
+    "mission": "指出整条彩带与拿出的部分，比较两种分组。",
+    "retell": "格子名字变了，为什么送给朋友的彩带长度没变？",
+    "observedEvidence": "对齐原来整条彩带，比较2小份合成1大份的同一段。",
+    "whyQuestion": "格子名字变了，为什么送给朋友的彩带长度没变？",
+    "counterexamplePrompt": "换一条不同长的彩带，1/3就一定与原来的2/6一样长吗？",
+    "predictionFocus": "同一条彩带的2小份合成1大份，拿走的长度变了吗？"
+  },
+  "contextDiagram": "ribbon",
+  "workedExamples": [
+    {
+      "title": "1米彩带，分6份，拿2份",
+      "steps": [
+        {
+          "math": "拿了整条的2/6",
+          "why": "拿的部分是六小份中的两份。因为整条是1米，所以长2/6米。"
+        },
+        {
+          "math": "2/6＝1/3",
+          "why": "在原来的彩带上，把相邻的每两小段看作一大段。整条共有3大段。原来拿给朋友的前两小段，恰好就是现在的第一大段。比较分组前后的这一截：没有添长，也没有剪短，长度相同。"
+        }
+      ]
+    },
+    {
+      "title": "把整条换成2米，仍分6份、拿2份",
+      "steps": [
+        {
+          "math": "仍然拿了整条的2/6，也就是1/3",
+          "why": "分成几份、拿了几份都没变。"
+        },
+        {
+          "math": "这次长2/3米",
+          "why": "2米平均分成3大份，每大份长2/3米。长彩带的三分之一，比短彩带的三分之一更长。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "fractions.equal-parts",
+      "action": "辨别是否等分，并用分数记录取份",
+      "scope": "一个整体以内"
+    },
+    {
+      "id": "fractions.whole",
+      "action": "区分占整体的比例和实际长度",
+      "scope": "1米和2米纸带"
+    },
+    {
+      "id": "fractions.equivalent",
+      "action": "合并相邻等份，解释长度不变",
+      "scope": "2/6与1/3"
+    }
+  ],
+  "conceptScenes": [],
+  "mathScenes": [],
+  "lengthScenes": []
+}

@@ -1,0 +1,149 @@
+{
+  "lessonId": "G3-LP01-B01",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "日历为什么不能每月都排30天",
+  "shortTitle": "日历为什么不能每月都排30天",
+  "question": "要做生日月历，为什么不能复制一张30天的表用12次？",
+  "subtitle": "月份长度并不相同，日历把日期组织为共同规则；学习使用规则，不编造未经证实的历史起源。",
+  "grade": [
+    3
+  ],
+  "strand": "patterns",
+  "track": "foundation",
+  "parentUnitId": "G3-LP01",
+  "recommendedPrerequisites": [
+    "知道日与周，能查年历。"
+  ],
+  "relatedLessonIds": [
+    "G3-LP01-B02",
+    "G3-LP01-E01"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "要做生日月历，为什么不能复制一张30天的表用12次？",
+    "predictQuestion": "每个月都填30天，会出错吗？",
+    "predictionOptions": [
+      "只要写星期就行",
+      "会，各月天数不完全相同",
+      "不会，每月都一样"
+    ],
+    "discovery": [
+      "月份长度并不相同，日历把日期组织为共同规则；学习使用规则，不编造未经证实的历史起源。"
+    ],
+    "symbols": [
+      "大月31天，小月30天",
+      "二月平年28天、闰年29天"
+    ],
+    "mission": "选月份与年份，核对月底和下一天。",
+    "retell": "为什么不能把一张30天月历复制给每个月？",
+    "observedEvidence": "切换月份和年份，比较月底的最后一个日期。",
+    "whyQuestion": "为什么不能把一张30天月历复制给每个月？",
+    "counterexamplePrompt": "2023年二月28日的下一天，与2024年同一天的下一天一样吗？",
+    "predictionFocus": "每个月都填30天，会出错吗？"
+  },
+  "storyVisual": {
+    "type": "calendar",
+    "title": "两张真实的二月月历",
+    "caption": "2023年与2024年的二月：每格是一天，空格不算一天。",
+    "values": [
+      2023,
+      2024
+    ],
+    "labels": []
+  },
+  "predictionVisual": {
+    "type": "calendar",
+    "title": "两张真实的二月月历",
+    "caption": "2023年与2024年的二月：每格是一天，空格不算一天。",
+    "values": [
+      2023,
+      2024
+    ],
+    "labels": []
+  },
+  "workedExamples": [
+    {
+      "title": "2024年2月28日的第二天与再下一天分别哪天？2023年呢？",
+      "steps": [
+        {
+          "math": "2024是闰年，二月有29天。",
+          "why": "2024是闰年，二月有29天。"
+        },
+        {
+          "math": "2023二月28天。",
+          "why": "2023二月28天。"
+        },
+        {
+          "math": "结论：2024：2月29日、3月1日；2023：3月1日、3月2日。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-LP01-B01-OBJ1",
+      "action": "读年历，区分大小月、二月和平闰年，谨慎处理计数边界。",
+      "scope": "读年历，区分大小月、二月和平闰年，谨慎处理计数边界。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-LP01",
+    "title": "年、月、日的秘密",
+    "term": "lower",
+    "sourceId": "G3-lower",
+    "printedPages": "77–85",
+    "notes": "年历、大小月、平闰年、24时计时、时长、制作月历与日影记录实践。",
+    "sequence": [
+      "G3-LP01-B01",
+      "G3-LP01-B02",
+      "G3-LP01-E01"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-LP01-B01-MODEL1",
+      "family": "time",
+      "variant": "G3-LP01-B01",
+      "title": "日历为什么不能每月都排30天",
+      "prompt": "读年历，区分大小月、二月和平闰年，谨慎处理计数边界。",
+      "initialState": "已给2023平年和2024闰年的真实二月月历，2月28日突出。",
+      "learnerAction": "各向后点一天再一天；切换“经过天数”和“含首尾记录次数”。",
+      "observableChange": "2024先29日再3月1日，2023先3月1日再2日；间隔和端点计数分开。",
+      "question": "用两个连续日期说明“经过一天”为什么会涉及两个日期。",
+      "wrongActionFeedback": "默认每月30天时指向月历末格，先读实际规则；整百年例外单列选学。",
+      "guidance": [
+        {
+          "label": "一年12月",
+          "explanation": "一年12月，大月31天、小月30天，二月28或29天。"
+        },
+        {
+          "label": "公历闰年一般逢4年",
+          "explanation": "公历闰年一般逢4年，但整百年须能被400整除；先用真实年历检验。"
+        },
+        {
+          "label": "相隔天数与包含起止的日期个数不同",
+          "explanation": "相隔天数与包含起止的日期个数不同，要读清问题。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "日历为什么不能每月都排30天",
+        "对照一个平年与一个闰年的年历，逐月记录天数，二月单独突出。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "calendar",
+        "title": "换年份，二月天数也要核对",
+        "version": "textbook.v1"
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}

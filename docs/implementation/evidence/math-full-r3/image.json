@@ -1,0 +1,25 @@
+{
+  "status": "PASS_PREVIEW_IMAGE_CI",
+  "buildSha": "020ceb9a6792a18e8d020914ec4250b631ef13d0",
+  "imageId": "sha256:942c3001a5f703a38c8d90cd7ca2a21b0360f6b05f7c262d3c11c26641d31690",
+  "imageTag": "klh-content-ci:608679fe-82b9-4292-8e68-2000a7039709",
+  "architecture": "linux/amd64",
+  "node": "24.15.0",
+  "baseDigest": "sha256:152aceace5c03e2597988763165ee33e3fd3633636db0fc983cd2e126b02cfde",
+  "catalogSha256": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+  "lessons": 70,
+  "realLANHTTP": true,
+  "noCertificatesUsed": true,
+  "nonRoot": true,
+  "readOnlyRoot": true,
+  "appMounts": 0,
+  "appPublishedPorts": 1,
+  "ciBind": "127.0.0.1",
+  "formalServerOrSQLiteInImage": false,
+  "negativeAPIs": "PASS",
+  "archive": {
+    "name": "preview-amd64.tar.gz",
+    "bytes": 81602799,
+    "sha256": "c96bbe3c13886f053b92c794d68f9c41347c1dfe28071c53d05ae1e29544001b"
+  }
+}

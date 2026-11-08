@@ -218,14 +218,29 @@ try {
   await waitHealth("healthy");
   // Kill only the actual Node child of Docker's init. docker kill is an
   // operator stop and suppresses unless-stopped recovery on this daemon.
-  run([
-    "exec",
-    name,
-    "node",
-    "--input-type=module",
-    "-e",
-    "import fs from 'node:fs';import assert from 'node:assert/strict';const children=fs.readFileSync('/proc/1/task/1/children','utf8').trim().split(/\\s+/);assert.equal(children.length,1);const pid=Number(children[0]);assert(pid>1);assert(fs.readFileSync('/proc/'+pid+'/cmdline','utf8').includes('apps/server/main.ts'));process.kill(pid,'SIGKILL');",
-  ]);
+  const killedApp = spawnSync(
+    "docker",
+    [
+      "exec",
+      name,
+      "node",
+      "--input-type=module",
+      "-e",
+      "import fs from 'node:fs';import assert from 'node:assert/strict';const children=fs.readFileSync('/proc/1/task/1/children','utf8').trim().split(/\\s+/);assert.equal(children.length,1);const pid=Number(children[0]);assert(pid>1);assert(fs.readFileSync('/proc/'+pid+'/cmdline','utf8').includes('apps/server/main.ts'));fs.writeSync(1,'KLH_VERIFIED_APP_KILL\\n');process.kill(pid,'SIGKILL');",
+    ],
+    { encoding: "utf8", timeout: 10000 },
+  );
+  // When init exits immediately, Docker can reap this exec process before it
+  // returns zero. Accept only that expected SIGKILL result, after the script
+  // verified the one actual app child. Recovery below must still really pass.
+  assert.equal(killedApp.error, undefined);
+  assert.equal(killedApp.signal, null);
+  assert.match(killedApp.stdout, /^KLH_VERIFIED_APP_KILL\n$/);
+  assert.equal(killedApp.stderr, "");
+  assert(
+    killedApp.status === 0 || killedApp.status === 137,
+    "unexpected kill injector exit: " + killedApp.status,
+  );
   let autoRestartCount = 0;
   for (let i = 0; i < 100; i++) {
     autoRestartCount = Number(
@@ -317,6 +332,8 @@ try {
     restartPolicy: "unless-stopped",
     autoRestartCount,
     autoRestartAfterProcessKill: true,
+    killInjectorExitCode: killedApp.status,
+    killInjectorVerifiedAppMarker: true,
     autoRestartTrigger:
       "SIGKILL to verified Node child of init; not docker kill",
     unhealthyAloneDidNotRestart: true,

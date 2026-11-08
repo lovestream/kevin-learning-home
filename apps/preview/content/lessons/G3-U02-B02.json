@@ -1,0 +1,159 @@
+{
+  "lessonId": "G3-U02-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "先乘除：为什么4支不能和3盒相加",
+  "shortTitle": "先乘除再加减",
+  "question": "4支铅笔和3盒铅笔，能直接相加吗？",
+  "subtitle": "乘除先把“几盒”换成同一种单位的“几支”，再与加减两边的量合并。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U02",
+  "recommendedPrerequisites": [
+    "会口算表内乘除和两位数加减"
+  ],
+  "relatedLessonIds": [],
+  "estimatedActiveMinutes": 22,
+  "widget": "mixedOperations",
+  "prerequisiteNote": "每节都可以直接进入；先把故事里的量说清楚，再动算式。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "文具店有4支散铅笔，又搬来3盒，每盒6支。一共有多少支铅笔？",
+    "predictQuestion": "4支散笔可以直接和3盒相加吗？",
+    "predictionOptions": [
+      "先算4＋3",
+      "只算每盒6支",
+      "先算3盒有多少支"
+    ],
+    "discovery": [
+      "3×6先把3盒换成18支。18支与4支是同一种数量，才能相加成22支。"
+    ],
+    "symbols": [
+      "3盒×6支/盒＝18支",
+      "4＋3×6＝22（支）"
+    ],
+    "mission": "先把盒数变成支数，再找总支数。",
+    "retell": "为什么4支散笔不能直接和3盒相加？",
+    "observedEvidence": "打开3盒，看盒中的笔与4支散笔分别有多少。",
+    "whyQuestion": "为什么4支散笔不能直接和3盒相加？",
+    "counterexamplePrompt": "把4＋3先算成7，这个7还能说清是支还是盒吗？",
+    "predictionFocus": "4支散笔可以直接和3盒相加吗？"
+  },
+  "workedExamples": [
+    {
+      "title": "文具店有4支散铅笔，又搬来3盒，每盒6支。一共有多少支铅笔？",
+      "steps": [
+        {
+          "math": "4＋3×6",
+          "why": "4支不能和3盒直接相加。先算3盒共有18支，再加4支。"
+        },
+        {
+          "math": "结果：22支",
+          "why": "最后再回答题目真正问的量。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "units",
+      "action": "用乘除先统一数量单位",
+      "scope": "不含括号的乘加、乘减"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U02",
+    "title": "混合运算",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "6–19",
+    "notes": "教材印刷6–19页为主线。先完成B01–B05；E01→E03解释去/添括号，E02比较除以积与除以商，E04/E05用具体数体验运算律，O01/O02为可选思想。ID稳定，顺序以本表为准；不要求连续做完所有提升。",
+    "sequence": [
+      "G3-U02-B01",
+      "G3-U02-B02",
+      "G3-U02-B03",
+      "G3-U02-B04",
+      "G3-U02-B05",
+      "G3-U02-E01",
+      "G3-U02-E03",
+      "G3-U02-E02",
+      "G3-U02-E04",
+      "G3-U02-E05",
+      "G3-U02-O01",
+      "G3-U02-O02"
+    ]
+  },
+  "conceptScenes": [],
+  "mathScenes": [
+    {
+      "sceneId": "G3-U02-B02-A",
+      "lessonId": "G3-U02-B02",
+      "story": {
+        "text": "文具店有4支散铅笔，又搬来3盒，每盒6支。一共有多少支铅笔？",
+        "quantities": [
+          {
+            "id": "loose",
+            "value": 4,
+            "unit": "支",
+            "role": "散铅笔"
+          },
+          {
+            "id": "boxes",
+            "value": 3,
+            "unit": "盒",
+            "role": "铅笔盒数"
+          },
+          {
+            "id": "perBox",
+            "value": 6,
+            "unit": "支/盒",
+            "role": "每盒铅笔"
+          }
+        ]
+      },
+      "expressionAST": {
+        "type": "operation",
+        "operator": "add",
+        "left": {
+          "type": "number",
+          "value": 4
+        },
+        "right": {
+          "type": "operation",
+          "operator": "multiply",
+          "left": {
+            "type": "number",
+            "value": 3
+          },
+          "right": {
+            "type": "number",
+            "value": 6
+          },
+          "grouped": false
+        },
+        "grouped": false
+      },
+      "model": {
+        "type": "boxes-and-items",
+        "quantityRefs": [
+          "loose",
+          "boxes",
+          "perBox"
+        ],
+        "state": {
+          "step": 0
+        }
+      },
+      "taskMode": "A_order_and_model",
+      "contentVersion": "2026-10-02.1",
+      "target": {
+        "prompt": "4＋3×6"
+      }
+    }
+  ],
+  "lengthScenes": []
+}

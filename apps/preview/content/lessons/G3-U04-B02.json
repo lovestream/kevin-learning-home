@@ -1,0 +1,166 @@
+{
+  "lessonId": "G3-U04-B02",
+  "contentVersion": "2026-10-02.1",
+  "editorialRevision": "2026-10-09.4",
+  "status": "draft",
+  "title": "竖式是把拆分过程排整齐",
+  "shortTitle": "竖式是把拆分过程排整齐",
+  "question": "Kevin有3袋小棒，每袋16根。合起来有多少根？把它们放进数位表时，个位超过9个，怎么办？",
+  "subtitle": "满十换一十，把计数单位整理回十进制表示，竖式记录这种交换。",
+  "grade": [
+    3
+  ],
+  "strand": "numbers",
+  "track": "foundation",
+  "parentUnitId": "G3-U04",
+  "recommendedPrerequisites": [
+    "G3-U04-B01。"
+  ],
+  "relatedLessonIds": [
+    "G3-U04-B01",
+    "G3-U04-B03",
+    "G3-U04-B04",
+    "G3-U04-B05"
+  ],
+  "estimatedActiveMinutes": 35,
+  "widget": "conceptLab",
+  "prerequisiteNote": "可以直接进入；不熟悉的地方先在实验台上操作，再决定是否回补前面的课。",
+  "interactionStatus": "verified",
+  "classroom": {
+    "story": "Kevin有3袋小棒，每袋16根。合起来有多少根？把它们放进数位表时，个位超过9个，怎么办？",
+    "predictQuestion": "16根小棒取3份，个位满十怎么办？",
+    "predictionOptions": [
+      "10个一换成1个十",
+      "丢掉多出的部分",
+      "把进位放在个位"
+    ],
+    "discovery": [
+      "满十换一十，把计数单位整理回十进制表示，竖式记录这种交换。"
+    ],
+    "symbols": [
+      "16×3：先数一，再数十",
+      "10个一＝1个十"
+    ],
+    "mission": "把小棒拆换过程放进数位表。",
+    "retell": "把10个一捆成1个十，为什么小棒总根数没变？",
+    "observedEvidence": "看看18个一换成1个十和8个一，再与原有3十合并。",
+    "whyQuestion": "把10个一捆成1个十，为什么小棒总根数没变？",
+    "counterexamplePrompt": "把进位的1留在个位，就把1个十错当成了什么？",
+    "predictionFocus": "16根小棒取3份，个位满十怎么办？"
+  },
+  "storyVisual": {
+    "type": "groups",
+    "title": "16个一份，共有3份",
+    "caption": "每个框表示一组16根小棒。先看每组的根数，再思考三组怎样整理进数位表。",
+    "values": [
+      3,
+      16
+    ],
+    "labels": [
+      "根小棒"
+    ]
+  },
+  "predictionVisual": {
+    "type": "groups",
+    "title": "16个一份，共有3份",
+    "caption": "每个框表示一组16根小棒。先看每组的根数，再思考三组怎样整理进数位表。",
+    "values": [
+      3,
+      16
+    ],
+    "labels": [
+      "根小棒"
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": "26×3写竖式时，十位为什么得到7？",
+      "steps": [
+        {
+          "math": "6×3=18",
+          "why": "6×3=18，进1个十。",
+          "expressionBefore": "6×3",
+          "operation": "=",
+          "expressionAfter": "18"
+        },
+        {
+          "math": "2个十×3=6个十，再加进来的1个十，得7个十。",
+          "why": "2个十×3=6个十，再加进来的1个十，得7个十。"
+        },
+        {
+          "math": "结论：78。",
+          "why": "把答案放回真实问题，检查单位、条件和结果是否对应。"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "id": "G3-U04-B02-OBJ1",
+      "action": "理解个位起算、数位对齐和一次进位。",
+      "scope": "理解个位起算、数位对齐和一次进位。"
+    }
+  ],
+  "textbookUnit": {
+    "id": "G3-U04",
+    "title": "多位数乘一位数",
+    "term": "upper",
+    "sourceId": "G3-upper",
+    "printedPages": "39–56",
+    "notes": "口算、竖式、连续进位、零、估算与解决问题；分配律以拆分模型体验。",
+    "sequence": [
+      "G3-U04-B01",
+      "G3-U04-B02",
+      "G3-U04-B03",
+      "G3-U04-B04",
+      "G3-U04-B05"
+    ]
+  },
+  "conceptScenes": [
+    {
+      "sceneId": "G3-U04-B02-MODEL1",
+      "family": "placeValue",
+      "variant": "G3-U04-B02",
+      "title": "竖式是把拆分过程排整齐",
+      "prompt": "理解个位起算、数位对齐和一次进位。",
+      "initialState": "3组16根小棒，位值表十、个；待整理有3个十18个一。",
+      "learnerAction": "选10个一换成1个十，并把进位卡送到十位。",
+      "observableChange": "十位4、个位8，共48；数字1指1个十。",
+      "question": "把26×3中的进位1解释给一个不会竖式的人听。",
+      "wrongActionFeedback": "把进位留在个位时同时显示数量兑换，不接受无单位拼接48和1。",
+      "guidance": [
+        {
+          "label": "个位6×3=18",
+          "explanation": "个位6×3=18，写8进1。"
+        },
+        {
+          "label": "十位1×3=3个十",
+          "explanation": "十位1×3=3个十，加进的1个十。"
+        },
+        {
+          "label": "得4个十8个一",
+          "explanation": "得4个十8个一，用估算和拆分验算。"
+        }
+      ],
+      "values": [],
+      "labels": [
+        "竖式是把拆分过程排整齐",
+        "3组16根小棒，先数18个一，捆1个十还剩8个一，再与原来3个十合并。"
+      ],
+      "modelStatus": "registered",
+      "textbookSpec": {
+        "type": "place-value",
+        "title": "把10个一换成1个十",
+        "version": "textbook.v1",
+        "total": 48,
+        "bank": [
+          0,
+          3,
+          18
+        ]
+      }
+    }
+  ],
+  "mathScenes": [],
+  "lengthScenes": []
+}
