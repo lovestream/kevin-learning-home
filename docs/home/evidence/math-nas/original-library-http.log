@@ -1,0 +1,1 @@
+{"status":"PASS_ACTUAL_NAS_449_TASKS_14_CASES","origin":"http://192.168.2.100:38444","sourceCommit":"4a75d88c139cba5a216d553dc944c20d3a02a67d","entries":71,"tasks":449,"deterministic":432,"humanReview":17,"cases":14,"learningWrites":0,"cookies":0,"elapsedMs":3488,"gradeLatencyMs":{"p50":4.97720900000013,"p95":8.106583000000228,"max":75.8392080000001}}

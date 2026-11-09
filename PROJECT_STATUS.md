@@ -1,12 +1,12 @@
 # Kevin Learning Home · 家园首页与探索
 
-2026-11-05：根据用户反馈，`codex/home-navigation` 正在把根地址改为可扩展的家园首页，数学目录保留在 `/subjects/math`，移除顶部学科标签式切换。首页/目录/探索本地浏览器回归与192领域测试已通过，NAS发布和完整CI尚待完成，不能提前标已上线。见[本轮报告](docs/home/IMPLEMENTATION-REPORT.md)。记录底座的未完成实现另存本地开发分支，未混入本次匿名内容版本。
+2026-11-06：家园首页已实际更新到 **[http://192.168.2.100:38444/](http://192.168.2.100:38444/)**。不再用顶部学科标签切换；首页有学习空间、真实搜索、教材书架；数学 `/subjects/math`，探索 `/explore`。桌面固定导航，手机统一抽屉。运行源码 `4a75d88c139cba5a216d553dc944c20d3a02a67d`，镜像 `sha256:3d1e47269a19750ee045d4206ce0bf5fcf6295bdcf40022632d393093f98d14f`。
 
-本轮按总任务#25和路线图推进。用户最新决定：**Kevin日常学习不需要账号密码；家长查看学习情况时才登录，唯一家长密码由用户亲设**。数学/英语/探索共用内部学习者与未来家庭设备会话，不分科设账号、不另加家长PIN。
+源码push/PR完整CI成功；NAS首页/探索各五视口、14组数学回归、新→旧→新回退及23项资源hash通过；11受保护容器与旧项目Git指纹不变。最终归档HEAD双CI见[Draft PR36](https://github.com/lovestream/kevin-learning-home/pull/36)。[报告](docs/home/IMPLEMENTATION-REPORT.md) · [证据](docs/home/evidence/manifest.json)。实体手机/iPad和用户视觉认可待实际反馈。
 
-分支`codex/explore-01-preview`基于现有PR22，而非从滞后main覆盖数学；没有新增Mac项目/worktree。第一批已交付#26合同、#27同壳四栏目/内存工作台至NAS，附离线引导与70课堂往返；真实项目保存、媒体、家长报告尚未开启。当前代码/本地测试与NAS发布、精确HEAD双CI进度分开记录，见[实施报告](docs/explore/IMPLEMENTATION-REPORT.md)、[产品与账号修订](docs/explore/00-PRODUCT-AND-ARCHITECTURE.md)、[领域合同](docs/explore/01-DOMAIN-CONTRACT.md)。
+用户账号要求保持：**孩子免登录；家长查看情况时才登录，唯一密码由用户亲设，不另加PIN。** 38444仍是匿名内容/RAM体验，刷新清空。私人记录与媒体底座未完成实现保存在本地 `codex/explore-02-records@af7c92f`，未混入此次镜像，不声称真实保存、迁移或家长报告已交付。原数学/英语独立运行、真实资料不改，无证书/DSM/Tailscale/权限调整。
 
-访问 **[探索与创造](http://192.168.2.100:38444/explore)**；数学原入口 **http://192.168.2.100:38444/**。运行源码`b7a2d23e25027b59e9a64cadfd41f5e9931db9b1`，同一NAS入口已实际验证探索五视口和14组数学回归，新旧实际回退成功，11个受保护容器不变。源码双完整CI通过；最终归档HEAD双CI以[Draft PR35](https://github.com/lovestream/kevin-learning-home/pull/35)为准。旧数学/英语与真实数据不改，不申请证书、不修改DSM/Tailscale、不启用外部AI或钱包。后续依赖和九项实际状态见实施报告；不能将本批当整个工程完成。
+总任务#25尚未全部完成：合同与公开探索已交付，保存、媒体、家长报告等闭环仍需完成。无新Mac checkout/worktree。PR18→21→22→35→36保持Draft堆叠，不自行合并。[探索前批报告](docs/explore/IMPLEMENTATION-REPORT.md)为历史，当前运行版本以上述回执为准。
 
 ## 之前的数学交付（历史，运行版本以本轮最新回执为准）
 

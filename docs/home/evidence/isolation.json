@@ -1,0 +1,16 @@
+{
+  "sourceSha": "4a75d88c139cba5a216d553dc944c20d3a02a67d",
+  "imageId": "sha256:3d1e47269a19750ee045d4206ce0bf5fcf6295bdcf40022632d393093f98d14f",
+  "user": "1024:100",
+  "mountCount": 0,
+  "readOnlyRoot": true,
+  "memoryBytes": 268435456,
+  "cpuset": "0",
+  "capDrop": [
+    "ALL"
+  ],
+  "securityOpt": [
+    "no-new-privileges:true"
+  ],
+  "protectedContainersUnchanged": 11
+}

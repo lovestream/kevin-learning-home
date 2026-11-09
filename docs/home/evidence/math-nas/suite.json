@@ -1,0 +1,106 @@
+{
+  "sourceSha": "4a75d88c139cba5a216d553dc944c20d3a02a67d",
+  "origin": "http://192.168.2.100:38444",
+  "concurrentClients": 2,
+  "status": "PASS",
+  "rows": [
+    {
+      "name": "checkpoint",
+      "script": "tests/math-full-01/browser.mjs --checkpoint",
+      "exit": 0,
+      "seconds": 21.38,
+      "log": ".evidence/home/math-nas-logs/checkpoint.log"
+    },
+    {
+      "name": "coding",
+      "script": "tests/math-onepass/coding-browser.mjs",
+      "exit": 0,
+      "seconds": 39.44,
+      "log": ".evidence/home/math-nas-logs/coding.log"
+    },
+    {
+      "name": "original-primary-http",
+      "script": ".evidence/math-onepass/probe-primary.mjs",
+      "exit": 0,
+      "seconds": 6.32,
+      "log": ".evidence/home/math-nas-logs/original-primary-http.log"
+    },
+    {
+      "name": "original-library-http",
+      "script": ".evidence/math-onepass/probe-library.mjs",
+      "exit": 0,
+      "seconds": 3.75,
+      "log": ".evidence/home/math-nas-logs/original-library-http.log"
+    },
+    {
+      "name": "business",
+      "script": "tests/math-onepass/business-http.mjs",
+      "exit": 0,
+      "seconds": 84.14,
+      "log": ".evidence/home/math-nas-logs/business.log"
+    },
+    {
+      "name": "navigation",
+      "script": "tests/math-full-01/navigation.mjs",
+      "exit": 0,
+      "seconds": 20.4,
+      "log": ".evidence/home/math-nas-logs/navigation.log"
+    },
+    {
+      "name": "classrooms",
+      "script": "tests/math-full-01/browser.mjs",
+      "exit": 0,
+      "seconds": 166.28,
+      "log": ".evidence/home/math-nas-logs/classrooms.log"
+    },
+    {
+      "name": "practice",
+      "script": "tests/math-full-02/browser.mjs",
+      "exit": 0,
+      "seconds": 204.69,
+      "log": ".evidence/home/math-nas-logs/practice.log"
+    },
+    {
+      "name": "compatibility",
+      "script": "tests/math-full-remainder/browser.mjs",
+      "exit": 0,
+      "seconds": 509.72,
+      "log": ".evidence/home/math-nas-logs/compatibility.log"
+    },
+    {
+      "name": "cases",
+      "script": "tests/math-onepass/cases-browser.mjs",
+      "exit": 0,
+      "seconds": 98.67,
+      "log": ".evidence/home/math-nas-logs/cases.log"
+    },
+    {
+      "name": "training",
+      "script": "tests/math-onepass/training-browser.mjs",
+      "exit": 0,
+      "seconds": 18.91,
+      "log": ".evidence/home/math-nas-logs/training.log"
+    },
+    {
+      "name": "models",
+      "script": "tests/math-onepass/legacy-browser.mjs",
+      "exit": 0,
+      "seconds": 306.67,
+      "log": ".evidence/home/math-nas-logs/models.log"
+    },
+    {
+      "name": "experience",
+      "script": "tests/math-onepass/experience-browser.mjs",
+      "exit": 0,
+      "seconds": 175.88,
+      "log": ".evidence/home/math-nas-logs/experience.log"
+    },
+    {
+      "name": "print",
+      "script": "tests/math-onepass/print-browser.mjs",
+      "exit": 0,
+      "seconds": 8.56,
+      "log": ".evidence/home/math-nas-logs/print.log"
+    }
+  ]
+}

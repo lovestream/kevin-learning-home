@@ -1,0 +1,71 @@
+{
+  "status": "PASS_HOME_FIVE_WIDTHS",
+  "rows": [
+    {
+      "width": 360,
+      "status": "PASS",
+      "hierarchy": true,
+      "realSearch": true,
+      "disabledSpaces": true,
+      "menuFocus": true,
+      "exactLessonReturn": true,
+      "topCourseTabs": 0,
+      "writes": 0,
+      "externalRequests": 0,
+      "buildSha": "8e6311789bcc6cf93d811f34aa3ab553322d1b78"
+    },
+    {
+      "width": 390,
+      "status": "PASS",
+      "hierarchy": true,
+      "realSearch": true,
+      "disabledSpaces": true,
+      "menuFocus": true,
+      "exactLessonReturn": true,
+      "topCourseTabs": 0,
+      "writes": 0,
+      "externalRequests": 0,
+      "buildSha": "8e6311789bcc6cf93d811f34aa3ab553322d1b78"
+    },
+    {
+      "width": 768,
+      "status": "PASS",
+      "hierarchy": true,
+      "realSearch": true,
+      "disabledSpaces": true,
+      "menuFocus": true,
+      "exactLessonReturn": true,
+      "topCourseTabs": 0,
+      "writes": 0,
+      "externalRequests": 0,
+      "buildSha": "8e6311789bcc6cf93d811f34aa3ab553322d1b78"
+    },
+    {
+      "width": 1280,
+      "status": "PASS",
+      "hierarchy": true,
+      "realSearch": true,
+      "disabledSpaces": true,
+      "menuFocus": true,
+      "exactLessonReturn": true,
+      "topCourseTabs": 0,
+      "writes": 0,
+      "externalRequests": 0,
+      "buildSha": "8e6311789bcc6cf93d811f34aa3ab553322d1b78"
+    },
+    {
+      "width": 1440,
+      "status": "PASS",
+      "hierarchy": true,
+      "realSearch": true,
+      "disabledSpaces": true,
+      "menuFocus": true,
+      "exactLessonReturn": true,
+      "topCourseTabs": 0,
+      "writes": 0,
+      "externalRequests": 0,
+      "buildSha": "8e6311789bcc6cf93d811f34aa3ab553322d1b78"
+    }
+  ],
+  "physicalDevices": "NOT_RUN"
+}

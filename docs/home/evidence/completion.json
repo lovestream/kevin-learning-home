@@ -1,0 +1,10 @@
+{
+  "status": "PASS_HOME_NAS_DELIVERY",
+  "sourceSha": "4a75d88c139cba5a216d553dc944c20d3a02a67d",
+  "mathGroups": 14,
+  "homeWidths": 5,
+  "exploreWidths": 5,
+  "rollback": "PASS",
+  "protectedContainersUnchanged": 11,
+  "realData": false
+}
