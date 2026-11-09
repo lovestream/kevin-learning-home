@@ -1,0 +1,832 @@
+﻿2026-11-09T11:46:04.3293550Z Current runner version: '2.338.2'
+2026-11-09T11:46:04.3319146Z ##[group]Runner Image Provisioner
+2026-11-09T11:46:04.3320029Z Hosted Compute Agent
+2026-11-09T11:46:04.3320707Z Version: 20261028.624
+2026-11-09T11:46:04.3321375Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-09T11:46:04.3322229Z Build Date: 2026-10-28T21:51:42Z
+2026-11-09T11:46:04.3323001Z Worker ID: {5a0b8874-76d5-4dcf-b34f-42295c6a921e}
+2026-11-09T11:46:04.3323762Z Region: westus3
+2026-11-09T11:46:04.3324348Z Cloud: Azure
+2026-11-09T11:46:04.3324914Z ##[endgroup]
+2026-11-09T11:46:04.3327015Z ##[group]Operating System
+2026-11-09T11:46:04.3327772Z Ubuntu
+2026-11-09T11:46:04.3328307Z 24.04.5
+2026-11-09T11:46:04.3328809Z LTS
+2026-11-09T11:46:04.3329404Z ##[endgroup]
+2026-11-09T11:46:04.3330006Z ##[group]Runner Image
+2026-11-09T11:46:04.3330699Z Image: ubuntu-24.04
+2026-11-09T11:46:04.3331329Z Version: 20261101.360.1
+2026-11-09T11:46:04.3332620Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-09T11:46:04.3334290Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-09T11:46:04.3335739Z ##[endgroup]
+2026-11-09T11:46:04.3336875Z ##[group]GITHUB_TOKEN Permissions
+2026-11-09T11:46:04.3338910Z Contents: read
+2026-11-09T11:46:04.3339574Z Metadata: read
+2026-11-09T11:46:04.3340131Z ##[endgroup]
+2026-11-09T11:46:04.3342295Z Secret source: Actions
+2026-11-09T11:46:04.3343258Z Cache mode: write
+2026-11-09T11:46:04.3344078Z Prepare workflow directory
+2026-11-09T11:46:04.3743738Z Prepare all required actions
+2026-11-09T11:46:04.3792584Z Getting action download info
+2026-11-09T11:46:04.6955336Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-09T11:46:04.8320829Z Download action repository 'actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-09T11:46:04.9209128Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-09T11:46:05.1876773Z Complete job name: foundation
+2026-11-09T11:46:05.2830511Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-09T11:46:05.2831613Z with:
+2026-11-09T11:46:05.2832114Z   ref: 9ed8910424f3e821f23e63b900dbe8329b146a93
+2026-11-09T11:46:05.2832721Z   fetch-depth: 0
+2026-11-09T11:46:05.2833226Z   repository: lovestream/kevin-learning-home
+2026-11-09T11:46:05.2837686Z   token: ***
+2026-11-09T11:46:05.2838144Z   ssh-strict: true
+2026-11-09T11:46:05.2838597Z   ssh-user: git
+2026-11-09T11:46:05.2839060Z   persist-credentials: true
+2026-11-09T11:46:05.2839569Z   clean: true
+2026-11-09T11:46:05.2840034Z   sparse-checkout-cone-mode: true
+2026-11-09T11:46:05.2840569Z   fetch-tags: false
+2026-11-09T11:46:05.2841029Z   show-progress: true
+2026-11-09T11:46:05.2841495Z   lfs: false
+2026-11-09T11:46:05.2841924Z   submodules: false
+2026-11-09T11:46:05.2842387Z   set-safe-directory: true
+2026-11-09T11:46:05.2842980Z   allow-unsafe-pr-checkout: false
+2026-11-09T11:46:05.2844075Z ##[endgroup]
+2026-11-09T11:46:05.7961113Z Syncing repository: lovestream/kevin-learning-home
+2026-11-09T11:46:05.7963168Z ##[group]Getting Git version info
+2026-11-09T11:46:05.7964076Z Working directory is '/home/runner/work/kevin-learning-home/kevin-learning-home'
+2026-11-09T11:46:05.7965646Z [command]/usr/bin/git version
+2026-11-09T11:46:05.8165471Z git version 2.56.0
+2026-11-09T11:46:05.8189742Z ##[endgroup]
+2026-11-09T11:46:05.8204207Z Temporarily overriding HOME='/home/runner/work/_temp/920c3e9b-c7b8-42f8-90a9-92464df88e6b' before making global git config changes
+2026-11-09T11:46:05.8206959Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T11:46:05.8211446Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/kevin-learning-home/kevin-learning-home
+2026-11-09T11:46:05.8270194Z Deleting the contents of '/home/runner/work/kevin-learning-home/kevin-learning-home'
+2026-11-09T11:46:05.8274904Z ##[group]Initializing the repository
+2026-11-09T11:46:05.8281053Z [command]/usr/bin/git init /home/runner/work/kevin-learning-home/kevin-learning-home
+2026-11-09T11:46:05.8683228Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-09T11:46:05.8684922Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-09T11:46:05.8688554Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-09T11:46:05.8689810Z hint: call:
+2026-11-09T11:46:05.8690478Z hint:
+2026-11-09T11:46:05.8691308Z hint: 	git config --global init.defaultBranch <name>
+2026-11-09T11:46:05.8692327Z hint:
+2026-11-09T11:46:05.8693296Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-09T11:46:05.8694870Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-09T11:46:05.8696384Z hint:
+2026-11-09T11:46:05.8697073Z hint: 	git branch -m <name>
+2026-11-09T11:46:05.8697903Z hint:
+2026-11-09T11:46:05.8698939Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-09T11:46:05.8700933Z Initialized empty Git repository in /home/runner/work/kevin-learning-home/kevin-learning-home/.git/
+2026-11-09T11:46:05.8712562Z [command]/usr/bin/git remote add origin https://github.com/lovestream/kevin-learning-home
+2026-11-09T11:46:05.8768026Z ##[endgroup]
+2026-11-09T11:46:05.8770130Z ##[group]Disabling automatic garbage collection
+2026-11-09T11:46:05.8773487Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-09T11:46:05.8829706Z ##[endgroup]
+2026-11-09T11:46:05.8831511Z ##[group]Setting up auth
+2026-11-09T11:46:05.8842968Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T11:46:05.8898156Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-09T11:46:05.9507133Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T11:46:05.9553126Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-09T11:46:05.9806293Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-09T11:46:05.9853986Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-09T11:46:06.0105983Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-09T11:46:06.0157794Z ##[endgroup]
+2026-11-09T11:46:06.0158650Z ##[group]Fetching the repository
+2026-11-09T11:46:06.0172686Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-09T11:46:09.8381383Z From https://github.com/lovestream/kevin-learning-home
+2026-11-09T11:46:09.8383382Z  * [new branch]      chatgpt/klh-02b-r1-acceptance-20261023 -> origin/chatgpt/klh-02b-r1-acceptance-20261023
+2026-11-09T11:46:09.8386601Z  * [new branch]      chatgpt/klh-implement-01-foundation -> origin/chatgpt/klh-implement-01-foundation
+2026-11-09T11:46:09.8388801Z  * [new branch]      chatgpt/klh-implement-01-review-phase2 -> origin/chatgpt/klh-implement-01-review-phase2
+2026-11-09T11:46:09.8391236Z  * [new branch]      chatgpt/klh-implement-02a-review-r1 -> origin/chatgpt/klh-implement-02a-review-r1
+2026-11-09T11:46:09.8393845Z  * [new branch]      chatgpt/klh-implement-02a-start -> origin/chatgpt/klh-implement-02a-start
+2026-11-09T11:46:09.8397065Z  * [new branch]      chatgpt/klh-implement-02b-r1-acceptance -> origin/chatgpt/klh-implement-02b-r1-acceptance
+2026-11-09T11:46:09.8399701Z  * [new branch]      chatgpt/klh-implement-02b-review-r1 -> origin/chatgpt/klh-implement-02b-review-r1
+2026-11-09T11:46:09.8402502Z  * [new branch]      chatgpt/klh-implement-02b-start -> origin/chatgpt/klh-implement-02b-start
+2026-11-09T11:46:09.8405550Z  * [new branch]      chatgpt/klh-platform-compare-tests -> origin/chatgpt/klh-platform-compare-tests
+2026-11-09T11:46:09.8408434Z  * [new branch]      chatgpt/klh-pr-1a-review-nas -> origin/chatgpt/klh-pr-1a-review-nas
+2026-11-09T11:46:09.8410611Z  * [new branch]      chatgpt/klh-pr-1a-task  -> origin/chatgpt/klh-pr-1a-task
+2026-11-09T11:46:09.8413359Z  * [new branch]      chatgpt/klh-scalable-architecture-rfc -> origin/chatgpt/klh-scalable-architecture-rfc
+2026-11-09T11:46:09.8416472Z  * [new branch]      codex/02b-nas-trial     -> origin/codex/02b-nas-trial
+2026-11-09T11:46:09.8418826Z  * [new branch]      codex/bench-01-cloudflare -> origin/codex/bench-01-cloudflare
+2026-11-09T11:46:09.8421249Z  * [new branch]      codex/bench-02-node-nas -> origin/codex/bench-02-node-nas
+2026-11-09T11:46:09.8423648Z  * [new branch]      codex/bench-shared-contract -> origin/codex/bench-shared-contract
+2026-11-09T11:46:09.8426473Z  * [new branch]      codex/explore-01-preview -> origin/codex/explore-01-preview
+2026-11-09T11:46:09.8428818Z  * [new branch]      codex/explore-02-records -> origin/codex/explore-02-records
+2026-11-09T11:46:09.8431057Z  * [new branch]      codex/home-navigation   -> origin/codex/home-navigation
+2026-11-09T11:46:09.8434059Z  * [new branch]      codex/implement-01-foundation -> origin/codex/implement-01-foundation
+2026-11-09T11:46:09.8437419Z  * [new branch]      codex/implement-02a-auth -> origin/codex/implement-02a-auth
+2026-11-09T11:46:09.8440502Z  * [new branch]      codex/implement-02b-shell -> origin/codex/implement-02b-shell
+2026-11-09T11:46:09.8443415Z  * [new branch]      codex/math-00-source-audit -> origin/codex/math-00-source-audit
+2026-11-09T11:46:09.8446793Z  * [new branch]      codex/math-01-nas-trial -> origin/codex/math-01-nas-trial
+2026-11-09T11:46:09.8449917Z  * [new branch]      codex/math-01-readonly-lesson -> origin/codex/math-01-readonly-lesson
+2026-11-09T11:46:09.8453017Z  * [new branch]      codex/math-full-01-70-lessons -> origin/codex/math-full-01-70-lessons
+2026-11-09T11:46:09.8456481Z  * [new branch]      codex/math-full-02-practice -> origin/codex/math-full-02-practice
+2026-11-09T11:46:09.8459809Z  * [new branch]      codex/math-full-03-capabilities -> origin/codex/math-full-03-capabilities
+2026-11-09T11:46:09.8463042Z  * [new branch]      codex/pr-1a-nas-runtime-probe -> origin/codex/pr-1a-nas-runtime-probe
+2026-11-09T11:46:09.8465921Z  * [new branch]      main                    -> origin/main
+2026-11-09T11:46:09.8470569Z [command]/usr/bin/git rev-parse --verify --quiet 9ed8910424f3e821f23e63b900dbe8329b146a93^{object}
+2026-11-09T11:46:09.8473145Z 9ed8910424f3e821f23e63b900dbe8329b146a93
+2026-11-09T11:46:09.8484227Z ##[endgroup]
+2026-11-09T11:46:09.8487157Z ##[group]Determining the checkout info
+2026-11-09T11:46:09.8489896Z ##[endgroup]
+2026-11-09T11:46:09.8491300Z [command]/usr/bin/git sparse-checkout disable
+2026-11-09T11:46:09.8512798Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-09T11:46:09.8555996Z ##[group]Checking out the ref
+2026-11-09T11:46:09.8558747Z [command]/usr/bin/git checkout --progress --force 9ed8910424f3e821f23e63b900dbe8329b146a93
+2026-11-09T11:46:10.4374176Z Note: switching to '9ed8910424f3e821f23e63b900dbe8329b146a93'.
+2026-11-09T11:46:10.4376373Z 
+2026-11-09T11:46:10.4376902Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-09T11:46:10.4377934Z changes and commit them, and you can discard any commits you make in this
+2026-11-09T11:46:10.4378961Z state without impacting any branches by switching back to a branch.
+2026-11-09T11:46:10.4379549Z 
+2026-11-09T11:46:10.4379980Z If you want to create a new branch to retain commits you create, you may
+2026-11-09T11:46:10.4380979Z do so (now or later) by using -c with the switch command. Example:
+2026-11-09T11:46:10.4381557Z 
+2026-11-09T11:46:10.4381813Z   git switch -c <new-branch-name>
+2026-11-09T11:46:10.4382633Z 
+2026-11-09T11:46:10.4382915Z Or undo this operation with:
+2026-11-09T11:46:10.4383291Z 
+2026-11-09T11:46:10.4383525Z   git switch -
+2026-11-09T11:46:10.4383851Z 
+2026-11-09T11:46:10.4384408Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-09T11:46:10.4385276Z 
+2026-11-09T11:46:10.4385889Z HEAD is now at 9ed8910 docs(records): archive synthetic acceptance and the remaining delivery queue
+2026-11-09T11:46:10.4416780Z ##[endgroup]
+2026-11-09T11:46:10.4470575Z [command]/usr/bin/git log -1 --format=%H
+2026-11-09T11:46:10.4504362Z 9ed8910424f3e821f23e63b900dbe8329b146a93
+2026-11-09T11:46:10.4778213Z ##[group]Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+2026-11-09T11:46:10.4778751Z with:
+2026-11-09T11:46:10.4779048Z   node-version: 24.15.0
+2026-11-09T11:46:10.4779357Z   cache: npm
+2026-11-09T11:46:10.4779643Z   always-auth: false
+2026-11-09T11:46:10.4779953Z   check-latest: false
+2026-11-09T11:46:10.4782829Z   token: ***
+2026-11-09T11:46:10.4783146Z ##[endgroup]
+2026-11-09T11:46:10.6266875Z Attempting to download 24.15.0...
+2026-11-09T11:46:10.6446352Z (node:2315) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-09T11:46:10.6448268Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-09T11:46:11.6957641Z Acquiring 24.15.0 - x64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-linux-x64.tar.gz
+2026-11-09T11:46:12.2655798Z Extracting ...
+2026-11-09T11:46:12.2791230Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/df7f9560-a991-4fa3-bc3e-31b905df689d -f /home/runner/work/_temp/6a86d81d-52a3-4019-b207-46e8a104b0bd
+2026-11-09T11:46:13.4678327Z Adding to the cache ...
+2026-11-09T11:46:15.1491568Z ##[group]Environment details
+2026-11-09T11:46:15.3908101Z node: v24.15.0
+2026-11-09T11:46:15.3908702Z npm: 11.12.1
+2026-11-09T11:46:15.3909263Z yarn: 1.22.22
+2026-11-09T11:46:15.3910254Z ##[endgroup]
+2026-11-09T11:46:15.3929376Z [command]/opt/hostedtoolcache/node/24.15.0/x64/bin/npm config get cache
+2026-11-09T11:46:15.4896431Z /home/runner/.npm
+2026-11-09T11:46:15.6976388Z npm cache is not found
+2026-11-09T11:46:15.7192694Z ##[group]Run npm install --global npm@11.12.1
+2026-11-09T11:46:15.7193134Z [36;1mnpm install --global npm@11.12.1[0m
+2026-11-09T11:46:15.7219739Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:15.7220004Z ##[endgroup]
+2026-11-09T11:46:19.1004017Z 
+2026-11-09T11:46:19.1012767Z changed 10 packages in 3s
+2026-11-09T11:46:19.1013250Z 
+2026-11-09T11:46:19.1013595Z 15 packages are looking for funding
+2026-11-09T11:46:19.1014178Z   run `npm fund` for details
+2026-11-09T11:46:19.1520738Z ##[group]Run npm ci
+2026-11-09T11:46:19.1521014Z [36;1mnpm ci[0m
+2026-11-09T11:46:19.1545775Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:19.1546033Z ##[endgroup]
+2026-11-09T11:46:27.9628510Z 
+2026-11-09T11:46:27.9629207Z added 50 packages, and audited 58 packages in 9s
+2026-11-09T11:46:27.9629623Z 
+2026-11-09T11:46:27.9630218Z 14 packages are looking for funding
+2026-11-09T11:46:27.9631194Z   run `npm fund` for details
+2026-11-09T11:46:27.9643063Z 
+2026-11-09T11:46:27.9643786Z found 0 vulnerabilities
+2026-11-09T11:46:27.9897333Z ##[group]Run npx playwright install --with-deps chromium
+2026-11-09T11:46:27.9897792Z [36;1mnpx playwright install --with-deps chromium[0m
+2026-11-09T11:46:27.9919214Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:27.9919479Z ##[endgroup]
+2026-11-09T11:46:28.7448716Z Installing dependencies...
+2026-11-09T11:46:28.7538638Z Switching to root user to install dependencies...
+2026-11-09T11:46:28.8471980Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-09T11:46:28.8854590Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-09T11:46:28.8880393Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-09T11:46:28.8912597Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-09T11:46:28.8917115Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-09T11:46:28.8933585Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-09T11:46:29.0230064Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1425 kB]
+2026-11-09T11:46:29.0406512Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [313 kB]
+2026-11-09T11:46:29.0427373Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1711 kB]
+2026-11-09T11:46:29.0489902Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [344 kB]
+2026-11-09T11:46:29.0524890Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1839 kB]
+2026-11-09T11:46:29.0621819Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [420 kB]
+2026-11-09T11:46:29.0656364Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [50.7 kB]
+2026-11-09T11:46:29.0667572Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+2026-11-09T11:46:29.0918703Z Get:15 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [743 kB]
+2026-11-09T11:46:29.1056956Z Get:16 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [675 kB]
+2026-11-09T11:46:29.2072824Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1157 kB]
+2026-11-09T11:46:29.2124422Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [234 kB]
+2026-11-09T11:46:29.2624020Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+2026-11-09T11:46:29.2687923Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-09T11:46:29.2708398Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1721 kB]
+2026-11-09T11:46:29.2786638Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [394 kB]
+2026-11-09T11:46:29.2810113Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [45.4 kB]
+2026-11-09T11:46:29.2818965Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+2026-11-09T11:46:32.6820923Z Fetched 13.0 MB in 1s (9980 kB/s)
+2026-11-09T11:46:33.8919886Z Reading package lists...
+2026-11-09T11:46:33.9270804Z Reading package lists...
+2026-11-09T11:46:34.1617931Z Building dependency tree...
+2026-11-09T11:46:34.1625589Z Reading state information...
+2026-11-09T11:46:34.3129474Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+2026-11-09T11:46:34.3130242Z libasound2t64 set to manually installed.
+2026-11-09T11:46:34.3131003Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-09T11:46:34.3131765Z libatk-bridge2.0-0t64 set to manually installed.
+2026-11-09T11:46:34.3156484Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-09T11:46:34.3157275Z libatk1.0-0t64 set to manually installed.
+2026-11-09T11:46:34.3158407Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+2026-11-09T11:46:34.3158910Z libatspi2.0-0t64 set to manually installed.
+2026-11-09T11:46:34.3159361Z libcairo2 is already the newest version (1.18.0-3build1).
+2026-11-09T11:46:34.3159772Z libcairo2 set to manually installed.
+2026-11-09T11:46:34.3160206Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+2026-11-09T11:46:34.3160643Z libcups2t64 set to manually installed.
+2026-11-09T11:46:34.3161094Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+2026-11-09T11:46:34.3161506Z libdbus-1-3 set to manually installed.
+2026-11-09T11:46:34.3161955Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+2026-11-09T11:46:34.3162368Z libdrm2 set to manually installed.
+2026-11-09T11:46:34.3162774Z libgbm1 is already the newest version (25.2.8-0ubuntu0.24.04.4).
+2026-11-09T11:46:34.3163366Z libgbm1 set to manually installed.
+2026-11-09T11:46:34.3163832Z libglib2.0-0t64 is already the newest version (2.80.0-6ubuntu3.10).
+2026-11-09T11:46:34.3164278Z libglib2.0-0t64 set to manually installed.
+2026-11-09T11:46:34.3164706Z libnspr4 is already the newest version (2:4.35-1.1build1).
+2026-11-09T11:46:34.3165388Z libnspr4 set to manually installed.
+2026-11-09T11:46:34.3165785Z libnss3 is already the newest version (2:3.98-1ubuntu0.3).
+2026-11-09T11:46:34.3166168Z libnss3 set to manually installed.
+2026-11-09T11:46:34.3166648Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+2026-11-09T11:46:34.3167072Z libpango-1.0-0 set to manually installed.
+2026-11-09T11:46:34.3167484Z libx11-6 is already the newest version (2:1.8.7-1ubuntu0.1).
+2026-11-09T11:46:34.3167882Z libx11-6 set to manually installed.
+2026-11-09T11:46:34.3168250Z libxcb1 is already the newest version (1.15-1ubuntu2).
+2026-11-09T11:46:34.3168607Z libxcb1 set to manually installed.
+2026-11-09T11:46:34.3169019Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+2026-11-09T11:46:34.3169431Z libxcomposite1 set to manually installed.
+2026-11-09T11:46:34.3169846Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+2026-11-09T11:46:34.3170234Z libxdamage1 set to manually installed.
+2026-11-09T11:46:34.3170626Z libxext6 is already the newest version (2:1.3.4-1build2).
+2026-11-09T11:46:34.3170992Z libxext6 set to manually installed.
+2026-11-09T11:46:34.3171375Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+2026-11-09T11:46:34.3171758Z libxfixes3 set to manually installed.
+2026-11-09T11:46:34.3172156Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+2026-11-09T11:46:34.3172549Z libxkbcommon0 set to manually installed.
+2026-11-09T11:46:34.3172958Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+2026-11-09T11:46:34.3173338Z libxrandr2 set to manually installed.
+2026-11-09T11:46:34.3173720Z xvfb is already the newest version (2:21.1.12-1ubuntu1.9).
+2026-11-09T11:46:34.3174266Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+2026-11-09T11:46:34.3174825Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+2026-11-09T11:46:34.3175541Z libfontconfig1 set to manually installed.
+2026-11-09T11:46:34.3176005Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.2).
+2026-11-09T11:46:34.3176435Z libfreetype6 set to manually installed.
+2026-11-09T11:46:34.3176858Z fonts-liberation is already the newest version (1:2.1.5-3).
+2026-11-09T11:46:34.3177269Z fonts-liberation set to manually installed.
+2026-11-09T11:46:34.3177670Z The following additional packages will be installed:
+2026-11-09T11:46:34.3178038Z   xfonts-encodings xfonts-utils
+2026-11-09T11:46:34.3178309Z Recommended packages:
+2026-11-09T11:46:34.3178585Z   fonts-ipafont-mincho fonts-tlwg-loma
+2026-11-09T11:46:34.3339020Z The following NEW packages will be installed:
+2026-11-09T11:46:34.3339781Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+2026-11-09T11:46:34.3347434Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+2026-11-09T11:46:34.3348160Z   xfonts-utils
+2026-11-09T11:46:34.3557042Z 0 upgraded, 9 newly installed, 0 to remove and 27 not upgraded.
+2026-11-09T11:46:34.3557633Z Need to get 21.1 MB of archives.
+2026-11-09T11:46:34.3558086Z After this operation, 79.5 MB of additional disk space will be used.
+2026-11-09T11:46:34.3558589Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-09T11:46:34.4647739Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+2026-11-09T11:46:34.8861421Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+2026-11-09T11:46:35.0243690Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+2026-11-09T11:46:35.0709292Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+2026-11-09T11:46:35.1641118Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+2026-11-09T11:46:35.3131261Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+2026-11-09T11:46:35.3622578Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+2026-11-09T11:46:35.4084684Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 xfonts-cyrillic all 1:1.0.5+nmu1 [384 kB]
+2026-11-09T11:46:35.4567232Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-scalable all 1:1.0.3-1.3 [304 kB]
+2026-11-09T11:46:35.7372483Z Fetched 21.1 MB in 1s (18.9 MB/s)
+2026-11-09T11:46:35.7642464Z Selecting previously unselected package fonts-ipafont-gothic.
+2026-11-09T11:46:35.7948141Z (Reading database ... 
+2026-11-09T11:46:35.7948519Z (Reading database ... 5%
+2026-11-09T11:46:35.7948839Z (Reading database ... 10%
+2026-11-09T11:46:35.7949125Z (Reading database ... 15%
+2026-11-09T11:46:35.7949424Z (Reading database ... 20%
+2026-11-09T11:46:35.7949692Z (Reading database ... 25%
+2026-11-09T11:46:35.7950102Z (Reading database ... 30%
+2026-11-09T11:46:35.7950686Z (Reading database ... 35%
+2026-11-09T11:46:35.7951229Z (Reading database ... 40%
+2026-11-09T11:46:35.7951564Z (Reading database ... 45%
+2026-11-09T11:46:35.7951838Z (Reading database ... 50%
+2026-11-09T11:46:35.8021179Z (Reading database ... 55%
+2026-11-09T11:46:35.9212876Z (Reading database ... 60%
+2026-11-09T11:46:36.5148291Z (Reading database ... 65%
+2026-11-09T11:46:36.9138160Z (Reading database ... 70%
+2026-11-09T11:46:37.0848347Z (Reading database ... 75%
+2026-11-09T11:46:37.2553301Z (Reading database ... 80%
+2026-11-09T11:46:37.4665298Z (Reading database ... 85%
+2026-11-09T11:46:37.6187984Z (Reading database ... 90%
+2026-11-09T11:46:37.7804179Z (Reading database ... 95%
+2026-11-09T11:46:37.7804872Z (Reading database ... 100%
+2026-11-09T11:46:37.7806139Z (Reading database ... 215960 files and directories currently installed.)
+2026-11-09T11:46:37.7850781Z Preparing to unpack .../0-fonts-ipafont-gothic_00303-21ubuntu1_all.deb ...
+2026-11-09T11:46:37.7978168Z Unpacking fonts-ipafont-gothic (00303-21ubuntu1) ...
+2026-11-09T11:46:38.0434095Z Selecting previously unselected package fonts-freefont-ttf.
+2026-11-09T11:46:38.0579957Z Preparing to unpack .../1-fonts-freefont-ttf_20211204+svn4273-2_all.deb ...
+2026-11-09T11:46:38.0588816Z Unpacking fonts-freefont-ttf (20211204+svn4273-2) ...
+2026-11-09T11:46:38.1491904Z Selecting previously unselected package fonts-tlwg-loma-otf.
+2026-11-09T11:46:38.1645793Z Preparing to unpack .../2-fonts-tlwg-loma-otf_1%3a0.7.3-1_all.deb ...
+2026-11-09T11:46:38.1654396Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1) ...
+2026-11-09T11:46:38.1903211Z Selecting previously unselected package fonts-unifont.
+2026-11-09T11:46:38.2046434Z Preparing to unpack .../3-fonts-unifont_1%3a15.1.01-1build1_all.deb ...
+2026-11-09T11:46:38.2054117Z Unpacking fonts-unifont (1:15.1.01-1build1) ...
+2026-11-09T11:46:38.3244926Z Selecting previously unselected package fonts-wqy-zenhei.
+2026-11-09T11:46:38.3390018Z Preparing to unpack .../4-fonts-wqy-zenhei_0.9.45-8_all.deb ...
+2026-11-09T11:46:38.3507705Z Unpacking fonts-wqy-zenhei (0.9.45-8) ...
+2026-11-09T11:46:38.8466891Z Selecting previously unselected package xfonts-encodings.
+2026-11-09T11:46:38.8611194Z Preparing to unpack .../5-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+2026-11-09T11:46:38.8620038Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+2026-11-09T11:46:38.8946047Z Selecting previously unselected package xfonts-utils.
+2026-11-09T11:46:38.9090168Z Preparing to unpack .../6-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+2026-11-09T11:46:38.9100009Z Unpacking xfonts-utils (1:7.7+6build3) ...
+2026-11-09T11:46:38.9478023Z Selecting previously unselected package xfonts-cyrillic.
+2026-11-09T11:46:38.9621014Z Preparing to unpack .../7-xfonts-cyrillic_1%3a1.0.5+nmu1_all.deb ...
+2026-11-09T11:46:38.9630017Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1) ...
+2026-11-09T11:46:39.0004628Z Selecting previously unselected package xfonts-scalable.
+2026-11-09T11:46:39.0148766Z Preparing to unpack .../8-xfonts-scalable_1%3a1.0.3-1.3_all.deb ...
+2026-11-09T11:46:39.0160305Z Unpacking xfonts-scalable (1:1.0.3-1.3) ...
+2026-11-09T11:46:39.0642632Z Setting up fonts-wqy-zenhei (0.9.45-8) ...
+2026-11-09T11:46:39.0801399Z Setting up fonts-freefont-ttf (20211204+svn4273-2) ...
+2026-11-09T11:46:39.0824669Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1) ...
+2026-11-09T11:46:39.0845939Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+2026-11-09T11:46:39.0879845Z Setting up fonts-ipafont-gothic (00303-21ubuntu1) ...
+2026-11-09T11:46:39.0956573Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+2026-11-09T11:46:39.0974446Z Setting up fonts-unifont (1:15.1.01-1build1) ...
+2026-11-09T11:46:39.0994752Z Setting up xfonts-utils (1:7.7+6build3) ...
+2026-11-09T11:46:39.1044558Z Setting up xfonts-cyrillic (1:1.0.5+nmu1) ...
+2026-11-09T11:46:39.1358227Z Setting up xfonts-scalable (1:1.0.3-1.3) ...
+2026-11-09T11:46:39.1658807Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-11-09T11:46:39.1690758Z Not building database; man-db/auto-update is not 'true'.
+2026-11-09T11:46:39.1710304Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+2026-11-09T11:46:39.9413593Z 
+2026-11-09T11:46:39.9414398Z Running kernel seems to be up-to-date.
+2026-11-09T11:46:39.9414813Z 
+2026-11-09T11:46:39.9415328Z No services need to be restarted.
+2026-11-09T11:46:39.9415671Z 
+2026-11-09T11:46:39.9415930Z No containers need to be restarted.
+2026-11-09T11:46:39.9416248Z 
+2026-11-09T11:46:39.9416561Z No user sessions are running outdated binaries.
+2026-11-09T11:46:39.9416954Z 
+2026-11-09T11:46:39.9417449Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-09T11:46:41.0336699Z Downloading Chrome for Testing 156.0.8078.4 (playwright chromium v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux64/chrome-linux64.zip
+2026-11-09T11:46:41.5026295Z |                                                                                |   0% of 191.1 MiB
+2026-11-09T11:46:41.7273482Z |■■■■■■■■                                                                        |  10% of 191.1 MiB
+2026-11-09T11:46:41.8633103Z |■■■■■■■■■■■■■■■■                                                                |  20% of 191.1 MiB
+2026-11-09T11:46:41.9617628Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 191.1 MiB
+2026-11-09T11:46:42.0279425Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 191.1 MiB
+2026-11-09T11:46:42.1102708Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 191.1 MiB
+2026-11-09T11:46:42.2109687Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 191.1 MiB
+2026-11-09T11:46:42.2757723Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 191.1 MiB
+2026-11-09T11:46:42.3831281Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 191.1 MiB
+2026-11-09T11:46:42.4498329Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 191.1 MiB
+2026-11-09T11:46:42.5323292Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 191.1 MiB
+2026-11-09T11:46:45.6382532Z Chrome for Testing 156.0.8078.4 (playwright chromium v1248) downloaded to /home/runner/.cache/ms-playwright/chromium-1248
+2026-11-09T11:46:45.6387120Z Downloading FFmpeg (playwright ffmpeg v1013) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1013/ffmpeg-linux.zip
+2026-11-09T11:46:46.0267883Z |                                                                                |   0% of 2.2 MiB
+2026-11-09T11:46:46.0456594Z |■■■■■■■■                                                                        |  10% of 2.2 MiB
+2026-11-09T11:46:46.0528813Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.2 MiB
+2026-11-09T11:46:46.0589950Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.2 MiB
+2026-11-09T11:46:46.0610732Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.2 MiB
+2026-11-09T11:46:46.0625908Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.2 MiB
+2026-11-09T11:46:46.0644939Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.2 MiB
+2026-11-09T11:46:46.0683236Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.2 MiB
+2026-11-09T11:46:46.0700797Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.2 MiB
+2026-11-09T11:46:46.0714432Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.2 MiB
+2026-11-09T11:46:46.0723258Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.2 MiB
+2026-11-09T11:46:46.1319466Z FFmpeg (playwright ffmpeg v1013) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1013
+2026-11-09T11:46:46.1322731Z Downloading Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) from https://cdn.playwright.dev/builds/cft/156.0.8078.4/linux64/chrome-headless-shell-linux64.zip
+2026-11-09T11:46:46.5690924Z |                                                                                |   0% of 120 MiB
+2026-11-09T11:46:46.7110250Z |■■■■■■■■                                                                        |  10% of 120 MiB
+2026-11-09T11:46:46.8093538Z |■■■■■■■■■■■■■■■■                                                                |  20% of 120 MiB
+2026-11-09T11:46:46.8745322Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 120 MiB
+2026-11-09T11:46:46.9571907Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 120 MiB
+2026-11-09T11:46:47.0018454Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 120 MiB
+2026-11-09T11:46:47.0417157Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 120 MiB
+2026-11-09T11:46:47.0954521Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 120 MiB
+2026-11-09T11:46:47.1325746Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 120 MiB
+2026-11-09T11:46:47.1666529Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 120 MiB
+2026-11-09T11:46:47.2187526Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 120 MiB
+2026-11-09T11:46:49.4462022Z Chrome Headless Shell 156.0.8078.4 (playwright chromium-headless-shell v1248) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1248
+2026-11-09T11:46:49.4866008Z ##[group]Run curl --fail --location --silent --show-error --connect-timeout 15 --max-time 120 --retry 2 https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf -o /tmp/klh-ci-noto.otf
+2026-11-09T11:46:49.4868254Z [36;1mcurl --fail --location --silent --show-error --connect-timeout 15 --max-time 120 --retry 2 https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf -o /tmp/klh-ci-noto.otf[0m
+2026-11-09T11:46:49.4869787Z [36;1mecho '2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b  /tmp/klh-ci-noto.otf' | sha256sum -c -[0m
+2026-11-09T11:46:49.4870424Z [36;1mmkdir -p ~/.local/share/fonts/klh-ci[0m
+2026-11-09T11:46:49.4870900Z [36;1mcp /tmp/klh-ci-noto.otf ~/.local/share/fonts/klh-ci/NotoSansCJKsc-Regular.otf[0m
+2026-11-09T11:46:49.4871416Z [36;1mfc-cache -f ~/.local/share/fonts/klh-ci[0m
+2026-11-09T11:46:49.4892660Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:49.4892916Z ##[endgroup]
+2026-11-09T11:46:49.7460800Z /tmp/klh-ci-noto.otf: OK
+2026-11-09T11:46:51.7726838Z ##[group]Run python3 tests/nas-gate/check-probes.py
+2026-11-09T11:46:51.7727282Z [36;1mpython3 tests/nas-gate/check-probes.py[0m
+2026-11-09T11:46:51.7747360Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:51.7747619Z ##[endgroup]
+2026-11-09T11:46:51.9808826Z NAS controller and 6 embedded Node probes: syntax PASS; no NAS connection
+2026-11-09T11:46:51.9916013Z ##[group]Run python3 -m py_compile infra/trial/controller.py
+2026-11-09T11:46:51.9916521Z [36;1mpython3 -m py_compile infra/trial/controller.py[0m
+2026-11-09T11:46:51.9916883Z [36;1mnode --check tests/trial/browser.mjs[0m
+2026-11-09T11:46:51.9917213Z [36;1mnode --test tests/trial/proxy.test.mjs[0m
+2026-11-09T11:46:51.9937269Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:51.9937534Z ##[endgroup]
+2026-11-09T11:46:52.3266931Z ✔ isolated HTTPS proxy preserves auth boundary, rejects wrong Host and fails closed (160.707486ms)
+2026-11-09T11:46:52.3383697Z ℹ tests 1
+2026-11-09T11:46:52.3384024Z ℹ suites 0
+2026-11-09T11:46:52.3384276Z ℹ pass 1
+2026-11-09T11:46:52.3384512Z ℹ fail 0
+2026-11-09T11:46:52.3384759Z ℹ cancelled 0
+2026-11-09T11:46:52.3386686Z ℹ skipped 0
+2026-11-09T11:46:52.3386991Z ℹ todo 0
+2026-11-09T11:46:52.3387288Z ℹ duration_ms 244.464955
+2026-11-09T11:46:52.3468469Z ##[group]Run python3 -m unittest discover -s tests/math-trial -p 'test_*.py' -v
+2026-11-09T11:46:52.3469123Z [36;1mpython3 -m unittest discover -s tests/math-trial -p 'test_*.py' -v[0m
+2026-11-09T11:46:52.3469592Z [36;1mnode --test tests/math-trial/*.test.mjs[0m
+2026-11-09T11:46:52.3469955Z [36;1mnode --check tests/math-trial/browser.mjs[0m
+2026-11-09T11:46:52.3490712Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:52.3490966Z ##[endgroup]
+2026-11-09T11:46:52.4670230Z test_frozen_main_and_unique_plan (test_controller.Safety.test_frozen_main_and_unique_plan) ... ok
+2026-11-09T11:46:52.4676503Z test_invariance_detects_restart_or_id_changes (test_controller.Safety.test_invariance_detects_restart_or_id_changes) ... ok
+2026-11-09T11:46:52.4680503Z test_mutations_keep_formal_image_auth_and_no_global_changes (test_controller.Safety.test_mutations_keep_formal_image_auth_and_no_global_changes) ... ok
+2026-11-09T11:46:52.4685615Z test_offline_constructor_has_no_side_effect (test_controller.Safety.test_offline_constructor_has_no_side_effect) ... ok
+2026-11-09T11:46:52.4689217Z test_old_port_and_other_ports_rejected (test_controller.Safety.test_old_port_and_other_ports_rejected) ... ok
+2026-11-09T11:46:52.4696325Z test_old_state_rejected (test_controller.Safety.test_old_state_rejected) ... ok
+2026-11-09T11:46:52.4700984Z test_other_hosts_rejected (test_controller.Safety.test_other_hosts_rejected) ... ok
+2026-11-09T11:46:52.4707329Z test_private_permissions (test_controller.Safety.test_private_permissions) ... ok
+2026-11-09T11:46:52.4711018Z test_private_symlink_rejected (test_controller.Safety.test_private_symlink_rejected) ... ok
+2026-11-09T11:46:52.4718132Z test_review_head_keeps_actual_nas_acceptance_harness (test_controller.Safety.test_review_head_keeps_actual_nas_acceptance_harness) ... ok
+2026-11-09T11:46:52.4722341Z test_state_symlink_rejected (test_controller.Safety.test_state_symlink_rejected) ... ok
+2026-11-09T11:46:52.4731457Z test_stop_refuses_wrong_id_or_name (test_controller.Safety.test_stop_refuses_wrong_id_or_name) ... ok
+2026-11-09T11:46:52.4741014Z test_stop_refuses_wrong_owner_before_mutation (test_controller.Safety.test_stop_refuses_wrong_owner_before_mutation) ... ok
+2026-11-09T11:46:52.4743719Z test_transfer_outside_owned_root_rejected (test_controller.Safety.test_transfer_outside_owned_root_rejected) ... ok
+2026-11-09T11:46:52.4747650Z test_workflow_exact_archive_and_short_private_artifact (test_controller.Safety.test_workflow_exact_archive_and_short_private_artifact) ... ok
+2026-11-09T11:46:52.4748610Z 
+2026-11-09T11:46:52.4748993Z ----------------------------------------------------------------------
+2026-11-09T11:46:52.4749563Z Ran 15 tests in 0.008s
+2026-11-09T11:46:52.4749781Z 
+2026-11-09T11:46:52.4749902Z OK
+2026-11-09T11:46:52.6007356Z ✔ full trial reserves three real child logins and parent plus two offline verifications (2.425204ms)
+2026-11-09T11:46:52.6022964Z ✔ only natural window expiration restores budget; boundary is inclusive (0.271235ms)
+2026-11-09T11:46:53.8301511Z ✔ fixed delivery is idempotent, private, public-CA-only, with no passwords in returned metadata or launcher (301.754723ms)
+2026-11-09T11:46:53.8327233Z ✔ unowned existing folder, symlink destination, readable private source and changed user guide are preserved (93.30047ms)
+2026-11-09T11:46:53.8329381Z ✔ one runtime per delivery: repeat launch does not create a second profile; unknown user file survives cleanup (360.931926ms)
+2026-11-09T11:46:53.8330460Z ✔ closing the last visible tab releases the one-instance runtime; another open tab is preserved (0.409753ms)
+2026-11-09T11:46:53.8577219Z ✔ isolated HTTPS proxy preserves auth boundary, rejects wrong Host and fails closed (292.967533ms)
+2026-11-09T11:46:57.4407634Z ✔ profile CA trust keeps chain, SAN, expiry checks and other profiles isolated (4278.410012ms)
+2026-11-09T11:46:57.4633199Z ℹ tests 8
+2026-11-09T11:46:57.4633684Z ℹ suites 0
+2026-11-09T11:46:57.4634098Z ℹ pass 8
+2026-11-09T11:46:57.4634383Z ℹ fail 0
+2026-11-09T11:46:57.4635321Z ℹ cancelled 0
+2026-11-09T11:46:57.4635677Z ℹ skipped 0
+2026-11-09T11:46:57.4635942Z ℹ todo 0
+2026-11-09T11:46:57.4636255Z ℹ duration_ms 4942.356954
+2026-11-09T11:46:57.4988325Z ##[group]Run set -euo pipefail
+2026-11-09T11:46:57.4988799Z [36;1mset -euo pipefail[0m
+2026-11-09T11:46:57.4989305Z [36;1mmkdir -p .evidence/math-00[0m
+2026-11-09T11:46:57.4989867Z [36;1mpython3 scripts/math-audit/check.py | tee .evidence/math-00/check.json[0m
+2026-11-09T11:46:57.4990654Z [36;1mpython3 -m unittest discover -s tests/math-audit -p 'test_*.py' -v 2>&1 | tee .evidence/math-00/tests.log[0m
+2026-11-09T11:46:57.5011798Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:57.5012494Z ##[endgroup]
+2026-11-09T11:46:57.5516898Z {"status": "PASS_OFFLINE", "files": 133, "dependencies": 273, "prior17Verified": true, "lessonIds": 70, "firstLesson": "G3-U01-B01", "courseFilesCopied": 0}
+2026-11-09T11:46:57.6129640Z test_committed_contract_and_inventory (test_audit.AuditGate.test_committed_contract_and_inventory) ... ok
+2026-11-09T11:46:57.6154472Z test_draft_status_cannot_be_upgraded (test_audit.AuditGate.test_draft_status_cannot_be_upgraded) ... ok
+2026-11-09T11:46:57.6178683Z test_fs_resource_edges_required (test_audit.AuditGate.test_fs_resource_edges_required) ... ok
+2026-11-09T11:46:57.6202602Z test_hidden_nested_answer_cannot_enter_whitelist (test_audit.AuditGate.test_hidden_nested_answer_cannot_enter_whitelist) ... ok
+2026-11-09T11:46:57.6212649Z test_import_scanner_distinguishes_methods_from_static_imports (test_audit.AuditGate.test_import_scanner_distinguishes_methods_from_static_imports) ... ok
+2026-11-09T11:46:57.6234332Z test_missing_dependency_fails (test_audit.AuditGate.test_missing_dependency_fails) ... ok
+2026-11-09T11:46:57.6255699Z test_prior17_hash_drift_fails (test_audit.AuditGate.test_prior17_hash_drift_fails) ... ok
+2026-11-09T11:46:57.6274573Z test_real_paths_rejected_without_opening_them (test_audit.AuditGate.test_real_paths_rejected_without_opening_them) ... ok
+2026-11-09T11:46:57.6294088Z test_runtime_service_never_allow (test_audit.AuditGate.test_runtime_service_never_allow) ... ok
+2026-11-09T11:46:57.6304591Z test_source_head_mismatch_stops_before_blob_read (test_audit.AuditGate.test_source_head_mismatch_stops_before_blob_read) ... ok
+2026-11-09T11:46:57.6313720Z test_source_status_change_fails (test_audit.AuditGate.test_source_status_change_fails) ... ok
+2026-11-09T11:46:57.6323271Z test_wrong_freeze_fails (test_audit.AuditGate.test_wrong_freeze_fails) ... ok
+2026-11-09T11:46:57.6323981Z 
+2026-11-09T11:46:57.6324591Z ----------------------------------------------------------------------
+2026-11-09T11:46:57.6325377Z Ran 12 tests in 0.023s
+2026-11-09T11:46:57.6325578Z 
+2026-11-09T11:46:57.6325683Z OK
+2026-11-09T11:46:57.6458346Z ##[group]Run python3 -m unittest discover -s tests/math-preview -p 'test_*.py' -v
+2026-11-09T11:46:57.6458968Z [36;1mpython3 -m unittest discover -s tests/math-preview -p 'test_*.py' -v[0m
+2026-11-09T11:46:57.6459415Z [36;1mnode --test tests/math-preview/*.test.mjs[0m
+2026-11-09T11:46:57.6459755Z [36;1mmkdir -p .evidence/math-full-nas-r2[0m
+2026-11-09T11:46:57.6460033Z [36;1mset +e[0m
+2026-11-09T11:46:57.6460423Z [36;1mnode tests/math-preview/container.mjs > .evidence/math-full-nas-r2/container.log 2>&1[0m
+2026-11-09T11:46:57.6460880Z [36;1mtask_exit=$?[0m
+2026-11-09T11:46:57.6461177Z [36;1mtail -c 4000 .evidence/math-full-nas-r2/container.log[0m
+2026-11-09T11:46:57.6461512Z [36;1mexit "$task_exit"[0m
+2026-11-09T11:46:57.6481084Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:46:57.6481341Z env:
+2026-11-09T11:46:57.6481542Z   KLH_EXPORT_PREVIEW_IMAGE: 1
+2026-11-09T11:46:57.6481784Z ##[endgroup]
+2026-11-09T11:46:57.7448293Z test_docker_permission_denial_stops_before_remote_writes (test_controller.BoundaryTests.test_docker_permission_denial_stops_before_remote_writes) ... ok
+2026-11-09T11:46:57.7474870Z test_inherited_modes_are_fixed_only_after_owner_marker_matches (test_controller.BoundaryTests.test_inherited_modes_are_fixed_only_after_owner_marker_matches) ... ok
+2026-11-09T11:46:57.7477572Z test_mount_order_is_irrelevant_but_permissions_are_not (test_controller.BoundaryTests.test_mount_order_is_irrelevant_but_permissions_are_not) ... ok
+2026-11-09T11:46:57.7480015Z test_old_application_requires_exact_owner_and_synthetic_mounts (test_controller.BoundaryTests.test_old_application_requires_exact_owner_and_synthetic_mounts) ... ok
+2026-11-09T11:46:57.7483043Z test_private_state_symlink_is_rejected_before_read_or_write (test_controller.BoundaryTests.test_private_state_symlink_is_rejected_before_read_or_write) ... ok
+2026-11-09T11:46:57.7485636Z test_unowned_tls_cannot_be_stopped (test_controller.BoundaryTests.test_unowned_tls_cannot_be_stopped) ... ok
+2026-11-09T11:46:57.7490803Z test_create_failure_after_staging_removal_restarts_previous_public_container (test_release.ReleaseTests.test_create_failure_after_staging_removal_restarts_previous_public_container) ... ok
+2026-11-09T11:46:57.7493693Z test_docker_permission_failure_does_not_upload_or_touch_remote_directory (test_release.ReleaseTests.test_docker_permission_failure_does_not_upload_or_touch_remote_directory) ... ok
+2026-11-09T11:46:57.7496657Z test_legacy_switch_and_rollback_refuse_when_versioned_release_is_active (test_release.ReleaseTests.test_legacy_switch_and_rollback_refuse_when_versioned_release_is_active) ... ok
+2026-11-09T11:46:57.7499183Z test_only_registered_exact_owned_release_is_excluded_from_protected_snapshot (test_release.ReleaseTests.test_only_registered_exact_owned_release_is_excluded_from_protected_snapshot) ... ok
+2026-11-09T11:46:57.7501729Z test_release_app_requires_recorded_identity_nonroot_readonly_and_zero_mounts (test_release.ReleaseTests.test_release_app_requires_recorded_identity_nonroot_readonly_and_zero_mounts) ... ok
+2026-11-09T11:46:57.7502868Z 
+2026-11-09T11:46:57.7503233Z ----------------------------------------------------------------------
+2026-11-09T11:46:57.7503770Z Ran 11 tests in 0.005s
+2026-11-09T11:46:57.7503990Z 
+2026-11-09T11:46:57.7504102Z OK
+2026-11-09T11:46:58.0648507Z ✔ container HTTP is explicit, privately bound and rejects broader origins or peers (1.801248ms)
+2026-11-09T11:46:58.0650546Z ✔ LAN-compatible digest independently matches Node SHA-256 for all 70 DTOs and Unicode (69.509814ms)
+2026-11-09T11:46:58.0843856Z ℹ tests 2
+2026-11-09T11:46:58.0844217Z ℹ suites 0
+2026-11-09T11:46:58.0844470Z ℹ pass 2
+2026-11-09T11:46:58.0844710Z ℹ fail 0
+2026-11-09T11:46:58.0845166Z ℹ cancelled 0
+2026-11-09T11:46:58.0845589Z ℹ skipped 0
+2026-11-09T11:46:58.0845918Z ℹ todo 0
+2026-11-09T11:46:58.0846338Z ℹ duration_ms 287.598859
+2026-11-09T11:47:26.1167949Z      178.46 kB │ gzip:  37.39 kB
+2026-11-09T11:47:26.1172714Z #22 8.003 apps/preview/dist/assets/usePrint-CIWg-6mg.js              0.48 kB │ gzip:   0.29 kB
+2026-11-09T11:47:26.1174180Z #22 8.003 apps/preview/dist/assets/Article-DprD6Mec.js               7.79 kB │ gzip:   3.13 kB
+2026-11-09T11:47:26.1175579Z #22 8.003 apps/preview/dist/assets/jsx-runtime-Am8b9ysO.js           8.27 kB │ gzip:   3.12 kB
+2026-11-09T11:47:26.1176684Z #22 8.003 apps/preview/dist/assets/DetectiveFigure-DH3gW_Ly.js       8.83 kB │ gzip:   3.80 kB
+2026-11-09T11:47:26.1177731Z #22 8.003 apps/preview/dist/assets/Home-BGaA9QZC.js                 11.97 kB │ gzip:   3.97 kB
+2026-11-09T11:47:26.1178637Z #22 8.003 apps/preview/dist/assets/DetectiveTraining-CdWMVP8O.js    18.24 kB │ gzip:   6.59 kB
+2026-11-09T11:47:26.1179487Z #22 8.003 apps/preview/dist/assets/CoreWorkbench-BLI214jn.js        18.83 kB │ gzip:   6.86 kB
+2026-11-09T11:47:26.1180328Z #22 8.003 apps/preview/dist/assets/Explore-D0MuVgyl.js              20.60 kB │ gzip:   7.90 kB
+2026-11-09T11:47:26.1181174Z #22 8.003 apps/preview/dist/assets/Library-3jm4giHW.js              86.96 kB │ gzip:  32.98 kB
+2026-11-09T11:47:26.1182003Z #22 8.003 apps/preview/dist/assets/schemas-BogG19SQ.js              95.97 kB │ gzip:  27.03 kB
+2026-11-09T11:47:26.1182828Z #22 8.003 apps/preview/dist/assets/index-DCi5NJna.js               566.90 kB │ gzip: 190.48 kB
+2026-11-09T11:47:26.1183281Z #22 8.003 
+2026-11-09T11:47:26.1183539Z #22 8.004 ✓ built in 400ms
+2026-11-09T11:47:26.1183859Z #22 8.004 [plugin builtin:vite-reporter] 
+2026-11-09T11:47:26.1184373Z #22 8.004 (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-11-09T11:47:26.1184948Z #22 8.004 - Using dynamic import() to code-split the application
+2026-11-09T11:47:26.1186180Z #22 8.004 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+2026-11-09T11:47:26.1187098Z #22 8.004 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-11-09T11:47:26.1188032Z #22 8.463 {"previewBuild":"SEALED","lessons":70,"assets":24,"databaseOpened":false}
+2026-11-09T11:47:26.1188448Z #22 DONE 9.0s
+2026-11-09T11:47:26.1188580Z 
+2026-11-09T11:47:26.1188872Z #23 [stage-1  4/17] COPY --from=build /app/node_modules/zod ./node_modules/zod
+2026-11-09T11:47:26.1189247Z #23 DONE 0.1s
+2026-11-09T11:47:26.1189358Z 
+2026-11-09T11:47:26.1189642Z #24 [stage-1  5/17] COPY --from=build /app/apps/preview/dist ./apps/preview/dist
+2026-11-09T11:47:26.1190016Z #24 DONE 0.0s
+2026-11-09T11:47:26.1190126Z 
+2026-11-09T11:47:26.1190424Z #25 [stage-1  6/17] COPY --from=build /app/apps/preview/content ./apps/preview/content
+2026-11-09T11:47:26.1190818Z #25 DONE 0.0s
+2026-11-09T11:47:26.1190924Z 
+2026-11-09T11:47:26.1191158Z #26 [stage-1  7/17] COPY apps/preview/reading ./apps/preview/reading
+2026-11-09T11:47:26.1191495Z #26 DONE 0.0s
+2026-11-09T11:47:26.1191606Z 
+2026-11-09T11:47:26.1191867Z #27 [stage-1  8/17] COPY apps/preview/library ./apps/preview/library
+2026-11-09T11:47:26.1192206Z #27 DONE 0.0s
+2026-11-09T11:47:26.1192309Z 
+2026-11-09T11:47:26.1192560Z #28 [stage-1  9/17] COPY apps/preview/practice ./apps/preview/practice
+2026-11-09T11:47:26.1192903Z #28 DONE 0.0s
+2026-11-09T11:47:26.1193013Z 
+2026-11-09T11:47:26.1193360Z #29 [stage-1 10/17] COPY packages/contracts/math-study.ts ./packages/contracts/math-study.ts
+2026-11-09T11:47:26.1193791Z #29 DONE 0.0s
+2026-11-09T11:47:26.1193900Z 
+2026-11-09T11:47:26.1194242Z #30 [stage-1 11/17] COPY packages/math-training/study.mjs ./packages/math-training/study.mjs
+2026-11-09T11:47:26.1194660Z #30 DONE 0.0s
+2026-11-09T11:47:26.1194763Z 
+2026-11-09T11:47:26.1195505Z #31 [stage-1 12/17] COPY packages/contracts/math-training.ts ./packages/contracts/math-training.ts
+2026-11-09T11:47:26.1195995Z #31 DONE 0.0s
+2026-11-09T11:47:26.1196111Z 
+2026-11-09T11:47:26.1196471Z #32 [stage-1 13/17] COPY packages/math-training/engine.mjs ./packages/math-training/engine.mjs
+2026-11-09T11:47:26.1196917Z #32 DONE 0.0s
+2026-11-09T11:47:26.1197024Z 
+2026-11-09T11:47:26.1197338Z #33 [stage-1 14/17] COPY packages/math-training/source ./packages/math-training/source
+2026-11-09T11:47:26.1197893Z #33 DONE 0.0s
+2026-11-09T11:47:26.1198014Z 
+2026-11-09T11:47:26.1198282Z #34 [stage-1 15/17] COPY apps/preview/training.ts ./apps/preview/training.ts
+2026-11-09T11:47:26.1198642Z #34 DONE 0.0s
+2026-11-09T11:47:26.1198755Z 
+2026-11-09T11:47:26.1199573Z #35 [stage-1 16/17] COPY apps/preview/server.ts apps/preview/content.ts apps/preview/contract.ts apps/preview/registry-meta.ts apps/preview/runtime.ts apps/preview/learning-map.ts ./apps/preview/
+2026-11-09T11:47:26.1200355Z #35 DONE 0.0s
+2026-11-09T11:47:26.1200463Z 
+2026-11-09T11:47:26.1201008Z #36 [stage-1 17/17] COPY apps/preview/adapters/source/shared/intro-visuals.mjs ./apps/preview/adapters/source/shared/intro-visuals.mjs
+2026-11-09T11:47:26.1201594Z #36 DONE 0.0s
+2026-11-09T11:47:26.1201706Z 
+2026-11-09T11:47:26.1201814Z #37 exporting to image
+2026-11-09T11:47:26.1202053Z #37 exporting layers
+2026-11-09T11:47:26.1202316Z #37 exporting layers 1.8s done
+2026-11-09T11:47:26.1202851Z #37 writing image sha256:0356e52ca0c8f5ec59d9e057895cb207ec657bdbcf509371ff4357c7fa03b4ca done
+2026-11-09T11:47:26.1203545Z #37 naming to docker.io/library/klh-content-ci:c15b093b-260f-4605-aeed-7106d4504cdf done
+2026-11-09T11:47:26.1203957Z #37 DONE 1.8s
+2026-11-09T11:47:26.1204072Z 
+2026-11-09T11:47:26.1204326Z  [33m2 warnings found (use docker --debug to expand):
+2026-11-09T11:47:26.1205430Z [0m - FromPlatformFlagConstDisallowed: FROM --platform flag should not use constant value "linux/amd64" (line 2)
+2026-11-09T11:47:26.1206295Z  - FromPlatformFlagConstDisallowed: FROM --platform flag should not use constant value "linux/amd64" (line 20)
+2026-11-09T11:47:26.1207806Z {"status":"PASS_PREVIEW_IMAGE_CI","imageId":"sha256:0356e52ca0c8f5ec59d9e057895cb207ec657bdbcf509371ff4357c7fa03b4ca","archive":{"name":"preview-amd64.tar.gz","bytes":82155256,"sha256":"84393eeb7ecefe59947e59ad77fa797e3591726bee996f7a8dc8c0091d249ae1"}}
+2026-11-09T11:47:26.1271443Z ##[group]Run actions/upload-artifact@v4
+2026-11-09T11:47:26.1271738Z with:
+2026-11-09T11:47:26.1271962Z   name: math-preview-image
+2026-11-09T11:47:26.1272466Z   path: .evidence/math-full-nas-r2/image.json
+.evidence/math-full-nas-r2/preview-amd64.tar.gz
+
+2026-11-09T11:47:26.1272930Z   retention-days: 3
+2026-11-09T11:47:26.1273145Z   compression-level: 0
+2026-11-09T11:47:26.1273448Z   if-no-files-found: warn
+2026-11-09T11:47:26.1273696Z   overwrite: false
+2026-11-09T11:47:26.1273907Z   include-hidden-files: false
+2026-11-09T11:47:26.1274149Z ##[endgroup]
+2026-11-09T11:47:26.3049290Z (node:4394) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-09T11:47:26.3050152Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-09T11:47:26.3106984Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-09T11:47:26.3111274Z The least common ancestor is /home/runner/work/kevin-learning-home/kevin-learning-home/.evidence/math-full-nas-r2. This will be the root directory of the artifact
+2026-11-09T11:47:26.3112794Z With the provided path, there will be 2 files uploaded
+2026-11-09T11:47:26.3117752Z Artifact name is valid!
+2026-11-09T11:47:26.3119056Z Root directory input is valid!
+2026-11-09T11:47:26.6760672Z Beginning upload of artifact content to blob storage
+2026-11-09T11:47:26.7323884Z (node:4394) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-09T11:47:27.4421899Z Uploaded bytes 8388608
+2026-11-09T11:47:27.5338065Z Uploaded bytes 16777216
+2026-11-09T11:47:27.6241523Z Uploaded bytes 25165824
+2026-11-09T11:47:27.6783990Z Uploaded bytes 33554432
+2026-11-09T11:47:27.6901181Z Uploaded bytes 41943040
+2026-11-09T11:47:27.8586574Z Uploaded bytes 50331648
+2026-11-09T11:47:27.9018997Z Uploaded bytes 58720256
+2026-11-09T11:47:27.9829027Z Uploaded bytes 67108864
+2026-11-09T11:47:28.0405359Z Uploaded bytes 75497472
+2026-11-09T11:47:28.3681445Z Uploaded bytes 82156417
+2026-11-09T11:47:28.4249506Z Finished uploading artifact content to blob storage!
+2026-11-09T11:47:28.4251381Z SHA256 digest of uploaded artifact zip is c766441031d1a4caf020b3ce86aefaa2dac34dc2009da4837a0ed663361e4663
+2026-11-09T11:47:28.4252481Z Finalizing artifact upload
+2026-11-09T11:47:28.8398395Z Artifact math-preview-image.zip successfully finalized. Artifact ID 13669938803
+2026-11-09T11:47:28.8399671Z Artifact math-preview-image has been successfully uploaded! Final size is 82156417 bytes. Artifact ID is 13669938803
+2026-11-09T11:47:28.8407517Z Artifact download URL: https://github.com/lovestream/kevin-learning-home/actions/runs/42611607445/artifacts/13669938803
+2026-11-09T11:47:28.8621862Z ##[group]Run node scripts/verify.ts
+2026-11-09T11:47:28.8622202Z [36;1mnode scripts/verify.ts[0m
+2026-11-09T11:47:28.8641969Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:47:28.8642225Z ##[endgroup]
+2026-11-09T11:49:53.0883434Z {"status":"PASS_CI","timestamp":"2026-11-09T11:49:53.074Z","executedHeadSha":"9ed8910424f3e821f23e63b900dbe8329b146a93","worktreeDirty":false,"environment":{"node":"v24.15.0","os":"linux","arch":"x64","kernel":"7.0.0-1017-azure"},"tests":60,"browserViewports":3,"mathNodeTests":12,"mathBrowserScenarios":9,"shellBrowserScenarios":18,"shellViewports":[390,768,1280,1440],"steps":[{"command":"npm run typecheck","exitCode":0},{"command":"npm run build","exitCode":0},{"command":"/opt/hostedtoolcache/node/24.15.0/x64/bin/node --test --test-concurrency=1 --test-reporter=junit --test-reporter-destination=.evidence/foundation-junit.xml tests/foundation/platform.test.ts tests/foundation/recovery.test.ts tests/foundation/restart.test.ts tests/foundation/writer-lock.test.ts tests/foundation/readiness.test.ts tests/auth/bootstrap.test.ts tests/auth/http.test.ts tests/auth/migration.test.ts tests/auth/process.test.ts tests/auth/workflow.test.ts tests/shell/contracts.test.ts","exitCode":0},{"command":"npm run test:browser","exitCode":0},{"command":"npm run test:ui","exitCode":0},{"command":"/opt/hostedtoolcache/node/24.15.0/x64/bin/node --test --test-concurrency=1 --test-reporter=junit --test-reporter-destination=.evidence/math-01/unit.xml tests/math01/contract.test.ts tests/math01/http.test.ts tests/math01/svg.test.ts","exitCode":0},{"command":"npm run test:math01:browser","exitCode":0}]}
+2026-11-09T11:49:53.0969916Z ##[group]Run npm run build:math-preview
+2026-11-09T11:49:53.0970290Z [36;1mnpm run build:math-preview[0m
+2026-11-09T11:49:53.0970616Z [36;1mpython3 scripts/math-full-01/check.py[0m
+2026-11-09T11:49:53.0971027Z [36;1mnode --test --test-concurrency=1 tests/math-full-01/*.test.*[0m
+2026-11-09T11:49:53.0971430Z [36;1mnode tests/math-full-01/navigation.mjs[0m
+2026-11-09T11:49:53.0971799Z [36;1mnode tests/math-full-01/browser.mjs --checkpoint[0m
+2026-11-09T11:49:53.0972147Z [36;1mnode tests/math-full-01/browser.mjs[0m
+2026-11-09T11:49:53.0972506Z [36;1mnode --test tests/math-full-02/practice.test.mjs[0m
+2026-11-09T11:49:53.0972873Z [36;1mnode tests/math-full-02/browser.mjs[0m
+2026-11-09T11:49:53.0973253Z [36;1mnode --test tests/math-full-remainder/library.test.mjs[0m
+2026-11-09T11:49:53.0973647Z [36;1mnode tests/math-full-remainder/browser.mjs[0m
+2026-11-09T11:49:53.0993609Z shell: /usr/bin/bash -e {0}
+2026-11-09T11:49:53.0993873Z ##[endgroup]
+2026-11-09T11:49:53.2032295Z 
+2026-11-09T11:49:53.2035515Z > kevin-learning-home@0.1.0 build:math-preview
+2026-11-09T11:49:53.2036349Z > vite build --config apps/preview/vite.config.ts && node scripts/math-full-01/build.ts
+2026-11-09T11:49:53.2036754Z 
+2026-11-09T11:49:53.3767022Z [36mvite v8.3.4 [32mbuilding client environment for production...[36m[39m
+2026-11-09T11:49:53.3864763Z transforming...
+2026-11-09T11:49:53.5660817Z ✓ 1779 modules transformed.
+2026-11-09T11:49:53.6517414Z rendering chunks...
+2026-11-09T11:49:53.7401641Z computing gzip size...
+2026-11-09T11:49:53.7517828Z apps/preview/dist/index.html                               0.58 kB │ gzip:   0.37 kB
+2026-11-09T11:49:53.7518640Z apps/preview/dist/.vite/manifest.json                      3.11 kB │ gzip:   0.63 kB
+2026-11-09T11:49:53.7519399Z apps/preview/dist/assets/CoreWorkbench-BhX3VX24.css        3.63 kB │ gzip:   1.13 kB
+2026-11-09T11:49:53.7520141Z apps/preview/dist/assets/Explore-DMdACCrM.css              8.45 kB │ gzip:   2.10 kB
+2026-11-09T11:49:53.7520910Z apps/preview/dist/assets/DetectiveTraining-C1T3lICt.css   10.45 kB │ gzip:   2.52 kB
+2026-11-09T11:49:53.7537121Z apps/preview/dist/assets/Library-WY_g6DWh.css             12.74 kB │ gzip:   3.03 kB
+2026-11-09T11:49:53.7537915Z apps/preview/dist/assets/Home-ajugpxla.css                14.10 kB │ gzip:   3.41 kB
+2026-11-09T11:49:53.7538643Z apps/preview/dist/assets/index-fv_HrgTn.css              178.46 kB │ gzip:  37.39 kB
+2026-11-09T11:49:53.7539371Z apps/preview/dist/assets/usePrint-CIWg-6mg.js              0.48 kB │ gzip:   0.29 kB
+2026-11-09T11:49:53.7540598Z apps/preview/dist/assets/Article-DprD6Mec.js               7.79 kB │ gzip:   3.13 kB
+2026-11-09T11:49:53.7541325Z apps/preview/dist/assets/jsx-runtime-Am8b9ysO.js           8.27 kB │ gzip:   3.12 kB
+2026-11-09T11:49:53.7542048Z apps/preview/dist/assets/DetectiveFigure-DH3gW_Ly.js       8.83 kB │ gzip:   3.80 kB
+2026-11-09T11:49:53.7542771Z apps/preview/dist/assets/Home-BGaA9QZC.js                 11.97 kB │ gzip:   3.97 kB
+2026-11-09T11:49:53.7543509Z apps/preview/dist/assets/DetectiveTraining-CdWMVP8O.js    18.24 kB │ gzip:   6.59 kB
+2026-11-09T11:49:53.7544246Z apps/preview/dist/assets/CoreWorkbench-BLI214jn.js        18.83 kB │ gzip:   6.86 kB
+2026-11-09T11:49:53.7545377Z apps/preview/dist/assets/Explore-D0MuVgyl.js              20.60 kB │ gzip:   7.90 kB
+2026-11-09T11:49:53.7546341Z apps/preview/dist/assets/Library-3jm4giHW.js              86.96 kB │ gzip:  32.98 kB
+2026-11-09T11:49:53.7547641Z apps/preview/dist/assets/schemas-BogG19SQ.js              95.97 kB │ gzip:  27.03 kB
+2026-11-09T11:49:53.7548819Z apps/preview/dist/assets/index-DCi5NJna.js               566.90 kB │ gzip: 190.48 kB
+2026-11-09T11:49:53.7549159Z 
+2026-11-09T11:49:53.7549395Z [33m[plugin builtin:vite-reporter] 
+2026-11-09T11:49:53.7549863Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-11-09T11:49:53.7550370Z - Using dynamic import() to code-split the application
+2026-11-09T11:49:53.7551468Z - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+2026-11-09T11:49:53.7552415Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+2026-11-09T11:49:53.7553531Z [32m✓ built in 378ms[39m
+2026-11-09T11:49:54.2151849Z {"previewBuild":"SEALED","lessons":70,"assets":24,"databaseOpened":false}
+2026-11-09T11:49:54.3456293Z {"status": "PASS_OFFLINE", "lessons": 70, "interactive": 64, "static": 6, "sourceTargets": 150, "fieldProjectionHashes": 5001, "oldSourceDownloadedByCI": false, "productionRuntimePreviewExcluded": true}
+2026-11-09T11:49:54.6782368Z ✔ 70 unique draft lessons retain 64 interactive / 6 static, metadata and supported model families (1.1851ms)
+2026-11-09T11:49:54.6822435Z ✔ all field projections match recorded source value hashes; no answer / private field enters public lessons (31.280687ms)
+2026-11-09T11:49:54.6824144Z ✔ unknown schemas, nested answer fields, renderer drift and duplicate IDs fail closed (5.159703ms)
+2026-11-09T11:49:54.6825887Z ✔ changed teaching content is rejected by catalog hash, not silently displayed (7.574166ms)
+2026-11-09T11:49:55.5660597Z ✔ preview requires explicit enable; 70 real anonymous GETs have no cookies or write API (241.701928ms)
+2026-11-09T11:49:55.5662177Z ✔ missing or changed build assets prevent startup; no partial healthy service (41.499709ms)
+2026-11-09T11:49:56.2582194Z ✔ anonymous preview does not turn formal math / learner APIs anonymous or bypass parent grant (711.441473ms)
+2026-11-09T11:49:57.1170912Z ✔ anonymous Mac delivery reuses one fixed folder and preserves the existing NAS credential guide (4.83677ms)
+2026-11-09T11:49:57.3886437Z ✔ textbook map assigns 39 upper + 24 lower + 7 bridges exactly once in frozen order (1.602963ms)
+2026-11-09T11:49:57.3892583Z ✔ every frozen curriculum metadata field matches a recorded source value hash, no source lessons exported (1.330064ms)
+2026-11-09T11:49:57.3898412Z ✔ wrong units, duplicate or missing lessons, answer fields, and sequence drift fail closed (7.175437ms)
+2026-11-09T11:49:57.3906346Z ✔ review lessons retain R label; neighbors never cross upper/lower/bridge boundaries (2.23851ms)
+2026-11-09T11:49:57.3907501Z ✔ knowledge search matches unit, frozen topic, common keyword and context paths (2.939238ms)
+2026-11-09T11:49:57.4706240Z ✔ all 11 core models × 6 authored contexts initialize and preserve finite parameter domains (5.283495ms)
+2026-11-09T11:49:57.4719843Z ✔ 35 textbook models initialize; angle invariants, unit changes and unequal allocations remain mathematical (2.505909ms)
+2026-11-09T11:49:57.4721849Z ✔ fractions regroup without changing length; areas and common edges are conserved correctly (0.679739ms)
+2026-11-09T11:49:57.4723539Z ✔ calendar leap years and clock fields use the copied time model without persistence (0.300702ms)
+2026-11-09T11:49:57.4725442Z ✔ continuous folding preserves six faces, edge lengths, and the final cube topology (2.701134ms)
+2026-11-09T11:49:57.4736820Z ✔ observer projection, hidden cubes, weighing and equal waterline substitution match source goldens (0.994718ms)
+2026-11-09T11:49:57.4738541Z ✔ ruler, intervals, overlapping boards and chain joints retain physical units (0.627181ms)
+2026-11-09T11:49:57.4740336Z ✔ operation array cuts, inverse flow and substitution preserve original mathematical semantics (0.745071ms)
+2026-11-09T11:49:57.4828208Z ℹ tests 21
+2026-11-09T11:49:57.4829166Z ℹ suites 0
+2026-11-09T11:49:57.4829826Z ℹ pass 21
+2026-11-09T11:49:57.4830380Z ℹ fail 0
+2026-11-09T11:49:57.4830953Z ℹ cancelled 0
+2026-11-09T11:49:57.4833988Z ℹ skipped 0
+2026-11-09T11:49:57.4834850Z ℹ todo 0
+2026-11-09T11:49:57.4835550Z ℹ duration_ms 3098.09194
+2026-11-09T11:50:15.7438642Z {"status":"PASS","viewports":3,"errors":0,"elapsedMs":17205}
+2026-11-09T11:50:38.9483005Z {"status":"PASS","passed":30,"failed":0,"elapsedMs":22031}
+2026-11-09T11:53:07.1566494Z {"status":"PASS","passed":210,"failed":0,"elapsedMs":147112}
+2026-11-09T11:53:08.0433263Z ✖ 849 versioned authored tasks, five groups/kinds, 70 lessons, source hashes and strict projection (3.422673ms)
+2026-11-09T11:53:08.0437523Z ✔ all 849 authored golden answers match original pure grader; 329 explanations stay human review (60.766286ms)
+2026-11-09T11:53:08.0440624Z ✔ independent arithmetic fixtures: fractions, Unicode, complete expressions, claim/evidence and units (0.576195ms)
+2026-11-09T11:53:08.0442596Z ✔ submission schema rejects missing self-checks, stale/other lesson, unknown fields and oversized answers (1.697847ms)
+2026-11-09T11:53:08.9244568Z ✔ real HTTP reaches all 849 questions, final-only stateless feedback; private/formal APIs inaccessible (911.750031ms)
+2026-11-09T11:53:08.9246484Z ✔ private bank tampering prevents startup (108.457517ms)
+2026-11-09T11:53:08.9684357Z ℹ tests 6
+2026-11-09T11:53:08.9684706Z ℹ suites 0
+2026-11-09T11:53:08.9685290Z ℹ pass 5
+2026-11-09T11:53:08.9685734Z ℹ fail 1
+2026-11-09T11:53:08.9686181Z ℹ cancelled 0
+2026-11-09T11:53:08.9686650Z ℹ skipped 0
+2026-11-09T11:53:08.9687063Z ℹ todo 0
+2026-11-09T11:53:08.9687576Z ℹ duration_ms 1736.184621
+2026-11-09T11:53:08.9687937Z 
+2026-11-09T11:53:08.9688184Z ✖ failing tests:
+2026-11-09T11:53:08.9688447Z 
+2026-11-09T11:53:08.9688863Z test at tests/math-full-02/practice.test.mjs:16:1
+2026-11-09T11:53:08.9690461Z ✖ 849 versioned authored tasks, five groups/kinds, 70 lessons, source hashes and strict projection (3.422673ms)
+2026-11-09T11:53:08.9691996Z   AssertionError [ERR_ASSERTION]: STALE_PRACTICE_EVIDENCE apps/preview/DesignShell.tsx
+2026-11-09T11:53:08.9693060Z   + actual - expected
+2026-11-09T11:53:08.9693487Z   
+2026-11-09T11:53:08.9694092Z   + '1808efd55c536c7c65607fcd15798ed35e916e67433cf991366d824a9e4ef7ad'
+2026-11-09T11:53:08.9694841Z   - '63f6db34dd66f2e858d4acd5574eef2342c2f6eee453fd56f6803586ce39e050'
+2026-11-09T11:53:08.9695734Z   
+2026-11-09T11:53:08.9696597Z       at TestContext.<anonymous> (file:///home/runner/work/kevin-learning-home/kevin-learning-home/tests/math-full-02/practice.test.mjs:17:350)
+2026-11-09T11:53:08.9697433Z       at Test.runInAsyncScope (node:async_hooks:227:14)
+2026-11-09T11:53:08.9697883Z       at Test.run (node:internal/test_runner/test:1201:25)
+2026-11-09T11:53:08.9698350Z       at Test.start (node:internal/test_runner/test:1096:17)
+2026-11-09T11:53:08.9698885Z       at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+2026-11-09T11:53:08.9699358Z     generatedMessage: false,
+2026-11-09T11:53:08.9699638Z     code: 'ERR_ASSERTION',
+2026-11-09T11:53:08.9700096Z     actual: '1808efd55c536c7c65607fcd15798ed35e916e67433cf991366d824a9e4ef7ad',
+2026-11-09T11:53:08.9700733Z     expected: '63f6db34dd66f2e858d4acd5574eef2342c2f6eee453fd56f6803586ce39e050',
+2026-11-09T11:53:08.9701196Z     operator: 'strictEqual',
+2026-11-09T11:53:08.9701476Z     diff: 'simple'
+2026-11-09T11:53:08.9701679Z   }
+2026-11-09T11:53:08.9746918Z ##[error]Process completed with exit code 1.
+2026-11-09T11:53:08.9832158Z ##[group]Run actions/upload-artifact@v4
+2026-11-09T11:53:08.9832465Z with:
+2026-11-09T11:53:08.9832675Z   name: implement-02b-evidence
+2026-11-09T11:53:08.9833040Z   path: .evidence
+!.evidence/math-full-nas-r2/preview-amd64.tar.gz
+
+2026-11-09T11:53:08.9833425Z   retention-days: 14
+2026-11-09T11:53:08.9833664Z   include-hidden-files: true
+2026-11-09T11:53:08.9833914Z   if-no-files-found: warn
+2026-11-09T11:53:08.9834154Z   compression-level: 6
+2026-11-09T11:53:08.9834372Z   overwrite: false
+2026-11-09T11:53:08.9834578Z ##[endgroup]
+2026-11-09T11:53:09.1647132Z (node:6084) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-09T11:53:09.1648914Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-09T11:53:09.2053329Z With the provided path, there will be 109 files uploaded
+2026-11-09T11:53:09.2054617Z Artifact name is valid!
+2026-11-09T11:53:09.2055741Z Root directory input is valid!
+2026-11-09T11:53:09.5437712Z Beginning upload of artifact content to blob storage
+2026-11-09T11:53:09.8806053Z (node:6084) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-09T11:53:10.5961857Z Uploaded bytes 8388608
+2026-11-09T11:53:10.9581697Z Uploaded bytes 16777216
+2026-11-09T11:53:11.0958601Z Uploaded bytes 18283483
+2026-11-09T11:53:11.1545333Z Finished uploading artifact content to blob storage!
+2026-11-09T11:53:11.1547184Z SHA256 digest of uploaded artifact zip is 0cebcd498691f1b0102439a9816ec71b3688c6ef98ddb9fad38f3837e7e7da22
+2026-11-09T11:53:11.1548302Z Finalizing artifact upload
+2026-11-09T11:53:11.6115985Z Artifact implement-02b-evidence.zip successfully finalized. Artifact ID 13670148916
+2026-11-09T11:53:11.6117924Z Artifact implement-02b-evidence has been successfully uploaded! Final size is 18283483 bytes. Artifact ID is 13670148916
+2026-11-09T11:53:11.6123981Z Artifact download URL: https://github.com/lovestream/kevin-learning-home/actions/runs/42611607445/artifacts/13670148916
+2026-11-09T11:53:11.6381414Z Post job cleanup.
+2026-11-09T11:53:11.7282352Z [command]/usr/bin/git version
+2026-11-09T11:53:11.7328671Z git version 2.56.0
+2026-11-09T11:53:11.7368148Z Temporarily overriding HOME='/home/runner/work/_temp/c0d0caee-7833-4961-a215-a90d7be8c488' before making global git config changes
+2026-11-09T11:53:11.7369730Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-09T11:53:11.7373930Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/kevin-learning-home/kevin-learning-home
+2026-11-09T11:53:11.7417266Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-09T11:53:11.7457460Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-09T11:53:11.7781880Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-09T11:53:11.7808810Z http.https://github.com/.extraheader
+2026-11-09T11:53:11.7821824Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-09T11:53:11.7864003Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-09T11:53:11.8163982Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-09T11:53:11.8211588Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-09T11:53:11.8682224Z Cleaning up orphan processes
+2026-11-09T11:53:11.9169769Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

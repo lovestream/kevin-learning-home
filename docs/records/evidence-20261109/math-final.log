@@ -1,0 +1,22 @@
+✔ 849 versioned authored tasks, five groups/kinds, 70 lessons, source hashes and strict projection (26.850375ms)
+✔ all 849 authored golden answers match original pure grader; 329 explanations stay human review (16.453958ms)
+✔ independent arithmetic fixtures: fractions, Unicode, complete expressions, claim/evidence and units (0.221875ms)
+✔ submission schema rejects missing self-checks, stale/other lesson, unknown fields and oversized answers (0.323667ms)
+✔ real HTTP reaches all 849 questions, final-only stateless feedback; private/formal APIs inaccessible (220.1965ms)
+✔ private bank tampering prevents startup (65.986958ms)
+✔ exact approved capabilities and frozen source mapping; no deferred card, private case or blueprint disguised as course (3.227ms)
+✔ all 432 legacy questions have source-compatible deterministic goldens; 17 thought explanations remain human review (3.638625ms)
+✔ 14 original anonymous cases: correct/wrong, reason shuffle, ordering, rational numeric comparison and no oral auto-correct (1.265041ms)
+✔ library projection never sends task keys, case verdict, expected reason, solutions or private source notes initially (0.567708ms)
+✔ real library HTTP reaches all 71 entries/449 tasks/14 cases; same schema and boundary for stateless grades (159.060875ms)
+✔ library bank tampering prevents healthy startup (75.906291ms)
+✔ multi-digit legacy place value conserves 306040 and higher units instead of truncating at hundreds (0.199709ms)
+✔ frozen thought models conserve equal removals, view constraints and Venn counts (0.410875ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 548.909917

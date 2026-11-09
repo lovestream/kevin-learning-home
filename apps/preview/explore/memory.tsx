@@ -14,13 +14,21 @@ import {
 } from "../../../packages/explore/domain.ts";
 import { examples } from "../../../packages/explore/examples.ts";
 
-type Store = {
+export type ExploreStore = {
   projects: ExploreProject[];
-  create: (question: string, refs: SubjectRef[]) => string;
-  append: (id: string, detail: ExploreEvent["detail"]) => void;
+  create: (question: string, refs: SubjectRef[]) => string | Promise<string>;
+  append: (id: string, detail: ExploreEvent["detail"]) => void | Promise<void>;
   discard: () => void;
+  persistent?: boolean;
+  busy?: boolean;
+  attachments?: Record<string,string[]>;
+  attachmentPanel?: (project:ExploreProject)=>ReactNode;
+  deleteProject?: (id:string)=>Promise<void>;
 };
-const Context = createContext<Store | null>(null);
+const Context = createContext<ExploreStore | null>(null);
+export function ExploreAdapter({value,children}:{value:ExploreStore;children:ReactNode}) {
+  return <Context.Provider value={value}>{children}</Context.Provider>;
+}
 export function ExploreProvider({ children }: { children: ReactNode }) {
   const [projects, setProjects] = useState(examples),
     next = useRef(1);

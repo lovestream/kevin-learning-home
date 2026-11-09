@@ -1,0 +1,62 @@
+name: Private records (synthetic only)
+on:
+  push:
+    branches: [codex/explore-02-records]
+  pull_request:
+    branches: [main, codex/home-navigation]
+permissions:
+  contents: read
+jobs:
+  private-records:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: "24.15.0", cache: npm}
+      - run: npm install --global npm@11.12.1
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Pinned Chinese font for readable browser evidence
+        run: |
+          curl --fail --location --silent --show-error --connect-timeout 15 --max-time 120 --retry 2 https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf -o /tmp/klh-ci-noto.otf
+          echo '2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b  /tmp/klh-ci-noto.otf' | sha256sum -c -
+          mkdir -p ~/.local/share/fonts/klh-ci
+          cp /tmp/klh-ci-noto.otf ~/.local/share/fonts/klh-ci/NotoSansCJKsc-Regular.otf
+          fc-cache -f ~/.local/share/fonts/klh-ci
+      - name: Audio decoder in isolated runner
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install --yes --no-install-recommends ffmpeg
+          fi
+      - name: Type safety and builds
+        run: |
+          npm run typecheck
+          npm run build:math-preview
+          npm run build:family
+      - name: Records, migration, ACL, crash and encrypted restore regressions
+        run: |
+          mkdir -p .evidence/records
+          set -o pipefail
+          npm run test:records 2>&1 | tee .evidence/records/node.log
+      - name: Frozen English source and private-file exclusion checks
+        run: python3 -m unittest discover -s tests/english -p 'test_*.py' -v
+      - name: Five widths, two authorized browsers, reload, media and revocation
+        run: |
+          set -o pipefail
+          npm run test:records:browser 2>&1 | tee .evidence/records/browser.log
+      - name: Synthetic evidence only (no private database or backup)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: private-records-synthetic
+          path: |
+            .evidence/records/*.log
+            .evidence/records/browser/*.png
+            .evidence/records/browser/*.json
+            .evidence/records/browser/*.txt
+          include-hidden-files: true
+          retention-days: 14

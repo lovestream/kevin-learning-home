@@ -1,12 +1,12 @@
 {
   "status": "PASS",
-  "origin": "http://127.0.0.1:54208",
+  "origin": "http://127.0.0.1:63798",
   "nas": false,
   "execution": {
-    "head": "f7755fe433eb5b24eda495b3281f614fab99c5ae",
-    "dirty": true,
+    "head": "9ed8910424f3e821f23e63b900dbe8329b146a93",
+    "dirty": false,
     "files": {
-      "apps/preview/DesignShell.tsx": "63f6db34dd66f2e858d4acd5574eef2342c2f6eee453fd56f6803586ce39e050",
+      "apps/preview/DesignShell.tsx": "1808efd55c536c7c65607fcd15798ed35e916e67433cf991366d824a9e4ef7ad",
       "apps/preview/DetectiveTraining.tsx": "1040786519ab3a04936554e21b5939fcfebb0b8c363a31e0b60a3ece524029ab",
       "apps/preview/HomeSketch.tsx": "19ac52f1fe0fd0e51b1e86d1fc87412badee73222dc5ab9351d337f895edaa6a",
       "apps/preview/MapNavigation.tsx": "14906533dcfbed202a139f20ffa2d44015b44c5389ecd21ce487763060b20019",
@@ -164,9 +164,9 @@
       "apps/preview/contract.ts": "bdbf0af562ca4401eddf2afd0427a22e229c9c62897878f20d9e14fd168df1f7",
       "apps/preview/design-system.css": "173fc36e4939a9f4a0699d0ea3e58282d06df3e0e1a658106e0976ae8c78d665",
       "apps/preview/event-id.ts": "d52b01cc8dbd07bae87eb6e78cf70500d5b1bfa1a91a2b54e9bd8def1a420c99",
-      "apps/preview/explore/Explore.tsx": "8f07ebd8351ecb6f48604748caf9e3d0ad7275153586e02de5f92b9330a4bd37",
+      "apps/preview/explore/Explore.tsx": "14961b2b5b5c43baa406ec5656920514f607d074bb029c4517a0991c9509458c",
       "apps/preview/explore/explore.css": "782b454d7cb46b64dd4d07bc1288f9ae3c1b56001c111a22e79066d7c384c49f",
-      "apps/preview/explore/memory.tsx": "820657d0d21df534d36a3723d262e10e5d54f7e64350248c9ed1290a3c3778ac",
+      "apps/preview/explore/memory.tsx": "ccba36a5dfdae03f30ca3306884651b00516fcceea0251647d0478e246f41b4d",
       "apps/preview/home/Home.tsx": "354418118fcc68174223508f112766385c649c1c4dfc6f372a7c1e9f0fcc5ed3",
       "apps/preview/home/home.css": "c5d113d4ed95472b780beefaf63cff5b9b925fbef95db22e35eda135125be863",
       "apps/preview/home/navigation.css": "81ffadc9d2efae84d1eb1f4a39a7488435c29aa193e74f8261529bbbc2355345",
@@ -235,8 +235,8 @@
       "docs/implementation/evidence/math-onepass/source-import.json": "774e5a9b8d1ad9c81f7ef6e7a41658eb6456bb50560227bc699c54f005e61d75",
       "docs/implementation/evidence/math-onepass/study-source.json": "e12426c6496574486efab90d2a075c05160e16f7e4625e208d841646da475c10",
       "infra/math-preview/Dockerfile": "de369926385087d6b090ee13dcc56681c7f1eeb9a2b68d009c57628402f077e6",
-      "package-lock.json": "f35bffb6f20e6d26b38d5f29a1bb3f6a5db799c21f1d12677cd4cfecf34dd060",
-      "package.json": "9f914362d4e92729846a8c75ae102fac93092ec71478ab45585e94f9c051355c",
+      "package-lock.json": "866d3e63c439508fe6531c215743da16107c285cbb1dcc4401d5ea6a9cc51866",
+      "package.json": "46de9565a792b4c6d2f350270f709a6ba72babdf61a36d2cc095989ecc08aa04",
       "packages/contracts/auth.ts": "f0cec332be75d9644d5c7c59083ca209c72799505da0e2272070dc93f7deb430",
       "packages/contracts/index.ts": "694f9fb1b8f47b6ed129eb379171139a697df2257d3735c2b51b179943654028",
       "packages/contracts/math-readonly.ts": "14e37e42d326e63dabdbd79fe38ed83a9f3909f176c8602f5eca0ea365c44597",
@@ -246,7 +246,7 @@
       "packages/contracts/package.json": "39857216e91bc205bd92015f7859647cefbb0fe0224efbb1966c13f72b92d62c",
       "packages/contracts/routes.ts": "4c44ffa91f5c38f5f11b4431570805613719a9c257c564422735726f064a6265",
       "packages/explore/coach.ts": "bf53350cd2e9cb6893843138300c51ff92592088d92f68cbffb86194cca68fda",
-      "packages/explore/domain.ts": "271f47c299fef36b5db610edb005185cd83d952b12a04de070cf0684328e4240",
+      "packages/explore/domain.ts": "15228ef6e695b51aa764a4e4b6d8113cf099b24478ffe0336c2e7e399d1e7434",
       "packages/explore/examples.ts": "073e67ce29c674c423df346e2fc2d95fba84d3a4acb9d69b469108839b0f5562",
       "packages/math-training/engine.d.mts": "8012e433211f247fa0e7669b48d523159dcb30ad3436105cd09d4e227f8539c8",
       "packages/math-training/engine.mjs": "ceefec201f35b7cc172d0a050b11a6903c7d8be42e59a28bd8f35ed167d8b758",
@@ -297,7 +297,7 @@
       "tests/math-full-remainder/browser.mjs": "9cc2b159ca4df0a704e810a52fa92e4927d555378e76c325ce98fc0e926dda93"
     }
   },
-  "elapsedMs": 398616,
+  "elapsedMs": 393020,
   "results": [
     {
       "width": 390,

@@ -12,6 +12,9 @@
     "packages/*"
   ],
   "scripts": {
+    "build:family": "vite build --config apps/family/vite.config.ts",
+    "test:records": "node --test --test-concurrency=1 tests/records/*.test.ts",
+    "test:records:browser": "node tests/records/browser.mjs",
     "build": "node scripts/math01/seal.ts && vite build --config apps/web/vite.config.ts && node scripts/math01/build.ts",
     "typecheck": "tsc --noEmit",
     "start": "node apps/server/main.ts",
@@ -35,6 +38,7 @@
     "fs-ext": "2.1.1",
     "react": "19.3.1",
     "react-dom": "19.3.1",
+    "sharp": "0.35.5",
     "zod": "4.6.7"
   },
   "devDependencies": {

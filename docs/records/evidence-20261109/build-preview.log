@@ -1,0 +1,36 @@
+
+> kevin-learning-home@0.1.0 build:math-preview
+> vite build --config apps/preview/vite.config.ts && node scripts/math-full-01/build.ts
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 1779 modules transformed.
+rendering chunks...
+computing gzip size...
+apps/preview/dist/index.html                               0.58 kB │ gzip:   0.37 kB
+apps/preview/dist/.vite/manifest.json                      3.11 kB │ gzip:   0.63 kB
+apps/preview/dist/assets/CoreWorkbench-BhX3VX24.css        3.63 kB │ gzip:   1.13 kB
+apps/preview/dist/assets/Explore-DMdACCrM.css              8.45 kB │ gzip:   2.10 kB
+apps/preview/dist/assets/DetectiveTraining-C1T3lICt.css   10.45 kB │ gzip:   2.52 kB
+apps/preview/dist/assets/Library-WY_g6DWh.css             12.74 kB │ gzip:   3.03 kB
+apps/preview/dist/assets/Home-ajugpxla.css                14.10 kB │ gzip:   3.41 kB
+apps/preview/dist/assets/index-fv_HrgTn.css              178.46 kB │ gzip:  37.39 kB
+apps/preview/dist/assets/usePrint-CIWg-6mg.js              0.48 kB │ gzip:   0.29 kB
+apps/preview/dist/assets/Article-DprD6Mec.js               7.79 kB │ gzip:   3.13 kB
+apps/preview/dist/assets/jsx-runtime-Am8b9ysO.js           8.27 kB │ gzip:   3.12 kB
+apps/preview/dist/assets/DetectiveFigure-DH3gW_Ly.js       8.83 kB │ gzip:   3.80 kB
+apps/preview/dist/assets/Home-BGaA9QZC.js                 11.97 kB │ gzip:   3.97 kB
+apps/preview/dist/assets/DetectiveTraining-CdWMVP8O.js    18.24 kB │ gzip:   6.59 kB
+apps/preview/dist/assets/CoreWorkbench-BLI214jn.js        18.83 kB │ gzip:   6.86 kB
+apps/preview/dist/assets/Explore-D0MuVgyl.js              20.60 kB │ gzip:   7.90 kB
+apps/preview/dist/assets/Library-3jm4giHW.js              86.96 kB │ gzip:  32.98 kB
+apps/preview/dist/assets/schemas-BogG19SQ.js              95.97 kB │ gzip:  27.03 kB
+apps/preview/dist/assets/index-DCi5NJna.js               566.90 kB │ gzip: 190.48 kB
+
+✓ built in 182ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+{"previewBuild":"SEALED","lessons":70,"assets":24,"databaseOpened":false}

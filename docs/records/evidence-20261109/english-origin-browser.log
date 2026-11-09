@@ -1,0 +1,81 @@
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:24] "GET / HTTP/1.1" 200 -
+
+
+Running 4 tests using 1 worker
+
+[1A[2K(node:56719) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K(node:56719) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1A[2K[1/4] tests/responsive-smoke.spec.js:11:3 › desktop home stays usable
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET / HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/styles.css HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/core2000.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/movers-2025.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/core2000-answers.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/cambridge-official.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/words.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/app.js HTTP/1.1" 200 -
+
+[1A[2K[2/4] tests/responsive-smoke.spec.js:11:3 › mobile home stays usable
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET / HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/cambridge-official.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/movers-2025.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/core2000.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/styles.css HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/words.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/core2000-answers.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/app.js HTTP/1.1" 200 -
+
+[1A[2K[3/4] tests/responsive-smoke.spec.js:34:1 › mobile My Words exposes the AI pack workflow
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET / HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/words.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/cambridge-official.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/styles.css HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/core2000-answers.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/core2000.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/movers-2025.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:26] "GET /assets/app.js HTTP/1.1" 200 -
+
+[1A[2K[4/4] tests/responsive-smoke.spec.js:82:1 › My Words bulk selection respects filters and persists training flags
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:28] "GET / HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:28] "GET /assets/styles.css HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:28] "GET /assets/words.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:28] "GET /assets/movers-2025.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:28] "GET /assets/cambridge-official.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:28] "GET /assets/core2000.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:28] "GET /assets/core2000-answers.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:28] "GET /assets/app.js HTTP/1.1" 200 -
+
+[1A[2K[2m[WebServer] [22m127.0.0.1 - - [09/Nov/2026 19:51:33] "GET / HTTP/1.1" 304 -
+
+[1A[2K  4 passed (8.4s)

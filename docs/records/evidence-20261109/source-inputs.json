@@ -1,0 +1,1949 @@
+{
+  "sourceSha": "4dcfadedc4292fa2b4dfef0369d3858fece79db4",
+  "inputs": [
+    {
+      "path": ".github/workflows/foundation.yml",
+      "gitBlob": "14c3b6f82653d9b703a3d53bfac4d29ef8e7b1b8"
+    },
+    {
+      "path": ".github/workflows/math-trial-image.yml",
+      "gitBlob": "dabd1676b9011f2a1aed0c3ba4a6721be720c93f"
+    },
+    {
+      "path": ".github/workflows/nas-gate-images.yml",
+      "gitBlob": "1dc86516ceae6e75ec9fdf7b08241abd5a5c5572"
+    },
+    {
+      "path": ".github/workflows/private-records.yml",
+      "gitBlob": "a6dfbe6537073550a6190712bd7633a089070941"
+    },
+    {
+      "path": ".github/workflows/trial-image.yml",
+      "gitBlob": "b9f997d4125cb05fe81def9763c8746a33c733b4"
+    },
+    {
+      "path": "apps/family/MediaPanel.tsx",
+      "gitBlob": "9549efe668e647ea8e00b641bca0bf461a8e8cad"
+    },
+    {
+      "path": "apps/family/RecordsSummary.tsx",
+      "gitBlob": "14e118e9e6d11667fa12d172750f7de927c5a9b9"
+    },
+    {
+      "path": "apps/family/client.ts",
+      "gitBlob": "03b6327ddfd90fb6bb9afd148f077f66cad59e4d"
+    },
+    {
+      "path": "apps/family/index.html",
+      "gitBlob": "93553519ce7dd244dd87a720d98a8aa5a338013a"
+    },
+    {
+      "path": "apps/family/main.tsx",
+      "gitBlob": "9fa5e1a7cc2114a570f0a590be65a9f3b82e6d6d"
+    },
+    {
+      "path": "apps/family/private.css",
+      "gitBlob": "0a5e0cf707045fb929bbd45c09ecde735e77fce2"
+    },
+    {
+      "path": "apps/family/provider.tsx",
+      "gitBlob": "59cbbe3080c550af52d479310fefb718096440b6"
+    },
+    {
+      "path": "apps/family/server.ts",
+      "gitBlob": "6573fbe060a18a9e3dbedbd0f5b88fce5ebf0aa4"
+    },
+    {
+      "path": "apps/family/vite.config.ts",
+      "gitBlob": "f50b956833a9bdd92dcde2f157a5c0555529ae29"
+    },
+    {
+      "path": "apps/preview/DesignShell.tsx",
+      "gitBlob": "efd2280f9ca8b4814a866d81d350175ae5952b12"
+    },
+    {
+      "path": "apps/preview/DetectiveTraining.tsx",
+      "gitBlob": "0df7b14870d2d45b19f0f2d1be49d3d580374ea9"
+    },
+    {
+      "path": "apps/preview/HomeSketch.tsx",
+      "gitBlob": "0abad1d1076ada50fdb8619e9b36c4f61d0dec5d"
+    },
+    {
+      "path": "apps/preview/MapNavigation.tsx",
+      "gitBlob": "be26137a9f7d880f04b40b603624fbda627ac3dc"
+    },
+    {
+      "path": "apps/preview/PageLearning.tsx",
+      "gitBlob": "4972bae10c0707864d709243974b6d03ff76cf40"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/classroom-expression.d.mts",
+      "gitBlob": "6e71c9e0de1d8dc0dfc7972f0e1361ed8f63dc68"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/classroom-expression.mjs",
+      "gitBlob": "e94a1c7894a040cd48661b17d579aec52e39c3b6"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/coding-model.d.mts",
+      "gitBlob": "040d888810ac85dc135aa424fe973a54b417e567"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/coding-model.mjs",
+      "gitBlob": "36e6d10e93447319c9f2feb63917025dfffba45d"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/core-models.d.mts",
+      "gitBlob": "8034f7223904be5899e6a8a77c8ca042c9c6d121"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/core-models.mjs",
+      "gitBlob": "35333a65f6bd5f7f08862e71646e09049de9902e"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/hands-on-models.d.mts",
+      "gitBlob": "db6becd93917fb91a11d164d9aeceb05b695253e"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/hands-on-models.mjs",
+      "gitBlob": "3bd12df8718c0dcc9ef9e4f4ad517f1ae2bd2e37"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/intro-visuals.d.mts",
+      "gitBlob": "992f6dea8c0314a52a677c34b3c6056f812ac00d"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/intro-visuals.mjs",
+      "gitBlob": "90e1cec174ef95f916f24d6267858b671846d600"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/length-model.d.mts",
+      "gitBlob": "4c63112c4dd2c398ef4e3c1ffb5d6e934eebd236"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/length-model.mjs",
+      "gitBlob": "1c01ece619f0dc8801aca5ed2d6147bfbb9db680"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/operation-models.d.mts",
+      "gitBlob": "b6be3d1893fe93594d22e9bf91709dc9d3c83133"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/operation-models.mjs",
+      "gitBlob": "a711e5ed609b581a6fdecd5ce9b7192ec59a1029"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/pilot-math.d.mts",
+      "gitBlob": "1a5f1c4320d7b77a92ac2d597720a1b66d54e32d"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/pilot-math.mjs",
+      "gitBlob": "172b00e6837abdab4a8f5462b8c951d42a0ab63a"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/scene-context.d.mts",
+      "gitBlob": "b85ee50cb97d882a4cae9e8c6d4616cdfa2fdb3f"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/scene-context.mjs",
+      "gitBlob": "0f69965eaea74fb31ab14c0fe4cfa0f261b8376f"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/solid-rendering.d.mts",
+      "gitBlob": "63ed35100c5a381fe33481ae04cdf0e25db11e34"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/solid-rendering.mjs",
+      "gitBlob": "f13902f568c3b813ba75c26504eb76436683c78c"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/textbook-models.d.mts",
+      "gitBlob": "33091691b57852862a04f632d13ee5073eb74903"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/textbook-models.mjs",
+      "gitBlob": "252842f51207dec7442e0db88bdc89a0fc4f1a06"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/two-ring-view.d.mts",
+      "gitBlob": "d8a656d8a7af6748fc0a5bbb6aa9f511e127cf5c"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/two-ring-view.mjs",
+      "gitBlob": "840ecae22bbb2901b47f0dc53dcda519d4f4d57c"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/visual-relations.d.mts",
+      "gitBlob": "451b5428c3abda7f750ea32faa0ce1b782d61b1b"
+    },
+    {
+      "path": "apps/preview/adapters/source/shared/visual-relations.mjs",
+      "gitBlob": "80e1e581fbc7a50598c9e0c07e0f81dcb4b944bd"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/FoundationWidgets.tsx",
+      "gitBlob": "89d4baa4c508e13ce00b480ea5562bb4d8d2ad38"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/IntroVisual.tsx",
+      "gitBlob": "366bb1de1543f3ab0f170e02e7a415622d9de8c9"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/LengthWorkbench.tsx",
+      "gitBlob": "68b96d423399bdd1de092288e9bc2d1dcf49f628"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/MathSceneVisual.tsx",
+      "gitBlob": "87a78d076873a38d740415b35c2560bb79879b8e"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/TeachingDiagrams.tsx",
+      "gitBlob": "c71dd09352356e9c8aa4b543637275eea6e29540"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/ConceptWorkbench.tsx",
+      "gitBlob": "7133a18bc73bbca7d4cac6c88c838cb91115e20c"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/MassWorkbench.tsx",
+      "gitBlob": "79421ff94a34bfd0b001482f99da53c169c0d361"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/OperationExtensionLab.tsx",
+      "gitBlob": "881dcc734cf92d7f8e0bd7c471473cc4fbf543f1"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/OperationVisual.tsx",
+      "gitBlob": "d5f617ea46a9d11058dd60760329677f4e20648e"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/RelationshipFigures.tsx",
+      "gitBlob": "71cb9037a138b032016ec97ade6d15b59ab9502c"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/SolidView.tsx",
+      "gitBlob": "c282177f598c3d658f5ac3109e82292bf81fb9c5"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/SpatialWorkbench.tsx",
+      "gitBlob": "12951ff44a4cd06c72ecf479335a0616e610f518"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/StaticConceptFigure.tsx",
+      "gitBlob": "d33099517d8e067aee7fcd714c9851d905aa756f"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/concept.css",
+      "gitBlob": "de0b5af78a362e31043254c7982aa643f54dbc95"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/hands-on.css",
+      "gitBlob": "a4d7114d5be395f7f9d12d994ecdeacc6b77c406"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/relationships.css",
+      "gitBlob": "f13fb5642ad28a1f593454a651231b3022bf7d99"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/concept/useHandsOn.tsx",
+      "gitBlob": "641cde66d7955df47d7d0419dd3cff4c79c0287a"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/intro-visual.css",
+      "gitBlob": "557919afc16fe1f7d9b0dfbf65e09fac6114f205"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/ChainExperiment.tsx",
+      "gitBlob": "753a782b5ff231b2140016be315686b0ede8c841"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/ChainJointFigure.tsx",
+      "gitBlob": "e046ba67cad6da141fe3f95bcfb4218d4688c24d"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/ChainOverview.tsx",
+      "gitBlob": "bc1f1a6dabc7cde1d22de5b5093e65c095765413"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/MeasuringExperiments.tsx",
+      "gitBlob": "8647905e7928de6721da4c498c2f32214f6bdaa9"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/Primitives.tsx",
+      "gitBlob": "169affe242a31e068a191ee2c60ecd41964ad42d"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/TaskDiagram.tsx",
+      "gitBlob": "246ff8660911339ca9d1f0d0b06bb044d7b9d2e4"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/TwoRingWorkbench.tsx",
+      "gitBlob": "f1bc6e3ef3aa745b6cbaa624efc943a9801eafb2"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/WalkingExperiments.tsx",
+      "gitBlob": "5faf746eba2a022553b7ace008c9545303e5528c"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/chain-classroom.css",
+      "gitBlob": "c4eb0758bf9c78be1d0172b3beaeb96208d02ef2"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/measurement.css",
+      "gitBlob": "ecb6479390ff2faa19ba349ab066d0a973b65a91"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/measurement/two-ring.css",
+      "gitBlob": "b15ec284969640f20a376cf8eaa1adc8bc15c8a1"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/teaching.css",
+      "gitBlob": "9e2b036236b87d93e085a594cbb708c66eac9dcb"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/AngleWorkbench.tsx",
+      "gitBlob": "acf8846b7eadab30dfbfa7e835f8643362c0eff0"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/BankWorkbench.tsx",
+      "gitBlob": "e548e343ec6cd5e998c73fea9d1835b5ce904dc1"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/CodingExploration.tsx",
+      "gitBlob": "4c2509892fe7dfe419b2ecb1c60cf54cb46fb127"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/CodingOverview.tsx",
+      "gitBlob": "11d836e567732867c2369f38a88cb63afabff251"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/CoreWorkbench.tsx",
+      "gitBlob": "1864645119a3f65556ec223a4ce636623aae8ced"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/DataWorkbench.tsx",
+      "gitBlob": "ac3c472629e9db6c34bd15a3615f7916f783b116"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/FractionWorkbench.tsx",
+      "gitBlob": "f540556c0f29bab18ee7e8d51fa2dbf920d1baf0"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/GeometryWorkbench.tsx",
+      "gitBlob": "2854fcb6975488329400a52f74b3c45698c43fac"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/MotionWorkbench.tsx",
+      "gitBlob": "ea12cb15bac397c88823da585d6fc37a2651124a"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/Primitives.tsx",
+      "gitBlob": "acbb2dc598f31739f0411342964ff15189a729a6"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/RegroupFigure.tsx",
+      "gitBlob": "e31c763e10c31e64e8862ce6f913ec156b160bc0"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/SymbolWorkbench.tsx",
+      "gitBlob": "dd51f44990f73095820a2250b4abf2f84805fe58"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/TextbookWorkbench.tsx",
+      "gitBlob": "d8c64bdb4078742bbe88b3edc96db47b347a8c97"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/TimeWorkbench.tsx",
+      "gitBlob": "ad69c369803c9ad6c093f2ad8f8a5e3781839246"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/coding-exploration.css",
+      "gitBlob": "114c11360ad6a75928850e7aaa25c042248a3b2c"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/core.css",
+      "gitBlob": "2c84010d4ccafca6a76aca3c4ae3619ec87be4c2"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/textbook.css",
+      "gitBlob": "26e8cc9cbc06efbd6f03e200dfe11cf528fbb75e"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/textbook/useTextbook.tsx",
+      "gitBlob": "c143316b8d801ac262d2c34003a26d5a5d3cf1bb"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/types.ts",
+      "gitBlob": "89ea67967f3cc56b5de8746c145f6bf057e02044"
+    },
+    {
+      "path": "apps/preview/adapters/source/src/studio/useMotionValue.ts",
+      "gitBlob": "39a03559fd9f11b193eef462d395d18fc8872fc3"
+    },
+    {
+      "path": "apps/preview/commands.ts",
+      "gitBlob": "c44cbc95f3b65b745731793b4d95e166ab17669a"
+    },
+    {
+      "path": "apps/preview/content.ts",
+      "gitBlob": "302fa0c8c6620c6cfcabd5348ca4c4df06d586f6"
+    },
+    {
+      "path": "apps/preview/content/catalog.json",
+      "gitBlob": "6c8f7cf0755f0ae4ac5370042deabb9f0afc1772"
+    },
+    {
+      "path": "apps/preview/content/learning-map.json",
+      "gitBlob": "6167427114fb4258068b259fc4f14b1689bcd4e1"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L01-B01.json",
+      "gitBlob": "e87954d9622e1f6df8ed673f19b5fd4dd4d58035"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L01-B02.json",
+      "gitBlob": "42362e8019320ab5471f8a08177767d9b85ffaad"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L02-B01.json",
+      "gitBlob": "9c6745dbafe538bf2ca372384222a06e739a34ff"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L02-B02.json",
+      "gitBlob": "1c65b27007215dc79a9206ffe4ee6f4608d623de"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L02-B03.json",
+      "gitBlob": "feb55d9554c3f2391ebe19cab8e075dc51d71419"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L02-B04.json",
+      "gitBlob": "1d3ec93685caa02d6a0a489ea5b442440a87ea5c"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L02-B05.json",
+      "gitBlob": "dfca9d9754e47ae9c029f66deb8c98d57b818a03"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L02-B06.json",
+      "gitBlob": "52a1a35019c5fbc8d0e59ccdc9b15551209b5eb8"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L03-B01.json",
+      "gitBlob": "f92515456d1c61e7a3c09c4e202c3ac79c7c0451"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L03-B02.json",
+      "gitBlob": "76037016554495930aae7c4da5d700ca45c725e2"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L03-E01.json",
+      "gitBlob": "d53bbf17a1940d5662b2f642eff8b21fa5041ea2"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L04-B01.json",
+      "gitBlob": "f4e68c32c77bd46b19f638138930c883bf9b791f"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L04-B02.json",
+      "gitBlob": "93251cc3c0aba38c499e8be0926e2c8b1e6ef808"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L04-B03.json",
+      "gitBlob": "49328ace3f5befcc134243f2ff1b8e9e289ed2dc"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L05-B01.json",
+      "gitBlob": "a5f5c78c4b700251bbc123e287c55aafda87650a"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L05-B02.json",
+      "gitBlob": "05304d801cd73c1e5feb5c2c4dd953a5853ba2b9"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L06-B01.json",
+      "gitBlob": "f9360db2970ab2372624b426f9512920fdae5b7d"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L06-B02.json",
+      "gitBlob": "1e9fa4055d5b907ea51aca84b0c02417497fb944"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L06-B03.json",
+      "gitBlob": "509f614b13aa0a752cffb457595d8e1232d4fd08"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L07-B01.json",
+      "gitBlob": "f42dbe1f8ab96f933cc421f80d001fc02076043c"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-L07-R01.json",
+      "gitBlob": "550deb882a150a8b792aa0e6b6a056384665c087"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-LP01-B01.json",
+      "gitBlob": "26b9f08d64d1fc86c500d4295e3469db6b1b12be"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-LP01-B02.json",
+      "gitBlob": "a52329db62a6f5b40b7ae8443416b2455bd19154"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-LP01-E01.json",
+      "gitBlob": "456a763d7320bf94fe5f1b1d714f0bd354c31d1b"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U01-B01.json",
+      "gitBlob": "286b33c11149ca11438b8e2bf8411335181ea37d"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U01-B02.json",
+      "gitBlob": "7319a62de3fd7bdf6a70896966b1970811c4e656"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U01-B03.json",
+      "gitBlob": "63574df7b2fb4affe76bfcd4fc7de73803ac109e"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-B01.json",
+      "gitBlob": "fd7a9e11acccba85dc0c3f2179a9a3fb8b8c122b"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-B02.json",
+      "gitBlob": "b5e2cf865f15447404c3e5b56d6420ba0d53c787"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-B03.json",
+      "gitBlob": "ccc739b697929f25a013669d4c7ab3ce5aa60ec3"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-B04.json",
+      "gitBlob": "9996b06d88f680f681f559919f40e14dae6affac"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-B05.json",
+      "gitBlob": "38cf30671ca438073c6d420ac3e8e53b35dd01a4"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-E01.json",
+      "gitBlob": "423e6f7e5674902e714c84de05dfbe937374d9d1"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-E02.json",
+      "gitBlob": "200e1e6695724b229f452bc3e2e46f72dad37b69"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-E03.json",
+      "gitBlob": "10e22d60ac2e7cff109559c7079854cab3752588"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-E04.json",
+      "gitBlob": "29c7e25324dceb609647e0068b8a1a69dd4ef275"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-E05.json",
+      "gitBlob": "9484e0902110ee2030583607f1962e08b8743591"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-O01.json",
+      "gitBlob": "2be068cd9352474411a1f804887912ec7a376df4"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U02-O02.json",
+      "gitBlob": "543fef10b40bc05e94f846deabc983d5c35d3b24"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U03-B01.json",
+      "gitBlob": "d344362d6767a4f2f04de5e512cc5244752e25f8"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U03-B02.json",
+      "gitBlob": "8f9f359d5575f82abfc8bee0fe2c67dfc02f19fd"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U03-E01.json",
+      "gitBlob": "d21024d1d3cd0f73b8eeb09c0f52bf513972a3b7"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U03-E02.json",
+      "gitBlob": "a5446197f4d382ea5be4511c9a4151d51cd36ab1"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U03-O01.json",
+      "gitBlob": "e0c37d1bb1d0098631a2d6f17e1266ae6ad1de43"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U04-B01.json",
+      "gitBlob": "fc15bb0734313c9da97abbe5d0908ac28e9206b0"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U04-B02.json",
+      "gitBlob": "5a839c8d91cdf64c5b2e00bef8fd98583e0552db"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U04-B03.json",
+      "gitBlob": "dd073ea57d59f1c719fa73dd79248f2eb4b0135e"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U04-B04.json",
+      "gitBlob": "73090e91d67570484dface2aa520305e6e521a5b"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U04-B05.json",
+      "gitBlob": "40d97e6777e9d368fddc90e3038999aac4b0922b"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U05-B01.json",
+      "gitBlob": "4d68508cbada08365d24725ddb9da72876e74511"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U05-B02.json",
+      "gitBlob": "1ef8b0bf3270941b334a3eaf3a3abf55d84228dc"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U05-B03.json",
+      "gitBlob": "009bc9c10493224b16766b4b1a8376ded8075f02"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U06-B01.json",
+      "gitBlob": "cec3076941ba3fb6fd5790bd958e633cdf7653a6"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U06-B02.json",
+      "gitBlob": "dd5d8bce8234529a5ae5828593a41c5097619bc7"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U06-B03.json",
+      "gitBlob": "e109b41c55ad2780497ae29146b5f70aa1772a94"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U06-B04.json",
+      "gitBlob": "7e64116d91e64edd1375838eac86339c93109b24"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U06-B05.json",
+      "gitBlob": "c7bdbd71655a50a08ed8ce32e6b44d447d135178"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U06-E01.json",
+      "gitBlob": "749b464ded9eb45ac24724ed5fe73a99324b3c52"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U07-B01.json",
+      "gitBlob": "c12986015895bda026838a3fffd96403c6625fa6"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-U07-R01.json",
+      "gitBlob": "62e9ebf5347169b990f15b3c8b93c0ab0c1222b0"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-UP01-B01.json",
+      "gitBlob": "397e7744589564d487ff86b397c89537a4117409"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-UP01-B02.json",
+      "gitBlob": "eee063fb755518304ac445aeba911501eec23423"
+    },
+    {
+      "path": "apps/preview/content/lessons/G3-UP02-B01.json",
+      "gitBlob": "09e6c616ede8d460db7059369092964ea47f099f"
+    },
+    {
+      "path": "apps/preview/content/lessons/algebra.balance.intro.json",
+      "gitBlob": "d3bed9546cda0de89e515f300a9d37619446357e"
+    },
+    {
+      "path": "apps/preview/content/lessons/algebra.substitution.intro.json",
+      "gitBlob": "ebbbd7183a04c4d02f051a8519710b32df37bfe2"
+    },
+    {
+      "path": "apps/preview/content/lessons/geometry.area.perimeter.json",
+      "gitBlob": "835f670ad16ae73be404ee8d9688b4089ccfdfe4"
+    },
+    {
+      "path": "apps/preview/content/lessons/numbers.addition.meaning.json",
+      "gitBlob": "757cab44ab139a71bbcdac1713f54db04f152e08"
+    },
+    {
+      "path": "apps/preview/content/lessons/numbers.fractions.meaning.json",
+      "gitBlob": "5936fd2ed15bdf68f4e802627f97dd40695c274d"
+    },
+    {
+      "path": "apps/preview/content/lessons/numbers.quantity.intro.json",
+      "gitBlob": "b6343c8bbb551769851646a13891eded85fbfa7e"
+    },
+    {
+      "path": "apps/preview/content/lessons/numbers.subtraction.meaning.json",
+      "gitBlob": "b15a2106ceaea92d543aa48ea6e4057a84ee4764"
+    },
+    {
+      "path": "apps/preview/contract.ts",
+      "gitBlob": "ab3fa3b416482fbd00e05780155a654398b4e9c6"
+    },
+    {
+      "path": "apps/preview/design-system.css",
+      "gitBlob": "eb7cc28ef8b20cc79ee865b00fb1ecc87d1429aa"
+    },
+    {
+      "path": "apps/preview/event-id.ts",
+      "gitBlob": "2dfd850d04eb54bc82e2285a24592a777b335e9e"
+    },
+    {
+      "path": "apps/preview/explore/Explore.tsx",
+      "gitBlob": "94699d5a49a3affa4054e2a0fcf0ee73f8dcc37c"
+    },
+    {
+      "path": "apps/preview/explore/explore.css",
+      "gitBlob": "352471355a2a7d791dcd4d69f36cdb83addf8b3d"
+    },
+    {
+      "path": "apps/preview/explore/memory.tsx",
+      "gitBlob": "d2d14513592bfbb5d7c9af13e89f41c4923f265a"
+    },
+    {
+      "path": "apps/preview/home/Home.tsx",
+      "gitBlob": "1adea162b0e989dc0ca92b351274b76c5f388092"
+    },
+    {
+      "path": "apps/preview/home/home.css",
+      "gitBlob": "8118c99d1caf440a9a3d9946fa8b619328d49433"
+    },
+    {
+      "path": "apps/preview/home/navigation.css",
+      "gitBlob": "a475b1b0f6661fd86880ac3724afd3210bf9b254"
+    },
+    {
+      "path": "apps/preview/home/spaces.ts",
+      "gitBlob": "1f77c89d6266fe87e703a34eefb4c4aca886bf10"
+    },
+    {
+      "path": "apps/preview/index.html",
+      "gitBlob": "090e65d2737d9857573b863b84060b22c90df8e9"
+    },
+    {
+      "path": "apps/preview/integrity.ts",
+      "gitBlob": "fb193628c7fd01b210b739d8f1614c47a8c1fea2"
+    },
+    {
+      "path": "apps/preview/learning-map.ts",
+      "gitBlob": "7193dd626dda12218281c958ca22532694234099"
+    },
+    {
+      "path": "apps/preview/library/LegacyArticle.tsx",
+      "gitBlob": "cbd35d248bf225b1585647435fb2ca32effb59e4"
+    },
+    {
+      "path": "apps/preview/library/LegacyLab.tsx",
+      "gitBlob": "8e5ffd57f637bfea13a9f2fa9775fbb0a109b3c8"
+    },
+    {
+      "path": "apps/preview/library/Library.tsx",
+      "gitBlob": "f4d3cb31775fc49113af4bef5e010e755987a139"
+    },
+    {
+      "path": "apps/preview/library/PlaceValueLab.tsx",
+      "gitBlob": "eb03f0a582af4ecb25fd4b305445ad62534da1f8"
+    },
+    {
+      "path": "apps/preview/library/contract.ts",
+      "gitBlob": "cdc83c9fbb19081d04129f5c351c2f9914ac2ecf"
+    },
+    {
+      "path": "apps/preview/library/legacy-models.ts",
+      "gitBlob": "be37dcbc1163d15a828e0e658fe86c0f8717ba0e"
+    },
+    {
+      "path": "apps/preview/library/library.css",
+      "gitBlob": "33b5026ca3ee2e920e064ffc85009478b5c54a3b"
+    },
+    {
+      "path": "apps/preview/library/method-companions.ts",
+      "gitBlob": "e2acc7ed9014a1c04fcdb5d9c8603412b56be99c"
+    },
+    {
+      "path": "apps/preview/library/place-value.ts",
+      "gitBlob": "c9083cfad076b20d397fad7141c12df0ed03dbb8"
+    },
+    {
+      "path": "apps/preview/library/private/bank.json",
+      "gitBlob": "c0c2f07fbc4fe27f8a14771268ccd16d59cc314a"
+    },
+    {
+      "path": "apps/preview/library/private/detective-grading.d.mts",
+      "gitBlob": "8ff855544dcf1e924591af40bc13d726b379001c"
+    },
+    {
+      "path": "apps/preview/library/private/detective-grading.mjs",
+      "gitBlob": "d97e196c3bbdd94229c3fe8144ee71c308378993"
+    },
+    {
+      "path": "apps/preview/library/service.ts",
+      "gitBlob": "0d4c161d0ccbd8ef132b60e44926e85c9b0dce97"
+    },
+    {
+      "path": "apps/preview/library/source/DetectiveFigure.tsx",
+      "gitBlob": "12f3a3bbb2006ce879efdf821606b4100676adbc"
+    },
+    {
+      "path": "apps/preview/library/source/MathLab.tsx",
+      "gitBlob": "93a45a694e728b9058161023cd9fdf0797ffa4a6"
+    },
+    {
+      "path": "apps/preview/library/source/ThinkingFigure.tsx",
+      "gitBlob": "1dfd1718892552c3c70b7793348e928ef2a9bce1"
+    },
+    {
+      "path": "apps/preview/library/source/ThinkingTools.tsx",
+      "gitBlob": "372dea20bbebd0b99227417da4d6dedc0aa068f4"
+    },
+    {
+      "path": "apps/preview/library/source/detective-presentation.d.mts",
+      "gitBlob": "0c803e4108d0af37ffa324a75aadee3d2e58e119"
+    },
+    {
+      "path": "apps/preview/library/source/detective-presentation.mjs",
+      "gitBlob": "e072c4734e8828990a293c76ec0b0162570f43c6"
+    },
+    {
+      "path": "apps/preview/library/source/model-styles.css",
+      "gitBlob": "c89f299850fdb3b08b24362351d37520874ce910"
+    },
+    {
+      "path": "apps/preview/library/source/thinking-tools.d.mts",
+      "gitBlob": "efc96d0ab1b998cd097a3087bdf088498a6962b9"
+    },
+    {
+      "path": "apps/preview/library/source/thinking-tools.mjs",
+      "gitBlob": "e5851e6033ea406410e94ad1f37bacb751bfb2ee"
+    },
+    {
+      "path": "apps/preview/library/source/types.ts",
+      "gitBlob": "6dcb4619cdfec7e9b080f37d57e1266ca15b84cd"
+    },
+    {
+      "path": "apps/preview/library/useThinkingJourney.ts",
+      "gitBlob": "38aedc7e0ca79cedb182e5e48582bbcf5ecd49b2"
+    },
+    {
+      "path": "apps/preview/main.tsx",
+      "gitBlob": "8fb3dd9b90a47682685656067397bb8b3eb424bb"
+    },
+    {
+      "path": "apps/preview/practice/ConceptVisual.tsx",
+      "gitBlob": "61496962abdd7a11c93475b99b398f6ad78e75c6"
+    },
+    {
+      "path": "apps/preview/practice/InverseTaskFigure.tsx",
+      "gitBlob": "f026d2721178b7c10c024fca85ef9222f2e094bd"
+    },
+    {
+      "path": "apps/preview/practice/Practice.tsx",
+      "gitBlob": "ad6667894fc4c0b8c32f8d0f274c7e794f8e5226"
+    },
+    {
+      "path": "apps/preview/practice/contract.ts",
+      "gitBlob": "83dcc5d6ca2f33abe3b7b2edd5a73964cac3ba96"
+    },
+    {
+      "path": "apps/preview/practice/private/bank.json",
+      "gitBlob": "39ec3bd0b5e6c756f6d946bd8c27ff87df229f95"
+    },
+    {
+      "path": "apps/preview/practice/private/pilot-math.d.mts",
+      "gitBlob": "b552963c0f33f53dd394795cf0cb90a4f46a2172"
+    },
+    {
+      "path": "apps/preview/practice/private/pilot-math.mjs",
+      "gitBlob": "e33aca3ce40eed3a05f3e2505cddcf9d74cac933"
+    },
+    {
+      "path": "apps/preview/practice/service.ts",
+      "gitBlob": "4317dd9762b15a94b8cd2c0a98c5b7430cf966b2"
+    },
+    {
+      "path": "apps/preview/practice/usePracticeJourney.ts",
+      "gitBlob": "e14e9d8b58dba42f835954e900522c3f8601ab1d"
+    },
+    {
+      "path": "apps/preview/preview.css",
+      "gitBlob": "d492ccb5beecb1a10911c797c37968b83200f6d3"
+    },
+    {
+      "path": "apps/preview/public/THIRD-PARTY-NOTICES.txt",
+      "gitBlob": "1090a2e21e609dc173f286070f7f8395aac3028a"
+    },
+    {
+      "path": "apps/preview/public/math-paper-folding/template-cube-1.svg",
+      "gitBlob": "9053ff97c8ad76f8e9387cfb2a63a384a143d25f"
+    },
+    {
+      "path": "apps/preview/public/math-paper-folding/template-cube-2.svg",
+      "gitBlob": "9a3d4860fc56e551d4f20438b1abdc207b404105"
+    },
+    {
+      "path": "apps/preview/public/math-paper-folding/template-cube-3.svg",
+      "gitBlob": "c204fbb4646abcfbf598a4daae3202b219b15f09"
+    },
+    {
+      "path": "apps/preview/public/math-paper-folding/template-rectangular-box.svg",
+      "gitBlob": "3abc1fbc05f109852ccce2d51fc251a69c72577a"
+    },
+    {
+      "path": "apps/preview/reading/Article.tsx",
+      "gitBlob": "f82e5e0d9e7b1003d3a23b8b5ee1db9fe7e4e2c5"
+    },
+    {
+      "path": "apps/preview/reading/articles.json",
+      "gitBlob": "d20bf6877b297917b53fb098db8d4a319bf74e54"
+    },
+    {
+      "path": "apps/preview/reading/contract.ts",
+      "gitBlob": "36114882f9f018492f824a1a3b1f40a15e56634f"
+    },
+    {
+      "path": "apps/preview/reading/private/checkpoints.json",
+      "gitBlob": "30ce829dc14bb740d46ecfff2022ea447ec70361"
+    },
+    {
+      "path": "apps/preview/reading/service.ts",
+      "gitBlob": "a8de4013826554679895e00977f48f292d858051"
+    },
+    {
+      "path": "apps/preview/reading/usePrint.ts",
+      "gitBlob": "996799ae165215a5a9b791dff813ab2c43fe8708"
+    },
+    {
+      "path": "apps/preview/registry-meta.ts",
+      "gitBlob": "8dc6f00bdf52297080e732bcd94515ba9efc3ae2"
+    },
+    {
+      "path": "apps/preview/registry.tsx",
+      "gitBlob": "15e94fec0c98e07921112e80fcca13e60fa80143"
+    },
+    {
+      "path": "apps/preview/runtime.ts",
+      "gitBlob": "1408b3930e5d1bfd06fa2abc37aaa29fbf8e0daa"
+    },
+    {
+      "path": "apps/preview/server.ts",
+      "gitBlob": "bb8b3caed6d7b73c4d8e90c5f5fc6b1dac996ded"
+    },
+    {
+      "path": "apps/preview/training-contract.ts",
+      "gitBlob": "efdbc59f1b21a3ff0fbc6af0c64c63ead4bc0708"
+    },
+    {
+      "path": "apps/preview/training.ts",
+      "gitBlob": "09f9346c9f1cd6f522d1ef1a571408fc540c1c6a"
+    },
+    {
+      "path": "apps/preview/validation.ts",
+      "gitBlob": "869b02ab681cfaf0e5e6bf5a79a0e7b81e2bea9f"
+    },
+    {
+      "path": "apps/preview/vite.config.ts",
+      "gitBlob": "1ce755094b136a43beafbb30e4f9d47cb30aac6a"
+    },
+    {
+      "path": "apps/server/auth-http.ts",
+      "gitBlob": "f44fcf88203057035e285b9f9be85647557e53ab"
+    },
+    {
+      "path": "apps/server/http.ts",
+      "gitBlob": "15ce84aed46c17b076b1a8e50fd06cb0ca179377"
+    },
+    {
+      "path": "apps/server/main.ts",
+      "gitBlob": "0bcfee3a37ce7db156eed9eb79f1a8754a0e2835"
+    },
+    {
+      "path": "apps/server/math-http.ts",
+      "gitBlob": "e824adad0e5df588ce0306cde95c582481024f42"
+    },
+    {
+      "path": "apps/server/math-training-http.ts",
+      "gitBlob": "92408ec447f8c3472ce1bcdeea52062e3e4c2df9"
+    },
+    {
+      "path": "apps/server/package.json",
+      "gitBlob": "d3e79e39227572f7dbdc1a65368dd11ea56c8637"
+    },
+    {
+      "path": "apps/web/index.html",
+      "gitBlob": "0df4865b63dc4b8db8107b2abe44be53d4b92433"
+    },
+    {
+      "path": "apps/web/package.json",
+      "gitBlob": "43fb866b0c34cd5c2da74f2c2c81e3411d7f8aba"
+    },
+    {
+      "path": "apps/web/src/api.ts",
+      "gitBlob": "101263581568acad237e5b0308b52360ff55475d"
+    },
+    {
+      "path": "apps/web/src/env.d.ts",
+      "gitBlob": "11f02fe2a0061d6e6e1f271b21da95423b448b32"
+    },
+    {
+      "path": "apps/web/src/identity.ts",
+      "gitBlob": "92ab5d86d41a62fea9f525cb2fb4a7720ae463c9"
+    },
+    {
+      "path": "apps/web/src/main.tsx",
+      "gitBlob": "a9df603eed29ff13988c955a5bfb21473e136100"
+    },
+    {
+      "path": "apps/web/src/math/BoxCamera.tsx",
+      "gitBlob": "3ff53d0a0baf772e0b0bdffb1ea7771fd2693075"
+    },
+    {
+      "path": "apps/web/src/math/Lesson.tsx",
+      "gitBlob": "a2cb3cb3dd89d709b69c12158591c30a47e1ab5b"
+    },
+    {
+      "path": "apps/web/src/math/SolidView.tsx",
+      "gitBlob": "c59f5f67bd22006e8fc65a4f594e0b9646a4b358"
+    },
+    {
+      "path": "apps/web/src/math/Workbench.tsx",
+      "gitBlob": "9275682c0ccb31a8370c8f7c679665af2260c45d"
+    },
+    {
+      "path": "apps/web/src/math/geometry.d.mts",
+      "gitBlob": "90f2a41b18dffc2304cf94e4cc3e34b0e7033936"
+    },
+    {
+      "path": "apps/web/src/math/geometry.mjs",
+      "gitBlob": "cde8de8e9ace72dcdada0f921c67e6d5b31ab7f9"
+    },
+    {
+      "path": "apps/web/src/math/math.css",
+      "gitBlob": "ca46b29a3bbe4231d77cccca6e3fba925a4870d5"
+    },
+    {
+      "path": "apps/web/src/math/motion.ts",
+      "gitBlob": "6d62fee5f0555bea9ccc800a3c086efdb3474bcc"
+    },
+    {
+      "path": "apps/web/src/math/verify.ts",
+      "gitBlob": "4ec5636fdd9e84c34a7f20347b2c840f4ea04f2b"
+    },
+    {
+      "path": "apps/web/src/style.css",
+      "gitBlob": "a7b5500bdf1d214a63539928500d00312ac09899"
+    },
+    {
+      "path": "apps/web/src/validation.ts",
+      "gitBlob": "682beb3fb58ffadc76f70b63ccdcc0f6d4e86864"
+    },
+    {
+      "path": "apps/web/vite.config.ts",
+      "gitBlob": "1ce755094b136a43beafbb30e4f9d47cb30aac6a"
+    },
+    {
+      "path": "package-lock.json",
+      "gitBlob": "c977b7bcd6accb322a5247d98128f325c3a05de9"
+    },
+    {
+      "path": "package.json",
+      "gitBlob": "73daaa8dbc973dc26bf3b66bff8bf0829c961f1f"
+    },
+    {
+      "path": "packages/auth/config.ts",
+      "gitBlob": "3d5cdec680ecafdc23864223fe8b7b77bc420834"
+    },
+    {
+      "path": "packages/auth/password.ts",
+      "gitBlob": "ea941bc5e62613c7ca0e7e0b3d6b69e2fe5fb473"
+    },
+    {
+      "path": "packages/auth/service.ts",
+      "gitBlob": "324ae7c9741bceb396058e0d176897accbd1cb25"
+    },
+    {
+      "path": "packages/contracts/auth.ts",
+      "gitBlob": "8d0daddbadd0e13e4e6e2fb00d441bdbab652a1c"
+    },
+    {
+      "path": "packages/contracts/index.ts",
+      "gitBlob": "9c0583262ef27b4d4fb4092f0b425c06f6aea9a1"
+    },
+    {
+      "path": "packages/contracts/math-readonly.ts",
+      "gitBlob": "34879586f832d9d1eea5576d851df04edccb7a28"
+    },
+    {
+      "path": "packages/contracts/math-reviewed.ts",
+      "gitBlob": "21776a14cf7195b112075b59804403907b076764"
+    },
+    {
+      "path": "packages/contracts/math-study.ts",
+      "gitBlob": "c10c4a751593bd71f62af73796449b077e9d4b81"
+    },
+    {
+      "path": "packages/contracts/math-training.ts",
+      "gitBlob": "89f5fd4d1041522fe0639661e09ba4dc47b66516"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "gitBlob": "d4a77ede7015d48e3c5da9b5c4f54b96b7e03b1b"
+    },
+    {
+      "path": "packages/contracts/routes.ts",
+      "gitBlob": "a7baf3e8851f118d458c7adce0a1466c4f5a6dcb"
+    },
+    {
+      "path": "packages/explore/coach.ts",
+      "gitBlob": "18e034f2e80cca73d62365753c4c610335a337ae"
+    },
+    {
+      "path": "packages/explore/domain.ts",
+      "gitBlob": "0ae16f77ee3821934200dbf868e30ffaae043f90"
+    },
+    {
+      "path": "packages/explore/examples.ts",
+      "gitBlob": "57e90a9c86221fbbec193933415bf3e15caabcd3"
+    },
+    {
+      "path": "packages/math-training/README.md",
+      "gitBlob": "c92428f3e5d36e0836038abc5b626bf1f4416071"
+    },
+    {
+      "path": "packages/math-training/engine.d.mts",
+      "gitBlob": "47dd29c23786f1e4a46e57f0dc33dfa7fb6f59f8"
+    },
+    {
+      "path": "packages/math-training/engine.mjs",
+      "gitBlob": "e104251b6fe3677636d73c3164f67acb5ca54bb7"
+    },
+    {
+      "path": "packages/math-training/package.json",
+      "gitBlob": "113e6201879829c26249b088e552ad254903efdd"
+    },
+    {
+      "path": "packages/math-training/repository.ts",
+      "gitBlob": "11fb2ee3b33f959c486432d07a95213d431b06b5"
+    },
+    {
+      "path": "packages/math-training/source/content/detective/approved-bundles.json",
+      "gitBlob": "c7a42c43ecd75e32fe121672b1c1496aa827969e"
+    },
+    {
+      "path": "packages/math-training/source/content/detective/approved-editions.json",
+      "gitBlob": "42dc1e29b6ad1d8404e805c956e4c77a5501901b"
+    },
+    {
+      "path": "packages/math-training/source/content/detective/process-cases.mjs",
+      "gitBlob": "dcee8a4ba0f9894831a83c50f96ea0c3be1fac53"
+    },
+    {
+      "path": "packages/math-training/source/content/detective/seed-cases.mjs",
+      "gitBlob": "e10e9fbd4735285cee94c7e3bed86b72eb50501f"
+    },
+    {
+      "path": "packages/math-training/source/content/pilot/clarity-errata.mjs",
+      "gitBlob": "78b2e06af753daa17bbf950331dec321b6e28c60"
+    },
+    {
+      "path": "packages/math-training/source/content/pilot/inverse-revisions.mjs",
+      "gitBlob": "1bb5e356531d191844c0688f93094bccde9d84b9"
+    },
+    {
+      "path": "packages/math-training/source/content/pilot/thinking-deeper-variants.mjs",
+      "gitBlob": "a84bea714ff96c294e081a582ff8096b04f502b9"
+    },
+    {
+      "path": "packages/math-training/source/content/pilot/thinking-hints.mjs",
+      "gitBlob": "e42f780be25d63b2a9590fcf2f373d7508f7e1fb"
+    },
+    {
+      "path": "packages/math-training/source/content/pilot/thinking-source.mjs",
+      "gitBlob": "93a8f176f88ad195f2f4b042d1c0ccf0934aebb1"
+    },
+    {
+      "path": "packages/math-training/source/content/pilot/thinking-variants.mjs",
+      "gitBlob": "99ac3071b24800e37650bf133d996890c81c42b7"
+    },
+    {
+      "path": "packages/math-training/source/scripts/lib/detective-delivery-audit.mjs",
+      "gitBlob": "bee9a86f6d305e4e542da4c68234ca1871f915ab"
+    },
+    {
+      "path": "packages/math-training/source/server/detective-check-evidence.d.mts",
+      "gitBlob": "0b2a8bc969815247682286cfb71dedcdc6ec9478"
+    },
+    {
+      "path": "packages/math-training/source/server/detective-check-evidence.mjs",
+      "gitBlob": "745302798c1d89a042e0e538ace2cc2de1d7c019"
+    },
+    {
+      "path": "packages/math-training/source/server/detective-self-integrity.mjs",
+      "gitBlob": "83f6beeb97b7ca5a163f77c2cf40b8850f619fcf"
+    },
+    {
+      "path": "packages/math-training/source/server/detective-self-questions.d.mts",
+      "gitBlob": "75a7cd146b9b29914bf76d17bb4cc2bfa898ecf4"
+    },
+    {
+      "path": "packages/math-training/source/server/detective-self-questions.mjs",
+      "gitBlob": "06c74ff29d3d189ac6a2563fd0745acad2de587e"
+    },
+    {
+      "path": "packages/math-training/source/server/detective-self-store.mjs",
+      "gitBlob": "81128977513ccd22b58de0e89941093eace85c1a"
+    },
+    {
+      "path": "packages/math-training/source/server/detective-store.mjs",
+      "gitBlob": "3e1cb2cae654a849e5c7c2bef772b1ddcf19134a"
+    },
+    {
+      "path": "packages/math-training/source/server/pilot-store.mjs",
+      "gitBlob": "4882ec7a814e2ff6ee81fcf428ab8eabf01d3cec"
+    },
+    {
+      "path": "packages/math-training/source/server/review-schedule.mjs",
+      "gitBlob": "288434f8de97c55d7fc5b8098625e26c0f452ff6"
+    },
+    {
+      "path": "packages/math-training/source/server/thinking-store.mjs",
+      "gitBlob": "1aea90e304dd418bbb60392764827d23c8c2f81e"
+    },
+    {
+      "path": "packages/math-training/source/shared/core-models.mjs",
+      "gitBlob": "35333a65f6bd5f7f08862e71646e09049de9902e"
+    },
+    {
+      "path": "packages/math-training/source/shared/detective-inbox.mjs",
+      "gitBlob": "2e9f77e263aec768ed4fb93fb121269c367d796b"
+    },
+    {
+      "path": "packages/math-training/source/shared/detective-mass-spring.mjs",
+      "gitBlob": "ce9bc475589995094de23fab0d7eca7aec233c5a"
+    },
+    {
+      "path": "packages/math-training/source/shared/detective-model.mjs",
+      "gitBlob": "3a23eb9090d6c877a365bde7d0dc405b8721bb14"
+    },
+    {
+      "path": "packages/math-training/source/shared/detective-self-validation.mjs",
+      "gitBlob": "5f3108787b737f6b560c3ee9152583fe6aadc12a"
+    },
+    {
+      "path": "packages/math-training/source/shared/hands-on-models.mjs",
+      "gitBlob": "3bd12df8718c0dcc9ef9e4f4ad517f1ae2bd2e37"
+    },
+    {
+      "path": "packages/math-training/source/shared/learning-evidence.mjs",
+      "gitBlob": "3f94246029db195a86187e1f1dc1cd35dd42c77c"
+    },
+    {
+      "path": "packages/math-training/source/shared/length-model.mjs",
+      "gitBlob": "1c01ece619f0dc8801aca5ed2d6147bfbb9db680"
+    },
+    {
+      "path": "packages/math-training/source/shared/operation-models.mjs",
+      "gitBlob": "a711e5ed609b581a6fdecd5ce9b7192ec59a1029"
+    },
+    {
+      "path": "packages/math-training/source/shared/pilot-math.mjs",
+      "gitBlob": "e33aca3ce40eed3a05f3e2505cddcf9d74cac933"
+    },
+    {
+      "path": "packages/math-training/source/shared/task-audit-oracle.mjs",
+      "gitBlob": "3c54a68b54ba167869f2b6173f068c94c43c166a"
+    },
+    {
+      "path": "packages/math-training/source/shared/textbook-models.mjs",
+      "gitBlob": "252842f51207dec7442e0db88bdc89a0fc4f1a06"
+    },
+    {
+      "path": "packages/math-training/source/shared/thinking-tools.mjs",
+      "gitBlob": "e5851e6033ea406410e94ad1f37bacb751bfb2ee"
+    },
+    {
+      "path": "packages/math-training/source/shared/widget-state.mjs",
+      "gitBlob": "d8073d21b1c7ef6be3b001bebd431b5344bbc9ab"
+    },
+    {
+      "path": "packages/math-training/source/shared/withdrawn-checks.d.mts",
+      "gitBlob": "511e36eb2321ba897ba8c8369e45af7990ce7ede"
+    },
+    {
+      "path": "packages/math-training/source/shared/withdrawn-checks.mjs",
+      "gitBlob": "55618bcd2e7b8cbba342cec11aea520c00b9a6c4"
+    },
+    {
+      "path": "packages/math-training/source/src/learningMap.mjs",
+      "gitBlob": "cf4c484582eab6d8005118e1bc4126a65dca927f"
+    },
+    {
+      "path": "packages/math-training/study.d.mts",
+      "gitBlob": "bc65a9781744b32a4ec77bfb096f7bb497bdb15f"
+    },
+    {
+      "path": "packages/math-training/study.mjs",
+      "gitBlob": "8745c0abe202cd60679a8a42615dd4659f7c5c54"
+    },
+    {
+      "path": "packages/media/local.ts",
+      "gitBlob": "8abe03cff5ac83767abec7200820d5cb9f745cf6"
+    },
+    {
+      "path": "packages/media/package.json",
+      "gitBlob": "6e1e7e09e985c2aacd48684855074613bd180e83"
+    },
+    {
+      "path": "packages/platform/001-foundation.sql",
+      "gitBlob": "b23f666a35a752ed78f6a181de449c24cc1d7cd6"
+    },
+    {
+      "path": "packages/platform/002-family-auth.sql",
+      "gitBlob": "acef01670abbdd77e56a016370919443b333932f"
+    },
+    {
+      "path": "packages/platform/checkpoint.ts",
+      "gitBlob": "cd626b8d8752f66dbaa15f3e545bfdc65d6a6b14"
+    },
+    {
+      "path": "packages/platform/migrations.ts",
+      "gitBlob": "a52b17deadf1f89fc24feff115cf515dae7df6c4"
+    },
+    {
+      "path": "packages/platform/package.json",
+      "gitBlob": "7e997e8a014a694a843572268baecfe6530b1d01"
+    },
+    {
+      "path": "packages/platform/store.ts",
+      "gitBlob": "61be77195c246f211f89004ba59cd50915e60823"
+    },
+    {
+      "path": "packages/platform/writer-lock.ts",
+      "gitBlob": "f42e7c706859a8aaa3d9d9d9421c0cacc1909a08"
+    },
+    {
+      "path": "packages/records/access.ts",
+      "gitBlob": "de06ead81ecbd8687fc29e0b907856ea11fcc36e"
+    },
+    {
+      "path": "packages/records/checkpoint.ts",
+      "gitBlob": "5a832953cfea7f4fc5878f9ab83f4dbeb4d29457"
+    },
+    {
+      "path": "packages/records/contracts.ts",
+      "gitBlob": "c1883a447addcc708328b786b1b1362d2195bbe4"
+    },
+    {
+      "path": "packages/records/database.ts",
+      "gitBlob": "3d98e391f264d357d7d0b74ef6c1864f6541020e"
+    },
+    {
+      "path": "packages/records/image-worker.ts",
+      "gitBlob": "e2db1048bd3db81e250f6728c586944886bc2088"
+    },
+    {
+      "path": "packages/records/lossless.ts",
+      "gitBlob": "d2303d703fb2c49b1443a02f0861f9f3937fc508"
+    },
+    {
+      "path": "packages/records/math-domain.d.mts",
+      "gitBlob": "29ab5eef5f92755b2e103d4e449d6a8a88de8fb6"
+    },
+    {
+      "path": "packages/records/math-domain.mjs",
+      "gitBlob": "a5026e0c8728e82ff1d8b0f8521c6ad3e1f098c4"
+    },
+    {
+      "path": "packages/records/math.ts",
+      "gitBlob": "5d80de9ca38a83c7f2662268a8b8671d92a60182"
+    },
+    {
+      "path": "packages/records/media.ts",
+      "gitBlob": "760c2e7fc4776805e555793ece3730c48c91e9c6"
+    },
+    {
+      "path": "packages/records/migration.ts",
+      "gitBlob": "177773cdf38e50c1adc9912fc25fe7243b1af815"
+    },
+    {
+      "path": "packages/records/review.ts",
+      "gitBlob": "ebb99a15b818d0d28f1fd9dcc81b0c5f9b603760"
+    },
+    {
+      "path": "packages/records/schema.sql",
+      "gitBlob": "0639798b693680f54bc8bd9fd4511b7e95dc8792"
+    },
+    {
+      "path": "packages/records/service.ts",
+      "gitBlob": "1eed0b72fb6dcbae6946f42d415c6cb28abc82da"
+    },
+    {
+      "path": "packages/records/summary.ts",
+      "gitBlob": "bc74cfcd48395ce71c98f1d2b0b0b182e8a45ec7"
+    },
+    {
+      "path": "packages/subjects/index.ts",
+      "gitBlob": "a8ca564f6371dde2fdde2b631af6c8836c3f0656"
+    },
+    {
+      "path": "packages/subjects/math/project.ts",
+      "gitBlob": "bcf56b15d10744db1aba6d55e3e2fd26d4199184"
+    },
+    {
+      "path": "packages/subjects/math/public-lesson.json",
+      "gitBlob": "104fc1107a92d5a0bcc9b169fb773fc0e2c8d42c"
+    },
+    {
+      "path": "packages/subjects/math/service.ts",
+      "gitBlob": "65520bd7ca66887ca52799cdabbf4858a1c4c922"
+    },
+    {
+      "path": "packages/subjects/package.json",
+      "gitBlob": "c9d3055aa0ac412624b0638430bee5a6d6016b43"
+    },
+    {
+      "path": "scripts/auth-admin.ts",
+      "gitBlob": "672ecf0466adbd84c2ed1f2fefa050a9d0493ff7"
+    },
+    {
+      "path": "scripts/english/audit-source.py",
+      "gitBlob": "c0379e950c9d2cea061ed3b17587b49c5dd5677f"
+    },
+    {
+      "path": "scripts/healthcheck.ts",
+      "gitBlob": "bce16b0e072806e7bfe1951ad20849cb85cb8e63"
+    },
+    {
+      "path": "scripts/legacy-bench-cleanup.sh",
+      "gitBlob": "37f72a02f4fe09ea5b2bc111569a4c47b59844c8"
+    },
+    {
+      "path": "scripts/maintenance.ts",
+      "gitBlob": "9664855f34177eade8345a0ef0c97dbd696a1967"
+    },
+    {
+      "path": "scripts/math-audit/check.py",
+      "gitBlob": "06df2d1f1f27358ab00d0f4ee583e8b8074b0da0"
+    },
+    {
+      "path": "scripts/math-audit/generate.py",
+      "gitBlob": "c08b487aebc597784c25c42b58c60d9ea2b99db7"
+    },
+    {
+      "path": "scripts/math-full-01/archive-map.mjs",
+      "gitBlob": "6eac9ea893ca9fa30d385f37cbb10a7b23e2e42d"
+    },
+    {
+      "path": "scripts/math-full-01/archive.mjs",
+      "gitBlob": "e77a6be5cf6e96864c71866f566fe676b6c4ea39"
+    },
+    {
+      "path": "scripts/math-full-01/build.ts",
+      "gitBlob": "f11d5a0f9b46001e410bc8a0d06f314a5b993cd7"
+    },
+    {
+      "path": "scripts/math-full-01/check.py",
+      "gitBlob": "1364c32ecde9bf7297231e29ccbfe95d6ab94a5a"
+    },
+    {
+      "path": "scripts/math-full-01/deliver-nas.mjs",
+      "gitBlob": "9c85bfe53dd52bb6b64d0df0e666c1a9916b9011"
+    },
+    {
+      "path": "scripts/math-full-01/import-map.mjs",
+      "gitBlob": "b702f35e5bea4e23538065829dd6447492507fe5"
+    },
+    {
+      "path": "scripts/math-full-01/import.mjs",
+      "gitBlob": "5bab03b8b51ff1cdbb7fcd82f288707b43188143"
+    },
+    {
+      "path": "scripts/math-full-01/mac.mjs",
+      "gitBlob": "1dbbc7a424656bc79faaed3ddf2a499547d50787"
+    },
+    {
+      "path": "scripts/math-full-02/archive.mjs",
+      "gitBlob": "8167d0d18c205249f38ab10c6f9090b63e630871"
+    },
+    {
+      "path": "scripts/math-full-02/import.py",
+      "gitBlob": "2cf043dbb644baf5fd4c43b03d27b1587c4cd335"
+    },
+    {
+      "path": "scripts/math-full-03/archive.mjs",
+      "gitBlob": "6dc64fff75cc723b95e3aa508d3da56c82b2f817"
+    },
+    {
+      "path": "scripts/math-full-03/import.py",
+      "gitBlob": "4ac898900dc8038567398e091f1a541daadd5558"
+    },
+    {
+      "path": "scripts/math-onepass/import-coding-update.py",
+      "gitBlob": "484050c8774719fc78e04282ea2b56662ba0961e"
+    },
+    {
+      "path": "scripts/math-onepass/import-reading.mjs",
+      "gitBlob": "b368c73150f2fea394d55f82408916f428f95507"
+    },
+    {
+      "path": "scripts/math-onepass/import-study.mjs",
+      "gitBlob": "896a3f79f8894796f0f8ccfdcff888162562043b"
+    },
+    {
+      "path": "scripts/math-onepass/import.py",
+      "gitBlob": "c6f382a3c6a46e475af28040625f40059faf0457"
+    },
+    {
+      "path": "scripts/math-onepass/parity.py",
+      "gitBlob": "663fc4e3f57f3d859e8aa0f422c28efdb228fcca"
+    },
+    {
+      "path": "scripts/math01/build.ts",
+      "gitBlob": "70e211430346a26371eba88efefb54d06c265525"
+    },
+    {
+      "path": "scripts/math01/check-ci.py",
+      "gitBlob": "b26ba36149d527ea5985cd1ce730ed13547ad9ee"
+    },
+    {
+      "path": "scripts/math01/extract.mjs",
+      "gitBlob": "61feb18842e88835dcabefff694c6a4361cd09a1"
+    },
+    {
+      "path": "scripts/math01/seal.ts",
+      "gitBlob": "bd5c1e29b19a87b9136e32c0724b2be71ab76871"
+    },
+    {
+      "path": "scripts/math01/verify-source.ts",
+      "gitBlob": "9ac98b0b56d31c9edd68f42128963b27665fffa7"
+    },
+    {
+      "path": "scripts/synthetic.ts",
+      "gitBlob": "7869953bac88147dc686df130869d0e01ced13bb"
+    },
+    {
+      "path": "scripts/verify.ts",
+      "gitBlob": "b9e6ad977f91a8162f1d902483a9deec1de3c997"
+    },
+    {
+      "path": "tests/auth/auth-child.ts",
+      "gitBlob": "6319d62ca5196c596d2745d5acd79fa059f20628"
+    },
+    {
+      "path": "tests/auth/bootstrap-pty.py",
+      "gitBlob": "c256a6869fe3e067801c3deca12ef34b477f62c5"
+    },
+    {
+      "path": "tests/auth/bootstrap.test.ts",
+      "gitBlob": "6ddb1517a1472f8c92f392494d1a7735d8d0e0ae"
+    },
+    {
+      "path": "tests/auth/container-smoke.ts",
+      "gitBlob": "13bd2cfe7fc3fe19ff709582be7807d7a16b5c43"
+    },
+    {
+      "path": "tests/auth/helpers.ts",
+      "gitBlob": "ceead1cc79a46eafa929c6fd92fa6b94906d166d"
+    },
+    {
+      "path": "tests/auth/http.test.ts",
+      "gitBlob": "35188cf3fdccdb02d42d250163ec3cc664c13776"
+    },
+    {
+      "path": "tests/auth/migration-child.ts",
+      "gitBlob": "79bffa686205a9f575eef2feaf2fb2a3bac1abf2"
+    },
+    {
+      "path": "tests/auth/migration.test.ts",
+      "gitBlob": "932d4d41a098d0c2f268d14d9fed40e58933d2dc"
+    },
+    {
+      "path": "tests/auth/process.test.ts",
+      "gitBlob": "eb0ce78104e969f4353d689fd2218f6ff9dc5f1d"
+    },
+    {
+      "path": "tests/auth/workflow.test.ts",
+      "gitBlob": "fbbb454bf2008a2fa19b0c0c31c93f558053d56e"
+    },
+    {
+      "path": "tests/english/test_source_audit.py",
+      "gitBlob": "4f6e688e0d774e9a70b85202494e022d20a59490"
+    },
+    {
+      "path": "tests/explore/browser.mjs",
+      "gitBlob": "767ca61d1ad9fbccf480b7663699b5898828872a"
+    },
+    {
+      "path": "tests/explore/domain.test.ts",
+      "gitBlob": "9c1bc2a48cff7fdf4292d9acfa8d3a2fae569ba3"
+    },
+    {
+      "path": "tests/foundation/browser-smoke.ts",
+      "gitBlob": "25c0b9a651ade8694d673d2b2da71bc8b286d623"
+    },
+    {
+      "path": "tests/foundation/container-smoke.ts",
+      "gitBlob": "ddf8d1a74fa07359a318be631cd6cd6502a4edff"
+    },
+    {
+      "path": "tests/foundation/helpers.ts",
+      "gitBlob": "3b6b0f1c9e5eda9a01dc61ea726929a08e047ca0"
+    },
+    {
+      "path": "tests/foundation/ownership-child.ts",
+      "gitBlob": "154a1adfdc780ae7f61a4e31d834696dfc73538d"
+    },
+    {
+      "path": "tests/foundation/platform.test.ts",
+      "gitBlob": "20691a33b1910d0d733218cbfe245f034feaa391"
+    },
+    {
+      "path": "tests/foundation/process-helpers.ts",
+      "gitBlob": "19975d4cd679ebc21237f32dd8ad73c695fc0168"
+    },
+    {
+      "path": "tests/foundation/readiness.test.ts",
+      "gitBlob": "69cdf58a7a9571a9631169ff812741c59775608b"
+    },
+    {
+      "path": "tests/foundation/recovery.test.ts",
+      "gitBlob": "5b462d981c688cbc3b017e6d350d5523f0312c18"
+    },
+    {
+      "path": "tests/foundation/restart.test.ts",
+      "gitBlob": "0fd78b618bfe4cf8c2554c4b75fbb3dbe0c623b7"
+    },
+    {
+      "path": "tests/foundation/test-server.ts",
+      "gitBlob": "9bbbfaf07ce8038ca0f34605520a6677eb891f22"
+    },
+    {
+      "path": "tests/foundation/writer-lock.test.ts",
+      "gitBlob": "3f7865afd82706c408a2b6cdadce9e76d90c37be"
+    },
+    {
+      "path": "tests/home/browser.mjs",
+      "gitBlob": "41ce794797a9f4ed0ee1ef5a7f2ba5d04c4befe8"
+    },
+    {
+      "path": "tests/home/spaces.test.ts",
+      "gitBlob": "0a3b55746ca86f9330ef7903a54ae28b2cbfa742"
+    },
+    {
+      "path": "tests/math-audit/test_audit.py",
+      "gitBlob": "f8968445853575ffda7bd43e7a999a40891e678c"
+    },
+    {
+      "path": "tests/math-full-01/browser.mjs",
+      "gitBlob": "a95697b0be632fc26e0411c94516fbe6cd864ba1"
+    },
+    {
+      "path": "tests/math-full-01/contract.test.ts",
+      "gitBlob": "117417d4c2a6a553d108e0b92ed637133a233ec8"
+    },
+    {
+      "path": "tests/math-full-01/exercise.mjs",
+      "gitBlob": "07a11ca6cb800d3abc2b989161ac813acc4bc3a0"
+    },
+    {
+      "path": "tests/math-full-01/http.test.ts",
+      "gitBlob": "75064d31f0f6f961b2a21ea46be11adde24f4b20"
+    },
+    {
+      "path": "tests/math-full-01/mac.test.mjs",
+      "gitBlob": "203dc8f79c8c36ba22f517d6f586f85d0fa75760"
+    },
+    {
+      "path": "tests/math-full-01/map.test.ts",
+      "gitBlob": "9b252fbf403d6a2907fe2bdba9a5591cd5bc703f"
+    },
+    {
+      "path": "tests/math-full-01/models.test.mjs",
+      "gitBlob": "dc142a8cedf0fffc1c12aa40dbc448c47e251518"
+    },
+    {
+      "path": "tests/math-full-01/navigation.mjs",
+      "gitBlob": "61e3527368b69f54a689ebe1a4ce4ebf3cea214c"
+    },
+    {
+      "path": "tests/math-full-02/browser.mjs",
+      "gitBlob": "4cf337dc7825544e7d5d741288b71f1000f93179"
+    },
+    {
+      "path": "tests/math-full-02/helpers.mjs",
+      "gitBlob": "799222ac26767c66d81678958259a6055e4881ec"
+    },
+    {
+      "path": "tests/math-full-02/practice.test.mjs",
+      "gitBlob": "289b4b20e1661f5ecd94d27389e4cb92ac0453c2"
+    },
+    {
+      "path": "tests/math-full-remainder/browser.mjs",
+      "gitBlob": "651896fcbead0f5da2141101a020f04cface069b"
+    },
+    {
+      "path": "tests/math-full-remainder/helpers.mjs",
+      "gitBlob": "dcced5323f8058e581fe3f8e813ab8ff3ca22805"
+    },
+    {
+      "path": "tests/math-full-remainder/library.test.mjs",
+      "gitBlob": "dd10d78f2b7fc11fffb064247d7d154ba4c9ab12"
+    },
+    {
+      "path": "tests/math-onepass/baseline.mjs",
+      "gitBlob": "148c385edd80cb32b944b021b3da7d54ffef1dca"
+    },
+    {
+      "path": "tests/math-onepass/business-http.mjs",
+      "gitBlob": "6604f5c8f382a2ad8bbc726e29962a997f910aa6"
+    },
+    {
+      "path": "tests/math-onepass/cases-browser.mjs",
+      "gitBlob": "9e344d1187e816d7a3188d5807cb15e19051837a"
+    },
+    {
+      "path": "tests/math-onepass/cases.test.mjs",
+      "gitBlob": "d18f66d060907bec6a436dc0c565138770dea0cb"
+    },
+    {
+      "path": "tests/math-onepass/coding-browser.mjs",
+      "gitBlob": "002c5296ee3b210b6e77f974ea04f543978540c9"
+    },
+    {
+      "path": "tests/math-onepass/coding.test.mjs",
+      "gitBlob": "35fb523f6fc6d4a78acb6702e38b627ee2e5305a"
+    },
+    {
+      "path": "tests/math-onepass/commands.test.ts",
+      "gitBlob": "dff3ae05a353fed34a5b200951e865aaf21723d4"
+    },
+    {
+      "path": "tests/math-onepass/experience-browser.mjs",
+      "gitBlob": "806c6757609a7e0bce1ea4bc92c257a9135e163e"
+    },
+    {
+      "path": "tests/math-onepass/http-browser.mjs",
+      "gitBlob": "1a146a4348efbe90258d0bedf80c8dc31da70c76"
+    },
+    {
+      "path": "tests/math-onepass/inputs.mjs",
+      "gitBlob": "ff11feb1e2140b4d8d1d614207507b5f43ea75d2"
+    },
+    {
+      "path": "tests/math-onepass/legacy-browser.mjs",
+      "gitBlob": "5e92cb047fcbeb43098d47fa907395d75843fa95"
+    },
+    {
+      "path": "tests/math-onepass/models.test.ts",
+      "gitBlob": "cf9842498dc09971f0303c0b295498d2bc58de07"
+    },
+    {
+      "path": "tests/math-onepass/print-browser.mjs",
+      "gitBlob": "911d7433311c80365e6aa51f57a3e40bd22e4ec3"
+    },
+    {
+      "path": "tests/math-onepass/study-http.test.ts",
+      "gitBlob": "ef0d0596c09953a0602987a0c46b77a09cba27f7"
+    },
+    {
+      "path": "tests/math-onepass/study-process-child.mjs",
+      "gitBlob": "7e28cce02058761f601f492efb5e9629b74f4095"
+    },
+    {
+      "path": "tests/math-onepass/study-process.test.ts",
+      "gitBlob": "042359520a8c42859afb2ca422920293ea82d0cb"
+    },
+    {
+      "path": "tests/math-onepass/study.test.mjs",
+      "gitBlob": "f22c04fafe72f9c95aadd72e78a0e13faf5c8158"
+    },
+    {
+      "path": "tests/math-onepass/training-browser.mjs",
+      "gitBlob": "fbe52dde5a954516629c88a5922c9d00fcfc4bdc"
+    },
+    {
+      "path": "tests/math-onepass/training-http.test.ts",
+      "gitBlob": "48c163b2bdfb62d4a79b5ddde36dc3fb613932c5"
+    },
+    {
+      "path": "tests/math-onepass/training.test.ts",
+      "gitBlob": "672cf287fc81c76e26e05c41276060d26c184fe7"
+    },
+    {
+      "path": "tests/math-preview/container.mjs",
+      "gitBlob": "11fb2da8beef07e890fdc3fb132da0630df8f84f"
+    },
+    {
+      "path": "tests/math-preview/http.test.mjs",
+      "gitBlob": "23a836e6344b0068d80738ddcedc4fc836964e3e"
+    },
+    {
+      "path": "tests/math-preview/test_controller.py",
+      "gitBlob": "ba77b06b1d26936c47b52047a42610cb568cf489"
+    },
+    {
+      "path": "tests/math-preview/test_release.py",
+      "gitBlob": "0470e6b53ec56f28aec23d60d077a4dce720881e"
+    },
+    {
+      "path": "tests/math-trial/archive.mjs",
+      "gitBlob": "4585d8e9fa471d9b17e51dbb02d1da55ebd8779a"
+    },
+    {
+      "path": "tests/math-trial/auth-budget.test.mjs",
+      "gitBlob": "f88c6895e6f8149abeb9dc4e18fc6f020fcb25dc"
+    },
+    {
+      "path": "tests/math-trial/browser.mjs",
+      "gitBlob": "ca971dd54ba5f94a0d0fa9408c84b2b076554767"
+    },
+    {
+      "path": "tests/math-trial/interactive.mjs",
+      "gitBlob": "b89204e7471550470b2a02fa6de13d9905a05a11"
+    },
+    {
+      "path": "tests/math-trial/mac-delivery.test.mjs",
+      "gitBlob": "7175bf9a7ed074bdccc4d5b72c6b27710ba7d76e"
+    },
+    {
+      "path": "tests/math-trial/nas-evidence.mjs",
+      "gitBlob": "fc0918499189120233d8f1e48b7f51228e1ee8c7"
+    },
+    {
+      "path": "tests/math-trial/old-invariance.mjs",
+      "gitBlob": "148ea3e3fc70f116074b215e08f9b12f9713e104"
+    },
+    {
+      "path": "tests/math-trial/proxy.test.mjs",
+      "gitBlob": "98c32f5f1a1f3fbd742a1675cbd10e1d44c55551"
+    },
+    {
+      "path": "tests/math-trial/test_controller.py",
+      "gitBlob": "dcb39a581b98773540ad4ecb1ba47ca3c475ba6f"
+    },
+    {
+      "path": "tests/math-trial/trust.test.mjs",
+      "gitBlob": "b2cb3d561a69e3ca291b3708022e414939b30961"
+    },
+    {
+      "path": "tests/math01/browser.ts",
+      "gitBlob": "c6fe085217f18f26eb2a13785ad800a3835f36f0"
+    },
+    {
+      "path": "tests/math01/contract.test.ts",
+      "gitBlob": "161ff33541d5dd736534ee58dcb854ec3f154b4c"
+    },
+    {
+      "path": "tests/math01/geometry-golden.json",
+      "gitBlob": "04bf305dd7e0a62e0aa6ad1e99790813104647cf"
+    },
+    {
+      "path": "tests/math01/helpers.ts",
+      "gitBlob": "6cba1705b76bac4dd54f8d7cb9f1d82e1b8a2dd3"
+    },
+    {
+      "path": "tests/math01/http.test.ts",
+      "gitBlob": "39cc6bf470d0fcdd0261d6c68b0e03766fc872ec"
+    },
+    {
+      "path": "tests/math01/svg.test.ts",
+      "gitBlob": "7faa8dc03c88dad046eb22d6a2b8aff82de991f4"
+    },
+    {
+      "path": "tests/nas-gate/Dockerfile.harness",
+      "gitBlob": "2aaa3ff8d36eb7b0c2a0dc1da59c7faa81b62fcc"
+    },
+    {
+      "path": "tests/nas-gate/check-probes.py",
+      "gitBlob": "2252b749d3c400adf364db62228ea855b00843f5"
+    },
+    {
+      "path": "tests/nas-gate/controller.py",
+      "gitBlob": "bc0375eeb4999a185026485a9be04494dc99ed08"
+    },
+    {
+      "path": "tests/nas-gate/run-plan.json",
+      "gitBlob": "5bd734f84fbacd4678697f70b5969c77467c5ae8"
+    },
+    {
+      "path": "tests/provenance/README.md",
+      "gitBlob": "e74150b302fbb2ce18ee5ee00405ce42a651050e"
+    },
+    {
+      "path": "tests/provenance/fixture-lock.json",
+      "gitBlob": "06c5ff227117da229903a37a16a5ae40051d6de5"
+    },
+    {
+      "path": "tests/provenance/fixture-v1.json",
+      "gitBlob": "f4d9d32c17a8df525431f3aeb779f96261f1e2a1"
+    },
+    {
+      "path": "tests/provenance/source-lock.json",
+      "gitBlob": "c17a4581ff5a32db2f5719c6c1919a241e913beb"
+    },
+    {
+      "path": "tests/records/audio.test.ts",
+      "gitBlob": "3f201205cd4fcefbccced63f10363efc8a81368e"
+    },
+    {
+      "path": "tests/records/browser.mjs",
+      "gitBlob": "e2d04482d91ed07550a1ab9670596e22bf9bf9c6"
+    },
+    {
+      "path": "tests/records/crash-child.ts",
+      "gitBlob": "d781e73947abbadd5a91e8770aeb93f92fe9c5f0"
+    },
+    {
+      "path": "tests/records/crash.test.ts",
+      "gitBlob": "abfc4d6ce5f8a90dc5a801d729223a056fcdcdbb"
+    },
+    {
+      "path": "tests/records/helpers.ts",
+      "gitBlob": "1000e7706731e7cd76c9b37e581f7ed6a6b973de"
+    },
+    {
+      "path": "tests/records/http.test.ts",
+      "gitBlob": "75b2655151a582eaf952d874aff874a3fc6e5daa"
+    },
+    {
+      "path": "tests/records/math.test.ts",
+      "gitBlob": "fa0f7989293756ffd30c7e7182c3cd397e118342"
+    },
+    {
+      "path": "tests/records/migration.test.ts",
+      "gitBlob": "35229e81040be5004e0c47ab2de8ffc833fb65a3"
+    },
+    {
+      "path": "tests/records/private.test.ts",
+      "gitBlob": "dfa7b63503ebf5175d7be003f3de992c736b3642"
+    },
+    {
+      "path": "tests/records/unified.test.ts",
+      "gitBlob": "38ed38fc41a5654f9b09838085f02b245c4f5bf2"
+    },
+    {
+      "path": "tests/shell/browser.ts",
+      "gitBlob": "ee31e5f96b6f58330833cb2d600e58589f408a12"
+    },
+    {
+      "path": "tests/shell/contracts.test.ts",
+      "gitBlob": "e13e794268fc1318fd36a3eefcbb00dd94c3174c"
+    },
+    {
+      "path": "tests/shell/ui-fixture.ts",
+      "gitBlob": "48bf11334af21215432eaa8f0ac0dd2f9eb56828"
+    },
+    {
+      "path": "tests/trial/browser.mjs",
+      "gitBlob": "ed55d58af859924ab3064df24cde15a9eccef1c7"
+    },
+    {
+      "path": "tests/trial/proxy.test.mjs",
+      "gitBlob": "ae9a577206641441f0b6255107dc4a6e4a0b0d9d"
+    },
+    {
+      "path": "tsconfig.json",
+      "gitBlob": "f23f80678340badd83073553701371344122ab00"
+    }
+  ]
+}

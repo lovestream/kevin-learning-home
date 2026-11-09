@@ -38,7 +38,7 @@ export const mediaReferenceSchema = z.strictObject({
     .int()
     .positive()
     .max(10 * 1024 * 1024),
-  mime: z.enum(["image/png", "image/jpeg", "audio/webm", "audio/mp4"]),
+  mime: z.enum(["image/png", "image/jpeg", "audio/webm", "audio/mp4", "audio/wav"]),
   assistance: assistanceSchema,
 });
 export const eventSchema = z.strictObject({
