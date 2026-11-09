@@ -1,0 +1,102 @@
+
+> kevin-learning-home@0.1.0 test
+> node --test --test-concurrency=1 tests/foundation/*.test.ts tests/auth/*.test.ts tests/shell/*.test.ts
+
+✔ A03 bootstrap rejects pipes, HTTP-first-admin shortcuts, credential arguments and implicit synthetic mode (190.632709ms)
+✔ A03 real PTY bootstrap is synthetic, non-echoing and stores only salted versioned slow hashes (251.470625ms)
+✔ A03 interrupted interactive bootstrap leaves zero accounts and releases writer ownership (108.671792ms)
+✔ A08 credential salts differ, valid/invalid checks use same scheme and unsupported schemes fail closed (441.879084ms)
+✔ A04/A07 real TLS login sets host-only Secure HttpOnly Strict cookie; no credential or bearer is stored in plaintext (443.165833ms)
+✔ A05/A06 actual HTTP child scope, parent second unlock, grant checks and forged proxy/role headers (679.606916ms)
+✔ A04/A06 restart, idle and absolute expiry, rotation, lock timeout and cross-device logout remain server authoritative (795.881084ms)
+✔ A07 login CSRF, synchronized token, Host/Origin, fixation, duplicate cookies and unsupported APIs fail closed (458.873208ms)
+✔ A08 persistent uniform login limits survive restart and ignore forged client-address headers (1451.18775ms)
+✔ A04/A06 credential reset and authority rotation invalidate all old sessions and elevation (894.559667ms)
+✔ A07 production cannot select insecure loopback, arbitrary origin or weakened cookie mode (0.250292ms)
+✔ A03 unauthenticated first visitor cannot bootstrap or register a parent over HTTP (125.434792ms)
+✔ A10 readiness includes bounded auth-control primary-key probe and detects missing runtime authority (232.432542ms)
+✔ A08 unsupported stored credential format fails with the same public login error as an unknown actor (453.046084ms)
+✔ A04 aged sessions rotate and revoke atomically without nesting the idle-touch transaction (342.315375ms)
+✔ R1-01 real HTTP hides locked parent scope through login, lock, rotation, expiry and restart while child scope remains intact (795.890083ms)
+✔ A01 actual frozen-main v1 database upgrades losslessly through checkpoint; repeat is idempotent and old image rejects v2 (107.392208ms)
+✔ A02 injected failure after v2 SQL rolls back schema/data atomically and leaves verified v1 checkpoint (69.27925ms)
+✔ A02 SIGKILL mid-migration leaves v1 usable by actual frozen runtime, then clean retry succeeds (174.156375ms)
+✔ A09 v2 backup preserves actors/grants/credential versions, events and media; restored sessions always revoked (881.252958ms)
+✔ A04/A10 actual authenticated HTTP survives child SIGKILL; logged-out session remains revoked after second restart (500.403416ms)
+✔ A08 KDF work admission is bounded and never replaces persistent auth state (113.218625ms)
+✔ A07 real production entry rejects HTTP development mode on a container network bind (98.441ms)
+✔ A08 credential database directory must be private without automatic permission changes (13.88475ms)
+✖ R1-02 main push and development push/PR share the unconditional complete verification job (1.1395ms)
+✔ F11 native HTTP rejects forged Host, cross-origin commands and cross-learner access (31.559709ms)
+✔ F03 empty schema migration, WAL/FULL/FK/busy_timeout, repeat opening is idempotent (16.485583ms)
+✔ F03 rejects future and legacy nonempty schemas without clearing records (13.782709ms)
+✔ F03 rejects incompatible extra columns and changed migration checksum (15.597583ms)
+✔ single writer process lock rejects a second app or maintenance operation (12.981542ms)
+✔ F04 100 simultaneous real HTTP duplicates create one event and receipt (49.374917ms)
+✔ F04 same command key changed payload returns 409 without any table changes (20.080292ms)
+✔ F04 replay returns original result and committed revision with current revision after later writes (15.58625ms)
+✔ F05 two independent test sessions compete on revision; exactly one commits (14.638875ms)
+✔ F05 a real SQL constraint failure at transaction tail rolls all tables back (15.547542ms)
+✔ F11 runtime schemas reject client scores, unknown fields, versions, and wrong keys (15.102041ms)
+✔ F11 production rejects all learning/auth/parent/media write paths and spoofed identity (15.716958ms)
+✔ F11 test context cannot be enabled in production library configuration (13.7715ms)
+✔ immutable events and receipts, bounded projection, no wallet table (14.414833ms)
+✔ R1 readiness performs bounded SQL at 100000 events; liveness does zero SQL; deep check remains offline (379.524583ms)
+✔ R1 real external SQLite writer makes readiness 503 within bounded busy wait; release restores 200 (153.372584ms)
+✔ R1 readiness rejects inaccessible/replaced DB, incompatible runtime version and closed connection (21.066125ms)
+✔ F09 checkpoints reject manifest identity drift and missing relational content references (17.080792ms)
+✔ F08 offline checkpoint restores DB, media, content, revisions, event and receipt hashes into empty host layout (54.528042ms)
+✔ F08 corrupted media/database checkpoints fail without publishing or overwriting targets (33.744459ms)
+✔ F08 checkpoint failure never replaces previous good backup; symlink/path injections rejected (36.184ms)
+✔ F09 manifest identity/version/hash, private denied, immutable local provider root switch (14.659916ms)
+✔ F09 traversal, absolute paths, symlink file/parent/root, missing objects are rejected (12.845458ms)
+✔ F06 real Node process stop/restart preserves state and original receipt (195.268666ms)
+✔ R1 writer SIGTERM releases kernel ownership and replays exact committed evidence in new process (145.777459ms)
+✔ R1 writer SIGKILL releases kernel ownership and replays exact committed evidence in new process (143.663625ms)
+✔ R1 simultaneous independent process starts have exactly one owner; contenders cannot evict it (280.648292ms)
+✔ R1 independent backup CLI is excluded by live owner and succeeds after SIGKILL (309.093084ms)
+✔ R1 v1 marker requires explicit offline migration and cannot override live v2 flock (148.652334ms)
+✔ R1 malformed legacy markers and symlink lock paths fail closed without deleting them (13.069625ms)
+✔ B09 browser catalog isolates malformed/missing modules and accepts a future disabled subject without auth or wallet changes (1.627209ms)
+✔ B03/B04 client DTO validation fails closed on contradictory role/grant metadata and cross-learner responses (0.732708ms)
+✔ B07 public errors distinguish HTTP outcomes without echoing server details or credentials (0.1135ms)
+✔ B10 explicit SPA routes never overlap API, health, assets or traversal paths (0.076084ms)
+✔ B10 real static deep links preserve CSP, APIs, missing assets and the offline no-learning-write boundary (36.229ms)
+ℹ tests 60
+ℹ suites 0
+ℹ pass 59
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12798.181542
+
+✖ failing tests:
+
+test at tests/auth/workflow.test.ts:5:1
+✖ R1-02 main push and development push/PR share the unconditional complete verification job (1.1395ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'codex/02b-nas-trial',
+      'codex/explore-01-preview',
+  +   'codex/explore-02-records',
+      'codex/home-navigation',
+      'codex/implement-01-foundation',
+      'codex/implement-02a-auth',
+      'codex/implement-02b-shell',
+      'codex/math-00-source-audit',
+  
+      at TestContext.<anonymous> (file:///Users/yako/Downloads/codex/kevin-learning-home-math-trial/tests/auth/workflow.test.ts:19:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'codex/02b-nas-trial', 'codex/explore-01-preview', 'codex/explore-02-records', 'codex/home-navigation', 'codex/implement-01-foundation', 'codex/implement-02a-auth', 'codex/implement-02b-shell', 'codex/math-00-source-audit', 'codex/math-01-nas-trial', 'codex/math-01-readonly-lesson', 'codex/math-full-01-70-lessons', 'codex/math-full-02-practice', 'codex/math-full-03-capabilities', 'main' ],
+    expected: [ 'codex/02b-nas-trial', 'codex/explore-01-preview', 'codex/home-navigation', 'codex/implement-01-foundation', 'codex/implement-02a-auth', 'codex/implement-02b-shell', 'codex/math-00-source-audit', 'codex/math-01-nas-trial', 'codex/math-01-readonly-lesson', 'codex/math-full-01-70-lessons', 'codex/math-full-02-practice', 'codex/math-full-03-capabilities', 'main' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,63 @@
+{
+  "sourceSha": "4dcfadedc4292fa2b4dfef0369d3858fece79db4",
+  "status": "PASS_FIVE_WIDTHS_PRIVATE_SYNTHETIC",
+  "rows": [
+    {
+      "width": 360,
+      "status": "PASS",
+      "projectId": "372fc5dd-112a-45b5-9422-6e72517bc52b",
+      "childPasswordRequired": false,
+      "firstThoughtAfterReload": true,
+      "twoAuthorizedBrowsers": true,
+      "parentFocusOverTwoRechecks": true,
+      "revocationMasked": true,
+      "externalRequests": 0
+    },
+    {
+      "width": 390,
+      "status": "PASS",
+      "projectId": "3d748c54-491a-4dfd-847c-d76b8ed566e0",
+      "childPasswordRequired": false,
+      "firstThoughtAfterReload": true,
+      "twoAuthorizedBrowsers": true,
+      "parentFocusOverTwoRechecks": true,
+      "revocationMasked": true,
+      "externalRequests": 0
+    },
+    {
+      "width": 768,
+      "status": "PASS",
+      "projectId": "362d1261-9ed8-4acf-9e0c-fc4a0eac38a1",
+      "childPasswordRequired": false,
+      "firstThoughtAfterReload": true,
+      "twoAuthorizedBrowsers": true,
+      "parentFocusOverTwoRechecks": true,
+      "revocationMasked": true,
+      "externalRequests": 0
+    },
+    {
+      "width": 1280,
+      "status": "PASS",
+      "projectId": "5d37ed43-8128-4d2f-9d9b-7e4ab7168530",
+      "childPasswordRequired": false,
+      "firstThoughtAfterReload": true,
+      "twoAuthorizedBrowsers": true,
+      "parentFocusOverTwoRechecks": true,
+      "revocationMasked": true,
+      "externalRequests": 0
+    },
+    {
+      "width": 1440,
+      "status": "PASS",
+      "projectId": "18022ca9-e674-4ac1-bea1-b64dee6e947f",
+      "childPasswordRequired": false,
+      "firstThoughtAfterReload": true,
+      "twoAuthorizedBrowsers": true,
+      "parentFocusOverTwoRechecks": true,
+      "revocationMasked": true,
+      "externalRequests": 0
+    }
+  ],
+  "realData": false,
+  "physicalDevices": "NOT_RUN"
+}

@@ -1,0 +1,148 @@
+{
+  "sourceSha": "4dcfadedc4292fa2b4dfef0369d3858fece79db4",
+  "scope": "synthetic records and English source audit; no NAS deployment or real learning data",
+  "platformTests": 107,
+  "recordTests": 27,
+  "englishAuditTests": 4,
+  "browserWidths": [
+    360,
+    390,
+    768,
+    1280,
+    1440
+  ],
+  "realData": false,
+  "physicalDevices": "NOT_RUN",
+  "files": [
+    {
+      "path": "browser.log",
+      "bytes": 191,
+      "sha256": "29e2cc883af7c6dc3d546ab7e060d91af5c34cf4623b04b5f81b45a5dc4596e9"
+    },
+    {
+      "path": "build-family.log",
+      "bytes": 581,
+      "sha256": "6414aec1ef76c9f38d1c9d616a6296b47f0d6c29797db93e08f65f196faba562"
+    },
+    {
+      "path": "build-preview.log",
+      "bytes": 2391,
+      "sha256": "c0aed3c327a03e6790d09aa43a6cf16a7908e820e1a8d3a1b4f87a1ed424f2a4"
+    },
+    {
+      "path": "english-audit.log",
+      "bytes": 786,
+      "sha256": "dfebbe5c79e53aa493d034de9ebdfb670c8e12770b05a2cfa4bfed3b679cf04a"
+    },
+    {
+      "path": "parent-1280.png",
+      "bytes": 584091,
+      "sha256": "1c9159d2c67ddd95ebe0a18fb475e7ad3a75f7be210b9aaa171f67bc3ddb10ca"
+    },
+    {
+      "path": "parent-1440.png",
+      "bytes": 685460,
+      "sha256": "6ad1228ca053e68216e76363fda85e79d6186f9a2f3b6f4061cae0c9fd0b02aa"
+    },
+    {
+      "path": "parent-360.png",
+      "bytes": 239535,
+      "sha256": "48fc7e15205df936df360d4f781ef536c3aa0e6067a2eb3d6716bc86334df3ad"
+    },
+    {
+      "path": "parent-390.png",
+      "bytes": 322094,
+      "sha256": "ec02b9f0e8979e0df92e8a5efa128881701adb7b5e83438078a9abb34457019d"
+    },
+    {
+      "path": "parent-768.png",
+      "bytes": 420379,
+      "sha256": "e08071d81d53e0fdad03b9acc8f3cd34c1b32d8b53041291a698d734857baa3c"
+    },
+    {
+      "path": "platform.log",
+      "bytes": 11533,
+      "sha256": "b504c60cac926eb5dadb42d75a3de1ff24899b5db38992932b5e0fd81a40f5ed"
+    },
+    {
+      "path": "project-1280.png",
+      "bytes": 292052,
+      "sha256": "49842197567343ad3ec1a4c064984f7aa8fdd14a18b9a9c9db33a3f07eb71250"
+    },
+    {
+      "path": "project-1440.png",
+      "bytes": 296720,
+      "sha256": "1e5da352f17dee0ee2cf5e1c54d6adcd32a4c845a2d4d4641eaf9f39dde9ffc8"
+    },
+    {
+      "path": "project-360.png",
+      "bytes": 225545,
+      "sha256": "7b4fa7b65bc8cf1b341c3ca5a939e60d7b6538558b452fecd4279f4955cffa1b"
+    },
+    {
+      "path": "project-390.png",
+      "bytes": 223582,
+      "sha256": "5504f7b58eacea0d4bedbfbd9671faa4ee7b0a6d3b032d8fa8b89a1dcef53086"
+    },
+    {
+      "path": "project-768.png",
+      "bytes": 230566,
+      "sha256": "41de6bd0300e7bdc1a91d1adebd18abb889e21685a6918f18aa32200b206c056"
+    },
+    {
+      "path": "records-1280.png",
+      "bytes": 75753,
+      "sha256": "6d3f9b91b575bd7773dfc27d5a3ee9640b8047347278b6b661f5f19d595376b6"
+    },
+    {
+      "path": "records-1440.png",
+      "bytes": 76007,
+      "sha256": "fb1be747582df9bab6c79add07fda5df010bc2b58315d88c1b55d9bed1f914f1"
+    },
+    {
+      "path": "records-360.png",
+      "bytes": 72336,
+      "sha256": "3633ebbf092d5ee8ed3dc252a1edba77afe5fcf2e620fe69dcef53edf0c8e4fb"
+    },
+    {
+      "path": "records-390.png",
+      "bytes": 73693,
+      "sha256": "b18da96a2b7d90983f089428994102b8aa8375af4cdf0fd7c522f063eb810560"
+    },
+    {
+      "path": "records-768.png",
+      "bytes": 74094,
+      "sha256": "dd9c6502c78d8df06d7eb9a11b35b1cb5c0b1b5a78180570e1245fc431e2e7d7"
+    },
+    {
+      "path": "records.log",
+      "bytes": 3185,
+      "sha256": "3d7f766103828f7810b2db1612dd7043784fd5e97ea384908a59da2db3a5b4b5"
+    },
+    {
+      "path": "result.json",
+      "bytes": 1843,
+      "sha256": "40fe20c773b89d16a7dc164aefec59eadef6bff6e88884d853a14213f8e7d945"
+    },
+    {
+      "path": "source-inputs.json",
+      "bytes": 63861,
+      "sha256": "0a4414e887ab314c8080221009798d43b9be6140369af8e62d3ad0c6dd35aaf9"
+    },
+    {
+      "path": "source-inventory.log",
+      "bytes": 591,
+      "sha256": "c69c2a4f2ef607a8c5f8793921c550860983171e122d68b88130ff03a42aa5d1"
+    },
+    {
+      "path": "superseded-workflow-failure.log",
+      "bytes": 8713,
+      "sha256": "50784ab222acb797ab00c1ed3db85c1c7522f3a7e8d30baaf9e408b901e6fdd5"
+    },
+    {
+      "path": "typecheck.log",
+      "bytes": 55,
+      "sha256": "0b10c5f62d019ba52f6fde1ff2e2170273dfa68a0a2d8dad1ca145be9a6c811e"
+    }
+  ]
+}

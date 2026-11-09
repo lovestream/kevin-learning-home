@@ -1,0 +1,5 @@
+
+> kevin-learning-home@0.1.0 test:records:browser
+> node tests/records/browser.mjs
+
+PASS: five widths, actual SQLite persistence, media, two devices, >10s parent focus and revocation masking

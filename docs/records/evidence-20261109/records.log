@@ -1,0 +1,39 @@
+
+> kevin-learning-home@0.1.0 test:records
+> node --test --test-concurrency=1 tests/records/*.test.ts
+
+✔ synthetic audio is decoded to bounded metadata-free PCM, no local/network decoder protocols (324.495083ms)
+✔ SIGKILL before/after commit releases kernel flock; only committed facts survive (371.307792ms)
+✔ real HTTP family/device authorization, CSRF, parent role, no anonymous writes and no identity self-report (299.501917ms)
+✔ no private production startup without explicit reviewed transport/deployment (0.1885ms)
+✔ lossless updates retain unknown numeric lexemes, nulls, escapes and nested extensions (0.583208ms)
+✔ production math adapter reuses original first/self/final grading, snapshots and no rewards (237.307125ms)
+✔ lexical migration inventory assigns every leaf including empty structures, duplicates and large numbers (0.614ms)
+✔ SQLite Backup API captures synthetic WAL without starting or normalizing old source (3.706833ms)
+✔ synthetic English V1/V2 portable/raw formats preserve orphan fields and do not normalize/reaward (0.31175ms)
+✔ review projection retains namespaces, raw timezone/epoch and cannot invent mastery or reward (231.283208ms)
+✔ private schema is independent, strict WAL/FULL, bounded readiness and exclusive flock (229.554083ms)
+✔ child has no credential; only one parent login, no second PIN; device persists over restart (231.57175ms)
+✔ strict source JSON snapshots retain unknowns, order, null, timezone and unsafe integer bytes (225.517583ms)
+✔ subject CAS/idempotency, English V1/V2 opaque state and math never share a wallet (233.146458ms)
+✔ project creation receipt survives lost response; immutable first thought, revisions, parent provenance (226.645875ms)
+✔ transaction failure never leaves a project or receipt/fact half-written (225.19375ms)
+✔ cross-household ids, guessed media and stale/revoked/forged principals cannot read (438.9975ms)
+✔ child deletion hides project/media; only parent can restore with CAS and history preserved (223.655917ms)
+✔ encrypted consistent backup restores projects/snapshots/media and revokes every old session (707.82975ms)
+✔ image decoder strips metadata, creates matching thumbnail, binds scope and rejects active formats (266.039416ms)
+✔ password reset invalidates child and parent; production HTTPS policy stays intact (438.245708ms)
+✔ review lookup covers every math namespace and English raw/portable state without inventing schedules (1.17075ms)
+✔ English imports reject future/incomplete formats before writes and retain every V1/V2 source byte (229.099709ms)
+✔ unified parent projection has scoped factual counts, no fabricated mastery, answers or wallet (227.492917ms)
+✔ rebuild replaces stale dates atomically; duplicate sources stay archived without misleading counts (223.007583ms)
+✔ old derived indexes rebuild on upgrade without changing source revision, history or wallet (223.580417ms)
+✔ identical request UUIDs in different learners stay independent; same-learner cross-subject replay is rejected (329.636333ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6846.91175
