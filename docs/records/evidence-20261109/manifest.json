@@ -35,6 +35,51 @@
       "sha256": "dfebbe5c79e53aa493d034de9ebdfb670c8e12770b05a2cfa4bfed3b679cf04a"
     },
     {
+      "path": "english-origin-app.log",
+      "bytes": 26,
+      "sha256": "1916b4da45b4f2fe0fd193dd1e93ded312738d4ad9a4f3010f4ae532eab5adb5"
+    },
+    {
+      "path": "english-origin-banks.log",
+      "bytes": 25,
+      "sha256": "8e206176c0d1c68073fb45747e6e95da51b9a86a609deaf152282a2b23f85e04"
+    },
+    {
+      "path": "english-origin-browser.log",
+      "bytes": 4373,
+      "sha256": "d4936aee02b477f79e8746bdcda6e845cf073aeefbba0048f7e78f450af9d59b"
+    },
+    {
+      "path": "english-origin-records.log",
+      "bytes": 26,
+      "sha256": "a28eac338a90b5d80c5be245535aa2ce6d86c64822f68c6db462ea021b92e036"
+    },
+    {
+      "path": "english-origin-sprint.log",
+      "bytes": 28,
+      "sha256": "78d98a2a480a2101e85350b9375259b631aa00d546b2ed7f762326b5b13cb673"
+    },
+    {
+      "path": "library-browser.log",
+      "bytes": 107,
+      "sha256": "91b32eeab19fa9d6bb20532162736ba3c7fecf4a890c99ab904d2ef502d3df4d"
+    },
+    {
+      "path": "math-final.log",
+      "bytes": 1703,
+      "sha256": "928ffac9f02083f49043e2f0a0ba80e27499cd781a745abfea839937177c72cb"
+    },
+    {
+      "path": "math-models.log",
+      "bytes": 2340,
+      "sha256": "48d04b3959b171fac419b9416199112ff6e0842ddaf862ba650f47f2ab1b1f81"
+    },
+    {
+      "path": "math-source-check.log",
+      "bytes": 203,
+      "sha256": "4d07b96d9ebed238f669fd6b0b138775a81463e9652fdebf6d11a9f00459e350"
+    },
+    {
       "path": "parent-1280.png",
       "bytes": 584091,
       "sha256": "1c9159d2c67ddd95ebe0a18fb475e7ad3a75f7be210b9aaa171f67bc3ddb10ca"
@@ -63,6 +108,11 @@
       "path": "platform.log",
       "bytes": 11533,
       "sha256": "b504c60cac926eb5dadb42d75a3de1ff24899b5db38992932b5e0fd81a40f5ed"
+    },
+    {
+      "path": "practice-browser.log",
+      "bytes": 105,
+      "sha256": "c94ea6127822f09b7649023bc7c66f1e594940a7bb739427e4422cfb0c1c2b28"
     },
     {
       "path": "project-1280.png",
@@ -135,6 +185,11 @@
       "sha256": "c69c2a4f2ef607a8c5f8793921c550860983171e122d68b88130ff03a42aa5d1"
     },
     {
+      "path": "superseded-ci-stale-evidence.log",
+      "bytes": 78214,
+      "sha256": "64aea79beac66fcc161bf187ebaa1b2a69611e3f65a0b0308e09296b2da0d4c7"
+    },
+    {
       "path": "superseded-workflow-failure.log",
       "bytes": 8713,
       "sha256": "50784ab222acb797ab00c1ed3db85c1c7522f3a7e8d30baaf9e408b901e6fdd5"
@@ -143,6 +198,38 @@
       "path": "typecheck.log",
       "bytes": 55,
       "sha256": "0b10c5f62d019ba52f6fde1ff2e2170273dfa68a0a2d8dad1ca145be9a6c811e"
+    }
+  ],
+  "mathBrowserSourceSha": "9ed8910424f3e821f23e63b900dbe8329b146a93",
+  "mathPracticeFlows": 84,
+  "mathLibraryFlows": 255,
+  "originalEnglishSourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "originalEnglishSuites": 4,
+  "originalEnglishBrowserTests": 4,
+  "relatedEvidence": [
+    {
+      "path": "docs/implementation/evidence/math-full-02/tasks-coverage.json",
+      "sha256": "13733ba2634f17b85cebcbae43f11572cc65c51abba7723b9665f6ae76eccf69"
+    },
+    {
+      "path": "docs/implementation/evidence/math-full-02/browser-local.json",
+      "sha256": "6ccb9ba2fd520fd8619a88057f62e9c843296cad17085cdcc37f7fd51aa2ac06"
+    },
+    {
+      "path": "docs/implementation/evidence/math-full-02/screenshots.json",
+      "sha256": "f23e4b425bbb86bc4f290ef2632f933e80f466d137b771176e02865ec8eb322e"
+    },
+    {
+      "path": "docs/implementation/evidence/math-full-remainder/capabilities.json",
+      "sha256": "9b7e7d0d7f74dc7bd865af2fdc5a691eadd9fcc281a194ce504168fdd9118255"
+    },
+    {
+      "path": "docs/implementation/evidence/math-full-remainder/browser-local.json",
+      "sha256": "81bb27bc985848404a671fc14e5ca9cf76bbb7bd3d34918ba6e7fa4f1297b37e"
+    },
+    {
+      "path": "docs/implementation/evidence/math-full-remainder/screenshots.json",
+      "sha256": "ebf7e71558f8ab00d490c386796fe43caf68438aec3a0e71ebf497aada3fa150"
     }
   ]
 }
