@@ -11,6 +11,8 @@ import { PrivateMedia } from "../../packages/records/media.ts";
 import { snapshotArchive } from "../../packages/records/checkpoint.ts";
 import { verifyPassword } from "../../packages/auth/password.ts";
 import { PrivateMath } from "../../packages/records/math.ts";
+import { recordsSummary } from "../../packages/records/summary.ts";
+import { rebuildAllReviewIndexes } from "../../packages/records/review.ts";
 import { startPreview } from "../preview/server.ts";
 
 const ROOT=new URL("../..",import.meta.url).pathname;
@@ -37,7 +39,7 @@ export async function startFamily(options:{root?:string;directory:string;synthet
   if(!config&&mode!=="loopback-development")throw new AppError("AUTH_ORIGIN_CONFIG",503);
   const root=options.root??ROOT,store=new RecordsDatabase(options.directory,options.synthetic),records=new PrivateRecords(store),media=new PrivateMedia(records),math=new PrivateMath(records);
   let preview:Awaited<ReturnType<typeof startPreview>>;
-  try {preview=await startPreview({root,enabled:true,port:0});}catch(e){store.close();throw e;}
+  try {rebuildAllReviewIndexes(store);preview=await startPreview({root,enabled:true,port:0});}catch(e){store.close();throw e;}
   const previewPort=(preview.address() as {port:number}).port;
   const server=http.createServer(async(req,res)=>{
     const cfg=config!;
@@ -88,6 +90,8 @@ export async function startFamily(options:{root?:string;directory:string;synthet
           const data=await snapshotArchive(store,c.password);records.access.authorize(p,String(records.access.learners(p)[0].id),"parent");
           res.writeHead(200,{"Content-Type":"application/octet-stream","Content-Disposition":"attachment; filename=\"learning-home.klhbackup\""});res.end(data);return;
         }
+        const summary=/^\/parent\/learners\/([a-f0-9-]{36})\/records$/.exec(api);
+        if(summary&&req.method==="GET"){send(200,recordsSummary(records,p,summary[1]));return;}
         const removed=/^\/parent\/learners\/([a-f0-9-]{36})\/deleted$/.exec(api);
         if(removed&&req.method==="GET"){records.access.authorize(p,removed[1],"parent");send(200,{projects:records.list(p,removed[1],true)});return;}
         const mathMatch=/^\/learners\/([a-f0-9-]{36})\/math\/(state|commands)$/.exec(api);

@@ -30,6 +30,13 @@ test("real HTTP family/device authorization, CSRF, parent role, no anonymous wri
     assert.equal((await call("/parent/learners/"+ids.learnerId+"/deleted","GET",undefined,childHeaders)).status,401);
     assert.equal((await call("/parent/backup","POST",{password:PASSWORD},childHeaders)).status,401);
     assert.equal((await call("/parent/learners/"+ids.learnerId+"/deleted","GET",undefined,parentHeaders)).status,200);
+    const summaryPath="/parent/learners/"+ids.learnerId+"/records";
+    assert.equal((await call(summaryPath)).status,401);
+    assert.equal((await call(summaryPath,"GET",undefined,childHeaders)).status,401);
+    assert.equal((await call(summaryPath,"GET",undefined,{...childHeaders,"x-klh-role":"parent"})).status,401);
+    const summary=await (await call(summaryPath,"GET",undefined,parentHeaders)).json() as {subjects:{available:boolean}[];exploration:{projects:number};coinsIssued:number};
+    assert.equal(summary.subjects.length,2);assert(summary.subjects.every(s=>!s.available));assert.equal(summary.exploration.projects,1);assert.equal(summary.coinsIssued,0);
+    assert.equal((await call("/parent/learners/"+randomUUID()+"/records","GET",undefined,parentHeaders)).status,404);
     assert.equal((await call(path+"?learnerId=other","GET",undefined,childHeaders)).status,400);
     const privatePage=await fetch(origin+"/explore");assert.equal(privatePage.status,200);assert(!privatePage.headers.get("content-security-policy")!.includes("unsafe-inline"));
     // Undici normalizes Host; use the wire-level client to exercise DNS rebinding.

@@ -5,6 +5,7 @@ import { createRequest,appendRequest,subjectWrite,lifecycleRequest,parsed,type P
 import { RecordsDatabase } from "./database.ts";
 import { FamilyAccess } from "./access.ts";
 import { rebuildReviewIndex } from "./review.ts";
+import { englishEnvelope } from "./migration.ts";
 
 export class PrivateRecords {
   readonly access:FamilyAccess;
@@ -96,6 +97,7 @@ export class PrivateRecords {
   importSnapshot(learner:string,subject:"math"|"english",bytes:Buffer,sourceVersion:string,format:string,expectedRevision:number,requestId:string) {
     if(bytes.length>16*1024*1024)throw new AppError("SNAPSHOT_TOO_LARGE",413);
     const payload=new TextDecoder("utf-8",{fatal:true}).decode(bytes);validateJSON(payload);
+    if(subject==="english")englishEnvelope(payload);
     const digest=sha256(bytes);
     return this.receipt(learner,requestId,{kind:"import",subject,digest,sourceVersion,format,expectedRevision},()=>{
       const current=this.store.db.prepare("SELECT revision FROM private_subject_state WHERE learner_id=? AND subject_id=?").get(learner,subject),revision=Number(current?.revision??0);

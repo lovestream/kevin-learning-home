@@ -54,14 +54,18 @@ export async function snapshotMathSource(source:string,destination:string) {
   }catch(e){rmSync(target,{recursive:true,force:true});throw e;}finally{db?.close();}
 }
 export function englishEnvelope(raw:string) {
-  const value=JSON.parse(raw);
+  let value;
+  try { value=JSON.parse(raw); } catch {throw new AppError("ENGLISH_SOURCE_INVALID",422);}
   if(!value||typeof value!=="object"||Array.isArray(value))throw new AppError("ENGLISH_SOURCE_INVALID",422);
   const portable=value.format==="kevin-word-quest-portable-record";
+  if(value.format!==undefined&&!portable)throw new AppError("ENGLISH_VERSION_UNSUPPORTED",422);
   if(portable&&(![1,2].includes(value.formatVersion)||!value.state||typeof value.state!=="object"||Array.isArray(value.state)))throw new AppError("ENGLISH_VERSION_UNSUPPORTED",422);
   // ADAPT: Word Quest app.js createPortableRecord/stateFromPortableRecord at d0b42a8.
   // Preserve the whole envelope, summary, orphanProgress and unknown fields. Do
   // not run mergeState or reaward historical xp/coins during an import.
   const state=portable?value.state:value;
-  if(state.schemaVersion!==undefined&&![1,2].includes(state.schemaVersion))throw new AppError("ENGLISH_VERSION_UNSUPPORTED",422);
+  if(![1,2].includes(state.schemaVersion))throw new AppError("ENGLISH_VERSION_UNSUPPORTED",422);
+  for(const key of ["settings","stats","progress"])
+    if(!state[key]||typeof state[key]!=="object"||Array.isArray(state[key]))throw new AppError("ENGLISH_SOURCE_INVALID",422);
   return {format:portable?"wordquest-portable-v"+value.formatVersion:"wordquest-state-v"+(state.schemaVersion??1),payload:raw,inventory:leafInventory(raw),sourceSha256:sha256(raw),walletReplayed:false};
 }

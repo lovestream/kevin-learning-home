@@ -16,6 +16,7 @@ on:
         codex/math-full-03-capabilities,
         codex/explore-01-preview,
         codex/home-navigation,
+        codex/explore-02-records,
       ]
   pull_request:
     branches:
@@ -25,6 +26,7 @@ on:
         codex/math-full-02-practice,
         codex/math-full-03-capabilities,
         codex/explore-01-preview,
+        codex/home-navigation,
       ]
 permissions:
   contents: read

@@ -3,14 +3,19 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import assert from "node:assert/strict";
+import { randomUUID } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { chromium,expect } from "@playwright/test";
 import sharp from "sharp";
 import { startFamily } from "../../apps/family/server.ts";
 process.env.NODE_ENV="test";
 const password="Synthetic browser parent phrase 2026!",root=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),"klh-family-browser-"))),out=".evidence/records/browser";
+const sourceSha=execFileSync("git",["rev-parse","HEAD"],{encoding:"utf8"}).trim();
+fs.rmSync(out,{recursive:true,force:true});
 fs.mkdirSync(out,{recursive:true});
 const app=await startFamily({directory:path.join(root,"records"),synthetic:true});
-await app.records.access.setup("synthetic-parent",password,"合成学习者");
+const family=await app.records.access.setup("synthetic-parent",password,"合成学习者");
+app.records.importSnapshot(family.learnerId,"english",Buffer.from(JSON.stringify({schemaVersion:1,settings:{bank:"ket"},stats:{learned:999,coins:23},progress:{"synthetic-word":{dueAt:1790000000000}},orphanProgress:{"unmatched":{dueAt:null}}})),"synthetic-english-v1","wordquest-state-v1",0,randomUUID());
 const browser=await chromium.launch(),rows=[],errors=[];
 const login=async page=>{
   await page.goto(app.origin+"/parent");await page.getByLabel("家长账号",{exact:true}).fill("synthetic-parent");await page.getByLabel("家长密码",{exact:true}).fill(password);await page.getByRole("button",{name:"家长登录",exact:true}).click();await expect(page.getByRole("heading",{name:"看看想法怎样慢慢长出来"})).toBeVisible();
@@ -36,7 +41,11 @@ try {
     assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);assert.equal(external.length,0);
     const projectId=new URL(url).searchParams.get("id");
     // Parent review polling must retain an active >10s comment and actual focus.
-    await login(page);const panel=page.locator(".parent-project").filter({has:page.getByRole("heading",{name:question,exact:true})});
+    await login(page);
+    const summary=page.getByRole("region",{name:"各科记录保全情况"});
+    await expect(summary).toContainText("词条记录 1 条");await expect(summary).toContainText("英语 V1 历史汇总");await expect(summary).not.toContainText("999");
+    await summary.screenshot({path:out+`/records-${width}.png`});
+    const panel=page.locator(".parent-project").filter({has:page.getByRole("heading",{name:question,exact:true})});
     const comment=panel.getByLabel("给孩子一个开放的问题",{exact:true});await comment.fill("合成家长建议：还可以怎样只改一个条件？");await comment.focus();
     await page.waitForTimeout(11000);await expect(comment).toHaveValue("合成家长建议：还可以怎样只改一个条件？");await expect(comment).toBeFocused();
     await panel.getByRole("button",{name:"留下家长建议"}).click();await expect(panel).toContainText("合成家长建议：还可以怎样只改一个条件？");
@@ -49,6 +58,6 @@ try {
     rows.push({width,status:"PASS",projectId,childPasswordRequired:false,firstThoughtAfterReload:true,twoAuthorizedBrowsers:true,parentFocusOverTwoRechecks:true,revocationMasked:true,externalRequests:0});
     await other.close();await context.close();
   }
-  assert.deepEqual(errors,[]);fs.writeFileSync(out+"/result.json",JSON.stringify({status:"PASS_FIVE_WIDTHS_PRIVATE_SYNTHETIC",rows,realData:false,physicalDevices:"NOT_RUN"},null,2)+"\n");console.log("PASS: five widths, actual SQLite persistence, media, two devices, >10s parent focus and revocation masking");
+  assert.deepEqual(errors,[]);fs.writeFileSync(out+"/result.json",JSON.stringify({sourceSha,status:"PASS_FIVE_WIDTHS_PRIVATE_SYNTHETIC",rows,realData:false,physicalDevices:"NOT_RUN"},null,2)+"\n");console.log("PASS: five widths, actual SQLite persistence, media, two devices, >10s parent focus and revocation masking");
 }catch(e){fs.writeFileSync(out+"/failure.txt",String(e));for(const [i,c]of browser.contexts().entries())for(const [j,p]of c.pages().entries()){await p.screenshot({path:out+`/failure-${i}-${j}.png`,fullPage:true}).catch(()=>{});fs.writeFileSync(out+`/failure-${i}-${j}.txt`,await p.locator("body").innerText());}throw e;}
 finally{await browser.close();await app.close();fs.rmSync(root,{recursive:true,force:true});}

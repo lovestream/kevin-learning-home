@@ -28,7 +28,7 @@ test("SQLite Backup API captures synthetic WAL without starting or normalizing o
 });
 test("synthetic English V1/V2 portable/raw formats preserve orphan fields and do not normalize/reaward",()=>{
   for(const version of [1,2]){
-    const state={schemaVersion:version,progress:{"old-word":{nextReviewAt:1790000000000,spelling:{first:"synthetic",selfChecks:[true,false,true]}}},orphanProgress:{unmatched:{first:null}},stats:{xp:10,coins:2},future:{order:[2,1]}};
+    const state={schemaVersion:version,settings:{bank:"ket"},progress:{"old-word":{nextReviewAt:1790000000000,spelling:{first:"synthetic",selfChecks:[true,false,true]}}},orphanProgress:{unmatched:{first:null}},stats:{xp:10,coins:2},future:{order:[2,1]}};
     for(const value of [state,{format:"kevin-word-quest-portable-record",formatVersion:version,exportedAt:"2026-11-01T00:00:00+08:00",summary:{xp:10},state}]){
       const raw=JSON.stringify(value),r=englishEnvelope(raw);assert.equal(r.payload,raw);assert.equal(r.walletReplayed,false);assert(r.inventory.some(x=>x.path.includes("orphanProgress")));
     }
