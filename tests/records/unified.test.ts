@@ -88,3 +88,18 @@ test("old derived indexes rebuild on upgrade without changing source revision, h
     assert.deepEqual(f.store.db.prepare("SELECT * FROM private_events").all(),facts);
   } finally {f.close();}
 });
+
+test("identical request UUIDs in different learners stay independent; same-learner cross-subject replay is rejected", async () => {
+  const f=await fixture();try {
+    const other=await f.records.access.syntheticHousehold("other-parent-scope","Synthetic other parent phrase 2026!");
+    const requestId=randomUUID(),raw=Buffer.from('{"schemaVersion":1,"studio":{},"wallet":{"coins":7}}');
+    for(const learner of [f.learnerId,other.learnerId]) {
+      const first=f.records.importSnapshot(learner,"math",raw,"old","legacy",0,requestId);
+      assert.equal(f.records.importSnapshot(learner,"math",raw,"old","legacy",0,requestId).snapshotId,first.snapshotId);
+    }
+    const events=f.store.db.prepare("SELECT event_id,learner_id,fact FROM private_events").all();assert.equal(events.length,2);assert.notEqual(events[0].event_id,events[1].event_id);
+    assert(events.every(e=>JSON.parse(String(e.fact)).sourceRequestId===requestId));
+    assert.throws(()=>f.records.importSnapshot(f.learnerId,"english",Buffer.from(JSON.stringify(english())),"old","wordquest",0,requestId),/IDEMPOTENCY_CONFLICT/);
+    assert.equal(f.records.subject(f.parent,f.learnerId,"english").revision,0);
+  } finally {f.close();}
+});

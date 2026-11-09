@@ -70,8 +70,12 @@ export class PrivateRecords {
       return {projectId:id,revision:value.revision,deleted:c.deleted};
     });
   }
-  fact(id:string,learner:string,module:string,entity:string,revision:number,fact:unknown,at:string) {
-    this.store.db.prepare("INSERT INTO private_events VALUES(?,?,?,?,?,?,?)").run(id,learner,module,entity,revision,JSON.stringify(fact),at);
+  fact(id:string,learner:string,module:string,entity:string,revision:number,fact:Record<string,unknown>,at:string) {
+    // Receipts are learner-scoped. The global event PK must have the same scope:
+    // another family's reused request UUID must not fail this transaction. Old
+    // immutable event IDs remain untouched; their original receipts still replay.
+    const eventId="learner-v1:"+sha256(canonical([learner,id]));
+    this.store.db.prepare("INSERT INTO private_events VALUES(?,?,?,?,?,?,?)").run(eventId,learner,module,entity,revision,JSON.stringify({...fact,sourceRequestId:id}),at);
   }
   subject(p:Principal,learner:string,subject:string) {
     this.access.authorize(p,learner);
