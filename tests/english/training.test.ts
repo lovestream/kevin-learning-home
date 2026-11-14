@@ -294,3 +294,26 @@ test("retried summary is a historical snapshot; final next returns the result at
     f.cleanup();
   }
 });
+
+test("original V1 mimeType/base64 and source-only title variants remain importable", () => {
+  const w = {
+    word: "candy",
+    pos: "n.",
+    ipa: "/x/",
+    lemma: "candy",
+    en: "A sweet food.",
+    example: "I like candy.",
+    tip: "Say it.",
+    spellingChunks: ["can", "dy"],
+    image: { mimeType: "image/jpg", base64: "aGVs\nbG8=" },
+  };
+  const p = {
+    format: "kevin-word-quest-ai-pack",
+    version: 1,
+    source: "Synthetic source",
+    words: [w],
+  };
+  const x = inspectPack(p);
+  assert.equal(x.title, "Synthetic source");
+  assert.equal(x.words[0].image, "data:image/jpeg;base64,aGVsbG8=");
+});

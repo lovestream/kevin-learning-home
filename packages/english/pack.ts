@@ -23,6 +23,8 @@ const wordSchema = z
           .object({
             dataUrl: z.string().max(34000).optional(),
             data: z.string().max(34000).optional(),
+            mimeType: z.string().max(40).optional(),
+            base64: z.string().max(34000).optional(),
             alt: z.string().max(200).optional(),
           })
           .passthrough(),
@@ -36,8 +38,9 @@ const packSchema = z
   .object({
     format: z.literal("kevin-word-quest-ai-pack"),
     version: z.literal(1),
-    title: text(120),
+    title: text(120).optional(),
     source: z.string().max(80).optional(),
+    sourceTag: z.string().max(80).optional(),
     trainByDefault: z.boolean().optional(),
     words: z.array(wordSchema).min(1).max(20),
   })
@@ -72,9 +75,22 @@ export function inspectPack(value: unknown) {
     const image =
       typeof w.image === "string"
         ? w.image
-        : w.image?.dataUrl || w.image?.data || w.imageDataUrl || "";
+        : w.image?.dataUrl ||
+          w.image?.data ||
+          (w.image?.mimeType && w.image.base64
+            ? "data:" +
+              w.image.mimeType
+                .toLowerCase()
+                .replace("image/jpg", "image/jpeg") +
+              ";base64," +
+              w.image.base64.replace(/\s+/g, "")
+            : "") ||
+          w.imageDataUrl ||
+          "";
     if (
-      !/^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(image)
+      !/^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/i.test(
+        image,
+      )
     )
       throw Error("每个词需要内嵌PNG、JPEG或WebP图片，不加载外部图片地址。");
     const bytes = atob(image.slice(image.indexOf(",") + 1));
@@ -92,7 +108,7 @@ export function inspectPack(value: unknown) {
       train: w.train ?? p.trainByDefault !== false,
     };
   });
-  return { title: p.title, words };
+  return { title: p.title || p.source || p.sourceTag || "AI Word Pack", words };
 }
 export async function localPackCards(p: ReturnType<typeof inspectPack>) {
   const cards: EnglishCard[] = [];
