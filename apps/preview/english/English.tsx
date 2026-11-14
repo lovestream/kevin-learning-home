@@ -44,12 +44,14 @@ const memory = {
 };
 function useSpeech() {
   const [message, setMessage] = useState("");
-  useEffect(
-    () => () => {
-      globalThis.speechSynthesis?.cancel();
-    },
-    [],
-  );
+  useEffect(() => {
+    const stop = () => globalThis.speechSynthesis?.cancel();
+    addEventListener("pagehide", stop);
+    return () => {
+      removeEventListener("pagehide", stop);
+      stop();
+    };
+  }, []);
   return {
     message,
     stop() {
@@ -871,7 +873,7 @@ function Workbook({ data }: { data: PageGroup }) {
         requestId: englishUUID(),
         responses: answers,
       });
-      first.current ??= [...answers];
+      first.current ??= [...r.firstResponses];
       setResult(r.checks);
     } catch (e) {
       setError((e as Error).message);
@@ -934,18 +936,26 @@ function Review({
       ),
     ],
     full = memory.events.filter((e) => e.mode === "full" && e.firstAttempt),
-    [cards, setCards] = useState<Card[]>([]);
+    [cards, setCards] = useState<Card[]>([]),
+    [loadError, setLoadError] = useState(""),
+    [reload, setReload] = useState(0);
   useEffect(() => {
     let live = true;
+    setLoadError("");
     Promise.all(
       errors.map((id) => get<Card>("/cards/" + encodeURIComponent(id))),
-    ).then((x) => {
-      if (live) setCards(x);
-    });
+    )
+      .then((x) => {
+        if (live) setCards(x);
+      })
+      .catch(() => {
+        if (live)
+          setLoadError("错词暂时没有打开；本次作答还在，网络恢复后可以重试。");
+      });
     return () => {
       live = false;
     };
-  }, [errors.join("|")]);
+  }, [errors.join("|"), reload]);
   return (
     <section>
       <h1>本次回顾</h1>
@@ -960,7 +970,12 @@ function Review({
       <p>
         这里回看当前页面中做错过的词；跨天复习、长期统计和历史学习记录待正式启用。
       </p>
-      {!cards.length ? (
+      {loadError ? (
+        <p role="alert">
+          {loadError}
+          <button onClick={() => setReload((n) => n + 1)}>重新打开错词</button>
+        </p>
+      ) : !cards.length ? (
         <p className="english-empty">
           暂时没有错词。先选一个学习组做完整拼写。
         </p>

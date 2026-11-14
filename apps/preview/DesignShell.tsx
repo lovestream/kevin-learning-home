@@ -332,7 +332,7 @@ export default function DesignShell({
             返回家园首页
           </a>
           <SubjectNavigation dialog />
-          {!home && !explore && <Pathways />}
+          {!home && !explore && !english && <Pathways />}
         </dialog>
         <details className="preview-banner">
           <summary>
