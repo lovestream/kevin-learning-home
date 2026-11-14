@@ -1,23 +1,23 @@
 {
   "status": "PASS",
-  "origin": "http://127.0.0.1:51233",
+  "origin": "http://127.0.0.1:58413",
   "target": "LOCAL_DEVELOPMENT",
   "execution": {
-    "head": "371e16501cff9b23243f04297aa91c680ee34a97",
+    "head": "67b664b0c61a5d00a5f671bee8a50d151ca96614",
     "dirty": true,
     "files": {
-      "apps/preview/MapNavigation.tsx": "f875d3119acab74c5e87caa1b8cc9f522c5a17e1419e8fb298ecb14e7e30ec40",
+      "apps/preview/MapNavigation.tsx": "14906533dcfbed202a139f20ffa2d44015b44c5389ecd21ce487763060b20019",
       "apps/preview/learning-map.ts": "1a232e67502ae9e3db48b1d9a9adb7193ab62e39c4b727dc4a8bea465d2aa07f",
-      "apps/preview/main.tsx": "35d9c32aaee7ef4a40e53de84f3a33764e2f8ceea624d954a94ed3d5a9bb6f99",
-      "apps/preview/preview.css": "c9886eaa726636297e6209a7709b47f428029cc7cb402d1af19340c302c8c6cc",
+      "apps/preview/main.tsx": "5028b3a9356cad5e4330387458b1077cfed85bdaa3365feedd4e299f9bf64a5f",
+      "apps/preview/preview.css": "52f10d121d64550bffb79bf74c24ab314e93fcb506c3c226ce2465db9c65131e",
       "apps/preview/content.ts": "8e8a17ca493f294ce2e2053b41b21879045e9e851b9634cb91a16b2910969168",
-      "apps/preview/server.ts": "2244039ea34f53c177e6d3b6462019060fc0c624449c3758c7697e6ff74f4ef7",
-      "apps/preview/content/catalog.json": "89fd602043b696887610cdfcfb221355f27f798a3044f78af89d9d8b1ac42dc1",
+      "apps/preview/server.ts": "49900f074edc83edcc3b08a01525f8d1efdd4fd2f3ca6b747990367e1cb6d5d0",
+      "apps/preview/content/catalog.json": "ef6fbe44668e3ca1fb2ab6157b74268d314601552aab38fb7a2d89dfe09bc7b2",
       "apps/preview/content/learning-map.json": "c3a0f63b540d27b12057c8ff9cc3132849035824780d6889ef0469386843e35b",
       "tests/math-full-01/navigation.mjs": "6ef751e13a573f699b6c2f6c5ab7ed79c286395682ef80ac7c22f8a31970cd81"
     }
   },
-  "elapsedMs": 6745,
+  "elapsedMs": 12656,
   "results": [
     {
       "width": 390,

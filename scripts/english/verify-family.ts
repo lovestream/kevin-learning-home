@@ -11,6 +11,10 @@ const c = new EnglishContent(".english-family"),
   e = new EnglishTraining(c);
 let checked = 0,
   exerciseSlots = 0;
+assert(
+  c.bundle.notices?.includes("Permission is hereby granted"),
+  "DICT_LICENSE_NOTICE_REQUIRED",
+);
 assert.equal(c.bundle.cards.length, 6631);
 assert.equal(c.bundle.groups.length, 665);
 assert.equal(

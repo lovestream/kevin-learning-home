@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "sourceSha": "67b664b0c61a5d00a5f671bee8a50d151ca96614",
+  "syntheticOnly": true,
+  "results": [
+    {
+      "width": 390,
+      "firstAnswerPreserved": true,
+      "semanticAlternativeRejected": true,
+      "workbookCorrection": true,
+      "packOfflineNoUpload": true,
+      "refreshClears": true,
+      "noOverflow": true,
+      "noExternalRequests": true
+    },
+    {
+      "width": 768,
+      "firstAnswerPreserved": true,
+      "semanticAlternativeRejected": true,
+      "workbookCorrection": true,
+      "packOfflineNoUpload": true,
+      "refreshClears": true,
+      "noOverflow": true,
+      "noExternalRequests": true
+    },
+    {
+      "width": 1280,
+      "firstAnswerPreserved": true,
+      "semanticAlternativeRejected": true,
+      "workbookCorrection": true,
+      "packOfflineNoUpload": true,
+      "refreshClears": true,
+      "noOverflow": true,
+      "noExternalRequests": true
+    }
+  ]
+}

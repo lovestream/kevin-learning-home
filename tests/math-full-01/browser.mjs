@@ -132,11 +132,11 @@ try {
     await expect(page.locator("[data-term-link]")).toHaveCount(3);
     await expect(page.locator("[data-lesson-link]")).toHaveCount(0);
     const subjects=page.getByRole("navigation", { name: "学科导航" });
-    if(await subjects.count()) await expect(subjects).toContainText("英语 · 待迁入");
+    if(await subjects.count()) await expect(subjects.getByRole("link",{name:"英语天地",exact:true})).toHaveAttribute("href","/subjects/english");
     else {
       const menu=page.getByRole('button',{name:'学习导航',exact:true});
       await menu.click();
-      await expect(page.getByRole('dialog').getByRole('navigation',{name:'学科导航'})).toContainText('英语 · 待迁入');
+      await expect(page.getByRole('dialog').getByRole('navigation',{name:'学科导航'}).getByRole('link',{name:'英语天地',exact:true})).toHaveAttribute('href','/subjects/english');
       await page.keyboard.press('Escape');
       await expect(menu).toBeFocused();
     }

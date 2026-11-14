@@ -59,6 +59,7 @@ export type EnglishCatalog = {
 };
 export type EnglishBundle = {
   schemaVersion: 1;
+  notices?: string;
   sourceSha: string;
   contentVersion: string;
   scope: "family-lan-source";

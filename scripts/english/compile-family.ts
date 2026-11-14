@@ -40,7 +40,8 @@ function blob(path: string) {
   const row = entries.get(path);
   if (
     !row ||
-    !/^assets\/[A-Za-z0-9/._-]+$/.test(path) ||
+    (!/^assets\/[A-Za-z0-9/._-]+$/.test(path) &&
+      path !== "licenses/ECDICT-LICENSE.txt") ||
     path.includes("..") ||
     /wordpack|wordquest|private/i.test(path)
   )
@@ -193,6 +194,9 @@ const bundle: EnglishBundle = {
   exerciseAnswers: context.window.CORE2000_EXERCISE_ANSWERS,
   media,
   sources,
+  notices:
+    "Family source only; not a public redistribution approval.\n\n" +
+    blob("licenses/ECDICT-LICENSE.txt").toString("utf8"),
 };
 writeFileSync(join(stage, "bundle.json"), JSON.stringify(bundle) + "\n", {
   mode: 0o600,

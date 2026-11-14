@@ -1,0 +1,21 @@
+✔ English HTTP is same-origin JSON-only, answer-free before attempt, no cookies or private APIs (123.558125ms)
+✔ source helper target is pinned and semantic alternatives never count as spelling (1.835166ms)
+✔ pre-answer payload has no target word, stable answer-bearing ID, definition, example or source filename (12.531375ms)
+✔ first wrong answer is immutable; hint, reference and audio remain separately visible (4.915833ms)
+✔ help before first answer is accurately marked; a retry cannot rewrite a receipt or task (4.067417ms)
+✔ cloze always hides at least one letter, full mode no mask; unfinished cannot advance (3.918958ms)
+✔ workbook grading keeps first responses, idempotent retries and later corrections separate (3.212041ms)
+✔ session expiration, isolation and resource limits do not persist learner data (2.915417ms)
+✔ bundle/media tampering fails closed and source aliases retain canonical IDs (3.278959ms)
+✔ public pack format rejects external/SVG images, missing fields, bad chunks, missing target and future versions (2.529834ms)
+✔ LAN HTTP IDs remain valid v4 UUIDs with secure-context-only APIs absent (0.829042ms)
+✔ retried summary is a historical snapshot; final next returns the result atomically (2.674708ms)
+✔ original V1 mimeType/base64 and source-only title variants remain importable (0.424375ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 545.937875
