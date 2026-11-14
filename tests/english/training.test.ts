@@ -258,4 +258,39 @@ test("public pack format rejects external/SVG images, missing fields, bad chunks
     assert.throws(() => inspectPack(bad));
 });
 
-test('LAN HTTP IDs remain valid v4 UUIDs with secure-context-only APIs absent',async()=>{const {englishUUID}=await import('../../packages/english/id.ts');const ids=new Set(Array.from({length:100},()=>englishUUID()));assert.equal(ids.size,100);for(const id of ids)assert.match(id,/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/);});
+test("LAN HTTP IDs remain valid v4 UUIDs with secure-context-only APIs absent", async () => {
+  const { englishUUID } = await import("../../packages/english/id.ts");
+  const ids = new Set(Array.from({ length: 100 }, () => englishUUID()));
+  assert.equal(ids.size, 100);
+  for (const id of ids)
+    assert.match(
+      id,
+      /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/,
+    );
+});
+
+test("retried summary is a historical snapshot; final next returns the result atomically", async () => {
+  const f = await fixture();
+  try {
+    const e = new EnglishTraining(f.content),
+      q = e.start({
+        action: "start",
+        groupId: "synthetic-group",
+        mode: "full",
+        wordIds: ["synthetic-candy"],
+      });
+    const c = {
+      action: "summary",
+      sessionId: q.sessionId,
+      requestId: randomUUID(),
+    };
+    assert.equal(e.act(c).evidence.length, 0);
+    action(e, q, "answer", { answer: "candy" });
+    assert.equal(e.act(c).evidence.length, 0);
+    const done = action(e, q, "next");
+    assert(done.done);
+    assert.equal(done.evidence.length, 1);
+  } finally {
+    f.cleanup();
+  }
+});

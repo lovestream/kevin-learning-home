@@ -225,7 +225,7 @@ export class EnglishTraining {
     if (replay) {
       if (replay.body !== body)
         throw Error("这条操作已经提交，不能用同一编号改写。");
-      return replay.result;
+      return structuredClone(replay.result);
     }
     if (s.receipts.size >= 1000)
       throw Error("这次练习操作较多，请结束后重新开始。");
@@ -310,6 +310,7 @@ export class EnglishTraining {
       }
       result = {
         ...this.view(s),
+        ...(s.index >= s.tasks.length ? { evidence: s.evidence } : {}),
         ...(c.action === "audio" ? { speech: t.card.word } : {}),
         ...(c.action === "answer" ? { latestEvidence: s.evidence.at(-1) } : {}),
         ...(c.action === "reference"
@@ -323,7 +324,8 @@ export class EnglishTraining {
           : {}),
       };
     }
-    s.receipts.set(c.requestId, { body, result });
-    return result;
+    const snapshot = structuredClone(result);
+    s.receipts.set(c.requestId, { body, result: snapshot });
+    return structuredClone(snapshot);
   }
 }

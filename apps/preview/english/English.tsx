@@ -666,11 +666,7 @@ function Quiz({
         requestAnimationFrame(() => input.current?.focus());
       }
       if (x.done) {
-        const s = await transport({
-          action: "summary",
-          sessionId: q.sessionId,
-          requestId: englishUUID(),
-        });
+        const s = { evidence: x.evidence ?? [] };
         setSummary(s.evidence);
         const known = new Set(memory.events.map((e) => e.attemptId));
         for (const e of s.evidence)
