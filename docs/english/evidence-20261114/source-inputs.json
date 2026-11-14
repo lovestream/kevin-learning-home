@@ -1495,6 +1495,16 @@
       "path": "tests/math-full-01/browser.mjs",
       "blob": "f603c72732c3b5cb3b392a943a5c194607443725",
       "sha256": "ae4d1c5bc7334a596edff1e2a0d953c78cd60f69ce6c843d97ede49f89a837a7"
+    },
+    {
+      "path": "infra/math-preview/Dockerfile",
+      "blob": "4c7c24cc01ee956523a3e502c72379915e7ed4fe",
+      "sha256": "2a2ac7b8ef6b78b0486aeb676daa946376896e3f38bc9723289399ab91c8afce"
+    },
+    {
+      "path": "tests/math-preview/container.mjs",
+      "blob": "486e223246a121a0aa244ee784a651962f0c7b4f",
+      "sha256": "91a712d92b531af4d0556786cc50a084298733f338f215979edfb12519d96034"
     }
   ],
   "note": "Compare each Git blob to review head; local runs record their real head/dirty metadata. No private family bundle or real records included."

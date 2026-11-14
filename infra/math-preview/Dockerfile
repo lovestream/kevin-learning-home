@@ -35,7 +35,7 @@ COPY packages/math-training/study.mjs ./packages/math-training/study.mjs
 COPY packages/contracts/math-training.ts ./packages/contracts/math-training.ts
 COPY packages/math-training/engine.mjs ./packages/math-training/engine.mjs
 COPY packages/math-training/source ./packages/math-training/source
-COPY packages/english ./packages/english
+COPY packages/english/content.ts packages/english/contract.ts packages/english/id.ts packages/english/training.ts packages/english/source-grading.mjs ./packages/english/
 COPY apps/preview/training.ts ./apps/preview/training.ts
 COPY apps/preview/server.ts apps/preview/content.ts apps/preview/contract.ts apps/preview/registry-meta.ts apps/preview/runtime.ts apps/preview/learning-map.ts ./apps/preview/
 COPY apps/preview/adapters/source/shared/intro-visuals.mjs ./apps/preview/adapters/source/shared/intro-visuals.mjs

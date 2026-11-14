@@ -162,8 +162,8 @@
     },
     {
       "file": "source-inputs.json",
-      "sha256": "b494097536d2b4ebaf690ad959c0c87dcdaf3b4a135bec614ed40874c0373d68",
-      "bytes": 65671,
+      "sha256": "3aca105effb09e96f22a37dc5c5a2e44aae273fe58a2817aa86ac2c575063a42",
+      "bytes": 66076,
       "status": "measured-evidence"
     },
     {
@@ -171,6 +171,12 @@
       "sha256": "915140fe835c1cff83ff7c2da1346e27d9af198836f9b2f0bbed11aa407dc88d",
       "bytes": 230,
       "status": "measured-evidence"
+    },
+    {
+      "file": "superseded-ci-container.txt",
+      "sha256": "e294aba79a800e892a53b00a4a7ac103f27421cba9c2b2001db1428ecdc75a14",
+      "bytes": 427,
+      "status": "superseded-failure-retained"
     },
     {
       "file": "superseded-stale-evidence.log",
