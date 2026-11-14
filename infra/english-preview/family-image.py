@@ -14,7 +14,9 @@ def verify_bundle(directory):
         p=directory/name
         assert not p.is_symlink() and p.resolve().is_relative_to(directory),'BUNDLE_SYMLINK_OR_ESCAPE'
         return p.read_bytes()
-    seal=json.loads(read('seal.json'));raw=read('bundle.json');b=json.loads(raw)
+    seal=json.loads(read('seal.json'));raw=read('bundle.json')
+    assert hashlib.sha256(raw).hexdigest()==seal['bundleSha256'],'BUNDLE_HASH_CHANGED'
+    b=json.loads(raw)
     assert seal['sourceSha']==b['sourceSha']==SOURCE
     assert seal['scope']==b['scope']=='family-lan-source'
     assert seal['publicationApproved'] is False and b['publicationApproved'] is False
