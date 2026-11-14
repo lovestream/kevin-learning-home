@@ -103,12 +103,14 @@ export function MathIcon({ name, size = 24 }: { name: string; size?: number }) {
   );
 }
 function SubjectNavigation({ dialog = false }: { dialog?: boolean }) {
-  const active = location.pathname.startsWith("/explore")
-    ? "explore"
-    : location.pathname.startsWith("/subjects/math") ||
-        location.pathname.startsWith("/lesson/")
-      ? "math"
-      : null;
+  const active = location.pathname.startsWith("/subjects/english")
+    ? "english"
+    : location.pathname.startsWith("/explore")
+      ? "explore"
+      : location.pathname.startsWith("/subjects/math") ||
+          location.pathname.startsWith("/lesson/")
+        ? "math"
+        : null;
   return (
     <nav
       className={dialog ? "dialog-subjects" : "preview-subjects"}
@@ -165,12 +167,19 @@ function Pathways() {
     </nav>
   );
 }
-export default function DesignShell({ children, recordMode="preview" }: { children: ReactNode;recordMode?:"preview"|"synthetic-private"|"private" }) {
+export default function DesignShell({
+  children,
+  recordMode = "preview",
+}: {
+  children: ReactNode;
+  recordMode?: "preview" | "synthetic-private" | "private";
+}) {
   const dialog = useRef<HTMLDialogElement>(null),
     menu = useRef<HTMLButtonElement>(null),
     restoreMenuFocus = useRef(true),
     home = location.pathname === "/",
-    explore = location.pathname.startsWith("/explore");
+    explore = location.pathname.startsWith("/explore"),
+    english = location.pathname.startsWith("/subjects/english");
   return (
     <div className="site-shell preview-shell preview-app">
       <a className="skip-link" href="#main-content">
@@ -184,7 +193,13 @@ export default function DesignShell({ children, recordMode="preview" }: { childr
           <div>
             Kevin 学习家园
             <small>
-              {home ? "在这里，慢慢发现" : explore ? "探索与创造" : "数学书房"}
+              {home
+                ? "在这里，慢慢发现"
+                : explore
+                  ? "探索与创造"
+                  : english
+                    ? "英语天地"
+                    : "数学书房"}
             </small>
           </div>
         </div>
@@ -204,6 +219,21 @@ export default function DesignShell({ children, recordMode="preview" }: { childr
             <br />
             再找到你想学的那一课。
           </p>
+        ) : english ? (
+          <nav className="pathways" aria-label="英语路径">
+            {[
+              ["", "英语书架"],
+              ["?view=notebook", "本次收藏"],
+              ["?view=review", "本次回顾"],
+              ["?view=pack", "生词包"],
+              ["?view=source", "内容与声音"],
+            ].map(([suffix, title]) => (
+              <a key={title} href={"/subjects/english" + suffix}>
+                <MathIcon name="book" />
+                <span>{title}</span>
+              </a>
+            ))}
+          </nav>
         ) : explore ? (
           <nav className="pathways" aria-label="探索路径">
             {[
@@ -243,7 +273,13 @@ export default function DesignShell({ children, recordMode="preview" }: { childr
             Kevin 学习家园
           </a>
           <span className="topbar-context">
-            {home ? "家园首页" : explore ? "探索与创造" : "数学书房"}
+            {home
+              ? "家园首页"
+              : explore
+                ? "探索与创造"
+                : english
+                  ? "英语天地"
+                  : "数学书房"}
           </span>
           <button
             ref={menu}
@@ -257,7 +293,13 @@ export default function DesignShell({ children, recordMode="preview" }: { childr
             <MathIcon name="menu" />
             <span>学习导航</span>
           </button>
-          <span className="experience-chip">{recordMode==="preview"?"免登录体验":recordMode==="synthetic-private"?"合成隔离测试":"家庭学习"}</span>
+          <span className="experience-chip">
+            {recordMode === "preview"
+              ? "免登录体验"
+              : recordMode === "synthetic-private"
+                ? "合成隔离测试"
+                : "家庭学习"}
+          </span>
         </header>
         <dialog
           id="learning-dialog"
@@ -293,9 +335,17 @@ export default function DesignShell({ children, recordMode="preview" }: { childr
           {!home && !explore && <Pathways />}
         </dialog>
         <details className="preview-banner">
-          <summary>{recordMode==="preview"?"仅本页体验，不保存学习记录":recordMode==="synthetic-private"?"仅合成资料：探索项目会保存，原站数据不接入":"探索项目保存在家园，不发送给外部 AI"}</summary>
+          <summary>
+            {recordMode === "preview"
+              ? "仅本页体验，不保存学习记录"
+              : recordMode === "synthetic-private"
+                ? "仅合成资料：探索项目会保存，原站数据不接入"
+                : "探索项目保存在家园，不发送给外部 AI"}
+          </summary>
           <p>
-            {recordMode==="preview"?"无需账号，无真实学习资料。刷新或离开页面会清空本次作答、操作和自查；正确反馈不代表长期掌握，解释请与家长核对。":"孩子使用家长授权过的设备自动进入；家长查看时才登录，不设孩子密码或第二个 PIN。保存失败会保留输入并提示重试；图片和语音不会发送给外部 AI。"}
+            {recordMode === "preview"
+              ? "无需账号，无真实学习资料。刷新或离开页面会清空本次作答、操作和自查；正确反馈不代表长期掌握，解释请与家长核对。"
+              : "孩子使用家长授权过的设备自动进入；家长查看时才登录，不设孩子密码或第二个 PIN。保存失败会保留输入并提示重试；图片和语音不会发送给外部 AI。"}
           </p>
         </details>
         {children}

@@ -12,3 +12,6 @@ __pycache__/
 .DS_Store
 
 .math-preview-private/
+
+# Family-only English source bundle; never publish textbook media or private packs.
+.english-family/

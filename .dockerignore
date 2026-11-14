@@ -10,3 +10,7 @@ apps/web/dist
 apps/preview/dist
 .math-preview-private
 .trial-private
+
+# Family source/media must never enter public CI build context.
+.english-family
+.english-family.staging

@@ -89,8 +89,7 @@ try {
     await page.goBack();
     await expect(page.locator("[data-home-page]")).toBeVisible();
     await page.getByRole("searchbox", { name: "在家园找一找" }).fill("english");
-    await expect(page.locator(".pending-result")).toContainText("准备中");
-    assert.equal(await page.locator(".pending-result a").count(), 0);
+    await expect(page.locator(".home-results a[href='/subjects/english']")).toContainText("英语天地");
     await page
       .getByRole("searchbox", { name: "在家园找一找" })
       .fill("不存在的合成课程");

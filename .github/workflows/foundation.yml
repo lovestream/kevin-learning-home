@@ -17,6 +17,7 @@ on:
         codex/explore-01-preview,
         codex/home-navigation,
         codex/explore-02-records,
+        codex/english-full,
       ]
   pull_request:
     branches:
@@ -27,6 +28,7 @@ on:
         codex/math-full-03-capabilities,
         codex/explore-01-preview,
         codex/home-navigation,
+        codex/explore-02-records,
       ]
 permissions:
   contents: read
@@ -112,6 +114,11 @@ jobs:
         run: |
           node --test tests/home/*.test.ts
           node tests/home/browser.mjs
+      - name: English synthetic source boundary and real three-width browser
+        run: |
+          npm run test:english
+          python3 -m unittest discover -s tests/english -p 'test_*.py' -v
+          npm run test:english:browser
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1
