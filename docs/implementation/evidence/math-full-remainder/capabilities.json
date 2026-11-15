@@ -1,13 +1,13 @@
 {
   "status": "PASS",
   "scope": "17 published thought cards / 54 legacy courses with 432 questions / 14 anonymous authored cases; no real records",
-  "origin": "http://127.0.0.1:58241",
+  "origin": "http://127.0.0.1:45755",
   "nas": false,
   "sourceCommit": "a7c05aaa8d9c5eabae4f3453807f830da1cbf279",
   "bankSha256": "8019913ea0756db1351363475ace2d72c53e9ed982d418092779456f6479ad8d",
   "publicSha256": "52ae6d22b03e7b026ddbdbe0aea1f7f28733d7c061f983252df7cc6a0cc0146b",
   "execution": {
-    "head": "67b664b0c61a5d00a5f671bee8a50d151ca96614",
+    "head": "7e9714f2139d88bca4b1f9dab2eb6c75d282aeb2",
     "dirty": true,
     "files": {
       "apps/preview/DesignShell.tsx": "31ecfb61afa27a14628bb3b3520e73dbc24a1b26f33edce2fc9d2ec597cab27c",
@@ -241,7 +241,7 @@
       "docs/implementation/evidence/math-onepass/reading-source.json": "7fe796e9e3cabf634e33beaa2b3feb7f4ad358342d11e90312657c2d826d04ea",
       "docs/implementation/evidence/math-onepass/source-import.json": "774e5a9b8d1ad9c81f7ef6e7a41658eb6456bb50560227bc699c54f005e61d75",
       "docs/implementation/evidence/math-onepass/study-source.json": "e12426c6496574486efab90d2a075c05160e16f7e4625e208d841646da475c10",
-      "infra/math-preview/Dockerfile": "722808837623aafc6e1fedaeb90ac2f76ae9157ef5434d31dc785a13d6399307",
+      "infra/math-preview/Dockerfile": "2a2ac7b8ef6b78b0486aeb676daa946376896e3f38bc9723289399ab91c8afce",
       "package-lock.json": "866d3e63c439508fe6531c215743da16107c285cbb1dcc4401d5ea6a9cc51866",
       "package.json": "15321478184db5e38b5ae6ec4a6e2e47a1621b165ce2cd8cdf429acb26408584",
       "packages/contracts/auth.ts": "f0cec332be75d9644d5c7c59083ca209c72799505da0e2272070dc93f7deb430",

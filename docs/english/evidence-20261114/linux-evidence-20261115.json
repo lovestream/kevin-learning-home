@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "head": "7e9714f2139d88bca4b1f9dab2eb6c75d282aeb2",
+  "run": "https://github.com/lovestream/kevin-learning-home/actions/runs/43666202620",
+  "artifactId": 14143010602,
+  "artifactSha256": "e79617fb8c1373745c87aa37ab6ce83d348fb359dd52b2761c304129202f612f",
+  "practiceTasksPerWidth": 849,
+  "practiceFlows": 84,
+  "libraryCapabilities": 85,
+  "libraryFlows": 255,
+  "viewports": [
+    390,
+    768,
+    1280
+  ],
+  "originalPracticeTestsPassed": 6,
+  "originalLibraryTestsPassed": 8,
+  "nas": false,
+  "realRecordsRead": false
+}

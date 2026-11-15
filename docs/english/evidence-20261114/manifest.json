@@ -225,6 +225,12 @@
       "sha256": "0973ca995be7400fc0cd3eff17c04f4029ba47ea8a87e4f2327c7fe50134a04e",
       "bytes": 1155,
       "status": "superseded-failure-not-pass"
+    },
+    {
+      "file": "linux-evidence-20261115.json",
+      "sha256": "5cc5349367011584ba957592c2c02beb41932c53adb6479ac342c10f1b749c32",
+      "bytes": 552,
+      "status": "measured-linux-ci-evidence"
     }
   ],
   "copyrightedSourceScreenshotsCommitted": false,

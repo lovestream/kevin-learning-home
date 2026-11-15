@@ -6,10 +6,10 @@
   "lessons": 70,
   "bankSha256": "235728c615c2ff8ee8ab4595572191c6aaa0d7e1feeeb43297445e07cc21a25a",
   "publicSha256": "6510e51694629f02ecf877050bcbda944bc16c1d9f5dcf21825ec0b21f8ab016",
-  "browserOrigin": "http://127.0.0.1:58240",
+  "browserOrigin": "http://127.0.0.1:39645",
   "execution": {
-    "head": "67b664b0c61a5d00a5f671bee8a50d151ca96614",
-    "dirty": true,
+    "head": "7e9714f2139d88bca4b1f9dab2eb6c75d282aeb2",
+    "dirty": false,
     "files": {
       "apps/preview/DesignShell.tsx": "31ecfb61afa27a14628bb3b3520e73dbc24a1b26f33edce2fc9d2ec597cab27c",
       "apps/preview/DetectiveTraining.tsx": "1040786519ab3a04936554e21b5939fcfebb0b8c363a31e0b60a3ece524029ab",
@@ -242,7 +242,7 @@
       "docs/implementation/evidence/math-onepass/reading-source.json": "7fe796e9e3cabf634e33beaa2b3feb7f4ad358342d11e90312657c2d826d04ea",
       "docs/implementation/evidence/math-onepass/source-import.json": "774e5a9b8d1ad9c81f7ef6e7a41658eb6456bb50560227bc699c54f005e61d75",
       "docs/implementation/evidence/math-onepass/study-source.json": "e12426c6496574486efab90d2a075c05160e16f7e4625e208d841646da475c10",
-      "infra/math-preview/Dockerfile": "722808837623aafc6e1fedaeb90ac2f76ae9157ef5434d31dc785a13d6399307",
+      "infra/math-preview/Dockerfile": "2a2ac7b8ef6b78b0486aeb676daa946376896e3f38bc9723289399ab91c8afce",
       "package-lock.json": "866d3e63c439508fe6531c215743da16107c285cbb1dcc4401d5ea6a9cc51866",
       "package.json": "15321478184db5e38b5ae6ec4a6e2e47a1621b165ce2cd8cdf429acb26408584",
       "packages/contracts/auth.ts": "f0cec332be75d9644d5c7c59083ca209c72799505da0e2272070dc93f7deb430",
