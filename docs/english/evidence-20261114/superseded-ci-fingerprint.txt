@@ -1,0 +1,7 @@
+Superseded head: 06075983c9beb0885c88273cd0dfb9156b7da503
+Push run: https://github.com/lovestream/kevin-learning-home/actions/runs/43580968873
+PR run: https://github.com/lovestream/kevin-learning-home/actions/runs/43580973248
+math-onepass passed. Foundation stopped at stale archived Dockerfile fingerprint, after the container gate and 210 classroom browser scenarios passed. Not a successful overall CI.
+Expected archived Dockerfile SHA256: 722808837623aafc6e1fedaeb90ac2f76ae9157ef5434d31dc785a13d6399307
+Actual: 2a2ac7b8ef6b78b0486aeb676daa946376896e3f38bc9723289399ab91c8afce
+Resolution requires actual practice/library browser re-execution and archive; no assertion bypass.

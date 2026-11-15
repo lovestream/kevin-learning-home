@@ -162,8 +162,8 @@
     },
     {
       "file": "source-inputs.json",
-      "sha256": "3aca105effb09e96f22a37dc5c5a2e44aae273fe58a2817aa86ac2c575063a42",
-      "bytes": 66076,
+      "sha256": "39b49432a2dee16dfdde9a4b9f3ec78f1306b7bab8e455e5181ac5dac2298e8a",
+      "bytes": 66291,
       "status": "measured-evidence"
     },
     {
@@ -207,6 +207,24 @@
       "sha256": "0a1603f0e80935780462d193a72daefaea9c687a2ef6c1d7b6f2b23f65ef52a4",
       "bytes": 129416,
       "status": "measured-evidence"
+    },
+    {
+      "file": "superseded-ci-fingerprint.txt",
+      "sha256": "75db59eeb5ba80ce2a066de3b27ecef28aec35edce8674a6a4d4df32d94e2d90",
+      "bytes": 680,
+      "status": "superseded-failure-not-pass"
+    },
+    {
+      "file": "superseded-local-frame-timeout.log",
+      "sha256": "851b679922a6b1dbf26a4fb2692085e3300a5464d0623e0facfc2f27cd1a67b7",
+      "bytes": 1078,
+      "status": "superseded-failure-not-pass"
+    },
+    {
+      "file": "superseded-local-idle-only.log",
+      "sha256": "0973ca995be7400fc0cd3eff17c04f4029ba47ea8a87e4f2327c7fe50134a04e",
+      "bytes": 1155,
+      "status": "superseded-failure-not-pass"
     }
   ],
   "copyrightedSourceScreenshotsCommitted": false,
