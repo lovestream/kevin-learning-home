@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checkedDate": "2026-11-16",
+  "buildSha": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "english": {
+    "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+    "cards": 6631,
+    "groups": 665,
+    "media": 1861,
+    "storage": "page-memory-only",
+    "publicationApproved": false
+  },
+  "database": false,
+  "protectedContainersUnchanged": 11,
+  "realRecordsImported": false
+}

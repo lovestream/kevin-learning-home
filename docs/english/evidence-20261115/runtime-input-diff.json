@@ -1,0 +1,11 @@
+{
+  "status": "UNCHANGED_DEPLOYED_RUNTIME",
+  "deployedHead": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "paths": [
+    "apps",
+    "packages",
+    "infra/math-preview/Dockerfile"
+  ],
+  "changedTrackedRuntimeFiles": [],
+  "additionalWorkingChanges": "Documentation, evidence, test bootstrap and browser-evidence CI triggers only; no teaching runtime or stored learner state changed."
+}

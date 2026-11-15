@@ -8,8 +8,8 @@
     },
     {
       "path": ".github/workflows/english-math-evidence.yml",
-      "blob": "af2a606ccac01972c1805c7730075015ab694b98",
-      "sha256": "cb2571093e1387a726c9801919f454b398dc872eef4f67a7f3448d2824bac125"
+      "blob": "ef5ef5a1e8fadc855bad601589e4182f784f5b67",
+      "sha256": "5ddfb4aeb51ba075d537326e2e32e0f4c4b2ff46f91d85c12f005ef0f3fe9498"
     },
     {
       "path": ".github/workflows/foundation.yml",
@@ -1480,6 +1480,11 @@
       "path": "tests/english/http.test.ts",
       "blob": "4673b1309e98138068aa289f67b2e983ecb57a31",
       "sha256": "c886ad7ebc7dc07b4b0c5be212f05071edcfd300264578ffb1a8fe8118df4573"
+    },
+    {
+      "path": "tests/english/mac-browser.mjs",
+      "blob": "da348791ca50115d80277d444a8d0b41bfea6050",
+      "sha256": "01bd0dadc9845d3c49d71c6caaa3090d013b9ee5d063a89cc46aa18fb1f69f44"
     },
     {
       "path": "tests/english/source-browser.mjs",

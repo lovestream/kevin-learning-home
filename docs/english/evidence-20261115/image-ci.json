@@ -1,0 +1,14 @@
+{
+  "status": "PASS_PREVIEW_IMAGE_CI",
+  "buildSha": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "imageId": "sha256:d89f31e1652b0ed3abbab227f9ac6917106e9df6e221b8d5608e6f8d6e162782",
+  "architecture": "linux/amd64",
+  "appMounts": 0,
+  "formalServerOrSQLiteInImage": false,
+  "realLANHTTP": true,
+  "archive": {
+    "name": "preview-amd64.tar.gz",
+    "bytes": 82185269,
+    "sha256": "599d8deef3e6bbb4321aa271b81711506abb00404058af76ecf39627fc6dedfa"
+  }
+}

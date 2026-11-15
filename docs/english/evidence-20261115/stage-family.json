@@ -1,0 +1,23 @@
+{
+  "status": "FAMILY_SOURCE_STAGED_NO_PORT_SWITCH",
+  "buildSha": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "imageId": "sha256:3dae615252a885bfe4d00a3d8a4db34b6fa03c8bc1782824f18462b41086bb20",
+  "ciBaseImageId": "sha256:d89f31e1652b0ed3abbab227f9ac6917106e9df6e221b8d5608e6f8d6e162782",
+  "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "bundleSha256": "aadc6cbb9de4163f7c79424e047e5fea6a656f5c9b6bf77d1cf9afe1b7cd3c15",
+  "publicationApproved": false,
+  "probe": {
+    "status": "PASS_FAMILY_IMAGE",
+    "buildSha": "e96ebd29424c20564dc53e014b0399cfd585b691",
+    "english": {
+      "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+      "cards": 6631,
+      "groups": 665,
+      "media": 1861,
+      "storage": "page-memory-only",
+      "publicationApproved": false
+    },
+    "rss": 143925248
+  },
+  "realRecordsImported": false
+}

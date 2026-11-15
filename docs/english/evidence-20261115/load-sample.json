@@ -1,0 +1,8 @@
+{
+  "singleSampleNotPeak": true,
+  "buildSha": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "CPUPerc": "5.26%",
+  "MemUsage": "93.67MiB / 256MiB",
+  "MemPerc": "36.59%",
+  "note": "Single Docker NAS CPU/memory sample during browser regression, not a peak or a physical-device benchmark."
+}

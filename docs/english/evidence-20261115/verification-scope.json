@@ -1,0 +1,27 @@
+{
+  "runtimeHead": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "sourceHead": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "studentRecords": "anonymous bounded RAM only; no original learner state read or imported",
+  "rights": "fixed family LAN source; publicationApproved=false; publisher media not included in Git or public CI image",
+  "browserEnvironment": {
+    "driver": "Playwright Chromium",
+    "macBootstrap": "tests/english/mac-browser.mjs",
+    "launchArgs": [
+      "--disable-gpu-vsync",
+      "--disable-frame-rate-limit"
+    ],
+    "forcedClicks": false,
+    "relaxedTimeouts": false,
+    "physicalDevices": "NOT_TESTED"
+  },
+  "publicScreenshot": "English bookshelf only; source textbook screenshots remain ignored/private",
+  "masteryClaim": false,
+  "realRewards": 0,
+  "openModules": [
+    "full original exam sprint",
+    "weekly checks and persistent review dates",
+    "full My Words editing/archive and local PK",
+    "trusted private subject-state adapters and real import",
+    "verified shared rewards and pet home"
+  ]
+}

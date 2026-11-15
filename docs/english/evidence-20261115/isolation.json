@@ -1,0 +1,18 @@
+{
+  "status": "PASS_RUNTIME_ISOLATION",
+  "buildSha": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "imageId": "sha256:3dae615252a885bfe4d00a3d8a4db34b6fa03c8bc1782824f18462b41086bb20",
+  "user": "1024:100",
+  "readOnlyRoot": true,
+  "memoryBytes": 268435456,
+  "nanoCPUs": 0,
+  "cpuQuota": 0,
+  "mounts": 0,
+  "restartCount": 0,
+  "running": true,
+  "protectedContainersUnchanged": 11,
+  "realRecordsMounted": false,
+  "oldOwnedFilesUnchanged": true,
+  "cpuSet": "0",
+  "logicalCPUCount": 1
+}

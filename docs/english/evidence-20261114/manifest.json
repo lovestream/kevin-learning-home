@@ -162,8 +162,8 @@
     },
     {
       "file": "source-inputs.json",
-      "sha256": "39b49432a2dee16dfdde9a4b9f3ec78f1306b7bab8e455e5181ac5dac2298e8a",
-      "bytes": 66291,
+      "sha256": "6c82eee2c3dbaf5aa33b8065aaa0cd5fb7205d70a60abeba40bf88e5c33934db",
+      "bytes": 66492,
       "status": "measured-evidence"
     },
     {
@@ -231,6 +231,12 @@
       "sha256": "5cc5349367011584ba957592c2c02beb41932c53adb6479ac342c10f1b749c32",
       "bytes": 552,
       "status": "measured-linux-ci-evidence"
+    },
+    {
+      "file": "mac-browser-rerun-20261115.json",
+      "sha256": "8865eee135837439a257a4b7a01eb0da968e625e87f3e3b38e98539eda643c01",
+      "bytes": 635,
+      "status": "measured-evidence"
     }
   ],
   "copyrightedSourceScreenshotsCommitted": false,

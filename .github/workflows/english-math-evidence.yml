@@ -4,7 +4,7 @@ on:
     branches: [codex/english-full]
     paths:
       - .github/workflows/english-math-evidence.yml
-      - apps/preview/**
+      - apps/**
       - packages/**
       - infra/math-preview/Dockerfile
       - tests/math-full-02/**
@@ -12,6 +12,11 @@ on:
       - tests/math-onepass/inputs.mjs
       - scripts/math-full-02/archive.mjs
       - scripts/math-full-03/archive.mjs
+      - scripts/math-full-01/build.ts
+      - docs/implementation/evidence/**/source*.json
+      - docs/implementation/evidence/math-full-01/origins.json
+      - docs/implementation/evidence/math-onepass/study-source.json
+      - docs/implementation/evidence/math-onepass/reading-source.json
       - package.json
       - package-lock.json
 permissions:
