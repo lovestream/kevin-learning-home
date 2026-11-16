@@ -1,0 +1,12 @@
+{
+  "status": "PASS_FULL_FAMILY_IMAGE",
+  "buildSha": "fbbf516e9bbcba086d952b744954171f77db2605",
+  "batches": 224,
+  "words": 6631,
+  "media": 1861,
+  "bytes": 86125838,
+  "tombCorrection": true,
+  "rss": 182882304,
+  "realRecordsRead": false,
+  "rewardsIssued": 0
+}

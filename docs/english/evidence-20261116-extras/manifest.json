@@ -8,6 +8,21 @@
       "bytes": 6877
     },
     {
+      "path": "ci-image-fbb.json",
+      "sha256": "67d8d06fc4470f57436fb996d1c0ac24e88a6010318614fb3beaa26bcfb93323",
+      "bytes": 895
+    },
+    {
+      "path": "classroom-browser.log",
+      "sha256": "3f300fa2a1bba309d326dc0d2699b42329274f173234cd8673cf721bcc72d903",
+      "bytes": 60
+    },
+    {
+      "path": "classroom-checkpoint.log",
+      "sha256": "581c018f3ff80a7d2907ed5874647e1222121d94c63d4935093af0d1e32ea502",
+      "bytes": 59
+    },
+    {
       "path": "classrooms-210.log",
       "sha256": "3f300fa2a1bba309d326dc0d2699b42329274f173234cd8673cf721bcc72d903",
       "bytes": 60
@@ -36,6 +51,21 @@
       "path": "extras-source-browser.json",
       "sha256": "a63fe3f317090e950a6318786b1b3c3ce142cb3f7565771379b72f1451220a5e",
       "bytes": 700
+    },
+    {
+      "path": "family-stage.json",
+      "sha256": "e65b935317111f1154bb8de7cdb80af0303b09507091ed5bc88c7fd314ce9c22",
+      "bytes": 859
+    },
+    {
+      "path": "full-image-probe.json",
+      "sha256": "d14b78b83bb9dd93a07cc85620e650ae745c863e7aacdc13e83d69478af7ea42",
+      "bytes": 268
+    },
+    {
+      "path": "full-verify.json",
+      "sha256": "4154c8eae99adcdd0e3f1d743634e222279aa209a794e278fcea724a27c23256",
+      "bytes": 1621
     },
     {
       "path": "inputs.json",
@@ -76,6 +106,11 @@
       "path": "source-full.json",
       "sha256": "106aeba32ff536f250c59eeb6da99e32a6f16fe33cddedde7e2596f0dfcd513d",
       "bytes": 299
+    },
+    {
+      "path": "staged-no-port.json",
+      "sha256": "bed73f719fadd6bfd3a8ce46fe1904e24bf42d4b7375f2ccf2494a3a4d4f248c",
+      "bytes": 309
     },
     {
       "path": "synthetic-final-no-hints-1280.png",
