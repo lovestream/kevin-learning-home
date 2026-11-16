@@ -62,7 +62,7 @@
     },
     {
       "path": "packages/english/my-words.ts",
-      "sha256": "a810592f6ba79d62fd3b55a20d8cac046a28d85f49293abfe16d1c5ccf880ddb"
+      "sha256": "61692d8c15e6e34598148149798febc8c744e21410f693a613617e7183905034"
     },
     {
       "path": "packages/english/pack.ts",
@@ -110,7 +110,7 @@
     },
     {
       "path": "tests/english/extras.test.ts",
-      "sha256": "3d6dfb67b2a2cd26155a1b889b7ecc434559ca93787aed304e2f55f2b48eff06"
+      "sha256": "30f737b41a84ba78aac96b3870a26259b09e50c84fd37adfbc9d0d371878e1bd"
     },
     {
       "path": "tests/english/fixture.ts",

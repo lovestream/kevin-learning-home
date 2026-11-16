@@ -283,3 +283,33 @@ test("My Words duplicate, atomic pack limit, source filters and training/collect
   );
   assert.equal(words.entries.size, 200);
 });
+test("manual phrase whitespace follows original normalization and metadata edits preserve spelling chunks", () => {
+  const words = new MyWords(),
+    entry = words.save({
+      ...draft,
+      word: "ice  cream",
+      en: "  A   frozen dessert.  ",
+      example: "I like ice cream.",
+    });
+  assert.equal(entry.card.word, "ice cream");
+  assert.equal(entry.card.en, "A frozen dessert.");
+  const e = new EnglishTraining(packContent([entry.card]));
+  const q = e.start({ action: "start", groupId: "local-pack", mode: "full" });
+  assert.equal(
+    act(e, q, "answer", { answer: "ice cream" }).feedback.correct,
+    true,
+  );
+  const chunks = [...entry.card.chunks];
+  const updated = words.save(
+    {
+      ...draft,
+      word: "ice cream",
+      en: "A frozen dessert.",
+      example: "I like ice cream.",
+      sourceTag: "A different story",
+    },
+    entry.card.id,
+  );
+  assert.deepEqual(updated.card.chunks, chunks);
+  assert.equal(updated.card.contentVersion, entry.card.contentVersion);
+});

@@ -39,7 +39,15 @@ export class MyWords {
   readonly entries = new Map<string, MyWord>();
   readonly urls = new Set<string>();
   save(raw: unknown, id?: string, now = Date.now()) {
-    const d = draftSchema.parse(raw);
+    const parsed = draftSchema.parse(raw);
+    const d = {
+      ...parsed,
+      word: parsed.word.replace(/\s+/g, " "),
+      en: parsed.en.replace(/\s+/g, " "),
+      example: parsed.example.replace(/\s+/g, " "),
+      context: parsed.context.replace(/\s+/g, " "),
+      sourceTag: parsed.sourceTag.replace(/\s+/g, " "),
+    };
     const old = id ? this.entries.get(id) : undefined;
     if (id && (!old || old.archived)) throw Error("请先恢复这个词条，再编辑。");
     if (!old && this.entries.size >= 200)
@@ -64,7 +72,17 @@ export class MyWords {
       pos: d.pos,
       example: d.example,
       exampleZh: "",
-      chunks: [d.word],
+      chunks:
+        old?.card.word === d.word
+          ? [...old.card.chunks]
+          : d.word
+              .split(/([ '-])/)
+              .filter(Boolean)
+              .flatMap((part) =>
+                /^[a-z]+$/i.test(part) && part.length > 4
+                  ? part.match(/.{1,3}/g)!
+                  : [part],
+              ),
       tip: d.context,
       image:
         old?.card.word === d.word && old?.card.en === d.en
