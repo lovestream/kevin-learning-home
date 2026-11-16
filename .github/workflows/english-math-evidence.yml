@@ -7,12 +7,15 @@ on:
       - apps/**
       - packages/**
       - infra/math-preview/Dockerfile
+      - tests/math-full-01/**
       - tests/math-full-02/**
       - tests/math-full-remainder/**
       - tests/math-onepass/inputs.mjs
       - scripts/math-full-02/archive.mjs
       - scripts/math-full-03/archive.mjs
       - scripts/math-full-01/build.ts
+      - scripts/math-full-01/archive.mjs
+      - scripts/verify.ts
       - docs/implementation/evidence/**/source*.json
       - docs/implementation/evidence/math-full-01/origins.json
       - docs/implementation/evidence/math-onepass/study-source.json
