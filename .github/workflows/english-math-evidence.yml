@@ -24,7 +24,7 @@ permissions:
 jobs:
   measure:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with: {fetch-depth: 0}
@@ -41,6 +41,14 @@ jobs:
           cp /tmp/klh-ci-noto.otf ~/.local/share/fonts/klh-ci/NotoSansCJKsc-Regular.otf
           fc-cache -f ~/.local/share/fonts/klh-ci
       - run: npm run build:math-preview
+      - name: Measure all 70 classrooms and their original baseline before publishing fingerprints
+        run: |
+          set -euo pipefail
+          node scripts/verify.ts
+          node tests/math-full-01/browser.mjs --checkpoint
+          node tests/math-full-01/browser.mjs
+          node scripts/math-full-01/archive.mjs
+          python3 scripts/math-full-01/check.py
       - name: Measure real practice and library browsers, then archive their exact inputs
         run: |
           set -euo pipefail
@@ -60,6 +68,7 @@ jobs:
         with:
           name: english-math-measured-evidence
           path: |
+            docs/implementation/evidence/math-full-01
             docs/implementation/evidence/math-full-02
             docs/implementation/evidence/math-full-remainder
             .evidence/english-evidence

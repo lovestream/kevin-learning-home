@@ -1,8 +1,7 @@
 {
   "date": "2026-11-16",
   "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
-  "precommitHead": "1854ec29860c04126787620ca59b0757ed668c6b",
-  "executionWorkingTree": true,
+  "executionWorkingTree": false,
   "files": [
     {
       "path": ".github/workflows/english-math-evidence.yml",
@@ -144,5 +143,6 @@
       "path": "tests/math-preview/container.mjs",
       "sha256": "3b50864fd982059517ee5982e7ca4d7f061e4013657d275cdb7fc167364843ef"
     }
-  ]
+  ],
+  "runtimeHead": "9eb8ef7ebb45b02f281dee414c5cf17ce6769b2c"
 }
