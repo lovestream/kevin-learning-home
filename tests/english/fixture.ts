@@ -23,6 +23,7 @@ export async function fixture() {
     (word, i) => ({
       id: "synthetic-" + word,
       bankId: "core2000",
+      sourceGroupId: "synthetic-group",
       word,
       en: "A " + word + " is a practice item.",
       zh: ["糖果", "颜色", "一个", "铅笔"][i],

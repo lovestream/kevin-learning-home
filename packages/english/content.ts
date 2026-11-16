@@ -1,3 +1,4 @@
+import { sprintBatches } from "./sprint.ts";
 import { readFileSync, existsSync, lstatSync, realpathSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { createHash } from "node:crypto";
@@ -82,6 +83,11 @@ export class EnglishContent {
       mediaCount: Object.keys(b.media).length,
       reviewPersistence: false,
     };
+  }
+  sprint(bankId: string) {
+    return sprintBatches([...this.cards.values()], bankId).map(
+      ({ wordIds, ...x }, i) => ({ ...x, day: i + 1, count: wordIds.length }),
+    );
   }
   card(id: string) {
     const c = this.cards.get(this.bundle.aliases[id] || id);

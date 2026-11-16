@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { englishUUID } from "../../../packages/english/id.ts";
+import { MyWords as MyWordsStore } from "../../../packages/english/my-words.ts";
+const myWords = new MyWordsStore();
 import { EnglishTraining } from "../../../packages/english/training.ts";
 import {
   inspectPack,
@@ -41,6 +43,7 @@ const memory = {
   saved: new Map<string, Card>(),
   events: [] as AttemptEvidence[],
   seen: new Set<string>(),
+  localEvents: new Map<string, AttemptEvidence>(),
 };
 function useSpeech() {
   const [message, setMessage] = useState("");
@@ -205,6 +208,18 @@ export default function English() {
           生词包
         </a>
         <a
+          href={path({ view: "sprint" })}
+          aria-current={view === "sprint" ? "page" : undefined}
+        >
+          考试冲刺
+        </a>
+        <a
+          href={path({ view: "mywords" })}
+          aria-current={view === "mywords" ? "page" : undefined}
+        >
+          我的生词本
+        </a>
+        <a
           href={path({ view: "source" })}
           aria-current={view === "source" ? "page" : undefined}
         >
@@ -228,6 +243,10 @@ export default function English() {
             本次页面无账号、无数据库、无真实金币。不能把一次订正或本次回顾当作隔日独立掌握。
           </p>
         </section>
+      ) : view === "sprint" ? (
+        <Sprint catalog={catalog} refresh={refresh} />
+      ) : view === "mywords" ? (
+        <MyWords />
       ) : view === "notebook" ? (
         <section>
           <h1>本次收藏</h1>
@@ -652,6 +671,8 @@ function Quiz({
         return;
       }
       setQ(x);
+      if (x.latestEvidence?.bankId === "custom")
+        memory.localEvents.set(x.latestEvidence.attemptId, x.latestEvidence);
       if (
         x.latestEvidence &&
         x.latestEvidence.bankId !== "custom" &&
@@ -662,7 +683,7 @@ function Quiz({
       }
       if (action === "audio") speech.speak(x.speech);
       if (x.reference) setReference(x.reference);
-      if (action === "next") {
+      if (action === "next" || action === "sprint-advance") {
         setAnswer("");
         setReference(null);
         requestAnimationFrame(() => input.current?.focus());
@@ -682,10 +703,51 @@ function Quiz({
       setBusy(false);
     }
   }
+  const phaseNames = {
+    cloze: "补空热身",
+    full: "完整拼写",
+    drill: "错词回练",
+    final: "整组复测",
+    complete: "本组完成",
+  };
   if (q.done)
     return (
       <section className="english-result" data-english-result>
-        <h2>这一组拼写完成了。</h2>
+        <h2>
+          {q.sprint
+            ? phaseNames[q.sprint.phase] +
+              (q.sprint.phase === "complete" ? "" : "完成了")
+            : "这一组拼写完成了。"}
+        </h2>
+        {q.sprint && (
+          <>
+            <p>
+              本组 {q.sprint.size} 词，第 {q.sprint.cycle} 轮。最近阶段有{" "}
+              {q.sprint.score} 词首答无辅助正确。
+            </p>
+            <ol className="english-sprint-history">
+              {q.sprint.history.map((r, i) => (
+                <li key={i}>
+                  第{r.cycle}轮 ·{" "}
+                  {phaseNames[r.phase as keyof typeof phaseNames]}：{r.score}/
+                  {r.total} 首答无辅助正确
+                </li>
+              ))}
+            </ol>
+            {q.sprint.nextPhase && q.sprint.nextPhase !== "complete" && (
+              <button
+                className="english-primary"
+                disabled={busy}
+                onClick={() => act("sprint-advance")}
+              >
+                继续{phaseNames[q.sprint.nextPhase]}
+              </button>
+            )}
+            {q.sprint.phase === "complete" && (
+              <p>整组复测首答全部正确。这是本次结果，还需要隔日复习验证。</p>
+            )}
+          </>
+        )}
         <p>
           {
             summary.filter(
@@ -694,19 +756,34 @@ function Quiz({
                 e.firstAttemptCorrect &&
                 !e.usedHint &&
                 !e.answerShown &&
+                !e.usedAudio &&
                 e.mode === "full",
             ).length
           }{" "}
           次完整拼写首答正确；订正和用过提示的记录分别保留。
         </p>
         <p>这是本次练习结果，还不能说明隔日记住了。</p>
-        <button onClick={onBack}>回看词卡</button>
+        {error && (
+          <p role="alert">
+            {error}
+            <button onClick={() => act("sprint-advance")}>重试刚才提交</button>
+          </p>
+        )}
+        <button onClick={onBack}>
+          {q.sprint ? "返回冲刺目录" : "回看词卡"}
+        </button>
         <a href={path({ view: "review" })}>去本次回顾</a>
       </section>
     );
   return (
     <div className="english-quiz" data-english-quiz>
       <header>
+        {q.sprint && (
+          <p className="english-phase">
+            {phaseNames[q.sprint.phase]} · 第 {q.sprint.day} 批 · 第{" "}
+            {q.sprint.cycle} 轮
+          </p>
+        )}
         <span>
           第 {q.index + 1} / {q.total} 题
         </span>
@@ -728,9 +805,16 @@ function Quiz({
               {q.mask}
             </p>
           )}
-          <button disabled={busy} onClick={() => act("audio")}>
-            听读音
-          </button>
+          {q.sprint?.phase !== "final" && (
+            <button disabled={busy} onClick={() => act("audio")}>
+              听读音
+            </button>
+          )}
+          {q.sprint?.phase === "final" && (
+            <p>
+              整组复测不显示提示和参考。先独立写出答案；错后可订正，随后会再回练和复测。
+            </p>
+          )}
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -777,7 +861,9 @@ function Quiz({
                 {q.feedback.correct
                   ? q.firstAnswer?.correct && !q.firstAnswer.assisted
                     ? "首答正确。"
-                    : "这次订正正确。"
+                    : q.firstAnswer?.correct
+                      ? "借助帮助答对了。"
+                      : "这次订正正确。"
                   : "还需要订正。首答已经保留。"}
               </b>
               {q.feedback.nearMiss && (
@@ -814,7 +900,7 @@ function Quiz({
             >
               {q.index + 1 === q.total ? "查看本次结果" : "下一题"}
             </button>
-          ) : (
+          ) : q.sprint?.phase !== "final" ? (
             <div className="english-help">
               <button disabled={busy} onClick={() => act("hint")}>
                 给一个首字母提示
@@ -823,7 +909,7 @@ function Quiz({
                 看参考后再练
               </button>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
       <p role="status">{speech.message}</p>
@@ -837,8 +923,8 @@ function Quiz({
           )}
         </p>
       )}
-      <button className="english-quiet" onClick={onBack}>
-        回到本组词卡
+      <button className="english-quiet" disabled={busy} onClick={onBack}>
+        {q.sprint ? "退出本次冲刺" : "回到本组词卡"}
       </button>
     </div>
   );
@@ -1237,6 +1323,30 @@ function WordPack() {
                     下一张
                   </button>
                 </div>
+                <button
+                  disabled={!selected.size}
+                  onClick={() => {
+                    try {
+                      const ids = myWords.addPack(
+                        cards.filter((_, i) => selected.has(i)),
+                        preview.title,
+                        true,
+                      );
+                      const owned = new Set(
+                        ids.map((id) => myWords.entries.get(id)!.card.image),
+                      );
+                      urls.current = urls.current.filter((u) => !owned.has(u));
+                      setStatus(
+                        `已加入本次生词本 ${ids.length} 词；重复词保留原内容。`,
+                      );
+                    } catch (e) {
+                      setStatus((e as Error).message);
+                    }
+                  }}
+                >
+                  把所选词加入我的生词
+                </button>
+                <a href={path({ view: "mywords" })}>打开我的生词</a>
                 <button className="english-primary" onClick={begin}>
                   确认所选词，开始本次训练
                 </button>
@@ -1246,6 +1356,470 @@ function WordPack() {
           </>
         )
       )}
+    </section>
+  );
+}
+
+function Sprint({
+  catalog,
+  refresh,
+}: {
+  catalog: EnglishCatalog;
+  refresh: () => void;
+}) {
+  const [bank, setBank] = useState("ket"),
+    [batches, setBatches] = useState<
+      { day: number; count: number; title: string }[]
+    >([]),
+    [day, setDay] = useState(1),
+    [quiz, setQuiz] = useState<QuizView | null>(null),
+    [error, setError] = useState(""),
+    [busy, setBusy] = useState(false);
+  useEffect(() => {
+    let live = true;
+    setBatches([]);
+    setDay(1);
+    setError("");
+    get<typeof batches>("/sprint?bank=" + encodeURIComponent(bank))
+      .then((x) => {
+        if (live) setBatches(x);
+      })
+      .catch((e) => {
+        if (live) setError(e.message);
+      });
+    return () => {
+      live = false;
+    };
+  }, [bank]);
+  const back = () => {
+    if (quiz)
+      void command({
+        action: "close",
+        sessionId: quiz.sessionId,
+        requestId: englishUUID(),
+      }).catch(() => {});
+    setQuiz(null);
+  };
+  if (quiz)
+    return (
+      <Quiz
+        key={quiz.sessionId}
+        initial={quiz}
+        group={{
+          id: "sprint",
+          bankId: bank,
+          title: "考试冲刺",
+          book: null,
+          unit: day,
+          half: null,
+          wordIds: [],
+          readingImages: [],
+        }}
+        refresh={refresh}
+        onBack={back}
+      />
+    );
+  return (
+    <section data-english-sprint>
+      <h1>考试冲刺</h1>
+      <p>
+        选一批词，先补空，再完整拼写。错词回练后，合上提示整组复测；整组首答全部正确才结束本组。
+      </p>
+      <div className="english-sprint-route" aria-label="冲刺顺序">
+        <span>补空热身</span>
+        <span>完整拼写</span>
+        <span>错词回练</span>
+        <span>整组复测</span>
+      </div>
+      <div className="english-extra-controls">
+        <label>
+          冲刺词库
+          <select
+            value={bank}
+            disabled={busy}
+            onChange={(e) => setBank(e.target.value)}
+          >
+            {catalog.banks.map((b) => (
+              <option key={b.id} value={b.id}>
+                {b.title}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          选择词表批次
+          <select
+            value={day}
+            disabled={busy || !batches.length}
+            onChange={(e) => setDay(Number(e.target.value))}
+          >
+            {batches.map((b) => (
+              <option key={b.day} value={b.day}>
+                第{b.day}批 · {b.title} · {b.count}词
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      <p>
+        {bank === "movers"
+          ? "Movers 单词沿用原PDF的每日分组，短语每20条一组。"
+          : "沿用原词表顺序，每批30词，最后一批保留余下的词。"}
+        这里的批次可以自由选择，不表示已记录学习日期。
+      </p>
+      <button
+        className="english-primary"
+        disabled={busy || !batches.length}
+        onClick={async () => {
+          setBusy(true);
+          setError("");
+          try {
+            setQuiz(
+              await command({ action: "sprint-start", bankId: bank, day }),
+            );
+          } catch (e) {
+            setError((e as Error).message);
+          } finally {
+            setBusy(false);
+          }
+        }}
+      >
+        开始这批冲刺{batches[day - 1] ? `（${batches[day - 1].count}词）` : ""}
+      </button>
+      {error && <p role="alert">{error}</p>}
+      <p>本次进度只留在页面内存；刷新清空，不计金币，不产生跨天学习记录。</p>
+    </section>
+  );
+}
+const emptyDraft = {
+  word: "",
+  en: "",
+  example: "",
+  sourceTag: "Reading",
+  context: "",
+  pos: "",
+  ipa: "",
+  train: true,
+};
+function MyWords() {
+  const [, rerender] = useState(0),
+    [query, setQuery] = useState(""),
+    [source, setSource] = useState(""),
+    [status, setStatus] = useState<
+      "active" | "train" | "collection" | "archived"
+    >("active"),
+    [selected, setSelected] = useState<Set<string>>(new Set()),
+    [editing, setEditing] = useState<string | null>(null),
+    [draft, setDraft] = useState({ ...emptyDraft }),
+    [form, setForm] = useState(false),
+    [preview, setPreview] = useState(false),
+    [error, setError] = useState(""),
+    [quiz, setQuiz] = useState<QuizView | null>(null);
+  const engine = useRef<EnglishTraining | null>(null),
+    speech = useSpeech();
+  const rows = myWords.filter(query, source, status),
+    visible = new Set(rows.map((e) => e.card.id));
+  const chosen = [...selected].filter((id) => visible.has(id));
+  const refresh = () => rerender((n) => n + 1);
+  useEffect(() => {
+    setSelected(new Set());
+  }, [query, source, status]);
+  const edit = (id?: string) => {
+    const e = id ? myWords.entries.get(id)! : null;
+    setEditing(id || null);
+    setDraft(
+      e
+        ? {
+            word: e.card.word,
+            en: e.card.en,
+            example: e.card.example,
+            sourceTag: e.sourceTag,
+            context: e.context,
+            pos: e.card.pos,
+            ipa: e.card.ipa,
+            train: e.train,
+          }
+        : { ...emptyDraft },
+    );
+    setPreview(false);
+    setError("");
+    setForm(true);
+  };
+  if (quiz && engine.current)
+    return (
+      <Quiz
+        key={quiz.sessionId}
+        initial={quiz}
+        group={engine.current.content.group("local-pack").group}
+        transport={async (body) => engine.current!.act(body)}
+        refresh={refresh}
+        onBack={() => {
+          engine.current?.clear();
+          setQuiz(null);
+        }}
+      />
+    );
+  return (
+    <section data-english-mywords>
+      <header className="english-heading">
+        <div>
+          <h1>我的生词本</h1>
+          <p>
+            把阅读中遇到的词留在这里。可以只收藏，也可以选进训练；编辑、归档都保留本次旧答题记录。刷新后清空。
+          </p>
+        </div>
+        <button className="english-primary" onClick={() => edit()}>
+          手动加一个词
+        </button>
+      </header>
+      {form && (
+        <form
+          className="english-custom-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            try {
+              // Validate preview with a temporary catalogue; the live entry changes only on confirmation.
+              const check = new MyWordsStore();
+              check.save(draft);
+              setPreview(true);
+              setError("");
+            } catch (e) {
+              setError(
+                e instanceof Error && e.name !== "ZodError"
+                  ? e.message
+                  : "请填写英文单词、释义和例句，检查长度与词形。",
+              );
+            }
+          }}
+        >
+          <h2>{editing ? "编辑这个词" : "记下一个新词"}</h2>
+          <div className="english-draft-grid">
+            {(
+              [
+                ["word", "英文单词或短语"],
+                ["en", "英文释义"],
+                ["example", "英文例句"],
+                ["sourceTag", "来自哪本书或哪篇文章"],
+                ["context", "遇到它时的原句（可选）"],
+                ["pos", "词性（可选）"],
+                ["ipa", "音标（可选）"],
+              ] as const
+            ).map(([key, label]) => (
+              <label key={key}>
+                {label}
+                <input
+                  required={["word", "en", "example", "sourceTag"].includes(
+                    key,
+                  )}
+                  maxLength={
+                    key === "word" || key === "sourceTag" || key === "ipa"
+                      ? 80
+                      : key === "pos"
+                        ? 40
+                        : 320
+                  }
+                  value={draft[key]}
+                  onChange={(e) => {
+                    setDraft({ ...draft, [key]: e.target.value });
+                    setPreview(false);
+                  }}
+                />
+              </label>
+            ))}
+          </div>
+          <label className="english-inline-check">
+            <input
+              type="checkbox"
+              checked={draft.train}
+              onChange={(e) => setDraft({ ...draft, train: e.target.checked })}
+            />
+            加入训练候选（仍需主动开始）
+          </label>
+          {preview ? (
+            <aside className="english-custom-preview">
+              <h3 lang="en">{draft.word}</h3>
+              <p>{draft.en}</p>
+              <blockquote>{draft.example}</blockquote>
+              <p>来源：{draft.sourceTag}</p>
+              <button
+                type="button"
+                className="english-primary"
+                onClick={() => {
+                  try {
+                    myWords.save(draft, editing || undefined);
+                    setForm(false);
+                    setSelected(new Set());
+                    refresh();
+                    setError("");
+                  } catch (e) {
+                    setError((e as Error).message);
+                  }
+                }}
+              >
+                确认保存到本次生词本
+              </button>
+            </aside>
+          ) : (
+            <button>先看词卡预览</button>
+          )}
+          <button
+            type="button"
+            onClick={() => {
+              setForm(false);
+              setError("");
+            }}
+          >
+            取消编辑
+          </button>
+        </form>
+      )}
+      <div className="english-extra-controls">
+        <label>
+          查找生词
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="单词、释义或原句"
+          />
+        </label>
+        <label>
+          按来源查看
+          <select value={source} onChange={(e) => setSource(e.target.value)}>
+            <option value="">全部来源</option>
+            {[
+              ...new Set([...myWords.entries.values()].map((e) => e.sourceTag)),
+            ].map((s) => (
+              <option key={s}>{s}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          查看范围
+          <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value as typeof status)}
+          >
+            <option value="active">未归档的词</option>
+            <option value="train">训练候选</option>
+            <option value="collection">只收藏的词</option>
+            <option value="archived">已归档的词</option>
+          </select>
+        </label>
+      </div>
+      <div className="english-custom-actions">
+        <button
+          disabled={!rows.length}
+          onClick={() => setSelected(new Set(rows.map((e) => e.card.id)))}
+        >
+          全选当前结果（{rows.length}）
+        </button>
+        <button onClick={() => setSelected(new Set())}>取消选择</button>
+        <span>已选 {chosen.length} 词</span>
+      </div>
+      {!rows.length && (
+        <p>这里还没有符合条件的词。可以手动加词，或在“生词包”中核对后加入。</p>
+      )}
+      <div className="english-custom-list">
+        {rows.map((e) => (
+          <article key={e.card.id}>
+            <label className="english-inline-check">
+              <input
+                type="checkbox"
+                checked={selected.has(e.card.id)}
+                onChange={(ev) =>
+                  setSelected((old) => {
+                    const n = new Set(old);
+                    if (ev.target.checked) n.add(e.card.id);
+                    else n.delete(e.card.id);
+                    return n;
+                  })
+                }
+              />
+              <strong lang="en">{e.card.word}</strong>
+            </label>
+            {e.card.image && <img src={e.card.image} alt="你选择的词包配图" />}
+            <p>{e.card.en}</p>
+            <blockquote>{e.card.example}</blockquote>
+            <small>
+              {e.sourceTag} · {e.train ? "训练候选" : "只收藏"} · 本次旧版本{" "}
+              {e.revisions.length} 个 · 本次作答{" "}
+              {
+                [...memory.localEvents.values()].filter(
+                  (a) => a.wordId === e.card.id,
+                ).length
+              }{" "}
+              次
+            </small>
+            <div className="english-custom-actions">
+              <button onClick={() => speech.speak(e.card.word)}>
+                听这个词
+              </button>
+              {!e.archived && (
+                <button onClick={() => edit(e.card.id)}>编辑</button>
+              )}
+              <button
+                onClick={() => {
+                  myWords.archive(e.card.id, !e.archived);
+                  setSelected(new Set());
+                  refresh();
+                }}
+              >
+                {e.archived ? "恢复这个词" : "归档这个词"}
+              </button>
+            </div>
+          </article>
+        ))}
+      </div>
+      {status !== "archived" && (
+        <div className="english-custom-actions">
+          <button
+            disabled={!chosen.length}
+            onClick={() => {
+              myWords.setTraining(chosen, true);
+              refresh();
+            }}
+          >
+            所选设为训练候选
+          </button>
+          <button
+            disabled={!chosen.length}
+            onClick={() => {
+              myWords.setTraining(chosen, false);
+              refresh();
+            }}
+          >
+            所选只收藏
+          </button>
+          <button
+            className="english-primary"
+            disabled={!chosen.length || chosen.length > 30}
+            onClick={() => {
+              try {
+                const cards = chosen.map((id) =>
+                  structuredClone(myWords.entries.get(id)!.card),
+                );
+                const e = new EnglishTraining(packContent(cards));
+                engine.current = e;
+                setQuiz(
+                  e.start({
+                    action: "start",
+                    groupId: "local-pack",
+                    mode: "sequence",
+                  }),
+                );
+                speech.stop();
+              } catch (e) {
+                setError((e as Error).message);
+              }
+            }}
+          >
+            练习所选词（最多30词）
+          </button>
+        </div>
+      )}
+      <p role="status">{speech.message}</p>
+      {error && <p role="alert">{error}</p>}
     </section>
   );
 }

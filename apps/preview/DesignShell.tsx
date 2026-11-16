@@ -226,6 +226,8 @@ export default function DesignShell({
               ["?view=notebook", "本次收藏"],
               ["?view=review", "本次回顾"],
               ["?view=pack", "生词包"],
+              ["?view=sprint", "考试冲刺"],
+              ["?view=mywords", "我的生词本"],
               ["?view=source", "内容与声音"],
             ].map(([suffix, title]) => (
               <a key={title} href={"/subjects/english" + suffix}>

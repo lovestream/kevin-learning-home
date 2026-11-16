@@ -313,6 +313,19 @@ export async function startPreview({
           send(200, JSON.stringify(english.catalog));
           return;
         }
+        if (pathname === "/preview-api/v1/english/sprint") {
+          send(
+            200,
+            JSON.stringify(
+              english.sprint(
+                new URL(req.url!, "http://localhost").searchParams.get(
+                  "bank",
+                ) || "",
+              ),
+            ),
+          );
+          return;
+        }
         if (pathname.startsWith("/preview-api/v1/english/groups/")) {
           send(
             200,

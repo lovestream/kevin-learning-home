@@ -26,6 +26,10 @@ export type EnglishCard = {
   sourceBook?: number;
   sourceUnit?: number;
   sourceHalf?: string;
+  sourceDay?: number;
+  sourceNumber?: number;
+  cardType?: string;
+  sourceGroupId?: string;
 };
 export type EnglishGroup = {
   id: string;
@@ -81,6 +85,7 @@ export type EnglishBundle = {
   sources: { path: string; sha256: string; bytes: number }[];
 };
 export type QuizView = {
+  sprint?: SprintView;
   sessionId: string;
   taskId: string;
   index: number;
@@ -104,11 +109,26 @@ export type QuizView = {
   };
   done: boolean;
 };
+export type SprintView = {
+  bankId: string;
+  day: number;
+  days: number;
+  size: number;
+  phase: "cloze" | "full" | "drill" | "final" | "complete";
+  cycle: number;
+  score: number;
+  nextPhase?: "cloze" | "full" | "drill" | "final" | "complete";
+  history: { phase: string; cycle: number; score: number; total: number }[];
+};
 export type AttemptEvidence = {
   subjectId: "english";
   bankId: string;
   wordId: string;
   lessonOrUnitId: string;
+  trainingGroupId?: string;
+  sprintPhase?: string;
+  sprintCycle?: number;
+  sprintDay?: number;
   contentVersion: string;
   attemptId: string;
   occurredAt: number;

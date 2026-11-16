@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "width": 390,
+      "packTransferAndImageLifetime": true,
+      "sprintLifecycle": true,
+      "wrongFirst": true,
+      "finalNoHelp": true,
+      "myWordsLocalOnly": true,
+      "filterSelection": true,
+      "editHistory": true,
+      "archiveRestore": true,
+      "refreshClears": true
+    },
+    {
+      "width": 768,
+      "packTransferAndImageLifetime": true,
+      "sprintLifecycle": true,
+      "wrongFirst": true,
+      "finalNoHelp": true,
+      "myWordsLocalOnly": true,
+      "filterSelection": true,
+      "editHistory": true,
+      "archiveRestore": true,
+      "refreshClears": true
+    },
+    {
+      "width": 1280,
+      "packTransferAndImageLifetime": true,
+      "sprintLifecycle": true,
+      "wrongFirst": true,
+      "finalNoHelp": true,
+      "myWordsLocalOnly": true,
+      "filterSelection": true,
+      "editHistory": true,
+      "archiveRestore": true,
+      "refreshClears": true
+    }
+  ],
+  "realRecordsRead": false,
+  "rewardsIssued": 0
+}

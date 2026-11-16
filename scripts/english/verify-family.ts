@@ -9,6 +9,56 @@ import {
 } from "../../packages/english/source-grading.mjs";
 const c = new EnglishContent(".english-family"),
   e = new EnglishTraining(c);
+let sprintGroups = 0,
+  sprintWords = 0;
+for (const b of c.catalog.banks) {
+  const batches = c.sprint(b.id);
+  assert.equal(
+    batches.reduce((n, x) => n + x.count, 0),
+    b.count,
+  );
+  for (const batch of batches) {
+    let q = e.act({ action: "sprint-start", bankId: b.id, day: batch.day });
+    for (let phase = 0; phase < 3; phase++) {
+      assert.equal(q.sprint.phase, ["cloze", "full", "final"][phase]);
+      while (!q.done) {
+        const card = e.sessions.get(q.sessionId)!.tasks[q.index].card;
+        assert(!clueContainsAnswer(q.clue, card));
+        assert(q.clue.trim(), "INDEPENDENT_CLUE_REQUIRED " + card.id);
+        q = e.act({
+          action: "answer",
+          sessionId: q.sessionId,
+          taskId: q.taskId,
+          requestId: crypto.randomUUID(),
+          answer: card.word,
+        });
+        assert(q.feedback.correct);
+        assert.equal(q.latestEvidence.lessonOrUnitId, card.sourceGroupId);
+        q = e.act({
+          action: "next",
+          sessionId: q.sessionId,
+          taskId: q.taskId,
+          requestId: crypto.randomUUID(),
+        });
+      }
+      if (phase < 2)
+        q = e.act({
+          action: "sprint-advance",
+          sessionId: q.sessionId,
+          requestId: crypto.randomUUID(),
+        });
+    }
+    assert.equal(q.sprint.phase, "complete");
+    assert.equal(q.sprint.score, batch.count);
+    sprintGroups++;
+    sprintWords += batch.count;
+    e.act({
+      action: "close",
+      sessionId: q.sessionId,
+      requestId: crypto.randomUUID(),
+    });
+  }
+}
 let checked = 0,
   exerciseSlots = 0;
 assert(
@@ -32,6 +82,7 @@ for (const g of c.bundle.groups) {
         wordIds: [id],
       });
     assert(!clueContainsAnswer(q.clue, card));
+    assert(q.clue.trim(), "INDEPENDENT_CLUE_REQUIRED " + card.id);
     assert(!("wordId" in q));
     assert(!("word" in q));
     assert.equal(
@@ -76,6 +127,9 @@ console.log(
       (n, g) => n + g.readingImages.length,
       0,
     ),
+    sprintGroups,
+    sprintWords,
+    sprintCorrectResponses: sprintWords * 3,
     rewardsIssued: 0,
     realRecordsRead: false,
   }),

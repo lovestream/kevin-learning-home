@@ -1,0 +1,28 @@
+✔ Core meaning survives target removal, including inflections, without accepting them as spellings (9.701833ms)
+✔ source partitions: generic 65 is 30/30/5; Movers original PDF days and 20-phrase chunks (0.596125ms)
+✔ duplicate clean rows never replace a missing word; audio and hint are not clean final evidence (0.091959ms)
+✔ complete sprint lifecycle: wrong full -> drill -> final wrong -> drill -> final clean; no rewards or overwritten first (4.873084ms)
+✔ sprint final clean score uses the active phase only, not previously successful cloze (2.782375ms)
+✔ custom training evidence survives edits/archive and keeps content version snapshots (1.128583ms)
+✔ My Words duplicate, atomic pack limit, source filters and training/collection are independent (3.964ms)
+✔ English HTTP is same-origin JSON-only, answer-free before attempt, no cookies or private APIs (68.627708ms)
+✔ source helper target is pinned and semantic alternatives never count as spelling (1.203917ms)
+✔ pre-answer payload has no target word, stable answer-bearing ID, definition, example or source filename (6.412583ms)
+✔ first wrong answer is immutable; hint, reference and audio remain separately visible (3.445084ms)
+✔ help before first answer is accurately marked; a retry cannot rewrite a receipt or task (3.199875ms)
+✔ cloze always hides at least one letter, full mode no mask; unfinished cannot advance (2.260208ms)
+✔ workbook grading keeps first responses, idempotent retries and later corrections separate (2.289125ms)
+✔ session expiration, isolation and resource limits do not persist learner data (2.053125ms)
+✔ bundle/media tampering fails closed and source aliases retain canonical IDs (1.998959ms)
+✔ public pack format rejects external/SVG images, missing fields, bad chunks, missing target and future versions (1.444916ms)
+✔ LAN HTTP IDs remain valid v4 UUIDs with secure-context-only APIs absent (0.508375ms)
+✔ retried summary is a historical snapshot; final next returns the result atomically (1.8415ms)
+✔ original V1 mimeType/base64 and source-only title variants remain importable (0.299792ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 304.322375

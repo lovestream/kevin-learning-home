@@ -1,12 +1,12 @@
 {
   "status": "PASS",
-  "origin": "http://127.0.0.1:45755",
+  "origin": "http://127.0.0.1:49325",
   "nas": false,
   "execution": {
-    "head": "7e9714f2139d88bca4b1f9dab2eb6c75d282aeb2",
+    "head": "1854ec29860c04126787620ca59b0757ed668c6b",
     "dirty": true,
     "files": {
-      "apps/preview/DesignShell.tsx": "31ecfb61afa27a14628bb3b3520e73dbc24a1b26f33edce2fc9d2ec597cab27c",
+      "apps/preview/DesignShell.tsx": "6352eb381c21f17a3a5e4b35abe71aae5c1db735bd8405dddc3e139960467214",
       "apps/preview/DetectiveTraining.tsx": "1040786519ab3a04936554e21b5939fcfebb0b8c363a31e0b60a3ece524029ab",
       "apps/preview/HomeSketch.tsx": "19ac52f1fe0fd0e51b1e86d1fc87412badee73222dc5ab9351d337f895edaa6a",
       "apps/preview/MapNavigation.tsx": "14906533dcfbed202a139f20ffa2d44015b44c5389ecd21ce487763060b20019",
@@ -163,8 +163,8 @@
       "apps/preview/content/lessons/numbers.subtraction.meaning.json": "54a16da4aee36e20f169979394697cdb3b4da482ff9e88d1d06931224ea18c0f",
       "apps/preview/contract.ts": "bdbf0af562ca4401eddf2afd0427a22e229c9c62897878f20d9e14fd168df1f7",
       "apps/preview/design-system.css": "173fc36e4939a9f4a0699d0ea3e58282d06df3e0e1a658106e0976ae8c78d665",
-      "apps/preview/english/English.tsx": "b6134ef715f36adf81a79fb7e1341f952ba4c10b0b13e5c8004f8102c1e58779",
-      "apps/preview/english/english.css": "832894394226e8ddf3fe3d816305fe853f88bbf8fc5978efbfb53741fd99d340",
+      "apps/preview/english/English.tsx": "45a06adb61b8f15e00b46a379a013710dc526c4a86e410fbc3bf2eabed55aab7",
+      "apps/preview/english/english.css": "ddb71556093f09c6109fe8d5244cdd9fba450c8c3783dd761c48767970f6ea6c",
       "apps/preview/english/main.tsx": "47f505145330ce333fc8c6f2e420c5fb617795b2c1819381be673661a2bf3aee",
       "apps/preview/event-id.ts": "d52b01cc8dbd07bae87eb6e78cf70500d5b1bfa1a91a2b54e9bd8def1a420c99",
       "apps/preview/explore/Explore.tsx": "14961b2b5b5c43baa406ec5656920514f607d074bb029c4517a0991c9509458c",
@@ -220,7 +220,7 @@
       "apps/preview/registry-meta.ts": "8aad5e9b0dd4b352ec02c4e873e196df5b6b5f996396e82687ffab93ab578bc9",
       "apps/preview/registry.tsx": "df091637447d16644d268a433b4027fed7c0bcb7ed2a208c6d09601066ae6dd9",
       "apps/preview/runtime.ts": "ceaaa526e5b5b8f4084464931654c93cc796b44bae508fa92436a3943e340613",
-      "apps/preview/server.ts": "49900f074edc83edcc3b08a01525f8d1efdd4fd2f3ca6b747990367e1cb6d5d0",
+      "apps/preview/server.ts": "9809e4ce397c599d733f2c983fcc4084d73045d84c7a1b1e96997701d30b399f",
       "apps/preview/training-contract.ts": "d12ee40b624fbfdca528d3312c7ba786e3be590c41f2da16d968efbe40c6f2f0",
       "apps/preview/training.ts": "c55342c29a1546da19840565e155904a5d427b84598fc91ffa298c074e502b15",
       "apps/preview/validation.ts": "290d88a1877fecbee25f688e77d8bb099da23036864bb088fa4ba491fd73b000",
@@ -237,7 +237,7 @@
       "docs/implementation/evidence/math-onepass/reading-source.json": "7fe796e9e3cabf634e33beaa2b3feb7f4ad358342d11e90312657c2d826d04ea",
       "docs/implementation/evidence/math-onepass/source-import.json": "774e5a9b8d1ad9c81f7ef6e7a41658eb6456bb50560227bc699c54f005e61d75",
       "docs/implementation/evidence/math-onepass/study-source.json": "e12426c6496574486efab90d2a075c05160e16f7e4625e208d841646da475c10",
-      "infra/math-preview/Dockerfile": "2a2ac7b8ef6b78b0486aeb676daa946376896e3f38bc9723289399ab91c8afce",
+      "infra/math-preview/Dockerfile": "250fb54f952887090e6c18521cf8519975aee57b6920bf337569410e1707ee2c",
       "package-lock.json": "866d3e63c439508fe6531c215743da16107c285cbb1dcc4401d5ea6a9cc51866",
       "package.json": "15321478184db5e38b5ae6ec4a6e2e47a1621b165ce2cd8cdf429acb26408584",
       "packages/contracts/auth.ts": "f0cec332be75d9644d5c7c59083ca209c72799505da0e2272070dc93f7deb430",
@@ -300,7 +300,7 @@
       "tests/math-full-remainder/browser.mjs": "9cc2b159ca4df0a704e810a52fa92e4927d555378e76c325ce98fc0e926dda93"
     }
   },
-  "elapsedMs": 413431,
+  "elapsedMs": 342556,
   "results": [
     {
       "width": 390,

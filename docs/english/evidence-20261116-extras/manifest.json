@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-16",
+  "scope": "Anonymous sprint and page-local My Words. Synthetic screenshots only. Source inputs are explicit; fixed-head CI/NAS follows.",
+  "files": [
+    {
+      "path": "baseline.log",
+      "sha256": "e87f5b6881a51f99c94ffd8819bf14b7b6224d8ab39f7beaf0c098a3174cce7a",
+      "bytes": 6877
+    },
+    {
+      "path": "english-unit.log",
+      "sha256": "72f4a11d73d1ef72e2126bbfdc2e45ef8a7e09eaea26e43938ec64cd4752b3fe",
+      "bytes": 2239
+    },
+    {
+      "path": "extras-browser.json",
+      "sha256": "17fa304ebcf43c0cfe94854064130a2f215c75eb0094fd52a2ad274ab7b41ca7",
+      "bytes": 1019
+    },
+    {
+      "path": "extras-source-browser.json",
+      "sha256": "a63fe3f317090e950a6318786b1b3c3ce142cb3f7565771379b72f1451220a5e",
+      "bytes": 700
+    },
+    {
+      "path": "inputs.json",
+      "sha256": "a8b461492e1f8c50f0c7217ea6d7379a6a910ea4f8972cb5e63d1cafaafe75f8",
+      "bytes": 5211
+    },
+    {
+      "path": "library-browser.log",
+      "sha256": "432f2b4d5db68abe0ac0814503852906eea483af07f66bdb190b2107d0223a4b",
+      "bytes": 107
+    },
+    {
+      "path": "math-original-grading.log",
+      "sha256": "b68893f0150e3bc36d7058b02a1d32a2a716d78dce57b60eef2001248a9d6a3f",
+      "bytes": 1707
+    },
+    {
+      "path": "practice-browser.log",
+      "sha256": "460391c253304ffa7a66fe45bc43f948a17b958ed1c21c4c39e627c21ab3227b",
+      "bytes": 104
+    },
+    {
+      "path": "python-boundaries.log",
+      "sha256": "ace1bea3a0451642a48141276915bbfb000d0276ed11b36c7a565b9d78124730",
+      "bytes": 1452
+    },
+    {
+      "path": "read-only-preflight.json",
+      "sha256": "c0fbc95d96afc7629fa60b2509e4f90fb74172f26fbf5840f9262edca342b00c",
+      "bytes": 276
+    },
+    {
+      "path": "source-full.json",
+      "sha256": "106aeba32ff536f250c59eeb6da99e32a6f16fe33cddedde7e2596f0dfcd513d",
+      "bytes": 299
+    },
+    {
+      "path": "synthetic-final-no-hints-1280.png",
+      "sha256": "3e1d1660fc372de2c914d888951a127fe2de2b382841b748c665acfc56cb4540",
+      "bytes": 154017
+    },
+    {
+      "path": "synthetic-mywords-1280.png",
+      "sha256": "d382a31941f8098ceda33e1c3b5142bfbc4b73210645a21683de987cae9be2b9",
+      "bytes": 187017
+    },
+    {
+      "path": "synthetic-sprint-start-1280.png",
+      "sha256": "f8f4f594362efe746997327cee8e3632ecd83d47ef24f2bd2abd3ea7db4543d2",
+      "bytes": 162953
+    },
+    {
+      "path": "synthetic-wrong-round-1280.png",
+      "sha256": "977a852e90b31a3cc6b3a53e2169daa05b289333b9a27eb9cc35a1f70e02a034",
+      "bytes": 147934
+    }
+  ]
+}

@@ -91,15 +91,27 @@ function image(path: unknown) {
 }
 const cards: EnglishCard[] = [];
 const groups: EnglishGroup[] = [];
+// Fixed-source editorial correction. Keep upstream untouched and version the
+// derived card; the original importer accidentally appended the next headword.
+const tombId = "core2000-b3-u14-b-05-tomb";
+const tombDefinition =
+  "A tomb is a structure above or below the ground where a dead person is buried.";
 for (const bankId of ["core2000", "movers", "ket", "pet"]) {
   const raw = context.window.WORD_BANKS[bankId];
   for (const w of raw) {
+    const originalVersion = sha(JSON.stringify(w));
+    if (
+      w.id === tombId &&
+      originalVersion !==
+        "908b2dd86e1bd68a2ee3fc5b5fd850d10ba898294389eb0bdb4310c403b1c450"
+    )
+      throw Error("EDITORIAL_CORRECTION_SOURCE_CHANGED");
     const imageUrl = image(w.visual?.image);
     cards.push({
       id: w.id,
       bankId,
       word: w.word,
-      en: w.studyDefinition || w.en || "",
+      en: w.id === tombId ? tombDefinition : w.studyDefinition || w.en || "",
       zh: w.zh || "",
       ipa: w.ipa || "",
       pos: Array.isArray(w.pos) ? w.pos.join(", ") : w.pos || "",
@@ -119,10 +131,20 @@ for (const bankId of ["core2000", "movers", "ket", "pet"]) {
             },
           }
         : {}),
-      contentVersion: sha(JSON.stringify(w)),
+      contentVersion:
+        w.id === tombId
+          ? sha(JSON.stringify({ originalVersion, definition: tombDefinition }))
+          : originalVersion,
       spellingVariants: w.spellingVariants || [],
       semanticAlternatives: w.semanticAlternatives || w.acceptedAnswers || [],
       quizClue: w.quizClue || "",
+      ...(bankId === "movers"
+        ? {
+            sourceDay: w.sourceDay,
+            sourceNumber: w.sourceNumber,
+            cardType: w.cardType,
+          }
+        : {}),
       ...(w.sourceBook
         ? {
             sourceBook: w.sourceBook,
@@ -164,6 +186,8 @@ for (const b of context.window.CORE2000_COURSE.batches)
       .map((x: any) => image(typeof x === "string" ? x : x.image))
       .filter(Boolean),
   });
+for (const c of cards)
+  c.sourceGroupId = groups.find((g) => g.wordIds.includes(c.id))!.id;
 const counts = Object.fromEntries(
   ["core2000", "movers", "ket", "pet"].map((b) => [
     b,
