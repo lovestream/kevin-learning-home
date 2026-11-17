@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-17",
+  "runtimeHead": "47f077339be9aa1088163aa833851c037d1f380c",
+  "status": "PASS_CI_DEPLOYMENT_BLOCKED",
+  "historicalLocalEvidence": "../evidence-20261116-extras/manifest.json",
+  "files": [
+    {
+      "path": "ci-image.json",
+      "bytes": 895,
+      "sha256": "5bcd52bf9f870bb9e36a2a3fe145b8f80b31b756e8bf69c7c5516e0bbe652e8d"
+    },
+    {
+      "path": "fixed-head-ci.json",
+      "bytes": 1761,
+      "sha256": "f0f44ab289c4370e4066853ae83c1f420c0d2473302e19c98a9322db4f41e1dc"
+    },
+    {
+      "path": "fixed-head-inputs.json",
+      "bytes": 5422,
+      "sha256": "1d97b567a1b5c829097e2f5e9f54a61387d011ec7a7ab9a775c4891015881c18"
+    },
+    {
+      "path": "nas-readiness.json",
+      "bytes": 1007,
+      "sha256": "ecfd186ed5a9346b5be3c5f17489fd1d3b8b7ebb3b3eb6e7a9fe6420d761f7b1"
+    }
+  ]
+}

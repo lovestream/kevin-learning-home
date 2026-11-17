@@ -47,3 +47,18 @@
 
 
 新增CI测量工具第一次执行已实际完成70课堂，却被旧归档器只允许 `PASS_LOCAL` 的判断拦住（run43879363334）。归档器现按执行环境严格要求 `PASS_LOCAL` 或 `PASS_CI`，保留原状态，不伪改为本地通过；60/18/12/9计数、210课堂结果、每个源码指纹检查均保留。`fbbf516`候选镜像暂不切端口，须等修正后的完整CI与最终验收。
+
+
+## 2026-11-17 固定提交CI收口与发布阻碍
+
+运行源码固定为 `47f077339be9aa1088163aa833851c037d1f380c`，五组工作流均实际完成且结论success：
+
+- [PR综合](https://github.com/lovestream/kevin-learning-home/actions/runs/43881024790)、[PR私有记录合成](https://github.com/lovestream/kevin-learning-home/actions/runs/43881024753)；
+- [push综合](https://github.com/lovestream/kevin-learning-home/actions/runs/43881013822)、[push私有记录合成](https://github.com/lovestream/kevin-learning-home/actions/runs/43881013820)；
+- [英语共享运行层独立数学测量](https://github.com/lovestream/kevin-learning-home/actions/runs/43881013835)，包含完整基线、70课堂/210视口、849题/84流程与255旧专题流程。
+
+公共CI镜像 `sha256:e1262b9e67b9a3350da234ecda49536a0bf2973ec9ab9b74bfd58a0fd5dc2c1f` 已下载并按回执校验字节数及SHA256，不含家庭教材素材或真实学习记录。[固定提交证据](evidence-20261117-extras-ci/manifest.json) 保留五组结果、镜像回执及36项来源文件指纹；11月16日的本地结果仍绑定其原执行版本，没有改写成新提交实测。
+
+**尚未完成本批NAS上线。**11月17日只读探测发现SSH端口可达、密钥认证成功，但远程命令通道没有完成，网站38444端口拒绝连接。最后已知运行版本为 `e96ebd2`，最后已知未发布候选为 `fbbf516`；当前远端容器状态无法核实，不能把“最后已知”称为当前在线。已向用户询问NAS状态，没有改DSM、网络、密钥、其他容器或真实数据。
+
+NAS恢复后仍须执行：以47f固定CI镜像暂存→家庭素材离线叠层/全量探针→原端口激活→实际英语与新增冲刺/生词本、首页/探索、14组数学回归→回退并恢复。上述步骤尚无本批通过回执，不用此前e96的上线验收冒充；这批状态是“代码及CI通过，部署待恢复”，不是全量交付完成。
