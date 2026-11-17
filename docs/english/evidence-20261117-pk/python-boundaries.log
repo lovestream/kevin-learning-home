@@ -1,0 +1,13 @@
+test_no_family_bundle_enters_public_build_context_or_source_tracking (test_family_image.FamilyImageTests.test_no_family_bundle_enters_public_build_context_or_source_tracking) ... ok
+test_only_fixed_content_hash_images_can_enter_private_context (test_family_image.FamilyImageTests.test_only_fixed_content_hash_images_can_enter_private_context) ... ok
+test_source_scope_hash_and_exact_counts_required_before_any_nas_mutation (test_family_image.FamilyImageTests.test_source_scope_hash_and_exact_counts_required_before_any_nas_mutation) ... ok
+test_symlink_does_not_read_external_data (test_family_image.FamilyImageTests.test_symlink_does_not_read_external_data) ... ok
+test_attribution_cannot_authorize_publication_or_hide_hash_mismatch (test_source_audit.SourceAuditTests.test_attribution_cannot_authorize_publication_or_hide_hash_mismatch) ... ok
+test_checked_in_report_is_pinned_complete_and_not_a_release_claim (test_source_audit.SourceAuditTests.test_checked_in_report_is_pinned_complete_and_not_a_release_claim) ... ok
+test_frozen_git_blobs_ignore_working_changes_and_untracked_private_pack (test_source_audit.SourceAuditTests.test_frozen_git_blobs_ignore_working_changes_and_untracked_private_pack) ... ok
+test_no_private_record_wordpack_or_path_traversal (test_source_audit.SourceAuditTests.test_no_private_record_wordpack_or_path_traversal) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.089s
+
+OK

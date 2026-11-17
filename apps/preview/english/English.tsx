@@ -1,3 +1,4 @@
+import { Pk } from "./Pk.tsx";
 import { useEffect, useRef, useState } from "react";
 import { englishUUID } from "../../../packages/english/id.ts";
 import { MyWords as MyWordsStore } from "../../../packages/english/my-words.ts";
@@ -220,6 +221,12 @@ export default function English() {
           我的生词本
         </a>
         <a
+          href={path({ view: "pk" })}
+          aria-current={view === "pk" ? "page" : undefined}
+        >
+          机器人PK
+        </a>
+        <a
           href={path({ view: "source" })}
           aria-current={view === "source" ? "page" : undefined}
         >
@@ -243,6 +250,15 @@ export default function English() {
             本次页面无账号、无数据库、无真实金币。不能把一次订正或本次回顾当作隔日独立掌握。
           </p>
         </section>
+      ) : view === "pk" ? (
+        <Pk
+          catalog={catalog}
+          command={command}
+          onEvidence={(e) => {
+            if (!memory.events.some((x) => x.attemptId === e.attemptId))
+              memory.events.push(e);
+          }}
+        />
       ) : view === "sprint" ? (
         <Sprint catalog={catalog} refresh={refresh} />
       ) : view === "mywords" ? (
@@ -1046,10 +1062,12 @@ function Review({
     <section>
       <h1>本次回顾</h1>
       <p>
-        完整拼写首答 {full.length} 次，首答正确{" "}
+        完整拼写首答 {full.length} 次，无辅助首答正确{" "}
         {
-          full.filter((e) => e.answerCorrect && !e.usedHint && !e.answerShown)
-            .length
+          full.filter(
+            (e) =>
+              e.answerCorrect && !e.usedHint && !e.answerShown && !e.usedAudio,
+          ).length
         }{" "}
         次。订正不改写第一次的答案。
       </p>

@@ -43,6 +43,14 @@ function definitionWithoutTarget(card: EnglishCard) {
     ? clue
     : "";
 }
+export function englishQuizClue(card: EnglishCard) {
+  return (
+    quizClueFor(card) ||
+    (!clueContainsAnswer(card.zh, card) ? card.zh : "") ||
+    (!clueContainsAnswer(card.en, card) ? card.en : "") ||
+    definitionWithoutTarget(card)
+  );
+}
 type Task = {
   id: string;
   card: EnglishCard;
@@ -62,7 +70,7 @@ type Task = {
 type Session = {
   id: string;
   groupId: string;
-  source: "new" | "review" | "sprint";
+  source: "new" | "review" | "sprint" | "pk";
   tasks: Task[];
   index: number;
   expires: number;
@@ -73,6 +81,14 @@ type Session = {
     mistakeIds: string[];
     stageStart: number;
     nextCycle?: number;
+  };
+  pk?: {
+    bankId: string;
+    startedAt: number;
+    lastNow: number;
+    revision: number;
+    finishedAt?: number;
+    reason?: "all-answered" | "time-up";
   };
   workbook?: {
     first: string[];
@@ -100,6 +116,7 @@ const commandSchema = z
       "close",
       "exercise",
       "sprint-advance",
+      "pk-tick",
     ]),
     sessionId: z.string().uuid(),
     taskId: z.string().uuid().optional(),
@@ -116,13 +133,25 @@ const sprintStartSchema = z
     day: z.number().int().min(1).max(999),
   })
   .strict();
+const pkStartSchema = z
+  .object({
+    action: z.literal("pk-start"),
+    bankId: z.enum(["core2000", "movers", "ket", "pet"]),
+  })
+  .strict();
 export class EnglishTraining {
   readonly content: EnglishReadModel;
   readonly sessions = new Map<string, Session>();
   readonly now: () => number;
-  constructor(content: EnglishReadModel, now = Date.now) {
+  readonly elapsedNow: () => number;
+  constructor(
+    content: EnglishReadModel,
+    now = Date.now,
+    elapsedNow = () => performance.now(),
+  ) {
     this.content = content;
     this.now = now;
+    this.elapsedNow = elapsedNow;
   }
   clear() {
     this.sessions.clear();
@@ -132,7 +161,8 @@ export class EnglishTraining {
       if (s.expires <= this.now()) this.sessions.delete(id);
   }
   view(s: Session): QuizView {
-    const t = s.tasks[s.index];
+    const pk = s.pk ? this.pkView(s) : undefined;
+    const t = pk?.finished ? undefined : s.tasks[s.index];
     const sprint = s.sprint
       ? {
           bankId: s.sprint.bankId,
@@ -149,9 +179,10 @@ export class EnglishTraining {
     if (!t)
       return {
         sprint,
+        pk,
         sessionId: s.id,
         taskId: s.tasks.at(-1)!.id,
-        index: s.tasks.length,
+        index: s.pk ? s.index : s.tasks.length,
         total: s.tasks.length,
         mode: "full",
         source: s.source,
@@ -165,14 +196,11 @@ export class EnglishTraining {
         answerShown: false,
         done: true,
       };
-    const clue =
-      quizClueFor(t.card) ||
-      (!clueContainsAnswer(t.card.zh, t.card) ? t.card.zh : "") ||
-      (!clueContainsAnswer(t.card.en, t.card) ? t.card.en : "") ||
-      definitionWithoutTarget(t.card);
+    const clue = englishQuizClue(t.card);
     const a = t.answers.at(-1);
     return {
       sprint,
+      pk,
       sessionId: s.id,
       taskId: t.id,
       index: s.index,
@@ -304,7 +332,160 @@ export class EnglishTraining {
     this.sessions.set(s.id, s);
     return this.view(s);
   }
+  submitAnswer(s: Session, t: Task, c: z.infer<typeof commandSchema>) {
+    if (t.passed) throw Error("本题已完成，可以进入下一题。");
+    const answer = c.answer?.trim();
+    if (!answer) throw Error("先写下你的答案。");
+    const correct = spellingAnswersFor(t.card).includes(
+      normalizeAnswer(answer),
+    );
+    const assisted = t.hint || t.shown || t.audio;
+    const first = t.answers.length === 0;
+    const at = this.now();
+    t.answers.push({ answer, correct, assisted, at });
+    t.passed = correct;
+    s.evidence.push({
+      subjectId: "english",
+      bankId: t.card.bankId,
+      wordId: t.card.id,
+      lessonOrUnitId: t.card.sourceGroupId || s.groupId,
+      trainingGroupId: s.groupId,
+      ...(s.sprint
+        ? {
+            sprintPhase: s.sprint.phase,
+            sprintCycle: s.sprint.cycle,
+            sprintDay: s.sprint.day,
+          }
+        : {}),
+      contentVersion: t.card.contentVersion,
+      attemptId: c.requestId,
+      occurredAt: at,
+      source: s.source,
+      mode: t.mode,
+      answer,
+      firstAttempt: first,
+      firstAttemptCorrect: first && correct,
+      answerCorrect: correct,
+      usedHint: t.hint,
+      answerShown: t.shown,
+      usedAudio: t.audio,
+      cueType: t.audio
+        ? "audio-dictation"
+        : t.mode === "cloze"
+          ? "partial-spelling"
+          : "definition",
+      selfCheck: c.checks ?? [false, false, false],
+      storage: "page-memory-only",
+      rewardEligible: false,
+    });
+  }
+  pkStart(raw: unknown) {
+    const x = pkStartSchema.parse(raw);
+    const pool = [...this.content.cards.values()].filter(
+      (c) => c.bankId === x.bankId,
+    );
+    if (!pool.length) throw Error("这个词库还没有装载，请选择已有词库。");
+    // Local random opponent game, not ranked play. No answer-bearing selection is returned.
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(
+        (crypto.getRandomValues(new Uint32Array(1))[0] / 2 ** 32) * (i + 1),
+      );
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    const cards = pool.slice(0, 5),
+      groupId = cards[0].sourceGroupId;
+    if (!groupId) throw Error("词卡来源单元信息缺失，请更新家庭内容包。");
+    const q = this.start({
+      action: "start",
+      groupId,
+      mode: "full",
+      wordIds: cards.map((c) => c.id),
+    });
+    const s = this.sessions.get(q.sessionId)!;
+    s.source = "pk";
+    const now = this.elapsedNow();
+    s.pk = { bankId: x.bankId, startedAt: now, lastNow: now, revision: 0 };
+    return this.view(s);
+  }
+  pkView(s: Session) {
+    const p = s.pk!;
+    p.lastNow = Math.max(p.lastNow, this.elapsedNow());
+    if (p.finishedAt === undefined) {
+      if (p.lastNow >= p.startedAt + 45000) {
+        p.finishedAt = p.startedAt + 45000;
+        p.reason = "time-up";
+      } else if (s.index >= s.tasks.length) {
+        p.finishedAt = p.lastNow;
+        p.reason = "all-answered";
+      }
+    }
+    const at = p.finishedAt ?? p.lastNow;
+    const elapsed = Math.floor((at - p.startedAt) / 1000);
+    // Preserve source timer: first robot point at second 1, then 5/9/13/17; cap 500.
+    const botScore =
+      Math.min(5, elapsed < 1 ? 0 : Math.floor((elapsed - 1) / 4) + 1) * 100;
+    const score = s.index * 100,
+      finished = p.finishedAt !== undefined;
+    return {
+      bankId: p.bankId,
+      seconds: Math.max(0, Math.ceil((p.startedAt + 45000 - at) / 1000)),
+      score,
+      botScore,
+      answered: s.index,
+      total: s.tasks.length,
+      revision: p.revision,
+      finished,
+      ...(finished
+        ? {
+            reason: p.reason,
+            outcome:
+              score > botScore
+                ? ("won" as const)
+                : score === botScore
+                  ? ("tied" as const)
+                  : ("bot-won" as const),
+            review: s.tasks.map((t) => ({
+              wordId: t.card.id,
+              word: t.card.word,
+              definition: t.card.en,
+              firstAnswer: t.answers[0]?.answer ?? null,
+              firstCorrect: t.answers[0]?.correct ?? false,
+              corrected: t.passed,
+            })),
+          }
+        : {}),
+    };
+  }
+  pkAct(s: Session, c: z.infer<typeof commandSchema>) {
+    if (!["answer", "pk-tick", "summary"].includes(c.action))
+      throw Error("机器人比赛不提供提示、参考或听读音；可以退出后慢慢练。");
+    const before = this.pkView(s);
+    let latestEvidence: AttemptEvidence | undefined;
+    if (!before.finished && c.action === "answer") {
+      const t = s.tasks[s.index];
+      if (!t || c.taskId !== t.id) throw Error("题目已切换，请使用当前题目。");
+      this.submitAnswer(s, t, c);
+      latestEvidence = s.evidence.at(-1);
+      if (t.passed) s.index++;
+    }
+    s.pk!.revision++;
+    const q = this.view(s);
+    return {
+      ...q,
+      ...(latestEvidence ? { latestEvidence } : {}),
+      ...(q.done || c.action === "summary"
+        ? {
+            evidence: s.evidence,
+            completed: s.index >= s.tasks.length,
+            storage: "page-memory-only",
+            rewardEligible: false,
+          }
+        : {}),
+    };
+  }
   act(raw: unknown): any {
+    if (raw && typeof raw === "object" && (raw as any).action === "pk-start")
+      return this.pkStart(raw);
     if (
       raw &&
       typeof raw === "object" &&
@@ -327,6 +508,12 @@ export class EnglishTraining {
     if (s.receipts.size >= 1000)
       throw Error("这次练习操作较多，请结束后重新开始。");
     s.expires = this.now() + 60 * 60 * 1000;
+    if (s.pk && c.action !== "close") {
+      const result = structuredClone(this.pkAct(s, c));
+      s.receipts.set(c.requestId, { body, result });
+      return structuredClone(result);
+    }
+    if (c.action === "pk-tick") throw Error("请先开始机器人比赛。");
     const t = s.tasks[s.index];
     let result: any;
     if (c.action === "summary")
@@ -387,51 +574,7 @@ export class EnglishTraining {
         throw Error("整组复测不提供提示或参考。需要帮助可以退出后回练。");
       if (!t || c.taskId !== t.id) throw Error("题目已切换，请使用当前题目。");
       if (c.action === "answer") {
-        if (t.passed) throw Error("本题已完成，可以进入下一题。");
-        const answer = c.answer?.trim();
-        if (!answer) throw Error("先写下你的答案。");
-        const correct = spellingAnswersFor(t.card).includes(
-          normalizeAnswer(answer),
-        );
-        const assisted = t.hint || t.shown || t.audio;
-        const first = t.answers.length === 0;
-        const at = this.now();
-        t.answers.push({ answer, correct, assisted, at });
-        t.passed = correct;
-        s.evidence.push({
-          subjectId: "english",
-          bankId: t.card.bankId,
-          wordId: t.card.id,
-          lessonOrUnitId: t.card.sourceGroupId || s.groupId,
-          trainingGroupId: s.groupId,
-          ...(s.sprint
-            ? {
-                sprintPhase: s.sprint.phase,
-                sprintCycle: s.sprint.cycle,
-                sprintDay: s.sprint.day,
-              }
-            : {}),
-          contentVersion: t.card.contentVersion,
-          attemptId: c.requestId,
-          occurredAt: at,
-          source: s.source,
-          mode: t.mode,
-          answer,
-          firstAttempt: first,
-          firstAttemptCorrect: first && correct,
-          answerCorrect: correct,
-          usedHint: t.hint,
-          answerShown: t.shown,
-          usedAudio: t.audio,
-          cueType: t.audio
-            ? "audio-dictation"
-            : t.mode === "cloze"
-              ? "partial-spelling"
-              : "definition",
-          selfCheck: c.checks ?? [false, false, false],
-          storage: "page-memory-only",
-          rewardEligible: false,
-        });
+        this.submitAnswer(s, t, c);
       } else if (c.action === "hint") t.hint = true;
       else if (c.action === "reference") t.shown = true;
       else if (c.action === "audio") t.audio = true;

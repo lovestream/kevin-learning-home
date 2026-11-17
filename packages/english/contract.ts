@@ -86,12 +86,13 @@ export type EnglishBundle = {
 };
 export type QuizView = {
   sprint?: SprintView;
+  pk?: PkView;
   sessionId: string;
   taskId: string;
   index: number;
   total: number;
   mode: "cloze" | "full";
-  source: "new" | "review" | "sprint";
+  source: "new" | "review" | "sprint" | "pk";
   clue: string;
   image: string | null;
   mask: string | null;
@@ -108,6 +109,26 @@ export type QuizView = {
     nearMiss: boolean;
   };
   done: boolean;
+};
+export type PkView = {
+  bankId: string;
+  seconds: number;
+  score: number;
+  botScore: number;
+  answered: number;
+  total: number;
+  revision: number;
+  finished: boolean;
+  reason?: "all-answered" | "time-up";
+  outcome?: "won" | "tied" | "bot-won";
+  review?: {
+    wordId: string;
+    word: string;
+    definition: string;
+    firstAnswer: string | null;
+    firstCorrect: boolean;
+    corrected: boolean;
+  }[];
 };
 export type SprintView = {
   bankId: string;

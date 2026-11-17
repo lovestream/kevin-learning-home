@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "width": 390,
+      "fiveUniqueTasks": true,
+      "wrongThenCorrect": true,
+      "committedResponseLostRetry": true,
+      "serverTimeoutNoNewAttempt": true,
+      "resultSeparatesFirstAnswer": true,
+      "staleTickCannotDiscardImmutableAnswer": false,
+      "noHelp": true,
+      "noPersistentState": true,
+      "keyboard": true
+    },
+    {
+      "width": 768,
+      "fiveUniqueTasks": true,
+      "wrongThenCorrect": true,
+      "committedResponseLostRetry": true,
+      "serverTimeoutNoNewAttempt": true,
+      "resultSeparatesFirstAnswer": true,
+      "staleTickCannotDiscardImmutableAnswer": false,
+      "noHelp": true,
+      "noPersistentState": true,
+      "keyboard": true
+    },
+    {
+      "width": 1280,
+      "fiveUniqueTasks": true,
+      "wrongThenCorrect": true,
+      "committedResponseLostRetry": true,
+      "serverTimeoutNoNewAttempt": true,
+      "resultSeparatesFirstAnswer": true,
+      "staleTickCannotDiscardImmutableAnswer": true,
+      "noHelp": true,
+      "noPersistentState": true,
+      "keyboard": true
+    }
+  ],
+  "realRecordsRead": false,
+  "rewardsIssued": 0
+}

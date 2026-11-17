@@ -778,3 +778,190 @@
     padding: 16px;
   }
 }
+
+/* Local word duel: five stepping stones connect each successful spelling. */
+.english-pk {
+  max-width: 980px;
+}
+.english-pk-boundary {
+  max-width: 72ch;
+  color: #48666a;
+}
+.english-pk-lobby,
+.english-pk-arena,
+.english-pk-result {
+  background: #fff;
+  border-top: 4px solid #398677;
+  padding: clamp(18px, 3vw, 36px);
+  margin-block: 24px;
+}
+.english-pk-versus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+.english-pk-versus b {
+  font-size: 16px;
+  color: #527171;
+}
+.english-pk label {
+  display: grid;
+  gap: 10px;
+  max-width: 560px;
+}
+.english-pk select,
+.english-pk input {
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  padding: 12px;
+  border: 1px solid #86a6a0;
+  border-radius: 8px;
+}
+.english-pk-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.english-pk-score strong {
+  display: block;
+  font-size: clamp(24px, 4vw, 40px);
+}
+.english-pk-clock {
+  background: #ffe083;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  font-weight: 800;
+  font-size: 24px;
+  font-variant-numeric: tabular-nums;
+}
+.english-pk-track {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: clamp(12px, 3vw, 30px);
+  margin-block: 24px;
+}
+.english-pk-track li {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #9bbab1;
+  border-radius: 50%;
+}
+.english-pk-track li[data-done="true"] {
+  background: #367f70;
+  color: white;
+  border-color: #367f70;
+}
+.english-pk-track li[aria-current="step"] {
+  outline: 3px solid #ffe083;
+  outline-offset: 3px;
+}
+.english-pk-image {
+  display: block;
+  max-width: min(100%, 240px);
+  max-height: 180px;
+  object-fit: contain;
+  margin: 12px auto;
+}
+.english-pk-clue {
+  font-size: clamp(20px, 2.6vw, 26px);
+  line-height: 1.5;
+  max-width: 48ch;
+}
+.english-pk form {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.english-pk form label {
+  flex: 1 1 240px;
+}
+.english-pk form input {
+  font-size: 22px;
+}
+.english-pk-feedback {
+  min-height: 1.6em;
+  color: #255e52;
+}
+.english-pk-review {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+  margin-block: 24px;
+}
+.english-pk-review article {
+  background: #eff7f4;
+  padding: 18px;
+  overflow-wrap: anywhere;
+}
+.english-pk-review h3 {
+  margin-block: 0 10px;
+  font-size: 24px;
+}
+.english-pk .english-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .english-pk-score {
+    gap: 10px;
+    font-size: 14px;
+  }
+  .english-pk-clock {
+    width: 66px;
+    height: 66px;
+    font-size: 20px;
+  }
+}
+
+.english-pk-playing .english-heading {
+  margin-block: 12px;
+}
+.english-pk-playing .english-heading h1 {
+  font-size: 28px;
+  margin-block: 8px;
+}
+.english-pk-playing .english-pk-boundary {
+  margin-block: 8px 12px;
+}
+.english-pk-playing .english-pk-arena {
+  padding: 20px;
+  margin-block: 12px;
+}
+.english-pk-playing .english-pk-score strong {
+  display: inline;
+  font-size: 28px;
+  margin-left: 8px;
+}
+.english-pk-playing .english-pk-clock {
+  width: 62px;
+  height: 62px;
+  font-size: 20px;
+}
+.english-pk-playing .english-pk-track {
+  margin-block: 16px;
+}
+.english-pk-playing .english-pk-image {
+  max-height: 100px;
+  max-width: 180px;
+}
+.english-pk-playing .english-pk-clue {
+  margin-block: 12px;
+  font-size: 22px;
+}

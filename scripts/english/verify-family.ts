@@ -59,6 +59,41 @@ for (const b of c.catalog.banks) {
     });
   }
 }
+let pkRounds = 0,
+  pkCorrectResponses = 0;
+for (const b of c.catalog.banks) {
+  let q = e.act({ action: "pk-start", bankId: b.id });
+  assert.equal(q.total, 5);
+  assert.equal(q.pk.review, undefined);
+  assert.equal(
+    new Set(e.sessions.get(q.sessionId)!.tasks.map((t) => t.card.id)).size,
+    5,
+  );
+  while (!q.done) {
+    const card = e.sessions.get(q.sessionId)!.tasks[q.index].card;
+    assert(q.clue.trim());
+    assert(!clueContainsAnswer(q.clue, card));
+    q = e.act({
+      action: "answer",
+      sessionId: q.sessionId,
+      taskId: q.taskId,
+      requestId: crypto.randomUUID(),
+      answer: card.word,
+    });
+    assert.equal(q.latestEvidence.lessonOrUnitId, card.sourceGroupId);
+    assert.equal(q.latestEvidence.rewardEligible, false);
+    pkCorrectResponses++;
+  }
+  assert.equal(q.pk.score, 500);
+  assert.equal(q.pk.reason, "all-answered");
+  assert(q.pk.review.every((r: any) => r.firstCorrect));
+  pkRounds++;
+  e.act({
+    action: "close",
+    sessionId: q.sessionId,
+    requestId: crypto.randomUUID(),
+  });
+}
 let checked = 0,
   exerciseSlots = 0;
 assert(
@@ -127,6 +162,8 @@ console.log(
       (n, g) => n + g.readingImages.length,
       0,
     ),
+    pkRounds,
+    pkCorrectResponses,
     sprintGroups,
     sprintWords,
     sprintCorrectResponses: sprintWords * 3,

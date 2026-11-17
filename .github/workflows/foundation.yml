@@ -120,6 +120,8 @@ jobs:
           python3 -m unittest discover -s tests/english -p 'test_*.py' -v
           npm run test:english:browser
           node tests/english/extras-browser.mjs
+      - name: Local robot PK timing, wrong-first, lost-response retry and result evidence
+        run: node tests/english/pk-browser.mjs
       - name: Compose 1.28.5 parser compatibility (no daemon or service start)
         run: |
           curl --fail --location --silent --show-error https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Linux-x86_64 -o /tmp/klh-compose-v1
