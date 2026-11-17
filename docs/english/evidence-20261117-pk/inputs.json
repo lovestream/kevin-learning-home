@@ -7,7 +7,9 @@
     "Local measurements were executed against these exact working files, not the old parent commit.",
     "Synthetic timeout uses a test-process monotonic clock offset; real four-bank browser games use normal time.",
     "Publisher image screenshots and all traces remain ignored; only synthetic pictures are archived here.",
-    "Fixed-head CI for the final commit must be read from PR38 Checks, not inherited from 47f."
+    "Fixed-head CI for the final commit must be read from PR38 Checks, not inherited from 47f.",
+    "Fixture hardening reruns Node and all synthetic English browsers at parent 4440251 plus test-only edits. Runtime/source-family and math receipts retain their original c158 dirty metadata; their application files equal runtime baseline 4440251.",
+    "No application/runtime files changed in the fixture-hardening commit. Final fixed-head CI runs the complete committed tests again."
   ],
   "files": [
     {
@@ -128,7 +130,7 @@
     },
     {
       "path": "tests/english/fixture.ts",
-      "sha256": "ea6b93cec853638f8c41a779ec678eea2066d1ad9db94422c52b84d66dab274e"
+      "sha256": "ccf2ad619aa36c0a8a585990fc1c1c09c68c6b1d5a6b0f3684c7ba6c98430bd7"
     },
     {
       "path": "tests/english/http.test.ts",
@@ -140,7 +142,7 @@
     },
     {
       "path": "tests/english/pk-browser.mjs",
-      "sha256": "f148c0a2a676f507414f7ffada8326bebd56ca374dba8203f29767b6875ab6df"
+      "sha256": "1f14b85b134feccb2d5a4aa4ab0806229b5a75c9363c1b6c582298b62c60595d"
     },
     {
       "path": "tests/english/pk-source-browser.mjs",
@@ -148,7 +150,7 @@
     },
     {
       "path": "tests/english/pk.test.ts",
-      "sha256": "43e68396cba80d0e1b0a1cdad030a3a83700993f7b07f3af17f20d868ec241a5"
+      "sha256": "1d4f63e4aa74ac44144e505c3740c5e82168822dbe6bd338f57bfa37c1c9b184"
     },
     {
       "path": "tests/english/source-browser.mjs",
@@ -170,5 +172,8 @@
       "path": "tests/math-preview/container.mjs",
       "sha256": "3b50864fd982059517ee5982e7ca4d7f061e4013657d275cdb7fc167364843ef"
     }
-  ]
+  ],
+  "runtimeBaselineHead": "4440251c438dc751ef9569cbcb24a8375ef17e0b",
+  "subsequentFixtureValidationParentHead": "4440251c438dc751ef9569cbcb24a8375ef17e0b",
+  "subsequentFixtureValidationWorkingTree": true
 }

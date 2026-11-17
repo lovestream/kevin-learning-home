@@ -8,7 +8,9 @@ import {
   type EnglishBundle,
   type EnglishCard,
 } from "../../packages/english/contract.ts";
-export async function fixture() {
+export async function fixture(
+  options: { additionalWords?: { word: string; zh: string }[] } = {},
+) {
   const directory = mkdtempSync(join(tmpdir(), "klh-english-synthetic-"));
   mkdirSync(join(directory, "media"));
   const image = await sharp({
@@ -19,28 +21,33 @@ export async function fixture() {
     hash = englishHash(image),
     url = "/preview-api/v1/english/media/" + hash + ".webp";
   writeFileSync(join(directory, "media", hash + ".webp"), image);
-  const cards: EnglishCard[] = ["candy", "colour", "a", "pencil"].map(
-    (word, i) => ({
-      id: "synthetic-" + word,
-      bankId: "core2000",
-      sourceGroupId: "synthetic-group",
+  const sourceWords = [
+    ...["candy", "colour", "a", "pencil"].map((word, i) => ({
       word,
-      en: "A " + word + " is a practice item.",
       zh: ["糖果", "颜色", "一个", "铅笔"][i],
-      ipa: "",
-      pos: "n.",
-      example: "I see " + word + ".",
-      exampleZh: "",
-      chunks: [word],
-      tip: "",
-      image: url,
-      imageStatus: "synthetic",
-      contentVersion: "synthetic-v1",
-      spellingVariants: word === "colour" ? ["color"] : [],
-      semanticAlternatives: word === "candy" ? ["sweet"] : [],
-      quizClue: "",
-    }),
-  );
+    })),
+    ...(options.additionalWords ?? []),
+  ];
+  const cards: EnglishCard[] = sourceWords.map(({ word, zh }) => ({
+    id: "synthetic-" + word,
+    bankId: "core2000",
+    sourceGroupId: "synthetic-group",
+    word,
+    en: "A " + word + " is a practice item.",
+    zh,
+    ipa: "",
+    pos: "n.",
+    example: "I see " + word + ".",
+    exampleZh: "",
+    chunks: [word],
+    tip: "",
+    image: url,
+    imageStatus: "synthetic",
+    contentVersion: "synthetic-v1",
+    spellingVariants: word === "colour" ? ["color"] : [],
+    semanticAlternatives: word === "candy" ? ["sweet"] : [],
+    quizClue: "",
+  }));
   const bundle: EnglishBundle = {
     schemaVersion: 1,
     sourceSha: ENGLISH_SOURCE_SHA,

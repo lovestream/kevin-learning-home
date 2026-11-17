@@ -34,7 +34,7 @@
     {
       "path": "core-browser.json",
       "bytes": 934,
-      "sha256": "71b991a0fc48e8411a13328a2d74f9a0b61cd7d7a16feae5426468c411ba89bf"
+      "sha256": "4417746b11008f68b3717033142da3b762ca035a93f08ebd6a80deb276c6aa45"
     },
     {
       "path": "core-browser.log",
@@ -48,8 +48,8 @@
     },
     {
       "path": "english-node.log",
-      "bytes": 2830,
-      "sha256": "dcdec439c30fe210725d474592ce8370d3363edf0e491d3588e80f3006f7e847"
+      "bytes": 2838,
+      "sha256": "ed0216cd89246b6b3c42bf99f68b0f19d74e5d8aef3e400416e40597065cc288"
     },
     {
       "path": "extras-browser.json",
@@ -78,8 +78,8 @@
     },
     {
       "path": "inputs.json",
-      "bytes": 6373,
-      "sha256": "fd9a0f6a588519e229d22920546cd9aa119f1903c242f670ecab6b90e5547f0c"
+      "bytes": 6968,
+      "sha256": "9a225d54f6426f5fcd643d9b6601e33ad4ccb66cc6fc29e73f2f574366ee6da3"
     },
     {
       "path": "library-archive.log",
@@ -108,8 +108,8 @@
     },
     {
       "path": "pk-node.log",
-      "bytes": 510,
-      "sha256": "21655de7bb012f79c52b66285c8bcdd5e3fcbbcb48ab94e34e003aa492ea47f6"
+      "bytes": 513,
+      "sha256": "b6be280d3610b7df632a2992deaf530ca22ea4447dd21425fe2ea7e32454d630"
     },
     {
       "path": "practice-archive.log",
@@ -128,23 +128,23 @@
     },
     {
       "path": "synthetic-browser.json",
-      "bytes": 1150,
-      "sha256": "0a2551632e7c54500ce6d8616383508be04394ca7c1e9d065e5f22f8aecf2306"
+      "bytes": 1254,
+      "sha256": "c0ae562ed22895b6cf6147260f8edaef813a15713f6613c9c38a56ebacfd7d75"
     },
     {
       "path": "synthetic-game-1280.png",
-      "bytes": 142723,
-      "sha256": "c172bf964707edc5aa1520821891664ac77c33cd76d2f3eeb004e67374964366"
+      "bytes": 143368,
+      "sha256": "8ad965d1513d12255f31f85ea1f58c3e4db23f72c65da1b3046b15bbd511ac84"
     },
     {
       "path": "synthetic-result-390.png",
-      "bytes": 158595,
-      "sha256": "f4519022c0984889e99c3070b422ac97ef4cfc02a5526d87642a9ba6ae76abbe"
+      "bytes": 160354,
+      "sha256": "28491bc2a3e0634c5dde453b0779fa706c60187ba59899196298a8781e6dd26a"
     },
     {
       "path": "synthetic-time-up-1280.png",
-      "bytes": 189507,
-      "sha256": "2e4b1bea1ef9c2dec5b36fc5f9776e2414f807660582d46756e48185757b24db"
+      "bytes": 186791,
+      "sha256": "d1e88919a1f5e7e64cd94ee8a035d36ceb46e1fbd196298741caf1a3f93a7c98"
     },
     {
       "path": "typecheck.log",
@@ -157,5 +157,6 @@
       "sha256": "0af0aef5704dca78af386c4beef0d51599e25ec082658430a2254a61e6d97619"
     }
   ],
-  "logFormatting": "Only trailing blank lines removed from archived typecheck stdout; raw /tmp log retained. No result or source fingerprint altered."
+  "logFormatting": "Only trailing blank lines removed from archived typecheck stdout; raw /tmp log retained. No result or source fingerprint altered.",
+  "fixtureHardeningRuntimeBaselineHead": "4440251c438dc751ef9569cbcb24a8375ef17e0b"
 }

@@ -9,6 +9,7 @@
       "serverTimeoutNoNewAttempt": true,
       "resultSeparatesFirstAnswer": true,
       "staleTickCannotDiscardImmutableAnswer": false,
+      "reviewSourceLookup": false,
       "noHelp": true,
       "noPersistentState": true,
       "keyboard": true
@@ -21,6 +22,7 @@
       "serverTimeoutNoNewAttempt": true,
       "resultSeparatesFirstAnswer": true,
       "staleTickCannotDiscardImmutableAnswer": false,
+      "reviewSourceLookup": false,
       "noHelp": true,
       "noPersistentState": true,
       "keyboard": true
@@ -33,6 +35,7 @@
       "serverTimeoutNoNewAttempt": true,
       "resultSeparatesFirstAnswer": true,
       "staleTickCannotDiscardImmutableAnswer": true,
+      "reviewSourceLookup": true,
       "noHelp": true,
       "noPersistentState": true,
       "keyboard": true

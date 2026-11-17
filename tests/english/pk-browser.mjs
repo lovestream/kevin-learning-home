@@ -4,9 +4,8 @@ import assert from 'node:assert/strict';
 import {chromium,expect} from '@playwright/test';
 import {startPreview} from '../../apps/preview/server.ts';
 import {fixture} from './fixture.ts';
-const f=await fixture(), originalNow=performance.now.bind(performance), previousNow=Object.getOwnPropertyDescriptor(performance,'now');let clockOffset=0;
+const f=await fixture({additionalWords:[{word:'robot',zh:'机器人'},{word:'basket',zh:'篮子'}]}), originalNow=performance.now.bind(performance), previousNow=Object.getOwnPropertyDescriptor(performance,'now');let clockOffset=0;
 Object.defineProperty(performance,'now',{value:()=>originalNow()+clockOffset,configurable:true});
-for(const [i,word] of ['robot','basket'].entries())f.content.cards.set('pk-extra-'+i,{...f.content.bundle.cards[0],id:'pk-extra-'+i,word,zh:['机器人','篮子'][i],en:'An object for this synthetic test.',spellingVariants:[],semanticAlternatives:[]});
 const server=await startPreview({enabled:true,port:0,englishContent:f.content});
 const origin='http://127.0.0.1:'+server.address().port,out='.evidence/english/pk';fs.mkdirSync(out,{recursive:true});
 const browser=await chromium.launch(),results=[],errors=[];
@@ -73,11 +72,11 @@ for(const width of [390,768,1280]){
     await input.fill(await correct());await input.press('Enter');await expect(input).toHaveValue('');await expect(arena).toContainText('第 2 / 5 个词');
     await page.unroute('**/preview-api/v1/english/training');
     await page.getByRole('navigation',{name:'英语活动'}).getByRole('link',{name:'本次回顾',exact:true}).click();
-    await expect(page.locator('.english-page')).toContainText('完整拼写首答 6 次，无辅助首答正确 5 次');
+    await expect(page.locator('.english-page')).toContainText('完整拼写首答 6 次，无辅助首答正确 5 次');await expect(page.getByRole('alert')).toHaveCount(0);await expect(page.locator('.english-word-list')).toContainText(first);
     await page.goto(origin+'/subjects/english?view=pk');
   }
   await page.reload();await expect(arena).toHaveCount(0);assert.deepEqual(await page.evaluate(()=>[localStorage.length,sessionStorage.length]),[0,0]);
-  results.push({width,fiveUniqueTasks:true,wrongThenCorrect:true,committedResponseLostRetry:true,serverTimeoutNoNewAttempt:true,resultSeparatesFirstAnswer:true,staleTickCannotDiscardImmutableAnswer:width===1280,noHelp:true,noPersistentState:true,keyboard:true});
+  results.push({width,fiveUniqueTasks:true,wrongThenCorrect:true,committedResponseLostRetry:true,serverTimeoutNoNewAttempt:true,resultSeparatesFirstAnswer:true,staleTickCannotDiscardImmutableAnswer:width===1280,reviewSourceLookup:width===1280,noHelp:true,noPersistentState:true,keyboard:true});
  }catch(e){await page.screenshot({path:out+'/failure-'+width+'.png',fullPage:true});throw e;}
  finally{await context.tracing.stop({path:out+'/trace-'+width+'.zip'});await context.close();}
 }

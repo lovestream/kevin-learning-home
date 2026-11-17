@@ -13,19 +13,13 @@ const command = (e: EnglishTraining, q: QuizView, action: string, extra = {}) =>
     ...extra,
   });
 async function setup() {
-  const f = await fixture();
-  const cards = [...f.content.cards.values()];
-  for (let i = 0; i < 4; i++)
-    cards.push({
-      ...cards[0],
-      id: "extra-" + i,
+  const f = await fixture({
+    additionalWords: Array.from({ length: 4 }, (_, i) => ({
       word: "word" + String.fromCharCode(98 + i),
-      en: "A distinct practice item.",
       zh: "合成意思" + i,
-    });
-  // Source group is kept for each card; only synthetic content is used.
+    })),
+  });
   const c = f.content;
-  for (const card of cards) c.cards.set(card.id, card);
   let now = 100000,
     elapsed = 0;
   const e = new EnglishTraining(
@@ -58,6 +52,7 @@ test("PK uses five unique source words; pre-answer view has no keys, answers or 
     assert.equal(q.mask, null);
     assert.equal(q.pk!.score, 0);
     for (const t of s.tasks) {
+      assert.equal(x.f.content.publicCard(t.card.id).groupId, t.card.sourceGroupId);
       assert.equal(JSON.stringify(q).includes(t.card.id), false);
       assert.equal(q.clue.includes(t.card.word), false);
     }
