@@ -18,13 +18,13 @@ test("30 future spaces remain discoverable without increasing the fixed navigati
       available: true,
     })),
   ];
-  assert.equal(pinnedSpaces(expanded).length, 2);
+  assert.equal(pinnedSpaces(expanded).length, 3);
   assert.equal(findSpaces("future-29", expanded)[0].id, "future-29");
   const allPinned = expanded.map((s) => ({ ...s, pinned: true }));
   assert.equal(pinnedSpaces(allPinned).length, 4);
 });
-test("unavailable English/growth spaces have no actionable route or fake installed curriculum", () => {
-  for (const id of ["english", "growth"]) {
+test("unavailable growth spaces have no actionable route or fake installed curriculum", () => {
+  for (const id of ["growth"]) {
     const s = learningSpaces.find((v) => v.id === id)!;
     assert.equal(s.available, false);
     assert.equal(s.href, null);
@@ -33,4 +33,11 @@ test("unavailable English/growth spaces have no actionable route or fake install
   assert.equal(findSpaces("english")[0].id, "english");
   assert.equal(findSpaces(" math ")[0].id, "math");
   assert.deepEqual(findSpaces("未知合成学科"), []);
+});
+
+test("English occupies one real subject route, never one nav item per group", () => {
+  const s = learningSpaces.find((s) => s.id === "english")!;
+  assert.equal(s.href, "/subjects/english");
+  assert(s.available);
+  assert(pinnedSpaces().includes(s));
 });

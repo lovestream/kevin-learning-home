@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "buildSha": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "nas": true,
+  "actualSource": true,
+  "cardsReachable": 6631,
+  "groups": 665,
+  "results": [
+    {
+      "bankId": "core2000",
+      "width": 390,
+      "sourceCard": "core2000-b4-u16-b-10-wisdom",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "movers",
+      "width": 390,
+      "sourceCard": "movers-2025-phrase-080-sail-for",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "ket",
+      "width": 390,
+      "sourceCard": "ket-official-zoo-4c1f32a",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "pet",
+      "width": 390,
+      "sourceCard": "pet-official-zoo-4c1f32a",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "core2000",
+      "width": 768,
+      "sourceCard": "core2000-b4-u16-b-10-wisdom",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "movers",
+      "width": 768,
+      "sourceCard": "movers-2025-phrase-080-sail-for",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "ket",
+      "width": 768,
+      "sourceCard": "ket-official-zoo-4c1f32a",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "pet",
+      "width": 768,
+      "sourceCard": "pet-official-zoo-4c1f32a",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "core2000",
+      "width": 1280,
+      "sourceCard": "core2000-b4-u16-b-10-wisdom",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "movers",
+      "width": 1280,
+      "sourceCard": "movers-2025-phrase-080-sail-for",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "ket",
+      "width": 1280,
+      "sourceCard": "ket-official-zoo-4c1f32a",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    },
+    {
+      "bankId": "pet",
+      "width": 1280,
+      "sourceCard": "pet-official-zoo-4c1f32a",
+      "loaded": true,
+      "wrongFirstPreserved": true,
+      "referenceRecorded": true
+    }
+  ],
+  "realRecordsRead": false,
+  "rewardsIssued": 0,
+  "physicalDevices": "NOT_TESTED",
+  "screenshotsPrivate": true
+}

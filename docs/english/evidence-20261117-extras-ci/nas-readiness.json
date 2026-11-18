@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-17",
+  "status": "DEPLOYMENT_BLOCKED",
+  "requestedHead": "47f077339be9aa1088163aa833851c037d1f380c",
+  "lastKnownActiveRelease": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "lastKnownStagedCandidate": "fbbf516e9bbcba086d952b744954171f77db2605",
+  "observations": {
+    "sshTCP2018": "reachable",
+    "sshAuthentication": "public-key authentication succeeded; command channel did not complete within bounded probe",
+    "websiteTCP38444": "connection refused",
+    "subsequentSSHProbe": "connection timed out before command execution; availability intermittent"
+  },
+  "currentRemoteStateVerified": false,
+  "activationPerformed": false,
+  "realLearningDataModified": false,
+  "networkOrDSMChanges": false,
+  "pending": [
+    "NAS command access and existing website availability restored",
+    "stage and offline-probe fixed-head CI image with family source overlay",
+    "activate and actual NAS English/Home/Explore/math regressions",
+    "rollback and restore verification"
+  ]
+}

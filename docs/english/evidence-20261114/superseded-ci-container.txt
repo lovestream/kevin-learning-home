@@ -1,0 +1,3 @@
+Run https://github.com/lovestream/kevin-learning-home/actions/runs/43580658060
+Job 132404489827 failed in the old exact package allowlist. Expected [contracts, math-training]; actual [contracts, english, math-training].
+No NAS deployment occurred. Fix: explicit minimal five English runtime files and per-file allowlist; public image still excludes family bundle, identity, SQLite and mounts. Full fixed-head CI must be rerun.

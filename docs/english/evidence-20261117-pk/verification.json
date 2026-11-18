@@ -1,0 +1,31 @@
+{
+  "status": "PASS_LOCAL",
+  "executionParentHead": "c158185a6d91d4cb530570624f267889f37069ec",
+  "executionWorkingTree": true,
+  "englishNode": 25,
+  "pkNodeIncludedInEnglish": 4,
+  "syntheticPKBrowserFlows": 3,
+  "sourcePKBrowserFlows": 12,
+  "sourcePKCorrectWords": 60,
+  "sourceNodePKRounds": 4,
+  "sourceNodePKWords": 20,
+  "coreBrowserWidths": [
+    390,
+    768,
+    1280
+  ],
+  "extrasBrowserWidths": [
+    390,
+    768,
+    1280
+  ],
+  "mathClassroomScenarios": 210,
+  "mathPracticeQuestions": 849,
+  "mathPracticeCompletedFlows": 84,
+  "mathLegacyFlows": 255,
+  "mathGradingTests": 14,
+  "CIForThisCommit": "not represented by local receipt; read exact PR head checks",
+  "NASForThisBatch": "BLOCKED_NOT_ACTIVATED",
+  "realRecordsRead": false,
+  "rewardsIssued": 0
+}

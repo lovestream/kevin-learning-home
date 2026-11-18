@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "platform": "macOS remote desktop",
+  "productCodeChanged": false,
+  "timeoutsChanged": false,
+  "forcedClicks": false,
+  "browserLaunchArgs": [
+    "--disable-gpu-vsync",
+    "--disable-frame-rate-limit"
+  ],
+  "practice": {
+    "tasksPerWidth": 849,
+    "flows": 84,
+    "elapsedMs": 83256
+  },
+  "library": {
+    "capabilitiesPerWidth": 85,
+    "flows": 255,
+    "elapsedMs": 349159
+  },
+  "viewports": [
+    390,
+    768,
+    1280
+  ],
+  "note": "Additional local reruns; Linux CI remains the source of archived math screenshots. The checked-in mac-browser bootstrap reproduces the launch configuration."
+}

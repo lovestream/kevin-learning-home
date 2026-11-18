@@ -1,5 +1,10 @@
 // Standalone content-only process. No production server, identity, math service or SQLite imports.
 import http from "node:http";
+import {
+  loadEnglish,
+  type EnglishContent,
+} from "../../packages/english/content.ts";
+import { EnglishTraining } from "../../packages/english/training.ts";
 import { loadReading } from "./reading/service.ts";
 import { PageTraining } from "./training.ts";
 import {
@@ -29,8 +34,14 @@ export async function startPreview({
   root = ROOT,
   port = 4179,
   enabled = false,
+  englishContent,
   ...runtime
-}: { root?: string; port?: number; enabled?: boolean } & PreviewRuntime = {}) {
+}: {
+  root?: string;
+  port?: number;
+  enabled?: boolean;
+  englishContent?: EnglishContent;
+} & PreviewRuntime = {}) {
   if (!enabled) throw Error("EXPLICIT_CONTENT_PREVIEW_ENABLE_REQUIRED");
   if (!Number.isInteger(port) || port < 0 || port > 65535)
     throw Error("INVALID_PREVIEW_PORT");
@@ -59,7 +70,7 @@ export async function startPreview({
   const assets = new Map<string, Buffer>();
   for (const [name, expected] of Object.entries(seal.files)) {
     if (
-      !/^\/(?:index\.html|THIRD-PARTY-NOTICES\.txt|assets\/[A-Za-z0-9._-]+|\.vite\/manifest\.json|math-paper-folding\/template-[A-Za-z0-9.-]+\.svg)$/.test(
+      !/^\/(?:index\.html|english\/index\.html|THIRD-PARTY-NOTICES\.txt|assets\/[A-Za-z0-9._-]+|\.vite\/manifest\.json|math-paper-folding\/template-[A-Za-z0-9.-]+\.svg)$/.test(
         name,
       )
     )
@@ -95,6 +106,8 @@ export async function startPreview({
   if (reading.sha256 !== seal.readingSha256)
     throw Error("READING_SEAL_MISMATCH");
   const training = new PageTraining();
+  const english = englishContent ?? loadEnglish(root),
+    englishTraining = english ? new EnglishTraining(english) : null;
   const server = http.createServer((req, res) => {
     const address = server.address();
     if (!address || typeof address === "string") {
@@ -124,6 +137,14 @@ export async function startPreview({
       res.writeHead(status, {
         ...headers,
         "Content-Type": type,
+        ...(req.url?.split("?")[0] === "/subjects/english"
+          ? {
+              "Content-Security-Policy": CSP.replace(
+                "img-src 'self'",
+                "img-src 'self' blob:",
+              ),
+            }
+          : {}),
         "Content-Length": Buffer.byteLength(data),
       });
       res.end(req.method === "HEAD" ? undefined : data);
@@ -141,6 +162,7 @@ export async function startPreview({
     if (
       req.method === "POST" &&
       [
+        "/preview-api/v1/english/training",
         "/preview-api/v1/practice/grade",
         "/preview-api/v1/library/grade",
         "/preview-api/v1/library/teaching-example",
@@ -200,34 +222,46 @@ export async function startPreview({
           send(
             200,
             JSON.stringify(
-              req.url === "/preview-api/v1/library/teaching-example"
-                ? legacyExample(
-                    library,
-                    JSON.parse(Buffer.concat(chunks).toString("utf8")),
-                  )
-                : req.url === "/preview-api/v1/reading/checkpoint"
-                  ? reading.grade(
+              req.url === "/preview-api/v1/english/training"
+                ? englishTraining
+                  ? englishTraining.act(
                       JSON.parse(Buffer.concat(chunks).toString("utf8")),
                     )
-                  : req.url?.startsWith("/preview-api/v1/training/")
-                    ? training.dispatch(
-                        req.url.slice("/preview-api/v1/training/".length),
+                  : (() => {
+                      throw Error("家庭英语内容包尚未装载。");
+                    })()
+                : req.url === "/preview-api/v1/library/teaching-example"
+                  ? legacyExample(
+                      library,
+                      JSON.parse(Buffer.concat(chunks).toString("utf8")),
+                    )
+                  : req.url === "/preview-api/v1/reading/checkpoint"
+                    ? reading.grade(
                         JSON.parse(Buffer.concat(chunks).toString("utf8")),
                       )
-                    : req.url === "/preview-api/v1/library/grade"
-                      ? gradeLibrary(
-                          library,
+                    : req.url?.startsWith("/preview-api/v1/training/")
+                      ? training.dispatch(
+                          req.url.slice("/preview-api/v1/training/".length),
                           JSON.parse(Buffer.concat(chunks).toString("utf8")),
                         )
-                      : req.url === "/preview-api/v1/detective/grade"
-                        ? gradeDetective(
+                      : req.url === "/preview-api/v1/library/grade"
+                        ? gradeLibrary(
                             library,
                             JSON.parse(Buffer.concat(chunks).toString("utf8")),
                           )
-                        : gradePractice(
-                            practice,
-                            JSON.parse(Buffer.concat(chunks).toString("utf8")),
-                          ),
+                        : req.url === "/preview-api/v1/detective/grade"
+                          ? gradeDetective(
+                              library,
+                              JSON.parse(
+                                Buffer.concat(chunks).toString("utf8"),
+                              ),
+                            )
+                          : gradePractice(
+                              practice,
+                              JSON.parse(
+                                Buffer.concat(chunks).toString("utf8"),
+                              ),
+                            ),
             ),
           );
         } catch (e) {
@@ -263,6 +297,89 @@ export async function startPreview({
       send(400, '{"error":"INVALID_PATH"}');
       return;
     }
+    if (pathname.startsWith("/preview-api/v1/english/")) {
+      if (!english) {
+        send(
+          503,
+          JSON.stringify({
+            error: "ENGLISH_SOURCE_NOT_INSTALLED",
+            message: "家庭英语内容包尚未装载。",
+          }),
+        );
+        return;
+      }
+      try {
+        if (pathname === "/preview-api/v1/english/catalog") {
+          send(200, JSON.stringify(english.catalog));
+          return;
+        }
+        if (pathname === "/preview-api/v1/english/sprint") {
+          send(
+            200,
+            JSON.stringify(
+              english.sprint(
+                new URL(req.url!, "http://localhost").searchParams.get(
+                  "bank",
+                ) || "",
+              ),
+            ),
+          );
+          return;
+        }
+        if (pathname.startsWith("/preview-api/v1/english/groups/")) {
+          send(
+            200,
+            JSON.stringify(
+              english.group(
+                decodeURIComponent(
+                  pathname.slice("/preview-api/v1/english/groups/".length),
+                ),
+              ),
+            ),
+          );
+          return;
+        }
+        if (pathname.startsWith("/preview-api/v1/english/cards/")) {
+          send(
+            200,
+            JSON.stringify(
+              english.publicCard(
+                decodeURIComponent(
+                  pathname.slice("/preview-api/v1/english/cards/".length),
+                ),
+              ),
+            ),
+          );
+          return;
+        }
+        const media = english.media(pathname);
+        if (media) {
+          send(200, media.bytes, media.type);
+          return;
+        }
+        send(
+          404,
+          JSON.stringify({
+            error: "ENGLISH_CONTENT_NOT_FOUND",
+            message: "没有找到这份英语内容。",
+          }),
+        );
+        return;
+      } catch {
+        send(
+          404,
+          JSON.stringify({
+            error: "ENGLISH_CONTENT_NOT_FOUND",
+            message: "英语内容校验未通过或不存在。",
+          }),
+        );
+        return;
+      }
+    }
+    if (pathname === "/subjects/english") {
+      send(200, assets.get("/english/index.html")!, "text/html; charset=utf-8");
+      return;
+    }
     if (
       pathname === "/preview-api/v1/training/catalog" &&
       !new URL(req.url!, "http://" + host).search
@@ -294,6 +411,16 @@ export async function startPreview({
           buildSha: seal.buildSha,
           catalogSha256: seal.catalogSha256,
           contentOnly: true,
+          english: english
+            ? {
+                sourceSha: english.catalog.sourceSha,
+                cards: english.bundle.cards.length,
+                groups: english.bundle.groups.length,
+                media: english.catalog.mediaCount,
+                storage: "page-memory-only",
+                publicationApproved: false,
+              }
+            : null,
           database: false,
           lessons: 70,
           practiceTasks: 849,
@@ -402,7 +529,10 @@ export async function startPreview({
     }
     send(404, '{"error":"CONTENT_ONLY_NOT_FOUND"}');
   });
-  server.once("close", () => training.clear());
+  server.once("close", () => {
+    training.clear();
+    englishTraining?.clear();
+  });
   await new Promise<void>((resolve, reject) => {
     server.once("error", reject);
     server.listen(port, boundary.bind, () => resolve());

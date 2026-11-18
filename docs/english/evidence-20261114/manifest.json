@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-14",
+  "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "runtimeUiHead": "67b664b0c61a5d00a5f671bee8a50d151ca96614",
+  "scope": "Anonymous English content/training plus unchanged math regressions. Not real Kevin mastery or private deployment.",
+  "files": [
+    {
+      "file": "actual-source-browser.json",
+      "sha256": "0d8e65e87fe8f0e7d4980c2acacef84abdeb0f145383ecd3fdbd96c5b6716a52",
+      "bytes": 2731,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "baseline.json",
+      "sha256": "4e1b3e7c947e3c0d41e2ddb8f6ac697f235c6123a0a33cfbe03706c653a9657d",
+      "bytes": 1621,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "baseline.log",
+      "sha256": "2577909d2bb54afbb994453efa9df78048f3ac54f7d444163b863095bc7f8d44",
+      "bytes": 1337,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "books-1280.png",
+      "sha256": "307d24eb4a73200eb1f02a1d8064de8ab0e5021737097132308f386a97a205d3",
+      "bytes": 162724,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "books-390.png",
+      "sha256": "c3d8ebdc374f94a96567bea196159f1d7e4f32048b6f6d058c8ccd6ba6d1d169",
+      "bytes": 98259,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "books-768.png",
+      "sha256": "297f8c292308a42f39560fbbe404082a748f49edad35b969a3193cfe2d2e14fd",
+      "bytes": 111431,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "build.log",
+      "sha256": "2cb80a1267b40f1dc1abb2d3ee26efd79a22ac3d93f0b3e3a3a3ed7123e1c13e",
+      "bytes": 2379,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "card-1280.png",
+      "sha256": "b96326562d1cfd42260c8731f1853e64ba468dbff45910f8bec01a8c79622a4d",
+      "bytes": 143505,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "card-390.png",
+      "sha256": "56d8ee3274e703b020f81c4af5d051c3bca65004b49fc821804747875818cd31",
+      "bytes": 91426,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "card-768.png",
+      "sha256": "0ae08a56c4c06d98ab3138b9dd0caa954423595af9f245b1d971ceaf25aef653",
+      "bytes": 95502,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "english-browser.json",
+      "sha256": "581d5bdd21467ff69890ecec31e600ff16e3fa667767110db5fc113712ec2ee7",
+      "bytes": 934,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "english-browser.log",
+      "sha256": "3c8aab911deb917ee47b6869596950b9598dc0399b8dba3e7cf1f4864b7947a5",
+      "bytes": 63,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "english-node.log",
+      "sha256": "962255a630c20d3ae3a7198408ddd72f6454066cccb1c57e89fa9e8323d51999",
+      "bytes": 1465,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "math-checkpoint.log",
+      "sha256": "65c6da21fd0e023621e812832cece100fbfd48ea538c209f5ab407c4429401e6",
+      "bytes": 59,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "math-classrooms.log",
+      "sha256": "ee6f7809deb1cf6669807fff467c001204b5f1a25b849dc594321be0a31f4cd1",
+      "bytes": 61,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "math-library.log",
+      "sha256": "53c4d0a84c5c245f949892909a2a99ab9c346318803cc9d826711b7641a889c2",
+      "bytes": 107,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "math-node.log",
+      "sha256": "0929e6f14c11088cd74ec110ad5a458051cf9336ae195e56c5f7e42bd5718ab1",
+      "bytes": 3931,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "math-practice.log",
+      "sha256": "048201cc0c2e860b90f24954de3862453278f93665a8195f36ecabab43e060fe",
+      "bytes": 105,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "math-source.log",
+      "sha256": "4d07b96d9ebed238f669fd6b0b138775a81463e9652fdebf6d11a9f00459e350",
+      "bytes": 203,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "node-all.log",
+      "sha256": "9b8de2f65c0a270e25a6c2c655ce87f48cb579a40245d5712d21e6b658a503d1",
+      "bytes": 12882,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "pack-local-1280.png",
+      "sha256": "e26c77b9cfca6a59d684ed276d48987736077d7dffb9223cbc5effd3607359d2",
+      "bytes": 148539,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "pack-local-390.png",
+      "sha256": "9c6392a13a544eedcf36f954f743f389202a9f297f6312034647e1608174be57",
+      "bytes": 92456,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "pack-local-768.png",
+      "sha256": "10cdce3621fc754a7c29f0c51254f8a8f931ab260d1fab9fe49c65b5b619e3c3",
+      "bytes": 98475,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "python.log",
+      "sha256": "bb89009bb519bf07af33534475177238c4a58f7a303d35f1a4cf4ed06a62d9a4",
+      "bytes": 1452,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "source-browser.log",
+      "sha256": "2fef3905042063956bb8914ad9acc2d4e181706ab3f24c909807a5d2dcd04c92",
+      "bytes": 94,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "source-compile.log",
+      "sha256": "8bffb1bf208ef81eecd4876eaee252fb50cd1cbf7fe99b7c7b9933f94a21699d",
+      "bytes": 265,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "source-inputs.json",
+      "sha256": "6c82eee2c3dbaf5aa33b8065aaa0cd5fb7205d70a60abeba40bf88e5c33934db",
+      "bytes": 66492,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "source-math.log",
+      "sha256": "915140fe835c1cff83ff7c2da1346e27d9af198836f9b2f0bbed11aa407dc88d",
+      "bytes": 230,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "superseded-ci-container.txt",
+      "sha256": "e294aba79a800e892a53b00a4a7ac103f27421cba9c2b2001db1428ecdc75a14",
+      "bytes": 427,
+      "status": "superseded-failure-retained"
+    },
+    {
+      "file": "superseded-stale-evidence.log",
+      "sha256": "10d188aacf04301bca0fee28106b59481d6202a998fba9eb87b3f3ca54aedea1",
+      "bytes": 2818,
+      "status": "superseded-failure-retained"
+    },
+    {
+      "file": "typecheck.log",
+      "sha256": "0b10c5f62d019ba52f6fde1ff2e2170273dfa68a0a2d8dad1ca145be9a6c811e",
+      "bytes": 55,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "wrong-1280.png",
+      "sha256": "5d017eae89ccb9d58dd43ee02e633891350815ff2bd4507543b4190a42e6a0e0",
+      "bytes": 176511,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "wrong-390.png",
+      "sha256": "1b9aa9b8eaecce491e9c8478a557d278c801a98b6000c5bff0d868290473d98d",
+      "bytes": 123166,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "wrong-768.png",
+      "sha256": "0a1603f0e80935780462d193a72daefaea9c687a2ef6c1d7b6f2b23f65ef52a4",
+      "bytes": 129416,
+      "status": "measured-evidence"
+    },
+    {
+      "file": "superseded-ci-fingerprint.txt",
+      "sha256": "75db59eeb5ba80ce2a066de3b27ecef28aec35edce8674a6a4d4df32d94e2d90",
+      "bytes": 680,
+      "status": "superseded-failure-not-pass"
+    },
+    {
+      "file": "superseded-local-frame-timeout.log",
+      "sha256": "851b679922a6b1dbf26a4fb2692085e3300a5464d0623e0facfc2f27cd1a67b7",
+      "bytes": 1078,
+      "status": "superseded-failure-not-pass"
+    },
+    {
+      "file": "superseded-local-idle-only.log",
+      "sha256": "0973ca995be7400fc0cd3eff17c04f4029ba47ea8a87e4f2327c7fe50134a04e",
+      "bytes": 1155,
+      "status": "superseded-failure-not-pass"
+    },
+    {
+      "file": "linux-evidence-20261115.json",
+      "sha256": "5cc5349367011584ba957592c2c02beb41932c53adb6479ac342c10f1b749c32",
+      "bytes": 552,
+      "status": "measured-linux-ci-evidence"
+    },
+    {
+      "file": "mac-browser-rerun-20261115.json",
+      "sha256": "8865eee135837439a257a4b7a01eb0da968e625e87f3e3b38e98539eda643c01",
+      "bytes": 635,
+      "status": "measured-evidence"
+    }
+  ],
+  "copyrightedSourceScreenshotsCommitted": false,
+  "privateRecordsIncluded": false,
+  "nasDeployed": false,
+  "ci": "pending fixed-head run",
+  "related": [
+    "../implementation/evidence/math-full-01/lessons-coverage.json",
+    "../implementation/evidence/math-full-02/tasks-coverage.json",
+    "../implementation/evidence/math-full-remainder/capabilities.json"
+  ]
+}

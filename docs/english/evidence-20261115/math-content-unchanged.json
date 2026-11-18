@@ -1,0 +1,14 @@
+{
+  "status": "UNCHANGED",
+  "mathBaseline": "8cd166a1bc3e230437174cf062d28b702375d297",
+  "englishRuntime": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "paths": [
+    "apps/preview/content",
+    "apps/preview/practice",
+    "apps/preview/library",
+    "apps/preview/main.tsx",
+    "packages/math-training"
+  ],
+  "changedFiles": [],
+  "realLearningStoreRead": false
+}

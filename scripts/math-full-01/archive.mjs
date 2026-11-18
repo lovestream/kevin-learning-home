@@ -1,4 +1,4 @@
-// Manual evidence publication only. CI writes fresh measurements to ignored .evidence instead.
+// Publish only actual measured evidence. CI uses its own PASS_CI baseline and keeps that provenance.
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 const read=p=>JSON.parse(fs.readFileSync(p));
@@ -17,7 +17,7 @@ const matrix=catalog.lessons.map(entry=>{
 });
 fs.writeFileSync(target+'/lessons-coverage.json',JSON.stringify({status:'PASS',scope:'70 teaching classrooms only; not 849 practice tasks or the entire old site',sourceCommit:catalog.sourceCommit,total:70,interactive:64,static:6,browserScenarios:210,execution:browser.execution,lessons:matrix},null,2)+'\n');
 for(const name of ['browser.json','checkpoint.json'])fs.copyFileSync(source+'/'+name,target+'/'+name);
-const baseline=read('.evidence/verification.json');if(baseline.status!=='PASS_LOCAL'||baseline.tests!==60||baseline.shellBrowserScenarios!==18||baseline.mathNodeTests!==12||baseline.mathBrowserScenarios!==9)throw Error('ORIGINAL_FULL_BASELINE_REQUIRED');
+const baseline=read('.evidence/verification.json');if(baseline.status!==(process.env.CI?'PASS_CI':'PASS_LOCAL')||baseline.tests!==60||baseline.shellBrowserScenarios!==18||baseline.mathNodeTests!==12||baseline.mathBrowserScenarios!==9)throw Error('ORIGINAL_FULL_BASELINE_REQUIRED');
 fs.copyFileSync('.evidence/verification.json',target+'/local-baseline.json');
 const screenshotIds=['G3-U01-B03','G3-UP01-B01','G3-U04-B01','G3-U06-B01','G3-LP01-B02','G3-U05-B01'];
 const screenshots=[];

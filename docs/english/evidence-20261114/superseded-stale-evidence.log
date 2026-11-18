@@ -1,0 +1,45 @@
+✖ 849 versioned authored tasks, five groups/kinds, 70 lessons, source hashes and strict projection (5.266167ms)
+✔ all 849 authored golden answers match original pure grader; 329 explanations stay human review (32.463166ms)
+✔ independent arithmetic fixtures: fractions, Unicode, complete expressions, claim/evidence and units (0.4ms)
+✔ submission schema rejects missing self-checks, stale/other lesson, unknown fields and oversized answers (0.990333ms)
+✔ real HTTP reaches all 849 questions, final-only stateless feedback; private/formal APIs inaccessible (476.039959ms)
+✔ private bank tampering prevents startup (147.541042ms)
+✔ exact approved capabilities and frozen source mapping; no deferred card, private case or blueprint disguised as course (6.039792ms)
+✔ all 432 legacy questions have source-compatible deterministic goldens; 17 thought explanations remain human review (8.211209ms)
+✔ 14 original anonymous cases: correct/wrong, reason shuffle, ordering, rational numeric comparison and no oral auto-correct (2.321875ms)
+✔ library projection never sends task keys, case verdict, expected reason, solutions or private source notes initially (1.046541ms)
+✔ real library HTTP reaches all 71 entries/449 tasks/14 cases; same schema and boundary for stateless grades (335.26575ms)
+✔ library bank tampering prevents healthy startup (142.709166ms)
+✔ multi-digit legacy place value conserves 306040 and higher units instead of truncating at hundreds (0.406166ms)
+✔ frozen thought models conserve equal removals, view constraints and Venn counts (0.683083ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2007.337208
+
+✖ failing tests:
+
+test at tests/math-full-02/practice.test.mjs:16:1
+✖ 849 versioned authored tasks, five groups/kinds, 70 lessons, source hashes and strict projection (5.266167ms)
+  AssertionError [ERR_ASSERTION]: STALE_PRACTICE_EVIDENCE apps/preview/DesignShell.tsx
+  + actual - expected
+  
+  + 'c43ec2d2bf03c6842dd2428d5dd40eb6e5f200743af6deca93da9e6e86cdd97d'
+  - '1808efd55c536c7c65607fcd15798ed35e916e67433cf991366d824a9e4ef7ad'
+  
+      at TestContext.<anonymous> (file:///Users/yako/Downloads/codex/kevin-learning-home-math-trial/tests/math-full-02/practice.test.mjs:17:350)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'c43ec2d2bf03c6842dd2428d5dd40eb6e5f200743af6deca93da9e6e86cdd97d',
+    expected: '1808efd55c536c7c65607fcd15798ed35e916e67433cf991366d824a9e4ef7ad',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

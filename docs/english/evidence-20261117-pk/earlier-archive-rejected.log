@@ -1,0 +1,11 @@
+file:///Users/yako/Downloads/codex/kevin-learning-home-math-trial/scripts/math-full-03/archive.mjs:6
+for(const [p,digest]of Object.entries(browser.execution.files))if(h(p)!==digest)throw Error('MEASURED_LIBRARY_SOURCE_CHANGED '+p);
+                                                                                      ^
+
+Error: MEASURED_LIBRARY_SOURCE_CHANGED apps/preview/english/English.tsx
+    at file:///Users/yako/Downloads/codex/kevin-learning-home-math-trial/scripts/math-full-03/archive.mjs:6:87
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

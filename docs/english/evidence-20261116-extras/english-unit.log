@@ -1,0 +1,29 @@
+✔ Core meaning survives target removal, including inflections, without accepting them as spellings (10.929708ms)
+✔ source partitions: generic 65 is 30/30/5; Movers original PDF days and 20-phrase chunks (0.567167ms)
+✔ duplicate clean rows never replace a missing word; audio and hint are not clean final evidence (0.080708ms)
+✔ complete sprint lifecycle: wrong full -> drill -> final wrong -> drill -> final clean; no rewards or overwritten first (3.931625ms)
+✔ sprint final clean score uses the active phase only, not previously successful cloze (2.370166ms)
+✔ custom training evidence survives edits/archive and keeps content version snapshots (1.059208ms)
+✔ My Words duplicate, atomic pack limit, source filters and training/collection are independent (5.3085ms)
+✔ manual phrase whitespace follows original normalization and metadata edits preserve spelling chunks (0.254667ms)
+✔ English HTTP is same-origin JSON-only, answer-free before attempt, no cookies or private APIs (61.967125ms)
+✔ source helper target is pinned and semantic alternatives never count as spelling (1.053208ms)
+✔ pre-answer payload has no target word, stable answer-bearing ID, definition, example or source filename (7.396292ms)
+✔ first wrong answer is immutable; hint, reference and audio remain separately visible (3.397625ms)
+✔ help before first answer is accurately marked; a retry cannot rewrite a receipt or task (2.323833ms)
+✔ cloze always hides at least one letter, full mode no mask; unfinished cannot advance (2.190292ms)
+✔ workbook grading keeps first responses, idempotent retries and later corrections separate (1.89775ms)
+✔ session expiration, isolation and resource limits do not persist learner data (1.714625ms)
+✔ bundle/media tampering fails closed and source aliases retain canonical IDs (2.352917ms)
+✔ public pack format rejects external/SVG images, missing fields, bad chunks, missing target and future versions (1.566792ms)
+✔ LAN HTTP IDs remain valid v4 UUIDs with secure-context-only APIs absent (0.495291ms)
+✔ retried summary is a historical snapshot; final next returns the result atomically (1.936167ms)
+✔ original V1 mimeType/base64 and source-only title variants remain importable (0.268791ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 280.803083

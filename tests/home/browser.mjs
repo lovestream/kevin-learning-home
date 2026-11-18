@@ -71,7 +71,7 @@ try {
     await expect(page.locator("#learning-spaces")).toBeInViewport();
     const menu = page.getByRole("button", { name: "学习导航", exact: true });
     await menu.click();
-    await expect(page.getByRole("dialog")).toBeVisible();
+    await expect(page.getByRole("complementary", { name: "学习导航面板" })).toBeVisible();
     await page.keyboard.press("Escape");
     await expect(menu).toBeFocused();
     await page
@@ -89,8 +89,7 @@ try {
     await page.goBack();
     await expect(page.locator("[data-home-page]")).toBeVisible();
     await page.getByRole("searchbox", { name: "在家园找一找" }).fill("english");
-    await expect(page.locator(".pending-result")).toContainText("准备中");
-    assert.equal(await page.locator(".pending-result a").count(), 0);
+    await expect(page.locator(".home-results a[href='/subjects/english']")).toContainText("英语天地");
     await page
       .getByRole("searchbox", { name: "在家园找一找" })
       .fill("不存在的合成课程");
@@ -112,11 +111,11 @@ try {
     await fit();
     await menu.click();
     await page
-      .getByRole("dialog")
+      .getByRole("complementary", { name: "学习导航面板" })
       .getByRole("link", { name: "返回家园首页", exact: true })
       .click();
     await expect(page.locator("[data-home-page]")).toBeVisible();
-    assert.equal(await page.locator("dialog[open]").count(), 0);
+    assert.equal(await page.locator("#learning-navigation:not([hidden])").count(), 0);
     await page.getByRole("link", { name: "打开探索本", exact: true }).click();
     await expect(
       page.getByRole("heading", { name: "今天，你好奇什么？" }),

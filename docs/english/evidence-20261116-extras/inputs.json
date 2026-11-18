@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-16",
+  "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "executionWorkingTree": false,
+  "files": [
+    {
+      "path": ".github/workflows/english-math-evidence.yml",
+      "sha256": "5ddfb4aeb51ba075d537326e2e32e0f4c4b2ff46f91d85c12f005ef0f3fe9498"
+    },
+    {
+      "path": ".github/workflows/foundation.yml",
+      "sha256": "0c690b60e3fab0f8a8de8365f8bede4b6be030d12562b5291ee2b2932debe220"
+    },
+    {
+      "path": "apps/preview/DesignShell.tsx",
+      "sha256": "6352eb381c21f17a3a5e4b35abe71aae5c1db735bd8405dddc3e139960467214"
+    },
+    {
+      "path": "apps/preview/english/English.tsx",
+      "sha256": "45a06adb61b8f15e00b46a379a013710dc526c4a86e410fbc3bf2eabed55aab7"
+    },
+    {
+      "path": "apps/preview/english/english.css",
+      "sha256": "ddb71556093f09c6109fe8d5244cdd9fba450c8c3783dd761c48767970f6ea6c"
+    },
+    {
+      "path": "apps/preview/english/index.html",
+      "sha256": "82f042d0a50fb2be66be78b371bce89911a2668afe280182ac4dfc5358cba330"
+    },
+    {
+      "path": "apps/preview/english/main.tsx",
+      "sha256": "47f505145330ce333fc8c6f2e420c5fb617795b2c1819381be673661a2bf3aee"
+    },
+    {
+      "path": "apps/preview/server.ts",
+      "sha256": "9809e4ce397c599d733f2c983fcc4084d73045d84c7a1b1e96997701d30b399f"
+    },
+    {
+      "path": "infra/math-preview/Dockerfile",
+      "sha256": "250fb54f952887090e6c18521cf8519975aee57b6920bf337569410e1707ee2c"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "866d3e63c439508fe6531c215743da16107c285cbb1dcc4401d5ea6a9cc51866"
+    },
+    {
+      "path": "package.json",
+      "sha256": "15321478184db5e38b5ae6ec4a6e2e47a1621b165ce2cd8cdf429acb26408584"
+    },
+    {
+      "path": "packages/english/content.ts",
+      "sha256": "a5ac55be3b25ccd44f2735acdc4d6fe9837e26260d5ff9c5e4680bdacfe55185"
+    },
+    {
+      "path": "packages/english/contract.ts",
+      "sha256": "43fa1842377a3f7a186bd4a12c2660c6311f7b2320aba131aee18f78c0f65e8e"
+    },
+    {
+      "path": "packages/english/id.ts",
+      "sha256": "d0fff45daf4be772de66d942da358caa10dcf2738dfd8220faadf60e78127c86"
+    },
+    {
+      "path": "packages/english/my-words.ts",
+      "sha256": "61692d8c15e6e34598148149798febc8c744e21410f693a613617e7183905034"
+    },
+    {
+      "path": "packages/english/pack.ts",
+      "sha256": "a7449495ad0c0de5a99b536a4eb132529be6a60e153798bb72e3dccc46d5697f"
+    },
+    {
+      "path": "packages/english/source-grading.d.mts",
+      "sha256": "e0b019763778963edd8c733f31f4d2e4653be7d3af2e531154feba60c25fb6b7"
+    },
+    {
+      "path": "packages/english/source-grading.mjs",
+      "sha256": "4191aec811c348bf15a1e1e7a73cfda595832a12eff87e5dffb3e9354f350ab5"
+    },
+    {
+      "path": "packages/english/sprint.ts",
+      "sha256": "a249fe9e5b434766cc507bda3da3c08953d171a62ac4a789815f550cd957a379"
+    },
+    {
+      "path": "packages/english/training.ts",
+      "sha256": "be08632213c9dfd2d9c5d7a0afde2cd62ddf644a8d91b45f32d199cb0ab43be4"
+    },
+    {
+      "path": "scripts/english/audit-source.py",
+      "sha256": "e592dd35642812f7a6dc95223df3ce841e94742485daa4334632a307f1397080"
+    },
+    {
+      "path": "scripts/english/compile-family.ts",
+      "sha256": "f04282bea59667f661dfe3ced02640e82f4cd82b4688a171e282df2c3f8e579f"
+    },
+    {
+      "path": "scripts/english/verify-family.ts",
+      "sha256": "75c1e39e0dbc8c74ce6a5b7a4ebc95099f6d6d918c7fa5606b833c4994561da3"
+    },
+    {
+      "path": "tests/english/browser.mjs",
+      "sha256": "a2a4eaa53602be0ac1e6958de9ade6216fc80e20b0b3018c14627ea7b7604063"
+    },
+    {
+      "path": "tests/english/extras-browser.mjs",
+      "sha256": "8275a4c65719aa30e02ee7631dccda9c1364f39d7c0880a5f927c70fbe8363e7"
+    },
+    {
+      "path": "tests/english/extras-source-browser.mjs",
+      "sha256": "5f5c7207d4bd3f6e0e28614d555e5aae664ff70bf1350915e7e326ccef2d0ed8"
+    },
+    {
+      "path": "tests/english/extras.test.ts",
+      "sha256": "30f737b41a84ba78aac96b3870a26259b09e50c84fd37adfbc9d0d371878e1bd"
+    },
+    {
+      "path": "tests/english/fixture.ts",
+      "sha256": "ea6b93cec853638f8c41a779ec678eea2066d1ad9db94422c52b84d66dab274e"
+    },
+    {
+      "path": "tests/english/http.test.ts",
+      "sha256": "c886ad7ebc7dc07b4b0c5be212f05071edcfd300264578ffb1a8fe8118df4573"
+    },
+    {
+      "path": "tests/english/mac-browser.mjs",
+      "sha256": "01bd0dadc9845d3c49d71c6caaa3090d013b9ee5d063a89cc46aa18fb1f69f44"
+    },
+    {
+      "path": "tests/english/source-browser.mjs",
+      "sha256": "6c18049520ae2d3d730aad9bfc7fff7366f3695fcae2e4b626e9e8704c4a9478"
+    },
+    {
+      "path": "tests/english/test_family_image.py",
+      "sha256": "34abefa22b49ef3e601723a40bf20db98e80ba4590193f7c008bec0ecd2da9ea"
+    },
+    {
+      "path": "tests/english/test_source_audit.py",
+      "sha256": "68b8bb89e0fe027c0eb16e7802958d16c0dc93b1eba1837947de593f16c6dfdf"
+    },
+    {
+      "path": "tests/english/training.test.ts",
+      "sha256": "5c30433a0f4171b3907b335f158a0574f8c20389cecc0d152d07cbde801110b9"
+    },
+    {
+      "path": "tests/math-preview/container.mjs",
+      "sha256": "3b50864fd982059517ee5982e7ca4d7f061e4013657d275cdb7fc167364843ef"
+    }
+  ],
+  "runtimeHead": "9eb8ef7ebb45b02f281dee414c5cf17ce6769b2c"
+}

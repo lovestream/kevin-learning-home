@@ -31,10 +31,11 @@ export const learningSpaces: LearningSpace[] = [
   {
     id: "english",
     title: "英语天地",
-    description: "单词、故事和表达，正在准备搬进家园。",
+    description: "翻开词卡，听一听，再合上书自己拼写。",
     keywords: ["英语", "单词", "english", "word"],
-    href: null,
-    available: false,
+    href: "/subjects/english",
+    available: true,
+    pinned: true,
   },
   {
     id: "growth",

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "buildSha": "1854ec29860c04126787620ca59b0757ed668c6b",
+  "batchCount": 224,
+  "nas": false,
+  "results": [
+    {
+      "width": 390,
+      "batch": 61,
+      "words": 2,
+      "phases": 3,
+      "finalClean": true,
+      "localMyWords": true,
+      "refreshClears": true
+    },
+    {
+      "width": 768,
+      "batch": 61,
+      "words": 2,
+      "phases": 3,
+      "finalClean": true,
+      "localMyWords": true,
+      "refreshClears": true
+    },
+    {
+      "width": 1280,
+      "batch": 61,
+      "words": 2,
+      "phases": 3,
+      "finalClean": true,
+      "localMyWords": true,
+      "refreshClears": true
+    }
+  ],
+  "realRecordsRead": false,
+  "rewardsIssued": 0
+}

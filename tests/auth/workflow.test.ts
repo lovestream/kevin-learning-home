@@ -30,6 +30,7 @@ test("R1-02 main push and development push/PR share the unconditional complete v
       "codex/explore-01-preview",
       "codex/home-navigation",
       "codex/explore-02-records",
+      "codex/english-full",
       "codex/implement-01-foundation",
       "codex/implement-02a-auth",
       "codex/implement-02b-shell",
@@ -42,6 +43,7 @@ test("R1-02 main push and development push/PR share the unconditional complete v
     "codex/math-full-03-capabilities",
     "codex/explore-01-preview",
     "codex/home-navigation",
+    "codex/explore-02-records",
   ]);
   assert(
     !/^    (?:if|continue-on-error):/m.test(workflow),

@@ -1,0 +1,35 @@
+
+> kevin-learning-home@0.1.0 build:math-preview
+> vite build --config apps/preview/vite.config.ts && node scripts/math-full-01/build.ts
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 1787 modules transformed.
+rendering chunks...
+computing gzip size...
+apps/preview/dist/index.html                               0.66 kB │ gzip:   0.39 kB
+apps/preview/dist/english/index.html                       0.67 kB │ gzip:   0.38 kB
+apps/preview/dist/.vite/manifest.json                      3.74 kB │ gzip:   0.71 kB
+apps/preview/dist/assets/CoreWorkbench-BhX3VX24.css        3.63 kB │ gzip:   1.13 kB
+apps/preview/dist/assets/Explore-DMdACCrM.css              8.45 kB │ gzip:   2.10 kB
+apps/preview/dist/assets/english-DmgRGaun.css              9.62 kB │ gzip:   2.64 kB
+apps/preview/dist/assets/DetectiveTraining-C1T3lICt.css   10.45 kB │ gzip:   2.52 kB
+apps/preview/dist/assets/Library-WY_g6DWh.css             12.74 kB │ gzip:   3.03 kB
+apps/preview/dist/assets/Home-ajugpxla.css                14.10 kB │ gzip:   3.41 kB
+apps/preview/dist/assets/design-system-CY6KwQa1.css       61.98 kB │ gzip:  12.33 kB
+apps/preview/dist/assets/math-D5zqAEVL.css               116.47 kB │ gzip:  25.75 kB
+apps/preview/dist/assets/usePrint-CIWg-6mg.js              0.48 kB │ gzip:   0.29 kB
+apps/preview/dist/assets/Article-CI6QfWdn.js               7.80 kB │ gzip:   3.13 kB
+apps/preview/dist/assets/jsx-runtime-Am8b9ysO.js           8.27 kB │ gzip:   3.12 kB
+apps/preview/dist/assets/DetectiveFigure-CmN5tVPu.js       8.83 kB │ gzip:   3.81 kB
+apps/preview/dist/assets/Home-BN0fP1OQ.js                 12.01 kB │ gzip:   4.00 kB
+apps/preview/dist/assets/DetectiveTraining-DNW2VWU5.js    18.24 kB │ gzip:   6.60 kB
+apps/preview/dist/assets/CoreWorkbench-D7TgJLhS.js        18.83 kB │ gzip:   6.86 kB
+apps/preview/dist/assets/Explore-DPqRQHnz.js              20.60 kB │ gzip:   7.91 kB
+apps/preview/dist/assets/english-DxOQ46Z2.js              36.72 kB │ gzip:  12.94 kB
+apps/preview/dist/assets/Library-CecmQRiX.js              86.97 kB │ gzip:  32.99 kB
+apps/preview/dist/assets/design-system-B_eU-5P3.js       321.85 kB │ gzip:  99.40 kB
+apps/preview/dist/assets/math-DRLoGMNz.js                341.62 kB │ gzip: 117.78 kB
+
+✓ built in 230ms
+{"previewBuild":"SEALED","lessons":70,"assets":28,"databaseOpened":false}

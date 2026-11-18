@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "buildSha": "c158185a6d91d4cb530570624f267889f37069ec",
+  "nas": false,
+  "results": [
+    {
+      "width": 390,
+      "bankId": "core2000",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 390,
+      "bankId": "movers",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 390,
+      "bankId": "ket",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 390,
+      "bankId": "pet",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 768,
+      "bankId": "core2000",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 768,
+      "bankId": "movers",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 768,
+      "bankId": "ket",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 768,
+      "bankId": "pet",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 1280,
+      "bankId": "core2000",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 1280,
+      "bankId": "movers",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 1280,
+      "bankId": "ket",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    },
+    {
+      "width": 1280,
+      "bankId": "pet",
+      "words": 5,
+      "attempts": 5,
+      "finished": true,
+      "sourceVersionAndUnit": true,
+      "noRealRewards": true
+    }
+  ],
+  "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "realRecordsRead": false,
+  "rewardsIssued": 0
+}

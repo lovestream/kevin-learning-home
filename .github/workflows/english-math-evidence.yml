@@ -1,0 +1,79 @@
+name: English shared-runtime browser evidence
+on:
+  push:
+    branches: [codex/english-full]
+    paths:
+      - .github/workflows/english-math-evidence.yml
+      - apps/**
+      - packages/**
+      - infra/math-preview/Dockerfile
+      - tests/math-full-01/**
+      - tests/math-full-02/**
+      - tests/math-full-remainder/**
+      - tests/math-onepass/inputs.mjs
+      - scripts/math-full-02/archive.mjs
+      - scripts/math-full-03/archive.mjs
+      - scripts/math-full-01/build.ts
+      - scripts/math-full-01/archive.mjs
+      - scripts/verify.ts
+      - docs/implementation/evidence/**/source*.json
+      - docs/implementation/evidence/math-full-01/origins.json
+      - docs/implementation/evidence/math-onepass/study-source.json
+      - docs/implementation/evidence/math-onepass/reading-source.json
+      - package.json
+      - package-lock.json
+permissions:
+  contents: read
+jobs:
+  measure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: '24.15.0', cache: npm}
+      - run: npm install --global npm@11.12.1
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Fixed Chinese font (ephemeral CI runner only)
+        run: |
+          curl --fail --location --silent --show-error --connect-timeout 15 --max-time 120 --retry 2 https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf -o /tmp/klh-ci-noto.otf
+          echo '2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b  /tmp/klh-ci-noto.otf' | sha256sum -c -
+          mkdir -p ~/.local/share/fonts/klh-ci
+          cp /tmp/klh-ci-noto.otf ~/.local/share/fonts/klh-ci/NotoSansCJKsc-Regular.otf
+          fc-cache -f ~/.local/share/fonts/klh-ci
+      - run: npm run build:math-preview
+      - name: Measure all 70 classrooms and their original baseline before publishing fingerprints
+        run: |
+          set -euo pipefail
+          node scripts/verify.ts
+          node tests/math-full-01/browser.mjs --checkpoint
+          node tests/math-full-01/browser.mjs
+          node scripts/math-full-01/archive.mjs
+          python3 scripts/math-full-01/check.py
+      - name: Measure real practice and library browsers, then archive their exact inputs
+        run: |
+          set -euo pipefail
+          mkdir -p .evidence/english-evidence
+          node --test --test-name-pattern='all 849 authored golden answers' tests/math-full-02/practice.test.mjs > .evidence/english-evidence/practice-goldens.log 2>&1
+          node tests/math-full-02/browser.mjs > .evidence/english-evidence/practice-browser.log 2>&1
+          node scripts/math-full-02/archive.mjs
+          node --test --test-name-pattern='all 432 legacy questions' tests/math-full-remainder/library.test.mjs > .evidence/english-evidence/library-goldens.log 2>&1
+          node tests/math-full-remainder/browser.mjs > .evidence/english-evidence/library-browser.log 2>&1
+          node scripts/math-full-03/archive.mjs
+      - name: Original stale-evidence guards and all grading assertions stay enforced
+        run: |
+          node --test tests/math-full-02/practice.test.mjs
+          node --test tests/math-full-remainder/library.test.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: english-math-measured-evidence
+          path: |
+            docs/implementation/evidence/math-full-01
+            docs/implementation/evidence/math-full-02
+            docs/implementation/evidence/math-full-remainder
+            .evidence/english-evidence
+          include-hidden-files: true
+          retention-days: 14

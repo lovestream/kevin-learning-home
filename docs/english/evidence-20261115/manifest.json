@@ -1,0 +1,172 @@
+{
+  "status": "PASS_NAS_ENGLISH_CORE_DELIVERY",
+  "deployedHead": "e96ebd29424c20564dc53e014b0399cfd585b691",
+  "evidenceDate": "2026-11-15",
+  "recheckedDate": "2026-11-16",
+  "origin": "http://192.168.2.100:38444",
+  "scope": "Full English source and anonymous core training; 14 math NAS regressions. Not all original English modules, real learner mastery or private records.",
+  "mathNASGroups": 14,
+  "englishNASFlows": 12,
+  "files": [
+    {
+      "file": "activation.json",
+      "sha256": "85f15ef825a30d7387be4aeda997e84e4bb1a5608f04e9c5be45d043b2beae48",
+      "bytes": 410
+    },
+    {
+      "file": "english-books-nas-1440.png",
+      "sha256": "19fab2bc36b69047a74066d6f2c37a41c065e40f4331ebc220de214d563c7c6f",
+      "bytes": 168106
+    },
+    {
+      "file": "english-nas.json",
+      "sha256": "f54397e9936041803fd6fd956ac15ea0ff5b2dd1a88d0cc92e55fdefee2ed27d",
+      "bytes": 2730
+    },
+    {
+      "file": "explore-nas.json",
+      "sha256": "4195c89e98f8c1967caad5194f6b0440c1ab36ba95205e60d6354f76d4ed673a",
+      "bytes": 2486
+    },
+    {
+      "file": "full-resource-probe.json",
+      "sha256": "a2817c6de8176be413598b56d7d8009ec2224059b969bb434af4d3c6ef8f4f7e",
+      "bytes": 236
+    },
+    {
+      "file": "home-nas.json",
+      "sha256": "0736ae19315ea450226f8c3e4974b241ae11043a7e4d4e4a0c3d28971574adc8",
+      "bytes": 1745
+    },
+    {
+      "file": "image-ci.json",
+      "sha256": "970ca519cb9981241f8cc74b1a164421d86399e2f1e50108dfe166ae0ea7b997",
+      "bytes": 460
+    },
+    {
+      "file": "isolation.json",
+      "sha256": "415ff246a40ccb7261586dddef0914e4a3da168769c07034d3cf9132ba41ed84",
+      "bytes": 494
+    },
+    {
+      "file": "live-recheck-20261116.json",
+      "sha256": "385e97e16e4055d4e0e9d48b81014b4a2d6f2a42b3ebd39402fe662c2ab0bc06",
+      "bytes": 409
+    },
+    {
+      "file": "load-sample.json",
+      "sha256": "f08c92137a47c719b8646e0cbcee6da23b934206ee24846c0a69e994424ee9fd",
+      "bytes": 291
+    },
+    {
+      "file": "math-content-unchanged.json",
+      "sha256": "1b63fb2566596d7b2600abc1b5b82c814f0d42bbcf8c520480ceb91029dcd2a4",
+      "bytes": 371
+    },
+    {
+      "file": "math-nas-logs/business.log",
+      "sha256": "e40bbd187d38c25603218380dd403636310d0f84ef4dfc8fedc86ce3bc650390",
+      "bytes": 103
+    },
+    {
+      "file": "math-nas-logs/cases.log",
+      "sha256": "ae198037f9a82c8b1c67cd9d6661a9245c3cd4f7114f42db64208dc1d977a2b1",
+      "bytes": 57
+    },
+    {
+      "file": "math-nas-logs/checkpoint.log",
+      "sha256": "59d42f4376ae23b208354223c3d96ef15faed9475963e7f6a9ce9f604d0f553a",
+      "bytes": 59
+    },
+    {
+      "file": "math-nas-logs/classrooms.log",
+      "sha256": "91ae5c60734634dd670617cf1b6a5d313cf8c0eac305e5c4e629ce4ef3135bcb",
+      "bytes": 61
+    },
+    {
+      "file": "math-nas-logs/coding.log",
+      "sha256": "b8423126772630289b439be75ebd1809f4c5efbc45f1fd107ecc8fc1262fc406",
+      "bytes": 88
+    },
+    {
+      "file": "math-nas-logs/compatibility.log",
+      "sha256": "0d5693f3272b9dc4ccac7c6a365ff689394c58b2386ef08dfe5f77b7a6b0293a",
+      "bytes": 106
+    },
+    {
+      "file": "math-nas-logs/experience.log",
+      "sha256": "e60b3af068542fb88ea32e752aa240d6139ae319ccd7ea91201072076f566687",
+      "bytes": 94
+    },
+    {
+      "file": "math-nas-logs/models.log",
+      "sha256": "e511523da8cd756e008634297236840d027e5220111236aee356f153549006f1",
+      "bytes": 59
+    },
+    {
+      "file": "math-nas-logs/navigation.log",
+      "sha256": "8ceae737c52d42b5b3582978f08b16dcd5ecce492b7b84db95b42c527843cda2",
+      "bytes": 61
+    },
+    {
+      "file": "math-nas-logs/original-library-http.log",
+      "sha256": "0cd01e9c56af5ccb46dde52c6d5f50f78cac77f0160594bec8255164741823da",
+      "bytes": 355
+    },
+    {
+      "file": "math-nas-logs/original-primary-http.log",
+      "sha256": "30eacff44914b7efc32a79b927017a242ad92bb79ebce443c8adf4302162c02a",
+      "bytes": 359
+    },
+    {
+      "file": "math-nas-logs/practice.log",
+      "sha256": "3d92c0ef1e6f5a3742bfcef0a0e38a6d816a027a243d2cf38ef8263baf9ddacc",
+      "bytes": 104
+    },
+    {
+      "file": "math-nas-logs/print.log",
+      "sha256": "a67a94609e67b0812ecd6c5abdf0834073db0a2787d6100ab382901ba7ec7ce5",
+      "bytes": 85
+    },
+    {
+      "file": "math-nas-logs/training.log",
+      "sha256": "a56d00a33435c99e5841b5da988edec8087fab69517106508ffba41a0602f85d",
+      "bytes": 71
+    },
+    {
+      "file": "math-nas-suite.json",
+      "sha256": "7a53cc95d1a8e1b8a746f5ec613c9d6ec2ff22dfebc603f10eeb2f88bb6115a0",
+      "bytes": 3070
+    },
+    {
+      "file": "restored.json",
+      "sha256": "85f15ef825a30d7387be4aeda997e84e4bb1a5608f04e9c5be45d043b2beae48",
+      "bytes": 410
+    },
+    {
+      "file": "rollback.json",
+      "sha256": "5272bc611a2387e38bee40c6e62b72a3b5e93bbf2ad50833993af00169eb36a5",
+      "bytes": 410
+    },
+    {
+      "file": "runtime-input-diff.json",
+      "sha256": "f005b3853654851e36eada2b36642a2d2314486883a479593d5a2a4aea5002e4",
+      "bytes": 390
+    },
+    {
+      "file": "source-ci.json",
+      "sha256": "beeabab12fe0b19e6d9954d7955437ef972f3edabe9928367bb79a0940192e22",
+      "bytes": 1431
+    },
+    {
+      "file": "stage-family.json",
+      "sha256": "5a02ee925a25788f027f6a011df12c5274b3510f4a9f7c82245bcf5351df19c0",
+      "bytes": 859
+    },
+    {
+      "file": "verification-scope.json",
+      "sha256": "f15e0c76a18e070900162f796cc5fbb8329dcf149bd7e3d94ce577c62bea72bd",
+      "bytes": 1051
+    }
+  ]
+}

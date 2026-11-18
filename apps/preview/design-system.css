@@ -303,33 +303,6 @@ body:has(.preview-app) {
 .preview-app .menu-toggle {
   display: none;
 }
-.learning-dialog {
-  border: 0;
-  border-radius: 16px;
-  padding: 24px;
-  max-width: calc(100vw - 32px);
-  width: 360px;
-  background: var(--paper);
-  color: var(--ink);
-  max-height: calc(100dvh - 48px);
-  overflow: auto;
-}
-.learning-dialog::backdrop {
-  background: #173b4766;
-}
-.dialog-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-.dialog-head button {
-  padding: 8px;
-  min-width: 44px;
-}
-.learning-dialog .pathways a {
-  min-height: 64px;
-}
 .preview-app .preview-banner {
   margin: 0 40px;
   border: 0;
@@ -1442,17 +1415,6 @@ body:has(.preview-app) {
   flex: 0 0 auto;
   margin-top: 2px;
 }
-.learning-dialog .pathways a {
-  color: var(--ink);
-}
-.learning-dialog .pathways a small {
-  color: var(--muted);
-}
-.learning-dialog .pathways a[aria-current="page"],
-.learning-dialog .pathways a:hover {
-  background: var(--accent-soft);
-  color: var(--ink);
-}
 .home-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
@@ -2268,6 +2230,7 @@ body:has(.preview-app) {
     background: white !important;
   }
   .preview-app .topbar,
+  .preview-app .learning-panel,
   .learning-sidebar,
   .preview-banner,
   .preview-footer,

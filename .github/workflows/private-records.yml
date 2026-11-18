@@ -1,9 +1,9 @@
 name: Private records (synthetic only)
 on:
   push:
-    branches: [codex/explore-02-records]
+    branches: [codex/explore-02-records, codex/english-full]
   pull_request:
-    branches: [main, codex/home-navigation]
+    branches: [main, codex/home-navigation, codex/explore-02-records]
 permissions:
   contents: read
 jobs:

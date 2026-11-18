@@ -1,0 +1,19 @@
+{
+  "sourceSha": "d0b42a8872a7e87433b96770519203630223b6f2",
+  "path": "assets/app.js",
+  "sourceSha256": "ff78dc2435bc4131ce8f836588eb1f9133d8d08b60bd2f27e2a37ba242810b97",
+  "excerptSha256": "5f01413d76340ed14380af0d0fda6e57b5ff42d27cf369516e445f1b35f84764",
+  "targetSha256": "4191aec811c348bf15a1e1e7a73cfda595832a12eff87e5dffb3e9354f350ab5",
+  "functions": [
+    "normalizeAnswer",
+    "spellingAnswersFor",
+    "clueContainsAnswer",
+    "quizClueFor",
+    "coreExerciseAnswerMatches"
+  ],
+  "additionalHelpers": [
+    "hashString",
+    "seededShuffle",
+    "makeMask"
+  ]
+}

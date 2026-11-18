@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-17",
+  "status": "PASS_LOCAL_DEPLOYMENT_BLOCKED",
+  "executionParentHead": "c158185a6d91d4cb530570624f267889f37069ec",
+  "executionWorkingTree": true,
+  "sourceInputs": "inputs.json",
+  "fixedHeadCI": "PR38 Checks; no 47f CI inheritance",
+  "files": [
+    {
+      "path": "build.log",
+      "bytes": 2379,
+      "sha256": "c441b2d3807ab33f4d8fec13c6ab940f4dd28aa0a3f330bdf24b1c5834b16211"
+    },
+    {
+      "path": "classroom-archive.log",
+      "bytes": 84,
+      "sha256": "af742f79834fbf390b7780148e1bc2099d17c0f89e8604afc260513c95606288"
+    },
+    {
+      "path": "classroom-checkpoint.log",
+      "bytes": 59,
+      "sha256": "c36f9cc68238d789c82cd119b3071edef93ea6cd900e1e0e63e4c7d70f9fd5f4"
+    },
+    {
+      "path": "classroom-source-check.log",
+      "bytes": 203,
+      "sha256": "4d07b96d9ebed238f669fd6b0b138775a81463e9652fdebf6d11a9f00459e350"
+    },
+    {
+      "path": "classrooms-210.log",
+      "bytes": 60,
+      "sha256": "262f5c98b4d8117ec5d5372fb36963635b7b3721986ea12e609e4446a82ef2c4"
+    },
+    {
+      "path": "core-browser.json",
+      "bytes": 934,
+      "sha256": "4417746b11008f68b3717033142da3b762ca035a93f08ebd6a80deb276c6aa45"
+    },
+    {
+      "path": "core-browser.log",
+      "bytes": 63,
+      "sha256": "3c8aab911deb917ee47b6869596950b9598dc0399b8dba3e7cf1f4864b7947a5"
+    },
+    {
+      "path": "earlier-archive-rejected.log",
+      "bytes": 726,
+      "sha256": "8b4df809f2279913d8f6dd5ae168bf33ccad4fb7e5c943b6df2d70a1dc8b4796"
+    },
+    {
+      "path": "english-node.log",
+      "bytes": 2838,
+      "sha256": "ed0216cd89246b6b3c42bf99f68b0f19d74e5d8aef3e400416e40597065cc288"
+    },
+    {
+      "path": "extras-browser.json",
+      "bytes": 1019,
+      "sha256": "17fa304ebcf43c0cfe94854064130a2f215c75eb0094fd52a2ad274ab7b41ca7"
+    },
+    {
+      "path": "extras-browser.log",
+      "bytes": 52,
+      "sha256": "414232bee41872562632d8a0d13683af212e03bce4c64d61279aa2a9ec779ccc"
+    },
+    {
+      "path": "family-browser.json",
+      "bytes": 2448,
+      "sha256": "3cab7f0d242f4d1a23e9438bed3b045e1c91ae1a9da416e08ffdb79aebaa9ac5"
+    },
+    {
+      "path": "family-browser.log",
+      "bytes": 127,
+      "sha256": "365c42bc03b41ffff784deae4bccd4d4d081f297987cfe103eece07acaa09ac4"
+    },
+    {
+      "path": "full-source.json",
+      "bytes": 336,
+      "sha256": "0d8763122b6b0f940a7b9019867cee6b67292ad58e9be5973870bb5e73b919c4"
+    },
+    {
+      "path": "inputs.json",
+      "bytes": 6968,
+      "sha256": "9a225d54f6426f5fcd643d9b6601e33ad4ccb66cc6fc29e73f2f574366ee6da3"
+    },
+    {
+      "path": "library-archive.log",
+      "bytes": 81,
+      "sha256": "12e6fd0dcff4920ccf50727cddb4502b19fb9ae6002b411a73b17f9f1803c503"
+    },
+    {
+      "path": "library-browser.log",
+      "bytes": 107,
+      "sha256": "3e86270ab5968f7003170feece31e39a9fbbbc1881b0e411e0840560ec7bb72d"
+    },
+    {
+      "path": "math-grading.log",
+      "bytes": 1706,
+      "sha256": "b9d5856ee9e618b589cb4ff27bbab0997e89f38dca4f4e9ad156e0c3874d971c"
+    },
+    {
+      "path": "original-baseline.log",
+      "bytes": 1337,
+      "sha256": "3946d65249ce986cf6a324f01e19f77f4727d0ebede11d8aa5f53b9a1bc7243e"
+    },
+    {
+      "path": "pk-browser.log",
+      "bytes": 52,
+      "sha256": "414232bee41872562632d8a0d13683af212e03bce4c64d61279aa2a9ec779ccc"
+    },
+    {
+      "path": "pk-node.log",
+      "bytes": 513,
+      "sha256": "b6be280d3610b7df632a2992deaf530ca22ea4447dd21425fe2ea7e32454d630"
+    },
+    {
+      "path": "practice-archive.log",
+      "bytes": 57,
+      "sha256": "eec2251224795c45e6a229bb187c974f4bb30f738b196d2a62a723b767d6442f"
+    },
+    {
+      "path": "practice-browser.log",
+      "bytes": 104,
+      "sha256": "f5fbf99ae756ca0eefa89154f785e7498be101cce9516686ef17b79405f785e2"
+    },
+    {
+      "path": "python-boundaries.log",
+      "bytes": 1452,
+      "sha256": "af70c83732da0517608d051c8090f89ca98ae59c748f75eb8c8f8e7713c8299e"
+    },
+    {
+      "path": "synthetic-browser.json",
+      "bytes": 1254,
+      "sha256": "c0ae562ed22895b6cf6147260f8edaef813a15713f6613c9c38a56ebacfd7d75"
+    },
+    {
+      "path": "synthetic-game-1280.png",
+      "bytes": 143368,
+      "sha256": "8ad965d1513d12255f31f85ea1f58c3e4db23f72c65da1b3046b15bbd511ac84"
+    },
+    {
+      "path": "synthetic-result-390.png",
+      "bytes": 160354,
+      "sha256": "28491bc2a3e0634c5dde453b0779fa706c60187ba59899196298a8781e6dd26a"
+    },
+    {
+      "path": "synthetic-time-up-1280.png",
+      "bytes": 186791,
+      "sha256": "d1e88919a1f5e7e64cd94ee8a035d36ceb46e1fbd196298741caf1a3f93a7c98"
+    },
+    {
+      "path": "typecheck.log",
+      "bytes": 54,
+      "sha256": "97d28a253a8e31a5247391ec46f7f20b87065cef95a8a25a9376ad30e7e3639d"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 778,
+      "sha256": "0af0aef5704dca78af386c4beef0d51599e25ec082658430a2254a61e6d97619"
+    }
+  ],
+  "logFormatting": "Only trailing blank lines removed from archived typecheck stdout; raw /tmp log retained. No result or source fingerprint altered.",
+  "fixtureHardeningRuntimeBaselineHead": "4440251c438dc751ef9569cbcb24a8375ef17e0b"
+}

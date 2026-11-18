@@ -277,12 +277,12 @@ try {
     // Touch menu and keyboard focus work on the real shared shell.
     if (width <= 900) {
       await page.getByRole("button", { name: "学习导航", exact: true }).click();
-      await page.locator('dialog a[href="/explore"]').click();
+      await page.locator('#learning-navigation a[href="/explore"]').click();
       await expect(
         page.getByRole("heading", { name: "今天，你好奇什么？" }),
       ).toBeVisible();
-      assert.equal(await page.locator("dialog[open]").count(), 0);
-      await expect(page.locator("dialog .dialog-subjects")).toContainText(
+      assert.equal(await page.locator("#learning-navigation:not([hidden])").count(), 0);
+      await expect(page.locator("#learning-navigation .panel-subjects")).toContainText(
         "成长家园 · 待接入",
       );
     } else

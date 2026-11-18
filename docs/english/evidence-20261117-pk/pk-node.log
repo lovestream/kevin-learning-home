@@ -1,0 +1,12 @@
+✔ PK uses five unique source words; pre-answer view has no keys, answers or help (5.230375ms)
+✔ PK first wrong/correction remain separate; score and next word are atomic and idempotent (2.851334ms)
+✔ PK elapsed time, original bot cadence and timeout are server-owned, not polling frequency (2.135833ms)
+✔ PK preserves original spelling variants and rejects semantic substitutes (1.661625ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 96.894708
