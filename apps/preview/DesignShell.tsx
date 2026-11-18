@@ -1,4 +1,4 @@
-import { useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { learningSpaces, pinnedSpaces } from "./home/spaces.ts";
 import "./home/navigation.css";
 export const pathwayLinks = [
@@ -81,6 +81,20 @@ export function MathIcon({ name, size = 24 }: { name: string; size?: number }) {
         <path d="M3 5h7v6H3Z M14 5h7v6h-7Z M3 15h7v6H3Z M14 15h7v6h-7Z" />
       </>
     ),
+    flag: <path d="M5 23V4h15l-4 5 4 5H5" />,
+    pencil: (
+      <>
+        <path d="m16 3 6 6-12 12-7 2 2-7Z M13 6l6 6" />
+      </>
+    ),
+    heart: <path d="M13 22 4 13C-3 5 7-1 13 6c6-7 16-1 9 7Z" />,
+    folder: <path d="M3 6h8l3 3h9v13H3Z" />,
+    bolt: <path d="m15 2-12 14h9l-1 9L23 10h-9Z" />,
+    sound: (
+      <>
+        <path d="M3 10h5l6-6v18l-6-6H3Z M18 8q6 5 0 10 M21 4q10 9 0 18" />
+      </>
+    ),
     menu: <path d="M3 5h18 M3 12h18 M3 19h18" />,
     arrow: <path d="M4 12h16 M14 6l6 6-6 6" />,
     close: <path d="m5 5 14 14 M5 19 19 5" />,
@@ -102,7 +116,7 @@ export function MathIcon({ name, size = 24 }: { name: string; size?: number }) {
     </svg>
   );
 }
-function SubjectNavigation({ dialog = false }: { dialog?: boolean }) {
+function SubjectNavigation({ panel = false }: { panel?: boolean }) {
   const active = location.pathname.startsWith("/subjects/english")
     ? "english"
     : location.pathname.startsWith("/explore")
@@ -113,7 +127,7 @@ function SubjectNavigation({ dialog = false }: { dialog?: boolean }) {
         : null;
   return (
     <nav
-      className={dialog ? "dialog-subjects" : "preview-subjects"}
+      className={panel ? "panel-subjects" : "preview-subjects"}
       aria-label="学科导航"
     >
       {pinnedSpaces().map((space) => (
@@ -167,6 +181,37 @@ function Pathways() {
     </nav>
   );
 }
+const englishLinks = [
+  ["", "英语书架", "book"],
+  ["?view=sprint", "考试冲刺", "flag"],
+  ["?view=mywords", "我的生词本", "pencil"],
+  ["?view=review", "本次回顾", "repeat"],
+  ["?view=notebook", "本次收藏", "heart"],
+  ["?view=pack", "生词包", "folder"],
+  ["?view=pk", "机器人PK", "bolt"],
+  ["?view=source", "内容与声音", "sound"],
+];
+function EnglishNavigation({ search }: { search: string }) {
+  const view = new URLSearchParams(search).get("view") ?? "";
+  return (
+    <nav className="pathways english-pathways" aria-label="英语活动">
+      {englishLinks.map(([suffix, title, icon]) => (
+        <a
+          key={title}
+          href={"/subjects/english" + suffix}
+          aria-current={
+            (suffix ? new URLSearchParams(suffix).get("view") : "") === view
+              ? "page"
+              : undefined
+          }
+        >
+          <MathIcon name={icon} size={21} />
+          <span>{title}</span>
+        </a>
+      ))}
+    </nav>
+  );
+}
 export default function DesignShell({
   children,
   recordMode = "preview",
@@ -174,14 +219,55 @@ export default function DesignShell({
   children: ReactNode;
   recordMode?: "preview" | "synthetic-private" | "private";
 }) {
-  const dialog = useRef<HTMLDialogElement>(null),
-    menu = useRef<HTMLButtonElement>(null),
-    restoreMenuFocus = useRef(true),
-    home = location.pathname === "/",
+  const [navigationOpen, setNavigationOpen] = useState(false);
+  const [search, setSearch] = useState(location.search);
+  const panel = useRef<HTMLElement>(null),
+    menu = useRef<HTMLButtonElement>(null);
+  const home = location.pathname === "/",
     explore = location.pathname.startsWith("/explore"),
     english = location.pathname.startsWith("/subjects/english");
+  useEffect(() => {
+    const update = () => {
+      setSearch(location.search);
+      setNavigationOpen(false);
+    };
+    addEventListener("popstate", update);
+    addEventListener("klh:english-navigation", update);
+    return () => {
+      removeEventListener("popstate", update);
+      removeEventListener("klh:english-navigation", update);
+    };
+  }, []);
+  useEffect(() => {
+    if (!navigationOpen) return;
+    const outside = (e: PointerEvent) => {
+      if (
+        e.target instanceof Node &&
+        !panel.current?.contains(e.target) &&
+        !menu.current?.contains(e.target)
+      )
+        setNavigationOpen(false);
+    };
+    const escape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setNavigationOpen(false);
+        menu.current?.focus();
+      }
+    };
+    document.addEventListener("pointerdown", outside);
+    document.addEventListener("keydown", escape);
+    return () => {
+      document.removeEventListener("pointerdown", outside);
+      document.removeEventListener("keydown", escape);
+    };
+  }, [navigationOpen]);
   return (
-    <div className="site-shell preview-shell preview-app">
+    <div
+      className={
+        "site-shell preview-shell preview-app" +
+        (english ? " english-shell" : "")
+      }
+    >
       <a className="skip-link" href="#main-content">
         跳到主要内容
       </a>
@@ -220,23 +306,7 @@ export default function DesignShell({
             再找到你想学的那一课。
           </p>
         ) : english ? (
-          <nav className="pathways" aria-label="英语路径">
-            {[
-              ["", "英语书架"],
-              ["?view=notebook", "本次收藏"],
-              ["?view=review", "本次回顾"],
-              ["?view=pack", "生词包"],
-              ["?view=sprint", "考试冲刺"],
-              ["?view=mywords", "我的生词本"],
-              ["?view=pk", "机器人PK"],
-              ["?view=source", "内容与声音"],
-            ].map(([suffix, title]) => (
-              <a key={title} href={"/subjects/english" + suffix}>
-                <MathIcon name="book" />
-                <span>{title}</span>
-              </a>
-            ))}
-          </nav>
+          <EnglishNavigation search={search} />
         ) : explore ? (
           <nav className="pathways" aria-label="探索路径">
             {[
@@ -273,7 +343,18 @@ export default function DesignShell({
       <div className="preview-workspace">
         <header className="topbar">
           <a className="brand" href="/">
-            Kevin 学习家园
+            {english ? (
+              <>
+                <span className="english-brand-mark" aria-hidden="true">
+                  W
+                </span>
+                <span>
+                  Word Quest<small>Kevin 的单词探险</small>
+                </span>
+              </>
+            ) : (
+              "Kevin 学习家园"
+            )}
           </a>
           <span className="topbar-context">
             {home
@@ -287,11 +368,9 @@ export default function DesignShell({
           <button
             ref={menu}
             className="menu-toggle"
-            aria-controls="learning-dialog"
-            onClick={() => {
-              restoreMenuFocus.current = true;
-              dialog.current?.showModal();
-            }}
+            aria-controls="learning-navigation"
+            aria-expanded={navigationOpen}
+            onClick={() => setNavigationOpen((open) => !open)}
           >
             <MathIcon name="menu" />
             <span>学习导航</span>
@@ -304,39 +383,66 @@ export default function DesignShell({
                 : "家庭学习"}
           </span>
         </header>
-        <dialog
-          id="learning-dialog"
-          ref={dialog}
-          className="learning-dialog"
-          onClose={() => {
-            if (restoreMenuFocus.current) menu.current?.focus();
-          }}
+        <aside
+          id="learning-navigation"
+          ref={panel}
+          className="learning-panel"
+          aria-label="学习导航面板"
+          hidden={!navigationOpen}
           onClick={(e) => {
             if (e.target instanceof Element && e.target.closest("a"))
-              restoreMenuFocus.current = false;
-            if (
-              e.target === e.currentTarget ||
-              (e.target instanceof Element && e.target.closest("a"))
-            )
-              dialog.current?.close();
+              setNavigationOpen(false);
           }}
         >
-          <div className="dialog-head">
-            <b>去哪里探索？</b>
+          <div className="panel-head">
+            <div>
+              <small>Kevin 学习家园</small>
+              <h2>学习导航</h2>
+            </div>
             <button
-              autoFocus
               aria-label="关闭学习导航"
-              onClick={() => dialog.current?.close()}
+              onClick={() => {
+                setNavigationOpen(false);
+                menu.current?.focus();
+              }}
             >
               <MathIcon name="close" />
             </button>
           </div>
-          <a className="dialog-home" href="/">
+          <a className="panel-home" href="/">
+            <MathIcon name="home" size={20} />
             返回家园首页
           </a>
-          <SubjectNavigation dialog />
-          {!home && !explore && !english && <Pathways />}
-        </dialog>
+          <p className="panel-label">学习空间</p>
+          <SubjectNavigation panel />
+          {english ? (
+            <>
+              <p className="panel-label">直接选择词库</p>
+              <nav className="panel-banks" aria-label="英语词库">
+                {[
+                  ["core2000", "2000 Core English Words"],
+                  ["movers", "Movers 看图学词"],
+                  ["ket", "KET 词汇"],
+                  ["pet", "PET 词汇"],
+                ].map(([id, title]) => (
+                  <a key={id} href={"/subjects/english?bank=" + id}>
+                    {title}
+                    <MathIcon name="arrow" size={18} />
+                  </a>
+                ))}
+              </nav>
+              <p className="panel-label">英语学习</p>
+              <EnglishNavigation search={search} />
+            </>
+          ) : (
+            !explore && (
+              <>
+                <p className="panel-label">数学学习</p>
+                <Pathways />
+              </>
+            )
+          )}
+        </aside>
         <details className="preview-banner">
           <summary>
             {recordMode === "preview"

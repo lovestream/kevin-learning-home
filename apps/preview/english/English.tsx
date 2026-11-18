@@ -111,7 +111,10 @@ export default function English() {
     };
   }, []);
   useEffect(() => {
-    const update = () => setRoute(location.search);
+    const update = () => {
+      setRoute(location.search);
+      dispatchEvent(new Event("klh:english-navigation"));
+    };
     const click = (e: MouseEvent) => {
       const a = e.target instanceof Element ? e.target.closest("a") : null;
       if (
@@ -182,56 +185,6 @@ export default function English() {
             <span>学习组</span>
           </>
         )}
-      </nav>
-      <div className="english-notice">
-        本次体验只在当前英语页面暂存；刷新或离开后不保留。正式跨天复习和统一积分尚未启用。
-      </div>
-      <nav className="english-tabs" aria-label="英语活动">
-        <a href="/subjects/english" aria-current={!view ? "page" : undefined}>
-          英语书架
-        </a>
-        <a
-          href={path({ view: "notebook" })}
-          aria-current={view === "notebook" ? "page" : undefined}
-        >
-          本次收藏 {memory.saved.size || ""}
-        </a>
-        <a
-          href={path({ view: "review" })}
-          aria-current={view === "review" ? "page" : undefined}
-        >
-          本次回顾
-        </a>
-        <a
-          href={path({ view: "pack" })}
-          aria-current={view === "pack" ? "page" : undefined}
-        >
-          生词包
-        </a>
-        <a
-          href={path({ view: "sprint" })}
-          aria-current={view === "sprint" ? "page" : undefined}
-        >
-          考试冲刺
-        </a>
-        <a
-          href={path({ view: "mywords" })}
-          aria-current={view === "mywords" ? "page" : undefined}
-        >
-          我的生词本
-        </a>
-        <a
-          href={path({ view: "pk" })}
-          aria-current={view === "pk" ? "page" : undefined}
-        >
-          机器人PK
-        </a>
-        <a
-          href={path({ view: "source" })}
-          aria-current={view === "source" ? "page" : undefined}
-        >
-          内容与声音
-        </a>
       </nav>
       {view === "source" ? (
         <section className="english-explanation">
@@ -320,16 +273,12 @@ export default function English() {
         <section>
           <header className="english-heading">
             <div>
-              <h1>
-                打开一本书，
-                <br />
-                认识一个新词。
-              </h1>
+              <h1>打开一本书，认识一个新词。</h1>
               <p>看词卡，听一听，再合上词卡自己拼写。</p>
             </div>
-            <div className="english-bookmark" aria-hidden="true">
-              <span>Aa</span>
-              <i>Words & stories</i>
+            <div className="english-welcome" aria-hidden="true">
+              <span>🦊</span>
+              <p>Ready, Kevin?</p>
             </div>
           </header>
           <div className="english-banks">
@@ -339,12 +288,27 @@ export default function English() {
                 href={path({ bank: b.id })}
                 className={"english-bank bank-" + i}
               >
-                <span className="english-spine" aria-hidden="true">
-                  {b.id === "core2000" ? "4 books" : b.id.toUpperCase()}
+                <span className="english-bank-icon" aria-hidden="true">
+                  {["📚", "🔎", "🧭", "⛰️"][i]}
+                </span>
+                <span className="english-bank-tag">
+                  {
+                    [
+                      "基础词汇 · 四册教材",
+                      "图像联想 · 看图学词",
+                      "A2 词汇",
+                      "B1 词汇",
+                    ][i]
+                  }
                 </span>
                 <h2>{b.title}</h2>
-                <p>{b.count} 张词卡</p>
-                <span>选择学习组</span>
+                <p>
+                  {b.count} 张词卡<span> / </span>
+                  {b.groups} 个学习组
+                </p>
+                <span className="english-bank-action">
+                  选择学习组 <span aria-hidden="true">↗</span>
+                </span>
               </a>
             ))}
           </div>

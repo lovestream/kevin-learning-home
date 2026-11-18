@@ -305,15 +305,15 @@ try {
     if (width <= 768) {
       const menu = p.getByRole("button", { name: "学习导航", exact: true });
       await menu.click();
-      await expect(p.getByRole("dialog")).toBeVisible();
+      await expect(p.getByRole("complementary", { name: "学习导航面板" })).toBeVisible();
       await p.keyboard.press("Escape");
       await expect(menu).toBeFocused();
       await menu.click();
       await p
-        .getByRole("dialog")
+        .getByRole("complementary", { name: "学习导航面板" })
         .getByRole("link", { name: "方法工具箱", exact: false })
         .click();
-      await expect(p.getByRole("dialog")).not.toBeVisible();
+      await expect(p.getByRole("complementary", { name: "学习导航面板" })).not.toBeVisible();
       await expect(p.locator("[data-method-card]")).toHaveCount(28);
     }
     for (const [name, path, ready] of [

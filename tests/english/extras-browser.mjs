@@ -32,6 +32,7 @@ for(const width of [390,768,1280]){
   await expect(q.getByRole('button',{name:'听读音',exact:true})).toHaveCount(0);await expect(q.getByRole('button',{name:'看参考后再练'})).toHaveCount(0);
   await fit();await page.screenshot({path:out+'/final-no-hints-'+width+'.png',fullPage:true});
   await round(words);await expect(result).toContainText('整组复测首答全部正确');await fit();
+  if(width<=900)await page.getByRole('button',{name:'学习导航',exact:true}).click();
   await page.getByRole('navigation',{name:'英语活动'}).getByRole('link',{name:'我的生词本',exact:true}).click();
   let wordPosts=0;const track=r=>{if(r.method()==='POST')wordPosts++;};page.on('request',track);
   async function create(word,en,source){await page.getByRole('button',{name:'手动加一个词'}).click();await page.getByLabel('英文单词或短语',{exact:true}).fill(word);await page.getByLabel('英文释义',{exact:true}).fill(en);await page.getByLabel('英文例句',{exact:true}).fill('I see a '+word+'.');await page.getByLabel('来自哪本书或哪篇文章').fill(source);await page.getByRole('button',{name:'先看词卡预览'}).click();await page.getByRole('button',{name:'确认保存到本次生词本'}).click();}
@@ -49,7 +50,8 @@ for(const width of [390,768,1280]){
   await fit();await page.screenshot({path:out+'/mywords-'+width+'.png',fullPage:true});assert.equal(wordPosts,0,'custom words must remain local');page.off('request',track);
   assert.deepEqual(await page.evaluate(()=>[localStorage.length,sessionStorage.length]),[0,0]);await page.reload();await expect(page.locator('.english-custom-list article')).toHaveCount(0);
   await page.goto(origin+'/subjects/english?view=sprint');await page.getByLabel('冲刺词库').selectOption('core2000');await expect(page.locator('[data-english-quiz]')).toHaveCount(0);
-  await page.getByRole('link',{name:'生词包',exact:true}).first().click();
+  if(width<=900)await page.getByRole('button',{name:'学习导航',exact:true}).click();
+  await page.getByRole('navigation',{name:'英语活动'}).getByRole('link',{name:'生词包',exact:true}).click();
   const fixtureImage=fs.readFileSync(f.directory+'/media/'+Object.values(f.content.bundle.media)[0].sha256+'.webp');
   const pack={format:'kevin-word-quest-ai-pack',version:1,title:'Synthetic reading pack',words:[{word:'pencil',ipa:'/test/',lemma:'pencil',partOfSpeech:'n.',definition:'A writing tool.',example:'I use a pencil.',memoryTip:'Draw lines.',spellingChunks:['pen','cil'],image:{dataUrl:'data:image/webp;base64,'+fixtureImage.toString('base64')}}]};
   await page.locator('input[type=file]').setInputFiles({name:'synthetic.wordpack.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(pack))});

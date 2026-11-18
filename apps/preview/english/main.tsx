@@ -5,6 +5,7 @@ import "../../web/src/style.css";
 import "../preview.css";
 import "../design-system.css";
 import "./english.css";
+import "./word-quest.css";
 createRoot(document.getElementById("root")!).render(
   <DesignShell>
     <main id="main-content" className="reading-area english-area" tabIndex={-1}>

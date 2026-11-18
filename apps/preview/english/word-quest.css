@@ -1,0 +1,472 @@
+/* Restore the original Word Quest palette, type and compact page structure. */
+body:has(.english-shell) {
+  background: #f2ead7;
+}
+.preview-app.english-shell {
+  --paper: #fffaf0;
+  --ink: #18312f;
+  --muted: #5d6e68;
+  --accent: #173f3a;
+  --accent-soft: #e7efdf;
+  --line: #d9dfd0;
+  --display: "Avenir Next", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f2ead7;
+  grid-template-columns: 228px minmax(0, 1fr);
+  grid-template-rows: 82px auto 1fr auto;
+}
+.english-shell .preview-workspace {
+  display: contents;
+}
+.preview-app.english-shell .topbar {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  min-height: 82px;
+  padding: 14px 30px;
+  background: #173f3a;
+  color: #fffaf0;
+  border-bottom: 1px solid #ffffff14;
+  box-shadow: 0 4px 14px #173f3a16;
+}
+.preview-app.english-shell .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fffaf0;
+  font-size: 21px;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+.english-shell .brand small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #c6d8c9;
+}
+.english-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 46px;
+  background: #ffca4b;
+  color: #173f3a;
+  border: 2px solid #fffaf0;
+  border-radius: 15px 15px 16px 8px;
+  font-size: 26px;
+  font-weight: 900;
+  transform: rotate(-4deg);
+}
+.preview-app.english-shell .topbar-context {
+  display: none;
+}
+.preview-app.english-shell .topbar .menu-toggle {
+  color: #fffaf0;
+  background: #ffffff0d;
+  border-color: #ffffff38;
+  border-radius: 12px;
+}
+.preview-app.english-shell .topbar .menu-toggle:hover {
+  background: #ffffff24;
+}
+.preview-app.english-shell .experience-chip {
+  border-color: #ffffff38;
+  color: #dce6d7;
+}
+.preview-app.english-shell .learning-sidebar {
+  grid-column: 1;
+  grid-row: 2 / span 3;
+  top: 82px;
+  height: calc(100vh - 82px);
+  padding: 23px 16px;
+  background: #fffaf0b3;
+  color: #18312f;
+  border-right: 1px solid #173f3a1a;
+  gap: 12px;
+}
+.english-shell
+  .learning-sidebar
+  :is(.side-sign, .side-caption, .side-note, .side-foot) {
+  display: none;
+}
+.preview-app.english-shell .side-home-link,
+.preview-app.english-shell .learning-sidebar .preview-subjects a {
+  min-height: 42px;
+  color: #5d6e68;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.preview-app.english-shell
+  .learning-sidebar
+  .preview-subjects
+  a[aria-current="page"] {
+  color: #173f3a;
+  background: #fff;
+  box-shadow: 0 4px 14px #173f3a0a;
+}
+.preview-app.english-shell .learning-sidebar .preview-subjects > span {
+  color: #7b8578;
+}
+.preview-app.english-shell .learning-sidebar .pathways {
+  border-color: #173f3a1a;
+  margin-top: 6px;
+  padding-top: 16px;
+  gap: 4px;
+}
+.preview-app.english-shell .learning-sidebar .pathways a {
+  color: #5d6e68;
+  min-height: 45px;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+.preview-app.english-shell
+  .learning-sidebar
+  .pathways
+  a:is(:hover, [aria-current="page"]) {
+  background: #fff;
+  color: #173f3a;
+}
+.preview-app.english-shell .learning-sidebar .pathways a[aria-current="page"] {
+  box-shadow:
+    inset 3px 0 #f26f5e,
+    0 3px 12px #173f3a08;
+  font-weight: 700;
+}
+.preview-app.english-shell .preview-banner {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0 40px;
+  color: #697465;
+  border-color: #173f3a14;
+}
+.preview-app.english-shell .preview-banner summary {
+  min-height: 32px;
+  padding: 5px 0;
+  font-size: 12px;
+}
+.preview-app.english-shell .english-area {
+  grid-column: 2;
+  grid-row: 3;
+  max-width: 1200px;
+  padding: 24px 40px 40px;
+}
+.preview-app.english-shell .preview-footer {
+  grid-column: 2;
+  grid-row: 4;
+  margin-top: 12px;
+  font-size: 12px;
+  border-color: #173f3a14;
+}
+.english-shell .english-page {
+  color: #18312f;
+  --english-blue: #173f3a;
+  --english-green: #537b44;
+}
+.english-shell .english-crumb {
+  color: #6d796f;
+  font-size: 12px;
+  margin-bottom: 22px;
+}
+.english-shell .english-crumb a {
+  text-decoration: none;
+}
+.english-shell .english-crumb a:hover {
+  text-decoration: underline;
+}
+.english-shell .english-page h1 {
+  font-size: clamp(27px, 2.5vw, 36px);
+  line-height: 1.3;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+.english-shell .english-heading {
+  align-items: center;
+  margin: 0 0 26px;
+  gap: 18px;
+}
+.english-shell .english-heading p {
+  font-size: 16px;
+  margin: 0;
+  color: #5d6e68;
+}
+.english-welcome {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 4px 8px;
+}
+.english-welcome > span {
+  display: block;
+  font-size: 48px;
+  line-height: 1.15;
+}
+.english-shell .english-welcome p {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.english-shell .english-banks {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.english-shell .english-bank {
+  min-height: 250px;
+  padding: 24px 26px;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 25px 25px 25px 9px;
+  background: #fffaf0;
+  border: 1px solid #173f3a24;
+  color: #18312f;
+  box-shadow: 0 8px 22px #223a330a;
+  transition:
+    transform 150ms,
+    box-shadow 150ms;
+}
+.english-shell .english-bank:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 5px 0 #173f3a1a;
+  border-color: #173f3a80;
+}
+.english-bank-icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 16px 16px 16px 6px;
+  background: #e1ecd6;
+  font-size: 29px;
+  margin-bottom: 16px;
+}
+.english-shell .bank-1 .english-bank-icon {
+  background: #ffe5b0;
+}
+.english-shell .bank-2 .english-bank-icon {
+  background: #dceff1;
+}
+.english-shell .bank-3 .english-bank-icon {
+  background: #e8e1f2;
+}
+.english-bank-tag {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  font-size: 11px;
+  color: #687364;
+  padding: 5px 9px;
+  background: #173f3a07;
+  border-radius: 8px;
+}
+.english-shell .english-bank h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.english-shell .english-bank p {
+  font-size: 13px;
+  color: #687364;
+  margin: 0 0 14px;
+}
+.english-shell .english-bank .english-bank-action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #173f3a14;
+  font-size: 14px;
+  color: #173f3a;
+}
+.english-bank-action > span {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffca4b;
+  font-size: 19px;
+}
+.english-shell .english-footnote {
+  font-size: 13px;
+  margin: 24px 0 0;
+  color: #687364;
+}
+.english-shell .english-page button {
+  border-color: #ccd4c4;
+  color: #173f3a;
+  border-radius: 11px;
+  font-size: 15px;
+}
+.english-shell .english-page .english-primary {
+  background: #173f3a;
+  color: #fffaf0;
+  border-color: #173f3a;
+  box-shadow: 0 3px 0 #102f2b;
+}
+.english-shell .english-page .english-primary:hover {
+  background: #23584f;
+}
+.english-shell .english-books a[aria-current="page"],
+.english-shell .english-mode-bar [aria-pressed="true"] {
+  background: #173f3a;
+  color: #fffaf0;
+}
+.english-shell .english-books a {
+  border-radius: 11px;
+  font-weight: 700;
+}
+.english-shell .english-groups a {
+  border-radius: 16px 16px 16px 6px;
+  background: #fffaf0;
+  border-color: #d6dccd;
+}
+.english-shell .english-group-heading h1 {
+  font-size: 26px;
+}
+.english-shell .english-group-heading a {
+  font-size: 13px;
+}
+.english-shell .english-mode-bar {
+  margin: 14px 0 20px;
+}
+.english-shell .english-card {
+  border: 1px solid #d6dccd;
+  border-radius: 24px 24px 24px 9px;
+  padding: 26px;
+  gap: 28px;
+  background: #fffdf7;
+  box-shadow: 0 8px 22px #223a3308;
+}
+.english-shell .english-card figure {
+  min-height: 290px;
+  border-radius: 16px;
+  border: 1px solid #edf0e7;
+}
+.english-shell .english-card-text h2 {
+  font-family: "Avenir Next Rounded", "Avenir Next", sans-serif;
+  font-size: clamp(38px, 4vw, 62px);
+  font-weight: 800;
+  color: #173f3a;
+  line-height: 1.12;
+  margin: 12px 0;
+}
+.english-shell .english-card-position {
+  color: #7d8878;
+  font-size: 12px;
+}
+.english-shell .english-definition {
+  font-size: 19px;
+}
+.english-shell .english-card blockquote {
+  border-color: #dfb63f;
+  background: #fff6db;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 0 10px 10px 0;
+  font-size: 16px;
+}
+.english-shell .english-card details {
+  margin: 10px 0;
+}
+.english-shell .english-card-controls {
+  margin: 18px 0;
+}
+.english-shell .english-quiz {
+  border-radius: 24px 24px 24px 9px;
+  background: #fffdf7;
+  border-color: #d6dccd;
+  box-shadow: 0 8px 22px #223a3308;
+}
+.english-shell .english-quiz header h2 {
+  color: #173f3a;
+}
+@media (max-width: 1100px) {
+  .preview-app.english-shell .english-area {
+    padding-inline: 28px;
+  }
+  .english-shell .english-bank {
+    padding: 22px;
+  }
+}
+@media (max-width: 900px) {
+  .preview-app.english-shell {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 76px auto 1fr auto;
+  }
+  .preview-app.english-shell .topbar {
+    min-height: 76px;
+    padding: 12px 22px;
+  }
+  .preview-app.english-shell
+    :is(.preview-banner, .english-area, .preview-footer) {
+    grid-column: 1;
+  }
+}
+@media (max-width: 650px) {
+  .preview-app.english-shell .topbar {
+    padding: 10px 16px;
+    gap: 12px;
+  }
+  .english-shell .english-brand-mark {
+    width: 36px;
+    height: 40px;
+    font-size: 23px;
+  }
+  .preview-app.english-shell .brand {
+    gap: 8px;
+    font-size: 18px;
+  }
+  .preview-app.english-shell .topbar .menu-toggle {
+    padding: 7px 9px;
+  }
+  .preview-app.english-shell .preview-banner {
+    margin-inline: 18px;
+  }
+  .preview-app.english-shell .english-area {
+    padding-top: 18px;
+  }
+  .english-shell .english-crumb {
+    margin-bottom: 18px;
+  }
+  .english-welcome {
+    display: none;
+  }
+  .english-shell .english-banks {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .english-shell .english-bank {
+    min-height: 220px;
+  }
+  .english-shell .english-heading {
+    margin-bottom: 22px;
+  }
+  .english-shell .english-card {
+    padding: 18px;
+    gap: 20px;
+  }
+  .english-shell .english-card figure {
+    min-height: 180px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .english-shell .english-bank {
+    transition: none;
+  }
+  .english-shell .english-bank:hover {
+    transform: none;
+  }
+}
+@media print {
+  .preview-app.english-shell {
+    display: block !important;
+  }
+  .english-shell .preview-workspace {
+    display: contents;
+  }
+}

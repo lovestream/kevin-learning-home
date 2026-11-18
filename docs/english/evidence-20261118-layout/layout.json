@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "buildSha": "ca8b64e89b2669a837c7235bc808a5adeba99aed",
+  "rows": [
+    {
+      "width": 1440,
+      "nonModal": true,
+      "rightAligned": true,
+      "escapeAndOutsideClose": true,
+      "focusRestored": true,
+      "directBankLinks": 4,
+      "draftPreserved": true,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "nonModal": true,
+      "rightAligned": true,
+      "escapeAndOutsideClose": true,
+      "focusRestored": true,
+      "directBankLinks": 4,
+      "draftPreserved": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "nonModal": true,
+      "rightAligned": true,
+      "escapeAndOutsideClose": true,
+      "focusRestored": true,
+      "directBankLinks": 4,
+      "draftPreserved": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "nonModal": true,
+      "rightAligned": true,
+      "escapeAndOutsideClose": true,
+      "focusRestored": true,
+      "directBankLinks": 4,
+      "draftPreserved": true,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "realRecordsModified": false
+}

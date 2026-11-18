@@ -60,6 +60,7 @@ jobs:
           node --test tests/local/service.test.mjs
           node --check tests/local/lifecycle.mjs
           node --check tests/local/browser.mjs
+          node --check tests/local/layout-browser.mjs
       - name: Trial tooling offline checks (no NAS access)
         run: |
           python3 -m py_compile infra/trial/controller.py

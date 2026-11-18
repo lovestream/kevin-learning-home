@@ -92,27 +92,139 @@
 .preview-app:has(.home-page) .preview-breadcrumb {
   display: none;
 }
-.preview-app .dialog-home {
-  display: block;
-  min-height: 44px;
-  padding: 8px 0;
-  color: var(--ink);
-  font-weight: 700;
-}
-
 .preview-app .side-home-hint {
   font-size: 13px;
   color: #afd6cf;
   margin: 0 12px;
   line-height: 1.9;
 }
-.preview-app .dialog-subjects a {
+/* Non-modal right rail: no backdrop, scroll lock, or focus trap. */
+.preview-app .learning-panel[hidden] {
+  display: none;
+}
+.preview-app .learning-panel {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 100;
+  width: min(360px, calc(100vw - 24px));
+  height: 100dvh;
+  padding: 24px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #fffdf7;
+  color: #18312f;
+  border-left: 1px solid #d8ddd1;
+  box-shadow: -12px 0 36px #173f3a1a;
+  animation: learning-rail-in 180ms ease-out;
+}
+.preview-app .panel-head {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
 }
-.preview-app .dialog-subjects a svg {
-  flex-shrink: 0;
+.preview-app .panel-head small {
+  font-size: 12px;
+  color: #64736a;
+}
+.preview-app .panel-head h2 {
+  margin: 4px 0 0;
+  font-size: 24px;
+  color: #173f3a;
+}
+.preview-app .panel-head button {
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  min-width: 44px;
+}
+.preview-app .panel-home {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 46px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.preview-app .panel-label {
+  margin: 18px 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64736a;
+  border-top: 1px solid #e5e7df;
+  padding-top: 12px;
+}
+.preview-app .panel-subjects,
+.preview-app .learning-panel .pathways {
+  display: grid;
+  gap: 4px;
+}
+.preview-app .learning-panel :is(.panel-subjects, .pathways) a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #27473d;
+  background: transparent;
+}
+.preview-app
+  .learning-panel
+  :is(.panel-subjects, .pathways)
+  a:is(:hover, [aria-current="page"]) {
+  background: #e9f0e5;
+  color: #173f3a;
+}
+.preview-app .learning-panel .pathways a small {
+  display: block;
+  font-size: 12px;
+  color: #64736a;
+}
+.preview-app .panel-subjects > span {
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #64736a;
+}
+.preview-app .panel-banks {
+  display: grid;
+  gap: 4px;
+}
+.preview-app .panel-banks a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  min-height: 44px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.preview-app .panel-banks a:hover {
+  background: #e9f0e5;
+}
+@keyframes learning-rail-in {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preview-app .learning-panel {
+    animation: none;
+  }
+}
+@media print {
+  .preview-app .learning-panel {
+    display: none !important;
+  }
 }
 @media (max-width: 900px) {
   .preview-app .topbar-context {

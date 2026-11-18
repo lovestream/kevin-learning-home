@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-11-18T13:57:45.368948+00:00",
+  "executionParentHead": "ca8b64e89b2669a837c7235bc808a5adeba99aed",
+  "dirty": true,
+  "sourceFiles": [
+    {
+      "path": "apps/preview/DesignShell.tsx",
+      "sha256": "b8d5cddf7472aaec1a925041b986767b3df21d24aab8b85feb410c054a5017b0"
+    },
+    {
+      "path": "apps/preview/design-system.css",
+      "sha256": "0f4c9063457b4af20bd3bd37b0369ef3fc0d46e79dad098bc090edea7954c929"
+    },
+    {
+      "path": "apps/preview/home/navigation.css",
+      "sha256": "c92ea7830a7266138876de9fc299e398ed51dca232f023708d578764fe6a511b"
+    },
+    {
+      "path": "apps/preview/english/English.tsx",
+      "sha256": "e144e40e78b3db95c40a8576541c7367cab65095b9e593673946ee85df136c78"
+    },
+    {
+      "path": "apps/preview/english/main.tsx",
+      "sha256": "d50d9619d8d463018a1f333321f279c1ee510fa99536301bbd14b1aeaf8c15c6"
+    },
+    {
+      "path": "apps/preview/english/english.css",
+      "sha256": "2f1302091e29cbb2a44828dd0b1b28cbf20a5b525207dc489b040985b69a7078"
+    },
+    {
+      "path": "apps/preview/english/word-quest.css",
+      "sha256": "25375264657bff472171609fd5f4a45204bd47413fcc00b82752bbd31800a1ea"
+    },
+    {
+      "path": "tests/local/layout-browser.mjs",
+      "sha256": "301d4839296edf32386830f1ccc9787b036f8a322a0f4df7994c2bdd29436fa9"
+    },
+    {
+      "path": "tests/english/browser.mjs",
+      "sha256": "102385bfeb840f5a690f4bc40f079ce16f0ebf9add87249560274aa3646ec5b1"
+    },
+    {
+      "path": "tests/english/extras-browser.mjs",
+      "sha256": "6b4aeaacc46f74c6f7b5fbfdbd4ce086fae7cc2d0c9951f3b30db3dc85054946"
+    },
+    {
+      "path": "tests/home/browser.mjs",
+      "sha256": "a95778d97d960ffe88a58e4910ac92e190cad21e24bb32d19c8da44663226175"
+    },
+    {
+      "path": "tests/explore/browser.mjs",
+      "sha256": "1c35a4d09828d8fedf5955e59c900a017dd9f57bfdf7c4298d283aa734437170"
+    },
+    {
+      "path": "tests/math-full-01/browser.mjs",
+      "sha256": "690e5e56ffefc66c31788cf0f361074dbd2162b5dae1f4d9ffb636e4ce620c24"
+    },
+    {
+      "path": "tests/math-onepass/experience-browser.mjs",
+      "sha256": "950da2df7b188166eeee79e6416ec5240f6b373870708c39b64abd7bcf4e1f44"
+    },
+    {
+      "path": ".github/workflows/foundation.yml",
+      "sha256": "e9d119b600b57a5cf07f19647fb86da8883ddb67019017a5485b78eaa8b0207a"
+    }
+  ],
+  "results": {
+    "typecheck": "PASS",
+    "englishNode": 25,
+    "englishCoreWidths": [
+      390,
+      768,
+      1280
+    ],
+    "sprintAndMyWordsWidths": [
+      390,
+      768,
+      1280
+    ],
+    "pkWidths": [
+      390,
+      768,
+      1280
+    ],
+    "homeWidths": 5,
+    "exploreWidths": 5,
+    "mathClassroomFlows": 210,
+    "mathFailures": 0,
+    "localLayoutWidths": [
+      1440,
+      1280,
+      768,
+      390
+    ]
+  },
+  "realRecordsRead": false,
+  "realRecordsModified": false,
+  "familyScreenshotsPublic": false,
+  "note": "Measured real worktree, not claimed to have executed a future commit. Final source hashes and fixed-head local service rerun are confirmed in PR38."
+}

@@ -136,7 +136,7 @@ try {
     else {
       const menu=page.getByRole('button',{name:'学习导航',exact:true});
       await menu.click();
-      await expect(page.getByRole('dialog').getByRole('navigation',{name:'学科导航'}).getByRole('link',{name:'英语天地',exact:true})).toHaveAttribute('href','/subjects/english');
+      await expect(page.getByRole('complementary',{name:'学习导航面板'}).getByRole('navigation',{name:'学科导航'}).getByRole('link',{name:'英语天地',exact:true})).toHaveAttribute('href','/subjects/english');
       await page.keyboard.press('Escape');
       await expect(menu).toBeFocused();
     }
