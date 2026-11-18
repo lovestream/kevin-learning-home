@@ -17,3 +17,6 @@ __pycache__/
 .english-family/
 
 .english-family.staging/
+
+# Local LaunchAgent build/runtime logs; never learning records or Git assets.
+.local-runtime/

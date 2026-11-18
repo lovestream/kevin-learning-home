@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "origin": "http://127.0.0.1:38444",
+  "buildSha": "f059d0f5df32d927ddd473722fd8e0e3bfe81725",
+  "mathEntries": 70,
+  "formalTasks": 849,
+  "classroomSteps": 6,
+  "englishCards": 6631,
+  "englishGroups": 665,
+  "englishMedia": 1861,
+  "sourceBankCorrectionFlows": 4,
+  "sprintLoaded": true,
+  "pkActualServerAnswer": true,
+  "realRecordsModified": false,
+  "realRewardsIssued": 0,
+  "database": false,
+  "browserErrors": [],
+  "physicalDeviceTested": false
+}

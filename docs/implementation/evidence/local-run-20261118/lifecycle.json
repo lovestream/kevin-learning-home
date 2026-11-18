@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "buildSha": "f059d0f5df32d927ddd473722fd8e0e3bfe81725",
+  "terminalIndependent": true,
+  "idempotentStart": true,
+  "concurrentStart": true,
+  "stopRestart": true,
+  "foreignPortPreserved": true,
+  "realRecordsRead": false,
+  "realRecordsModified": false,
+  "database": false
+}

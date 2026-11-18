@@ -1,17 +1,22 @@
 # Kevin Learning Home · Kevin 学习家园
 
-**[打开 NAS 学习家园](http://192.168.2.100:38444/)**：局域网 HTTP、免登录，无需证书或 Mac 本地服务器。
+**[打开本机学习家园](http://127.0.0.1:38444/)**。2026-11-18起按用户要求直接在这台 Mac 后台运行，不再依赖 NAS。关闭终端或浏览器不会停止服务；Mac 关机或休眠时不能访问。
 
-同一入口已含教材17单元/63课与7衔接、原849练习；新增17已审思维卡、14匿名模拟侦探、四至六年级各18旧版课（54课/432题）、方法工具箱28条目/6完整指南、自由复习244原题及11逆向原题深链、原折纸打印。五组练习与探索只留页面内存，刷新清空；解释题仍待家长核对。
+- 数学：三年级70个课堂入口、六步课堂与三项自查、849道正式练习、已审思维卡、数学小侦探和方法工具箱。
+- 英语：四库6631词卡/665组、128教材练习页、发音与拼写、考试冲刺、本次生词本和本机机器人PK。
+- **当前是匿名体验，记录只在本次页面会话中保留，刷新/离开/重启会结束会话。**未启用真实学习库、统一积分或蛋仔成长；没有导入或更改 Kevin 的历史学习数据。
 
-当前部署源码 `52e781440b21a406286ac55bbfefdb6e06d119fe`，镜像 `sha256:fff4f09e498239605ba2106733e0aea9fcc56c39616266858e8871d2bbadebda`。精确源码完整push/PR CI成功；实际NAS新增255流程/三视口、449题+14案例HTTP、原849题/84流程、30/210课堂、教材导航和真实回退/恢复全通过。198发布输入/13静态文件一致，11受保护容器及旧合成文件不变。普通Mac Chrome实测已通过，实体手机/iPad仍待用户体验。
+## 本机启动
 
-[Draft PR18](https://github.com/lovestream/kevin-learning-home/pull/18) → [Draft PR21](https://github.com/lovestream/kevin-learning-home/pull/21) → [Draft PR22](https://github.com/lovestream/kevin-learning-home/pull/22)，均不合并，等待ChatGPT独立审查。最终归档HEAD双CI见各PR正文，不能以旧SHA成功替代。
+在项目目录双击 **`启动学习家园.command`**，会启动后台并打开网页。停止使用 **`停止学习家园.command`**；停止不会删除课程或旧学习库。后台由当前用户的 macOS LaunchAgent 管理，启动后下次登录也会运行；执行停止后不会自行重启。
 
-43暂缓卡、168制作蓝图、私密案卷/个人错题与复习历史、正式身份/成绩/钱包/蛋仔均未开放；54旧课保留原通用教具，仍需逐课教学体验验收，不冒充新审定教材。两个旧站及真实学习数据不动，无新worktree，不改DSM/daemon/Tailscale/权限。
+```sh
+node scripts/local/service.mjs start
+node scripts/local/service.mjs status
+node scripts/local/service.mjs restart
+node scripts/local/service.mjs stop
+```
 
-[完整报告](docs/implementation/MATH-FULL-03-REPORT.md) · [来源与未迁清单](docs/implementation/MATH-FULL-REMAINDER-INVENTORY.md) · [实际NAS回执](docs/implementation/evidence/math-full-remainder/delivery.json) · [交接](docs/handoff/current.md)。已完成本批公开成熟数学能力交付，暂停；不自行进入英语或正式数据/奖励开发。
+首次安装需 Node24.15.0/npm11.12.1、`npm ci` 和经校验的本机 `.english-family` 素材包。启动器在需要时执行 `build:math-preview`，不会连接 NAS 或读取旧学习库。更新后应先结束本次练习，再执行 `restart`。详见[本机运行说明与验收](docs/implementation/LOCAL-RUN.md)。
 
-## 复现
-
-Node24.15.0/npm11.12.1：`npm ci`、`npm run build:math-preview`、`npm run preview:math`。本机127.0.0.1:4179只供开发，用户交付入口为NAS。完整验证见执行报告和`.github/workflows/foundation.yml`；旧数学/英语只读复用、不反向修改。
+仍在同一 [Draft PR38](https://github.com/lovestream/kevin-learning-home/pull/38) 中开发，未合并 main。历史 NAS 回执只证明当时的版本，不能代表当前本机运行状态。[最新交接](docs/handoff/current.md) · [交付队列](docs/implementation/LEARNING-HOME-DELIVERY-QUEUE.md) · [英语模块台账](docs/english/MODULE-MATRIX.md)。

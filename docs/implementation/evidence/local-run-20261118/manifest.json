@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-11-18T13:31:34.452302+00:00",
+  "runtimeBaseline": "f059d0f5df32d927ddd473722fd8e0e3bfe81725",
+  "measurement": "Pre-commit local launcher; application runtime unchanged. Final committed-head rerun is attached to PR38, not inferred from these earlier screenshots.",
+  "inputs": [
+    {
+      "path": "scripts/local/service.mjs",
+      "sha256": "dc6a3e966dee80cd2b39e81f9e2d48cf16fe2ca627b9b4b9ea925baf155ce215"
+    },
+    {
+      "path": "tests/local/service.test.mjs",
+      "sha256": "0c53f9819f2c118724fda1e2c9a5eaae1866747afbd4d8a5f2efec74b61d8a0d"
+    },
+    {
+      "path": "tests/local/lifecycle.mjs",
+      "sha256": "f4697c64fcd1aed91f4d5adfb32617c8528658ad971184b400b68cd06b1c2a85"
+    },
+    {
+      "path": "tests/local/browser.mjs",
+      "sha256": "bc321c601d280b385da7e1b0a3789f77f820fc39ce135b824e68f25bf40190ac"
+    },
+    {
+      "path": "启动学习家园.command",
+      "sha256": "5f23b6c1f78eceb64e6f553cfe1ee3dedc2f95b38ba0aff88aabeaa6db0e847a"
+    },
+    {
+      "path": "停止学习家园.command",
+      "sha256": "6672e71c3439edae079f9235c35ecefc7b6ba904163daa7f8a9507a2d8e03914"
+    },
+    {
+      "path": ".github/workflows/foundation.yml",
+      "sha256": "1b7e67c6c71c765c2483f98d254b63422fd00e1758acb2736c8b58fbb9010801"
+    }
+  ],
+  "results": {
+    "localUnitTests": 3,
+    "englishNodeTests": 25,
+    "typecheck": "PASS",
+    "lifecycle": "PASS",
+    "localBrowser": "PASS"
+  },
+  "familyScreenshotsPublished": false,
+  "realRecordsRead": false,
+  "realRecordsModified": false,
+  "nasAccessed": false,
+  "unverified": [
+    "physical iPad",
+    "Kevin real learning mastery",
+    "persistent cross-day records",
+    "formal rewards and pets"
+  ]
+}

@@ -55,6 +55,11 @@ jobs:
           fc-cache -f ~/.local/share/fonts/klh-ci
       - name: NAS gate controller syntax only (no NAS connection)
         run: python3 tests/nas-gate/check-probes.py
+      - name: Local launcher ownership and readiness (no host service installation)
+        run: |
+          node --test tests/local/service.test.mjs
+          node --check tests/local/lifecycle.mjs
+          node --check tests/local/browser.mjs
       - name: Trial tooling offline checks (no NAS access)
         run: |
           python3 -m py_compile infra/trial/controller.py
